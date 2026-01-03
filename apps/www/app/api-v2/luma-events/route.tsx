@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { NextRequest, NextResponse } from 'next/server'
 import { DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 
@@ -131,7 +130,6 @@ export async function GET(request: NextRequest) {
       },
     })
   } catch (error) {
-    Sentry.captureException(error)
     console.error('Error fetching meetups from Luma:', error)
     return NextResponse.json(
       {

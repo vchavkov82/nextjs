@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 
@@ -54,7 +53,7 @@ export function captureQueryPerformanceError(
   error: unknown,
   context: QueryPerformanceErrorContext
 ) {
-  Sentry.withScope((scope) => {
+  (scope => {
     scope.setTag('query-performance', 'true')
 
     scope.setContext('query-performance', {
@@ -68,7 +67,7 @@ export function captureQueryPerformanceError(
     })
 
     if (error instanceof Error) {
-      Sentry.captureException(error)
+      console.error(error)
       return
     }
 
@@ -79,6 +78,6 @@ export function captureQueryPerformanceError(
       errorToCapture.cause = error
     }
 
-    Sentry.captureException(errorToCapture)
+    console.error(errorToCapture)
   })
 }

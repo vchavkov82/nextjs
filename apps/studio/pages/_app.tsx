@@ -20,7 +20,6 @@ import 'ui/build/css/themes/dark.css'
 import 'ui/build/css/themes/light.css'
 
 import { loader } from '@monaco-editor/react'
-import * as Sentry from '@sentry/nextjs'
 import { HydrationBoundary, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import dayjs from 'dayjs'
@@ -93,9 +92,9 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   const errorBoundaryHandler = (error: Error, info: ErrorInfo) => {
-    Sentry.withScope(function (scope) {
+    function (scope {
       scope.setTag('globalErrorBoundary', true)
-      const eventId = Sentry.captureException(error)
+      const eventId = console.error(error)
       // Attach the Sentry event ID to the error object so it can be accessed by the error boundary
       if (eventId && error && typeof error === 'object') {
         ;(error as any).sentryId = eventId

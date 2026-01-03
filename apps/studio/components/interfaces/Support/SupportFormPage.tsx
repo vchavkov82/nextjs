@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { Loader2, Wrench } from 'lucide-react'
 import Link from 'next/link'
 import { type Dispatch, type PropsWithChildren, useCallback, useReducer } from 'react'
@@ -91,7 +90,7 @@ function SupportFormPageContent() {
 
   useStateTransition(state, 'submitting', 'error', (_, curr) => {
     toast.error(`Failed to submit support ticket: ${curr.message}`)
-    Sentry.captureMessage(`Failed to submit Support Form: ${curr.message}`)
+    console.log(`Failed to submit Support Form: ${curr.message}`)
     dispatch({ type: 'RETURN_TO_EDITING' })
   })
 

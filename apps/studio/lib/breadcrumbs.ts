@@ -1,4 +1,3 @@
-import type * as Sentry from '@sentry/nextjs'
 
 import { RingBuffer } from './ringBuffer'
 

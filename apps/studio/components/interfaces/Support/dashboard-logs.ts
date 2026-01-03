@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 
 import { SupportCategories } from '@supabase/shared-types/out/constants'
 import type {
