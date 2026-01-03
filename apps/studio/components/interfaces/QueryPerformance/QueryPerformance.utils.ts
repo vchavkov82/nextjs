@@ -53,10 +53,10 @@ export function captureQueryPerformanceError(
   error: unknown,
   context: QueryPerformanceErrorContext
 ) {
-  // Sentry not imported - just log the error with context
-  console.error('Query Performance Error:', {
-    error,
-    context: {
+  (scope => {
+    scope.setTag('query-performance', 'true')
+
+    scope.setContext('query-performance', {
       projectRef: context.projectRef,
       databaseIdentifier: context.databaseIdentifier,
       queryPreset: context.queryPreset,
@@ -64,20 +64,20 @@ export function captureQueryPerformanceError(
       postgresVersion: context.postgresVersion,
       databaseType: context.databaseType,
       errorMessage: context.errorMessage,
+    })
+
+    if (error instanceof Error) {
+      console.error(error)
+      return
     }
+
+    const errorMessage = getErrorMessage(error)
+    const errorToCapture = new Error(errorMessage || 'Query performance error')
+
+    if (error !== null && error !== undefined) {
+      errorToCapture.cause = error
+    }
+
+    console.error(errorToCapture)
   })
-
-  if (error instanceof Error) {
-    console.error(error)
-    return
-  }
-
-  const errorMessage = getErrorMessage(error)
-  const errorToCapture = new Error(errorMessage || 'Query performance error')
-
-  if (error !== null && error !== undefined) {
-    errorToCapture.cause = error
-  }
-
-  console.error(errorToCapture)
 }

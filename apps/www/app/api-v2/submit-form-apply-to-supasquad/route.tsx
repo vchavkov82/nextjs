@@ -1,5 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
-
 import { CustomerioAppClient, CustomerioTrackClient } from '@/lib/customerio'
 import { insertPageInDatabase } from '@/lib/notion'
 
@@ -7,28 +5,6 @@ import {
   SupaSquadApplication,
   supaSquadApplicationSchema,
 } from '@/data/open-source/contributing/supasquad.utils'
-
-// Using a separate Sentry client for community following this guide:
-// https://docs.sentry.io/platforms/javascript/best-practices/multiple-sentry-instances/
-const integrations = Sentry.getDefaultIntegrations({}).filter((defaultIntegration) => {
-  return !['BrowserApiErrors', 'Breadcrumbs', 'GlobalHandlers'].includes(defaultIntegration.name)
-})
-
-const sentryCommunityClient = new Sentry.NodeClient({
-  dsn: process.env.SENTRY_DSN_COMMUNITY,
-  transport: Sentry.makeNodeTransport,
-  stackParser: Sentry.defaultStackParser,
-  integrations: [...integrations],
-})
-
-const sentryCommunity = new Sentry.Scope()
-sentryCommunity.setClient(sentryCommunityClient)
-
-const captureSentryCommunityException = (error: any) => {
-  if (process.env.SENTRY_DSN_COMMUNITY) {
-    sentryCommunity.captureException(error)
-  }
-}
 
 const NOTION_API_KEY = process.env.NOTION_SUPASQUAD_API_KEY
 const NOTION_DB_ID = process.env.NOTION_SUPASQUAD_APPLICATIONS_DB_ID
@@ -61,7 +37,6 @@ function normalizeTrack(t: { heading: string; description: string } | string) {
 
 export async function POST(req: Request) {
   if (!NOTION_API_KEY || !NOTION_DB_ID) {
-    captureSentryCommunityException(new Error('Server misconfigured: missing Notion credentials'))
     return new Response(
       JSON.stringify({ message: 'Server misconfigured: missing Notion credentials' }),
       {
@@ -75,7 +50,7 @@ export async function POST(req: Request) {
   try {
     body = await req.json()
   } catch (error: any) {
-    captureSentryCommunityException(new Error('Unable to parse JSON:`'))
+
     return new Response(JSON.stringify({ message: 'Invalid JSON' }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 400,
@@ -109,7 +84,6 @@ export async function POST(req: Request) {
     })
   } catch (err: any) {
     console.error(err)
-    captureSentryCommunityException(err)
     return new Response(
       JSON.stringify({ message: 'Error sending your application', error: err?.message }),
       {

@@ -41,21 +41,6 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   basePath: '',
   assetPrefix: getAssetPrefix(),
-  allowedDevOrigins: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://localhost:3002',
-    'http://localhost:3003',
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:3001',
-    'http://127.0.0.1:3002',
-    'http://127.0.0.1:3003',
-    'http://uptime:3000',
-    'http://uptime:3001',
-    'http://uptime:3002',
-    'http://uptime:3003',
-    'https://uptime-monitor-fe.vercel.app',
-  ],
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   trailingSlash: false,
   transpilePackages: [
@@ -69,10 +54,7 @@ const nextConfig = {
     '@octokit/plugin-paginate-graphql',
   ],
   experimental: {
-    // Optimize for high-core systems
-    optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-dialog', 'framer-motion'],
-    // Enable faster refresh
-    optimizeCss: true,
+    // needed to make the octokit packages work in /changelog
   },
   /**
    * Exclude huge directories from being traced into serverless functions
@@ -93,11 +75,6 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     remotePatterns,
     qualities: [75, 100],
-    formats: ['image/avif', 'image/webp'],
-  },
-  onDemandEntries: {
-    maxInactiveAge: 60 * 60 * 1000,
-    pagesBufferLength: 5,
   },
   async headers() {
     return [
@@ -174,6 +151,10 @@ const nextConfig = {
     // On production, we turn it on to prevent errors from conflicting PRs getting into
     // prod
     ignoreBuildErrors: process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? false : true,
+  },
+  eslint: {
+    // We are already running linting via GH action, this will skip linting during production build on Vercel.
+    ignoreDuringBuilds: true,
   },
 }
 

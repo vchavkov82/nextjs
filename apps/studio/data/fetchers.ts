@@ -139,14 +139,13 @@ export const {
 
 type HandleErrorOptions = {
   alwaysCapture?: boolean
-  // Sentry not imported - commenting out sentryContext
-  // sentryContext?: Parameters<typeof Sentry.captureException>[1]
+  sentryContext?: Parameters<typeof Sentry.captureException>[1]
 }
 
 export const handleError = (error: unknown, options: HandleErrorOptions = {}): never => {
   if (error && typeof error === 'object') {
     if (options.alwaysCapture) {
-      console.error(error) // sentryContext removed
+      console.error(error, options.sentryContext)
     }
     const errorMessage =
       'msg' in error && typeof error.msg === 'string'
@@ -176,7 +175,7 @@ export const handleError = (error: unknown, options: HandleErrorOptions = {}): n
 
   // the error doesn't have a message or msg property, so we can't throw it as an error. Log it via Sentry so that we can
   // add handling for it.
-  console.error(error) // sentryContext removed
+  console.error(error, options.sentryContext)
 
   // throw a generic error if we don't know what the error is. The message is intentionally vague because it might show
   // up in the UI.

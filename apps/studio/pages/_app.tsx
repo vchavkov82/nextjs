@@ -93,7 +93,15 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   const errorBoundaryHandler = (error: Error, info: ErrorInfo) => {
-    // Sentry is not available, just log the error
+    function (scope {
+      scope.setTag('globalErrorBoundary', true)
+      const eventId = console.error(error)
+      // Attach the Sentry event ID to the error object so it can be accessed by the error boundary
+      if (eventId && error && typeof error === 'object') {
+        ;(error as any).sentryId = eventId
+      }
+    })
+
     console.error(error.stack)
   }
 
@@ -124,7 +132,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
               >
                 <ProfileProvider>
                   <Head>
-                    <title>{appTitle ?? 'BA'}</title>
+                    <title>{appTitle ?? 'Supabase'}</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                     <meta property="og:image" content={`${BASE_PATH}/img/supabase-logo.png`} />
                     <meta name="googlebot" content="notranslate" />
@@ -143,7 +151,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
                       />
                     )}
                   </Head>
-                  <MetaFaviconsPagesRouter applicationName="BA Studio" includeManifest />
+                  <MetaFaviconsPagesRouter applicationName="Supabase Studio" includeManifest />
                   <TooltipProvider delayDuration={0}>
                     <RouteValidationWrapper>
                       <ThemeProvider
