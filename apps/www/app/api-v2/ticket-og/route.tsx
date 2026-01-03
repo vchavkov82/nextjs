@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { createClient } from '@supabase/supabase-js'
 import { ImageResponse } from '@vercel/og'
 import useTicketBg from 'components/LaunchWeek/15/hooks/use-ticket-bg'
@@ -501,9 +500,6 @@ export async function GET(req: Request) {
 
     return await fetch(`${STORAGE_URL}/og/${ticketType}/${username}.png?t=${NEW_TIMESTAMP}`)
   } catch (error: any) {
-    Sentry.captureException(error)
-    await Sentry.flush(2000)
-
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 400,

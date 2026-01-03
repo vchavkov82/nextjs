@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { useMutation } from '@tanstack/react-query'
 import { toast } from 'sonner'
 

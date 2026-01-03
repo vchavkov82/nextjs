@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 
 import { useFeatureFlags } from 'common'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
@@ -58,9 +57,9 @@ export function usePHFlag<T = string | boolean>(name: string) {
       trackFeatureFlag({ feature_flag_name: name, feature_flag_value: flagValue })
       setTrackedValue(flagValue as string)
     } catch (error: any) {
-      Sentry.withScope((scope) => {
+      (scope => {
         scope.setTag('type', 'phTrackFailure')
-        Sentry.captureException(error)
+        console.error(error)
       })
       console.error(error.message)
     }

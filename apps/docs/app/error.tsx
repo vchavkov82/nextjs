@@ -1,15 +1,9 @@
 'use client'
 
-import * as Sentry from '@sentry/nextjs'
 import Link from 'next/link'
-import { useEffect } from 'react'
 import { Button } from 'ui'
 
 const ErrorPage = ({ error }) => {
-  useEffect(() => {
-    Sentry.captureException(error)
-  }, [error])
-
   return (
     <div className="h-[calc(100vh-var(--header-height))] w-full flex flex-col gap-8 p-8 items-center justify-center">
       <span className="text-center text-5xl text-foreground-lighter">

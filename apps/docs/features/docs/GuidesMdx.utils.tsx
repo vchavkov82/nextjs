@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { gfmFromMarkdown } from 'mdast-util-gfm'
 import { gfm } from 'micromark-extension-gfm'
@@ -98,7 +97,6 @@ const getGuidesMarkdownInternal = async (slug: string[]) => {
         fullPath,
         extractMessageFromAnyError(error)
       )
-      Sentry.captureException(error)
     }
     notFound()
   }

@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 
 import { ResponseError } from 'types'
 
@@ -113,5 +112,5 @@ function captureMessage({ message, context }: CaptureMessageOptions) {
   if (WHITELIST_ERRORS.some((whitelisted) => message.includes(whitelisted))) {
     return
   }
-  Sentry.captureMessage(`[CRITICAL][${context}] Failed: ${message}`)
+  console.log(`[CRITICAL][${context}] Failed: ${message}`)
 }
