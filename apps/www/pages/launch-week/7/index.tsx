@@ -8,12 +8,12 @@ import SectionContainer from '@/components/Layouts/SectionContainer'
 import { LaunchWeekLogoHeader } from '@/components/LaunchWeek/7/LaunchSection/LaunchWeekLogoHeader'
 import LW7BgGraphic from '@/components/LaunchWeek/7/LW7BgGraphic'
 
-const LW7Releases = dynamic(() => import('~/components/LaunchWeek/7/Releases'))
+const LW7Releases = dynamic(() => import('@/components/LaunchWeek/7/Releases'))
 const LaunchWeekPrizeSection = dynamic(
-  () => import('~/components/LaunchWeek/7/LaunchWeekPrizeSection')
+  () => import('@/components/LaunchWeek/7/LaunchWeekPrizeSection')
 )
 
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 export default function TicketHome() {
   const TITLE = 'Supabase LaunchWeek 7'

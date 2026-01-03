@@ -9,15 +9,15 @@ import vectorPageData from '@/data/products/modules/vector'
 import ModulesNav from '@/components/Modules/ModulesNav'
 import { PRODUCT_MODULES_NAMES, PRODUCT_MODULES_SHORTNAMES } from 'shared-data/products'
 
-const ProductModulesHeader = dynamic(() => import('~/components/Sections/ProductModulesHeader'))
-const HighlightCards = dynamic(() => import('~/components/Sections/HighlightCards'))
-const FeaturesSection = dynamic(() => import('~/components/Sections/FeaturesSection'))
-const UseCasesSection = dynamic(() => import('~/components/Sections/UseCasesSection'))
-const CenteredTitleImage = dynamic(() => import('~/components/Sections/CenteredTitleImage'))
-const CustomerQuotesSection = dynamic(() => import('~/components/Sections/CustomerQuotesSection'))
-const TimedTabsSection = dynamic(() => import('~/components/Sections/TimedTabsSection'))
-const ProductsCta = dynamic(() => import('~/components/Sections/ProductsCta'))
-const EnterpriseCta = dynamic(() => import('~/components/Sections/EnterpriseCta'))
+const ProductModulesHeader = dynamic(() => import('@/components/Sections/ProductModulesHeader'))
+const HighlightCards = dynamic(() => import('@/components/Sections/HighlightCards'))
+const FeaturesSection = dynamic(() => import('@/components/Sections/FeaturesSection'))
+const UseCasesSection = dynamic(() => import('@/components/Sections/UseCasesSection'))
+const CenteredTitleImage = dynamic(() => import('@/components/Sections/CenteredTitleImage'))
+const CustomerQuotesSection = dynamic(() => import('@/components/Sections/CustomerQuotesSection'))
+const TimedTabsSection = dynamic(() => import('@/components/Sections/TimedTabsSection'))
+const ProductsCta = dynamic(() => import('@/components/Sections/ProductsCta'))
+const EnterpriseCta = dynamic(() => import('@/components/Sections/EnterpriseCta'))
 
 function VectorPage() {
   // base path for images

@@ -11,8 +11,8 @@ import { AIDemoPanel } from '@/components/AIDemo/Panel'
 import { SqlSnippet } from '@/components/AIDemo/SqlSnippet'
 import { EASE_OUT } from '../lib/animations'
 
-const DefaultLayout = dynamic(() => import('~/components/Layouts/Default'))
-const SectionContainer = dynamic(() => import('~/components/Layouts/SectionContainer'))
+const DefaultLayout = dynamic(() => import('@/components/Layouts/Default'))
+const SectionContainer = dynamic(() => import('@/components/Layouts/SectionContainer'))
 
 interface Message {
   id: string

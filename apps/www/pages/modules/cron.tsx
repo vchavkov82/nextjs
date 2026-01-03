@@ -9,10 +9,10 @@ import SectionContainer from '@/components/Layouts/SectionContainer'
 import { PRODUCT_MODULES_NAMES } from 'shared-data/products'
 import CronPageData from '@/data/products/modules/cron'
 
-const HighlightCards = dynamic(() => import('~/components/Sections/HighlightCards'))
-const CronSQLSection = dynamic(() => import('~/components/Modules/Cron/CronSQLSection'))
-const ImageParagraphSection = dynamic(() => import('~/components/Sections/ImageParagraphSection'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const HighlightCards = dynamic(() => import('@/components/Sections/HighlightCards'))
+const CronSQLSection = dynamic(() => import('@/components/Modules/Cron/CronSQLSection'))
+const ImageParagraphSection = dynamic(() => import('@/components/Sections/ImageParagraphSection'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 function CronPage() {
   const pageData = CronPageData()

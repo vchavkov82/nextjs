@@ -10,12 +10,12 @@ import DefaultLayout from '@/components/Layouts/Default'
 import PricingPlans from '@/components/Pricing/PricingPlans'
 import { useOrganizations } from '@/data/organizations'
 
-const PricingComputeSection = dynamic(() => import('~/components/Pricing/PricingComputeSection'))
-const PricingAddons = dynamic(() => import('~/components/Pricing/PricingAddons'))
-const PricingComparisonTable = dynamic(() => import('~/components/Pricing/PricingComparisonTable'))
-const PricingFAQs = dynamic(() => import('~/components/Pricing/PricingFAQs'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
-const PricingDiskSection = dynamic(() => import('~/components/Pricing/PricingDiskSection'))
+const PricingComputeSection = dynamic(() => import('@/components/Pricing/PricingComputeSection'))
+const PricingAddons = dynamic(() => import('@/components/Pricing/PricingAddons'))
+const PricingComparisonTable = dynamic(() => import('@/components/Pricing/PricingComparisonTable'))
+const PricingFAQs = dynamic(() => import('@/components/Pricing/PricingFAQs'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
+const PricingDiskSection = dynamic(() => import('@/components/Pricing/PricingDiskSection'))
 
 export default function IndexPage() {
   const router = useRouter()
