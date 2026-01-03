@@ -73,6 +73,7 @@ const ContentAccordionLink = React.memo(function ContentAccordionLink(props: any
       )}
       {props.subItem.items && props.subItem.items.length > 0 ? (
         <Accordion.Root
+          key={`accordion-${props.subItem.url || props.subItem.name}`}
           collapsible
           type="single"
           className="space-y-0.5"

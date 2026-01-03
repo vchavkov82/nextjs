@@ -40,30 +40,38 @@ function isFeatureEnabled<T extends Feature | Feature[]>(
   features: T,
   runtimeDisabledFeatures?: Feature[]
 ) {
-  // Override is used to produce a filtered version of the docs search index
-  // using the same sync setup as our normal search index
-  if (process.env.ENABLED_FEATURES_OVERRIDE_DISABLE_ALL === 'true') {
-    if (Array.isArray(features)) {
-      return Object.fromEntries(features.map((feature) => [featureToCamelCase(feature), false]))
+  try {
+    // Override is used to produce a filtered version of the docs search index
+    // using the same sync setup as our normal search index
+    if (process.env.ENABLED_FEATURES_OVERRIDE_DISABLE_ALL === 'true') {
+      if (Array.isArray(features)) {
+        return Object.fromEntries(features.map((feature) => [featureToCamelCase(feature), false]))
+      }
+      return false
     }
-    return false
+
+    const disabledFeatures = new Set([
+      ...(runtimeDisabledFeatures ?? []),
+      ...disabledFeaturesStaticArray,
+    ])
+
+    if (Array.isArray(features)) {
+      return Object.fromEntries(
+        features.map((feature) => [
+          featureToCamelCase(feature),
+          checkFeature(feature, disabledFeatures),
+        ])
+      )
+    }
+
+    return checkFeature(features, disabledFeatures)
+  } catch (error) {
+    // Fallback for server context where process might not be available
+    if (Array.isArray(features)) {
+      return Object.fromEntries(features.map((feature) => [featureToCamelCase(feature), true]))
+    }
+    return true
   }
-
-  const disabledFeatures = new Set([
-    ...(runtimeDisabledFeatures ?? []),
-    ...disabledFeaturesStaticArray,
-  ])
-
-  if (Array.isArray(features)) {
-    return Object.fromEntries(
-      features.map((feature) => [
-        featureToCamelCase(feature),
-        checkFeature(feature, disabledFeatures),
-      ])
-    )
-  }
-
-  return checkFeature(features, disabledFeatures)
 }
 
 export { isFeatureEnabled }

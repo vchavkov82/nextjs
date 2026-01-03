@@ -6,7 +6,7 @@ import { type NavMenuSection } from '../Navigation.types'
 import * as NavItems from './NavigationMenu.constants'
 import NavigationMenuGuideListItems from './NavigationMenuGuideListItems'
 import { usePathname } from 'next/navigation'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import { MenuId } from './NavigationMenu'
 
 const NavigationMenuGuideList = ({
@@ -88,6 +88,16 @@ export function NavigationMenuGuideListWrapper({
   id: string
   firstLevelRoute?: string
 }>) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
   return (
     <div key={id}>
       <Accordion.Root

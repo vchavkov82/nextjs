@@ -1,4 +1,4 @@
-import * as NavItems from '~/components/Navigation/NavigationMenu/NavigationMenu.constants'
+import * as NavItemsModule from '~/components/Navigation/NavigationMenu/NavigationMenu.constants'
 import { REFERENCES } from '~/content/navigation.references'
 import { ClientLibHeader } from '~/features/docs/Reference.header'
 import { ClientLibIntroduction, OldVersionAlert } from '~/features/docs/Reference.introduction'
@@ -18,7 +18,18 @@ export async function ClientSdkReferencePage({ sdkId, libVersion }: ClientSdkRef
   const versions = libraryMeta?.versions ?? []
   const isLatestVersion = libVersion === versions[0]
 
-  const menuData = NavItems[libraryMeta.meta[libVersion].libId]
+  // Extract plain object to avoid passing Module object to client components
+  const menuDataRaw = NavItemsModule[libraryMeta.meta[libVersion].libId]
+  
+  // Ensure we create a plain serializable object without functions or module references
+  const menuData = {
+    title: menuDataRaw.title,
+    icon: menuDataRaw.icon,
+    pkg: {
+      name: menuDataRaw.pkg.name,
+      repo: menuDataRaw.pkg.repo,
+    },
+  }
 
   return (
     <ReferenceContentScrollHandler

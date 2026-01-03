@@ -27,6 +27,7 @@ const AccordionTrigger = React.forwardRef<
         'flex flex-1 gap-2 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180 text-left',
         className
       )}
+      suppressHydrationWarning
       {...props}
     >
       {children}
@@ -46,6 +47,7 @@ const AccordionContent = React.forwardRef<
       'overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
       className
     )}
+    suppressHydrationWarning
     {...props}
   >
     <div className="pb-4 pt-0">{children}</div>
