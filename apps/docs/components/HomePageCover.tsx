@@ -141,7 +141,7 @@ const HomePageCover = (props) => {
                   framework.hasLightIcon && isLightMode ? `${framework.icon}-light` : framework.icon
 
                 return (
-                  <Link key={i} href={framework.href} passHref className="no-underline">
+                  <Link key={framework.href || framework.icon || i} href={framework.href} passHref className="no-underline">
                     <IconPanel
                       iconSize={iconSize}
                       hideArrow

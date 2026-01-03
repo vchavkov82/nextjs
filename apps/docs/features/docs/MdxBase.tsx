@@ -33,9 +33,10 @@ const MDXRemoteBase = async ({
   
   // Custom preprocessing to resolve isFeatureEnabled calls
   const resolveFeatureFlags = (mdx: string): string => {
-    return mdx.replace(/isFeatureEnabled(['"]([^'"]+)['"])/g, (match, feature) => {
+    return mdx.replace(/isFeatureEnabled\(['"]([^'"]+)['"]\)/g, (match, feature) => {
       try {
-        return isFeatureEnabled(feature as any).toString()
+        const result = isFeatureEnabled(feature as any)
+        return String(result)
       } catch (error) {
         console.error('Error resolving feature flag:', feature, error)
         return 'false'

@@ -1,12 +1,12 @@
 import { isFeatureEnabled } from 'common/enabled-features'
 
-const {
-  sdkCsharp: sdkCsharpEnabled,
-  sdkDart: sdkDartEnabled,
-  sdkKotlin: sdkKotlinEnabled,
-  sdkPython: sdkPythonEnabled,
-  sdkSwift: sdkSwiftEnabled,
-} = isFeatureEnabled(['sdk:csharp', 'sdk:dart', 'sdk:kotlin', 'sdk:python', 'sdk:swift'])
+// Cache the feature flags as plain values to avoid module dependencies in serialization
+const _features = isFeatureEnabled(['sdk:csharp', 'sdk:dart', 'sdk:kotlin', 'sdk:python', 'sdk:swift'])
+const sdkCsharpEnabled = !!_features.sdkCsharp
+const sdkDartEnabled = !!_features.sdkDart
+const sdkKotlinEnabled = !!_features.sdkKotlin
+const sdkPythonEnabled = !!_features.sdkPython
+const sdkSwiftEnabled = !!_features.sdkSwift
 
 export const REFERENCES = {
   javascript: {
@@ -172,12 +172,14 @@ export const REFERENCES = {
     versions: [],
     icon: 'self-hosting',
   },
-} as const
+}
 
+// Export plain arrays (not computed, to avoid any module references)
 export const clientSdkIds = Object.keys(REFERENCES).filter(
-  (reference) => REFERENCES[reference].type === 'sdk' && REFERENCES[reference].enabled !== false
+  (reference) => (REFERENCES[reference as keyof typeof REFERENCES] as any).type === 'sdk' && (REFERENCES[reference as keyof typeof REFERENCES] as any).enabled !== false
 )
 
 export const selfHostingServices = Object.keys(REFERENCES).filter(
-  (reference) => REFERENCES[reference].type === 'self-hosting'
+  (reference) => (REFERENCES[reference as keyof typeof REFERENCES] as any).type === 'self-hosting'
 )
+

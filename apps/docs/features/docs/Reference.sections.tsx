@@ -194,7 +194,7 @@ async function CliCommandSection({ link, section }: CliCommandSectionProps) {
                 )
                 if (!subcommandDetails) return null
                 return (
-                  <li key={index} className="ml-4">
+                  <li key={subcommand} className="ml-4">
                     <RefInternalLink
                       href={`/reference/cli/${subcommandDetails.id}`}
                       sectionSlug={subcommandDetails.id}
@@ -212,7 +212,7 @@ async function CliCommandSection({ link, section }: CliCommandSectionProps) {
             <h3 className="mb-3 text-base text-foreground">Flags</h3>
             <ul>
               {command.flags.map((flag, index) => (
-                <li key={index} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
+                <li key={flag.name} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
                   <div className="flex flex-wrap items-baseline gap-3">
                     <span className="font-mono text-sm font-medium text-foreground">
                       {flag.name}
@@ -363,7 +363,7 @@ async function ApiEndpointSection({ link, section, servicePath }: ApiEndpointSec
             <h3 className="mb-3 text-base text-foreground">Path parameters</h3>
             <ul>
               {pathParameters.map((param, index) => (
-                <ApiSchemaParamDetails key={index} param={param} />
+                <ApiSchemaParamDetails key={param.name || `path-param-${index}`} param={param} />
               ))}
             </ul>
           </section>
@@ -373,7 +373,7 @@ async function ApiEndpointSection({ link, section, servicePath }: ApiEndpointSec
             <h3 className="mb-3 text-base text-foreground">Query parameters</h3>
             <ul>
               {queryParameters.map((param, index) => (
-                <ApiSchemaParamDetails key={index} param={param} />
+                <ApiSchemaParamDetails key={param.name || `query-param-${index}`} param={param} />
               ))}
             </ul>
           </section>
