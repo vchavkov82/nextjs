@@ -1,5 +1,10 @@
 import '@code-hike/mdx/dist/index.css'
 import '../styles/main.scss'
+<<<<<<< HEAD
+=======
+import '../styles/new-docs.scss'
+import '../styles/prism-okaidia.scss'
+>>>>>>> b333ef10b8 (clean up docs errors)
 
 import { genFaviconData } from 'common/MetaFavicons/app-router'
 import type { Metadata, Viewport } from 'next'

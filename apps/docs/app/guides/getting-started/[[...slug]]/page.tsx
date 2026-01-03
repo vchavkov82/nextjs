@@ -15,12 +15,16 @@ const GettingStartedGuidePage = async (props: { params: Promise<Params> }) => {
   const slug = ['getting-started', ...(params.slug ?? [])]
   const data = await getGuidesMarkdown(slug)
 
+<<<<<<< HEAD
   if (!data) {
     notFound()
   }
 
   const { pathname, ...guideProps } = data
   return <GuideTemplate {...guideProps} /> 
+=======
+  return <GuideTemplate {...data!} /> 
+>>>>>>> b333ef10b8 (clean up docs errors)
 }
 
 const generateStaticParams = IS_PROD ? genGuidesStaticParams('getting-started') : getEmptyArray
