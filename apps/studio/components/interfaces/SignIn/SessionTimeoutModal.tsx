@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { useEffect } from 'react'
 
 import { InlineLink, InlineLinkClassName } from 'components/ui/InlineLink'
@@ -19,7 +18,7 @@ export const SessionTimeoutModal = ({
 }: SessionTimeoutModalProps) => {
   useEffect(() => {
     if (visible) {
-      Sentry.captureException(new Error('Session error detected'))
+      console.error(new Error('Session error detected'))
     }
   }, [visible])
 

@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import {
   getOperationAST,
   graphql,
@@ -262,20 +261,14 @@ async function handleRequest(request: Request): Promise<NextResponse> {
     })
 
     const result = await handleGraphQLRequest(request)
-    // Do not let Vercel close the process until Sentry has flushed
-    // https://github.com/getsentry/sentry-javascript/issues/9626
-    await Sentry.flush(2000)
     return result
   } catch (error: unknown) {
     console.error(error)
 
     if (error instanceof ApiError) {
       if (!error.isUserError()) {
-        Sentry.captureException(error)
+        // Error reporting was removed
       }
-      // Do not let Vercel close the process until Sentry has flushed
-      // https://github.com/getsentry/sentry-javascript/issues/9626
-      await Sentry.flush(2000)
 
       return NextResponse.json(
         {

@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { createClient } from '@supabase/supabase-js'
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -96,7 +95,6 @@ export async function POST(req: NextRequest, props: { params: Promise<{ ref: str
       { status: 200 }
     )
   } catch (error) {
-    Sentry.captureException(error)
     const errorMessage = (error as Error).message
     return NextResponse.json(
       { error: `Failure: Could not send post to Slack. Error: ${errorMessage}` },

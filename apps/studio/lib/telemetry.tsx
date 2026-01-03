@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { useEffect } from 'react'
 
 import { LOCAL_STORAGE_KEYS, PageTelemetry, useUser } from 'common'

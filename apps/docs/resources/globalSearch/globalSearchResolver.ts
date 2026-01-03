@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import {
   GraphQLError,
   GraphQLInt,
@@ -37,9 +36,6 @@ async function resolveSearch(
     async (data) => (await GraphQLCollectionBuilder.create({ items: data })).unwrap(),
     (error) => {
       console.error(`Error resolving ${GRAPHQL_FIELD_SEARCH_GLOBAL}:`, error)
-      if (!error.isUserError()) {
-        Sentry.captureException(error)
-      }
       return new GraphQLError(error.isPrivate() ? 'Internal Server Error' : error.message)
     }
   )

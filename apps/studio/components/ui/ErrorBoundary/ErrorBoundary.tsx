@@ -1,5 +1,4 @@
 import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary'
-import * as Sentry from '@sentry/nextjs'
 import { Alert_Shadcn_, AlertDescription_Shadcn_, AlertTitle_Shadcn_, Button } from 'ui'
 import { AlertCircle } from 'lucide-react'
 import { ErrorInfo } from 'react'
@@ -63,14 +62,14 @@ export const ErrorBoundary = ({
   onReset,
 }: ErrorBoundaryProps) => {
   const handleError = (error: Error, info: ErrorInfo) => {
-    Sentry.withScope((scope) => {
+    (scope => {
       scope.setExtra('componentStack', info.componentStack)
       if (sentryContext) {
         Object.entries(sentryContext).forEach(([key, value]) => {
           scope.setExtra(key, value)
         })
       }
-      Sentry.captureException(error)
+      console.error(error)
     })
   }
 

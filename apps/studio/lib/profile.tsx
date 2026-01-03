@@ -1,4 +1,3 @@
-import * as Sentry from '@sentry/nextjs'
 import { useRouter } from 'next/router'
 import { PropsWithChildren, createContext, useContext, useEffect, useMemo } from 'react'
 import { toast } from 'sonner'
@@ -57,12 +56,12 @@ export const ProfileProvider = ({ children }: PropsWithChildren<{}>) => {
         // multiple times unnecessarily, although the tracing the code i can't see why this might
         // be happening unless GET profile is somehow returning `User's profile not found` incorrectly
         // Adding a Sentry capture + toast in hopes to catch this while developing on local / staging
-        Sentry.captureMessage('Profile already exists: ' + error.message)
+        console.log('Profile already exists: ' + error.message)
         if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'prod') {
           toast.error('[DEV] createProfile called despite profile already exists: ' + error.message)
         }
       } else {
-        Sentry.captureMessage('Failed to create users profile: ' + error.message)
+        console.log('Failed to create users profile: ' + error.message)
         toast.error('Failed to create your profile. Please refresh to try again.')
       }
     },
