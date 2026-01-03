@@ -11,6 +11,9 @@ import { visit } from 'unist-util-visit'
 import { rehypeComponent } from './lib/rehype-component'
 import { rehypeNpmCommand } from './lib/rehype-npm-command'
 
+// Cache the highlighter instance to prevent creating multiple instances
+let cachedHighlighter
+
 /** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   slug: {
@@ -146,8 +149,11 @@ export default makeSource({
         // rehypePrettyCodeOptions,
         {
           getHighlighter: async () => {
-            const theme = await loadTheme(path.join(process.cwd(), '/lib/themes/supabase-2.json'))
-            return await getHighlighter({ theme })
+            if (!cachedHighlighter) {
+              const theme = await loadTheme(path.join(process.cwd(), '/lib/themes/supabase-2.json'))
+              cachedHighlighter = await getHighlighter({ theme })
+            }
+            return cachedHighlighter
           },
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

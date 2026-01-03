@@ -1,5 +1,5 @@
-import { serialize } from 'next-mdx-remote/serialize'
+import type { SerializeOptions } from 'next-mdx-remote/dist/types'
 
-// The SerializeOptions is not exported from next-mdx-remote/serialize, so we need to
-// manually define it here.
-export type SerializeOptions = Parameters<typeof serialize>[1]
+// For next-mdx-remote/rsc, we use the SerializeOptions type
+// which is compatible with React Server Components
+export type { SerializeOptions }
