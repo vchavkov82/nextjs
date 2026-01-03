@@ -19,7 +19,7 @@ interface MeetupOverlayCardProps {
   visible: boolean
 }
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const LW15Meetups = ({ className, meetups = [] }: PropsWithChildren<Props>) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
