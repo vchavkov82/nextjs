@@ -36,11 +36,7 @@ export async function linkSupportTicket({
   if (error) {
     handleError(error, {
       alwaysCapture: true,
-      sentryContext: {
-        tags: {
-          linkSupportTicket: true,
-        },
-      },
+      // sentryContext removed - Sentry not imported
     })
   }
   return data

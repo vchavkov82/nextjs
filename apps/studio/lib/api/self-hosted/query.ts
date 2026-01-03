@@ -45,9 +45,18 @@ export async function executeQuery<T = unknown>({
     const result = await response.json()
 
     if (!response.ok) {
-      const { message, code, formattedError } = databaseErrorSchema.parse(result)
-      const error = new PgMetaDatabaseError(message, code, response.status, formattedError)
-      return { data: undefined, error }
+      try {
+        const { message, code, formattedError } = databaseErrorSchema.parse(result)
+        const error = new PgMetaDatabaseError(message, code, response.status, formattedError)
+        return { data: undefined, error }
+      } catch (parseError) {
+        // If the error response doesn't match the expected schema, create a generic error
+        const fallbackMessage = result?.message || result?.error || 'Unknown database error'
+        const fallbackCode = result?.code || response.status.toString()
+        const fallbackFormattedError = result?.formattedError || fallbackMessage
+        const error = new PgMetaDatabaseError(fallbackMessage, fallbackCode, response.status, fallbackFormattedError)
+        return { data: undefined, error }
+      }
     }
 
     return { data: result, error: undefined }

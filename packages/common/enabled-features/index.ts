@@ -1,5 +1,5 @@
 import type { components } from 'api-types'
-import enabledFeaturesRaw from './enabled-features.json' with { type: 'json' }
+import enabledFeaturesRaw from './enabled-features.json'
 
 const enabledFeaturesStaticObj = enabledFeaturesRaw as Omit<typeof enabledFeaturesRaw, '$schema'>
 

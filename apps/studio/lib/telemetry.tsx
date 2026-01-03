@@ -39,7 +39,7 @@ export function Telemetry() {
         sentryUserId = await getAnonId(user?.id)
         localStorage.setItem(LOCAL_STORAGE_KEYS.SENTRY_USER_ID, sentryUserId)
       }
-      Sentry.setUser({ id: sentryUserId })
+      // Sentry.setUser({ id: sentryUserId })
     }
 
     // if an error happens, continue without setting a sentry id

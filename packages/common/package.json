@@ -4,6 +4,19 @@
   "type": "module",
   "main": "./index.tsx",
   "types": "./index.tsx",
+  "sideEffects": false,
+  "exports": {
+    ".": "./index.tsx",
+    "./auth": "./auth.tsx",
+    "./constants": "./constants/index.ts",
+    "./enabled-features": "./enabled-features/index.ts",
+    "./enabled-features/index.ts": "./enabled-features/index.ts",
+    "./hooks": "./hooks/index.ts",
+    "./hooks/*": "./hooks/*",
+    "./constants/*": "./constants/*",
+    "./MetaFavicons/app-router": "./MetaFavicons/app-router.ts",
+    "./MetaFavicons/pages-router": "./MetaFavicons/pages-router.tsx"
+  },
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",

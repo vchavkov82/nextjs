@@ -1,13 +1,19 @@
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { type ComponentProps } from 'react'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 
-import { isFeatureEnabled } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
 import { preprocessMdxWithDefaults } from '~/features/directives/utils'
 import { components } from '~/features/docs/MdxBase.shared'
 import { SerializeOptions } from '~/types/next-mdx-remote-serialize'
+
+interface MDXRemoteBaseProps {
+  source: string
+  options?: SerializeOptions
+  customPreprocess?: (mdx: string) => string | Promise<string>
+  components?: Record<string, React.ComponentType<any>>
+}
 
 const mdxOptions: SerializeOptions = {
   mdxOptions: {
@@ -21,13 +27,24 @@ const MDXRemoteBase = async ({
   source,
   options = {},
   customPreprocess,
-  ...props
-}: ComponentProps<typeof MDXRemote> & {
-  source: string
-  customPreprocess?: (mdx: string) => string | Promise<string>
-}) => {
+  components: customComponents,
+}: MDXRemoteBaseProps) => {
   const preprocess = customPreprocess ?? preprocessMdxWithDefaults
+  
+  // Custom preprocessing to resolve isFeatureEnabled calls
+  const resolveFeatureFlags = (mdx: string): string => {
+    return mdx.replace(/isFeatureEnabled(['"]([^'"]+)['"])/g, (match, feature) => {
+      try {
+        return isFeatureEnabled(feature as any).toString()
+      } catch (error) {
+        console.error('Error resolving feature flag:', feature, error)
+        return 'false'
+      }
+    })
+  }
+  
   const preprocessedSource = await preprocess(source)
+  const resolvedSource = resolveFeatureFlags(preprocessedSource)
 
   const { mdxOptions: { remarkPlugins, rehypePlugins, ...otherMdxOptions } = {}, ...otherOptions } =
     options
@@ -40,7 +57,6 @@ const MDXRemoteBase = async ({
   } = mdxOptions
 
   const finalOptions = {
-    scope: { isFeatureEnabled },
     ...mdxOptions,
     ...otherOptions,
     mdxOptions: {
@@ -53,10 +69,12 @@ const MDXRemoteBase = async ({
 
   return (
     <MDXRemote
-      source={preprocessedSource}
-      components={components}
+      source={resolvedSource}
+      components={{
+        ...components,
+        ...customComponents,
+      }}
       options={finalOptions}
-      {...props}
     />
   )
 }

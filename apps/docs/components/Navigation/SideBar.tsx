@@ -130,13 +130,13 @@ const SideBar = ({ menuItems = [] }: { menuItems: any }) => {
                     )
                   } else {
                     return (
-                      <Accordion.Root
-                        collapsible
-                        key={section.name}
-                        type="single"
-                        className="space-y-0.5"
-                        defaultValue={currentSubSection?.name}
-                      >
+                      <div key={section.name}>
+                        <Accordion.Root
+                          collapsible
+                          type="single"
+                          className="space-y-0.5"
+                          defaultValue={currentSubSection?.name}
+                        >
                         <Accordion.Item value={section.name}>
                           <Accordion.Trigger className="flex items-center space-x-2 px-4 py-1.5">
                             <ChevronRight
@@ -169,6 +169,7 @@ const SideBar = ({ menuItems = [] }: { menuItems: any }) => {
                           </Accordion.Content>
                         </Accordion.Item>
                       </Accordion.Root>
+                      </div>
                     )
                   }
                 })}

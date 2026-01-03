@@ -7,7 +7,8 @@ import rehypeSlug from 'rehype-slug'
 import emoji from 'remark-emoji'
 // End of third-party imports
 
-import { IS_PROD, isFeatureEnabled } from 'common'
+import { IS_PROD } from 'common/constants'
+import { isFeatureEnabled } from 'common/enabled-features'
 import { Button } from 'ui'
 import { Admonition } from 'ui-patterns'
 import {

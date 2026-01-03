@@ -10,7 +10,7 @@ import remarkMkDocsAdmonition from '~/lib/mdx/plugins/remarkAdmonition'
 import { removeTitle } from '~/lib/mdx/plugins/remarkRemoveTitle'
 import remarkPyMdownTabs from '~/lib/mdx/plugins/remarkTabs'
 import { SerializeOptions } from '~/types/next-mdx-remote-serialize'
-import { IS_PROD } from 'common'
+import { IS_PROD } from 'common/constants'
 import { getEmptyArray } from '~/features/helpers.fn'
 
 // We fetch these docs at build time from an external repo

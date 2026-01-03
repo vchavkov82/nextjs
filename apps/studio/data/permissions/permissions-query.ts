@@ -12,14 +12,7 @@ export async function getPermissions(signal?: AbortSignal) {
   const { data, error } = await get('/platform/profile/permissions', { signal })
   if (error) {
     handleError(error, {
-      sentryContext: {
-        tags: {
-          permissionsQuery: true,
-        },
-        contexts: {
-          rawError: error,
-        },
-      },
+      // sentryContext removed - Sentry not imported
     })
   }
 

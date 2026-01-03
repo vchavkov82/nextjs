@@ -89,15 +89,16 @@ export function NavigationMenuGuideListWrapper({
   firstLevelRoute?: string
 }>) {
   return (
-    <Accordion.Root
-      collapsible={true}
-      key={id}
-      type="single"
-      value={firstLevelRoute}
-      className="transition-all duration-150 ease-out opacity-100 ml-0 delay-150 w-full"
-    >
-      {children}
-    </Accordion.Root>
+    <div key={id}>
+      <Accordion.Root
+        collapsible={true}
+        type="single"
+        value={firstLevelRoute}
+        className="transition-all duration-150 ease-out opacity-100 ml-0 delay-150 w-full"
+      >
+        {children}
+      </Accordion.Root>
+    </div>
   )
 }
 

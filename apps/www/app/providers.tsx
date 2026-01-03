@@ -18,6 +18,7 @@ import { useConsentToast } from 'ui-patterns/consent'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 function Providers({ children }: { children: React.ReactNode }) {
+  // Re-enable useThemeSandbox to test
   useThemeSandbox()
   const { hasAcceptedConsent } = useConsentToast()
 
