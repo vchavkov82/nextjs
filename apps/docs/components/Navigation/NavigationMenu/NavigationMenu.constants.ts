@@ -640,36 +640,6 @@ export const SocialLoginItems: Array<Partial<NavMenuSection>> = [
   },
 ]
 
-export const PhoneLoginsItems = [
-  {
-    name: 'MessageBird',
-    icon: '/docs/img/icons/messagebird-icon',
-    linkDescription: 'Communication between businesses and their customers — across any channel.',
-    url: '/guides/auth/phone-login/messagebird',
-  },
-  {
-    name: 'Twilio',
-    icon: '/docs/img/icons/twilio-icon',
-    url: '/guides/auth/phone-login/twilio',
-    linkDescription: 'Customer engagement platform used by hundreds of thousands of businesses.',
-  },
-  {
-    name: 'Vonage',
-    icon: '/docs/img/icons/vonage-icon',
-    url: '/guides/auth/phone-login/vonage',
-    linkDescription:
-      'Vonage is a communication platform as a service (CPaaS) provider for consumers and businesses.',
-    isDarkMode: true,
-    hasLightIcon: true,
-  },
-  {
-    name: 'Textlocal (Community Supported)',
-    icon: '/docs/img/icons/textlocal-icon',
-    url: '/guides/auth/phone-login/textlocal',
-    linkDescription: 'Textlocal is a cloud-based SMS platform offering bulk messaging services.',
-  },
-]
-
 export const auth: NavMenuConstant = {
   icon: 'auth',
   title: 'Auth',
@@ -3345,7 +3315,6 @@ export const references = [
 export const navDataForMdx = {
   migrationPages: MIGRATION_PAGES,
   nativeMobileLoginItems: NativeMobileLoginItems,
-  phoneLoginsItems: PhoneLoginsItems,
   socialLoginItems: SocialLoginItems,
   ormQuickstarts,
   guiQuickstarts,
