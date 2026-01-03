@@ -7,11 +7,11 @@ import { Search } from 'lucide-react'
 import { debounce } from 'lib/helpers'
 
 import { Button, Checkbox, cn, Input } from 'ui'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import Panel from '~/components/Panel'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
 
-import { features } from '~/data/features'
+import { features } from '@/data/features'
 
 function FeaturesPage() {
   const router = useRouter()

@@ -4,7 +4,7 @@ import { cn, Image } from 'ui'
 
 import MainProducts from '../MainProducts'
 
-import type { TwoColumnsSectionProps } from '~/components/Solutions/TwoColumnsSection'
+import type { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import type { PlatformSectionProps } from 'components/Solutions/PlatformSection'
 import type { FeaturesSection, HeroSection, Metadata } from './solutions.utils'
 import type { Quotes } from './solutions.utils'

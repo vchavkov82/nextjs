@@ -7,17 +7,17 @@ import { useEffect } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
 
 import { Accordion, Button, TextLink } from 'ui'
-import { DEFAULT_EASE } from '~/lib/animations'
+import { DEFAULT_EASE } from '@/lib/animations'
 import MenuItem from './MenuItem'
 
 import { useIsLoggedIn, useIsUserLoading } from 'common'
 import * as supabaseLogoWordmarkDark from 'common/assets/images/supabase-logo-wordmark--dark.png'
 import * as supabaseLogoWordmarkLight from 'common/assets/images/supabase-logo-wordmark--light.png'
 import { ChevronRight } from 'lucide-react'
-import ProductModulesData from '~/data/ProductModules'
+import ProductModulesData from '@/data/ProductModules'
 import staticContent from '.generated/staticContent/_index.json'
 
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 interface Props {
   open: boolean

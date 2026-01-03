@@ -5,7 +5,7 @@ import React, { FC } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { cn } from 'ui'
 import { TweetCard } from 'ui-patterns/TweetCard'
-import content from '~/data/home/content'
+import content from '@/data/home/content'
 import Link from 'next/link'
 
 interface Tweet {

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 import { CustomerLogo, CustomerQuote } from '../../pages/contact/sales'
 import EnterpriseFormQuotes from '../EnterpriseFormQuotes'

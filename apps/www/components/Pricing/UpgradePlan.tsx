@@ -27,7 +27,7 @@ import {
   PopoverContent_Shadcn_,
   PopoverTrigger_Shadcn_,
 } from 'ui'
-import { Organization } from '~/data/organizations'
+import { Organization } from '@/data/organizations'
 
 interface UpgradePlanProps {
   organizations?: Organization[]

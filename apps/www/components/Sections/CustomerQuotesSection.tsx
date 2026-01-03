@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useRef } from 'react'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import CustomersVisual from '~/components/Products/VectorAI/CustomersVisual'
-import { INITIAL_BOTTOM, getAnimation } from '~/lib/animations'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import CustomersVisual from '@/components/Products/VectorAI/CustomersVisual'
+import { INITIAL_BOTTOM, getAnimation } from '@/lib/animations'
 
 interface Customer {
   type?: string

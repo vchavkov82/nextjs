@@ -23,7 +23,7 @@ import RealtimeLogs from 'components/Products/Functions/RealtimeLogs'
 import MainProducts from 'data/MainProducts'
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 import { companyStats } from 'data/company-stats'
-import { DerivLogo } from '~/components/BrandLogo'
+import { DerivLogo } from '@/components/BrandLogo'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
 const FunctionsVisual = dynamic(() => import('components/Products/FunctionsVisual'))

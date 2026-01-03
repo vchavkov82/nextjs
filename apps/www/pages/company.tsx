@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 
-import Layout from '~/components/Layouts/Default'
+import Layout from '@/components/Layouts/Default'
 
 import SectionHeader from 'components/UI/SectionHeader'
 import CTABanner from 'components/CTABanner/index'
 import ImageGrid from 'components/ImageGrid'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 import PressData from 'data/Press'
 import CommunityData from 'data/Community'

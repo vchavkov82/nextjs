@@ -23,8 +23,8 @@ import MetaFaviconsPagesRouter, {
   DEFAULT_FAVICON_ROUTE,
   DEFAULT_FAVICON_THEME_COLOR,
 } from 'common/MetaFavicons/pages-router'
-import { WwwCommandMenu } from '~/components/CommandMenu'
-import { API_URL, APP_NAME, DEFAULT_META_DESCRIPTION } from '~/lib/constants'
+import { WwwCommandMenu } from '@/components/CommandMenu'
+import { API_URL, APP_NAME, DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 import useDarkLaunchWeeks from '../hooks/useDarkLaunchWeeks'
 import { useWwwCommandMenuTelemetry } from '../hooks/useWwwCommandMenuTelemetry'
 

@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from 'ui'
-import { EASE_IN, EASE_OUT } from '~/lib/animations'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { EASE_IN, EASE_OUT } from '@/lib/animations'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 import SectionContainer from '../Layouts/SectionContainer'
 
 type Framework = {

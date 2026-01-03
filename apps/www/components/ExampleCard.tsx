@@ -5,7 +5,7 @@ import { useBreakpoint } from 'common'
 
 import { Button } from 'ui'
 import Panel from './Panel'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 function ExampleCard(props: any) {
   const isXs = useBreakpoint()

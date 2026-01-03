@@ -9,11 +9,11 @@ import { GetServerSideProps } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { NextSeo } from 'next-seo'
 import Link from 'next/link'
-import CTABanner from '~/components/CTABanner'
-import DefaultLayout from '~/components/Layouts/Default'
-import { deletedDiscussions } from '~/lib/changelog.utils'
-import mdxComponents from '~/lib/mdx/mdxComponents'
-import { mdxSerialize } from '~/lib/mdx/mdxSerialize'
+import CTABanner from '@/components/CTABanner'
+import DefaultLayout from '@/components/Layouts/Default'
+import { deletedDiscussions } from '@/lib/changelog.utils'
+import mdxComponents from '@/lib/mdx/mdxComponents'
+import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
 
 export type Discussion = {
   id: string

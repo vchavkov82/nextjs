@@ -7,10 +7,10 @@ import { Button, ButtonProps, cn } from 'ui'
 import { CommandMenuTrigger } from 'ui-patterns/CommandMenu'
 
 import { questions } from 'shared-data'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import Panel from '~/components/Panel'
-import data from '~/data/support'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
+import data from '@/data/support'
 import { Search, Command } from 'lucide-react'
 
 const Index = () => {

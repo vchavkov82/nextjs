@@ -2,7 +2,7 @@ import Container from 'components/Container'
 
 import CTABanner from 'components/CTABanner/index'
 import { Button } from 'ui'
-import Layout from '~/components/Layouts/Default'
+import Layout from '@/components/Layouts/Default'
 
 import { useRouter } from 'next/router'
 
@@ -10,7 +10,7 @@ import * as supabaseLogoPreview from 'common/assets/images/logo-preview.jpg'
 import { Download } from 'lucide-react'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import Link from 'next/link'
 
 const Index = () => {

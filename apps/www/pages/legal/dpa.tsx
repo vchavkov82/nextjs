@@ -1,7 +1,7 @@
 import CTABanner from 'components/CTABanner/index'
-import Layout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import Layout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 const DPA = () => {
   const sendTelemetryEvent = useSendTelemetryEvent()

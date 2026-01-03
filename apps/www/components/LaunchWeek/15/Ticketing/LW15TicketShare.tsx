@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from 'ui'
 import useConfData from '../hooks/use-conf-data'
-import { LW15_TWEET_TEXT, LW15_URL } from '~/lib/constants'
+import { LW15_TWEET_TEXT, LW15_URL } from '@/lib/constants'
 import supabase from '../supabase'
 
 export default function LW15TicketShare() {

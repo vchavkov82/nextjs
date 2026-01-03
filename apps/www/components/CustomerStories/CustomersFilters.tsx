@@ -3,7 +3,7 @@
 import { useRouter } from 'next/compat/router'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import type PostTypes from '~/types/post'
+import type PostTypes from '@/types/post'
 import {
   Button,
   DropdownMenu,

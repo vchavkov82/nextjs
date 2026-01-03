@@ -11,7 +11,7 @@ import {
   StyledArticleBadge,
 } from './components'
 
-import { WeekDayProps } from '~/components/LaunchWeek/7/lw7_days'
+import { WeekDayProps } from '@/components/LaunchWeek/7/lw7_days'
 import { opacityVariant4, scaleOpacityVariant2 } from '.'
 
 import styles from './day5.module.css'

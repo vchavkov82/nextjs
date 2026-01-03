@@ -1,5 +1,5 @@
 import { SupabaseClient } from '@supabase/supabase-js'
-import supabase from '~/lib/supabase'
+import supabase from '@/lib/supabase'
 
 /**
  * Override supabase types similar to previous use-conf-data.ts.

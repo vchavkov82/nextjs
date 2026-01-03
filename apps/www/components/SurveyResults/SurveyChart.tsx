@@ -11,7 +11,7 @@ import {
 } from 'ui'
 import { ChevronsUpDown } from 'lucide-react'
 import TwoOptionToggle from '../../../studio/components/ui/TwoOptionToggle'
-import CodeBlock from '~/components/CodeBlock/CodeBlock'
+import CodeBlock from '@/components/CodeBlock/CodeBlock'
 
 // Separate Supabase client for survey project
 const externalSupabase = createClient(

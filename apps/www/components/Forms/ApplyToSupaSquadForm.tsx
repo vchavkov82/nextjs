@@ -35,7 +35,7 @@ import {
 import {
   SupaSquadApplication,
   supaSquadApplicationSchema,
-} from '~/data/open-source/contributing/supasquad.utils'
+} from '@/data/open-source/contributing/supasquad.utils'
 import { CountrySelector } from '../Supasquad/CountrySelector'
 
 interface FormItem_Shadcn_ {

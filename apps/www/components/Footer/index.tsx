@@ -12,7 +12,7 @@ import footerData from 'data/Footer'
 import { usePathname } from 'next/navigation'
 import { Badge, IconDiscord, IconGitHubSolid, IconTwitterX, IconYoutubeSolid, cn } from 'ui'
 import { ThemeToggle } from 'ui-patterns/ThemeToggle'
-import supabase from '~/lib/supabase'
+import supabase from '@/lib/supabase'
 import useDarkLaunchWeeks from '../../hooks/useDarkLaunchWeeks'
 import SectionContainer from '../Layouts/SectionContainer'
 

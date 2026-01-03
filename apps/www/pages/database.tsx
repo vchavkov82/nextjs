@@ -15,15 +15,15 @@ import ApiExamplesData from 'data/products/database/api-examples'
 import ExtensionsExamplesData from 'data/products/database/extensions-examples'
 import SqlViewCarouselData from 'data/products/database/sql-view-carousel.json'
 import TableViewCarouselData from 'data/products/database/table-view-carousel.json'
-import MainProducts from '~/data/MainProducts'
-import HighlightsCards from '~/data/products/database/highlight-cards'
+import MainProducts from '@/data/MainProducts'
+import HighlightsCards from '@/data/products/database/highlight-cards'
 
 import { ArrowUpRight, X } from 'lucide-react'
 import { PRODUCT_NAMES } from 'shared-data/products'
 import { TweetCard } from 'ui-patterns/TweetCard'
-import ProductsNav from '~/components/Products/ProductsNav'
-import ProductHeader from '~/components/Sections/ProductHeader'
-import { ETLVisual } from '~/data/products/database/etl-visual'
+import ProductsNav from '@/components/Products/ProductsNav'
+import ProductHeader from '@/components/Sections/ProductHeader'
+import { ETLVisual } from '@/data/products/database/etl-visual'
 
 const NewFeatureCard = dynamic(() => import('~/components/NewFeatureCard'))
 const ImageCarousel = dynamic(() => import('~/components/Carousels/ImageCarousel'))

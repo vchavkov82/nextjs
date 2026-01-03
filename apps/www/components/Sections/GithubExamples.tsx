@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { Button } from 'ui'
 
 import { ArrowLeft, ArrowRight, BookOpen } from 'lucide-react'
-import Examples from '~/data/Examples'
+import Examples from '@/data/Examples'
 import ExampleCard from '../ExampleCard'
 
 // install Swiper modules

@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, useMemo, ReactNode } from 'react'
-import { SupabaseEvent, SUPABASE_HOST } from '~/lib/eventsTypes'
+import { SupabaseEvent, SUPABASE_HOST } from '@/lib/eventsTypes'
 
 interface EventsContextValue {
   // Events data

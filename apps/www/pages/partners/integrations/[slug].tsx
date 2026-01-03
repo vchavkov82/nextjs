@@ -18,11 +18,11 @@ import { Button } from 'ui'
 import { Admonition } from 'ui-patterns/admonition'
 import { ExpandableVideo } from 'ui-patterns/ExpandableVideo'
 
-import ImageModal from '~/components/ImageModal'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import supabase from '~/lib/supabaseMisc'
-import type { Partner } from '~/types/partners'
+import ImageModal from '@/components/ImageModal'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import supabase from '@/lib/supabaseMisc'
+import type { Partner } from '@/types/partners'
 import Error404 from '../../404'
 
 /**

@@ -1,6 +1,6 @@
 import { Check } from 'lucide-react'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import AuthVisual from './AuthVisual'
 import DataAPIsVisual from './DataAPIsVisual'
 import DatabaseVisual from './DatabaseVisual'
@@ -11,9 +11,9 @@ import StorageVisual from './StorageVisual'
 import VectorVisual from './VectorVisual'
 
 import { PRODUCT_MODULES_SHORTNAMES, PRODUCT_SHORTNAMES } from 'shared-data/products'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
-import type { ProductType } from '~/data/MainProducts'
+import type { ProductType } from '@/data/MainProducts'
 
 interface Props {
   products: ProductType

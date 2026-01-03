@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 
 import { cn } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import type {
   Feature,
   FeaturesSection as FeaturesSectionType,
-} from '~/data/solutions/solutions.utils'
+} from '@/data/solutions/solutions.utils'
 
 const FeaturesSection: FC<FeaturesSectionType> = (props) => {
   return (

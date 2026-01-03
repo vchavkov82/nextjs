@@ -5,13 +5,13 @@ import { NextSeo } from 'next-seo'
 import { useBreakpoint } from 'common'
 
 import { PRODUCT_NAMES, PRODUCT_SHORTNAMES } from 'shared-data/products'
-import page from '~/data/products/functions/page'
+import page from '@/data/products/functions/page'
 
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import ProductHeader from '~/components/Sections/ProductHeader2'
-import HighlightColumns from '~/components/Sections/HighlightColumns'
-import ProductsNav from '~/components/Products/ProductsNav'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import ProductHeader from '@/components/Sections/ProductHeader2'
+import HighlightColumns from '@/components/Sections/HighlightColumns'
+import ProductsNav from '@/components/Products/ProductsNav'
 import Image from 'next/image'
 
 const ExamplesCarousel = dynamic(() => import('~/components/Examples/ExamplesCarousel'))

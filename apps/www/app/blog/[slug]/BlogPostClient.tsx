@@ -8,7 +8,7 @@ import authors from 'lib/authors.json'
 import { CMS_SITE_ORIGIN } from 'lib/constants'
 import { isNotNullOrUndefined } from 'lib/helpers'
 import { generateTocFromMarkdown } from 'lib/toc'
-import { convertRichTextToMarkdown } from '~/lib/cms/convertRichTextToMarkdown'
+import { convertRichTextToMarkdown } from '@/lib/cms/convertRichTextToMarkdown'
 import useActiveAnchors from 'hooks/useActiveAnchors'
 
 import type { Blog, BlogData, CMSAuthor, PostReturnType, ProcessedBlogData } from 'types/post'

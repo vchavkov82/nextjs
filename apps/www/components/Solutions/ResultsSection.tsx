@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import UsersGrowthChart from '~/components/UsersGrowthChart'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import UsersGrowthChart from '@/components/UsersGrowthChart'
 
 export interface ResultsSectionProps {
   id: string

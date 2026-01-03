@@ -2,11 +2,11 @@ import 'swiper/css'
 
 import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
-import DefaultLayout from '~/components/Layouts/Default'
+import DefaultLayout from '@/components/Layouts/Default'
 
 import { useBreakpoint } from 'common'
-import vectorPageData from '~/data/products/modules/vector'
-import ModulesNav from '~/components/Modules/ModulesNav'
+import vectorPageData from '@/data/products/modules/vector'
+import ModulesNav from '@/components/Modules/ModulesNav'
 import { PRODUCT_MODULES_NAMES, PRODUCT_MODULES_SHORTNAMES } from 'shared-data/products'
 
 const ProductModulesHeader = dynamic(() => import('~/components/Sections/ProductModulesHeader'))

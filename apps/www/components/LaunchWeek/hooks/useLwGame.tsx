@@ -9,7 +9,7 @@ const SUPA_SECRET_CODE = 'ship'
 // ============================================
 
 import { RefObject, useEffect, useState } from 'react'
-import { SITE_ORIGIN, LW_URL } from '~/lib/constants'
+import { SITE_ORIGIN, LW_URL } from '@/lib/constants'
 import useConfData from './use-conf-data'
 
 const useLwGame = (inputRef?: RefObject<HTMLInputElement>, disabled?: boolean) => {

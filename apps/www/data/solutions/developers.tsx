@@ -19,7 +19,7 @@ import { CubeIcon } from '@heroicons/react/outline'
 import { Image } from 'ui'
 
 import MainProducts from '../MainProducts'
-import { TwoColumnsSectionProps } from '~/components/Solutions/TwoColumnsSection'
+import { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import RealtimeLogs from 'components/Products/Functions/RealtimeLogs'
 import { frameworks } from 'components/Hero/HeroFrameworks'
 

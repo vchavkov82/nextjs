@@ -3,7 +3,7 @@ import 'config/code-hike.scss'
 import '../styles/index.css'
 
 import { Metadata } from 'next'
-import { APP_NAME, DEFAULT_META_DESCRIPTION } from '~/lib/constants'
+import { APP_NAME, DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 import Providers from './providers'
 import type { Viewport } from 'next'
 

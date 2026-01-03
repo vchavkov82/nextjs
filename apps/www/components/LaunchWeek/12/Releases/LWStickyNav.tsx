@@ -4,7 +4,7 @@ import { WeekDayProps, mainDays } from './data'
 import { cn } from 'ui'
 import { isBrowser } from 'common'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 const LWXStickyNav: FC = () => {
   const days = mainDays()

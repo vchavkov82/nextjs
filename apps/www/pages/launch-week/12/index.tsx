@@ -3,15 +3,15 @@ import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import { Session } from '@supabase/supabase-js'
-import { LW12_DATE, LW12_TITLE, LW_URL, SITE_ORIGIN } from '~/lib/constants'
-import supabase from '~/lib/supabase'
+import { LW12_DATE, LW12_TITLE, LW_URL, SITE_ORIGIN } from '@/lib/constants'
+import supabase from '@/lib/supabase'
 
-import DefaultLayout from '~/components/Layouts/Default'
-import { TicketState, ConfDataContext, UserData } from '~/components/LaunchWeek/hooks/use-conf-data'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import LWStickyNav from '~/components/LaunchWeek/12/Releases/LWStickyNav'
-import LWHeader from '~/components/LaunchWeek/12/Releases/LWHeader'
-import MainStage from '~/components/LaunchWeek/12/Releases/MainStage'
+import DefaultLayout from '@/components/Layouts/Default'
+import { TicketState, ConfDataContext, UserData } from '@/components/LaunchWeek/hooks/use-conf-data'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import LWStickyNav from '@/components/LaunchWeek/12/Releases/LWStickyNav'
+import LWHeader from '@/components/LaunchWeek/12/Releases/LWHeader'
+import MainStage from '@/components/LaunchWeek/12/Releases/MainStage'
 
 const BuildStage = dynamic(() => import('~/components/LaunchWeek/12/Releases/BuildStage'))
 const CTABanner = dynamic(() => import('~/components/CTABanner'))

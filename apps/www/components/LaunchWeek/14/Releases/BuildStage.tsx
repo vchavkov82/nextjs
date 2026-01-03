@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { buildDays as days } from '~/components/LaunchWeek/14/Releases/data'
+import { buildDays as days } from '@/components/LaunchWeek/14/Releases/data'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import BuildCard from './components/BuildCard'
 import { motion, useInView } from 'framer-motion'
 import { cn } from 'ui'

@@ -4,9 +4,9 @@ import { useRef } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Button, cn } from 'ui'
 import Link from 'next/link'
-import { CTA } from '~/types/common'
+import { CTA } from '@/types/common'
 
-import ExampleCard from '~/components/ExampleCard'
+import ExampleCard from '@/components/ExampleCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // import Swiper core and required modules
 import SwiperCore from 'swiper'
