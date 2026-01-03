@@ -42,7 +42,7 @@ const ProductHeader = (props: Types) => {
             {props.subheader &&
               props.subheader.map((subheader, i) => {
                 return (
-                  <p className="p lg:text-lg" key={i}>
+                  <p className="p lg:text-lg" key={`subheader-${i}`}>
                     {subheader}
                   </p>
                 )

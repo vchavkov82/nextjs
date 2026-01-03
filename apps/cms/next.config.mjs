@@ -40,6 +40,7 @@ const nextConfig = {
         }
       }),
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   reactStrictMode: true,
   redirects,
@@ -49,6 +50,10 @@ const nextConfig = {
   },
   // Configure Sharp as an external package for server-side rendering
   serverExternalPackages: ['sharp'],
+  onDemandEntries: {
+    maxInactiveAge: 60 * 60 * 1000,
+    pagesBufferLength: 5,
+  },
   turbopack: {
     rules: {
       '*.svg': {

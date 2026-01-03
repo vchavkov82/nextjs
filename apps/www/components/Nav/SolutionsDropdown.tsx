@@ -66,7 +66,7 @@ const LinksGroup = ({ links, label }: { links: LinkProps[]; label: string }) => 
   )
 }
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 const MigrationLinkCard = ({ link }: { link: LinkProps }) => {
   const [hovered, setHovered] = useState(false)

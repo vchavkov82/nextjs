@@ -7,7 +7,7 @@ import { Button, cn } from 'ui'
 import SectionContainer from 'components/Layouts/SectionContainer'
 import { DEFAULT_EASE } from 'lib/animations'
 
-const MotionImage = motion(Image)
+const MotionImage = motion.create(Image)
 
 const LW15Hackathon: FC = () => {
   return (

@@ -75,6 +75,11 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     remotePatterns,
     qualities: [75, 100],
+    formats: ['image/avif', 'image/webp'],
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 60 * 1000,
+    pagesBufferLength: 5,
   },
   async headers() {
     return [
