@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "turbo run build",
+    "build": "turbo run build --concurrency=16 --cache-dir=.turbo",
     "build:cms": "turbo run build --filter=cms --parallel",
     "build:studio": "turbo run build --filter=studio",
     "build:design-system": "turbo run build --filter=design-system",

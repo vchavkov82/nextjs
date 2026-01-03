@@ -1,0 +1,4 @@
+{
+  "globalDependencies": ["**/.env.local"],
+  "cacheDir": ".turbo"
+}
