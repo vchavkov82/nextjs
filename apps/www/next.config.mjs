@@ -56,7 +56,6 @@ const nextConfig = {
   ],
   experimental: {
     // needed to make the octokit packages work in /changelog
-    esmExternals: 'loose',
   },
   /**
    * Exclude huge directories from being traced into serverless functions

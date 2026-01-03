@@ -17,27 +17,27 @@ import { Admonition } from 'ui-patterns/admonition'
 import type { PropsWithChildren } from 'react'
 import type { ImageProps } from 'ui/src/components/Image/Image'
 
-const Avatar = dynamic(() => import('~/components/Avatar'))
-const Chart = dynamic(() => import('~/components/Charts/PGCharts'))
-const CodeBlock = dynamic(() => import('~/components/CodeBlock/CodeBlock'))
-const Tabs = dynamic(() => import('~/components/Tabs/Tabs'), { ssr: false })
+const Avatar = dynamic(() => import('@/components/Avatar'))
+const Chart = dynamic(() => import('@/components/Charts/PGCharts'))
+const CodeBlock = dynamic(() => import('@/components/CodeBlock/CodeBlock'))
+const Tabs = dynamic(() => import('@/components/Tabs/Tabs'), { ssr: false })
 const TabPanel = dynamic(
-  () => import('~/components/Tabs/Tabs').then((mod) => ({ default: mod.TabPanel })),
+  () => import('@/components/Tabs/Tabs').then((mod) => ({ default: mod.TabPanel })),
   { ssr: false }
 )
 const NamedCodeBlock = dynamic(
   () =>
-    import('~/components/CodeTabs').then((mod) => ({
+    import('@/components/CodeTabs').then((mod) => ({
       default: mod.NamedCodeBlock,
     })),
   {
     ssr: false,
   }
 )
-const ImageFadeStack = dynamic(() => import('~/components/ImageFadeStack'))
-const ImageGrid = dynamic(() => import('~/components/ImageGrid'))
-const InlineCodeTag = dynamic(() => import('~/components/InlineCode'))
-const Quote = dynamic(() => import('~/components/Quote'))
+const ImageFadeStack = dynamic(() => import('@/components/ImageFadeStack'))
+const ImageGrid = dynamic(() => import('@/components/ImageGrid'))
+const InlineCodeTag = dynamic(() => import('@/components/InlineCode'))
+const Quote = dynamic(() => import('@/components/Quote'))
 
 // import all components used in blog articles here
 // to do: move this into a helper/utils, it is used elsewhere

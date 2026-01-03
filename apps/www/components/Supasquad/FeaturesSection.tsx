@@ -7,7 +7,7 @@ import type {
   FeaturesSection as FeaturesSectionType,
 } from '@/data/open-source/contributing/supasquad.utils'
 
-const FeatureIcon = dynamic(() => import('~/components/Supasquad/FeatureIcon'), { ssr: false })
+const FeatureIcon = dynamic(() => import('@/components/Supasquad/FeatureIcon'), { ssr: false })
 
 const FeaturesSection = (props: FeaturesSectionType) => {
   return (

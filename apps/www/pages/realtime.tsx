@@ -21,7 +21,7 @@ import ApiExamples from 'data/products/realtime/api-examples'
 import MainProducts from '@/data/MainProducts'
 import { PRODUCT_NAMES } from 'shared-data/products'
 
-const SingleQuote = dynamic(() => import('~/components/Sections/SingleQuote'))
+const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
 
 const Cursor = ({ className = '', color = 'none' }) => {
   return (

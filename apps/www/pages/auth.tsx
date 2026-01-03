@@ -20,13 +20,13 @@ import { PRODUCT_NAMES } from 'shared-data/products'
 import AuthProviders from '@/data/auth.json'
 
 const SplitCodeBlockCarousel = dynamic(
-  () => import('~/components/Carousels/SplitCodeBlockCarousel')
+  () => import('@/components/Carousels/SplitCodeBlockCarousel')
 )
-const SingleQuote = dynamic(() => import('~/components/Sections/SingleQuote'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
-const FeatureColumn = dynamic(() => import('~/components/FeatureColumn'))
-const APISection = dynamic(() => import('~/components/Sections/APISection'))
-const GithubExamples = dynamic(() => import('~/components/Sections/GithubExamples'))
+const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
+const FeatureColumn = dynamic(() => import('@/components/FeatureColumn'))
+const APISection = dynamic(() => import('@/components/Sections/APISection'))
+const GithubExamples = dynamic(() => import('@/components/Sections/GithubExamples'))
 
 function AuthPage() {
   const isMobile = useBreakpoint(768)

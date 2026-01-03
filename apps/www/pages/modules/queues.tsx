@@ -9,11 +9,11 @@ import SectionContainer from '@/components/Layouts/SectionContainer'
 import { PRODUCT_MODULES_NAMES } from 'shared-data/products'
 import QueuesPageData from '@/data/products/modules/queues'
 
-const HighlightCards = dynamic(() => import('~/components/Sections/HighlightCards'))
-const QueuesSQLSection = dynamic(() => import('~/components/Modules/Queues/QueuesSQLSection'))
-const QueuesAPISection = dynamic(() => import('~/components/Modules/Queues/QueuesAPISection'))
-const ImageParagraphSection = dynamic(() => import('~/components/Sections/ImageParagraphSection'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const HighlightCards = dynamic(() => import('@/components/Sections/HighlightCards'))
+const QueuesSQLSection = dynamic(() => import('@/components/Modules/Queues/QueuesSQLSection'))
+const QueuesAPISection = dynamic(() => import('@/components/Modules/Queues/QueuesAPISection'))
+const ImageParagraphSection = dynamic(() => import('@/components/Sections/ImageParagraphSection'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 function CronPage() {
   const pageData = QueuesPageData()

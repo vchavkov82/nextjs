@@ -13,10 +13,10 @@ import LW11StickyNav from '@/components/LaunchWeek/11/Releases/LW11StickyNav'
 import LW11Header from '@/components/LaunchWeek/11/Releases/LW11Header'
 import MainStage from '@/components/LaunchWeek/11/Releases/MainStage'
 
-const BuildStage = dynamic(() => import('~/components/LaunchWeek/11/Releases/BuildStage'))
-const LW11Meetups = dynamic(() => import('~/components/LaunchWeek/11/LW11Meetups'))
+const BuildStage = dynamic(() => import('@/components/LaunchWeek/11/Releases/BuildStage'))
+const LW11Meetups = dynamic(() => import('@/components/LaunchWeek/11/LW11Meetups'))
 const LaunchWeekPrizeSection = dynamic(
-  () => import('~/components/LaunchWeek/11/LaunchWeekPrizeSection')
+  () => import('@/components/LaunchWeek/11/LaunchWeekPrizeSection')
 )
 
 export default function GAWeekIndex() {

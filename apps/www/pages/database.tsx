@@ -25,18 +25,18 @@ import ProductsNav from '@/components/Products/ProductsNav'
 import ProductHeader from '@/components/Sections/ProductHeader'
 import { ETLVisual } from '@/data/products/database/etl-visual'
 
-const NewFeatureCard = dynamic(() => import('~/components/NewFeatureCard'))
-const ImageCarousel = dynamic(() => import('~/components/Carousels/ImageCarousel'))
+const NewFeatureCard = dynamic(() => import('@/components/NewFeatureCard'))
+const ImageCarousel = dynamic(() => import('@/components/Carousels/ImageCarousel'))
 const SplitCodeBlockCarousel = dynamic(
-  () => import('~/components/Carousels/SplitCodeBlockCarousel')
+  () => import('@/components/Carousels/SplitCodeBlockCarousel')
 )
-const FeatureColumn = dynamic(() => import('~/components/FeatureColumn'))
-const SingleQuote = dynamic(() => import('~/components/Sections/SingleQuote'))
-const DefaultLayout = dynamic(() => import('~/components/Layouts/Default'))
-const SectionContainer = dynamic(() => import('~/components/Layouts/SectionContainer'))
-const ProductIcon = dynamic(() => import('~/components/ProductIcon'))
-const APISection = dynamic(() => import('~/components/Sections/APISection'))
-const GithubExamples = dynamic(() => import('~/components/Sections/GithubExamples'))
+const FeatureColumn = dynamic(() => import('@/components/FeatureColumn'))
+const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
+const DefaultLayout = dynamic(() => import('@/components/Layouts/Default'))
+const SectionContainer = dynamic(() => import('@/components/Layouts/SectionContainer'))
+const ProductIcon = dynamic(() => import('@/components/ProductIcon'))
+const APISection = dynamic(() => import('@/components/Sections/APISection'))
+const GithubExamples = dynamic(() => import('@/components/Sections/GithubExamples'))
 
 function Database() {
   // base path for images

@@ -6,24 +6,24 @@ import { PRODUCT_NAMES } from 'shared-data/products'
 import Examples from '@/data/Examples'
 import solutions from '@/data/MainProducts'
 
-const FunctionsHero = dynamic(() => import('~/components/Products/Functions/FunctionsHero'))
-const RealtimeLogs = dynamic(() => import('~/components/Products/Functions/RealtimeLogs'))
-const Metrics = dynamic(() => import('~/components/Products/Functions/Metrics'))
-const QueryLogs = dynamic(() => import('~/components/Products/Functions/QueryLogs'))
-const LocalDXImage = dynamic(() => import('~/components/Products/Functions/LocalDXImage'))
-const ParityImage = dynamic(() => import('~/components/Products/Functions/ParityImage'))
-const NpmEcosystem = dynamic(() => import('~/components/Products/Functions/NpmEcosystem'))
-const CI = dynamic(() => import('~/components/Products/Functions/CI'))
-const ZeroConfigPanel = dynamic(() => import('~/components/Products/Functions/ZeroConfigPanel'))
-const ConnectToDBPanel = dynamic(() => import('~/components/Products/Functions/ConnectToDBPanel'))
+const FunctionsHero = dynamic(() => import('@/components/Products/Functions/FunctionsHero'))
+const RealtimeLogs = dynamic(() => import('@/components/Products/Functions/RealtimeLogs'))
+const Metrics = dynamic(() => import('@/components/Products/Functions/Metrics'))
+const QueryLogs = dynamic(() => import('@/components/Products/Functions/QueryLogs'))
+const LocalDXImage = dynamic(() => import('@/components/Products/Functions/LocalDXImage'))
+const ParityImage = dynamic(() => import('@/components/Products/Functions/ParityImage'))
+const NpmEcosystem = dynamic(() => import('@/components/Products/Functions/NpmEcosystem'))
+const CI = dynamic(() => import('@/components/Products/Functions/CI'))
+const ZeroConfigPanel = dynamic(() => import('@/components/Products/Functions/ZeroConfigPanel'))
+const ConnectToDBPanel = dynamic(() => import('@/components/Products/Functions/ConnectToDBPanel'))
 const TriggerViaWebhookPanel = dynamic(
-  () => import('~/components/Products/Functions/TriggerViaWebhookPanel')
+  () => import('@/components/Products/Functions/TriggerViaWebhookPanel')
 )
 const WorksWithAuthPanel = dynamic(
-  () => import('~/components/Products/Functions/WorksWithAuthPanel')
+  () => import('@/components/Products/Functions/WorksWithAuthPanel')
 )
 const WorksWithStoragePanel = dynamic(
-  () => import('~/components/Products/Functions/WorksWithStoragePanel')
+  () => import('@/components/Products/Functions/WorksWithStoragePanel')
 )
 
 export default (isMobile?: boolean) => ({

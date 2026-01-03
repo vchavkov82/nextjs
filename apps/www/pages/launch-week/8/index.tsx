@@ -15,12 +15,12 @@ import SectionContainer from '@/components/Layouts/SectionContainer'
 import { LaunchWeekLogoHeader } from '@/components/LaunchWeek/8/LaunchWeekLogoHeader'
 import LW8CalloutsSection from '@/components/LaunchWeek/8/LW8CalloutsSection'
 
-const LW8Releases = dynamic(() => import('~/components/LaunchWeek/8/Releases'))
-const LWArchive = dynamic(() => import('~/components/LaunchWeek/8/LWArchive'))
+const LW8Releases = dynamic(() => import('@/components/LaunchWeek/8/Releases'))
+const LWArchive = dynamic(() => import('@/components/LaunchWeek/8/LWArchive'))
 const LaunchWeekPrizeSection = dynamic(
-  () => import('~/components/LaunchWeek/8/LaunchWeekPrizeSection')
+  () => import('@/components/LaunchWeek/8/LaunchWeekPrizeSection')
 )
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_MISC_USE_URL ?? 'http://localhost:54321',

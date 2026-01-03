@@ -49,6 +49,14 @@ const nextConfig = {
   },
   // Configure Sharp as an external package for server-side rendering
   serverExternalPackages: ['sharp'],
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
