@@ -54,6 +54,10 @@ const nextConfig = {
     '@octokit/plugin-paginate-graphql',
   ],
   experimental: {
+    // Optimize for high-core systems
+    optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-dialog', 'framer-motion'],
+    // Enable faster refresh
+    optimizeCss: true,
     // needed to make the octokit packages work in /changelog
   },
   /**
@@ -75,6 +79,11 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     remotePatterns,
     qualities: [75, 100],
+    formats: ['image/avif', 'image/webp'],
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 60 * 1000,
+    pagesBufferLength: 5,
   },
   async headers() {
     return [
@@ -151,10 +160,6 @@ const nextConfig = {
     // On production, we turn it on to prevent errors from conflicting PRs getting into
     // prod
     ignoreBuildErrors: process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? false : true,
-  },
-  eslint: {
-    // We are already running linting via GH action, this will skip linting during production build on Vercel.
-    ignoreDuringBuilds: true,
   },
 }
 
