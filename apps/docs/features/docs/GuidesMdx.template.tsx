@@ -60,51 +60,10 @@ type GuideTemplateProps =
 const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: GuideTemplateProps) => {
   const hideToc = meta?.hideToc || meta?.hide_table_of_contents
 
-  // Await MDX content since MDXRemoteBase is an async Server Component
-  const mdxContent = content ? await MDXRemoteBase({ source: content }) : null
-
-  // Render MDX content as a Server Component before passing to Client Component wrapper
-  const articleContent = (
-    <>
-      <Breadcrumbs className="mb-2" />
-      <article
-        // Used to get headings for the table of contents
-        id="sb-docs-guide-main-article"
-        className="prose max-w-none"
-      >
-        <h1 className="mb-0 [&>p]:m-0">
-          <ReactMarkdown>{meta?.title || 'BA Docs'}</ReactMarkdown>
-        </h1>
-        {meta?.subtitle && (
-          <h2 className="mt-3 text-xl text-foreground-light">
-            <ReactMarkdown>{meta.subtitle}</ReactMarkdown>
-          </h2>
-        )}
-        <hr className="not-prose border-t-0 border-b my-8" />
-
-        {mdxContent}
-        {children}
-
-        <footer className="mt-16 not-prose">
-          <a
-            href={
-              editLink.includesProtocol ? editLink.link : `https://github.com/${editLink.link}`
-            }
-            className={cn(
-              'w-fit',
-              'flex items-center gap-1',
-              'text-sm text-scale-1000 hover:text-scale-1200',
-              'transition-colors'
-            )}
-            target="_blank"
-            rel="noreferrer noopener edit"
-          >
-            Edit this page on GitHub <ExternalLink size={14} strokeWidth={1.5} />
-          </a>
-        </footer>
-      </article>
-    </>
-  )
+  // Render MDX content in Server Component before passing to Client Component
+  const mdxContent = content ? (
+    <MDXRemoteBase source={content} options={mdxOptions} customPreprocess={(x) => x} />
+  ) : null
 
   return (
     <TocAnchorsProvider>
@@ -117,7 +76,43 @@ const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: 
             hideToc ? 'col-span-12' : 'col-span-12 md:col-span-9'
           )}
         >
-          {articleContent}
+          <Breadcrumbs className="mb-2" />
+          <article
+            // Used to get headings for the table of contents
+            id="sb-docs-guide-main-article"
+            className="prose max-w-none"
+          >
+            <h1 className="mb-0 [&>p]:m-0">
+              <ReactMarkdown>{meta?.title || 'Supabase Docs'}</ReactMarkdown>
+            </h1>
+            {meta?.subtitle && (
+              <h2 className="mt-3 text-xl text-foreground-light">
+                <ReactMarkdown>{meta.subtitle}</ReactMarkdown>
+              </h2>
+            )}
+            <hr className="not-prose border-t-0 border-b my-8" />
+
+            {mdxContent}
+            {children}
+
+            <footer className="mt-16 not-prose">
+              <a
+                href={
+                  editLink.includesProtocol ? editLink.link : `https://github.com/${editLink.link}`
+                }
+                className={cn(
+                  'w-fit',
+                  'flex items-center gap-1',
+                  'text-sm text-scale-1000 hover:text-scale-1200',
+                  'transition-colors'
+                )}
+                target="_blank"
+                rel="noreferrer noopener edit"
+              >
+                Edit this page on GitHub <ExternalLink size={14} strokeWidth={1.5} />
+              </a>
+            </footer>
+          </article>
         </div>
         {!hideToc && (
           <GuidesTableOfContents

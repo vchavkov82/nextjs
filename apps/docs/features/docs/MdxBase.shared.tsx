@@ -48,12 +48,6 @@ const AppleSecretGenerator = dynamic(() => import('~/components/AppleSecretGener
 const AuthProviders = dynamic(() => import('~/components/AuthProviders'), {
   loading: () => <div>Loading...</div>
 })
-const AuthSmsProviderConfig = dynamic(() => import('~/components/AuthSmsProviderConfig'), {
-  loading: () => <div>Loading...</div>
-})
-const CostWarning = dynamic(() => import('~/components/AuthSmsProviderConfig/AuthSmsProviderConfig.Warnings'), {
-  loading: () => <div>Loading...</div>
-})
 const ButtonCard = dynamic(() => import('~/components/ButtonCard'), {
   loading: () => <div>Loading...</div>
 })
