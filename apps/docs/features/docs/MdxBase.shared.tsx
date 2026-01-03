@@ -7,7 +7,6 @@ import { IconPanel } from 'ui-patterns/IconPanel'
 import SqlToRest from 'ui-patterns/SqlToRest'
 import { Heading } from 'ui/src/components/CustomHTMLElements'
 import dynamic from 'next/dynamic'
-import { isFeatureEnabled } from 'common/enabled-features'
 import { CodeBlock } from '~/features/ui/CodeBlock/CodeBlock'
 import { NamedCodeBlock } from '~/features/directives/CodeTabs.components'
 import { Accordion, AccordionItem } from '~/features/ui/Accordion'
@@ -16,6 +15,7 @@ import { ShowUntil } from '~/features/ui/ShowUntil'
 import { TabPanel, Tabs } from '~/features/ui/Tabs'
 import { ErrorCodes } from '../ui/ErrorCodes'
 import { McpConfigPanel } from '../ui/McpConfigPanel'
+import StepHikeCompact from '~/components/StepHikeCompact'
 
 // Dynamic imports for heavy components
 const AiPromptsIndex = dynamic(() => import('~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'), {
@@ -69,9 +69,6 @@ const SmartRegionsList = dynamic(() => import('~/components/RegionsList').then(m
 const SharedData = dynamic(() => import('~/components/SharedData'), {
   loading: () => <div>Loading...</div>
 })
-const StepHikeCompact = dynamic(() => import('~/components/StepHikeCompact'), {
-  loading: () => <div>Loading...</div>
-})
 const CodeSampleDummy = dynamic(() => import('~/features/directives/CodeSample.client').then(mod => ({ default: mod.CodeSampleDummy })), {
   loading: () => <div>Loading...</div>
 })
@@ -106,7 +103,6 @@ const components = {
   IconPanel,
   IconX: X,
   Image: (props: any) => <Image fill alt="" className="object-contain" {...props} />,
-  isFeatureEnabled,
   JwtGenerator,
   JwtGeneratorSimple,
   Link,

@@ -1,15 +1,29 @@
 import type { PropsWithChildren } from 'react'
 
 import { FeatureFlagProvider, IS_PLATFORM, ThemeProvider } from 'common'
+import dynamic from 'next/dynamic'
 import { SonnerToaster, TooltipProvider } from 'ui'
-import SiteLayout from '~/layouts/SiteLayout'
 import { API_URL } from '~/lib/constants'
 import { AuthContainer } from './auth/auth.client'
-import { DocsCommandMenu, DocsCommandProvider } from './command'
+import { DocsCommandProvider } from './command'
 import { QueryClientProvider } from './data/queryClient.client'
 import { PageTelemetry } from './telemetry/telemetry.client'
 import { ScrollRestoration } from './ui/helpers.scroll.client'
-import { ThemeSandbox } from './ui/theme.client'
+
+const SiteLayout = dynamic(() => import('~/layouts/SiteLayout'), {
+  ssr: true,
+})
+
+const DocsCommandMenu = dynamic(
+  () => import('./command').then((mod) => ({ default: mod.DocsCommandMenu })),
+  {
+    ssr: true,
+  }
+)
+
+const ThemeSandbox = dynamic(() => import('./ui/theme.client').then((mod) => ({ default: mod.ThemeSandbox })), {
+  ssr: true,
+})
 
 /**
  * Global providers that wrap the entire app
