@@ -14,15 +14,15 @@ import HighlightColumns from '@/components/Sections/HighlightColumns'
 import ProductsNav from '@/components/Products/ProductsNav'
 import Image from 'next/image'
 
-const ExamplesCarousel = dynamic(() => import('~/components/Examples/ExamplesCarousel'))
+const ExamplesCarousel = dynamic(() => import('@/components/Examples/ExamplesCarousel'))
 const GlobalPresenceSection = dynamic(
-  () => import('~/components/Products/Functions/GlobalPresenceSection')
+  () => import('@/components/Products/Functions/GlobalPresenceSection')
 )
-const SingleQuote = dynamic(() => import('~/components/Sections/SingleQuote'))
-const LocalDXGrid = dynamic(() => import('~/components/Products/Functions/LocalDXGrid'))
-const ProductsCta = dynamic(() => import('~/components/Sections/ProductsCta2'))
-const TimedAccordionPanels = dynamic(() => import('~/components/Sections/TimedAccordionPanels'))
-const TimedAccordionSection = dynamic(() => import('~/components/Sections/TimedAccordionSection'))
+const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
+const LocalDXGrid = dynamic(() => import('@/components/Products/Functions/LocalDXGrid'))
+const ProductsCta = dynamic(() => import('@/components/Sections/ProductsCta2'))
+const TimedAccordionPanels = dynamic(() => import('@/components/Sections/TimedAccordionPanels'))
+const TimedAccordionSection = dynamic(() => import('@/components/Sections/TimedAccordionSection'))
 
 function EdgeFunctions() {
   const { basePath } = useRouter()

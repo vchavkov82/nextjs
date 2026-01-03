@@ -16,10 +16,10 @@ import LWXStickyNav from '@/components/LaunchWeek/X/Releases/LWXStickyNav'
 import LWXHeader from '@/components/LaunchWeek/X/Releases/LWXHeader'
 import MainStage from '@/components/LaunchWeek/X/Releases/MainStage'
 
-const BuildStage = dynamic(() => import('~/components/LaunchWeek/X/Releases/BuildStage'))
-const LWXMeetups = dynamic(() => import('~/components/LaunchWeek/X/LWXMeetups'))
+const BuildStage = dynamic(() => import('@/components/LaunchWeek/X/Releases/BuildStage'))
+const LWXMeetups = dynamic(() => import('@/components/LaunchWeek/X/LWXMeetups'))
 const LaunchWeekPrizeSection = dynamic(
-  () => import('~/components/LaunchWeek/X/LaunchWeekPrizeSection')
+  () => import('@/components/LaunchWeek/X/LaunchWeekPrizeSection')
 )
 
 interface Props {

@@ -17,13 +17,13 @@ import ProductsNav from '@/components/Products/ProductsNav'
 import ProductHeader from '@/components/Sections/ProductHeader'
 import dynamic from 'next/dynamic'
 
-const APISection = dynamic(() => import('~/components/Sections/APISection'))
-const SingleQuote = dynamic(() => import('~/components/Sections/SingleQuote'))
-const ExampleCard = dynamic(() => import('~/components/ExampleCard'))
+const APISection = dynamic(() => import('@/components/Sections/APISection'))
+const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
+const ExampleCard = dynamic(() => import('@/components/ExampleCard'))
 const SplitCodeBlockCarousel = dynamic(
-  () => import('~/components/Carousels/SplitCodeBlockCarousel')
+  () => import('@/components/Carousels/SplitCodeBlockCarousel')
 )
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 function StoragePage() {
   // base path for images

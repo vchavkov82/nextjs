@@ -13,8 +13,8 @@ import ImageGrid from '../components/ImageGrid'
 import SectionContainer from '../components/Layouts/SectionContainer'
 import { data as pageData } from '../data/ga'
 
-const ParagraphSection = dynamic(() => import('~/components/Sections/ParagraphSection'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const ParagraphSection = dynamic(() => import('@/components/Sections/ParagraphSection'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 export default function IndexPage() {
   const router = useRouter()

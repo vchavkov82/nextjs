@@ -13,12 +13,12 @@ import LWStickyNav from '@/components/LaunchWeek/12/Releases/LWStickyNav'
 import LWHeader from '@/components/LaunchWeek/12/Releases/LWHeader'
 import MainStage from '@/components/LaunchWeek/12/Releases/MainStage'
 
-const BuildStage = dynamic(() => import('~/components/LaunchWeek/12/Releases/BuildStage'))
-const CTABanner = dynamic(() => import('~/components/CTABanner'))
+const BuildStage = dynamic(() => import('@/components/LaunchWeek/12/Releases/BuildStage'))
+const CTABanner = dynamic(() => import('@/components/CTABanner'))
 const LaunchWeekPrizeSection = dynamic(
-  () => import('~/components/LaunchWeek/12/LaunchWeekPrizeSection')
+  () => import('@/components/LaunchWeek/12/LaunchWeekPrizeSection')
 )
-const LW12Meetups = dynamic(() => import('~/components/LaunchWeek/12/LWMeetups'))
+const LW12Meetups = dynamic(() => import('@/components/LaunchWeek/12/LWMeetups'))
 
 export default function LaunchWeekIndex() {
   const { query } = useRouter()
