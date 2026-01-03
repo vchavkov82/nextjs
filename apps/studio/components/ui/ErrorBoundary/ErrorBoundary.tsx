@@ -62,15 +62,8 @@ export const ErrorBoundary = ({
   onReset,
 }: ErrorBoundaryProps) => {
   const handleError = (error: Error, info: ErrorInfo) => {
-    (scope => {
-      scope.setExtra('componentStack', info.componentStack)
-      if (sentryContext) {
-        Object.entries(sentryContext).forEach(([key, value]) => {
-          scope.setExtra(key, value)
-        })
-      }
-      console.error(error)
-    })
+    // Sentry not imported - just log the error
+    console.error(error, info.componentStack)
   }
 
   const handleReset = () => {

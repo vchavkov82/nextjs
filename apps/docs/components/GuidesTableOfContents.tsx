@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { isFeatureEnabled } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
 import { cn } from 'ui'
 import { ExpandableVideo } from 'ui-patterns/ExpandableVideo'
 import { Toc, TOCItems, TOCScrollArea } from 'ui-patterns/Toc'

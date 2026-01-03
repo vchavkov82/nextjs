@@ -158,7 +158,7 @@ const GlobalNavigationMenu: FC = () => {
 }
 
 export const MenuItem = React.forwardRef<
-  React.ElementRef<'a'>,
+  HTMLAnchorElement,
   React.ComponentPropsWithoutRef<'a'> & {
     icon?: string
     community?: boolean

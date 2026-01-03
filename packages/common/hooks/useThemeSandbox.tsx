@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IS_PROD } from '../constants'
 
 const defaultDark: { [name: string]: string } = {

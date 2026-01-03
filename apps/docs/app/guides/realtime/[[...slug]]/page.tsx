@@ -1,4 +1,4 @@
-import { IS_PROD } from 'common'
+import { IS_PROD } from 'common/constants'
 import { GuideTemplate } from '~/features/docs/GuidesMdx.template'
 import {
   genGuideMeta,

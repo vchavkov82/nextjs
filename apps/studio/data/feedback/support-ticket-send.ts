@@ -60,11 +60,7 @@ export async function sendSupportTicket({
   if (error) {
     handleError(error, {
       alwaysCapture: true,
-      sentryContext: {
-        tags: {
-          dashboardSupportForm: true,
-        },
-      },
+      // sentryContext removed - Sentry not imported
     })
   }
   return data

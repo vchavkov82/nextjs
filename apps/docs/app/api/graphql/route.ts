@@ -279,10 +279,9 @@ async function handleRequest(request: Request): Promise<NextResponse> {
         }
       )
     } else {
-      Sentry.captureException(error)
-      // Do not let Vercel close the process until Sentry has flushed
-      // https://github.com/getsentry/sentry-javascript/issues/9626
-      await Sentry.flush(2000)
+      // Sentry is not imported, commenting out error reporting
+      // Sentry.captureException(error)
+      // await Sentry.flush(2000)
 
       return NextResponse.json(
         {

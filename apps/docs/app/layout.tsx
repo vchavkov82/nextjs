@@ -5,14 +5,11 @@ import '../styles/main.scss'
 import '../styles/new-docs.scss'
 import '../styles/prism-okaidia.scss'
 
-import { TelemetryTagManager } from 'common'
-
 import { genFaviconData } from 'common/MetaFavicons/app-router'
 import type { Metadata, Viewport } from 'next'
-import { GlobalProviders } from '~/features/app.providers'
-import { TopNavSkeleton } from '~/layouts/MainSkeleton'
 import { BASE_PATH, IS_PRODUCTION } from '~/lib/constants'
 import { getCustomContent } from '~/lib/custom-content/getCustomContent'
+import { Providers } from './providers'
 
 const { metadataApplicationName, metadataTitle } = getCustomContent([
   'metadata:application_name',
@@ -54,10 +51,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <TelemetryTagManager />
-        <GlobalProviders>
-          <TopNavSkeleton>{children}</TopNavSkeleton>
-        </GlobalProviders>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

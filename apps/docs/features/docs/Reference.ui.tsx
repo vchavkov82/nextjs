@@ -175,8 +175,8 @@ export function FnParameterDetails({
     <div className={className ?? ''}>
       <h3 className="mb-3 text-base text-foreground">Parameters</h3>
       <ul>
-        {combinedParameters.map((parameter, index) => (
-          <li key={index} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
+        {combinedParameters.map((parameter) => (
+          <li key={parameter.name ?? Math.random()} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
             <ParamOrTypeDetails paramOrType={parameter} />
           </li>
         ))}
@@ -316,7 +316,7 @@ function TypeSubDetails({
           {details.map(
             (detail: SubContent | CustomTypePropertyType | TypeDetails, index: number) => (
               <li
-                key={index}
+                key={detail.name ?? `detail-${index}`}
                 className={cn(
                   'px-5 py-3',
                   'border-t border-default first:border-t-0',
@@ -371,11 +371,11 @@ export function ApiOperationRequestBodyDetails({
 
   return (
     <>
-      {availableSchemes.map((scheme, index) => (
+      {availableSchemes.map((scheme) => (
         <ApiOperationRequestBodyDetailsInternal
-          key={index}
+          key={scheme}
           schema={requestBody?.content?.[scheme]?.schema || ({} as ISchema)}
-          hidden={index > 0}
+          hidden={availableSchemes.indexOf(scheme) > 0}
           {...{
             [API_REFERENCE_REQUEST_BODY_SCHEMA_DATA_ATTRIBUTES.KEY]: scheme,
           }}
@@ -398,7 +398,7 @@ function ApiOperationRequestBodyDetailsInternal({
       <>
         <span className="font-mono text-sm font-medium text-foreground">All of the following:</span>
         {schema.allOf.map((option, index) => (
-          <ApiSchemaParamSubdetails key={index} schema={option} />
+          <ApiSchemaParamSubdetails key={`allOf-${index}`} schema={option} />
         ))}
       </>
     )
@@ -407,7 +407,7 @@ function ApiOperationRequestBodyDetailsInternal({
       <>
         <span className="font-mono text-sm font-medium text-foreground">Any of the following:</span>
         {schema.anyOf.map((option, index) => (
-          <ApiSchemaParamSubdetails key={index} schema={option} />
+          <ApiSchemaParamSubdetails key={`anyOf-${index}`} schema={option} />
         ))}
       </>
     )
@@ -416,7 +416,7 @@ function ApiOperationRequestBodyDetailsInternal({
       <>
         <span className="font-mono text-sm font-medium text-foreground">One of the following:</span>
         {schema.oneOf.map((option, index) => (
-          <ApiSchemaParamSubdetails key={index} schema={option} />
+          <ApiSchemaParamSubdetails key={`oneOf-${index}`} schema={option} />
         ))}
       </>
     )
