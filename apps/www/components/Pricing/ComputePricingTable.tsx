@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Fragment, useMemo } from 'react'
 
 import { cn } from 'ui'
-import pricingAddOn from '~/data/PricingAddOnTable.json'
+import pricingAddOn from '@/data/PricingAddOnTable.json'
 import { IconPricingIncludedCheck, IconPricingMinus } from './PricingIcons'
 
 const ComputePricingTable = () => {

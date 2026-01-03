@@ -2,10 +2,10 @@ import { LazyMotion, domAnimation, m, useInView } from 'framer-motion'
 import Link from 'next/link'
 import { ReactNode, useRef } from 'react'
 import { Button } from 'ui'
-import { INITIAL_BOTTOM, getAnimation } from '~/lib/animations'
+import { INITIAL_BOTTOM, getAnimation } from '@/lib/animations'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import Panel from '~/components/Panel'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
 import { ArrowUpRight } from 'lucide-react'
 
 interface UseCase {

@@ -1,7 +1,7 @@
 import { Button, cn, IconGitHubSolid } from 'ui'
 import Link from 'next/link'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import ExampleCard from '../ExampleCard'
 
 import Examples from 'data/Examples'

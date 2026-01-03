@@ -1,4 +1,4 @@
-import LW15TicketPageProxy from '~/components/LaunchWeek/15/Ticketing/LW15TicketPageProxy'
+import LW15TicketPageProxy from '@/components/LaunchWeek/15/Ticketing/LW15TicketPageProxy'
 import { useRouter } from 'next/router'
 
 import { Lw15ConfDataProvider } from 'components/LaunchWeek/15/hooks/use-conf-data'

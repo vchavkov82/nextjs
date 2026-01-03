@@ -6,12 +6,12 @@ import { useRouter } from 'next/router'
 
 import { useBreakpoint } from 'common'
 import { Badge, Button, TextLink } from 'ui'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import Panel from '~/components/Panel'
-import ProductHeaderCentered from '~/components/Sections/ProductHeaderCentered'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
+import ProductHeaderCentered from '@/components/Sections/ProductHeaderCentered'
 
-import pageData from '~/data/partners'
+import pageData from '@/data/partners'
 import { Code } from 'lucide-react'
 
 const Partners = () => {

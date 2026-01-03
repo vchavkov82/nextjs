@@ -10,7 +10,7 @@ import MainProducts from '../MainProducts'
 import type { MPCSectionProps } from 'components/Solutions/MPCSection'
 import type { PlatformSectionProps } from 'components/Solutions/PlatformSection'
 import type { TwitterSocialSectionProps } from 'components/TwitterSocialSection'
-import type { TwoColumnsSectionProps } from '~/components/Solutions/TwoColumnsSection'
+import type { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import {
   FrameworkLink,
   getEditors,

@@ -21,7 +21,7 @@ import { CubeIcon } from '@heroicons/react/outline'
 import { Image } from 'ui'
 
 import MainProducts from '../MainProducts'
-import { TwoColumnsSectionProps } from '~/components/Solutions/TwoColumnsSection'
+import { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import RealtimeLogs from 'components/Products/Functions/RealtimeLogs'
 import { frameworks } from 'components/Hero/HeroFrameworks'
 
@@ -43,7 +43,7 @@ import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 import { useBreakpoint } from 'common'
 import { useSendTelemetryEvent } from 'lib/telemetry'
 import { companyStats } from 'data/company-stats'
-import { DerivLogo, SoshiLogo } from '~/components/BrandLogo'
+import { DerivLogo, SoshiLogo } from '@/components/BrandLogo'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
 const FunctionsVisual = dynamic(() => import('components/Products/FunctionsVisual'))

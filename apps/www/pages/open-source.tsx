@@ -3,15 +3,15 @@ import 'swiper/css'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import CTABanner from '~/components/CTABanner'
-import OSSHero from '~/components/OpenSource/OSSHero'
-import ProductHeaderCentered from '~/components/Sections/ProductHeaderCentered'
-import Repos from '~/components/OpenSource/Repos'
-import Sponsorships from '~/components/OpenSource/Sponsorships'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import CTABanner from '@/components/CTABanner'
+import OSSHero from '@/components/OpenSource/OSSHero'
+import ProductHeaderCentered from '@/components/Sections/ProductHeaderCentered'
+import Repos from '@/components/OpenSource/Repos'
+import Sponsorships from '@/components/OpenSource/Sponsorships'
 
-import pageData from '~/data/open-source'
+import pageData from '@/data/open-source'
 
 const OpenSource = () => {
   const router = useRouter()

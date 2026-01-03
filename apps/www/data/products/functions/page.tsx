@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 
 import { PRODUCT_NAMES } from 'shared-data/products'
-import Examples from '~/data/Examples'
-import solutions from '~/data/MainProducts'
+import Examples from '@/data/Examples'
+import solutions from '@/data/MainProducts'
 
 const FunctionsHero = dynamic(() => import('~/components/Products/Functions/FunctionsHero'))
 const RealtimeLogs = dynamic(() => import('~/components/Products/Functions/RealtimeLogs'))

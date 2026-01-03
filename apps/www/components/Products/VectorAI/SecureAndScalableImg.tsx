@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useTheme } from 'next-themes'
-import { DEFAULT_EASE } from '~/lib/animations'
+import { DEFAULT_EASE } from '@/lib/animations'
 
 const SecureAndScalableImg = ({ isHovered }: { isHovered: boolean }) => {
   const { resolvedTheme } = useTheme()

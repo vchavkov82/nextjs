@@ -1,7 +1,7 @@
 import styles from './features-grid.module.css'
 import React from 'react'
 import { cn } from 'ui'
-import Panel from '~/components/Panel'
+import Panel from '@/components/Panel'
 import SectionContainer from '../Layouts/SectionContainer'
 
 export default function FeaturesGrid(props: any) {

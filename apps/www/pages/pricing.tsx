@@ -6,9 +6,9 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { Button } from 'ui'
 
-import DefaultLayout from '~/components/Layouts/Default'
-import PricingPlans from '~/components/Pricing/PricingPlans'
-import { useOrganizations } from '~/data/organizations'
+import DefaultLayout from '@/components/Layouts/Default'
+import PricingPlans from '@/components/Pricing/PricingPlans'
+import { useOrganizations } from '@/data/organizations'
 
 const PricingComputeSection = dynamic(() => import('~/components/Pricing/PricingComputeSection'))
 const PricingAddons = dynamic(() => import('~/components/Pricing/PricingAddons'))

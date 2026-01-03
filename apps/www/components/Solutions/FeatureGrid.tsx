@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 interface Feature {
   id: string

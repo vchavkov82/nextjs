@@ -2,8 +2,8 @@ import Image from 'next/image'
 import { useEffect } from 'react'
 import { Accordion } from 'ui'
 
-import days, { WeekDayProps, endOfLW7 } from '~/components/LaunchWeek/7/lw7_days'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import days, { WeekDayProps, endOfLW7 } from '@/components/LaunchWeek/7/lw7_days'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import {
   AccordionHeader,
   CartTitle,

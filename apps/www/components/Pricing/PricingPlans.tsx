@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Check } from 'lucide-react'
 import { plans } from 'shared-data/plans'
 import { Button, cn } from 'ui'
-import { Organization } from '~/data/organizations'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { Organization } from '@/data/organizations'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 import UpgradePlan from './UpgradePlan'
 
 interface PricingPlansProps {

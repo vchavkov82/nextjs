@@ -10,7 +10,7 @@ import {
   MultistepSectionHeader,
   SectionButtons,
 } from './components'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import days, { WeekDayProps } from './lw8_data'
 
 export default function LW8Releases() {

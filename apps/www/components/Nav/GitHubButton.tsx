@@ -1,5 +1,5 @@
 import { Button } from 'ui'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 import staticContent from '.generated/staticContent/_index.json'
 
 const GitHubButton = () => {

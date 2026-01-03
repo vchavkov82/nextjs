@@ -12,7 +12,7 @@ import { useBreakpoint } from 'common'
 import { Products } from './Sections/ProductsCta'
 import { cn } from 'ui'
 
-import { DEFAULT_TRANSITION } from '~/lib/animations'
+import { DEFAULT_TRANSITION } from '@/lib/animations'
 import {
   PRODUCT_MODULES,
   PRODUCT_MODULES_NAMES,

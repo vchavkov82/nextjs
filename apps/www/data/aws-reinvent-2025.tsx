@@ -4,7 +4,7 @@ import { Image } from 'ui'
 import dynamic from 'next/dynamic'
 import MainProducts from './MainProducts'
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
-import { SITE_ORIGIN } from '~/lib/constants'
+import { SITE_ORIGIN } from '@/lib/constants'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
 const FunctionsVisual = dynamic(() => import('components/Products/FunctionsVisual'))

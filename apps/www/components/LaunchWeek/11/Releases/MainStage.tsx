@@ -1,7 +1,7 @@
 import React from 'react'
 import { mainDays } from './data'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import DaySection from './components/DaySection'
 import LW11Day1 from '../LW11Day1'
 import HackathonCallout from '../HackathonCallout'

@@ -1,12 +1,12 @@
 import * as Sentry from '@sentry/nextjs'
 
-import { CustomerioAppClient, CustomerioTrackClient } from '~/lib/customerio'
-import { insertPageInDatabase } from '~/lib/notion'
+import { CustomerioAppClient, CustomerioTrackClient } from '@/lib/customerio'
+import { insertPageInDatabase } from '@/lib/notion'
 
 import {
   SupaSquadApplication,
   supaSquadApplicationSchema,
-} from '~/data/open-source/contributing/supasquad.utils'
+} from '@/data/open-source/contributing/supasquad.utils'
 
 // Using a separate Sentry client for community following this guide:
 // https://docs.sentry.io/platforms/javascript/best-practices/multiple-sentry-instances/

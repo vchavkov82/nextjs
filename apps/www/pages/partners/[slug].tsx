@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import supabase from '~/lib/supabaseMisc'
+import supabase from '@/lib/supabaseMisc'
 import Error404 from '../404'
 
 function PartnerPage() {

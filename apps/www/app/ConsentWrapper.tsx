@@ -2,7 +2,7 @@
 
 import { IS_PLATFORM, PageTelemetry } from 'common'
 import { useConsentToast } from 'ui-patterns/consent'
-import { API_URL } from '~/lib/constants'
+import { API_URL } from '@/lib/constants'
 
 interface ConsentWrapperProps {
   children: React.ReactNode

@@ -7,14 +7,14 @@ import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
 import { Badge, Button, buttonVariants, cn, Separator } from 'ui'
 import { z } from 'zod'
-import Styles from '~/styles/career.module.css'
+import Styles from '@/styles/career.module.css'
 
-import Globe from '~/components/Globe'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import Globe from '@/components/Globe'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
-import career from '~/data/career.json'
-import { filterGenericJob, groupJobsByTeam, JobItemProps, PLACEHOLDER_JOB_ID } from '~/lib/careers'
+import career from '@/data/career.json'
+import { filterGenericJob, groupJobsByTeam, JobItemProps, PLACEHOLDER_JOB_ID } from '@/lib/careers'
 
 const ContributorSchema = z.object({
   login: z.string(),

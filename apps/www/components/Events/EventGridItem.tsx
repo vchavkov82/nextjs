@@ -2,7 +2,7 @@ import React from 'react'
 // import authors from 'lib/authors.json'
 import Image from 'next/image'
 import Link from 'next/link'
-// import type Author from '~/types/author'
+// import type Author from '@/types/author'
 import type PostTypes from '../../types/post'
 
 import dayjs from 'dayjs'
