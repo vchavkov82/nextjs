@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 // End of third-party imports
 
-import { isFeatureEnabled, useBreakpoint } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
+import { useBreakpoint } from 'common/hooks'
 import { cn, IconBackground } from 'ui'
 import { IconPanel } from 'ui-patterns/IconPanel'
 import { getCustomContent } from '../lib/custom-content/getCustomContent'

@@ -1,7 +1,8 @@
 'use client'
 
 import type { User } from '@supabase/supabase-js'
-import { isFeatureEnabled, logOut } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
+import { logOut } from 'common/auth'
 import { Database, Globe, Home, LifeBuoy, LogOut, Settings, UserIcon } from 'lucide-react'
 
 import type { menuItem } from 'ui-patterns/AuthenticatedDropdownMenu'

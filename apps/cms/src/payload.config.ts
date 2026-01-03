@@ -7,6 +7,7 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { s3Storage } from '@payloadcms/storage-s3'
 import { buildConfig, type Plugin } from 'payload'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { defaultLexical } from './fields/defaultLexical.ts'
 import { getServerSideURL } from './utilities/getURL.ts'
 import { WWW_SITE_ORIGIN } from './utilities/constants.ts'
@@ -98,6 +99,16 @@ export default buildConfig({
       idleTimeoutMillis: 0, // Time a connection can be idle before being closed
       connectionTimeoutMillis: 0, // Time to wait for connection creation
     },
+  }),
+  // Add email adapter to prevent warnings
+  email: nodemailerAdapter({
+    transportOptions: {
+      host: process.env.SMTP_HOST || 'localhost',
+      port: parseInt(process.env.SMTP_PORT || '587'),
+      secure: false,
+    },
+    defaultFromAddress: process.env.SMTP_FROM || 'noreply@localhost',
+    defaultFromName: 'Supabase CMS',
   }),
   // Global configuration for better performance
   globals: [],

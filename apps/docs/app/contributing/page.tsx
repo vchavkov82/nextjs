@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { isFeatureEnabled } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
 import { ContributingToc } from '~/app/contributing/ContributingToC'
 import { MDXRemoteBase } from '~/features/docs/MdxBase'
 import { LayoutMainContent } from '~/layouts/DefaultLayout'

@@ -57,10 +57,8 @@ export function usePHFlag<T = string | boolean>(name: string) {
       trackFeatureFlag({ feature_flag_name: name, feature_flag_value: flagValue })
       setTrackedValue(flagValue as string)
     } catch (error: any) {
-      (scope => {
-        scope.setTag('type', 'phTrackFailure')
-        console.error(error)
-      })
+      // Sentry not imported - just log the error
+      console.error('Feature flag tracking error:', error)
       console.error(error.message)
     }
   }

@@ -57,7 +57,11 @@
         "LOGFLARE_SOURCE_TOKEN",
         "OPENAI_API_KEY",
         "SITE_NAME",
-        "SUPABASE_SECRET_KEY"
+        "SUPABASE_SECRET_KEY",
+        "VERCEL_URL",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "PROD",
+        "EXPO_OS"
       ],
       "inputs": ["$TURBO_DEFAULT$"],
       "outputs": [".next/**", "!.next/cache/**"]

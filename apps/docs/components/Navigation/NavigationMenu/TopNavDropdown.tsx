@@ -20,7 +20,7 @@ import {
   themes,
 } from 'ui'
 import MenuIconPicker from './MenuIconPicker'
-import { isFeatureEnabled } from 'common'
+import { isFeatureEnabled } from 'common/enabled-features'
 
 const menu = [
   [

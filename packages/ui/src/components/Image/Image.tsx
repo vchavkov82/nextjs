@@ -48,7 +48,7 @@ export interface ImageProps extends Omit<NextImageProps, 'src'> {
  * - captionAlign: {'left' | 'center' | 'right'} (optional) to align the caption
  * - containerClassName: {string} (optional) to style the parent <figure> container
  */
-const Image = ({ src, alt = '', zoomable, ...props }: ImageProps) => {
+const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAlign, ...props }: ImageProps) => {
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme } = useTheme()
   const isLessThanLgBreakpoint = useBreakpoint()
@@ -67,7 +67,7 @@ const Image = ({ src, alt = '', zoomable, ...props }: ImageProps) => {
   if (!mounted) return null
 
   return (
-    <figure className={cn('next-image--dynamic-fill', props.containerClassName)}>
+    <figure className={cn('next-image--dynamic-fill', containerClassName)}>
       <Component
         {...(zoomable
           ? { ZoomContent: ZoomContent, zoomMargin: isLessThanLgBreakpoint ? 20 : 80 }
@@ -83,8 +83,8 @@ const Image = ({ src, alt = '', zoomable, ...props }: ImageProps) => {
           {...props}
         />
       </Component>
-      {props.caption && (
-        <figcaption className={cn(getCaptionAlign(props.captionAlign))}>{props.caption}</figcaption>
+      {caption && (
+        <figcaption className={cn(getCaptionAlign(captionAlign))}>{caption}</figcaption>
       )}
     </figure>
   )

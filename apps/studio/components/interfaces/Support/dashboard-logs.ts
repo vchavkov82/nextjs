@@ -10,7 +10,14 @@ import { sanitizeArrayOfObjects } from 'lib/sanitize'
 import { createSupportStorageClient } from './support-storage-client'
 import type { ExtendedSupportCategories } from './Support.constants'
 
-export type DashboardBreadcrumb = Sentry.Breadcrumb
+// Sentry not imported - using generic type instead
+export type DashboardBreadcrumb = {
+  timestamp?: number
+  level?: string
+  message?: string
+  category?: string
+  data?: Record<string, any>
+}
 
 export const DASHBOARD_LOG_BUCKET = 'dashboard-logs'
 

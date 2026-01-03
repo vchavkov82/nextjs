@@ -204,13 +204,14 @@ const fetchLogs = async ({
   })
 
   if (error || data?.error) {
-    Sentry.captureException({
-      message: 'Shared API Report Error',
-      data: {
-        error,
-        data,
-      },
-    })
+    // Sentry not imported - commenting out error reporting
+    // Sentry.captureException({
+    //   message: 'Shared API Report Error',
+    //   data: {
+    //     error,
+    //     data,
+    //   },
+    // })
     throw error || data?.error
   }
 

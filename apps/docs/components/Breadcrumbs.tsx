@@ -88,9 +88,9 @@ const BreadcrumbsInternal = ({
                     <BreadcrumbEllipsis className="h-4 w-4" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start">
-                    {breadcrumbs.slice(1, -2).map((crumb, index) => (
+                    {breadcrumbs.slice(1, -2).map((crumb) => (
                       <DropdownMenuItem
-                        key={index}
+                        key={crumb.name}
                         className={cn(!crumb.url && 'pointer-events-none')}
                       >
                         {crumb.url ? (
@@ -109,13 +109,13 @@ const BreadcrumbsInternal = ({
                   </DrawerTrigger>
                   <DrawerContent>
                     <div className="grid gap-1 px-4">
-                      {breadcrumbs.slice(1, -2).map((crumb, index) =>
+                      {breadcrumbs.slice(1, -2).map((crumb) =>
                         crumb.url ? (
-                          <Link key={index} href={crumb.url}>
+                          <Link key={crumb.name} href={crumb.url}>
                             {crumb.title || crumb.name}
                           </Link>
                         ) : (
-                          crumb.title || crumb.name
+                          <Fragment key={crumb.name}>{crumb.title || crumb.name}</Fragment>
                         )
                       )}
                     </div>
@@ -132,7 +132,7 @@ const BreadcrumbsInternal = ({
           </>
         )}
         {appendedBreadcrumbs?.map((crumb, index) => (
-          <Fragment key={index}>
+          <Fragment key={`${crumb.name}-${index}`}>
             <BreadcrumbItem
               className={cn(
                 'flex items-center overflow-hidden',

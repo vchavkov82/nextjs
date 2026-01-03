@@ -92,15 +92,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   const errorBoundaryHandler = (error: Error, info: ErrorInfo) => {
-    function (scope {
-      scope.setTag('globalErrorBoundary', true)
-      const eventId = console.error(error)
-      // Attach the Sentry event ID to the error object so it can be accessed by the error boundary
-      if (eventId && error && typeof error === 'object') {
-        ;(error as any).sentryId = eventId
-      }
-    })
-
+    // Sentry is not available, just log the error
     console.error(error.stack)
   }
 

@@ -127,7 +127,10 @@ const ContentAccordionLink = React.memo(function ContentAccordionLink(props: any
           </Accordion.Item>
         </Accordion.Root>
       ) : (
-        <li key={props.subItem.name} ref={activeItem ? activeItemRef : null}>
+        <li 
+          key={props.subItem.name} 
+          {...(activeItem && { ref: activeItemRef })}
+        >
           <LinkContainer
             url={props.subItem.url}
             className={[

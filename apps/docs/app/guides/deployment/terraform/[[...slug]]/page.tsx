@@ -17,7 +17,7 @@ import {
   terraformDocsRepo,
 } from '../terraformConstants'
 import { SerializeOptions } from '~/types/next-mdx-remote-serialize'
-import { IS_PROD } from 'common'
+import { IS_PROD } from 'common/constants'
 import { getEmptyArray } from '~/features/helpers.fn'
 
 // Each external docs page is mapped to a local page
