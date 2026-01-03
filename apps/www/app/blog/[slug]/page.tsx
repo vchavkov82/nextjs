@@ -4,14 +4,11 @@ import { getAllCMSPostSlugs, getCMSPostBySlug } from 'lib/get-cms-posts'
 import { getAllPostSlugs, getPostdata, getSortedPosts } from 'lib/posts'
 import { CMS_SITE_ORIGIN, SITE_ORIGIN } from '@/lib/constants'
 import { processCMSContent } from '@/lib/cms/processCMSContent'
-import { redirect, notFound } from 'next/navigation'
 
 import type { Blog, BlogData, PostReturnType } from 'types/post'
 import type { Metadata } from 'next'
 
-// Disable caching for dynamic posts to ensure proper 404 handling
-export const revalidate = 0
-export const dynamicParams = true
+export const revalidate = 30
 
 // Helper function to fetch CMS post using our unified API
 async function getCMSPostFromAPI(
@@ -30,14 +27,14 @@ async function getCMSPostFromAPI(
     // Use different caching strategies based on draft mode
     const fetchOptions = isDraft
       ? {
-        // For draft mode: always fresh data, no caching
-        // cache: 'no-store' as const,
-        next: { revalidate: 0 },
-      }
+          // For draft mode: always fresh data, no caching
+          // cache: 'no-store' as const,
+          next: { revalidate: 0 },
+        }
       : {
-        // For published posts: allow static generation with revalidation
-        next: { revalidate: 60 }, // 1 minute
-      }
+          // For published posts: allow static generation with revalidation
+          next: { revalidate: 60 }, // 1 minute
+        }
 
     const response = await fetch(url.toString(), fetchOptions)
 
@@ -73,10 +70,9 @@ type Params = {
 }
 
 export async function generateStaticParams() {
-  // Generate static params for the 2 most recent posts for better performance
-  // Other posts will be rendered on-demand with dynamicParams = true
-  const sortedPosts = getSortedPosts({ directory: '_blog', limit: 2 })
-  return sortedPosts.map((post) => ({ slug: post.slug }))
+  const staticPaths = getAllPostSlugs('_blog')
+  const cmsPaths = await getAllCMSPostSlugs()
+  return [...staticPaths, ...cmsPaths].map((p) => ({ slug: p.params.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -209,8 +205,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       readingTime: generateReadingTime(content),
     }
 
-    // Limit to 5 posts for testing - only get enough to find prev/next
-    const allStaticPosts = getSortedPosts({ directory: '_blog', limit: 5 })
+    const allStaticPosts = getSortedPosts({ directory: '_blog' })
     const allPosts = [...allStaticPosts].sort((a, b) => {
       const aDate = new Date((a as unknown as { date: string }).date).getTime()
       const bDate = new Date((b as unknown as { date: string }).date).getTime()
@@ -245,15 +240,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     }
 
     return <BlogPostClient {...props} />
-  } catch (error) {
-    // Static markdown post not found or failed to compile, try CMS post
-    // Log MDX compilation errors for debugging
-    if (error instanceof Error && error.message.includes('MDX')) {
-      console.log(`[BlogPostPage] Skipping MDX post for slug "${slug}" due to compilation error, falling back to CMS`)
-    } else if (error instanceof Error && !error.message.includes('ENOENT') && !error.message.includes('Directory not found') && !error.message.includes('Post not found')) {
-      console.warn(`[BlogPostPage] Error loading static post for slug "${slug}":`, error)
-    }
-  }
+  } catch {}
 
   // Try to fetch CMS post using our new unified API first
   let cmsPost = await getCMSPostFromAPI(slug, 'full', isDraft)
@@ -263,7 +250,6 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     cmsPost = await getCMSPostBySlug(slug, isDraft)
   }
 
-  // If still no post found, handle appropriately
   if (!cmsPost) {
     if (isDraft) {
       // Try to fetch published version for draft mode
@@ -272,10 +258,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         publishedPost = await getCMSPostBySlug(slug, false)
       }
 
-      if (!publishedPost) {
-        console.log(`[BlogPostPage] No post found for slug "${slug}", returning 404`)
-        notFound()
-      }
+      if (!publishedPost) return null
 
       const mdxSource = await mdxSerialize(publishedPost.content || '', {
         tocDepth: publishedPost.toc_depth || 3,
@@ -304,8 +287,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       }
       return <BlogPostClient {...props} />
     }
-    console.log(`[BlogPostPage] No post found for slug "${slug}", returning 404`)
-    notFound()
+    return null
   }
 
   const tocDepth = cmsPost.toc_depth || 3

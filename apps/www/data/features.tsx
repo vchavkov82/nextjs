@@ -34,7 +34,7 @@ import {
   UserX,
   Zap,
 } from 'lucide-react'
-import { FlutterIcon, JsIcon, PythonIcon, SwiftIcon } from '~/components/svg-icons'
+import { FlutterIcon, JsIcon, PythonIcon, SwiftIcon } from '@/components/svg-icons'
 import {
   PRODUCT,
   PRODUCT_MODULE,
