@@ -11,7 +11,7 @@ const { metadataApplicationName, metadataTitle } = getCustomContent([
   'metadata:title',
 ])
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   applicationName: metadataApplicationName,
   title: metadataTitle,
   description:
@@ -38,7 +38,7 @@ const metadata: Metadata = {
   },
 }
 
-const viewport: Viewport = {
+export const viewport: Viewport = {
   themeColor: '#1E1E1E',
 }
 
@@ -52,5 +52,4 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export { metadata, viewport }
 export default RootLayout

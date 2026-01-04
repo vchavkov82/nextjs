@@ -9,7 +9,8 @@ import remarkGfm from 'remark-gfm'
 import { visit } from 'unist-util-visit'
 
 // Cache the highlighter instance to prevent creating multiple instances
-let cachedHighlighter
+// Use global to persist across hot reloads in development
+const globalForHighlighter = globalThis
 
 /** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
@@ -142,11 +143,11 @@ export default makeSource({
         // rehypePrettyCodeOptions,
         {
           getHighlighter: async () => {
-            if (!cachedHighlighter) {
+            if (!globalForHighlighter.cachedHighlighter) {
               const theme = await loadTheme(path.join(process.cwd(), '/lib/themes/supabase-2.json'))
-              cachedHighlighter = await getHighlighter({ theme })
+              globalForHighlighter.cachedHighlighter = await getHighlighter({ theme })
             }
-            return cachedHighlighter
+            return globalForHighlighter.cachedHighlighter
           },
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

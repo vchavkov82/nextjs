@@ -43,19 +43,17 @@ export async function ReferenceNavigation({
         <RefVersionDropdown library={libPath} currentVersion={version} />
       </div>
       <ul className="flex flex-col gap-2">
-        {displayedNavSections?.map((section) => (
-          <Fragment key={section.id}>
-            {section.type === 'category' ? (
-              <li>
-                <RefCategory basePath={basePath} section={section} />
-              </li>
-            ) : (
-              <li className={topLvlRefNavItemStyles}>
-                <RefLink basePath={basePath} section={section} />
-              </li>
-            )}
-          </Fragment>
-        ))}
+        {displayedNavSections?.map((section) =>
+          section.type === 'category' ? (
+            <li key={section.id}>
+              <RefCategory basePath={basePath} section={section} />
+            </li>
+          ) : (
+            <li key={section.id} className={topLvlRefNavItemStyles}>
+              <RefLink basePath={basePath} section={section} />
+            </li>
+          )
+        )}
       </ul>
     </ReferenceNavigationScrollHandler>
   )

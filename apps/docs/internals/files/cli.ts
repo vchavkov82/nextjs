@@ -1,7 +1,7 @@
 import fs from 'fs'
 import yaml from 'js-yaml'
 
-import cliCommonSections from '../../spec/common-cli-sections.json'
+import cliCommonSections from '../../spec/common-cli-sections.json' with { type: 'json' }
 import { flattenSections } from '../helpers'
 
 const flatCLISections = flattenSections(cliCommonSections)

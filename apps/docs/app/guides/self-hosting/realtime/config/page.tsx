@@ -16,6 +16,8 @@ const generateMetadata = genGuideMeta(() => ({
 
 const RealtimeConfigPage = async () => {
   const descriptionMdx = specRealtimeV0.info.description
+  const tags = specRealtimeV0.info.tags
+  const parameters = specRealtimeV0.parameters
 
   return (
     <GuideTemplate
@@ -27,31 +29,32 @@ const RealtimeConfigPage = async () => {
       <MDXRemoteBase source={descriptionMdx} />
 
       <div>
-        {specRealtimeV0.info.tags.map((tag: ReturnType<typeof specRealtimeV0>['info']['tags']) => {
+        {tags.map((tag: any) => {
           return (
-            <>
+            <div key={tag.id}>
               <h2 className="text-foreground">{tag.title}</h2>
               <p className="text-foreground-lighter">{tag.description}</p>
               <div className="not-prose">
                 <h5 className="text-base text-foreground mb-3">Parameters</h5>
                 <ul>
-                  {specRealtimeV0.parameters
-                    .filter((param: ReturnType<typeof specRealtimeV0>['parameters']) =>
+                  {parameters
+                    .filter((param: any) =>
                       param.tags.includes(tag.id)
                     )
-                    .map((param: ReturnType<typeof specRealtimeV0>['parameters']) => {
+                    .map((param: any) => {
                       return (
                         <Param
+                          key={param.title}
                           name={param.title}
                           type={param.type}
                           description={param.description}
-                          required={param.required}
+                          isOptional={!param.required}
                         />
                       )
                     })}
                 </ul>
               </div>
-            </>
+            </div>
           )
         })}
       </div>

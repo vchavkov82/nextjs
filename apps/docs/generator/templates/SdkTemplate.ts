@@ -33,16 +33,6 @@ toc_max_heading_level: 2
 
 <%- fn.description %>
 
-### Examples
-
-<% fn.examples.forEach(function(example){ %>
-
-#### <%- example.summary %>
-
-<%- example.code %>
-
-<% }); %>
-
 <% }); %>
 
 
