@@ -53,10 +53,6 @@ ${errors ? `## Errors` : ''}
 
 ${errors}
 
-${examples.length > 0 ? '## Examples' : ''}
-
-${examples.join(`\n\n`)}
-
 `.trim()
 
 export default Page

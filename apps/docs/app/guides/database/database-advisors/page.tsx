@@ -96,7 +96,7 @@ const DatabaseAdvisorDocs = async () => {
               label={capitalize(getBasename(lint.path).replace(/_/g, ' '))}
             >
               <section id={getBasename(lint.path)}>
-                <MDXRemoteBase source={lint.content} options={options} />
+                <MDXRemoteBase source={lint.content} />
               </section>
             </TabPanel>
           ))}
