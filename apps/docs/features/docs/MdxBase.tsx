@@ -44,7 +44,7 @@ const MDXRemoteBase = async ({
     }
 
     // Use compileMDX which processes on the server and returns a component
-    const { content: MDXContent } = await compileMDX({
+    const { content } = await compileMDX({
       source: resolvedSource,
       components: mergedComponents,
       options: {
@@ -55,8 +55,8 @@ const MDXRemoteBase = async ({
       } as any,
     })
 
-    // Render the MDX content as JSX to avoid passing module objects
-    return <>{MDXContent}</>  
+    // Return the MDX content directly
+    return content
   } catch (error) {
     console.error('Error rendering MDX:', error)
     throw error

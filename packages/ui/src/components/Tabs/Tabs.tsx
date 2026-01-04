@@ -57,7 +57,16 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   refs,
   children: _children,
 }) => {
-  const children = Children.toArray(_children) as PanelPropsProps[]
+  // Filter valid React elements without accessing .ref to preserve React 19 compatibility
+  const children = useMemo(() => {
+    const childArray: React.ReactElement<PanelProps>[] = []
+    Children.forEach(_children, (child) => {
+      if (typeof child === 'object' && child !== null && 'props' in child) {
+        childArray.push(child as React.ReactElement<PanelProps>)
+      }
+    })
+    return childArray
+  }, [_children])
 
   const [activeTab, setActiveTab] = useState(
     activeId ??
@@ -126,14 +135,9 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
         })}
         {addOnAfter}
       </TabsPrimitive.List>
-      {children as any}
+      {_children}
     </TabsPrimitive.Root>
   )
-}
-
-// bit of a hack because we map over the JSX in the parent component
-interface PanelPropsProps {
-  props: PanelProps
 }
 
 interface PanelProps {

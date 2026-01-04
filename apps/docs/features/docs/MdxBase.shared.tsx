@@ -27,10 +27,10 @@ import AuthProviders from '~/components/AuthProviders'
 import ButtonCard from '~/components/ButtonCard'
 import MetricsStackCards from '~/components/MetricsStackCards'
 import NavData from '~/components/NavData'
-import Price from '~/components/Price'
+import { Price } from '~/components/Price'
 import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
 import { RegionsList, SmartRegionsList } from '~/components/RegionsList'
-import SharedData from '~/components/SharedData'
+import { SharedData } from '~/components/SharedData'
 import { CodeSampleDummy, CodeSampleWrapper } from '~/features/directives/CodeSample.client'
 
 // Wrap Admonition for Docs-specific styling (within MDX prose, requires a margin-bottom)
