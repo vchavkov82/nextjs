@@ -15,7 +15,7 @@ import apiCommonSections from '~/spec/common-api-sections.json' with { type: 'js
 import cliCommonSections from '~/spec/common-cli-sections.json' with { type: 'json' }
 import commonClientLibSections from '~/spec/common-client-libs-sections.json' with { type: 'json' }
 import selfHostingAnalyticsCommonSections from '~/spec/common-self-hosting-analytics-sections.json' with { type: 'json' }
-import selfHostingAuthCommonSections from '~/spec/common-self-hosting-auth-sections.json'
+import selfHostingAuthCommonSections from '~/spec/common-self-hosting-auth-sections.json' with { type: 'json' }
 import selfHostingFunctionsCommonSections from '~/spec/common-self-hosting-functions-sections.json' with { type: 'json' }
 import selfHostingRealtimeCommonSections from '~/spec/common-self-hosting-realtime-sections.json' with { type: 'json' }
 import selfHostingStorageCommonSections from '~/spec/common-self-hosting-storage-sections.json' with { type: 'json' }

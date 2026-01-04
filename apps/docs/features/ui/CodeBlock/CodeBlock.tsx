@@ -1,5 +1,5 @@
 import { Fragment, type PropsWithChildren } from 'react'
-import { bundledLanguages, createHighlighter, type BundledLanguage, type ThemedToken } from 'shiki'
+import { bundledLanguages, createHighlighter, type BundledLanguage, type HighlighterGeneric, type ThemedToken } from 'shiki'
 import { createTwoslasher, type ExtraFiles, type NodeHover } from 'twoslash'
 import { cn } from 'ui'
 
@@ -14,10 +14,21 @@ const twoslasher = createTwoslasher({ extraFiles })
 const TWOSLASHABLE_LANGS: ReadonlyArray<string> = ['js', 'ts', 'javascript', 'typescript']
 
 const BUNDLED_LANGUAGES = Object.keys(bundledLanguages)
-const highlighter = await createHighlighter({
-  themes: [theme],
-  langs: BUNDLED_LANGUAGES,
-})
+
+// Singleton cache for highlighter with global persistence
+const globalForHighlighter = globalThis as unknown as {
+  highlighterInstance: HighlighterGeneric<BundledLanguage, string> | undefined
+}
+
+async function getHighlighter() {
+  if (!globalForHighlighter.highlighterInstance) {
+    globalForHighlighter.highlighterInstance = await createHighlighter({
+      themes: [theme],
+      langs: BUNDLED_LANGUAGES,
+    })
+  }
+  return globalForHighlighter.highlighterInstance
+}
 
 export async function CodeBlock({
   className,
@@ -52,6 +63,7 @@ export async function CodeBlock({
     }
   }
 
+  const highlighter = await getHighlighter()
   const { tokens } = highlighter.codeToTokens(code, {
     lang: lang || undefined,
     theme: 'Supabase Theme',

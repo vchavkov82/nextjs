@@ -257,7 +257,7 @@ async function rewriteNodes(contentMap: Map<MdxJsxFlowElement, [CodeSampleMeta, 
 
     const source = isExternalSource(meta)
       ? `https://github.com/${meta.org}/${meta.repo}/blob/${meta.commit}${meta.path}`
-      : `https://github.com/supabase/supabase/blob/${process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ?? 'master'}/examples${meta.path}`
+      : `https://github.com/supabase/supabase/tree/${process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA ?? 'master'}${meta.path}`
 
     let processedContent = content
     if (meta.convertToJs) {
@@ -514,7 +514,7 @@ function createArrayAttributeValueExpression(...arrayElements: string[]) {
               elements: arrayElements.map((element) => ({
                 type: 'Literal',
                 value: element,
-                raw: element,
+                raw: `'${element}'`,
               })),
             },
           },
