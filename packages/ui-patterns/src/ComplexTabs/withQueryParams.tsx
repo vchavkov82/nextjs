@@ -27,7 +27,10 @@ const withQueryParams =
     onClick,
     ...props
   }: Props & QueryParamsProps) => {
-    const children = Children.toArray(childrenUnvalidated)
+    const children: unknown[] = []
+    Children.forEach(childrenUnvalidated, (child) => {
+      children.push(child)
+    })
     const tabIdsTemp = children
       .map((child) => !!child && typeof child === 'object' && 'props' in child && child.props.id)
       .filter(isString)
