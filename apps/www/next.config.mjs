@@ -58,6 +58,15 @@ const nextConfig = {
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-dialog', 'framer-motion'],
     // Enable faster refresh
     optimizeCss: true,
+    // Turbopack optimizations
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   /**
    * Exclude huge directories from being traced into serverless functions

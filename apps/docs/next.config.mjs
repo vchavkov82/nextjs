@@ -33,23 +33,23 @@ const nextConfig = {
     // @ts-ignore
     remotePatterns,
   },
-  // Webpack config - Required for production builds (webpack is still the default for production)
-  // Turbopack config below handles the same file types for development (with --turbopack flag)
-  // In Next.js 16+, you can use `next build --turbopack` to use Turbopack for production builds
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.include$/,
-      type: 'asset/source',
-    })
-    config.module.rules.push({
-      test: /\.toml$/,
-      type: 'json',
-      parser: {
-        parse: parseToml,
-      },
-    })
-    return config
-  },
+  // Webpack config only applies when not using Turbopack
+  ...(process.env.TURBOPACK !== '1' && {
+    webpack: (config) => {
+      config.module.rules.push({
+        test: /\.include$/,
+        type: 'asset/source',
+      })
+      config.module.rules.push({
+        test: /\.toml$/,
+        type: 'json',
+        parser: {
+          parse: parseToml,
+        },
+      })
+      return config
+    },
+  }),
   transpilePackages: [
     'ui',
     'ui-patterns',
@@ -66,24 +66,24 @@ const nextConfig = {
     '/reference/**/*': ['./features/docs/generated/**/*', './docs/ref/**/*'],
   },
   serverExternalPackages: ['libpg-query', 'twoslash'],
-  // Turbopack config (moved from experimental.turbo to fix deprecation warning)
-  turbopack: {
-    rules: {
-      '*.include': {
-        loaders: ['raw-loader'],
-        as: '*.js',
-      },
-      '*.toml': {
-        loaders: ['toml-loader'],
-        as: '*.json',
-      },
-    },
-  },
   experimental: {
     // Optimize for high-core systems
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-collapsible'],
     // Enable faster refresh
     optimizeCss: true,
+    // Turbopack optimizations
+    turbo: {
+      rules: {
+        '*.include': {
+          loaders: ['raw-loader'],
+          as: '*.js',
+        },
+        '*.toml': {
+          loaders: ['toml-loader'],
+          as: '*.json',
+        },
+      },
+    },
   },
   async headers() {
     return [
