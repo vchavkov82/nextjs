@@ -1,0 +1,9 @@
+{
+  "cursor.autoApprove": true,
+  "cursor.autoApproveFileOperations": true,
+  "cursor.autoApproveTerminalCommands": true,
+  "cursor.skipPermissionPrompts": true,
+  "cursor.autoApproveCodeActions": true,
+  "cursor.autoApproveEdits": true
+}
+
