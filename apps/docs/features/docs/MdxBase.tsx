@@ -52,26 +52,41 @@ const MDXRemoteBase = async ({
       ...customComponents,
     }
 
-    // Use compileMDX with parseFrontmatter: false to avoid getData issue
-    // The getData error occurs when parseFrontmatter is true or when accessing frontmatter
-    // By setting parseFrontmatter to false, we avoid the problematic code path
-    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are at the top level
-    const { content } = await compileMDX({
-      source: sourceWithoutFrontmatter,
-      components: mergedComponents,
-      parseFrontmatter: false,
-      mdxOptions: {
-        remarkPlugins: [
-          [remarkMath, { singleDollarTextMath: false }],
-          remarkGfm,
-        ],
-        rehypePlugins: [rehypeKatex],
-        format: 'mdx',
-      },
-    })
+// Use compileMDX which processes on the server and returns a component
+    // Note: There's a known issue with next-mdx-remote and React 19 where the library
+    // accesses element.ref internally, which is deprecated in React 19. This causes
+    // a console warning but doesn't break functionality. The library needs to be
+    // updated to support React 19's new ref handling.
+    try {
+      const { content } = await compileMDX({
+        source: resolvedSource,
+        components: mergedComponents,
+        options: {
+          mdxOptions: {
+            remarkPlugins: [
+              [remarkMath, { singleDollarTextMath: false }],
+              remarkGfm,
+            ],
+            rehypePlugins: [rehypeKatex],
+            format: 'mdx',
+          },
+        },
+      })
 
-    // Return the MDX content directly
-    return content
+      // Return the MDX content directly
+      return content
+    } catch (compileError: unknown) {
+      // Enhanced error logging for debugging MDX compilation issues
+      if (compileError instanceof Error && compileError.message?.includes('getData')) {
+        console.error('MDX compilation error (getData issue):', {
+          message: compileError.message,
+          stack: compileError.stack,
+          sourceLength: resolvedSource.length,
+          sourcePreview: resolvedSource.substring(0, 200),
+        })
+      }
+      throw compileError
+    }
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
