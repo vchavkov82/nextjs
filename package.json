@@ -15,6 +15,7 @@
     "clean": "pnpm turbo run clean --parallel && rimraf -G node_modules/{*,.bin,.modules.yaml}",
     "dev": "pnpm turbo run dev --parallel",
     "dev:bun": "bun run turbo run dev --parallel",
+    "dev:hybrid": "bun run turbo run dev --parallel",
     "kill": "bash scripts/kill-services.sh",
     "dev:cms": "pnpm turbo run dev --filter=cms --parallel",
     "dev:studio": "pnpm turbo run dev --filter=studio --parallel",
