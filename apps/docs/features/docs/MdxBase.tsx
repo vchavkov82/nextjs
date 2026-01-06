@@ -44,19 +44,40 @@ const MDXRemoteBase = async ({
     }
 
     // Use compileMDX which processes on the server and returns a component
-    const { content } = await compileMDX({
-      source: resolvedSource,
-      components: mergedComponents,
-      options: {
-        mdxOptions: {
-          remarkPlugins: [[remarkMath, { singleDollarTextMath: false }], remarkGfm],
-          rehypePlugins: [rehypeKatex],
+    // Note: There's a known issue with next-mdx-remote and React 19 where the library
+    // accesses element.ref internally, which is deprecated in React 19. This causes
+    // a console warning but doesn't break functionality. The library needs to be
+    // updated to support React 19's new ref handling.
+    try {
+      const { content } = await compileMDX({
+        source: resolvedSource,
+        components: mergedComponents,
+        options: {
+          mdxOptions: {
+            remarkPlugins: [
+              [remarkMath, { singleDollarTextMath: false }],
+              remarkGfm,
+            ],
+            rehypePlugins: [rehypeKatex],
+            format: 'mdx',
+          },
         },
-      } as any,
-    })
+      })
 
-    // Return the MDX content directly
-    return content
+      // Return the MDX content directly
+      return content
+    } catch (compileError: unknown) {
+      // Enhanced error logging for debugging MDX compilation issues
+      if (compileError instanceof Error && compileError.message?.includes('getData')) {
+        console.error('MDX compilation error (getData issue):', {
+          message: compileError.message,
+          stack: compileError.stack,
+          sourceLength: resolvedSource.length,
+          sourcePreview: resolvedSource.substring(0, 200),
+        })
+      }
+      throw compileError
+    }
   } catch (error) {
     console.error('Error rendering MDX:', error)
     throw error

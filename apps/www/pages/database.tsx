@@ -76,28 +76,28 @@ function Database() {
         <ProductHeader
           icon={MainProducts['database'].icon}
           title={MainProducts['database'].name}
-          h1={[
-            <span key={'database-h1'}>
-              It’s just Postgres
+          h1={
+            <span>
+              It's just Postgres
               <br /> (without the hassle)
-            </span>,
-          ]}
+            </span>
+          }
           subheader={[
             'Every Supabase project is a dedicated Postgres database, trusted by millions of developers.',
             "Postgres is one of the world's most scalable databases.",
           ]}
-          image={[
+          image={
             <Image
               src={{
                 dark: `${basePath}/images/product/database/header--dark-2.png`,
                 light: `${basePath}/images/product/database/header--light-2.png`,
               }}
               alt="database header"
-              layout="responsive"
-              width="1680"
-              height="1116"
-            />,
-          ]}
+              width={1680}
+              height={1116}
+              className="w-full h-auto"
+            />
+          }
           documentation_url={'/docs/guides/database'}
         />
 
