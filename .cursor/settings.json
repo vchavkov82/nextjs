@@ -4,6 +4,7 @@
   "cursor.autoApproveTerminalCommands": true,
   "cursor.skipPermissionPrompts": true,
   "cursor.autoApproveCodeActions": true,
+<<<<<<< HEAD
   "cursor.autoApproveEdits": true,
   "cursor.chat.allowTerminalCommandExecution": true,
   "cursor.terminal.allowExecution": true,
@@ -27,5 +28,8 @@
   "cursor.composer.autoApproveFileOperations": true,
   "cursor.composer.autoApproveTerminalCommands": true,
   "cursor.composer.autoRun": true
+=======
+  "cursor.autoApproveEdits": true
+>>>>>>> 695c4d86f6 (Update email adapter to handle SMTP server unavailability gracefully by disabling transport verification during startup.)
 }
 
