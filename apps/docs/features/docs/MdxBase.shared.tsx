@@ -26,7 +26,7 @@ import AiPromptsIndex from '~/app/guides/getting-started/ai-prompts/[slug]/AiPro
 import AuthProviders from '~/components/AuthProviders'
 import ButtonCard from '~/components/ButtonCard'
 import MetricsStackCards from '~/components/MetricsStackCards'
-import NavData from '~/components/NavData'
+import { NavData } from '~/components/NavData'
 import { Price } from '~/components/Price'
 import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
 import { RegionsList, SmartRegionsList } from '~/components/RegionsList'

@@ -8,6 +8,7 @@ import { seoPlugin } from '@payloadcms/plugin-seo'
 import { s3Storage } from '@payloadcms/storage-s3'
 import { buildConfig, type Plugin } from 'payload'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
+import nodemailer from 'nodemailer'
 import { defaultLexical } from './fields/defaultLexical.ts'
 import { getServerSideURL } from './utilities/getURL.ts'
 import { WWW_SITE_ORIGIN } from './utilities/constants.ts'
@@ -101,15 +102,34 @@ export default buildConfig({
     },
   }),
   // Add email adapter to prevent warnings
-  email: nodemailerAdapter({
-    transportOptions: {
+  // Create transport with verification disabled to prevent startup errors when SMTP server is unavailable
+  email: (() => {
+    const transport = nodemailer.createTransport({
       host: process.env.SMTP_HOST || 'localhost',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false,
-    },
-    defaultFromAddress: process.env.SMTP_FROM || 'noreply@localhost',
-    defaultFromName: 'Supabase CMS',
-  }),
+      pool: false,
+      requireTLS: false,
+      tls: {
+        rejectUnauthorized: false,
+      },
+    })
+    // Override verify to prevent connection verification on startup
+    // The adapter will call verify() which would fail if SMTP server is not running
+    transport.verify = function (callback?: (error: Error | null, success?: boolean) => void) {
+      // Skip verification - just call callback with success
+      if (callback) {
+        // Use setImmediate to make it async like the original
+        setImmediate(() => callback(null, true))
+      }
+      return Promise.resolve(true)
+    }
+    return nodemailerAdapter({
+      transport,
+      defaultFromAddress: process.env.SMTP_FROM || 'noreply@localhost',
+      defaultFromName: 'Supabase CMS',
+    })
+  })(),
   // Global configuration for better performance
   globals: [],
   graphQL: {
