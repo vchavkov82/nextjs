@@ -7,7 +7,7 @@
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8192\" next build --turbopack",
     "ci": "pnpm migrate && pnpm build",
     "clean": "rimraf node_modules .next",
-    "dev": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=4096\" next dev --turbopack --port 3030",
+    "dev": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=16384 --max-semi-space-size=512\" next dev --turbopack --port 3030",
     "dev:prod": "cross-env NODE_OPTIONS=--no-deprecation rm -rf .next && pnpm build && pnpm start",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",

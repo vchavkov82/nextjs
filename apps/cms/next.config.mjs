@@ -54,6 +54,12 @@ const nextConfig = {
     maxInactiveAge: 60 * 60 * 1000,
     pagesBufferLength: 5,
   },
+  experimental: {
+    // Optimize for high-core systems
+    optimizePackageImports: ['@payloadcms/ui', '@radix-ui/react-checkbox', '@radix-ui/react-label', '@radix-ui/react-select', 'lucide-react'],
+    // Enable faster refresh
+    optimizeCss: true,
+  },
   turbopack: {
     rules: {
       '*.svg': {
