@@ -940,7 +940,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Base error thrown by BA Auth helpers."
+            "text": "Base error thrown by Supabase Auth helpers."
           }
         ],
         "blockTags": [
@@ -5072,7 +5072,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Base error for BA Edge Function invocations."
+            "text": "Base error for Supabase Edge Function invocations."
           }
         ],
         "blockTags": [
@@ -5522,7 +5522,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Error thrown when the BA relay cannot reach the Edge Function."
+            "text": "Error thrown when the Supabase relay cannot reach the Edge Function."
           }
         ],
         "blockTags": [
@@ -6390,7 +6390,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
               }
             ]
           },
@@ -8636,7 +8636,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\nUsed to implement the authorization code flow on the consent page."
+                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\nUsed to implement the authorization code flow on the consent page."
               }
             ]
           },
@@ -8916,9 +8916,7 @@
           },
           "comment": {
             "summary": [],
-            "modifierTags": [
-              "@experimental"
-            ]
+            "modifierTags": ["@experimental"]
           },
           "sources": [
             {
@@ -10461,9 +10459,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        511
-                                      ]
+                                      "children": [511]
                                     }
                                   ],
                                   "sources": [
@@ -10498,10 +10494,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                509,
-                                512
-                              ]
+                              "children": [509, 512]
                             }
                           ],
                           "sources": [
@@ -10566,9 +10559,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        516
-                                      ]
+                                      "children": [516]
                                     }
                                   ],
                                   "sources": [
@@ -10605,10 +10596,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                514,
-                                517
-                              ]
+                              "children": [514, 517]
                             }
                           ],
                           "sources": [
@@ -10753,7 +10741,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the BA Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
+                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Supabase Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
                   }
                 ]
               },
@@ -11489,7 +11477,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other BA Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
+                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other Supabase Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
                   }
                 ],
                 "blockTags": [
@@ -16681,7 +16669,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "The following is placed here to display on www.assistance.bg/docs/reference/javascript/subscribe."
+                    "text": "The following is placed here to display on supabase.com/docs/reference/javascript/subscribe."
                   }
                 ]
               },
@@ -20011,7 +19999,7 @@
                       "workerUrl": [
                         {
                           "kind": "text",
-                          "text": "The URL of the worker script. Defaults to https://realtime.www.assistance.bg/worker.js that includes a heartbeat event call to keep the connection alive."
+                          "text": "The URL of the worker script. Defaults to https://realtime.supabase.com/worker.js that includes a heartbeat event call to keep the connection alive."
                         }
                       ]
                     }
@@ -22834,7 +22822,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "BA Client.\n\nAn isomorphic Javascript client for interacting with Postgres."
+            "text": "Supabase Client.\n\nAn isomorphic Javascript client for interacting with Postgres."
           }
         ]
       },
@@ -22850,7 +22838,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 112,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L112"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L112"
             }
           ],
           "signatures": [
@@ -22884,7 +22872,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 112,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L112"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L112"
                 }
               ],
               "typeParameters": [
@@ -22932,7 +22920,7 @@
                                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                   "line": 44,
                                   "character": 8,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
                                 }
                               ],
                               "type": {
@@ -22952,7 +22940,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 44,
                               "character": 6,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
                             }
                           ]
                         }
@@ -23302,7 +23290,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 59,
                               "character": 26,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
                             }
                           ],
                           "type": {
@@ -23322,7 +23310,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 59,
                           "character": 24,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
                         }
                       ]
                     }
@@ -23403,7 +23391,7 @@
                                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                   "line": 62,
                                   "character": 25,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                                 }
                               ],
                               "type": {
@@ -23426,7 +23414,7 @@
                                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                           "line": 62,
                                           "character": 47,
-                                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                                         }
                                       ],
                                       "type": {
@@ -23446,7 +23434,7 @@
                                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                       "line": 62,
                                       "character": 45,
-                                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                                     }
                                   ]
                                 }
@@ -23464,7 +23452,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 62,
                               "character": 23,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                             }
                           ]
                         }
@@ -23514,7 +23502,7 @@
                                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                   "line": 65,
                                   "character": 10,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
                                 }
                               ],
                               "type": {
@@ -23534,7 +23522,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 65,
                               "character": 8,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
                             }
                           ]
                         }
@@ -23570,7 +23558,7 @@
                                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                   "line": 66,
                                   "character": 42,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
                                 }
                               ],
                               "type": {
@@ -23590,7 +23578,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 66,
                               "character": 40,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
                             }
                           ]
                         }
@@ -23632,7 +23620,7 @@
                     "summary": [
                       {
                         "kind": "text",
-                        "text": "The unique BA URL which is supplied when you create a new project in your project dashboard."
+                        "text": "The unique Supabase URL which is supplied when you create a new project in your project dashboard."
                       }
                     ]
                   },
@@ -23651,7 +23639,7 @@
                     "summary": [
                       {
                         "kind": "text",
-                        "text": "The unique BA Key which is supplied when you create a new project in your project dashboard."
+                        "text": "The unique Supabase Key which is supplied when you create a new project in your project dashboard."
                       }
                     ]
                   },
@@ -23766,7 +23754,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 88,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
             }
           ],
           "type": {
@@ -23782,7 +23770,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 88,
                   "character": 26,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
                 }
               ],
               "signatures": [
@@ -23797,7 +23785,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 88,
                       "character": 26,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L88"
                     }
                   ],
                   "type": {
@@ -23839,7 +23827,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "BA Auth allows you to create and manage user sessions for access to data that is secured by access policies."
+                "text": "Supabase Auth allows you to create and manage user sessions for access to data that is secured by access policies."
               }
             ]
           },
@@ -23848,7 +23836,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 73,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L73"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L73"
             }
           ],
           "type": {
@@ -23874,7 +23862,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 81,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L81"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L81"
             }
           ],
           "type": {
@@ -23901,7 +23889,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 87,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L87"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L87"
             }
           ],
           "type": {
@@ -23923,7 +23911,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 86,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L86"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L86"
             }
           ],
           "type": {
@@ -24152,7 +24140,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 83,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L83"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L83"
             }
           ],
           "type": {
@@ -24178,7 +24166,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 90,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L90"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L90"
             }
           ],
           "type": {
@@ -24212,7 +24200,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 74,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L74"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L74"
             }
           ],
           "type": {
@@ -24236,7 +24224,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 80,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L80"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L80"
             }
           ],
           "type": {
@@ -24262,7 +24250,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 84,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L84"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L84"
             }
           ],
           "type": {
@@ -24311,7 +24299,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "BA Storage allows you to manage user-generated content, such as photos or videos."
+                "text": "Supabase Storage allows you to manage user-generated content, such as photos or videos."
               }
             ]
           },
@@ -24320,7 +24308,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 78,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L78"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L78"
             }
           ],
           "type": {
@@ -24346,7 +24334,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 85,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L85"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L85"
             }
           ],
           "type": {
@@ -24367,7 +24355,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 82,
               "character": 12,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L82"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L82"
             }
           ],
           "type": {
@@ -24392,7 +24380,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "The unique BA Key which is supplied when you create a new project in your project dashboard."
+                "text": "The unique Supabase Key which is supplied when you create a new project in your project dashboard."
               }
             ]
           },
@@ -24401,7 +24389,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 114,
               "character": 14,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L114"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L114"
             }
           ],
           "type": {
@@ -24421,7 +24409,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "The unique BA URL which is supplied when you create a new project in your project dashboard."
+                "text": "The unique Supabase URL which is supplied when you create a new project in your project dashboard."
               }
             ]
           },
@@ -24430,7 +24418,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 113,
               "character": 14,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L113"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L113"
             }
           ],
           "type": {
@@ -24449,7 +24437,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 194,
               "character": 6,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L194"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L194"
             }
           ],
           "getSignature": {
@@ -24462,7 +24450,7 @@
               "summary": [
                 {
                   "kind": "text",
-                  "text": "BA Functions allows you to deploy and invoke edge functions."
+                  "text": "Supabase Functions allows you to deploy and invoke edge functions."
                 }
               ]
             },
@@ -24471,7 +24459,7 @@
                 "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                 "line": 194,
                 "character": 6,
-                "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L194"
+                "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L194"
               }
             ],
             "type": {
@@ -24496,7 +24484,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 308,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L308"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L308"
             }
           ],
           "signatures": [
@@ -24519,7 +24507,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 308,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L308"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L308"
                 }
               ],
               "parameters": [
@@ -24606,19 +24594,19 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 202,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L202"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L202"
             },
             {
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 206,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L206"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L206"
             },
             {
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 214,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L214"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L214"
             }
           ],
           "signatures": [
@@ -24633,7 +24621,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 202,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L202"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L202"
                 }
               ],
               "typeParameters": [
@@ -24734,7 +24722,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 206,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L206"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L206"
                 }
               ],
               "typeParameters": [
@@ -24837,7 +24825,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 315,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L315"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L315"
             }
           ],
           "signatures": [
@@ -24860,7 +24848,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 315,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L315"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L315"
                 }
               ],
               "type": {
@@ -24887,7 +24875,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 332,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L332"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L332"
             }
           ],
           "signatures": [
@@ -24910,7 +24898,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 332,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L332"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L332"
                 }
               ],
               "type": {
@@ -24958,7 +24946,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 325,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L325"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L325"
             }
           ],
           "signatures": [
@@ -24981,7 +24969,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 325,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L325"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L325"
                 }
               ],
               "parameters": [
@@ -25050,7 +25038,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 261,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L261"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L261"
             }
           ],
           "signatures": [
@@ -25073,7 +25061,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 261,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L261"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L261"
                 }
               ],
               "typeParameters": [
@@ -25299,7 +25287,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 275,
                               "character": 6,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L275"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L275"
                             }
                           ],
                           "type": {
@@ -25349,7 +25337,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 274,
                               "character": 6,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L274"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L274"
                             }
                           ],
                           "type": {
@@ -25394,7 +25382,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 273,
                               "character": 6,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L273"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L273"
                             }
                           ],
                           "type": {
@@ -25414,7 +25402,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 272,
                           "character": 13,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L272"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L272"
                         }
                       ]
                     }
@@ -25523,7 +25511,7 @@
               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
               "line": 226,
               "character": 2,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L226"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L226"
             }
           ],
           "signatures": [
@@ -25537,7 +25525,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside BA."
+                    "text": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Supabase."
                   }
                 ]
               },
@@ -25546,7 +25534,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 226,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L226"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L226"
                 }
               ],
               "typeParameters": [
@@ -25692,7 +25680,7 @@
           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
           "line": 37,
           "character": 21,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L37"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L37"
         }
       ],
       "typeParameters": [
@@ -25772,7 +25760,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 44,
                           "character": 8,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
                         }
                       ],
                       "type": {
@@ -25792,7 +25780,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 44,
                       "character": 6,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L44"
                     }
                   ]
                 }
@@ -26262,7 +26250,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 59,
                       "character": 26,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
                     }
                   ],
                   "type": {
@@ -26282,7 +26270,7 @@
                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                   "line": 59,
                   "character": 24,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L59"
                 }
               ]
             }
@@ -26363,7 +26351,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 62,
                           "character": 25,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                         }
                       ],
                       "type": {
@@ -26386,7 +26374,7 @@
                                   "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                                   "line": 62,
                                   "character": 47,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                                 }
                               ],
                               "type": {
@@ -26406,7 +26394,7 @@
                               "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                               "line": 62,
                               "character": 45,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                             }
                           ]
                         }
@@ -26424,7 +26412,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 62,
                       "character": 23,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L62"
                     }
                   ]
                 }
@@ -26464,7 +26452,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 65,
                           "character": 10,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
                         }
                       ],
                       "type": {
@@ -26484,7 +26472,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 65,
                       "character": 8,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L65"
                     }
                   ]
                 }
@@ -26520,7 +26508,7 @@
                           "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                           "line": 66,
                           "character": 42,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
                         }
                       ],
                       "type": {
@@ -26540,7 +26528,7 @@
                       "fileName": "packages/core/supabase-js/src/SupabaseClient.ts",
                       "line": 66,
                       "character": 40,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/SupabaseClient.ts#L66"
                     }
                   ]
                 }
@@ -27505,7 +27493,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThese methods are used to implement the consent page."
+            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThese methods are used to implement the consent page."
           }
         ]
       },
@@ -27534,7 +27522,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -27683,7 +27671,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -27832,7 +27820,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
+                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
                   }
                 ],
                 "blockTags": [
@@ -27919,7 +27907,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -27985,7 +27973,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
+                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
                   }
                 ],
                 "blockTags": [
@@ -29261,7 +29249,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -29290,7 +29278,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -29368,7 +29356,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -29586,7 +29574,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -29666,7 +29654,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -29742,7 +29730,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -32905,7 +32893,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "JWT Payload containing claims for BA authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
+            "text": "JWT Payload containing claims for Supabase authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
           }
         ],
         "blockTags": [
@@ -32914,7 +32902,7 @@
             "content": [
               {
                 "kind": "text",
-                "text": "https://www.assistance.bg/docs/guides/auth/jwt-fields"
+                "text": "https://supabase.com/docs/guides/auth/jwt-fields"
               }
             ]
           }
@@ -37546,7 +37534,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -37582,7 +37570,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -37663,7 +37651,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -37702,7 +37690,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -38339,7 +38327,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -38583,7 +38571,7 @@
           "fileName": "packages/core/supabase-js/src/lib/types.ts",
           "line": 148,
           "character": 12,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L148"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L148"
         }
       ],
       "typeParameters": [
@@ -40995,7 +40983,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a BA auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a BA auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by BA Auth."
+                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Supabase auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -41194,9 +41182,7 @@
                     "text": "Set to \"true\" if there is a custom authorization header set globally."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -41291,9 +41277,7 @@
                     "text": "Provide your own locking mechanism based on the environment. By default no locking is done at this time."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -41538,9 +41522,7 @@
                     "text": " to fetch a user object in those scenarios."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -41770,9 +41752,7 @@
             "text": " async function, such that no other client instances will be able to\nhold it at the same time."
           }
         ],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -42869,7 +42849,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -43020,7 +43000,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -43274,7 +43254,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -43712,7 +43692,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -43747,7 +43727,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44009,7 +43989,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44044,7 +44024,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44080,7 +44060,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44106,7 +44086,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44141,7 +44121,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -44350,10 +44330,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            818,
-                            819
-                          ]
+                          "children": [818, 819]
                         }
                       ],
                       "sources": [
@@ -44388,10 +44365,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    816,
-                    820
-                  ]
+                  "children": [816, 820]
                 }
               ],
               "sources": [
@@ -45158,7 +45132,7 @@
           "fileName": "packages/core/supabase-js/src/lib/types.ts",
           "line": 136,
           "character": 12,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
         }
       ],
       "typeParameters": [
@@ -45206,7 +45180,7 @@
                         "fileName": "packages/core/supabase-js/src/lib/types.ts",
                         "line": 136,
                         "character": 51,
-                        "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
+                        "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
                       }
                     ],
                     "type": {
@@ -45226,7 +45200,7 @@
                     "fileName": "packages/core/supabase-js/src/lib/types.ts",
                     "line": 136,
                     "character": 49,
-                    "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
+                    "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L136"
                   }
                 ]
               }
@@ -45277,7 +45251,7 @@
           "fileName": "packages/core/supabase-js/src/lib/types.ts",
           "line": 137,
           "character": 12,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L137"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L137"
         }
       ],
       "type": {
@@ -45306,7 +45280,7 @@
           "fileName": "packages/core/supabase-js/src/lib/types.ts",
           "line": 135,
           "character": 12,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L135"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L135"
         }
       ],
       "typeParameters": [
@@ -50427,11 +50401,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1054,
-                            1053,
-                            1055
-                          ]
+                          "children": [1054, 1053, 1055]
                         }
                       ],
                       "sources": [
@@ -51968,7 +51938,7 @@
           "fileName": "packages/core/supabase-js/src/lib/types.ts",
           "line": 28,
           "character": 12,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L28"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L28"
         }
       ],
       "typeParameters": [
@@ -52009,7 +51979,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " namespace of the BA client cannot be used.\nCreate another client if you wish to use BA Auth and third-party\nauthentications concurrently in the same application."
+                    "text": " namespace of the Supabase client cannot be used.\nCreate another client if you wish to use Supabase Auth and third-party\nauthentications concurrently in the same application."
                   }
                 ]
               },
@@ -52018,7 +51988,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 129,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L129"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L129"
                 }
               ],
               "type": {
@@ -52034,7 +52004,7 @@
                       "fileName": "packages/core/supabase-js/src/lib/types.ts",
                       "line": 129,
                       "character": 16,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L129"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L129"
                     }
                   ],
                   "signatures": [
@@ -52086,7 +52056,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 36,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L36"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L36"
                 }
               ],
               "type": {
@@ -52119,7 +52089,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 40,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L40"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L40"
                         }
                       ],
                       "type": {
@@ -52148,7 +52118,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 90,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L90"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L90"
                         }
                       ],
                       "type": {
@@ -52180,7 +52150,7 @@
                         "summary": [
                           {
                             "kind": "text",
-                            "text": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na BA auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a BA auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by BA Auth."
+                            "text": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\n\nCan be set to a function to provide custom logic for determining if a URL contains\na Supabase auth callback. The function receives the current URL and parsed parameters,\nand should return true if the URL should be processed as a Supabase auth callback.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\nalso return access_token in the URL fragment, which would otherwise be incorrectly\nintercepted by Supabase Auth."
                           }
                         ],
                         "blockTags": [
@@ -52200,7 +52170,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 70,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
                         }
                       ],
                       "type": {
@@ -52223,7 +52193,7 @@
                                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                                   "line": 70,
                                   "character": 36,
-                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
+                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
                                 }
                               ],
                               "signatures": [
@@ -52269,7 +52239,7 @@
                                               "fileName": "packages/core/supabase-js/src/lib/types.ts",
                                               "line": 70,
                                               "character": 55,
-                                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
+                                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
                                             }
                                           ],
                                           "indexSignatures": [
@@ -52284,7 +52254,7 @@
                                                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                                                   "line": 70,
                                                   "character": 57,
-                                                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
+                                                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L70"
                                                 }
                                               ],
                                               "parameters": [
@@ -52342,7 +52312,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 86,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L86"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L86"
                         }
                       ],
                       "type": {
@@ -52377,16 +52347,14 @@
                             "text": "Provide your own locking mechanism based on the environment. By default no locking is done at this time."
                           }
                         ],
-                        "modifierTags": [
-                          "@experimental"
-                        ]
+                        "modifierTags": ["@experimental"]
                       },
                       "sources": [
                         {
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 96,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L96"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L96"
                         }
                       ],
                       "type": {
@@ -52427,7 +52395,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 48,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L48"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L48"
                         }
                       ],
                       "type": {
@@ -52456,7 +52424,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 74,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L74"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L74"
                         }
                       ],
                       "type": {
@@ -52497,7 +52465,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 44,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L44"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L44"
                         }
                       ],
                       "type": {
@@ -52526,7 +52494,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 101,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L101"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L101"
                         }
                       ],
                       "type": {
@@ -52561,16 +52529,14 @@
                             "text": "A storage provider to store the user profile separately from the session.\nUseful when you need to store the session information in cookies,\nwithout bloating the data with the redundant user object."
                           }
                         ],
-                        "modifierTags": [
-                          "@experimental"
-                        ]
+                        "modifierTags": ["@experimental"]
                       },
                       "sources": [
                         {
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 82,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L82"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L82"
                         }
                       ],
                       "type": {
@@ -52602,7 +52568,7 @@
                       "fileName": "packages/core/supabase-js/src/lib/types.ts",
                       "line": 36,
                       "character": 9,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L36"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L36"
                     }
                   ]
                 }
@@ -52620,7 +52586,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to "
+                    "text": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to "
                   },
                   {
                     "kind": "code",
@@ -52637,7 +52603,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 32,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L32"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L32"
                 }
               ],
               "type": {
@@ -52662,7 +52628,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 33,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L33"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L33"
                         }
                       ],
                       "type": {
@@ -52685,7 +52651,7 @@
                       "fileName": "packages/core/supabase-js/src/lib/types.ts",
                       "line": 32,
                       "character": 7,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L32"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L32"
                     }
                   ]
                 }
@@ -52704,7 +52670,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 108,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L108"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L108"
                 }
               ],
               "type": {
@@ -52745,7 +52711,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 112,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L112"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L112"
                         }
                       ],
                       "type": {
@@ -52779,7 +52745,7 @@
                           "fileName": "packages/core/supabase-js/src/lib/types.ts",
                           "line": 116,
                           "character": 4,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L116"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L116"
                         }
                       ],
                       "type": {
@@ -52814,7 +52780,7 @@
                       "fileName": "packages/core/supabase-js/src/lib/types.ts",
                       "line": 108,
                       "character": 11,
-                      "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L108"
+                      "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L108"
                     }
                   ]
                 }
@@ -52841,7 +52807,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 106,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L106"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L106"
                 }
               ],
               "type": {
@@ -52864,7 +52830,7 @@
                   "fileName": "packages/core/supabase-js/src/lib/types.ts",
                   "line": 107,
                   "character": 2,
-                  "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L107"
+                  "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L107"
                 }
               ],
               "type": {
@@ -52889,7 +52855,7 @@
               "fileName": "packages/core/supabase-js/src/lib/types.ts",
               "line": 28,
               "character": 48,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L28"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/lib/types.ts#L28"
             }
           ]
         }
@@ -53033,7 +52999,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -53529,9 +53495,7 @@
       },
       "comment": {
         "summary": [],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -53557,9 +53521,7 @@
               "flags": {},
               "comment": {
                 "summary": [],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -53666,7 +53628,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Creates a new BA Client."
+            "text": "Creates a new Supabase Client."
           }
         ],
         "blockTags": [
@@ -53686,7 +53648,7 @@
           "fileName": "packages/core/supabase-js/src/index.ts",
           "line": 41,
           "character": 13,
-          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L41"
+          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L41"
         }
       ],
       "signatures": [
@@ -53701,7 +53663,7 @@
               "fileName": "packages/core/supabase-js/src/index.ts",
               "line": 41,
               "character": 28,
-              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L41"
+              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L41"
             }
           ],
           "typeParameters": [
@@ -53749,7 +53711,7 @@
                               "fileName": "packages/core/supabase-js/src/index.ts",
                               "line": 45,
                               "character": 8,
-                              "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L45"
+                              "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L45"
                             }
                           ],
                           "type": {
@@ -53761,9 +53723,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            6
-                          ]
+                          "children": [6]
                         }
                       ],
                       "sources": [
@@ -53771,7 +53731,7 @@
                           "fileName": "packages/core/supabase-js/src/index.ts",
                           "line": 45,
                           "character": 6,
-                          "url": "https://github.com/vchavkov82/nextjs-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L45"
+                          "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/supabase-js/src/index.ts#L45"
                         }
                       ]
                     }
@@ -54982,7 +54942,7 @@
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for BA - combining Auth, Database, Storage, Functions, and Realtime.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/getting-started\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/start\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/supabase-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/supabase-js)](https://www.npmjs.com/package/@supabase/supabase-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/supabase-js)](https://pkg.pr.new/~/supabase/supabase-js)\n\n</div>\n\n## Usage\n\nFirst of all, you need to install the library:\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for Supabase - combining Auth, Database, Storage, Functions, and Realtime.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://supabase.com/docs/guides/getting-started\">Guides</a>\n    ·\n    <a href=\"https://supabase.com/docs/reference/javascript/start\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/supabase-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/supabase-js)](https://www.npmjs.com/package/@supabase/supabase-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/supabase-js)](https://pkg.pr.new/~/supabase/supabase-js)\n\n</div>\n\n## Usage\n\nFirst of all, you need to install the library:\n\n"
     },
     {
       "kind": "code",
@@ -55034,7 +54994,7 @@
     },
     {
       "kind": "code",
-      "text": "```html\n<script>\n  const { createClient } = supabase\n  const _supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')\n\n  console.log('BA Instance: ', _supabase)\n  // ...\n</script>\n```"
+      "text": "```html\n<script>\n  const { createClient } = supabase\n  const _supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')\n\n  console.log('Supabase Instance: ', _supabase)\n  // ...\n</script>\n```"
     },
     {
       "kind": "text",
@@ -55050,7 +55010,7 @@
     },
     {
       "kind": "code",
-      "text": "```html\n<script type=\"module\">\n  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'\n  const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')\n\n  console.log('BA Instance: ', supabase)\n  // ...\n</script>\n```"
+      "text": "```html\n<script type=\"module\">\n  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'\n  const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')\n\n  console.log('Supabase Instance: ', supabase)\n  // ...\n</script>\n```"
     },
     {
       "kind": "text",
@@ -55110,7 +55070,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Support Policy\n\nThis section outlines the scope of support for various runtime environments in BA JavaScript client.\n\n### Node.js\n\nWe only support Node.js versions that are in **Active LTS** or **Maintenance** status as defined by the [official Node.js release schedule](https://nodejs.org/en/about/previous-releases#release-schedule). This means we support versions that are currently receiving long-term support and critical bug fixes.\n\nWhen a Node.js version reaches end-of-life and is no longer in Active LTS or Maintenance status, BA will drop it in a **minor release**, and **this won't be considered a breaking change**.\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped in version "
+      "text": "\n\n## Support Policy\n\nThis section outlines the scope of support for various runtime environments in Supabase JavaScript client.\n\n### Node.js\n\nWe only support Node.js versions that are in **Active LTS** or **Maintenance** status as defined by the [official Node.js release schedule](https://nodejs.org/en/about/previous-releases#release-schedule). This means we support versions that are currently receiving long-term support and critical bug fixes.\n\nWhen a Node.js version reaches end-of-life and is no longer in Active LTS or Maintenance status, Supabase will drop it in a **minor release**, and **this won't be considered a breaking change**.\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped in version "
     },
     {
       "kind": "code",
@@ -55142,7 +55102,7 @@
     },
     {
       "kind": "text",
-      "text": " release channels.\n\nWhen a Deno version reaches end-of-life and is no longer receiving security updates, BA will drop it in a **minor release**, and **this won't be considered a breaking change**.\n\n### Browsers\n\nAll modern browsers are supported. We support browsers that provide native "
+      "text": " release channels.\n\nWhen a Deno version reaches end-of-life and is no longer receiving security updates, Supabase will drop it in a **minor release**, and **this won't be considered a breaking change**.\n\n### Browsers\n\nAll modern browsers are supported. We support browsers that provide native "
     },
     {
       "kind": "code",
