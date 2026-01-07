@@ -157,12 +157,17 @@ export const getPostdata = async (slug: string, directory: string) => {
    * All files are mdx files
    */
   const fileType = 'mdx'
-  slug = slug + '.' + fileType
+  const searchSlug = slug + '.' + fileType
 
   /**
    * Return full directory
    */
   const postDirectory = path.join(process.cwd(), directory)
+  
+  if (!fs.existsSync(postDirectory)) {
+    throw new Error(`Directory not found: ${postDirectory}`)
+  }
+  
   const folderfiles = fs.readdirSync(postDirectory)
 
   /**
@@ -172,10 +177,10 @@ export const getPostdata = async (slug: string, directory: string) => {
    * this is so slugs like 'blog-post.mdx' will work
    * even if the mdx file is date namednamed like '2022-01-01-blog-post.mdx'
    */
-  const found = folderfiles.filter((x) => x.includes(slug))[0]
+  const found = folderfiles.filter((x) => x.includes(searchSlug))[0]
 
   if (!found) {
-    throw new Error(`Post not found: ${slug} in directory ${directory}`)
+    throw new Error(`Post not found: ${searchSlug} in directory ${directory}. Available files: ${folderfiles.slice(0, 5).join(', ')}...`)
   }
 
   const fullPath = path.join(postDirectory, found)
