@@ -136,7 +136,6 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   if (wrappable && __styles?.wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
 
-<<<<<<< HEAD
   // Normalize refs to handle both RefObject and callback refs
   // Use React.ElementRef to get the correct ref type for Radix UI components
   type TabsRootRef = React.ElementRef<typeof TabsPrimitive.Root>
