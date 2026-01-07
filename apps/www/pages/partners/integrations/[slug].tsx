@@ -340,6 +340,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   // Parse markdown
   const overview = await serialize(partner.overview, {
+    parseFrontmatter: false, // Avoid getData error in next-mdx-remote v5
     mdxOptions: {
       useDynamicImport: true,
       remarkPlugins: [remarkGfm, [remarkCodeHike, codeHikeOptions]],

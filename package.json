@@ -44,8 +44,7 @@
     "setup:cli": "supabase start -x studio && supabase status --output json > keys.json && node scripts/generateLocalEnv.js",
     "generate:types": "supabase gen types typescript --local > ./supabase/functions/common/database-types.ts",
     "api:codegen": "cd packages/api-types && pnpm run codegen",
-    "knip": "pnpx knip@~5.50.0",
-    "authorize-vercel-deploys": "tsx scripts/authorizeVercelDeploys.ts"
+    "knip": "pnpx knip@~5.50.0"
   },
   "devDependencies": {
     "@aws-sdk/client-secrets-manager": "^3.823.0",
@@ -58,10 +57,8 @@
     "supabase": "^2.65.6",
     "supports-color": "^8.0.0",
     "tailwindcss": "catalog:",
-    "tsx": "catalog:",
-    "turbo": "2.7.2",
-    "typescript": "catalog:",
-    "zod": "catalog:"
+    "turbo": "2.7.3",
+    "typescript": "catalog:"
   },
   "repository": {
     "type": "git",

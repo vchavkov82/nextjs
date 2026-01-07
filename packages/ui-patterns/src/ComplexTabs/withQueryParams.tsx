@@ -2,7 +2,7 @@
 
 import { useSearchParamsShallow } from 'common'
 import { xor } from 'lodash'
-import { Children, useEffect, useRef, type FC, type PropsWithChildren } from 'react'
+import { Children, isValidElement, useEffect, useRef, type FC, type PropsWithChildren } from 'react'
 import { type TabsProps } from 'ui'
 
 const isString = (maybeStr: unknown): maybeStr is string => typeof maybeStr === 'string'
@@ -32,7 +32,7 @@ const withQueryParams =
       children.push(child)
     })
     const tabIdsTemp = children
-      .map((child) => !!child && typeof child === 'object' && 'props' in child && child.props.id)
+      .map((child) => isValidElement(child) && child.props?.id)
       .filter(isString)
     // Store in ref to avoid stale data in later timeout
     const tabIdsRef = useRef(tabIdsTemp)

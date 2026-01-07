@@ -73,8 +73,12 @@ function RealtimePage() {
           h1={[<span key={'authentication-h1'}>Build modern web and mobile applications</span>]}
           subheader={['Sync client state globally over WebSockets in Realtime']}
           image={[
-            <div className="bg-surface-100 border-default relative flex h-[372px] w-[560px] items-center justify-center overflow-hidden rounded border drop-shadow-md">
+            <div
+              key="realtime-image-container"
+              className="bg-surface-100 border-default relative flex h-[372px] w-[560px] items-center justify-center overflow-hidden rounded border drop-shadow-md"
+            >
               <div
+                key="realtime-button"
                 className={[
                   'border-brand-300 relative h-12 w-48 bg-brand',
                   `flex items-center justify-center ${RealtimeStyles['shape']}`,
@@ -87,14 +91,17 @@ function RealtimePage() {
                 </p>
               </div>
               <Cursor
+                key="cursor-one"
                 color="var(--colors-yellow9)"
                 className={`${RealtimeStyles['cursor-one']} absolute top-[220px] right-[130px]`}
               />
               <Cursor
+                key="cursor-two"
                 color="var(--colors-indigo9)"
                 className={`${RealtimeStyles['cursor-two']} absolute top-[180px] right-[280px]`}
               />
               <div
+                key="cursor-two-comment"
                 className={[
                   'border-foreground absolute bottom-[40px] left-[175px] flex h-10 w-20',
                   'items-center justify-center space-x-2 rounded-full border-[3px] bg-indigo-900',
@@ -104,10 +111,12 @@ function RealtimePage() {
                 <p className="text-lg">🤔</p>
               </div>
               <Cursor
+                key="cursor-three"
                 color="var(--colors-tomato9)"
                 className={`${RealtimeStyles['cursor-three']} absolute top-[170px] right-[180px]`}
               />
               <div
+                key="cursor-three-comment"
                 className={[
                   'border-foreground absolute top-[72px] left-[320px] flex h-10 w-20',
                   'items-center justify-center space-x-2 rounded-full border-[3px] bg-tomato-900',
@@ -116,7 +125,10 @@ function RealtimePage() {
               >
                 <p className="text-lg">😄</p>
               </div>
-              <div className="bg-background border-default absolute top-0 flex h-9 w-full items-center justify-between border-b">
+              <div
+                key="header-bar"
+                className="bg-background border-default absolute top-0 flex h-9 w-full items-center justify-between border-b"
+              >
                 <div className="flex items-center">
                   <Menu className="text-foreground mx-3" strokeWidth={1} size={16} />
                   <Grid className="text-foreground mx-3" strokeWidth={1} size={15} />

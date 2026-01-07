@@ -196,9 +196,11 @@ export const VirtualizedTableBody = <TItem,>({
 
             const key = renderedRow.key ?? getRowKey(item, virtualItem.index)
 
-            const existingRef = (
-              renderedRow as unknown as { ref?: Ref<HTMLTableRowElement> | null }
-            ).ref
+            // In React 19, we can't access element.ref directly. Instead, refs are accessible
+            // through element.props.ref. We extract the existing ref (if any) and merge it
+            // with the measurement ref.
+            const existingRef = (renderedRow.props as { ref?: Ref<HTMLTableRowElement> | null })
+              .ref
             const combinedRef =
               existingRef != null
                 ? mergeRefs<HTMLTableRowElement>(measurementRef, existingRef)

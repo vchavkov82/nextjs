@@ -60,6 +60,9 @@ type GuideTemplateProps =
 const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: GuideTemplateProps) => {
   const hideToc = meta?.hideToc || meta?.hide_table_of_contents
 
+  // Await MDX content since MDXRemoteBase is an async Server Component
+  const mdxContent = content ? await MDXRemoteBase({ source: content }) : null
+
   // Render MDX content as a Server Component before passing to Client Component wrapper
   const articleContent = (
     <>
@@ -79,7 +82,7 @@ const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: 
         )}
         <hr className="not-prose border-t-0 border-b my-8" />
 
-        {content && <MDXRemoteBase source={content} customPreprocess={(x) => x} />}
+        {mdxContent}
         {children}
 
         <footer className="mt-16 not-prose">

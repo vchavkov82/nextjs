@@ -42,11 +42,11 @@ async function generateRefMarkdown(sections: ICommonMarkdown[], slug: string) {
           ? await serialize(content ?? '', {
               // MDX's available options, see the MDX docs for more info.
               // https://mdxjs.com/packages/mdx/#compilefile-options
+              parseFrontmatter: false, // Frontmatter is already parsed with gray-matter above
               mdxOptions: {
                 useDynamicImport: true,
                 remarkPlugins: [remarkGfm],
               },
-              // Indicates whether or not to parse the frontmatter from the mdx source
             })
           : null,
       })
