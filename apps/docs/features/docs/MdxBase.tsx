@@ -1,3 +1,4 @@
+import matter from 'gray-matter'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
@@ -41,77 +42,36 @@ const MDXRemoteBase = async ({
     const preprocessedSource = await preprocess(source)
     const resolvedSource = resolveFeatureFlags(preprocessedSource)
 
+    // Strip frontmatter manually to avoid getData error in next-mdx-remote v5.0.0
+    // Even with parseFrontmatter: false, compileMDX may still try to access getData
+    // if frontmatter is present in the source
+    const { content: sourceWithoutFrontmatter } = matter(resolvedSource)
+
     const mergedComponents = {
       ...components,
       ...customComponents,
     }
 
-    // Use compileMDX which processes on the server and returns a component
-    // Note: There's a known issue with next-mdx-remote v5.0.0 and React 19 where the library
-    // tries to access `this.getData()` which doesn't exist in React Server Components context.
-    // This is a compatibility issue that requires next-mdx-remote to be updated for React 19 support.
-    // Workaround: Ensure we're in a proper React Server Component context when calling compileMDX
-    try {
-      const { content } = await compileMDX({
-        source: resolvedSource,
-        components: mergedComponents,
-        options: {
-          mdxOptions: {
-            remarkPlugins: [
-              [remarkMath, { singleDollarTextMath: false }],
-              remarkGfm,
-            ],
-            rehypePlugins: [rehypeKatex],
-            format: 'mdx',
-          },
-        },
-      })
+    // Use compileMDX with parseFrontmatter: false to avoid getData issue
+    // The getData error occurs when parseFrontmatter is true or when accessing frontmatter
+    // By setting parseFrontmatter to false, we avoid the problematic code path
+    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are at the top level
+    const { content } = await compileMDX({
+      source: sourceWithoutFrontmatter,
+      components: mergedComponents,
+      parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [
+          [remarkMath, { singleDollarTextMath: false }],
+          remarkGfm,
+        ],
+        rehypePlugins: [rehypeKatex],
+        format: 'mdx',
+      },
+    })
 
-      // Return the MDX content directly
-      return content
-    } catch (compileError: unknown) {
-      // Enhanced error logging for debugging MDX compilation issues
-      if (process.env.NODE_ENV === 'development') {
-        const errorInfo: Record<string, unknown> = {}
-        
-        if (compileError instanceof Error) {
-          errorInfo.message = compileError.message || 'Unknown error'
-          errorInfo.stack = compileError.stack || 'No stack trace available'
-          errorInfo.name = compileError.name || 'Error'
-        } else if (typeof compileError === 'string') {
-          errorInfo.message = compileError
-        } else if (compileError && typeof compileError === 'object') {
-          errorInfo.error = compileError
-          errorInfo.stringified = String(compileError)
-        } else {
-          errorInfo.error = compileError
-          errorInfo.type = typeof compileError
-        }
-        
-        // Add source information if available
-        if (typeof resolvedSource === 'string') {
-          errorInfo.sourceLength = resolvedSource.length
-          errorInfo.sourcePreview = resolvedSource.substring(0, 200)
-        } else {
-          errorInfo.sourceLength = 'N/A'
-          errorInfo.sourcePreview = 'Source not available'
-        }
-        
-        // Check if this is a getData issue
-        const isGetDataIssue = 
-          compileError instanceof Error && 
-          compileError.message?.includes('getData')
-        
-        if (isGetDataIssue) {
-          // eslint-disable-next-line no-console
-          console.error('MDX compilation error (getData issue):', errorInfo)
-        } else {
-          // eslint-disable-next-line no-console
-          console.error('MDX compilation error:', errorInfo)
-        }
-      }
-      throw compileError
-    }
+    // Return the MDX content directly
+    return content
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console

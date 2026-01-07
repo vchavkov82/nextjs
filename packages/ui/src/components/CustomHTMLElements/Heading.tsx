@@ -25,7 +25,7 @@ interface Props extends HTMLAttributes<HTMLHeadingElement> {
  * (see: /pages/guides/cli/config.tsx)
  */
 const Heading = forwardRef(
-  ({ tag, customAnchor, children, ...props }: React.PropsWithChildren<Props>, forwardedRef) => {
+  ({ tag, customAnchor, parseAnchors, children, ...props }: React.PropsWithChildren<Props>, forwardedRef) => {
     const HeadingTag = `${tag}` as any
     const anchor = customAnchor ? customAnchor : getAnchor(children, props)
     const link = `#${anchor}`
