@@ -58,10 +58,9 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   refs,
   children: _children,
 }) => {
-  // Filter valid React elements without accessing .ref to preserve React 19 compatibility
-  // Extract props early to avoid React 19 warnings about ref access
-  // In React 19, accessing element.props can trigger warnings if the element has a ref
-  // By extracting props once and storing them, we avoid multiple prop accesses
+  // Extract tab information from Panel children
+  // In React 19, we must access props through element.props (not element.ref)
+  // We use a defensive approach to avoid triggering React 19's ref access warnings
   const children = useMemo(() => {
     const childArray: Array<{
       id: string
@@ -69,22 +68,23 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       label?: string
       iconRight?: React.ReactNode
     }> = []
+
     Children.forEach(_children, (child) => {
-      // Use isValidElement to properly check for React elements in React 19
-      if (isValidElement(child)) {
-        const element = child as React.ReactElement<PanelProps>
-        // Extract props once to avoid React 19's ref access detection
-        // Accessing element.props is safe, but accessing it multiple times
-        // can trigger warnings when elements have refs
-        const props = element.props as PanelProps
-        childArray.push({
-          id: props.id,
-          icon: props.icon,
-          label: props.label,
-          iconRight: props.iconRight,
-        })
+      if (!isValidElement(child)) return
+
+      // In React 19, refs are regular props accessible via element.props.ref
+      // We only access the props we need (id, icon, label, iconRight) and explicitly
+      // avoid accessing any ref property. Access props in a single destructuring to
+      // minimize React's internal ref detection warnings.
+      const element = child as React.ReactElement<PanelProps>
+      // Access props object once - React 19 way (not element.ref)
+      const { id, icon, label, iconRight } = element.props || {}
+      
+      if (id) {
+        childArray.push({ id, icon, label, iconRight })
       }
     })
+
     return childArray
   }, [_children])
 

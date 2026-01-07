@@ -1,5 +1,6 @@
 import BlogPostClient from './BlogPostClient'
 import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 import { getAllCMSPostSlugs, getCMSPostBySlug } from 'lib/get-cms-posts'
 import { getAllPostSlugs, getPostdata, getSortedPosts } from 'lib/posts'
 import { CMS_SITE_ORIGIN, SITE_ORIGIN } from '@/lib/constants'
@@ -70,9 +71,10 @@ type Params = {
 }
 
 export async function generateStaticParams() {
-  const staticPaths = getAllPostSlugs('_blog')
-  const cmsPaths = await getAllCMSPostSlugs()
-  return [...staticPaths, ...cmsPaths].map((p) => ({ slug: p.params.slug }))
+  // Get the same 2 posts that are shown on the blog listing page (sorted by date)
+  const sortedPosts = getSortedPosts({ directory: '_blog', limit: 2 })
+  // Don't include CMS posts
+  return sortedPosts.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -240,7 +242,13 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     }
 
     return <BlogPostClient {...props} />
-  } catch {}
+  } catch (error) {
+    // Static markdown post not found, try CMS post
+    // Only log if it's not a "file not found" type error
+    if (error instanceof Error && !error.message.includes('ENOENT')) {
+      console.warn(`[BlogPostPage] Error loading static post for slug "${slug}":`, error)
+    }
+  }
 
   // Try to fetch CMS post using our new unified API first
   let cmsPost = await getCMSPostFromAPI(slug, 'full', isDraft)
@@ -258,7 +266,9 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         publishedPost = await getCMSPostBySlug(slug, false)
       }
 
-      if (!publishedPost) return null
+      if (!publishedPost) {
+        notFound()
+      }
 
       const mdxSource = await mdxSerialize(publishedPost.content || '', {
         tocDepth: publishedPost.toc_depth || 3,
@@ -287,7 +297,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       }
       return <BlogPostClient {...props} />
     }
-    return null
+    notFound()
   }
 
   const tocDepth = cmsPost.toc_depth || 3

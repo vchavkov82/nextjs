@@ -12,6 +12,7 @@ const site_title = `${APP_NAME} | The Open Source Firebase Alternative`
 export const metadata: Metadata = {
   title: site_title,
   description: DEFAULT_META_DESCRIPTION,
+  metadataBase: new URL('https://supabase.com'),
   openGraph: {
     type: 'website',
     url: 'https://supabase.com/',
