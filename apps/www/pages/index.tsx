@@ -9,7 +9,9 @@ const HeroFrameworks = dynamic(() => import('@/components/Hero/HeroFrameworks'))
 const CustomerStories = dynamic(() => import('components/CustomerStories'))
 const BuiltWithSupabase = dynamic(() => import('components/BuiltWithSupabase'))
 const DashboardFeatures = dynamic(() => import('@/components/DashboardFeatures'))
-const TwitterSocialSection = dynamic(() => import('@/components/TwitterSocialSection'))
+const TwitterSocialSectionWithTelemetry = dynamic(
+  () => import('@/components/TwitterSocialSection/WithTelemetry')
+)
 const CTABanner = dynamic(() => import('components/CTABanner/index'))
 
 const Index = () => {
@@ -24,7 +26,7 @@ const Index = () => {
       <CustomerStories />
       <BuiltWithSupabase />
       <DashboardFeatures {...content.dashboardFeatures} />
-      <TwitterSocialSection {...content.twitterSocialSection} />
+      <TwitterSocialSectionWithTelemetry />
       <CTABanner className="border-none" />
     </Layout>
   )

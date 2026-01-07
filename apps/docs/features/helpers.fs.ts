@@ -37,9 +37,18 @@ export const cache_fullProcess_withDevCacheBust = <Args extends unknown[], Outpu
   return async (...args: Args) => {
     const cacheKey = JSON.stringify(args)
     if (!_cache.has(cacheKey)) {
-      _cache.set(cacheKey, await fn(...args))
+      const result = await fn(...args)
+      _cache.set(cacheKey, result)
+      return result
     }
-    return _cache.get(cacheKey)!
+    const cached = _cache.get(cacheKey)
+    if (cached === undefined) {
+      // This shouldn't happen, but handle it defensively
+      const result = await fn(...args)
+      _cache.set(cacheKey, result)
+      return result
+    }
+    return cached
   }
 }
 

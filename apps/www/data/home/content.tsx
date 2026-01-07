@@ -1,5 +1,4 @@
 import VideoWithHighlights from 'components/VideoWithHighlights'
-import { useSendTelemetryEvent } from 'lib/telemetry'
 import Link from 'next/link'
 import { Button } from 'ui'
 import ProductModules from '../ProductModules'
@@ -8,9 +7,7 @@ import MainProducts from 'data/MainProducts'
 import { topTweets } from 'shared-data/tweets'
 import { IconDiscord } from 'ui'
 
-export default () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
+export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
   return {
     heroSection: {
       heading: (
@@ -178,10 +175,13 @@ export default () => {
             href={'https://discord.supabase.com/'}
             target="_blank"
             tabIndex={-1}
-            onClick={() =>
-              sendTelemetryEvent({
-                action: 'homepage_discord_button_clicked',
-              })
+            onClick={
+              sendTelemetryEvent
+                ? () =>
+                    sendTelemetryEvent({
+                      action: 'homepage_discord_button_clicked',
+                    })
+                : undefined
             }
           >
             Join us on Discord
