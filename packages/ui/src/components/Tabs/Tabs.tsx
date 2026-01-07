@@ -111,7 +111,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     }
   }
 
-  const listClasses = [variantStyles.list]
+  const listClasses = [variantStyles?.list].filter(Boolean)
   if (scrollable) listClasses.push(__styles.scrollable)
   if (wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
@@ -147,17 +147,17 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       className={[__styles.base, baseClassNames].join(' ')}
       ref={refs?.base ? baseRefCallback : undefined}
     >
-      <TabsPrimitive.List className={listClasses.filter(Boolean).join(' ')} ref={refs?.list ? listRefCallback : undefined}>
+      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : undefined}>
         {addOnBefore}
         {Array.isArray(children) && children.map((tab) => {
           const isActive = activeTab === tab.id
-          const triggerClasses = [variantStyles.base, __styles.size[size]]
+          const triggerClasses = [variantStyles?.base, __styles.size?.[size]].filter(Boolean)
           if (isActive) {
-            triggerClasses.push(variantStyles.active)
+            if (variantStyles?.active) triggerClasses.push(variantStyles.active)
           } else {
-            triggerClasses.push(variantStyles.inactive)
+            if (variantStyles?.inactive) triggerClasses.push(variantStyles.inactive)
           }
-          if (block) {
+          if (block && __styles.block) {
             triggerClasses.push(__styles.block)
           }
 

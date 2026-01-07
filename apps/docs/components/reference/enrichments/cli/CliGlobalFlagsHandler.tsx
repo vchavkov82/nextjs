@@ -14,7 +14,7 @@ const CliGlobalFlagsHandler = () => {
     : undefined
 
   // Transform the flags based on feature flags
-  const processedFlags = spec.flags.map((flag: any) => {
+  const processedFlags = (spec.flags || []).map((flag: any) => {
     if (flag.id === 'profile' && !cliDisableCustomProfiles) {
       return {
         id: 'profile',

@@ -46,7 +46,7 @@ export async function ReferenceNavigation({
       </div>
       <ul className="flex flex-col gap-2">
         {displayedNavSections?.map((section) => (
-          <li key={section.id} className={section.type !== 'category' ? topLvlRefNavItemStyles : undefined}>
+          <li key={section.id} className={cn(section.type !== 'category' && topLvlRefNavItemStyles)}>
             {section.type === 'category' ? (
               <RefCategory basePath={basePath} section={section} />
             ) : (
