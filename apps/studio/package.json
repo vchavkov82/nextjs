@@ -201,7 +201,7 @@
     "node-mocks-http": "^1.17.2",
     "cross-env": "^7.0.3",
     "postcss": "^8.5.3",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "raw-loader": "^4.0.2",
     "require-in-the-middle": "^8.0.0",
     "tailwindcss": "catalog:",

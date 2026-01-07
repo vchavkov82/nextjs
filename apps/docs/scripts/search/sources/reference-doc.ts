@@ -1,4 +1,4 @@
-import { createHash } from 'crypto'
+import crypto from 'crypto'
 import { readFile } from 'fs/promises'
 import yaml from 'js-yaml'
 import type { OpenAPIV3 } from 'openapi-types'
@@ -86,7 +86,7 @@ export abstract class ReferenceSource<SpecSection> extends BaseSource {
   }
 
   async process() {
-    const checksum = createHash('sha256')
+    const checksum = crypto.createHash('sha256')
       .update(JSON.stringify(this.refSection) + JSON.stringify(this.specSection))
       .digest('base64')
 

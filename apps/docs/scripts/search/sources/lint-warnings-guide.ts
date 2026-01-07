@@ -1,6 +1,6 @@
 import { Octokit } from '@octokit/core'
 import { BaseLoader, BaseSource } from './base.js'
-import { createHash } from 'node:crypto'
+import crypto from 'node:crypto'
 
 const getBasename = (path: string) => path.split('/').at(-1)!.replace(/\.md$/, '')
 
@@ -93,7 +93,7 @@ export class LintWarningsGuideSource extends BaseSource {
   }
 
   async process() {
-    this.checksum = createHash('sha256').update(this.lint.content).digest('base64')
+    this.checksum = crypto.createHash('sha256').update(this.lint.content).digest('base64')
 
     this.meta = {
       title: `Database Advisor: Lint ${this.lint.path}`,

@@ -231,6 +231,12 @@ const nextConfig = {
         loaders: ['raw-loader'],
         as: '*.js',
       },
+      // Handle .toml files with raw-loader
+      // This prevents "Unknown module type" errors when Turbopack encounters .toml files
+      '*.toml': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
       // Handle .include files with raw-loader (for source file imports)
       // This prevents "Unknown module type" errors when Turbopack encounters .include files
       '*.include': {

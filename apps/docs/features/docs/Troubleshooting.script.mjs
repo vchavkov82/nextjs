@@ -12,7 +12,7 @@ import '../../scripts/utils/dotenv.js'
 import { createAppAuth } from '@octokit/auth-app'
 import { Octokit } from '@octokit/core'
 import { createClient } from '@supabase/supabase-js'
-import { createHash } from 'crypto'
+import crypto from 'crypto'
 import matter from 'gray-matter'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { gfmFromMarkdown, gfmToMarkdown } from 'mdast-util-gfm'
@@ -177,7 +177,7 @@ function calculateChecksum(content) {
   const newFrontmatter = stringify(data)
   const normalized = `---\n${newFrontmatter}\n---\n${body}`
 
-  return createHash('sha256').update(normalized).digest('base64')
+  return crypto.createHash('sha256').update(normalized).digest('base64')
 }
 
 /**

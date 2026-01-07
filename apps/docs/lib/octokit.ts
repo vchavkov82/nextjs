@@ -2,7 +2,7 @@ import 'server-only'
 
 import { createAppAuth } from '@octokit/auth-app'
 import { Octokit } from '@octokit/core'
-import { createPrivateKey } from 'node:crypto'
+import crypto from 'node:crypto'
 
 import { fetchRevalidatePerDay } from '~/features/helpers.fetch'
 
@@ -16,7 +16,7 @@ export function octokit() {
     }
 
     // https://github.com/gr2m/universal-github-app-jwt?tab=readme-ov-file#converting-pkcs1-to-pkcs8
-    const privateKeyPkcs8 = createPrivateKey(privateKey).export({
+    const privateKeyPkcs8 = crypto.createPrivateKey(privateKey).export({
       type: 'pkcs8',
       format: 'pem',
     })

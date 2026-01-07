@@ -1,12 +1,23 @@
 import Link from 'next/link'
+import { parse as parseToml } from 'smol-toml'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'ui'
 import _authErrorCodes from '~/content/errorCodes/authErrorCodes.toml'
 import _realtimeErrorCodes from '~/content/errorCodes/realtimeErrorCodes.toml'
 import { type ErrorCodeDefinition } from '~/resources/error/errorTypes'
 
+const authErrorCodes =
+  typeof _authErrorCodes === 'string'
+    ? (parseToml(_authErrorCodes) as Record<string, ErrorCodeDefinition>)
+    : (_authErrorCodes as Record<string, ErrorCodeDefinition>)
+
+const realtimeErrorCodes =
+  typeof _realtimeErrorCodes === 'string'
+    ? (parseToml(_realtimeErrorCodes) as Record<string, ErrorCodeDefinition>)
+    : (_realtimeErrorCodes as Record<string, ErrorCodeDefinition>)
+
 const errorCodesByService = {
-  auth: _authErrorCodes as Record<string, ErrorCodeDefinition>,
-  realtime: _realtimeErrorCodes as Record<string, ErrorCodeDefinition>,
+  auth: authErrorCodes,
+  realtime: realtimeErrorCodes,
 }
 
 interface ErrorCodesProps {

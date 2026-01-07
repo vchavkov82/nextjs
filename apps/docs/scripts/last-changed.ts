@@ -15,7 +15,7 @@ import _configureDotEnv from './utils/dotenv.js'
 
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 import matter from 'gray-matter'
-import { createHash } from 'node:crypto'
+import crypto from 'node:crypto'
 import { readdirSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import path, { join } from 'node:path'
@@ -196,7 +196,7 @@ function processMdx(rawContent: string): Array<SectionWithChecksum> {
       .trim()
       .replace(/[\n\t]/g, ' ')
       .replace(/\s+/g, ' ')
-    const checksum = createHash('sha256').update(normalizedSection).digest('base64')
+    const checksum = crypto.createHash('sha256').update(normalizedSection).digest('base64')
 
     return {
       heading,
