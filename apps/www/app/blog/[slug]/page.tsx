@@ -9,6 +9,8 @@ import { processCMSContent } from '@/lib/cms/processCMSContent'
 import type { Blog, BlogData, PostReturnType } from 'types/post'
 import type { Metadata } from 'next'
 
+// Allow dynamic params for blog posts not in generateStaticParams
+export const dynamicParams = true
 export const revalidate = 30
 
 // Helper function to fetch CMS post using our unified API
@@ -71,9 +73,9 @@ type Params = {
 }
 
 export async function generateStaticParams() {
-  // Get the same 2 posts that are shown on the blog listing page (sorted by date)
+  // Generate static params for the 2 most recent posts for better performance
+  // Other posts will be rendered on-demand with dynamicParams = true
   const sortedPosts = getSortedPosts({ directory: '_blog', limit: 2 })
-  // Don't include CMS posts
   return sortedPosts.map((post) => ({ slug: post.slug }))
 }
 
@@ -186,8 +188,12 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
   const { slug } = await params
 
   if (!slug) {
-    throw new Error('Missing slug for app/blog/[slug]/page.tsx')
+    console.error('[BlogPostPage] Missing slug parameter')
+    notFound()
+    return
   }
+
+  console.log(`[BlogPostPage] Processing slug: ${slug}`)
 
   const { isEnabled: isDraft } = await draftMode()
 
@@ -244,29 +250,36 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     return <BlogPostClient {...props} />
   } catch (error) {
     // Static markdown post not found, try CMS post
-    // Only log if it's not a "file not found" type error
-    if (error instanceof Error && !error.message.includes('ENOENT')) {
+    // Log the error for debugging
+    if (error instanceof Error) {
+      console.warn(`[BlogPostPage] Error loading static post for slug "${slug}":`, error.message)
+    } else {
       console.warn(`[BlogPostPage] Error loading static post for slug "${slug}":`, error)
     }
   }
 
   // Try to fetch CMS post using our new unified API first
+  console.log(`[BlogPostPage] Trying to fetch CMS post for slug: ${slug}`)
   let cmsPost = await getCMSPostFromAPI(slug, 'full', isDraft)
 
   // Fallback to the original method if the API doesn't return the post
   if (!cmsPost) {
+    console.log(`[BlogPostPage] CMS API didn't return post, trying getCMSPostBySlug`)
     cmsPost = await getCMSPostBySlug(slug, isDraft)
   }
 
   if (!cmsPost) {
+    console.log(`[BlogPostPage] No CMS post found for slug: ${slug}`)
     if (isDraft) {
       // Try to fetch published version for draft mode
+      console.log(`[BlogPostPage] In draft mode, trying published version`)
       let publishedPost = await getCMSPostFromAPI(slug, 'full', false)
       if (!publishedPost) {
         publishedPost = await getCMSPostBySlug(slug, false)
       }
 
       if (!publishedPost) {
+        console.error(`[BlogPostPage] No published post found for slug: ${slug}, calling notFound()`)
         notFound()
       }
 
@@ -297,6 +310,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       }
       return <BlogPostClient {...props} />
     }
+    console.error(`[BlogPostPage] No post found (static or CMS) for slug: ${slug}, calling notFound()`)
     notFound()
   }
 

@@ -28,13 +28,13 @@ const ProductHeader = (props: Types) => {
               <div className="mb-4 flex items-center gap-3">
                 {props.icon && <ProductIcon icon={props.icon} />}
                 {props.title && (
-                  <span className="text-foreground" key={`product-name-${props.title}`}>
+                  <span className="text-foreground">
                     {props.title}
                   </span>
                 )}
               </div>
             ) : null}
-            <h1 className="h1" key={`h1`}>
+            <h1 className="h1">
               {props.h1}
             </h1>
           </div>

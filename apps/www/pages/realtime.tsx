@@ -23,7 +23,7 @@ import { PRODUCT_NAMES } from 'shared-data/products'
 
 const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
 
-const Cursor = ({ className = '', color = 'none' }) => {
+const Cursor = ({ className = '', color = 'none' }: { className?: string; color?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ function RealtimePage() {
         <ProductHeader
           icon={MainProducts['realtime']?.icon}
           title={MainProducts['realtime']?.name}
-          h1={[<span key={'authentication-h1'}>Build modern web and mobile applications</span>]}
+          h1={[<span key={'realtime-h1'}>Build modern web and mobile applications</span>]}
           subheader={['Sync client state globally over WebSockets in Realtime']}
           image={[
             <div
@@ -237,11 +237,9 @@ function RealtimePage() {
             content={ApiExamples}
             size="large"
             text={[
-              <p key={0}>
-                <p className="text-base lg:text-lg">
-                  APIs that you can understand. With powerful libraries that work on client and
-                  server-side applications.
-                </p>
+              <p key={0} className="text-base lg:text-lg">
+                APIs that you can understand. With powerful libraries that work on client and
+                server-side applications.
               </p>,
             ]}
             // [TODO] Point to the correct docs URL

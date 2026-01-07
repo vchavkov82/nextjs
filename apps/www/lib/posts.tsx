@@ -67,7 +67,9 @@ export const getSortedPosts = ({
       }
 
       const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' }
-      const formattedDate = new Date(data.date).toLocaleDateString('en-IN', options)
+      // Handle date parsing - data.date might be a string or Date object
+      const dateValue = data.date ? new Date(data.date) : new Date()
+      const formattedDate = isNaN(dateValue.getTime()) ? new Date().toLocaleDateString('en-IN', options) : dateValue.toLocaleDateString('en-IN', options)
 
       const readingTime = generateReadingTime(content)
 
@@ -92,9 +94,14 @@ export const getSortedPosts = ({
 
   let sortedPosts = [...allPosts]
 
-  sortedPosts = sortedPosts.sort(
-    (a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  sortedPosts = sortedPosts.sort((a: any, b: any) => {
+    const dateA = a.date ? new Date(a.date).getTime() : 0
+    const dateB = b.date ? new Date(b.date).getTime() : 0
+    // Handle invalid dates
+    const validDateA = isNaN(dateA) ? 0 : dateA
+    const validDateB = isNaN(dateB) ? 0 : dateB
+    return validDateB - validDateA
+  })
 
   if (categories) {
     sortedPosts = sortedPosts.filter((post: any) => {
@@ -166,6 +173,10 @@ export const getPostdata = async (slug: string, directory: string) => {
    * even if the mdx file is date namednamed like '2022-01-01-blog-post.mdx'
    */
   const found = folderfiles.filter((x) => x.includes(slug))[0]
+
+  if (!found) {
+    throw new Error(`Post not found: ${slug} in directory ${directory}`)
+  }
 
   const fullPath = path.join(postDirectory, found)
   const postContent = fs.readFileSync(fullPath, 'utf8')
