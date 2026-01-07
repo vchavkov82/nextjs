@@ -7,9 +7,13 @@ import remarkGfm from 'remark-gfm'
 import { parse as parseToml } from 'smol-toml'
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
+import { createRequire } from 'module'
 import webpack from 'next/dist/compiled/webpack/webpack-lib.js'
 import remotePatterns from './lib/remotePatterns.js'
 
+const require = createRequire(import.meta.url)
+// Use module ID instead of absolute path to avoid server-relative imports
+const wasmPath = 'libpg-query/wasm'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
@@ -45,7 +49,7 @@ const nextConfig = {
   // Webpack config - Required for production builds (webpack is still the default for production)
   // Turbopack config below handles the same file types for development (with --turbopack flag)
   // In Next.js 16+, you can use `next build --turbopack` to use Turbopack for production builds
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.include$/,
       type: 'asset/source',
@@ -57,6 +61,35 @@ const nextConfig = {
         parse: parseToml,
       },
     })
+
+    // Alias libpg-query to its WASM version for both client and server bundles
+    // The native version contains .node files which are missing or cannot be bundled
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'libpg-query$': wasmPath,
+    }
+
+    // On the server, we can't load the native libpg-query module.
+    // Since SqlToRest is dynamically imported with ssr: false, 
+    // we can safely alias it to an empty module on the server.
+    if (isServer) {
+      config.resolve.alias['libpg-query'] = emptyModulePath
+      config.resolve.alias['libpg-query$'] = emptyModulePath
+      config.resolve.alias['@supabase/sql-to-rest'] = emptyModulePath
+    }
+
+    // Force replacement of libpg-query native module with WASM version
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(/libpg-query([\\/])index\.js$/, (resource) => {
+        resource.request = wasmPath
+      })
+    )
+
+    // Replace any .node file requests with an empty module to prevent bundling errors
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(/\.node$/, emptyModulePath)
+    )
+
     // Exclude build scripts from bundling (they use Node.js-only modules like 'fs')
     // These are only meant to run at build time via Makefile, not in the browser
     // Replace .cts files with empty modules to prevent webpack from trying to bundle them
@@ -188,7 +221,17 @@ const nextConfig = {
     '/guides/**/*': ['./content/guides/**/*', './content/troubleshooting/**/*', './examples/**/*'],
     '/reference/**/*': ['./features/docs/generated/**/*', './docs/ref/**/*'],
   },
-  serverExternalPackages: ['libpg-query', 'twoslash'],
+  serverExternalPackages: [
+    'twoslash',
+    '@octokit/auth-app',
+    '@octokit/core',
+    '@octokit/graphql',
+    '@octokit/request',
+    '@octokit/request-error',
+    'universal-github-app-jwt',
+    'libpg-query',
+    '@supabase/sql-to-rest',
+  ],
   experimental: {
     // Optimize for high-core systems
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-collapsible'],
@@ -200,6 +243,7 @@ const nextConfig = {
   // Note: next-plugin-yaml handles YAML files for webpack, but Turbopack needs explicit rules
   turbopack: {
     resolveAlias: {
+      'libpg-query': wasmPath,
       'spec/sections/generateMgmtApiSections.cts': emptyModulePath,
       'spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
       './spec/sections/generateMgmtApiSections.cts': emptyModulePath,

@@ -89,8 +89,8 @@ importers:
         specifier: ^9.0.0
         version: 9.37.0(jiti@2.5.1)(supports-color@8.1.1)
       prettier:
-        specifier: 3.2.4
-        version: 3.2.4
+        specifier: 3.2.5
+        version: 3.2.5
       prettier-plugin-sql-cst:
         specifier: ^0.11.0
         version: 0.11.1
@@ -389,6 +389,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@code-hike/mdx':
+        specifier: ^0.9.0
+        version: 0.9.0(encoding@0.1.13)(react@18.3.1)
       '@har-sdk/openapi-sampler':
         specifier: ^2.2.0
         version: 2.2.0
@@ -1265,8 +1268,8 @@ importers:
         specifier: ^8.5.3
         version: 8.5.3
       prettier:
-        specifier: 3.2.4
-        version: 3.2.4
+        specifier: 3.2.5
+        version: 3.2.5
       raw-loader:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.94.0)
@@ -2005,8 +2008,8 @@ importers:
         specifier: ^7.4.3
         version: 7.5.2(encoding@0.1.13)(typescript@5.9.2)
       prettier:
-        specifier: 3.2.4
-        version: 3.2.4
+        specifier: 3.2.5
+        version: 3.2.5
       typescript:
         specifier: 'catalog:'
         version: 5.9.2
@@ -2017,8 +2020,8 @@ importers:
         specifier: ^1.2.7
         version: 1.2.8
       prettier:
-        specifier: 3.2.4
-        version: 3.2.4
+        specifier: 3.2.5
+        version: 3.2.5
       svgson:
         specifier: ^5.2.1
         version: 5.3.1
@@ -16494,18 +16497,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.2.4:
-    resolution: {integrity: sha512-FWu1oLHKCrtpO1ypU6J0SbK2d9Ckwysq6bHj/uaCP26DxrPpppCLQRGVuqAxSTvhF00AcvDRyYrLNW7ocBhFFQ==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
-    engines: {node: '>=14'}
-    hasBin: true
-
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -34177,7 +34170,7 @@ snapshots:
       js-yaml: 4.1.1
       lodash: 4.17.21
       minimist: 1.2.8
-      prettier: 3.5.3
+      prettier: 3.2.5
       tinyglobby: 0.2.15
 
   json-schema-traverse@0.4.1: {}
@@ -37852,11 +37845,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.2.4: {}
-
   prettier@3.2.5: {}
-
-  prettier@3.5.3: {}
 
   prettier@3.7.3: {}
 

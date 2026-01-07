@@ -1,10 +1,10 @@
 import { stripIndent } from 'common-tags'
-import { someFilter } from '@supabase/sql-to-rest'
+import type { someFilter } from '@supabase/sql-to-rest'
 import { ResultBundle } from './util'
 
 export type Faq = {
   id: string
-  condition: (result: ResultBundle) => boolean
+  condition: (result: ResultBundle, tools: { someFilter: typeof someFilter }) => boolean
   question: string
   answer: string
 }
@@ -193,7 +193,7 @@ export const faqs: Faq[] = [
   },
   {
     id: 'why-percent-sign-conversion',
-    condition: ({ type, statement }) =>
+    condition: ({ type, statement }, { someFilter }) =>
       // Show this if this is an HTTP render, there is a like/ilike filter, and at least one filter contains '%' character
       type === 'http' &&
       !!statement.filter &&

@@ -1,15 +1,22 @@
 import 'server-only'
+import type { Octokit } from '@octokit/core'
 
-import { createAppAuth } from '@octokit/auth-app'
-import { Octokit } from '@octokit/core'
-import crypto from 'node:crypto'
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
 
 import { fetchRevalidatePerDay } from '~/features/helpers.fetch'
 
 let octokitInstance: Octokit
 
-export function octokit() {
+export function octokit(): Octokit {
   if (!octokitInstance) {
+    // Use eval('require') to hide these from Turbopack's static analysis
+    // as they trigger warnings about node:crypto re-exports in their dependencies.
+    const { createAppAuth } = eval('require')('@octokit/auth-app')
+    const { Octokit: OctokitClass } = eval('require')('@octokit/core')
+    const crypto = eval('require')('node:crypto')
+
     const privateKey = process.env.DOCS_GITHUB_APP_PRIVATE_KEY
     if (!privateKey) {
       throw new Error('DOCS_GITHUB_APP_PRIVATE_KEY environment variable is required')
@@ -21,7 +28,7 @@ export function octokit() {
       format: 'pem',
     })
 
-    octokitInstance = new Octokit({
+    octokitInstance = new OctokitClass({
       authStrategy: createAppAuth,
       auth: {
         appId: process.env.DOCS_GITHUB_APP_ID,

@@ -1,7 +1,7 @@
 'use client'
 
 import Editor, { useMonaco } from '@monaco-editor/react'
-import {
+import type {
   HttpRequest,
   ParsingError,
   RenderError,
@@ -9,11 +9,6 @@ import {
   SupabaseJsQuery,
   UnimplementedError,
   UnsupportedError,
-  formatCurl,
-  formatHttp,
-  processSql,
-  renderHttp,
-  renderSupabaseJs,
 } from '@supabase/sql-to-rest'
 import { ChevronUp, GitPullRequest } from 'lucide-react'
 import type { editor } from 'monaco-editor'
@@ -98,20 +93,6 @@ export default function SqlToRest({
     [baseUrlObject]
   )
 
-  const rawHttp = useMemo(() => {
-    if (!httpRequest) {
-      return
-    }
-    return formatHttp(baseUrl, httpRequest)
-  }, [httpRequest, baseUrl])
-
-  const curlCommand = useMemo(() => {
-    if (!httpRequest) {
-      return
-    }
-    return formatCurl(baseUrl, httpRequest)
-  }, [httpRequest, baseUrl])
-
   const jsCommand = useMemo(() => {
     if (!jsQuery) {
       return
@@ -121,7 +102,7 @@ export default function SqlToRest({
   }, [jsQuery])
 
   const relevantFaqs = useMemo(() => {
-    if (!statement) {
+    if (!statement || !tools) {
       return []
     }
 
@@ -139,7 +120,7 @@ export default function SqlToRest({
           ...httpRequest,
         }
 
-        return faqs.filter((faq) => faq.condition(result))
+        return faqs.filter((faq) => faq.condition(result, tools))
       }
       case 'js': {
         if (!jsQuery) {
@@ -153,15 +134,15 @@ export default function SqlToRest({
           ...jsQuery,
         }
 
-        return faqs.filter((faq) => faq.condition(result))
+        return faqs.filter((faq) => faq.condition(result, tools))
       }
       default:
         return []
     }
-  }, [currentLanguage, statement, httpRequest, jsQuery])
+  }, [currentLanguage, statement, httpRequest, jsQuery, tools])
 
   const relevantAssumptions = useMemo(() => {
-    if (!statement) {
+    if (!statement || !tools) {
       return []
     }
 
@@ -179,7 +160,9 @@ export default function SqlToRest({
           ...httpRequest,
         }
 
-        return assumptions.filter((a) => a.condition(result)).flatMap((a) => a.assumptions(result))
+        return assumptions
+          .filter((a) => a.condition(result))
+          .flatMap((a) => a.assumptions(result, tools))
       }
       case 'js': {
         if (!jsQuery) {
@@ -193,56 +176,76 @@ export default function SqlToRest({
           ...jsQuery,
         }
 
-        return assumptions.filter((a) => a.condition(result)).flatMap((a) => a.assumptions(result))
+        return assumptions
+          .filter((a) => a.condition(result))
+          .flatMap((a) => a.assumptions(result, tools))
       }
       default:
         return []
     }
-  }, [currentLanguage, statement, httpRequest, jsQuery])
+  }, [currentLanguage, statement, httpRequest, jsQuery, tools])
 
-  const process = useCallback(async (sql: string) => {
-    setSql(sql)
+  const [formattedHttp, setFormattedHttp] = useState<string>()
+  const [formattedCurl, setFormattedCurl] = useState<string>()
+  const [tools, setTools] = useState<any>()
 
-    try {
-      const statement = await processSql(sql)
-      const httpRequest = await renderHttp(statement)
-      const jsQuery = await renderSupabaseJs(statement)
+  const process = useCallback(
+    async (sql: string) => {
+      setSql(sql)
 
-      setParsingError(undefined)
-      setUnimplementedError(undefined)
-      setUnsupportedError(undefined)
-      setHttpRenderError(undefined)
-      setSupabaseJsRenderError(undefined)
+      try {
+        const tools = await import('@supabase/sql-to-rest')
+        const { processSql, renderHttp, renderSupabaseJs, formatHttp, formatCurl } = tools
+        setTools(tools)
 
-      setStatement(statement)
-      setHttpRequest(httpRequest)
-      setJsQuery(jsQuery)
-    } catch (error) {
-      setParsingError(undefined)
-      setUnimplementedError(undefined)
-      setUnsupportedError(undefined)
-      setHttpRenderError(undefined)
-      setSupabaseJsRenderError(undefined)
+        const statement = await processSql(sql)
+        const httpRequest = await renderHttp(statement)
+        const jsQuery = await renderSupabaseJs(statement)
 
-      if (error instanceof ParsingError) {
-        setParsingError(error)
-      } else if (error instanceof UnimplementedError) {
-        setUnimplementedError(error)
-      } else if (error instanceof UnsupportedError) {
-        setUnsupportedError(error)
-      } else if (error instanceof RenderError) {
-        if (error.renderer === 'http') {
-          setHttpRenderError(error)
-        } else if (error.renderer === 'supabase-js') {
-          setSupabaseJsRenderError(error)
+        setParsingError(undefined)
+        setUnimplementedError(undefined)
+        setUnsupportedError(undefined)
+        setHttpRenderError(undefined)
+        setSupabaseJsRenderError(undefined)
+
+        setStatement(statement)
+        setHttpRequest(httpRequest)
+        setJsQuery(jsQuery)
+
+        setFormattedHttp(formatHttp(baseUrl, httpRequest))
+        setFormattedCurl(formatCurl(baseUrl, httpRequest))
+      } catch (error) {
+        const { ParsingError, UnimplementedError, UnsupportedError, RenderError } = await import(
+          '@supabase/sql-to-rest'
+        )
+
+        setParsingError(undefined)
+        setUnimplementedError(undefined)
+        setUnsupportedError(undefined)
+        setHttpRenderError(undefined)
+        setSupabaseJsRenderError(undefined)
+
+        if (error instanceof ParsingError) {
+          setParsingError(error)
+        } else if (error instanceof UnimplementedError) {
+          setUnimplementedError(error)
+        } else if (error instanceof UnsupportedError) {
+          setUnsupportedError(error)
+        } else if (error instanceof RenderError) {
+          if (error.renderer === 'http') {
+            setHttpRenderError(error)
+          } else if (error.renderer === 'supabase-js') {
+            setSupabaseJsRenderError(error)
+          } else {
+            console.error(error)
+          }
         } else {
           console.error(error)
         }
-      } else {
-        console.error(error)
       }
-    }
-  }, [])
+    },
+    [baseUrl]
+  )
 
   // Process initial value only
   useEffect(() => {
@@ -366,7 +369,7 @@ export default function SqlToRest({
               )}
               renderer={codeBlockRenderer}
             >
-              {curlCommand}
+              {formattedCurl}
             </CodeBlock>
           </Tabs.Panel>
           <Tabs.Panel id="http" label="HTTP" className="flex flex-col gap-4">
@@ -380,7 +383,7 @@ export default function SqlToRest({
               )}
               renderer={codeBlockRenderer}
             >
-              {rawHttp}
+              {formattedHttp}
             </CodeBlock>
           </Tabs.Panel>
           <Tabs.Panel id="js" label="JavaScript" className="flex flex-col gap-4">

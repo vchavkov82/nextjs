@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic.js'
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
 import { Admonition } from '../admonition'
-import { SqlToRestProps } from './sql-to-rest'
+import type { SqlToRestProps } from './sql-to-rest'
 
 function FallbackComponent({ error }: FallbackProps) {
   if (error instanceof Error && error.message === 'WebAssembly is not defined') {

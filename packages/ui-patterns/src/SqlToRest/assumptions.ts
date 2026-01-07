@@ -1,10 +1,13 @@
-import { EmbeddedTarget, flattenTargets } from '@supabase/sql-to-rest'
+import type { EmbeddedTarget, flattenTargets } from '@supabase/sql-to-rest'
 import type { ResultBundle } from './util'
 
 export type Assumption = {
   id: string
   condition: (result: ResultBundle) => boolean
-  assumptions: (result: ResultBundle) => string[]
+  assumptions: (
+    result: ResultBundle,
+    tools: { flattenTargets: typeof flattenTargets }
+  ) => string[]
 }
 
 export const assumptions: Assumption[] = [
@@ -13,7 +16,7 @@ export const assumptions: Assumption[] = [
     condition: ({ statement }) =>
       // Show this if there is at least one resource embedding
       statement.targets.some((target) => target.type === 'embedded-target'),
-    assumptions: ({ statement }) => {
+    assumptions: ({ statement }, { flattenTargets }) => {
       const flattenedTargets = flattenTargets(statement.targets)
 
       const embeddedTargets = flattenedTargets.filter(
