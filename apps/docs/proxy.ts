@@ -6,7 +6,7 @@ import { BASE_PATH } from '~/lib/constants'
 
 const REFERENCE_PATH = `${BASE_PATH ?? ''}/reference`
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = new URL(request.url)
   if (!url.pathname.startsWith(REFERENCE_PATH)) {
     return NextResponse.next()
@@ -58,3 +58,4 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: '/reference/:path*',
 }
+
