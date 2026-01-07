@@ -18,10 +18,8 @@ const nextConfig = {
         : []),
     ]
   },
-  eslint: {
-    // We are already running linting via GH action, this will skip linting during production build on Vercel
-    ignoreDuringBuilds: true,
-  },
+  // Add empty turbopack config to silence webpack config warning when using withContentlayer
+  turbopack: {},
 }
 
 export default withContentlayer(nextConfig)
