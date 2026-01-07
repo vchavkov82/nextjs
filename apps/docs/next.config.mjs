@@ -33,7 +33,9 @@ const nextConfig = {
     // @ts-ignore
     remotePatterns,
   },
-  // Webpack config - MDX with plugins doesn't work well with Turbopack yet
+  // Webpack config - Required for production builds (webpack is still the default for production)
+  // Turbopack config below handles the same file types for development (with --turbopack flag)
+  // In Next.js 16+, you can use `next build --turbopack` to use Turbopack for production builds
   webpack: (config) => {
     config.module.rules.push({
       test: /\.include$/,
