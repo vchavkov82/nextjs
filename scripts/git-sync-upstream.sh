@@ -2,8 +2,13 @@
 
 # Script to sync upstream/master to origin/master by rebasing
 # This keeps origin/master as a clean copy of upstream/master
+# 
+# Set NON_INTERACTIVE=1 to skip all prompts and use defaults
 
 set -e
+
+# Check for non-interactive mode
+NON_INTERACTIVE=${NON_INTERACTIVE:-0}
 
 # Colors for output
 RED='\033[0;31m'
@@ -49,14 +54,20 @@ print_info "Current branch: $CURRENT_BRANCH"
 # Check if there are uncommitted changes
 if ! git diff-index --quiet HEAD --; then
     print_warn "You have uncommitted changes. Please commit or stash them before syncing."
-    read -p "Do you want to stash changes? (y/N): " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
+    if [ "$NON_INTERACTIVE" = "1" ]; then
+        print_info "Non-interactive mode: auto-stashing changes..."
         git stash push -m "Stashed before syncing upstream $(date +%Y-%m-%d)"
         STASHED=true
     else
-        print_error "Aborting. Please commit or stash your changes first."
-        exit 1
+        read -p "Do you want to stash changes? (y/N): " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            git stash push -m "Stashed before syncing upstream $(date +%Y-%m-%d)"
+            STASHED=true
+        else
+            print_error "Aborting. Please commit or stash your changes first."
+            exit 1
+        fi
     fi
 fi
 
@@ -89,12 +100,16 @@ else
     print_info "Upstream/master is at: $(git log -1 --oneline upstream/master)"
     print_info "Current master is at: $(git log -1 --oneline HEAD)"
     
-    # Ask for confirmation
-    read -p "Do you want to rebase master onto upstream/master? (y/N): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        print_warn "Aborted by user"
-        exit 0
+    # Ask for confirmation (skip in non-interactive mode)
+    if [ "$NON_INTERACTIVE" = "1" ]; then
+        print_info "Non-interactive mode: proceeding with rebase..."
+    else
+        read -p "Do you want to rebase master onto upstream/master? (y/N): " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            print_warn "Aborted by user"
+            exit 0
+        fi
     fi
     
     # Rebase master onto upstream/master
@@ -110,9 +125,8 @@ fi
 
 # Push to origin/master with force-with-lease for safety
 print_info "Pushing to origin/master..."
-read -p "Do you want to push to origin/master? (y/N): " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+if [ "$NON_INTERACTIVE" = "1" ]; then
+    print_info "Non-interactive mode: proceeding with push..."
     if git push --force-with-lease origin master; then
         print_info "Successfully pushed to origin/master!"
     else
@@ -121,7 +135,19 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
         exit 1
     fi
 else
-    print_warn "Skipped pushing to origin/master"
+    read -p "Do you want to push to origin/master? (y/N): " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        if git push --force-with-lease origin master; then
+            print_info "Successfully pushed to origin/master!"
+        else
+            print_error "Push failed. This might be because someone else pushed changes."
+            print_info "If you're sure you want to overwrite, you can use: git push --force origin master"
+            exit 1
+        fi
+    else
+        print_warn "Skipped pushing to origin/master"
+    fi
 fi
 
 # Restore stashed changes if any
