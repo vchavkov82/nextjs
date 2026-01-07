@@ -1,5 +1,3 @@
-'use client'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AlertCircle } from 'lucide-react'
 import { FC, memo, useEffect, useState } from 'react'
@@ -37,7 +35,7 @@ import {
 import {
   SupaSquadApplication,
   supaSquadApplicationSchema,
-} from '@/data/open-source/contributing/supasquad.utils'
+} from '~/data/open-source/contributing/supasquad.utils'
 import { CountrySelector } from '../Supasquad/CountrySelector'
 
 interface FormItem_Shadcn_ {
@@ -306,7 +304,7 @@ const FormContent = memo(function FormContent({
                   </FormLabel_Shadcn_>
                   <FormDescription_Shadcn_ className="text-foreground-lighter">
                     <p>
-                      Any relevant links to show your current engagement with the BA
+                      Any relevant links to show your current engagement with the Supabase
                       community.
                     </p>
                     <p>
@@ -537,6 +535,21 @@ const FormContent = memo(function FormContent({
                 )}
               />
 
+              <FormField_Shadcn_
+                control={form.control}
+                name="twitter"
+                render={({ field }) => (
+                  <FormItem_Shadcn_>
+                    <FormLabel_Shadcn_ className="text-foreground">Twitter</FormLabel_Shadcn_>
+                    <FormControl_Shadcn_>
+                      <div className="relative mt-1">
+                        <Input_Shadcn_ type="text" placeholder="@yourhandle" {...field} />
+                      </div>
+                    </FormControl_Shadcn_>
+                    <FormMessage_Shadcn_ />
+                  </FormItem_Shadcn_>
+                )}
+              />
             </div>
           </div>
 
@@ -611,6 +624,7 @@ const ApplyToSupaSquadForm: FC<Props> = ({
       monthly_commitment: '',
       languages_spoken: [],
       github: '',
+      twitter: '',
       discord: '',
     },
     mode: 'onBlur',
@@ -693,7 +707,7 @@ const ApplyToSupaSquadForm: FC<Props> = ({
       </div>
 
       {/* Confirmation AlertDialog Overlay */}
-      <AlertDialog open={showConfirmation} onOpenChange={() => { }}>
+      <AlertDialog open={showConfirmation} onOpenChange={() => {}}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Application submitted</AlertDialogTitle>
