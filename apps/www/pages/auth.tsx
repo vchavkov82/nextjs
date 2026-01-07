@@ -75,6 +75,7 @@ function AuthPage() {
           ]}
           image={[
             <Image
+              key="auth-header-image"
               src={{
                 light: `${basePath}/images/product/auth/header--light.png`,
                 dark: `${basePath}/images/product/auth/header--dark.png`,

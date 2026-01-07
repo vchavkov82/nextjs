@@ -41,9 +41,9 @@ const CustomerQuotesSection = (props: Props) => {
 
   const Card = ({ customer, index }: Card) => {
     const { resolvedTheme } = useTheme()
-    const logo = `/images/customers/logos/${!resolvedTheme?.includes('dark') ? '' : 'light/'}${
-      customer.customer
-    }.png`
+    // Default to light mode during SSR to avoid hydration mismatch
+    const isDark = resolvedTheme?.includes('dark') ?? false
+    const logo = `/images/customers/logos/${isDark ? 'light/' : ''}${customer.customer}.png`
 
     const initial = INITIAL_BOTTOM
     const animate = getAnimation({ delay: index * 0.1 })

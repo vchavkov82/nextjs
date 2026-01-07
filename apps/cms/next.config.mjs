@@ -44,10 +44,6 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
-  eslint: {
-    // We are already running linting via GH action, this will skip linting during production build on Vercel
-    ignoreDuringBuilds: true,
-  },
   // Configure Sharp as an external package for server-side rendering
   serverExternalPackages: ['sharp'],
   onDemandEntries: {

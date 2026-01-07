@@ -1,3 +1,4 @@
+import { Fragment, type ReactNode } from 'react'
 import Link from 'next/link'
 import { Button } from 'ui'
 import ProductIcon from '../ProductIcon'
@@ -6,14 +7,14 @@ import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 type subheader = string
 interface Types {
-  h1: string | React.ReactNode
-  subheader: (string | React.ReactNode)[]
+  h1: string | ReactNode
+  subheader: (string | ReactNode)[]
   icon?: string
   title?: string
-  image?: React.ReactNode
-  footer?: React.ReactNode
+  image?: ReactNode | ReactNode[]
+  footer?: ReactNode
   documentation_url?: string
-  callout?: React.ReactNode
+  callout?: ReactNode
 }
 
 const ProductHeader = (props: Types) => {
@@ -87,7 +88,11 @@ const ProductHeader = (props: Types) => {
         </div>
         {props.image && (
           <div className="col-span-12 mt-8 lg:col-span-7 lg:mt-0 xl:col-span-6 xl:col-start-7">
-            {props.image}
+            {Array.isArray(props.image)
+              ? props.image.map((img, i) => (
+                  <Fragment key={i}>{img}</Fragment>
+                ))
+              : props.image}
           </div>
         )}
       </div>

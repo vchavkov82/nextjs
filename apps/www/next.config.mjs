@@ -41,6 +41,21 @@ const withBundleAnalyzer = bundleAnalyzer({
 const nextConfig = {
   basePath: '',
   assetPrefix: getAssetPrefix(),
+  allowedDevOrigins: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'http://localhost:3002',
+    'http://localhost:3003',
+    'http://127.0.0.1:3000',
+    'http://127.0.0.1:3001',
+    'http://127.0.0.1:3002',
+    'http://127.0.0.1:3003',
+    'http://uptime:3000',
+    'http://uptime:3001',
+    'http://uptime:3002',
+    'http://uptime:3003',
+    'https://uptime-monitor-fe.vercel.app',
+  ],
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   trailingSlash: false,
   transpilePackages: [

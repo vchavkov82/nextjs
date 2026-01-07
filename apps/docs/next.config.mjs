@@ -5,7 +5,13 @@ import withYaml from 'next-plugin-yaml'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import { parse as parseToml } from 'smol-toml'
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
+import webpack from 'next/dist/compiled/webpack/webpack-lib.js'
 import remotePatterns from './lib/remotePatterns.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const withBundleAnalyzer = configureBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -48,6 +54,18 @@ const nextConfig = {
         parse: parseToml,
       },
     })
+    // Exclude build scripts from bundling (they use Node.js-only modules like 'fs')
+    // These are only meant to run at build time via Makefile, not in the browser
+    // Replace .cts files with empty modules to prevent webpack from trying to bundle them
+    const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /.*spec[\\/]sections[\\/].*\.cts$/,
+        (resource) => {
+          resource.request = emptyModulePath
+        }
+      )
+    )
     return config
   },
   transpilePackages: [
@@ -76,6 +94,18 @@ const nextConfig = {
       '*.toml': {
         loaders: ['toml-loader'],
         as: '*.json',
+      },
+      '*.md': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+      // Exclude build scripts (.cts files) from Turbopack bundling
+      // These files use Node.js-only modules like 'fs' and should not be bundled
+      // Webpack handles this via NormalModuleReplacementPlugin, but Turbopack needs a loader
+      // Return empty content to prevent bundling errors
+      'spec/sections/*.cts': {
+        loaders: ['raw-loader'],
+        as: '*.js',
       },
     },
   },

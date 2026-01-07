@@ -19,8 +19,9 @@ const CTABanner = dynamic(() => import('@/components/CTABanner'))
 export default function IndexPage() {
   const router = useRouter()
   const { resolvedTheme } = useTheme()
-  const isDark = resolvedTheme?.includes('dark')
-  const data = pageData(isDark!)
+  // Default to false (light mode) during SSR to avoid hydration mismatch
+  const isDark = resolvedTheme?.includes('dark') ?? false
+  const data = pageData(isDark)
 
   const meta_title = 'General Availability | Supabase'
   const meta_description = 'Supabase is officially launching into General Availability.'
