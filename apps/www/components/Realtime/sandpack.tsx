@@ -34,7 +34,7 @@ export default function SandpackWrapper({ files, dependencies = {} }: SandpackPr
           },
         }}
         options={{
-          experimental_enableServiceWorker: true,
+          experimental_enableServiceWorker: false,
           visibleFiles: ['/App.js'],
           initMode: 'user-visible',
           activeFile: '/App.js',

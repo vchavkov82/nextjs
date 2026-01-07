@@ -126,9 +126,8 @@ const sanitizeName = (name: string): string => {
  */
 export async function getFilesystemEntries(): Promise<FilesystemEntry[]> {
   if (SNIPPETS_DIR === '') {
-    throw new Error(
-      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
-    )
+    // Return empty array if env var is not set - feature is optional
+    return []
   }
 
   // Ensure the snippets directory exists
@@ -193,6 +192,12 @@ export async function getFilesystemEntries(): Promise<FilesystemEntry[]> {
 }
 
 export const getSnippet = async (snippetId: string) => {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const entries = await getFilesystemEntries()
   const foundSnippet = entries.find((e) => e.type === 'file' && e.id === snippetId)
 
@@ -303,6 +308,12 @@ export const getSnippets = async ({
  * Saves a snippet to the filesystem
  */
 export async function saveSnippet(snippet: Snippet): Promise<Snippet> {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const entries = await getFilesystemEntries()
   const existingSnippet = entries.find((entry) => entry.id === snippet.id && entry.type === 'file')
 
@@ -338,6 +349,12 @@ export async function saveSnippet(snippet: Snippet): Promise<Snippet> {
  * Deletes a snippet from the filesystem
  */
 export async function deleteSnippet(id: string): Promise<void> {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const entries = await getFilesystemEntries()
   const found = entries.find((entry) => entry.id === id && entry.type === 'file')
 
@@ -363,6 +380,12 @@ export async function deleteSnippet(id: string): Promise<void> {
  * Updates a snippet in the filesystem. It also handles renaming and moving.
  */
 export async function updateSnippet(id: string, updates: DeepPartial<Snippet>): Promise<Snippet> {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const entries = await getFilesystemEntries()
   const foundSnippet = entries
     .filter(
@@ -424,6 +447,12 @@ export const getFolders = async (folderId: string | null = null): Promise<Folder
  * Creates a new folder as an actual directory
  */
 export async function createFolder(_folderName: string): Promise<Folder> {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const folderName = sanitizeName(_folderName)
 
   const entries = await getFilesystemEntries()
@@ -446,6 +475,12 @@ export async function createFolder(_folderName: string): Promise<Folder> {
  * @throws {Error} If the folder doesn't exist
  */
 export async function deleteFolder(id: string): Promise<void> {
+  if (SNIPPETS_DIR === '') {
+    throw new Error(
+      'SNIPPETS_MANAGEMENT_FOLDER env var is not set. Please set it to use snippets properly.'
+    )
+  }
+
   const entries = await getFilesystemEntries()
   const folder = entries.find((f) => f.id === id && f.type === 'folder')
 
