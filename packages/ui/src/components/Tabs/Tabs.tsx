@@ -136,30 +136,37 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   if (wrappable && __styles?.wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
 
+<<<<<<< HEAD
   // Normalize refs to handle both RefObject and callback refs
-  const baseRefCallback = useCallback(
-    (elem: HTMLDivElement | null) => {
+  // Use React.ElementRef to get the correct ref type for Radix UI components
+  type TabsRootRef = React.ElementRef<typeof TabsPrimitive.Root>
+  type TabsListRef = React.ElementRef<typeof TabsPrimitive.List>
+
+  const baseRefCallback: React.RefCallback<TabsRootRef> = useCallback(
+    (elem: TabsRootRef | null) => {
       if (!refs?.base) return
       if (typeof refs.base === 'function') {
-        refs.base(elem)
+        // Cast to HTMLDivElement since Radix UI Root renders as a div
+        refs.base(elem as HTMLDivElement | null)
       } else if (refs.base && 'current' in refs.base) {
         // Use type assertion to allow assignment to RefObject.current
         // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.base as React.MutableRefObject<HTMLDivElement | null>).current = elem
+        ;(refs.base as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
       }
     },
     [refs?.base]
   )
 
-  const listRefCallback = useCallback(
-    (elem: HTMLDivElement | null) => {
+  const listRefCallback: React.RefCallback<TabsListRef> = useCallback(
+    (elem: TabsListRef | null) => {
       if (!refs?.list) return
       if (typeof refs.list === 'function') {
-        refs.list(elem)
+        // Cast to HTMLDivElement since Radix UI List renders as a div
+        refs.list(elem as HTMLDivElement | null)
       } else if (refs.list && 'current' in refs.list) {
         // Use type assertion to allow assignment to RefObject.current
         // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.list as React.MutableRefObject<HTMLDivElement | null>).current = elem
+        ;(refs.list as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
       }
     },
     [refs?.list]

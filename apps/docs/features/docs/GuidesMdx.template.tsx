@@ -77,7 +77,7 @@ const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: 
         className="prose max-w-none"
       >
         <h1 className="mb-0 [&>p]:m-0">
-          <ReactMarkdown>{meta?.title || 'BA Docs'}</ReactMarkdown>
+          <ReactMarkdown>{meta?.title || 'Supabase Docs'}</ReactMarkdown>
         </h1>
         {meta?.subtitle && (
           <h2 className="mt-3 text-xl text-foreground-light">

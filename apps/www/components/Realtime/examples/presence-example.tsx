@@ -8,12 +8,12 @@ const appJsCode = `import { useEffect, useState } from 'react';
 import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -47,13 +47,13 @@ export default function App() {
       .on('presence', { event: 'sync' }, () => {
         const state = channel.presenceState();
         const presenceList = [];
-
+        
         // Convert presence state to array
         Object.keys(state).forEach(key => {
           const presences = state[key];
           presenceList.push(...presences);
         });
-
+        
         setOnlineUsers(presenceList);
       })
       .subscribe(async (status) => {
@@ -85,8 +85,8 @@ export default function App() {
           </h2>
           <div className="flex justify-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {onlineUsers.map((user) => (
-              <div
-                key={user.user_id}
+              <div 
+                key={user.user_id} 
                 className="flex flex-col items-center gap-3"
               >
                 <div className="relative w-16 h-16 rounded-full bg-gradient-to-b from-neutral-700 to-neutral-800 shadow-neutral-900/75 shadow-[inset_0_0_20px_rgba(0,0,0,0.3)]">
@@ -114,7 +114,7 @@ const layoutProps: ExampleLayoutProps = {
   files: presenceFiles,
   title: 'Presence',
   description:
-    "A demonstration of BA Realtime's presence feature that tracks and displays online users in real-time with their avatars and usernames.",
+    "A demonstration of Supabase Realtime's presence feature that tracks and displays online users in real-time with their avatars and usernames.",
 }
 
 export default layoutProps
