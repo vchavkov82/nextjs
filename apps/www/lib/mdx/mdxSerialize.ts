@@ -89,6 +89,7 @@ export async function mdxSerialize(source: string, options?: { tocDepth?: number
   let collectedToc: TocItem[] = []
 
   const mdxSource = await serialize(preprocessedSource, {
+    parseFrontmatter: false, // Avoid getData error in next-mdx-remote v5
     scope: {
       chCodeConfig: codeHikeOptions,
     },

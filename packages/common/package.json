@@ -14,6 +14,7 @@
     "./hooks": "./hooks/index.ts",
     "./hooks/*": "./hooks/*",
     "./constants/*": "./constants/*",
+    "./telemetry-constants": "./telemetry-constants.ts",
     "./MetaFavicons/app-router": "./MetaFavicons/app-router.ts",
     "./MetaFavicons/pages-router": "./MetaFavicons/pages-router.tsx",
     "./assets/images/*": "./assets/images/*"

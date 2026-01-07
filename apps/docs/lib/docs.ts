@@ -126,6 +126,7 @@ export async function getGuidesStaticProps(
   }
 
   const mdxOptions: SerializeOptions = {
+    parseFrontmatter: false,
     mdxOptions: {
       useDynamicImport: true,
       remarkPlugins: [[remarkMath, { singleDollarTextMath: false }], remarkGfm],

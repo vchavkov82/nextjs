@@ -24,12 +24,12 @@
 
 @keyframes enter {
   0% {
-    translate: 0 32px;
+    transform: translateY(32px);
     filter: blur(4px);
     opacity: 0;
   }
   100% {
-    translate: 0 0;
+    transform: translateY(0);
     filter: blur(0px);
     opacity: 1;
   }
@@ -37,12 +37,12 @@
 
 @keyframes exit {
   0% {
-    translate: 0 0;
+    transform: translateY(0);
     filter: blur(0px);
     opacity: 1;
   }
   100% {
-    translate: 0 -32px;
+    transform: translateY(-32px);
     filter: blur(4px);
     opacity: 0;
   }

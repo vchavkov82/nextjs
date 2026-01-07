@@ -9,8 +9,13 @@ import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client
-const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL}';
-const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY}';
+const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
+const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
+
+if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+}
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Generate a unique instance ID for this session

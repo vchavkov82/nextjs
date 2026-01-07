@@ -1,6 +1,5 @@
 import type { JwtPayload } from '@supabase/supabase-js'
-import { type User } from 'common/auth'
-import { gotrueClient } from 'common/gotrue'
+import { type User, gotrueClient } from 'common'
 
 export const auth = gotrueClient
 
