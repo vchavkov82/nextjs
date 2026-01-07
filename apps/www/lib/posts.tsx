@@ -222,6 +222,10 @@ export const getPostdata = async (slug: string, directory: string) => {
     throw new Error(`Post not found: ${searchSlug} in directory ${directory}. Available files: ${folderfiles.slice(0, 5).join(', ')}...`)
   }
 
+  if (!found) {
+    throw new Error(`Post not found: ${slug} in directory ${directory}`)
+  }
+
   const fullPath = path.join(postDirectory, found)
   const postContent = fs.readFileSync(fullPath, 'utf8')
   return postContent
