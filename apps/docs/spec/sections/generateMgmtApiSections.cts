@@ -23,19 +23,8 @@ function extractSectionsFromOpenApi(filePath, outputPath) {
 
     try {
       const openApiJson = JSON.parse(data)
-      const categories: string[] = []
-      const sections: Array<{
-        type: string
-        title: string
-        id?: string
-        slug?: string
-        items: Array<{
-          type: string
-          title: string
-          id: string
-          slug: string
-        }>
-      }> = []
+      const categories = []
+      const sections = []
 
       if (openApiJson.paths) {
         for (const route in openApiJson.paths) {

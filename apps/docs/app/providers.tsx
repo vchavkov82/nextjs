@@ -1,6 +1,5 @@
 'use client'
 
-import '@code-hike/mdx/styles'
 import 'config/code-hike.scss'
 import 'ui-patterns/ShimmeringLoader/index.css'
 import '../styles/new-docs.scss'

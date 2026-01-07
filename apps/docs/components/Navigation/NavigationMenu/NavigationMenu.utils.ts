@@ -7,6 +7,38 @@ import type { ICommonItem } from '~/components/reference/Reference.types'
 import type { Json } from '~/features/helpers.types'
 import { menuState } from '../../../hooks/useMenuState'
 
+// Keep imports explicit so bundlers don't crawl the whole spec directory
+const commonSectionsImports: Record<string, () => Promise<{ default: ICommonItem[] }>> = {
+  'common-api-sections.json': () => import('~/spec/common-api-sections.json'),
+  'common-cli-sections.json': () => import('~/spec/common-cli-sections.json'),
+  'common-client-libs-sections.json': () => import('~/spec/common-client-libs-sections.json'),
+  'common-self-hosting-analytics-sections.json': () =>
+    import('~/spec/common-self-hosting-analytics-sections.json'),
+  'common-self-hosting-auth-sections.json': () =>
+    import('~/spec/common-self-hosting-auth-sections.json'),
+  'common-self-hosting-functions-sections.json': () =>
+    import('~/spec/common-self-hosting-functions-sections.json'),
+  'common-self-hosting-realtime-sections.json': () =>
+    import('~/spec/common-self-hosting-realtime-sections.json'),
+  'common-self-hosting-storage-sections.json': () =>
+    import('~/spec/common-self-hosting-storage-sections.json'),
+}
+
+const specImports: Record<string, () => Promise<{ default: Json }>> = {
+  supabase_js_v2: () => import('~/spec/supabase_js_v2.yml'),
+  supabase_js_v1: () => import('~/spec/supabase_js_v1.yml'),
+  supabase_dart_v2: () => import('~/spec/supabase_dart_v2.yml'),
+  supabase_dart_v1: () => import('~/spec/supabase_dart_v1.yml'),
+  supabase_csharp_v1: () => import('~/spec/supabase_csharp_v1.yml'),
+  supabase_csharp_v0: () => import('~/spec/supabase_csharp_v0.yml'),
+  supabase_py_v2: () => import('~/spec/supabase_py_v2.yml'),
+  supabase_swift_v2: () => import('~/spec/supabase_swift_v2.yml'),
+  supabase_swift_v1: () => import('~/spec/supabase_swift_v1.yml'),
+  supabase_kt_v3: () => import('~/spec/supabase_kt_v3.yml'),
+  supabase_kt_v2: () => import('~/spec/supabase_kt_v2.yml'),
+  supabase_kt_v1: () => import('~/spec/supabase_kt_v1.yml'),
+}
+
 export function getPathWithoutHash(relativePath: string) {
   return new URL(relativePath, 'http://placeholder').pathname
 }
@@ -57,20 +89,26 @@ export function useCommonSections(
   { enabled = true }: { enabled: boolean }
 ) {
   const [commonSections, setCommonSections] = useState<ICommonItem[]>()
+  const importer = commonSectionsImports[commonSectionsFile]
 
   useEffect(() => {
+    if (!enabled || !importer) {
+      setCommonSections(undefined)
+      return
+    }
+
+    let cancelled = false
     async function fetchCommonSections() {
-      const commonSections = await import(
-        /* webpackInclude: /common-.*\.json$/ */
-        /* webpackMode: "lazy" */
-        `~/spec/${commonSectionsFile}`
-      )
-      setCommonSections(commonSections.default)
+      const result = await importer()
+      if (!cancelled) setCommonSections(result.default)
     }
     fetchCommonSections()
-  }, [commonSectionsFile])
+    return () => {
+      cancelled = true
+    }
+  }, [enabled, importer])
 
-  if (!enabled) {
+  if (!enabled || !importer) {
     return null
   }
 
@@ -87,21 +125,19 @@ export function useCommonSections(
  */
 export function useSpec(specFile?: string) {
   const [spec, setSpec] = useState<Json>()
+  const importer = specFile ? specImports[specFile] : undefined
 
   useEffect(() => {
-    if (!specFile) {
+    if (!importer) {
+      setSpec(undefined)
       return
     }
     async function fetchSpec() {
-      const spec = await import(
-        /* webpackInclude: /supabase_.*\.ya?ml$/ */
-        /* webpackMode: "lazy" */
-        `~/spec/${specFile}`
-      )
-      setSpec(spec.default)
+      const specModule = await importer()
+      setSpec(specModule.default)
     }
     fetchSpec()
-  }, [specFile])
+  }, [importer])
 
   return spec
 }

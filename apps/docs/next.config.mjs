@@ -13,6 +13,9 @@ import remotePatterns from './lib/remotePatterns.js'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+// Path to empty module used to replace build-time scripts that shouldn't be bundled
+const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
+
 const withBundleAnalyzer = configureBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -57,15 +60,116 @@ const nextConfig = {
     // Exclude build scripts from bundling (they use Node.js-only modules like 'fs')
     // These are only meant to run at build time via Makefile, not in the browser
     // Replace .cts files with empty modules to prevent webpack from trying to bundle them
-    const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
+    
+    // Use NormalModuleReplacementPlugin to replace .cts files with empty module
+    // This runs during module resolution and replaces .cts files before webpack tries to parse them
+    // Updated regex to handle both forward and back slashes, and various path formats
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
-        /.*spec[\\/]sections[\\/].*\.cts$/,
+        /\.cts(\.js)?$/,
         (resource) => {
           resource.request = emptyModulePath
         }
       )
     )
+    
+    // More specific replacement for spec/sections directory
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /.*[\/\\]spec[\/\\]sections[\/\\].*\.cts(\.js)?$/,
+        (resource) => {
+          resource.request = emptyModulePath
+        }
+      )
+    )
+    
+    // Replace Makefile with empty module to prevent webpack from trying to parse it
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /.*[\/\\]spec[\/\\]Makefile$/,
+        (resource) => {
+          resource.request = emptyModulePath
+        }
+      )
+    )
+    
+    // Ignore all .cts files to prevent any accidental imports
+    // This is a fallback in case NormalModuleReplacementPlugin doesn't catch them
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /\.cts(\.js)?$/,
+        contextRegExp: /.*/,
+      })
+    )
+    
+    // Ignore .cts files in spec/sections directory using IgnorePlugin
+    // This is a more specific rule for the build scripts directory
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /spec[\/\\]sections[\/\\].*\.cts(\.js)?$/,
+      })
+    )
+    
+    // Ignore .md files in spec directory (README files that shouldn't be bundled)
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /spec[\/\\].*\.md$/,
+      })
+    )
+    
+    // Ignore .yaml/.yml files in spec directory (build-time spec files that shouldn't be bundled)
+    // Note: next-plugin-yaml handles YAML imports in the app, but we don't want to bundle spec files
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /spec[\/\\].*\.ya?ml$/,
+      })
+    )
+    
+    // Ignore Makefile in spec directory (build-time file that shouldn't be bundled)
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /spec[\/\\].*Makefile$/,
+      })
+    )
+    // Also ignore Makefile without extension
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /spec[\/\\]Makefile$/,
+      })
+    )
+    
+    // Add resolve alias for .cts files to work with both webpack and turbopack
+    // Handle various import path formats
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      'spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      './spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      './spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      '../spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      '../spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      '~/spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      '~/spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      // Ignore Makefile via alias
+      '~/spec/Makefile': emptyModulePath,
+      'spec/Makefile': emptyModulePath,
+      // Add alias for ~/spec/ to enable dynamic imports from spec directory
+      '~/spec': resolve(__dirname, 'spec'),
+      // Add general ~ alias to match tsconfig.json paths configuration
+      '~': resolve(__dirname),
+    }
+    
+    // Remove .cts from resolve extensions to prevent webpack from trying to resolve them
+    if (config.resolve.extensions) {
+      config.resolve.extensions = config.resolve.extensions.filter((ext) => ext !== '.cts')
+    }
+    
+    // Mark Node.js built-in modules as external to prevent bundling errors
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+    }
     return config
   },
   transpilePackages: [
@@ -84,36 +188,63 @@ const nextConfig = {
     '/reference/**/*': ['./features/docs/generated/**/*', './docs/ref/**/*'],
   },
   serverExternalPackages: ['libpg-query', 'twoslash'],
-  // Turbopack config (moved from experimental.turbo to fix deprecation warning)
-  turbopack: {
-    rules: {
-      '*.include': {
-        loaders: ['raw-loader'],
-        as: '*.js',
-      },
-      '*.toml': {
-        loaders: ['toml-loader'],
-        as: '*.json',
-      },
-      '*.md': {
-        loaders: ['raw-loader'],
-        as: '*.js',
-      },
-      // Exclude build scripts (.cts files) from Turbopack bundling
-      // These files use Node.js-only modules like 'fs' and should not be bundled
-      // Webpack handles this via NormalModuleReplacementPlugin, but Turbopack needs a loader
-      // Return empty content to prevent bundling errors
-      'spec/sections/*.cts': {
-        loaders: ['raw-loader'],
-        as: '*.js',
-      },
-    },
-  },
   experimental: {
     // Optimize for high-core systems
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-collapsible'],
     // Enable faster refresh
     optimizeCss: true,
+  },
+  // Turbopack configuration - handles file types that webpack config above handles
+  // Note: @next/mdx handles .md/.mdx files for pages, but we need to handle non-page markdown imports
+  // Note: next-plugin-yaml handles YAML files for webpack, but Turbopack needs explicit rules
+  turbopack: {
+    rules: {
+      // Handle .md files with raw-loader (for non-page markdown imports)
+      // This prevents "Unknown module type" errors when Turbopack encounters .md files
+      '*.md': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+      // Handle .yaml/.yml files - treat as JSON since YAML can be parsed as JSON
+      // This prevents "Unknown module type" errors when Turbopack encounters YAML files
+      '*.yaml': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+      '*.yml': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+      // Exclude .cts files (build-time scripts) from Turbopack bundling
+      // These files use Node.js-only modules like 'fs' and should not be bundled
+      '*.cts': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Also exclude .cts.js (some resolvers append .js)
+      '*.cts.js': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Specifically exclude .cts files in spec/sections directory
+      'spec/sections/*.cts': {
+        loaders: [],
+        as: '*.js',
+      },
+      'spec/sections/*.cts.js': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Exclude Makefile in spec directory (build-time file that shouldn't be bundled)
+      'spec/*Makefile': {
+        loaders: [],
+        as: '*.js',
+      },
+      'spec/Makefile': {
+        loaders: [],
+        as: '*.js',
+      },
+    },
   },
   async headers() {
     return [
@@ -216,8 +347,16 @@ const nextConfig = {
 
 const configExport = () => {
   const plugins = [withMDX, withYaml, withBundleAnalyzer]
+  // Apply plugins
   // @ts-ignore
-  return plugins.reduce((acc, next) => next(acc), nextConfig)
+  const config = plugins.reduce((acc, next) => next(acc), nextConfig)
+
+  // Next.js no longer accepts experimental.turbo; ensure it stays top-level as `turbopack`
+  if (config.experimental?.turbo) {
+    delete config.experimental.turbo
+  }
+
+  return config
 }
 
 export default configExport()
