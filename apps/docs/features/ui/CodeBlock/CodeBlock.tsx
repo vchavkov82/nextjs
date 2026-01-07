@@ -15,19 +15,31 @@ const TWOSLASHABLE_LANGS: ReadonlyArray<string> = ['js', 'ts', 'javascript', 'ty
 
 const BUNDLED_LANGUAGES = Object.keys(bundledLanguages)
 
-// Singleton cache for highlighter with global persistence
-const globalForHighlighter = globalThis as unknown as {
-  highlighterInstance: HighlighterGeneric<BundledLanguage, string> | undefined
+type HighlighterCache = {
+  instance?: HighlighterGeneric<BundledLanguage, string>
+  promise?: Promise<HighlighterGeneric<BundledLanguage, string>>
 }
 
+// Singleton cache for highlighter with global persistence; guard against
+// concurrent initializations that would otherwise create multiple instances.
+const globalForHighlighter = globalThis as unknown as {
+  highlighterCache?: HighlighterCache
+}
+
+const highlighterCache: HighlighterCache = (globalForHighlighter.highlighterCache ??= {})
+
 async function getHighlighter() {
-  if (!globalForHighlighter.highlighterInstance) {
-    globalForHighlighter.highlighterInstance = await createHighlighter({
+  if (highlighterCache.instance) return highlighterCache.instance
+
+  if (!highlighterCache.promise) {
+    highlighterCache.promise = createHighlighter({
       themes: [theme],
       langs: BUNDLED_LANGUAGES,
     })
   }
-  return globalForHighlighter.highlighterInstance
+
+  highlighterCache.instance = await highlighterCache.promise
+  return highlighterCache.instance
 }
 
 export async function CodeBlock({

@@ -4,6 +4,7 @@ import * as TabsPrimitive from '@radix-ui/react-tabs'
 import {
   Children,
   isValidElement,
+  useCallback,
   useMemo,
   useState,
   type KeyboardEvent,
@@ -100,6 +101,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   }, [activeId])
 
   let __styles = styleHandler('tabs')
+  const variantStyles = __styles[type] ?? __styles.pills
 
   function onTabClick(id: string) {
     onClick?.(id)
@@ -109,26 +111,51 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     }
   }
 
-  const listClasses = [__styles[type].list]
+  const listClasses = [variantStyles.list]
   if (scrollable) listClasses.push(__styles.scrollable)
   if (wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
+
+  // Normalize refs to handle both RefObject and callback refs
+  const baseRefCallback = useCallback(
+    (elem: HTMLDivElement | null) => {
+      if (!refs?.base) return
+      if (typeof refs.base === 'function') {
+        refs.base(elem)
+      } else if (refs.base && 'current' in refs.base) {
+        ;(refs.base as RefObject<HTMLDivElement>).current = elem
+      }
+    },
+    [refs?.base]
+  )
+
+  const listRefCallback = useCallback(
+    (elem: HTMLDivElement | null) => {
+      if (!refs?.list) return
+      if (typeof refs.list === 'function') {
+        refs.list(elem)
+      } else if (refs.list && 'current' in refs.list) {
+        ;(refs.list as RefObject<HTMLDivElement>).current = elem
+      }
+    },
+    [refs?.list]
+  )
 
   return (
     <TabsPrimitive.Root
       value={activeTab}
       className={[__styles.base, baseClassNames].join(' ')}
-      ref={refs?.base}
+      ref={refs?.base ? baseRefCallback : undefined}
     >
-      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list}>
+      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : undefined}>
         {addOnBefore}
         {children.map((tab) => {
           const isActive = activeTab === tab.id
-          const triggerClasses = [__styles[type].base, __styles.size[size]]
+          const triggerClasses = [variantStyles.base, __styles.size[size]]
           if (isActive) {
-            triggerClasses.push(__styles[type].active)
+            triggerClasses.push(variantStyles.active)
           } else {
-            triggerClasses.push(__styles[type].inactive)
+            triggerClasses.push(variantStyles.inactive)
           }
           if (block) {
             triggerClasses.push(__styles.block)

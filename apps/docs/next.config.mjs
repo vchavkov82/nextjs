@@ -152,9 +152,11 @@ const nextConfig = {
     
     // Ignore .yaml/.yml files in spec directory (build-time spec files that shouldn't be bundled)
     // Note: next-plugin-yaml handles YAML imports in the app, but we don't want to bundle spec files
+    // Ignore third-party spec YAML outside of the docs app so docs imports still resolve.
     config.plugins.push(
       new webpack.IgnorePlugin({
         resourceRegExp: /spec[\/\\].*\.ya?ml$/,
+        contextRegExp: /^(?!.*[\\/]apps[\\/]docs).*$/,
       })
     )
     

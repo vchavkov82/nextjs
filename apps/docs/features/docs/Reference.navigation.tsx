@@ -12,6 +12,8 @@ import {
 } from '~/features/docs/Reference.navigation.client'
 import { type AbbrevApiReferenceSection } from '~/features/docs/Reference.utils'
 
+const topLvlRefNavItemStyles = 'leading-5'
+
 interface ReferenceNavigationProps {
   libraryId: string
   name: string
@@ -56,8 +58,6 @@ export async function ReferenceNavigation({
     </ReferenceNavigationScrollHandler>
   )
 }
-
-const topLvlRefNavItemStyles = 'leading-5'
 
 function RefCategory({
   basePath,

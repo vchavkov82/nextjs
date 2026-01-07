@@ -120,5 +120,8 @@
     "tmp": "^0.2.4",
     "vinxi>vite": "catalog:",
     "prettier": "3.2.5"
+  },
+  "dependencies": {
+    "@supabase/sql-to-rest": "^0.1.6"
   }
 }

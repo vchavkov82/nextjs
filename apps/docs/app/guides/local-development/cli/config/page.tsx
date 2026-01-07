@@ -17,12 +17,15 @@ const generateMetadata = genGuideMeta(() => ({
 }))
 
 const tocList: TOCHeader[] = []
-const content = specFile.info.tags.map((tag: { id: string; title: string }, id: number) => {
+const tags = specFile?.info?.tags ?? []
+const parameters = specFile?.parameters ?? []
+const guideDescription = specFile?.info?.description
+const content = tags.map((tag: { id: string; title: string }, id: number) => {
   tocList.push({ id: `${id}`, text: tag.title, link: `${tag.id}-config`, level: 2 })
   return (
     <div key={tag.id}>
       <Heading tag="h2">{tag.title} Config</Heading>
-      {specFile.parameters
+      {parameters
         .filter((param: Parameter) => param.tags && param.tags[0] === tag.id)
         .map((parameter: Parameter, id: number) => {
           tocList.push({ id: `${id}`, text: parameter.id, link: `#${parameter.id}`, level: 3 })
@@ -37,7 +40,7 @@ const Config = () => {
 
   return (
     <GuideTemplate meta={meta} editLink={editLink}>
-      <ReactMarkdown>{specFile.info.description}</ReactMarkdown>
+      {guideDescription && <ReactMarkdown>{guideDescription}</ReactMarkdown>}
       <div>{content}</div>
     </GuideTemplate>
   )
