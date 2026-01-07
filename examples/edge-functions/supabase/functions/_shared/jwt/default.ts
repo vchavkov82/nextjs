@@ -1,5 +1,5 @@
 // Default supabase JWT verification
-// Use this template to validate tokens issued by BA default auth
+// Use this template to validate tokens issued by Supabase default auth
 import * as jose from "jsr:@panva/jose@6";
 
 const SUPABASE_JWT_ISSUER = Deno.env.get("SB_JWT_ISSUER") ??
