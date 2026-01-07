@@ -9,12 +9,12 @@ import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 import { X } from 'lucide-react';
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -29,15 +29,15 @@ export default function App() {
   const [newComment, setNewComment] = useState('');
   const [commentPosition, setCommentPosition] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
-
+  
   const userId = useRef(Math.random().toString(36).substring(2, 15));
   const imageRef = useRef(null);
   const containerRef = useRef(null);
   const channelRef = useRef(null);
-
+  
   // Specific Unsplash image URL
   const imageUrl = "https://images.unsplash.com/photo-1600695580162-cb0fa319067a?q=80&w=3764&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-
+  
   // Initialize connection
   useEffect(() => {
     // Generate a random username
@@ -47,47 +47,47 @@ export default function App() {
       nouns[Math.floor(Math.random() * nouns.length)]
     }\${Math.floor(Math.random() * 100)}\`;
     setUsername(randomName);
-
-    // Set up BA channel
+    
+    // Set up Supabase channel
     const channel = supabase.channel(CHANNEL);
     channelRef.current = channel;
-
+    
     // Handle presence for user list
     channel.on('presence', { event: 'sync' }, () => {
       const state = channel.presenceState();
       const presenceList = [];
-
+      
       // Convert presence state to array
       Object.keys(state).forEach(key => {
         const presences = state[key];
         presenceList.push(...presences);
       });
-
+      
       setActiveUsers(presenceList);
     });
-
+    
     // Handle new comments
     channel.on('broadcast', { event: 'new_comment' }, (payload) => {
       const newComment = payload.payload;
-
+      
       setComments(prevComments => {
         // Check if comment already exists (avoid duplicates)
         const exists = prevComments.some(comment => comment.id === newComment.id);
         if (exists) return prevComments;
-
+        
         return [...prevComments, newComment];
       });
     });
-
+    
     // Handle comment deletion
     channel.on('broadcast', { event: 'delete_comment' }, (payload) => {
       const { commentId } = payload.payload;
-
-      setComments(prevComments =>
+      
+      setComments(prevComments => 
         prevComments.filter(comment => comment.id !== commentId)
       );
     });
-
+    
     // Subscribe to channel
     channel.subscribe(async (status) => {
       if (status === 'SUBSCRIBED') {
@@ -97,11 +97,11 @@ export default function App() {
           username: randomName,
           online_at: new Date().getTime(),
         });
-
+        
         setIsConnected(true);
       }
     });
-
+    
     // Clean up
     return () => {
       if (channel) {
@@ -109,55 +109,55 @@ export default function App() {
       }
     };
   }, []);
-
+  
   // Handle image load
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
-
+  
   // Handle click on the image
   const handleImageClick = (e) => {
     if (!isConnected || !imageRef.current) return;
-
+    
     // Don't process clicks on existing comments or the input form
     if (
-      e.target.closest('[data-comment]') ||
-      e.target.closest('[data-comment-bubble]') ||
+      e.target.closest('[data-comment]') || 
+      e.target.closest('[data-comment-bubble]') || 
       e.target.closest('[data-comment-input]')
     ) {
       return;
     }
-
+    
     // Calculate relative position (%)
     const rect = imageRef.current.getBoundingClientRect();
-
+    
     const xPercent = ((e.clientX - rect.left) / rect.width) * 100;
     const yPercent = ((e.clientY - rect.top) / rect.height) * 100;
-
+    
     // Set position for new comment
-    setCommentPosition({
-      x: xPercent,
+    setCommentPosition({ 
+      x: xPercent, 
       y: yPercent
     });
-
+    
     // Focus on input (will be created in render)
     setTimeout(() => {
       const input = document.getElementById('new-comment-input');
       if (input) input.focus();
     }, 10);
   };
-
+  
   // Handle comment submission
   const handleCommentSubmit = (e) => {
     e.preventDefault();
-
+    
     if (!newComment.trim() || !commentPosition || !isConnected) {
       // Reset state if invalid
       setCommentPosition(null);
       setNewComment('');
       return;
     }
-
+    
     // Create new comment
     const comment = {
       id: \`\${userId.current}-\${Date.now()}\`,
@@ -167,29 +167,29 @@ export default function App() {
       username,
       created_at: Date.now(),
     };
-
+    
     // Add to local state
     setComments(prevComments => [...prevComments, comment]);
-
+    
     // Broadcast to other clients
     channelRef.current.send({
       type: 'broadcast',
       event: 'new_comment',
       payload: comment,
     });
-
+    
     // Reset state
     setCommentPosition(null);
     setNewComment('');
   };
-
+  
   // Handle comment deletion
   const handleDeleteComment = (commentId) => {
     // Remove from local state
-    setComments(prevComments =>
+    setComments(prevComments => 
       prevComments.filter(comment => comment.id !== commentId)
     );
-
+    
     // Broadcast deletion
     channelRef.current.send({
       type: 'broadcast',
@@ -197,31 +197,31 @@ export default function App() {
       payload: { commentId },
     });
   };
-
+  
   // Cancel new comment
   const handleCancelComment = () => {
     setCommentPosition(null);
     setNewComment('');
   };
-
+  
   // Handle input change
   const handleInputChange = (e) => {
     setNewComment(e.target.value);
   };
-
+  
   // Handle keydown in input
   const handleInputKeyDown = (e) => {
     if (e.key === 'Escape') {
       handleCancelComment();
     }
   };
-
+  
   return (
     <div className="flex flex-col h-screen bg-neutral-800 text-white antialiased">
       <div className="flex gap-2 flex-wrap absolute top-4 right-4 z-10">
           {activeUsers.map((user) => (
-            <div
-              key={user.user_id}
+            <div 
+              key={user.user_id} 
               className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 text-neutral-300 text-xs"
             >
               <div className="w-1 h-1 rounded-full bg-green-400"></div>
@@ -229,7 +229,7 @@ export default function App() {
             </div>
           ))}
         </div>
-
+      
       {/* Main content */}
       <div className="flex-1 overflow-hidden">
         <div className="max-w-6xl mx-auto h-full">
@@ -241,22 +241,22 @@ export default function App() {
                 <p className="text-neutral-400 text-sm">Loading image...</p>
               </div>
             )}
-
+            
             {/* The image to annotate */}
-            <img
+            <img 
               ref={imageRef}
-              src={imageUrl}
+              src={imageUrl} 
               alt="Annotatable image"
               className="w-full h-full object-cover cursor-crosshair"
               onClick={handleImageClick}
               onLoad={handleImageLoad}
             />
-
+            
             {/* Comments overlay */}
             <div className="absolute inset-0 pointer-events-none">
               {comments.map((comment) => (
-                <div
-                  key={comment.id}
+                <div 
+                  key={comment.id} 
                   data-comment
                   className="absolute pointer-events-auto"
                   style={{
@@ -265,13 +265,13 @@ export default function App() {
                     transform: 'translate(-50%, -100%)',
                   }}
                 >
-                  <div
+                  <div 
                     data-comment-bubble
                     className="max-w-[400px] min-w-32 bg-neutral-800 rounded shadow p-3 pt-2 mb-2"
                   >
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-xs text-neutral-400">{comment.username}</span>
-                      <button
+                      <button 
                         onClick={() => handleDeleteComment(comment.id)}
                         className="w-5 h-5 flex items-center justify-center rounded-full hover:bg-neutral-800 text-neutral-500 hover:text-red-400"
                         aria-label="Delete comment"
@@ -284,10 +284,10 @@ export default function App() {
                   <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-neutral-900/90 mx-auto"></div>
                 </div>
               ))}
-
+              
               {/* New comment input */}
               {commentPosition && (
-                <div
+                <div 
                   data-comment
                   className="absolute pointer-events-auto"
                   style={{
@@ -297,7 +297,7 @@ export default function App() {
                   }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div
+                  <div 
                     data-comment-bubble
                     className="bg-neutral-800 rounded shadow p-2 mb-2 w-64"
                   >
@@ -314,15 +314,15 @@ export default function App() {
                         autoFocus
                       />
                       <div className="flex justify-end gap-2">
-                        <button
-                          type="button"
+                        <button 
+                          type="button" 
                           onClick={handleCancelComment}
                           className="px-3 py-1 text-xs bg-neutral-800 text-neutral-300 rounded hover:bg-neutral-700"
                         >
                           Cancel
                         </button>
-                        <button
-                          type="submit"
+                        <button 
+                          type="submit" 
                           className="px-3 py-1 text-xs bg-neutral-300 text-neutral-900 rounded hover:bg-neutral-200 disabled:opacity-50 disabled:cursor-not-allowed"
                           disabled={!newComment.trim()}
                         >
@@ -351,7 +351,7 @@ const layoutProps: ExampleLayoutProps = {
   files: imageAnnotationFiles,
   title: 'IFrame Annotation',
   description:
-    "A collaborative annotation tool that uses BA Realtime's broadcast channel to synchronize annotations and comments on embedded web content across multiple users.",
+    "A collaborative annotation tool that uses Supabase Realtime's broadcast channel to synchronize annotations and comments on embedded web content across multiple users.",
 }
 
 export default layoutProps

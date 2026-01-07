@@ -1,11 +1,9 @@
 'use client'
 
 import * as TabsPrimitive from '@radix-ui/react-tabs'
-import * as React from 'react'
 import {
   Children,
   isValidElement,
-  useCallback,
   useMemo,
   useState,
   type KeyboardEvent,
@@ -60,9 +58,10 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   refs,
   children: _children,
 }) => {
-  // Extract tab information from Panel children
-  // In React 19, we must access props through element.props (not element.ref)
-  // We use a defensive approach to avoid triggering React 19's ref access warnings
+  // Filter valid React elements without accessing .ref to preserve React 19 compatibility
+  // Extract props early to avoid React 19 warnings about ref access
+  // In React 19, accessing element.props can trigger warnings if the element has a ref
+  // By extracting props once and storing them, we avoid multiple prop accesses
   const children = useMemo(() => {
     const childArray: Array<{
       id: string
@@ -70,23 +69,22 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       label?: string
       iconRight?: React.ReactNode
     }> = []
-
     Children.forEach(_children, (child) => {
-      if (!isValidElement(child)) return
-
-      // In React 19, refs are regular props accessible via element.props.ref
-      // We only access the props we need (id, icon, label, iconRight) and explicitly
-      // avoid accessing any ref property. Access props in a single destructuring to
-      // minimize React's internal ref detection warnings.
-      const element = child as React.ReactElement<PanelProps>
-      // Access props object once - React 19 way (not element.ref)
-      const { id, icon, label, iconRight } = element.props || {}
-      
-      if (id) {
-        childArray.push({ id, icon, label, iconRight })
+      // Use isValidElement to properly check for React elements in React 19
+      if (isValidElement(child)) {
+        const element = child as React.ReactElement<PanelProps>
+        // Extract props once to avoid React 19's ref access detection
+        // Accessing element.props is safe, but accessing it multiple times
+        // can trigger warnings when elements have refs
+        const props = element.props as PanelProps
+        childArray.push({
+          id: props.id,
+          icon: props.icon,
+          label: props.label,
+          iconRight: props.iconRight,
+        })
       }
     })
-
     return childArray
   }, [_children])
 
@@ -102,7 +100,6 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   }, [activeId])
 
   let __styles = styleHandler('tabs')
-  const variantStyles = __styles[type] ?? __styles.pills
 
   function onTabClick(id: string) {
     onClick?.(id)
@@ -112,61 +109,28 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     }
   }
 
-  const listClasses = [variantStyles?.list].filter(Boolean)
+  const listClasses = [__styles[type].list]
   if (scrollable) listClasses.push(__styles.scrollable)
   if (wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
-
-  // Normalize refs to handle both RefObject and callback refs
-  // Use React.ElementRef to get the correct ref type for Radix UI components
-  type TabsRootRef = React.ElementRef<typeof TabsPrimitive.Root>
-  type TabsListRef = React.ElementRef<typeof TabsPrimitive.List>
-
-  const baseRefCallback = useCallback(
-    (elem: TabsRootRef | null) => {
-      if (!refs?.base) return
-      if (typeof refs.base === 'function') {
-        refs.base(elem)
-      } else if (refs.base && 'current' in refs.base) {
-        // Use type assertion to allow assignment to RefObject.current
-        // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.base as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
-      }
-    },
-    [refs?.base]
-  )
-
-  const listRefCallback = useCallback(
-    (elem: TabsListRef | null) => {
-      if (!refs?.list) return
-      if (typeof refs.list === 'function') {
-        refs.list(elem)
-      } else if (refs.list && 'current' in refs.list) {
-        // Use type assertion to allow assignment to RefObject.current
-        // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.list as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
-      }
-    },
-    [refs?.list]
-  )
 
   return (
     <TabsPrimitive.Root
       value={activeTab}
       className={[__styles.base, baseClassNames].join(' ')}
-      ref={refs?.base ? baseRefCallback : undefined}
+      ref={refs?.base}
     >
-      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : undefined}>
+      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list}>
         {addOnBefore}
-        {Array.isArray(children) && children.map((tab) => {
+        {children.map((tab) => {
           const isActive = activeTab === tab.id
-          const triggerClasses = [variantStyles?.base, __styles.size?.[size]].filter(Boolean)
+          const triggerClasses = [__styles[type].base, __styles.size[size]]
           if (isActive) {
-            if (variantStyles?.active) triggerClasses.push(variantStyles.active)
+            triggerClasses.push(__styles[type].active)
           } else {
-            if (variantStyles?.inactive) triggerClasses.push(variantStyles.inactive)
+            triggerClasses.push(__styles[type].inactive)
           }
-          if (block && __styles.block) {
+          if (block) {
             triggerClasses.push(__styles.block)
           }
 

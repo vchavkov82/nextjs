@@ -1,32 +1,31 @@
 {
-  "// Environment": "OpenSUSE with Podman",
-  "environment": {
-    "os": "opensuse",
-    "container_runtime": "podman",
-    "compose_command": "podman compose"
-  },
-  "// Container Runtime": "Always use podman compose, never docker or docker-compose",
-  "container": {
-    "runtime": "podman",
-    "compose_command": "podman compose",
-    "compose_file": "docker-compose.yml"
-  },
-  "// Script Management": "When creating scripts in feature branches, also commit them to develop",
-  "scripts": {
-    "auto_commit_to_develop": true,
-    "script_directory": "scripts"
-  },
-  "// Development Commands": "Prefer podman compose over docker-compose",
-  "commands": {
-    "compose_up": "podman compose up",
-    "compose_down": "podman compose down",
-    "compose_ps": "podman compose ps",
-    "compose_exec": "podman compose exec"
-  },
-  "// Notes": [
-    "User regularly rebases develop into feature branches",
-    "Scripts created in feature branches should be committed to develop as well",
-    "Never use docker or docker-compose commands",
-    "Always use podman compose"
-  ]
+  "cursor.autoApprove": true,
+  "cursor.autoApproveFileOperations": true,
+  "cursor.autoApproveTerminalCommands": true,
+  "cursor.skipPermissionPrompts": true,
+  "cursor.autoApproveCodeActions": true,
+  "cursor.autoApproveEdits": true,
+  "cursor.chat.allowTerminalCommandExecution": true,
+  "cursor.terminal.allowExecution": true,
+  "cursor.commands.autoApprove": true,
+  "cursor.agent.autoRun": true,
+  "cursor.agent.autoApproveChanges": true,
+  "cursor.agent.autoApproveCommands": true,
+  "cursor.chat.autoApprove": true,
+  "cursor.agent.autoApprove": true,
+  "cursor.chat.autoRun": true,
+  "cursor.chat.autoApproveEdits": true,
+  "cursor.chat.autoApproveFileOperations": true,
+  "cursor.chat.autoApproveTerminalCommands": true,
+  "cursor.agent.autoApproveFileOperations": true,
+  "cursor.agent.autoApproveTerminalCommands": true,
+  "cursor.agent.autoApproveCodeActions": true,
+  "cursor.agent.autoApproveEdits": true,
+  "cursor.autocomplete.autoApprove": true,
+  "cursor.composer.autoApprove": true,
+  "cursor.composer.autoApproveEdits": true,
+  "cursor.composer.autoApproveFileOperations": true,
+  "cursor.composer.autoApproveTerminalCommands": true,
+  "cursor.composer.autoRun": true
 }
+

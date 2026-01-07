@@ -8,12 +8,12 @@ const appJsCode = `import { useEffect, useState, useRef } from 'react';
 import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -48,13 +48,13 @@ export default function App() {
     channel.on('presence', { event: 'sync' }, () => {
       const state = channel.presenceState();
       const presenceList = [];
-
+      
       // Convert presence state to array
       Object.keys(state).forEach(key => {
         const presences = state[key];
         presenceList.push(...presences);
       });
-
+      
       setOnlineUsers(presenceList);
     });
 
@@ -108,8 +108,8 @@ export default function App() {
       {/* Header */}
       <div className="flex gap-2 flex-wrap absolute top-4 right-4 z-10">
         {onlineUsers.map((user) => (
-          <div
-            key={user.user_id}
+          <div 
+            key={user.user_id} 
             className="flex items-center text-xs justify-center rounded-full w-8 h-8 bg-neutral-700 text-neutral-300"
             title={user.username}
           >
@@ -117,7 +117,7 @@ export default function App() {
           </div>
         ))}
       </div>
-
+      
       {/* Main content */}
       <div className="flex-1 p-6">
         <div className="h-full flex flex-col max-w-3xl mx-auto">
@@ -130,10 +130,10 @@ export default function App() {
               messages.map((msg, index) => {
                 const prevMsg = index > 0 ? messages[index - 1] : null;
                 const showHeader = !prevMsg || prevMsg.user_id !== msg.user_id;
-
+                
                 return (
-                  <div
-                    key={msg.id}
+                  <div 
+                    key={msg.id} 
                   >
                     <div className="max-w-[70%] w-fit">
                       {showHeader && (
@@ -147,8 +147,8 @@ export default function App() {
                         </div>
                       )}
                       <div className={\`text-neutral-100 py-2 px-3 rounded-xl text-sm mb-1 w-fit \${
-                        msg.user_id === userId
-                          ? 'bg-blue-500 text-blue-50'
+                        msg.user_id === userId 
+                          ? 'bg-blue-500 text-blue-50' 
                           : 'bg-neutral-800 text-neutral-100'
                       }\`}>{msg.text}</div>
                     </div>
@@ -157,7 +157,7 @@ export default function App() {
               })
             )}
           </div>
-
+          
           <form onSubmit={handleSendMessage} className="flex w-full gap-2">
             <input
               type="text"
@@ -189,7 +189,7 @@ const layoutProps: ExampleLayoutProps = {
   files: chatFiles,
   title: 'Chat Example',
   description:
-    "A real-time chat application that uses BA Realtime's broadcast and presence features to enable instant messaging and show online users.",
+    "A real-time chat application that uses Supabase Realtime's broadcast and presence features to enable instant messaging and show online users.",
 }
 
 export default layoutProps

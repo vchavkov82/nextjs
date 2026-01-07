@@ -1,4 +1,5 @@
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import matter from 'gray-matter'
+import { compileMDX } from 'next-mdx-remote/rsc'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -10,22 +11,12 @@ import { SerializeOptions } from '~/types/next-mdx-remote-serialize'
 
 interface MDXRemoteBaseProps {
   source: string
-  options?: SerializeOptions
   customPreprocess?: (mdx: string) => string | Promise<string>
   components?: Record<string, React.ComponentType<any>>
 }
 
-const mdxOptions: SerializeOptions = {
-  mdxOptions: {
-    useDynamicImport: true,
-    remarkPlugins: [[remarkMath, { singleDollarTextMath: false }], remarkGfm],
-    rehypePlugins: [rehypeKatex],
-  },
-}
-
 const MDXRemoteBase = async ({
   source,
-  options = {},
   customPreprocess,
   components: customComponents,
 }: MDXRemoteBaseProps) => {
@@ -39,7 +30,10 @@ const MDXRemoteBase = async ({
           const result = isFeatureEnabled(feature as any)
           return String(result)
         } catch (error) {
-          console.error('Error resolving feature flag:', feature, error)
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.error('Error resolving feature flag:', feature, error)
+          }
           return 'false'
         }
       })
@@ -48,41 +42,41 @@ const MDXRemoteBase = async ({
     const preprocessedSource = await preprocess(source)
     const resolvedSource = resolveFeatureFlags(preprocessedSource)
 
-    const { mdxOptions: { remarkPlugins, rehypePlugins, ...otherMdxOptions } = {}, ...otherOptions } =
-      options
-    const {
-      mdxOptions: {
-        remarkPlugins: originalRemarkPlugins,
-        rehypePlugins: originalRehypePlugins,
-        ...originalMdxOptions
-      } = {},
-    } = mdxOptions
-
-    const finalOptions: SerializeOptions = {
-      ...mdxOptions,
-      ...otherOptions,
-      mdxOptions: {
-        ...originalMdxOptions,
-        ...otherMdxOptions,
-        remarkPlugins: [...(originalRemarkPlugins ?? []), ...(remarkPlugins ?? [])],
-        rehypePlugins: [...(originalRehypePlugins ?? []), ...(rehypePlugins ?? [])],
-      },
-    }
+    // Strip frontmatter manually to avoid getData error in next-mdx-remote v5.0.0
+    // Even with parseFrontmatter: false, compileMDX may still try to access getData
+    // if frontmatter is present in the source
+    const { content: sourceWithoutFrontmatter } = matter(resolvedSource)
 
     const mergedComponents = {
       ...components,
       ...customComponents,
     }
 
-    return (
-      <MDXRemote
-        source={resolvedSource}
-        components={mergedComponents}
-        options={finalOptions}
-      />
-    )
+    // Use compileMDX with parseFrontmatter: false to avoid getData issue
+    // The getData error occurs when parseFrontmatter is true or when accessing frontmatter
+    // By setting parseFrontmatter to false, we avoid the problematic code path
+    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are at the top level
+    const { content } = await compileMDX({
+      source: sourceWithoutFrontmatter,
+      components: mergedComponents,
+      parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [
+          [remarkMath, { singleDollarTextMath: false }],
+          remarkGfm,
+        ],
+        rehypePlugins: [rehypeKatex],
+        format: 'mdx',
+      },
+    })
+
+    // Return the MDX content directly
+    return content
   } catch (error) {
-    console.error('Error rendering MDX:', error)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error rendering MDX:', error)
+    }
     throw error
   }
 }

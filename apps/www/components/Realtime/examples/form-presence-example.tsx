@@ -9,12 +9,12 @@ import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 import { useForm, Controller } from 'react-hook-form';
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -44,7 +44,7 @@ export default function App() {
   const localFormUpdateRef = useRef(false);
   const channelRef = useRef(null);
   const previousFormValues = useRef({});
-
+  
   const { control, handleSubmit, setValue, watch, formState: { errors } } = useForm({
     defaultValues: {
       title: '',
@@ -53,7 +53,7 @@ export default function App() {
       description: '',
     }
   });
-
+  
   const formValues = watch();
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function App() {
         const state = channel.presenceState();
         const userMap = {};
         let count = 0;
-
+        
         // Convert presence state to map
         Object.keys(state).forEach(key => {
           const presences = state[key];
@@ -91,7 +91,7 @@ export default function App() {
             count++;
           });
         });
-
+        
         setActiveUsers(userMap);
         setUserCount(count);
       })
@@ -113,7 +113,7 @@ export default function App() {
         if (payload.payload.user_id !== userId) {
           // Set flag to indicate this update is from remote
           localFormUpdateRef.current = true;
-
+          
           // Update only changed fields
           Object.entries(payload.payload.formData).forEach(([field, value]) => {
             // Only update if the value actually changed
@@ -121,10 +121,10 @@ export default function App() {
               setValue(field, value);
             }
           });
-
+          
           // Update previous form values
           previousFormValues.current = { ...payload.payload.formData };
-
+          
           // Clear flag after a small delay to ensure React has processed the update
           setTimeout(() => {
             localFormUpdateRef.current = false;
@@ -147,7 +147,7 @@ export default function App() {
             online_at: new Date().getTime(),
           });
           setIsConnected(true);
-
+          
           // Broadcast initial form state
           channel.send({
             type: 'broadcast',
@@ -172,18 +172,18 @@ export default function App() {
     if (isConnected && !localFormUpdateRef.current && channelRef.current) {
       // Check if any values have changed
       let hasChanges = false;
-
+      
       for (const key in formValues) {
         if (formValues[key] !== previousFormValues.current[key]) {
           hasChanges = true;
           break;
         }
       }
-
+      
       if (hasChanges) {
         // Update previous values to prevent redundant broadcasts
         previousFormValues.current = { ...formValues };
-
+        
         channelRef.current.send({
           type: 'broadcast',
           event: FORM_BROADCAST,
@@ -219,10 +219,10 @@ export default function App() {
 
   const renderUserBadge = (fieldName) => {
     if (!focusedFields[fieldName]) return null;
-
+    
     const user = focusedFields[fieldName];
     return (
-      <div
+      <div 
         className="absolute right-0 top-1 transform -translate-y-1/2 px-2 py-1 rounded-full text-xs text-white"
         style={{ backgroundColor: user.color }}
       >
@@ -230,10 +230,10 @@ export default function App() {
       </div>
     );
   };
-
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+    
     if (isConnected && channelRef.current) {
       // Broadcast form submission to all clients
       channelRef.current.send({
@@ -246,7 +246,7 @@ export default function App() {
           submittedAt: new Date().toISOString()
         }
       });
-
+      
       // Update local state
       setFormSubmitted(true);
       setSubmittedBy(username);
@@ -261,7 +261,7 @@ export default function App() {
           <div className="max-w-3xl mx-auto flex justify-between items-center">
             <h1 className="text-xl font-medium">Collaborative Form</h1>
             <div className="flex items-center gap-2">
-              <div
+              <div 
                 className="w-3 h-3 rounded-full bg-green-400"
                 title={isConnected ? 'Connected' : 'Disconnected'}
               ></div>
@@ -285,7 +285,7 @@ export default function App() {
                 <p className="text-neutral-400 text-sm">Submitted by {submittedBy}</p>
               </div>
             </div>
-
+            
             <div className="space-y-3 my-6 text-sm">
               {submittedData && Object.entries(submittedData).map(([key, value]) => (
                 <div key={key}>
@@ -306,7 +306,7 @@ export default function App() {
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <h1 className="text-xl font-medium">Collaborative Form</h1>
           <div className="flex items-center gap-2">
-            <div
+            <div 
               className="w-2 h-2 rounded-full bg-green-400"
               title={isConnected ? 'Connected' : 'Disconnected'}
             ></div>
@@ -331,10 +331,10 @@ export default function App() {
                 <input
                   {...field}
                   className={\`w-full p-2 rounded-md bg-neutral-800 border text-sm \${
-                    isFieldLocked('title')
-                      ? 'border-red-500 opacity-70'
-                      : field.value
-                        ? 'border-neutral-600'
+                    isFieldLocked('title') 
+                      ? 'border-red-500 opacity-70' 
+                      : field.value 
+                        ? 'border-neutral-600' 
                         : 'border-neutral-700'
                   }\`}
                   disabled={isFieldLocked('title')}
@@ -362,10 +362,10 @@ export default function App() {
                 <input
                   {...field}
                   className={\`w-full p-2 rounded-md bg-neutral-800 border text-sm \${
-                    isFieldLocked('subtitle')
-                      ? 'border-red-500 opacity-70'
-                      : field.value
-                        ? 'border-neutral-600'
+                    isFieldLocked('subtitle') 
+                      ? 'border-red-500 opacity-70' 
+                      : field.value 
+                        ? 'border-neutral-600' 
                         : 'border-neutral-700'
                   }\`}
                   disabled={isFieldLocked('subtitle')}
@@ -395,10 +395,10 @@ export default function App() {
                 <input
                   {...field}
                   className={\`w-full p-2 rounded-md bg-neutral-800 border text-sm \${
-                    isFieldLocked('url')
-                      ? 'border-red-500 opacity-70'
-                      : field.value
-                        ? 'border-neutral-600'
+                    isFieldLocked('url') 
+                      ? 'border-red-500 opacity-70' 
+                      : field.value 
+                        ? 'border-neutral-600' 
                         : 'border-neutral-700'
                   }\`}
                   disabled={isFieldLocked('url')}
@@ -427,10 +427,10 @@ export default function App() {
                   {...field}
                   rows={4}
                   className={\`w-full p-2 rounded-md bg-neutral-800 border text-sm \${
-                    isFieldLocked('description')
-                      ? 'border-red-500 opacity-70'
-                      : field.value
-                        ? 'border-neutral-600'
+                    isFieldLocked('description') 
+                      ? 'border-red-500 opacity-70' 
+                      : field.value 
+                        ? 'border-neutral-600' 
                         : 'border-neutral-700'
                   }\`}
                   disabled={isFieldLocked('description')}
@@ -474,7 +474,7 @@ const layoutProps: ExampleLayoutProps = {
     'react-hook-form': 'latest',
   },
   description:
-    "A multi-user form that uses BA Realtime's presence feature to show which fields are currently being edited by other users in real-time.",
+    "A multi-user form that uses Supabase Realtime's presence feature to show which fields are currently being edited by other users in real-time.",
 }
 
 export default layoutProps

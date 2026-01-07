@@ -11,12 +11,12 @@ import * as Y from 'yjs';
 import Quill from 'quill';
 import 'quill/dist/quill.bubble.css'; // Using bubble theme without toolbar
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -41,10 +41,10 @@ export default function App() {
       nouns[Math.floor(Math.random() * nouns.length)]
     }\${Math.floor(Math.random() * 100)}\`;
     setUsername(randomName);
-
+    
     // Wait for the editor element to be available
     if (!editorRef.current) return;
-
+    
     // Initialize Quill without toolbar
     const quill = new Quill(editorRef.current, {
       placeholder: 'Start typing to collaborate...',
@@ -55,7 +55,7 @@ export default function App() {
         toolbar: false
       }
     });
-
+    
     // Apply dark theme styles to Quill editor
     editorRef.current.style.color = 'rgb(229, 229, 229)'; // text-neutral-200
     const editor = editorRef.current.querySelector('.ql-editor');
@@ -67,61 +67,61 @@ export default function App() {
         font-family: 'Inter', sans-serif;
       \`;
     }
-
+    
     // Set initial empty content
     quill.setText('');
-
+    
     quillRef.current = quill;
-
+    
     // Create a YJS document
     const ydoc = new Y.Doc();
     ydocRef.current = ydoc;
-
+    
     // Create a shared text type
     const ytext = ydoc.getText('quill');
-
-    // Set up BA channel
+    
+    // Set up Supabase channel
     const channel = supabase.channel(CHANNEL);
     channelRef.current = channel;
-
+    
     // Handle presence for user list
     channel.on('presence', { event: 'sync' }, () => {
       const state = channel.presenceState();
       const users = [];
-
+      
       Object.keys(state).forEach(key => {
         const presences = state[key];
         users.push(...presences);
       });
-
+      
       setActiveUsers(users);
     });
-
+    
     // Handle document updates
     channel.on('broadcast', { event: 'document-update' }, (payload) => {
       // Skip if this is our own update
       if (payload.payload.sender === ydoc.clientID) return;
-
+      
       // Apply YJS update
       const update = new Uint8Array(Object.values(payload.payload.update));
-
+      
       // Set flag to prevent echo
       isLocalChangeRef.current = true;
-
+      
       // Apply update to YJS document
       Y.applyUpdate(ydoc, update);
-
+      
       // Update Quill with the new content
       const newContent = ytext.toString();
       const currentContent = quill.getText();
-
+      
       if (newContent !== currentContent) {
         quill.setText(newContent);
       }
-
+      
       isLocalChangeRef.current = false;
     });
-
+    
     // Subscribe to channel
     channel.subscribe(async (status) => {
       if (status === 'SUBSCRIBED') {
@@ -131,29 +131,29 @@ export default function App() {
           username: randomName,
           online_at: new Date().getTime()
         });
-
+        
         setIsConnected(true);
       }
     });
-
+    
     // Listen for Quill text changes
     quill.on('text-change', (delta, oldDelta, source) => {
       if (source !== 'user' || isLocalChangeRef.current) return;
-
+      
       // Update YJS document
       ytext.delete(0, ytext.length);
       ytext.insert(0, quill.getText());
-
+      
       // Broadcast update
       const update = Y.encodeStateAsUpdate(ydoc);
-
+      
       // Convert to object for JSON serialization
       const updateObj = {};
       update.forEach((value, index) => {
         updateObj[index] = value;
       });
-
-      // Send update via BA
+      
+      // Send update via Supabase
       channel.send({
         type: 'broadcast',
         event: 'document-update',
@@ -163,7 +163,7 @@ export default function App() {
         }
       });
     });
-
+    
     // Clean up
     return () => {
       if (channel) {
@@ -177,8 +177,8 @@ export default function App() {
       {/* Header */}
       <div className="flex gap-2 flex-wrap absolute top-4 right-4">
         {activeUsers.map((user, index) => (
-          <div
-            key={index}
+          <div 
+            key={index} 
             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 text-neutral-300 text-xs"
           >
             <div className="w-1 h-1 rounded-full bg-green-400"></div>
@@ -186,7 +186,7 @@ export default function App() {
           </div>
         ))}
       </div>
-
+      
       {/* Main content */}
       <div className="flex-1 overflow-hidden p-12">
         <div className="max-w-4xl mx-auto h-full">
@@ -237,7 +237,7 @@ const layoutProps: ExampleLayoutProps = {
   },
   title: 'Collaborative Editor',
   description:
-    "A real-time collaborative text editor that uses BA Realtime's broadcast channel to sync document changes between users via YJS CRDT.",
+    "A real-time collaborative text editor that uses Supabase Realtime's broadcast channel to sync document changes between users via YJS CRDT.",
 }
 
 export default layoutProps

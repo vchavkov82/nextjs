@@ -7,12 +7,12 @@ import { createClient } from '@supabase/supabase-js';
 import { AutoSizer, Table, Column, InfiniteLoader } from 'react-virtualized';
 import 'react-virtualized/styles.css';
 
-// Initialize BA client
+// Initialize Supabase client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -31,7 +31,7 @@ const LOG_LEVEL_COLORS = {
 export default function App() {
   // Instance ID for channel
   const instanceId = useRef(Math.random().toString(36).substring(2, 9)).current;
-
+  
   // Log viewer state
   const [logs, setLogs] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
@@ -39,13 +39,13 @@ export default function App() {
   const [error, setError] = useState(null);
   const [isAtTop, setIsAtTop] = useState(true);
   const [logCountAtScroll, setLogCountAtScroll] = useState(0);
-
+  
   // Refs
   const tableRef = useRef(null);
   const gridRef = useRef(null);
   const newLogsRef = useRef([]);
 
-  // Function to load rows from BA
+  // Function to load rows from Supabase
   const loadMoreRows = async ({ startIndex, stopIndex }) => {
     try {
       setIsLoading(true);
@@ -57,7 +57,7 @@ export default function App() {
       const from = startIndex;
       const to = stopIndex;
 
-      // Query BA for the range of rows
+      // Query Supabase for the range of rows
       const { data, error, count } = await supabase
         .from(TABLE_NAME)
         .select('*', { count: 'exact' })
@@ -75,12 +75,12 @@ export default function App() {
       setLogs(prevLogs => {
         // Create a new array with the same length as before
         const newLogs = [...prevLogs];
-
+        
         // Insert the fetched logs at their correct positions
         data.forEach((log, index) => {
           newLogs[startIndex + index] = log;
         });
-
+        
         return newLogs;
       });
 
@@ -119,12 +119,12 @@ export default function App() {
 
   const levelCellRenderer = ({ cellData }) => {
     if (!cellData) return <div className="p-2"></div>;
-
+    
     const level = cellData;
     const colorClass = LOG_LEVEL_COLORS[level] || 'bg-neutral-700';
-
+    
     return (
-      <div
+      <div 
         className={\`p-2 inline-block rounded px-2 py-1 font-medium text-neutral-100/50 text-center min-w-[60px] text-white \${colorClass}\`}
       >
         {level}
@@ -134,10 +134,10 @@ export default function App() {
 
   const timestampCellRenderer = ({ cellData }) => {
     if (!cellData) return <div className="p-2"></div>;
-
+    
     const date = new Date(cellData);
     const formatted = date.toLocaleString();
-
+    
     return <div className="p-2 text-neutral-400">{formatted}</div>;
   };
 
@@ -150,7 +150,7 @@ export default function App() {
   const scrollToTop = () => {
     if (gridRef.current) {
       gridRef.current.scrollToPosition({ scrollTop: 0 });
-
+      
       // Apply new logs to the main logs array
       if (newLogsRef.current.length > 0) {
         setLogs(prevLogs => {
@@ -160,11 +160,11 @@ export default function App() {
           newLogsRef.current = [];
           return updatedLogs;
         });
-
+        
         // Update total count
         setTotalCount(prev => prev + newLogsRef.current.length);
       }
-
+      
       setIsAtTop(true);
       setLogCountAtScroll(0); // Reset the log count at scroll
     }
@@ -174,12 +174,12 @@ export default function App() {
   const handleScroll = ({ scrollTop }) => {
     const wasAtTop = isAtTop;
     setIsAtTop(scrollTop === 0);
-
+    
     // If we just started scrolling, capture the current log count
     if (wasAtTop && scrollTop > 0) {
       setLogCountAtScroll(totalCount);
     }
-
+    
     // If scrolled back to top, apply new logs and reset counter
     if (scrollTop === 0 && newLogsRef.current.length > 0) {
       // Apply new logs to the main logs array
@@ -190,7 +190,7 @@ export default function App() {
         newLogsRef.current = [];
         return updatedLogs;
       });
-
+      
       // Update total count
       setTotalCount(prev => prev + newLogsRef.current.length);
       setLogCountAtScroll(0); // Reset the log count at scroll
@@ -205,7 +205,7 @@ export default function App() {
         setIsLoading(true);
         setError(null);
 
-        // Query BA for the first page of logs
+        // Query Supabase for the first page of logs
         const { data, error, count } = await supabase
           .from(TABLE_NAME)
           .select('*', { count: 'exact' })
@@ -241,7 +241,7 @@ export default function App() {
       .channel('logs', { config: { private: true } })
       .on('broadcast', { event: 'INSERT' }, (payload) => {
         console.log('New log entry received:', payload);
-
+        
         // If we're at the top, add the new log to the beginning of the list
         if (isAtTop) {
           setLogs(prevLogs => [payload.payload.record, ...prevLogs]);
@@ -253,7 +253,7 @@ export default function App() {
         }
       })
       .subscribe(status => console.log("status:", status));
-
+    
     console.log('Real-time subscription set up successfully');
 
     return () => {
@@ -265,11 +265,11 @@ export default function App() {
   // Add a separate effect to handle isAtTop changes
   useEffect(() => {
     console.log('isAtTop changed:', isAtTop);
-
+    
     // If we're back at the top and have new logs, apply them
     if (isAtTop && newLogsRef.current.length > 0) {
       console.log('Applying new logs at top:', newLogsRef.current.length);
-
+      
       setLogs(prevLogs => {
         // Create a new array with new logs at the beginning
         const updatedLogs = [...newLogsRef.current, ...prevLogs];
@@ -277,7 +277,7 @@ export default function App() {
         newLogsRef.current = [];
         return updatedLogs;
       });
-
+      
       // Update total count and reset counter
       setTotalCount(prev => prev + newLogsRef.current.length);
       setLogCountAtScroll(0); // Reset the log count at scroll
@@ -289,7 +289,7 @@ export default function App() {
     return (ref) => {
       registerChild(ref);
       tableRef.current = ref;
-
+      
       // Get the Grid component from the Table
       if (ref) {
         gridRef.current = ref.Grid;
@@ -320,7 +320,7 @@ export default function App() {
 
       {/* New logs badge */}
       {shouldShowNotification && (
-        <div
+        <div 
           className="text-xs fixed top-24 left-1/2 transform -translate-x-1/2 bg-neutral-700 text-white px-4 py-2 rounded-full font-medium shadow-lg cursor-pointer z-50 hover:bg-neutral-600 flex items-center justify-center"
           onClick={scrollToTop}
         >
@@ -413,7 +413,7 @@ const layoutProps: ExampleLayoutProps = {
   },
   title: 'Log Viewer',
   description:
-    "A real-time log viewer that uses BA Realtime's broadcast channel to stream and display log entries as they occur across multiple instances.",
+    "A real-time log viewer that uses Supabase Realtime's broadcast channel to stream and display log entries as they occur across multiple instances.",
 }
 
 export default layoutProps

@@ -14,15 +14,10 @@
     "./hooks": "./hooks/index.ts",
     "./hooks/*": "./hooks/*",
     "./constants/*": "./constants/*",
-<<<<<<< HEAD
     "./telemetry-constants": "./telemetry-constants.ts",
     "./MetaFavicons/app-router": "./MetaFavicons/app-router.ts",
     "./MetaFavicons/pages-router": "./MetaFavicons/pages-router.tsx",
     "./assets/images/*": "./assets/images/*"
-=======
-    "./MetaFavicons/app-router": "./MetaFavicons/app-router.ts",
-    "./MetaFavicons/pages-router": "./MetaFavicons/pages-router.tsx"
->>>>>>> b333ef10b8 (clean up docs errors)
   },
   "license": "MIT",
   "scripts": {
