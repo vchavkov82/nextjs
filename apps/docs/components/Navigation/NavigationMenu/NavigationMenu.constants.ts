@@ -837,6 +837,78 @@ export const api: NavMenuConstant = {
   items: [
     { name: 'Overview', url: '/guides/api', items: [] },
     { name: 'Quickstart', url: '/guides/api/quickstart', items: [] },
+    {
+      name: 'Client Libraries',
+      url: '/guides/api/rest/client-libs',
+      items: [],
+    },
+    {
+      name: 'Auto-generated Docs',
+      url: '/guides/api/rest/auto-generated-docs',
+      items: [],
+    },
+    {
+      name: 'Generating TypeScript Types',
+      url: '/guides/api/rest/generating-types',
+      items: [],
+    },
+    {
+      name: 'Generating Python Types',
+      url: '/guides/api/rest/generating-python-types',
+      items: [],
+    },
+    {
+      name: 'Tools',
+      url: '/guides/api',
+      items: [{ name: 'SQL to REST API Translator', url: '/guides/api/sql-to-rest' }],
+    },
+    {
+      name: 'Guides',
+      url: '/guides/api',
+      items: [
+        { name: 'Creating API routes', url: '/guides/api/creating-routes' },
+        { name: 'How API Keys work', url: '/guides/api/api-keys' },
+        { name: 'Securing your API', url: '/guides/api/securing-your-api' },
+      ],
+    },
+    {
+      name: 'Using the Data APIs',
+      url: '/guides/api/data-apis',
+      items: [
+        {
+          name: 'Managing tables, views, and data',
+          url: '/guides/database/tables' as `/${string}`,
+        },
+        {
+          name: 'Querying joins and nested tables',
+          url: '/guides/database/joins-and-nesting' as `/${string}`,
+        },
+        {
+          name: 'JSON and unstructured data',
+          url: '/guides/database/json' as `/${string}`,
+        },
+        {
+          name: 'Managing database functions',
+          url: '/guides/database/functions' as `/${string}`,
+        },
+        {
+          name: 'Using full-text search',
+          url: '/guides/database/full-text-search' as `/${string}`,
+        },
+        {
+          name: 'Debugging performance issues',
+          url: '/guides/database/debugging-performance' as `/${string}`,
+        },
+        {
+          name: 'Using custom schemas',
+          url: '/guides/api/using-custom-schemas' as `/${string}`,
+        },
+        {
+          name: 'Converting from SQL to JavaScript API',
+          url: '/guides/api/sql-to-api' as `/${string}`,
+        },
+      ],
+    },
   ],
 }
 
