@@ -6,6 +6,7 @@ import {
   getGuidesMarkdown,
 } from '~/features/docs/GuidesMdx.utils'
 import { getEmptyArray } from '~/features/helpers.fn'
+import { notFound } from 'next/navigation'
 
 type Params = { slug?: string[] }
 
@@ -14,7 +15,12 @@ const RealtimeGuidePage = async (props: { params: Promise<Params> }) => {
   const slug = ['realtime', ...(params.slug ?? [])]
   const data = await getGuidesMarkdown(slug)
 
-  return <GuideTemplate {...data!} />
+  if (!data) {
+    notFound()
+  }
+
+  const { pathname, ...guideProps } = data
+  return <GuideTemplate {...guideProps} />
 }
 
 const generateStaticParams = IS_PROD ? genGuidesStaticParams('realtime') : getEmptyArray

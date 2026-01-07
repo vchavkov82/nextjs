@@ -2,6 +2,7 @@ import dayjs from 'dayjs'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FC, useEffect, useState } from 'react'
 import { useInterval } from 'react-use'
+import { v4 as uuidv4 } from 'uuid'
 import { Badge, cn } from 'ui'
 
 interface Props {
@@ -38,7 +39,7 @@ const RealtimeLogs: FC<Props> = ({ isActive, isInView, className }) => {
     return {
       status: Math.random() > 0.995 ? 500 : 200,
       method: Math.random() > 0.5 ? 'GET' : 'POST',
-      id: crypto.randomUUID(),
+      id: uuidv4(),
       timestamp: t,
     }
   }

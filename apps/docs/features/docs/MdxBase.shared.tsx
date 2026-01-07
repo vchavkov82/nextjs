@@ -22,10 +22,10 @@ import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator'
 import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator'
 
 // Import components directly instead of using dynamic() for MDX
-import AiPromptsIndex from '~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'
+import { AiPromptsIndex } from '~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'
 import AuthProviders from '~/components/AuthProviders'
 import ButtonCard from '~/components/ButtonCard'
-import MetricsStackCards from '~/components/MetricsStackCards'
+import { MetricsStackCards } from '~/components/MetricsStackCards'
 import { NavData } from '~/components/NavData'
 import { Price } from '~/components/Price'
 import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'

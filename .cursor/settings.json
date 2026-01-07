@@ -4,6 +4,9 @@
   "cursor.autoApproveTerminalCommands": true,
   "cursor.skipPermissionPrompts": true,
   "cursor.autoApproveCodeActions": true,
-  "cursor.autoApproveEdits": true
+  "cursor.autoApproveEdits": true,
+  "cursor.chat.allowTerminalCommandExecution": true,
+  "cursor.terminal.allowExecution": true,
+  "cursor.commands.autoApprove": true
 }
 

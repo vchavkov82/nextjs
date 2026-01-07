@@ -24,19 +24,30 @@ export const copyToClipboard = async (str: string | Promise<string>, callback = 
       })
       // [Joshen] Adding a timeout based on this comment here about a workaround
       // https://stackoverflow.com/questions/62327358/javascript-clipboard-api-safari-ios-notallowederror-message
-      setTimeout(() => {
-        navigator.clipboard.write([text]).then(callback)
-      }, 0)
+      return new Promise<void>((resolve, reject) => {
+        setTimeout(() => {
+          navigator.clipboard
+            .write([text])
+            .then(() => {
+              callback()
+              resolve()
+            })
+            .catch(reject)
+        }, 0)
+      })
     } else {
       // NOTE: Firefox has support for ClipboardItem and navigator.clipboard.write,
       // but those are behind `dom.events.asyncClipboard.clipboardItem` preference.
       // Good news is that other than Safari, Firefox does not care about
       // Clipboard API being used async in a Promise.
-      Promise.resolve(str)
+      return Promise.resolve(str)
         .then((text) => navigator.clipboard?.writeText(text))
-        .then(callback)
+        .then(() => {
+          callback()
+        })
     }
   } else {
     toast.error('Unable to copy to clipboard')
+    return Promise.reject(new Error('Window not focused'))
   }
 }

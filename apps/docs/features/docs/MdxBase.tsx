@@ -29,7 +29,10 @@ const MDXRemoteBase = async ({
           const result = isFeatureEnabled(feature as any)
           return String(result)
         } catch (error) {
-          console.error('Error resolving feature flag:', feature, error)
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.error('Error resolving feature flag:', feature, error)
+          }
           return 'false'
         }
       })
@@ -44,10 +47,10 @@ const MDXRemoteBase = async ({
     }
 
     // Use compileMDX which processes on the server and returns a component
-    // Note: There's a known issue with next-mdx-remote and React 19 where the library
-    // accesses element.ref internally, which is deprecated in React 19. This causes
-    // a console warning but doesn't break functionality. The library needs to be
-    // updated to support React 19's new ref handling.
+    // Note: There's a known issue with next-mdx-remote v5.0.0 and React 19 where the library
+    // tries to access `this.getData()` which doesn't exist in React Server Components context.
+    // This is a compatibility issue that requires next-mdx-remote to be updated for React 19 support.
+    // Workaround: Ensure we're in a proper React Server Component context when calling compileMDX
     try {
       const { content } = await compileMDX({
         source: resolvedSource,
@@ -68,7 +71,12 @@ const MDXRemoteBase = async ({
       return content
     } catch (compileError: unknown) {
       // Enhanced error logging for debugging MDX compilation issues
-      if (compileError instanceof Error && compileError.message?.includes('getData')) {
+      if (
+        process.env.NODE_ENV === 'development' &&
+        compileError instanceof Error &&
+        compileError.message?.includes('getData')
+      ) {
+        // eslint-disable-next-line no-console
         console.error('MDX compilation error (getData issue):', {
           message: compileError.message,
           stack: compileError.stack,
@@ -79,7 +87,10 @@ const MDXRemoteBase = async ({
       throw compileError
     }
   } catch (error) {
-    console.error('Error rendering MDX:', error)
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error rendering MDX:', error)
+    }
     throw error
   }
 }

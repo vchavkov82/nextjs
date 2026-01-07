@@ -40,7 +40,12 @@ export const ClientSideExceptionHandler = ({
       <div className="flex flex-col gap-y-1 text-left py-2 w-full">
         <div className="flex items-center justify-between mb-3">
           <p className="text-lg font-bold">Sorry! An unexpected error occurred.</p>
-          <CopyButton type="outline" text={message} copyLabel="Copy error" />
+          <CopyButton
+            type="outline"
+            text={urlMessage || message}
+            copyLabel="Copy error"
+            disabled={!urlMessage && !message}
+          />
         </div>
         <p className="text-sm">
           Application error: a client-side exception has occurred (see browser console for more

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { AlertCircle, Info } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useInterval } from 'react-use'
+import { v4 as uuidv4 } from 'uuid'
 import { cn } from 'ui'
 
 enum STATUS {
@@ -81,7 +82,7 @@ const QueryLogs = ({ isActive, isInView }: { isActive?: boolean; isInView?: bool
 
     return {
       timestamp: t,
-      id: crypto.randomUUID(),
+      id: uuidv4(),
       status: s,
       message: randomMessage,
     }
