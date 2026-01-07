@@ -1,7 +1,7 @@
 import { createAppAuth } from '@octokit/auth-app'
 import { Octokit } from '@octokit/core'
 import { paginateGraphql } from '@octokit/plugin-paginate-graphql'
-import crypto, { createHash } from 'node:crypto'
+import { createHash, createPrivateKey } from 'node:crypto'
 import { BaseLoader, BaseSource } from './base.js'
 
 export const ExtendedOctokit = Octokit.plugin(paginateGraphql)
@@ -38,7 +38,7 @@ export async function fetchDiscussions(owner: string, repo: string, categoryId: 
     auth: {
       appId,
       installationId,
-      privateKey: crypto.createPrivateKey(privateKey!).export({ type: 'pkcs8', format: 'pem' }),
+      privateKey: createPrivateKey(privateKey!).export({ type: 'pkcs8', format: 'pem' }),
     },
   })
 

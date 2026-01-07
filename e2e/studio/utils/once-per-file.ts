@@ -1,4 +1,4 @@
-import crypto from 'node:crypto'
+import { createHash, randomBytes } from 'node:crypto'
 import fs, { type FileHandle } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
@@ -6,12 +6,12 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = path.join(os.tmpdir(), 'playwright-locks')
 
-const sha1 = (str: string) => crypto.createHash('sha1').update(str).digest('hex')
+const sha1 = (str: string) => createHash('sha1').update(str).digest('hex')
 const uniqueWorkerId = () => {
   const workerIndex = process.env.TEST_WORKER_INDEX
   const hostname = os.hostname()
   const pid = process.pid
-  const uniquePart = crypto.randomBytes(4).toString('hex')
+  const uniquePart = randomBytes(4).toString('hex')
 
   return `${hostname}-${pid}-${workerIndex}-${uniquePart}`
 }

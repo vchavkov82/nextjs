@@ -1,4 +1,4 @@
-import '@code-hike/mdx/styles.css'
+import '@code-hike/mdx/dist/index.css'
 import '../styles/main.scss'
 
 import { genFaviconData } from 'common/MetaFavicons/app-router'

@@ -181,6 +181,7 @@ const nextConfig = {
     'api-types',
     'icons',
     'next-mdx-remote',
+    '@code-hike/mdx',
   ],
   outputFileTracingIncludes: {
     '/api/crawlers': ['./features/docs/generated/**/*', './docs/ref/**/*'],
@@ -198,6 +199,21 @@ const nextConfig = {
   // Note: @next/mdx handles .md/.mdx files for pages, but we need to handle non-page markdown imports
   // Note: next-plugin-yaml handles YAML files for webpack, but Turbopack needs explicit rules
   turbopack: {
+    resolveAlias: {
+      'spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      'spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      './spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      './spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      '../spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      '../spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      '~/spec/sections/generateMgmtApiSections.cts': emptyModulePath,
+      '~/spec/sections/generateMgmtApiSections.cts.js': emptyModulePath,
+      // Ignore Makefile via alias
+      '~/spec/Makefile': emptyModulePath,
+      'spec/Makefile': emptyModulePath,
+      // Add general ~ alias to match tsconfig.json paths configuration
+      '~': resolve(__dirname),
+    },
     rules: {
       // Handle .md files with raw-loader (for non-page markdown imports)
       // This prevents "Unknown module type" errors when Turbopack encounters .md files
@@ -212,6 +228,12 @@ const nextConfig = {
         as: '*.js',
       },
       '*.yml': {
+        loaders: ['raw-loader'],
+        as: '*.js',
+      },
+      // Handle .include files with raw-loader (for source file imports)
+      // This prevents "Unknown module type" errors when Turbopack encounters .include files
+      '*.include': {
         loaders: ['raw-loader'],
         as: '*.js',
       },
