@@ -147,9 +147,9 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       className={[__styles.base, baseClassNames].join(' ')}
       ref={refs?.base ? baseRefCallback : undefined}
     >
-      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : undefined}>
+      <TabsPrimitive.List className={listClasses.filter(Boolean).join(' ')} ref={refs?.list ? listRefCallback : undefined}>
         {addOnBefore}
-        {children.map((tab) => {
+        {Array.isArray(children) && children.map((tab) => {
           const isActive = activeTab === tab.id
           const triggerClasses = [variantStyles.base, __styles.size[size]]
           if (isActive) {

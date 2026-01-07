@@ -7,15 +7,6 @@ sidebar_label: 'Overview'
 hideToc: true
 ---
 
-export const examples = [
-  {
-    name: 'Resumable Uploads with Uppy',
-    description:
-      'Use Uppy to upload files to Supabase Storage using the TUS protocol (resumable uploads).',
-    href: 'https://github.com/supabase/supabase/tree/master/examples/storage/resumable-upload-uppy',
-  },
-]
-
 Supabase Storage is a robust, scalable solution for managing files of any size with fine-grained access controls and optimized delivery. Whether you're storing user-generated content, analytics data, or vector embeddings, Supabase Storage provides specialized bucket types to meet your specific needs.
 
 ## Key features
@@ -80,7 +71,14 @@ Specialized storage for vector embeddings and similarity search operations. Desi
 Check out all of the Storage [templates and examples](https://github.com/supabase/supabase/tree/master/examples/storage) in our GitHub repository.
 
 <div className="grid md:grid-cols-12 gap-4 not-prose">
-  {examples.map((x) => (
+  {[
+    {
+      name: 'Resumable Uploads with Uppy',
+      description:
+        'Use Uppy to upload files to Supabase Storage using the TUS protocol (resumable uploads).',
+      href: 'https://github.com/supabase/supabase/tree/master/examples/storage/resumable-upload-uppy',
+    },
+  ].map((x) => (
     <div className="col-span-12" key={x.href}>
       <Link href={x.href} passHref>
         <GlassPanel icon={'/docs/img/icons/github-icon'} hasLightIcon={true} title={x.name}>
