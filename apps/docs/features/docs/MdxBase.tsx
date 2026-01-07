@@ -71,18 +71,44 @@ const MDXRemoteBase = async ({
       return content
     } catch (compileError: unknown) {
       // Enhanced error logging for debugging MDX compilation issues
-      if (
-        process.env.NODE_ENV === 'development' &&
-        compileError instanceof Error &&
-        compileError.message?.includes('getData')
-      ) {
-        // eslint-disable-next-line no-console
-        console.error('MDX compilation error (getData issue):', {
-          message: compileError.message,
-          stack: compileError.stack,
-          sourceLength: resolvedSource.length,
-          sourcePreview: resolvedSource.substring(0, 200),
-        })
+      if (process.env.NODE_ENV === 'development') {
+        const errorInfo: Record<string, unknown> = {}
+        
+        if (compileError instanceof Error) {
+          errorInfo.message = compileError.message || 'Unknown error'
+          errorInfo.stack = compileError.stack || 'No stack trace available'
+          errorInfo.name = compileError.name || 'Error'
+        } else if (typeof compileError === 'string') {
+          errorInfo.message = compileError
+        } else if (compileError && typeof compileError === 'object') {
+          errorInfo.error = compileError
+          errorInfo.stringified = String(compileError)
+        } else {
+          errorInfo.error = compileError
+          errorInfo.type = typeof compileError
+        }
+        
+        // Add source information if available
+        if (typeof resolvedSource === 'string') {
+          errorInfo.sourceLength = resolvedSource.length
+          errorInfo.sourcePreview = resolvedSource.substring(0, 200)
+        } else {
+          errorInfo.sourceLength = 'N/A'
+          errorInfo.sourcePreview = 'Source not available'
+        }
+        
+        // Check if this is a getData issue
+        const isGetDataIssue = 
+          compileError instanceof Error && 
+          compileError.message?.includes('getData')
+        
+        if (isGetDataIssue) {
+          // eslint-disable-next-line no-console
+          console.error('MDX compilation error (getData issue):', errorInfo)
+        } else {
+          // eslint-disable-next-line no-console
+          console.error('MDX compilation error:', errorInfo)
+        }
       }
       throw compileError
     }
