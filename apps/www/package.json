@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384 --max-semi-space-size=512\" pnpm run content:build && next dev --turbopack --port 3000",
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=16384 --max-semi-space-size=512\" pnpm run content:build && next dev --port 3000",
+    "dev:node": "cross-env NODE_OPTIONS=\"--max-old-space-size=16384 --max-semi-space-size=512\" pnpm run content:build && next dev --port 3000",
     "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=8192\" pnpm run content:build && next build",
     "export": "next export",
     "start": "next start",
@@ -40,6 +41,7 @@
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.3.1",
     "clsx": "^1.2.1",
+    "critters": "^0.0.24",
     "cobe": "^0.6.2",
     "common": "workspace:*",
     "common-tags": "^1.8.2",
