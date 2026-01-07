@@ -10,6 +10,7 @@ import type { Blog, BlogData, PostReturnType } from 'types/post'
 import type { Metadata } from 'next'
 
 export const revalidate = 30
+export const dynamicParams = true
 
 // Helper function to fetch CMS post using our unified API
 async function getCMSPostFromAPI(
@@ -71,9 +72,9 @@ type Params = {
 }
 
 export async function generateStaticParams() {
-  // Get the same 2 posts that are shown on the blog listing page (sorted by date)
+  // Generate static params for the 2 most recent posts for better performance
+  // Other posts will be rendered on-demand with dynamicParams = true
   const sortedPosts = getSortedPosts({ directory: '_blog', limit: 2 })
-  // Don't include CMS posts
   return sortedPosts.map((post) => ({ slug: post.slug }))
 }
 
