@@ -527,6 +527,11 @@ module.exports = [
     source: '/docs/careers/:match*',
     destination: 'https://about.supabase.com/careers//:match*',
   },
+  {
+    permanent: false,
+    source: '/company/careers',
+    destination: '/careers',
+  },
 
   { permanent: false, source: '/docs/resources', destination: '/docs/guides' },
 

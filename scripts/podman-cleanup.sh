@@ -6,6 +6,12 @@
 #   ./scripts/cleanup-podman.sh --images     # Also remove images
 #   ./scripts/cleanup-podman.sh --volumes    # Also remove volumes
 #   ./scripts/cleanup-podman.sh --all        # Remove everything (containers, pods, networks, images, volumes)
+#
+# Note: You may see a warning "--: cannot set uid to 1001: effective uid 1001: Operation not permitted"
+# This is a harmless Podman rootless mode warning that appears during initialization.
+# It doesn't affect functionality and can be safely ignored. To suppress it globally, you can:
+#   - Add to ~/.bashrc: alias podman='podman 2>/dev/null'
+#   - Or redirect stderr when running: ./scripts/podman-cleanup.sh 2>/dev/null
 
 set -e
 
@@ -15,6 +21,18 @@ COMPOSE_FILE="$PROJECT_ROOT/docker/docker-compose.yml"
 
 REMOVE_IMAGES=false
 REMOVE_VOLUMES=false
+
+# Helper function to filter out harmless Podman rootless UID warnings
+# This warning appears because Podman cannot set effective UID to the host user's UID in rootless mode
+# It's harmless and doesn't affect functionality, but clutters the output
+filter_podman_warnings() {
+  local stderr_file=$(mktemp)
+  local exit_code=0
+  "$@" 2>"$stderr_file" || exit_code=$?
+  grep -vE "(cannot set uid|effective uid.*Operation not permitted|^--:)" "$stderr_file" >&2 || true
+  rm -f "$stderr_file"
+  return $exit_code
+}
 
 # Parse arguments
 while [[ $# -gt 0 ]]; do
@@ -46,7 +64,7 @@ echo "🧹 Starting Podman cleanup..."
 if [ -f "$COMPOSE_FILE" ]; then
   echo "  📦 Stopping and removing containers with podman-compose..."
   cd "$PROJECT_ROOT"
-  podman-compose -f "$COMPOSE_FILE" down --remove-orphans 2>/dev/null || true
+  filter_podman_warnings podman-compose -f "$COMPOSE_FILE" down --remove-orphans || true
   echo "    ✅ Containers stopped and removed"
 else
   echo "    ⚠️  Compose file not found at $COMPOSE_FILE, skipping podman-compose down"
@@ -54,12 +72,12 @@ fi
 
 # Step 2: Remove any remaining Supabase containers
 echo "  🗑️  Removing any remaining Supabase containers..."
-CONTAINERS=$(podman ps -a --filter "name=supabase" --format "{{.Names}}" 2>/dev/null || true)
+CONTAINERS=$(filter_podman_warnings podman ps -a --filter "name=supabase" --format "{{.Names}}" || true)
 if [ ! -z "$CONTAINERS" ]; then
   echo "$CONTAINERS" | while read -r container; do
     if [ ! -z "$container" ]; then
       echo "    Removing container: $container"
-      podman rm -f "$container" 2>/dev/null || true
+      filter_podman_warnings podman rm -f "$container" || true
     fi
   done
   echo "    ✅ Remaining containers removed"
@@ -69,12 +87,12 @@ fi
 
 # Step 3: Remove Podman pods
 echo "  🏗️  Removing Podman pods..."
-PODS=$(podman pod ps --filter "name=supabase" --format "{{.Name}}" 2>/dev/null || true)
+PODS=$(filter_podman_warnings podman pod ps --filter "name=supabase" --format "{{.Name}}" || true)
 if [ ! -z "$PODS" ]; then
   echo "$PODS" | while read -r pod; do
     if [ ! -z "$pod" ]; then
       echo "    Removing pod: $pod"
-      podman pod rm -f "$pod" 2>/dev/null || true
+      filter_podman_warnings podman pod rm -f "$pod" || true
     fi
   done
   echo "    ✅ Pods removed"
@@ -84,12 +102,12 @@ fi
 
 # Step 4: Remove Podman networks
 echo "  🌐 Removing Podman networks..."
-NETWORKS=$(podman network ls --filter "name=supabase" --format "{{.Name}}" 2>/dev/null || true)
+NETWORKS=$(filter_podman_warnings podman network ls --filter "name=supabase" --format "{{.Name}}" || true)
 if [ ! -z "$NETWORKS" ]; then
   echo "$NETWORKS" | while read -r network; do
     if [ ! -z "$network" ]; then
       echo "    Removing network: $network"
-      podman network rm "$network" 2>/dev/null || true
+      filter_podman_warnings podman network rm "$network" || true
     fi
   done
   echo "    ✅ Networks removed"
@@ -100,12 +118,12 @@ fi
 # Step 5: Remove images (if requested)
 if [ "$REMOVE_IMAGES" = true ]; then
   echo "  🖼️  Removing Podman images..."
-  IMAGES=$(podman images --filter "reference=supabase/*" --filter "reference=kong:*" --filter "reference=darthsim/imgproxy:*" --filter "reference=timberio/vector:*" --filter "reference=postgrest/postgrest:*" --format "{{.Repository}}:{{.Tag}}" 2>/dev/null || true)
+  IMAGES=$(filter_podman_warnings podman images --filter "reference=supabase/*" --filter "reference=kong:*" --filter "reference=darthsim/imgproxy:*" --filter "reference=timberio/vector:*" --filter "reference=postgrest/postgrest:*" --format "{{.Repository}}:{{.Tag}}" || true)
   if [ ! -z "$IMAGES" ]; then
     echo "$IMAGES" | while read -r image; do
       if [ ! -z "$image" ]; then
         echo "    Removing image: $image"
-        podman rmi "$image" 2>/dev/null || true
+        filter_podman_warnings podman rmi "$image" || true
       fi
     done
     echo "    ✅ Images removed"
@@ -117,12 +135,12 @@ fi
 # Step 6: Remove volumes (if requested)
 if [ "$REMOVE_VOLUMES" = true ]; then
   echo "  💾 Removing Podman volumes..."
-  VOLUMES=$(podman volume ls --filter "name=supabase" --format "{{.Name}}" 2>/dev/null || true)
+  VOLUMES=$(filter_podman_warnings podman volume ls --filter "name=supabase" --format "{{.Name}}" || true)
   if [ ! -z "$VOLUMES" ]; then
     echo "$VOLUMES" | while read -r volume; do
       if [ ! -z "$volume" ]; then
         echo "    Removing volume: $volume"
-        podman volume rm "$volume" 2>/dev/null || true
+        filter_podman_warnings podman volume rm "$volume" || true
       fi
     done
     echo "    ✅ Volumes removed"
