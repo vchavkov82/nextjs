@@ -145,7 +145,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       } else if (refs.base && 'current' in refs.base) {
         // Use type assertion to allow assignment to RefObject.current
         // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.base as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
+        ;(refs.base as React.MutableRefObject<HTMLDivElement | null>).current = elem
       }
     },
     [refs?.base]
@@ -159,7 +159,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       } else if (refs.list && 'current' in refs.list) {
         // Use type assertion to allow assignment to RefObject.current
         // This is safe because we're forwarding the ref from Radix UI
-        ;(refs.list as React.MutableRefObject<HTMLDivElement | null>).current = elem as HTMLDivElement | null
+        ;(refs.list as React.MutableRefObject<HTMLDivElement | null>).current = elem
       }
     },
     [refs?.list]
