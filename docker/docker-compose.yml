@@ -394,8 +394,11 @@ services:
     container_name: supabase-db
     image: supabase/postgres:15.8.1.085
     restart: unless-stopped
-    ports:
-      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+    # Port mapping commented out to avoid conflict with supavisor pooler
+    # Services can access db internally via Docker networking
+    # Uncomment below if you need direct database access (use a different port like 5433)
+    # ports:
+    #   - "5433:${POSTGRES_PORT}"
     volumes:
       - ./volumes/db/realtime.sql:/docker-entrypoint-initdb.d/migrations/99-realtime.sql:Z
       # Must be superuser to create event trigger
