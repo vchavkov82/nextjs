@@ -45,26 +45,45 @@ export const getSortedPosts = ({
   currentPostSlug,
 }: GetSortedPostsParams): Post[] => {
   //Finding directory named "blog" from the current working directory of Node.
-  const postDirectory = path.join(process.cwd(), directory)
+  let postDirectory = path.join(process.cwd(), directory)
+
+  // If directory doesn't exist at root, try apps/www prefix (for monorepo)
+  if (!fs.existsSync(postDirectory)) {
+    const altPath = path.join(process.cwd(), 'apps/www', directory)
+    if (fs.existsSync(altPath)) {
+      postDirectory = altPath
+    } else {
+      console.error(`[getSortedPosts] Directory not found: ${postDirectory} or ${altPath}`)
+      return []
+    }
+  }
 
   //Reads all the files in the post directory
-  const fileNames = fs.readdirSync(postDirectory)
+  let fileNames: string[]
+  try {
+    fileNames = fs.readdirSync(postDirectory)
+  } catch (error) {
+    console.error(`[getSortedPosts] Error reading directory ${postDirectory}:`, error)
+    return []
+  }
 
   const allPosts = fileNames
+    .filter((filename) => filename.endsWith('.mdx')) // Only process .mdx files
     .map((filename) => {
-      const slug =
-        directory === '_blog' || directory === '_events'
-          ? filename.replace('.mdx', '').substring(FILENAME_SUBSTRING)
-          : filename.replace('.mdx', '')
+      try {
+        const slug =
+          directory === '_blog' || directory === '_events'
+            ? filename.replace('.mdx', '').substring(FILENAME_SUBSTRING)
+            : filename.replace('.mdx', '')
 
-      const fullPath = path.join(postDirectory, filename)
+        const fullPath = path.join(postDirectory, filename)
 
-      //Extracts contents of the MDX file
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents) as unknown as {
-        data: { [key: string]: any; tags?: string[] }
-        content: string
-      }
+        //Extracts contents of the MDX file
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data, content } = matter(fileContents) as unknown as {
+          data: { [key: string]: any; tags?: string[] }
+          content: string
+        }
 
       const options: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' }
       // Handle date parsing - data.date might be a string or Date object
@@ -84,11 +103,16 @@ export const getSortedPosts = ({
         path: contentPath,
       }
 
-      return {
-        slug,
-        ...frontmatter,
+        return {
+          slug,
+          ...frontmatter,
+        }
+      } catch (error) {
+        console.error(`[getSortedPosts] Error processing file ${filename}:`, error)
+        return null
       }
     })
+    .filter((post): post is Post => post !== null) // Remove any failed posts
     // avoid reading content if it's the same post as the one the user is already reading
     .filter((post) => post.slug !== currentPostSlug)
 
@@ -125,7 +149,15 @@ export const getSortedPosts = ({
 // Get Slugs
 export const getAllPostSlugs = (directory: Directories) => {
   //Finding directory named "blog" from the current working directory of Node.
-  const postDirectory = path.join(process.cwd(), directory)
+  let postDirectory = path.join(process.cwd(), directory)
+
+  // If directory doesn't exist at root, try apps/www prefix (for monorepo)
+  if (!fs.existsSync(postDirectory)) {
+    const altPath = path.join(process.cwd(), 'apps/www', directory)
+    if (fs.existsSync(altPath)) {
+      postDirectory = altPath
+    }
+  }
 
   const fileNames = fs.readdirSync(postDirectory)
 
@@ -161,11 +193,18 @@ export const getPostdata = async (slug: string, directory: string) => {
 
   /**
    * Return full directory
+   * Try multiple possible paths to handle monorepo structure
    */
-  const postDirectory = path.join(process.cwd(), directory)
+  let postDirectory = path.join(process.cwd(), directory)
   
+  // If directory doesn't exist at root, try apps/www prefix (for monorepo)
   if (!fs.existsSync(postDirectory)) {
-    throw new Error(`Directory not found: ${postDirectory}`)
+    const altPath = path.join(process.cwd(), 'apps/www', directory)
+    if (fs.existsSync(altPath)) {
+      postDirectory = altPath
+    } else {
+      throw new Error(`Directory not found: ${postDirectory} or ${altPath}`)
+    }
   }
   
   const folderfiles = fs.readdirSync(postDirectory)
