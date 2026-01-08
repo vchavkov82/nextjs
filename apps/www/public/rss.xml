@@ -4,93 +4,9 @@
       <link>https://supabase.com</link>
       <description>Latest news from Supabase</description>
       <language>en</language>
-      <lastBuildDate>Fri, 19 Dec 2025 00:00:00 -0700</lastBuildDate>
+      <lastBuildDate>Thu, 16 Oct 2025 00:00:00 -0700</lastBuildDate>
       <atom:link href="https://supabase.com/rss.xml" rel="self" type="application/rss+xml"/>
       <item>
-  <guid>https://supabase.com/blog/stripe-sync-engine-integration</guid>
-  <title>Sync Stripe Data to Your Supabase Database in One Click</title>
-  <link>https://supabase.com/blog/stripe-sync-engine-integration</link>
-  <description>Announcing official support for the Stripe Sync Engine in the Supabase Dashboard. Get a one-click integration that syncs your Stripe data directly into your Supabase database.</description>
-  <pubDate>Fri, 19 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/building-chatgpt-apps-with-supabase</guid>
-  <title>Building ChatGPT Apps with Supabase Edge Functions and mcp-use</title>
-  <link>https://supabase.com/blog/building-chatgpt-apps-with-supabase</link>
-  <description>Learn how to build a ChatGPT app that connects to your Supabase database using mcp-use and Edge Functions. Create interactive widgets for schema exploration, data viewing, and SQL queries.</description>
-  <pubDate>Wed, 17 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/metrics-api-observability</guid>
-  <title>Own Your Observability: Supabase Metrics API</title>
-  <link>https://supabase.com/blog/metrics-api-observability</link>
-  <description>Stream your Supabase database telemetry into any Prometheus-compatible observability stack with the Metrics API. Full control over monitoring, visualization, and alerting.</description>
-  <pubDate>Tue, 16 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/introducing-iceberg-js</guid>
-  <title>Introducing iceberg-js: A JavaScript Client for Apache Iceberg</title>
-  <link>https://supabase.com/blog/introducing-iceberg-js</link>
-  <description>A minimal, vendor-agnostic JavaScript client for the Apache Iceberg REST Catalog API, providing type-safe catalog management for JavaScript and TypeScript developers.</description>
-  <pubDate>Mon, 08 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/introducing-supabase-for-platforms</guid>
-  <title>Introducing Supabase for Platforms</title>
-  <link>https://supabase.com/blog/introducing-supabase-for-platforms</link>
-  <description>Use Supabase as a platform for your own business and tools</description>
-  <pubDate>Fri, 05 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/adding-async-streaming-to-pg-fdw</guid>
-  <title>Adding Async Streaming to Postgres Foreign Data Wrappers</title>
-  <link>https://supabase.com/blog/adding-async-streaming-to-pg-fdw</link>
-  <description>Supabase Wrappers introduces asynchronous streaming to Postgres Foreign Data Wrappers, enabling efficient, memory-safe queries for massive analytical workloads.</description>
-  <pubDate>Thu, 04 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/oauth2-provider</guid>
-  <title>Build &quot;Sign in with Your App&quot; using Supabase Auth</title>
-  <link>https://supabase.com/blog/oauth2-provider</link>
-  <description>Supabase Auth now supports OAuth 2.1 and OpenID Connect server capabilities, turning your project into a full-fledged identity provider for AI agents, third-party developers, and enterprise SSO.</description>
-  <pubDate>Thu, 04 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/introducing-seven-new-email-templates-for-auth</guid>
-  <title>Introducing Seven New Email Templates for Supabase Auth</title>
-  <link>https://supabase.com/blog/introducing-seven-new-email-templates-for-auth</link>
-  <description>Notify users when security-sensitive actions are taken on their account.</description>
-  <pubDate>Wed, 03 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/supabase-power-for-kiro</guid>
-  <title>The new Supabase power for Kiro</title>
-  <link>https://supabase.com/blog/supabase-power-for-kiro</link>
-  <description>Build full-stack applications faster with the Kiro IDE using deep knowledge of your Supabase project, best practices for database migrations, edge functions, and security policies.</description>
-  <pubDate>Wed, 03 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/introducing-analytics-buckets</guid>
-  <title>Introducing Analytics Buckets</title>
-  <link>https://supabase.com/blog/introducing-analytics-buckets</link>
-  <description>Use Analytics Buckets to store huge datasets in Supabase Storage with Apache Iceberg and columnar Parquet format, optimized for analytical workloads.</description>
-  <pubDate>Tue, 02 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/introducing-supabase-etl</guid>
-  <title>Introducing Supabase ETL</title>
-  <link>https://supabase.com/blog/introducing-supabase-etl</link>
-  <description>A change-data-capture pipeline that replicates your Postgres tables to analytical destinations like Analytics Buckets and BigQuery in near real time.</description>
-  <pubDate>Tue, 02 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/vector-buckets</guid>
-  <title>Introducing Vector Buckets</title>
-  <link>https://supabase.com/blog/vector-buckets</link>
-  <description>Introducing vector storage in Supabase: a durable storage layer with similarity search built-in.</description>
-  <pubDate>Mon, 01 Dec 2025 00:00:00 -0700</pubDate>
-</item>
-<item>
   <guid>https://supabase.com/blog/snap-launches-snap-cloud</guid>
   <title>Snap, Inc. Launches Snap Cloud, Powered by Supabase</title>
   <link>https://supabase.com/blog/snap-launches-snap-cloud</link>
@@ -609,13 +525,6 @@
   <pubDate>Mon, 30 Sep 2024 00:00:00 -0700</pubDate>
 </item>
 <item>
-  <guid>https://supabase.com/blog/local-first-expo-legend-state</guid>
-  <title>Local-first Realtime Apps with Expo and Legend-State</title>
-  <link>https://supabase.com/blog/local-first-expo-legend-state</link>
-  <description>Build local-first realtime web and mobile apps with Expo, Legend-State, and Supabase.</description>
-  <pubDate>Mon, 23 Sep 2024 00:00:00 -0700</pubDate>
-</item>
-<item>
   <guid>https://supabase.com/blog/edge-functions-faster-smaller</guid>
   <title>Edge Functions are now 2x smaller and boot 3x faster</title>
   <link>https://supabase.com/blog/edge-functions-faster-smaller</link>
@@ -628,13 +537,6 @@
   <link>https://supabase.com/blog/flutter-uber-clone</link>
   <description>Learn how to handle real-time geospatial data using Supabase Realtime and Flutter.</description>
   <pubDate>Thu, 05 Sep 2024 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/in-browser-semantic-search-pglite</guid>
-  <title>In-Browser Semantic AI Search with PGlite and Transformers.js</title>
-  <link>https://supabase.com/blog/in-browser-semantic-search-pglite</link>
-  <description>Use pgvector in PGlite and combine it with Huggingface Transformers.js for a fully local, in-browser semantic search functionality!</description>
-  <pubDate>Thu, 29 Aug 2024 00:00:00 -0700</pubDate>
 </item>
 <item>
   <guid>https://supabase.com/blog/supabase-vercel-partnership</guid>
@@ -789,20 +691,6 @@
   <link>https://supabase.com/blog/postgis-generate-vector-tiles</link>
   <description>Use PostGIS to programmatically generate Mapbox Vector Tiles and render them with MapLibre GL.</description>
   <pubDate>Wed, 26 Jun 2024 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/self-host-maps-storage-protomaps</guid>
-  <title>Self-host Maps with Protomaps and Supabase Storage</title>
-  <link>https://supabase.com/blog/self-host-maps-storage-protomaps</link>
-  <description>Host Protomaps PMTiles on Supabase Storage and render them with MapLibre GL.</description>
-  <pubDate>Wed, 19 Jun 2024 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/calcom-platform-starter-kit-nextjs-supabase</guid>
-  <title>Cal.com launches Expert Marketplace built with Next.js and Supabase.</title>
-  <link>https://supabase.com/blog/calcom-platform-starter-kit-nextjs-supabase</link>
-  <description>Cal.com and Supabase team up to build an open-source platform starter kit for developers.</description>
-  <pubDate>Tue, 18 Jun 2024 00:00:00 -0700</pubDate>
 </item>
 <item>
   <guid>https://supabase.com/blog/meetup-kahoot-alternative</guid>
@@ -1015,13 +903,6 @@
   <pubDate>Wed, 17 Jan 2024 00:00:00 -0700</pubDate>
 </item>
 <item>
-  <guid>https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers</guid>
-  <title>Using React Query with Next.js App Router and Supabase Cache Helpers</title>
-  <link>https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers</link>
-  <description>Learn how to use React Query in Next.js Client &amp; Server Components for data fetching with Supabase.</description>
-  <pubDate>Fri, 12 Jan 2024 00:00:00 -0700</pubDate>
-</item>
-<item>
   <guid>https://supabase.com/blog/ipv6</guid>
   <title>Brace yourself, IPv6 is coming</title>
   <link>https://supabase.com/blog/ipv6</link>
@@ -1183,13 +1064,6 @@
   <pubDate>Tue, 21 Nov 2023 00:00:00 -0700</pubDate>
 </item>
 <item>
-  <guid>https://supabase.com/blog/react-native-authentication</guid>
-  <title>Getting started with React Native authentication</title>
-  <link>https://supabase.com/blog/react-native-authentication</link>
-  <description>Learn how to implement authentication in your React Native applications.</description>
-  <pubDate>Thu, 16 Nov 2023 00:00:00 -0700</pubDate>
-</item>
-<item>
   <guid>https://supabase.com/blog/beta-update-october-2023</guid>
   <title>Supabase Beta October 2023</title>
   <link>https://supabase.com/blog/beta-update-october-2023</link>
@@ -1323,13 +1197,6 @@
   <pubDate>Sat, 05 Aug 2023 00:00:00 -0700</pubDate>
 </item>
 <item>
-  <guid>https://supabase.com/blog/interactive-constellation-threejs-react-three-fiber</guid>
-  <title>Coding the stars - an interactive constellation with Three.js and React Three Fiber</title>
-  <link>https://supabase.com/blog/interactive-constellation-threejs-react-three-fiber</link>
-  <description>How we built a constellation of stars with Three.js and React Three Fiber.</description>
-  <pubDate>Fri, 04 Aug 2023 00:00:00 -0700</pubDate>
-</item>
-<item>
   <guid>https://supabase.com/blog/fewer-dimensions-are-better-pgvector</guid>
   <title>pgvector: Fewer dimensions are better</title>
   <link>https://supabase.com/blog/fewer-dimensions-are-better-pgvector</link>
@@ -1342,13 +1209,6 @@
   <link>https://supabase.com/blog/beta-update-july-2023</link>
   <description>Launch Week 8 is coming - but we still shipped some goodies during July</description>
   <pubDate>Wed, 02 Aug 2023 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/react-native-storage</guid>
-  <title>React Native file upload with Supabase Storage</title>
-  <link>https://supabase.com/blog/react-native-storage</link>
-  <description>Learn how to implement authentication and file upload in a React Native app.</description>
-  <pubDate>Tue, 01 Aug 2023 00:00:00 -0700</pubDate>
 </item>
 <item>
   <guid>https://supabase.com/blog/supabase-lw8-hackathon</guid>
@@ -1545,13 +1405,6 @@
   <link>https://supabase.com/blog/launch-week-7-hackathon</link>
   <description>Build an Open Source Project over 10 days. 5 prize categories.</description>
   <pubDate>Fri, 07 Apr 2023 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/infinite-scroll-with-nextjs-framer-motion</guid>
-  <title>Infinite scroll with Next.js, Framer Motion, and Supabase</title>
-  <link>https://supabase.com/blog/infinite-scroll-with-nextjs-framer-motion</link>
-  <description>Lazy load and paginate data on scroll with Next.js and a sprinkle of Framer Motion magic ✨</description>
-  <pubDate>Tue, 04 Apr 2023 00:00:00 -0700</pubDate>
 </item>
 <item>
   <guid>https://supabase.com/blog/supaclub</guid>
@@ -1762,13 +1615,6 @@
   <link>https://supabase.com/blog/flutter-authorization-with-rls</link>
   <description>Learn how you can secure your Flutter app using Supabase Row Level Security.</description>
   <pubDate>Tue, 22 Nov 2022 00:00:00 -0700</pubDate>
-</item>
-<item>
-  <guid>https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components</guid>
-  <title>Fetching and caching Supabase data in Next.js 13 Server Components</title>
-  <link>https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components</link>
-  <description>Next.js 13 introduces new data fetching and caching methods to enable React Server Components and Suspense.</description>
-  <pubDate>Thu, 17 Nov 2022 00:00:00 -0700</pubDate>
 </item>
 <item>
   <guid>https://supabase.com/blog/authentication-in-ionic-angular</guid>
