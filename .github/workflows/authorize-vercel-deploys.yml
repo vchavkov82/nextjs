@@ -46,5 +46,13 @@ jobs:
 <<<<<<< HEAD
 =======
           # The SHA of the commit that triggered the validate-pr workflow
+<<<<<<< HEAD
 >>>>>>> 82d4788738 (fix: Use `head_commit_sha` in `authorize-vercel-deploys.yml` action (#41795))
           HEAD_COMMIT_SHA: ${{ github.event.workflow_run.head_sha }}
+=======
+<<<<<<< HEAD
+          HEAD_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+=======
+          HEAD_COMMIT_SHA: ${{ github.event.workflow_run.head_sha }}
+>>>>>>> 47f42377cb (fix: Use `head_commit_sha` in `authorize-vercel-deploys.yml` action (#41795))
+>>>>>>> 04f57349ec (fix: Use `head_commit_sha` in `authorize-vercel-deploys.yml` action (#41795))
