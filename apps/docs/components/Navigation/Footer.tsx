@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Button, cn, IconDiscord, IconGitHubSolid, IconTwitterX, IconYoutubeSolid } from 'ui'
+import { Button, cn } from 'ui'
 import { primaryLinks, secondaryLinks } from '~/data/footer'
 import { LayoutMainContent } from '~/layouts/DefaultLayout'
 
@@ -51,39 +51,6 @@ const Footer = ({ className }: { className?: string }) => (
               )
             )
           )}
-        </div>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://twitter.com/supabase"
-            className="text-foreground-muted hover:text-foreground transition"
-          >
-            <span className="sr-only">Twitter</span>
-            <IconTwitterX size={14} />
-          </a>
-
-          <a
-            href="https://github.com/supabase"
-            className="text-foreground-muted hover:text-foreground transition"
-          >
-            <span className="sr-only">GitHub</span>
-            <IconGitHubSolid size={14} />
-          </a>
-
-          <a
-            href="https://discord.supabase.com/"
-            className="text-foreground-muted hover:text-foreground transition"
-          >
-            <span className="sr-only">Discord</span>
-            <IconDiscord size={14} />
-          </a>
-
-          <a
-            href="https://youtube.com/c/supabase"
-            className="text-foreground-muted hover:text-foreground transition"
-          >
-            <span className="sr-only">Youtube</span>
-            <IconYoutubeSolid size={14} />
-          </a>
         </div>
       </div>
     </footer>

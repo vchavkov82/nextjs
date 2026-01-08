@@ -10,7 +10,7 @@ import * as supabaseLogoWordmarkDark from 'common/assets/images/supabase-logo-wo
 import * as supabaseLogoWordmarkLight from 'common/assets/images/supabase-logo-wordmark--light.png'
 import footerData from 'data/Footer'
 import { usePathname } from 'next/navigation'
-import { Badge, IconDiscord, IconGitHubSolid, IconTwitterX, IconYoutubeSolid, cn } from 'ui'
+import { Badge, cn } from 'ui'
 import { ThemeToggle } from 'ui-patterns/ThemeToggle'
 import supabase from '@/lib/supabase'
 import useDarkLaunchWeeks from '../../hooks/useDarkLaunchWeeks'
@@ -96,39 +96,6 @@ const Footer = (props: Props) => {
                 priority
               />
             </Link>
-            <div className="flex space-x-5">
-              <a
-                href="https://twitter.com/supabase"
-                className="text-foreground-lighter hover:text-foreground transition"
-              >
-                <span className="sr-only">Twitter</span>
-                <IconTwitterX size={22} />
-              </a>
-
-              <a
-                href="https://github.com/supabase"
-                className="text-foreground-lighter hover:text-foreground transition"
-              >
-                <span className="sr-only">GitHub</span>
-                <IconGitHubSolid size={22} />
-              </a>
-
-              <a
-                href="https://discord.supabase.com/"
-                className="text-foreground-lighter hover:text-foreground transition"
-              >
-                <span className="sr-only">Discord</span>
-                <IconDiscord size={22} />
-              </a>
-
-              <a
-                href="https://youtube.com/c/supabase"
-                className="text-foreground-lighter hover:text-foreground transition"
-              >
-                <span className="sr-only">Youtube</span>
-                <IconYoutubeSolid size={22} />
-              </a>
-            </div>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-5 xl:mt-0">
             <div className="grid grid-cols-2 gap-4 md:grid-cols-5">

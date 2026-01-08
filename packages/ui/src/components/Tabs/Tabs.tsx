@@ -1,6 +1,7 @@
 'use client'
 
 import * as TabsPrimitive from '@radix-ui/react-tabs'
+import * as React from 'react'
 import {
   Children,
   isValidElement,
@@ -117,8 +118,12 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   if (listClassNames) listClasses.push(listClassNames)
 
   // Normalize refs to handle both RefObject and callback refs
+  // Use React.ElementRef to get the correct ref type for Radix UI components
+  type TabsRootRef = React.ElementRef<typeof TabsPrimitive.Root>
+  type TabsListRef = React.ElementRef<typeof TabsPrimitive.List>
+
   const baseRefCallback = useCallback(
-    (elem: HTMLDivElement | null) => {
+    (elem: TabsRootRef | null) => {
       if (!refs?.base) return
       if (typeof refs.base === 'function') {
         refs.base(elem)
@@ -130,7 +135,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   )
 
   const listRefCallback = useCallback(
-    (elem: HTMLDivElement | null) => {
+    (elem: TabsListRef | null) => {
       if (!refs?.list) return
       if (typeof refs.list === 'function') {
         refs.list(elem)

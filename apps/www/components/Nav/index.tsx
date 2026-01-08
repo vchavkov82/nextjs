@@ -10,7 +10,6 @@ import { Button, buttonVariants, cn } from 'ui'
 import { AuthenticatedDropdownMenu } from 'ui-patterns'
 
 import { useSendTelemetryEvent } from 'lib/telemetry'
-import GitHubButton from './GitHubButton'
 import HamburgerButton from './HamburgerMenu'
 import RightClickBrandLogo from './RightClickBrandLogo'
 import useDropdownMenu from './useDropdownMenu'
@@ -148,8 +147,6 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                 </NavigationMenu>
               </div>
               <div className="flex items-center gap-2 opacity-0 animate-fade-in !scale-100 delay-300">
-                <GitHubButton />
-
                 {isLoggedIn ? (
                   <>
                     <Button className="hidden lg:block" asChild>
