@@ -1,7 +1,6 @@
 import {
   BotIcon,
   Building2Icon,
-  Code2Icon,
   HammerIcon,
   LightbulbIcon,
   PointerIcon,
@@ -17,7 +16,6 @@ export enum Solutions {
   aiBuilders = 'ai-builders',
   noCode = 'no-code',
   beginners = 'beginners',
-  developers = 'developers',
   postgresDevs = 'postgres-developers',
   firebase = 'firebase',
   neon = 'neon',
@@ -52,13 +50,6 @@ export const skillBasedSolutions = {
       description: '',
       url: '/solutions/beginners',
       icon: PuzzleIcon,
-    },
-    {
-      id: Solutions.developers,
-      text: 'Developers',
-      description: '',
-      url: '/solutions/developers',
-      icon: Code2Icon,
     },
     {
       id: Solutions.postgresDevs,
