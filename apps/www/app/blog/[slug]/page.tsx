@@ -1,15 +1,16 @@
 import BlogPostClient from './BlogPostClient'
 import { draftMode } from 'next/headers'
-import { notFound } from 'next/navigation'
 import { getAllCMSPostSlugs, getCMSPostBySlug } from 'lib/get-cms-posts'
 import { getAllPostSlugs, getPostdata, getSortedPosts } from 'lib/posts'
 import { CMS_SITE_ORIGIN, SITE_ORIGIN } from '@/lib/constants'
 import { processCMSContent } from '@/lib/cms/processCMSContent'
+import { redirect, notFound } from 'next/navigation'
 
 import type { Blog, BlogData, PostReturnType } from 'types/post'
 import type { Metadata } from 'next'
 
-export const revalidate = 30
+// Disable caching for dynamic posts to ensure proper 404 handling
+export const revalidate = 0
 export const dynamicParams = true
 
 // Helper function to fetch CMS post using our unified API
@@ -29,14 +30,14 @@ async function getCMSPostFromAPI(
     // Use different caching strategies based on draft mode
     const fetchOptions = isDraft
       ? {
-          // For draft mode: always fresh data, no caching
-          // cache: 'no-store' as const,
-          next: { revalidate: 0 },
-        }
+        // For draft mode: always fresh data, no caching
+        // cache: 'no-store' as const,
+        next: { revalidate: 0 },
+      }
       : {
-          // For published posts: allow static generation with revalidation
-          next: { revalidate: 60 }, // 1 minute
-        }
+        // For published posts: allow static generation with revalidation
+        next: { revalidate: 60 }, // 1 minute
+      }
 
     const response = await fetch(url.toString(), fetchOptions)
 
@@ -208,7 +209,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       readingTime: generateReadingTime(content),
     }
 
-    const allStaticPosts = getSortedPosts({ directory: '_blog' })
+    // Limit to 5 posts for testing - only get enough to find prev/next
+    const allStaticPosts = getSortedPosts({ directory: '_blog', limit: 5 })
     const allPosts = [...allStaticPosts].sort((a, b) => {
       const aDate = new Date((a as unknown as { date: string }).date).getTime()
       const bDate = new Date((b as unknown as { date: string }).date).getTime()
@@ -244,9 +246,11 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
     return <BlogPostClient {...props} />
   } catch (error) {
-    // Static markdown post not found, try CMS post
-    // Only log if it's not a "file not found" type error
-    if (error instanceof Error && !error.message.includes('ENOENT')) {
+    // Static markdown post not found or failed to compile, try CMS post
+    // Log MDX compilation errors for debugging
+    if (error instanceof Error && error.message.includes('MDX')) {
+      console.log(`[BlogPostPage] Skipping MDX post for slug "${slug}" due to compilation error, falling back to CMS`)
+    } else if (error instanceof Error && !error.message.includes('ENOENT') && !error.message.includes('Directory not found') && !error.message.includes('Post not found')) {
       console.warn(`[BlogPostPage] Error loading static post for slug "${slug}":`, error)
     }
   }
@@ -259,6 +263,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     cmsPost = await getCMSPostBySlug(slug, isDraft)
   }
 
+  // If still no post found, handle appropriately
   if (!cmsPost) {
     if (isDraft) {
       // Try to fetch published version for draft mode
@@ -268,6 +273,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       }
 
       if (!publishedPost) {
+        console.log(`[BlogPostPage] No post found for slug "${slug}", returning 404`)
         notFound()
       }
 
@@ -298,6 +304,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       }
       return <BlogPostClient {...props} />
     }
+    console.log(`[BlogPostPage] No post found for slug "${slug}", returning 404`)
     notFound()
   }
 

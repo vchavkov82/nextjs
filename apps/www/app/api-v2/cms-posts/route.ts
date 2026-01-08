@@ -67,12 +67,12 @@ function richTextToPlainText(content: any): string {
       } else if (node?.type === 'list') {
         const items = Array.isArray(node.children)
           ? node.children
-              .map((item: any) =>
-                Array.isArray(item?.children)
-                  ? item.children.map((c: any) => c?.text || '').join('')
-                  : ''
-              )
-              .filter(Boolean)
+            .map((item: any) =>
+              Array.isArray(item?.children)
+                ? item.children.map((c: any) => c?.text || '').join('')
+                : ''
+            )
+            .filter(Boolean)
           : []
         if (items.length > 0) segments.push(items.join(' '))
       } else if (node?.type === 'link') {
@@ -198,18 +198,18 @@ export async function GET(request: NextRequest) {
                 readingTime,
                 authors: Array.isArray(latestVersion.authors)
                   ? latestVersion.authors.map((a: any) => ({
-                      author: a?.author || 'Unknown Author',
-                      author_id: a?.author_id || '',
-                      position: a?.position || '',
-                      author_url: a?.author_url || '#',
-                      author_image_url: a?.author_image_url?.url
-                        ? typeof a.author_image_url.url === 'string' &&
-                          a.author_image_url.url.includes('http')
-                          ? a.author_image_url.url
-                          : `${baseUrl}${a.author_image_url.url}`
-                        : null,
-                      username: a?.username || '',
-                    }))
+                    author: a?.author || 'Unknown Author',
+                    author_id: a?.author_id || '',
+                    position: a?.position || '',
+                    author_url: a?.author_url || '#',
+                    author_image_url: a?.author_image_url?.url
+                      ? typeof a.author_image_url.url === 'string' &&
+                        a.author_image_url.url.includes('http')
+                        ? a.author_image_url.url
+                        : `${baseUrl}${a.author_image_url.url}`
+                      : null,
+                    username: a?.username || '',
+                  }))
                   : [],
                 thumb: latestVersion.thumb?.url
                   ? `${baseUrl}${latestVersion.thumb.url}`
@@ -283,18 +283,18 @@ export async function GET(request: NextRequest) {
               readingTime,
               authors: Array.isArray(post.authors)
                 ? post.authors.map((a: any) => ({
-                    author: a?.author || 'Unknown Author',
-                    author_id: a?.author_id || '',
-                    position: a?.position || '',
-                    author_url: a?.author_url || '#',
-                    author_image_url: a?.author_image_url?.url
-                      ? typeof a.author_image_url.url === 'string' &&
-                        a.author_image_url.url.includes('http')
-                        ? a.author_image_url.url
-                        : `${baseUrl}${a.author_image_url.url}`
-                      : null,
-                    username: a?.username || '',
-                  }))
+                  author: a?.author || 'Unknown Author',
+                  author_id: a?.author_id || '',
+                  position: a?.position || '',
+                  author_url: a?.author_url || '#',
+                  author_image_url: a?.author_image_url?.url
+                    ? typeof a.author_image_url.url === 'string' &&
+                      a.author_image_url.url.includes('http')
+                      ? a.author_image_url.url
+                      : `${baseUrl}${a.author_image_url.url}`
+                    : null,
+                  username: a?.username || '',
+                }))
                 : [],
               thumb: post.thumb?.url ? `${baseUrl}${post.thumb.url}` : undefined,
               image: post.image?.url ? `${baseUrl}${post.image.url}` : undefined,
@@ -362,18 +362,18 @@ export async function GET(request: NextRequest) {
               readingTime,
               authors: Array.isArray(post.authors)
                 ? post.authors.map((a: any) => ({
-                    author: a?.author || 'Unknown Author',
-                    author_id: a?.author_id || '',
-                    position: a?.position || '',
-                    author_url: a?.author_url || '#',
-                    author_image_url: a?.author_image_url?.url
-                      ? typeof a.author_image_url.url === 'string' &&
-                        a.author_image_url.url.includes('http')
-                        ? a.author_image_url.url
-                        : `${baseUrl}${a.author_image_url.url}`
-                      : null,
-                    username: a?.username || '',
-                  }))
+                  author: a?.author || 'Unknown Author',
+                  author_id: a?.author_id || '',
+                  position: a?.position || '',
+                  author_url: a?.author_url || '#',
+                  author_image_url: a?.author_image_url?.url
+                    ? typeof a.author_image_url.url === 'string' &&
+                      a.author_image_url.url.includes('http')
+                      ? a.author_image_url.url
+                      : `${baseUrl}${a.author_image_url.url}`
+                    : null,
+                  username: a?.username || '',
+                }))
                 : [],
               thumb: post.thumb?.url ? `${baseUrl}${post.thumb.url}` : undefined,
               image: post.image?.url ? `${baseUrl}${post.image.url}` : undefined,
@@ -448,18 +448,18 @@ export async function GET(request: NextRequest) {
               readingTime,
               authors: Array.isArray(post.authors)
                 ? post.authors.map((a: any) => ({
-                    author: a?.author || 'Unknown Author',
-                    author_id: a?.author_id || '',
-                    position: a?.position || '',
-                    author_url: a?.author_url || '#',
-                    author_image_url: a?.author_image_url?.url
-                      ? typeof a.author_image_url.url === 'string' &&
-                        a.author_image_url.url.includes('http')
-                        ? a.author_image_url.url
-                        : `${baseUrl}${a.author_image_url.url}`
-                      : null,
-                    username: a?.username || '',
-                  }))
+                  author: a?.author || 'Unknown Author',
+                  author_id: a?.author_id || '',
+                  position: a?.position || '',
+                  author_url: a?.author_url || '#',
+                  author_image_url: a?.author_image_url?.url
+                    ? typeof a.author_image_url.url === 'string' &&
+                      a.author_image_url.url.includes('http')
+                      ? a.author_image_url.url
+                      : `${baseUrl}${a.author_image_url.url}`
+                    : null,
+                  username: a?.username || '',
+                }))
                 : [],
               thumb: post.thumb?.url
                 ? typeof post.thumb.url === 'string' && post.thumb.url.includes('http')
@@ -496,7 +496,10 @@ export async function GET(request: NextRequest) {
         }
       } else {
         if (process.env.NODE_ENV !== 'production') {
-          console.log('[cms-posts] Versions API failed, response:', await versionsResponse.text())
+          // Only log if it's not a 403 (forbidden) - 403 is expected if versions API is not accessible
+          if (versionsResponse.status !== 403) {
+            console.log('[cms-posts] Versions API failed, response:', await versionsResponse.text())
+          }
         }
       }
 
@@ -562,18 +565,18 @@ export async function GET(request: NextRequest) {
                   readingTime,
                   authors: Array.isArray(post.authors)
                     ? post.authors.map((a: any) => ({
-                        author: a?.author || 'Unknown Author',
-                        author_id: a?.author_id || '',
-                        position: a?.position || '',
-                        author_url: a?.author_url || '#',
-                        author_image_url: a?.author_image_url?.url
-                          ? typeof a.author_image_url.url === 'string' &&
-                            a.author_image_url.url.includes('http')
-                            ? a.author_image_url.url
-                            : `${baseUrl}${a.author_image_url.url}`
-                          : null,
-                        username: a?.username || '',
-                      }))
+                      author: a?.author || 'Unknown Author',
+                      author_id: a?.author_id || '',
+                      position: a?.position || '',
+                      author_url: a?.author_url || '#',
+                      author_image_url: a?.author_image_url?.url
+                        ? typeof a.author_image_url.url === 'string' &&
+                          a.author_image_url.url.includes('http')
+                          ? a.author_image_url.url
+                          : `${baseUrl}${a.author_image_url.url}`
+                        : null,
+                      username: a?.username || '',
+                    }))
                     : [],
                   thumb: post.thumb?.url
                     ? typeof post.thumb.url === 'string' && post.thumb.url.includes('http')
@@ -615,13 +618,14 @@ export async function GET(request: NextRequest) {
     url.searchParams.set('depth', '2')
     url.searchParams.set('draft', 'false')
     url.searchParams.set('limit', limit)
-    url.searchParams.set('where[_status][equals]', 'published')
 
     // If fetching specific post by slug (fallback)
     if (slug) {
       url.searchParams.set('where[slug][equals]', slug)
       url.searchParams.set('limit', '1')
     }
+
+    console.log('[cms-posts] Fallback fetch URL:', url.toString())
 
     const response = await fetch(url.toString(), {
       headers: {
@@ -668,6 +672,8 @@ export async function GET(request: NextRequest) {
     const data = await response.json()
     const docs = Array.isArray(data?.docs) ? data.docs : []
 
+    console.log('[cms-posts] Fallback response docs count:', docs.length, 'for slug:', slug)
+
     const dateFmt: Intl.DateTimeFormatOptions = { month: 'long', day: 'numeric', year: 'numeric' }
     const posts = docs
       .filter((p: any) => !!p?.slug)
@@ -689,18 +695,18 @@ export async function GET(request: NextRequest) {
 
         const authors = Array.isArray(p?.authors)
           ? p.authors.map((a: any) => ({
-              author: a?.author || 'Unknown Author',
-              author_id: a?.author_id || '',
-              position: a?.position || '',
-              author_url: a?.author_url || '#',
-              author_image_url: a?.author_image_url?.url
-                ? typeof a.author_image_url.url === 'string' &&
-                  a.author_image_url.url.includes('http')
-                  ? a.author_image_url.url
-                  : `${baseUrl}${a.author_image_url.url}`
-                : null,
-              username: a?.username || '',
-            }))
+            author: a?.author || 'Unknown Author',
+            author_id: a?.author_id || '',
+            position: a?.position || '',
+            author_url: a?.author_url || '#',
+            author_image_url: a?.author_image_url?.url
+              ? typeof a.author_image_url.url === 'string' &&
+                a.author_image_url.url.includes('http')
+                ? a.author_image_url.url
+                : `${baseUrl}${a.author_image_url.url}`
+              : null,
+            username: a?.username || '',
+          }))
           : []
 
         // Base post structure (always included)
@@ -742,14 +748,26 @@ export async function GET(request: NextRequest) {
       .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
     // For single post requests, return the post directly
-    if (slug && posts.length > 0) {
+    if (slug) {
+      if (posts.length > 0) {
+        return NextResponse.json(
+          {
+            success: true,
+            post: posts[0],
+            mode,
+          },
+          { headers: corsHeaders }
+        )
+      }
+      // Slug was requested but not found
       return NextResponse.json(
         {
-          success: true,
-          post: posts[0],
+          success: false,
+          post: null,
           mode,
+          error: 'Post not found',
         },
-        { headers: corsHeaders }
+        { status: 404, headers: corsHeaders }
       )
     }
 

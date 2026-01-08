@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSortedPosts } from 'lib/posts'
+import { getAllCMSPosts } from 'lib/get-cms-posts'
 
 export const revalidate = 30
 
@@ -16,11 +17,11 @@ async function getCombinedPosts() {
     return cachedPosts
   }
 
-  // Get static blog posts - limit to 2 for reference
-  const staticPosts = getSortedPosts({ directory: '_blog', limit: 2 })
+  // Get static blog posts - limit to 5 for testing
+  const staticPosts = getSortedPosts({ directory: '_blog', limit: 5 })
 
-  // Don't fetch CMS posts - only use static posts for reference
-  const cmsPosts: any[] = []
+  // Get CMS posts - limit to 5 for testing
+  const cmsPosts = await getAllCMSPosts({ limit: 5 })
 
   // Combine and sort by date
   const allPosts = [...staticPosts, ...cmsPosts].sort((a: any, b: any) => {

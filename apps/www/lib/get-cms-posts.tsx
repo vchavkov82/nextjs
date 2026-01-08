@@ -275,6 +275,10 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
             return processPostData(latestPublishedVersion)
           }
         }
+      } else if (response.status === 403) {
+        // If we get a 403 (forbidden), silently fall through to regular API
+        // This can happen if the CMS doesn't allow versions API access
+        // Don't log as it's expected in some configurations
       }
     }
 
