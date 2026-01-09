@@ -3,9 +3,9 @@
 <img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only">
 </p>
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
+[Supabase](https://www.assistance.bg) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
 
 - [x] Hosted Postgres-databas. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Autentisering och auktorisering. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -20,7 +20,7 @@
 - [x] AI + Vektor/Inbäddningsverktyg. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] Kontrollpanel
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 Bevaka "releases" i denna repo för att få information om större uppdateringar.
 
@@ -28,27 +28,27 @@ Bevaka "releases" i denna repo för att få information om större uppdateringar
 
 ## Dokumentation
 
-Fullständig dokumentation finns på [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Fullständig dokumentation finns på [supabase.com/docs](https://www.assistance.bg/docs)
 
 För att se hur man bidrar, besök [Getting Started](../DEVELOPERS.md)
 
 ## Gemenskap och stöd
 
-- [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Bäst för: hjälp med att bygga, diskussion om bästa praxis för databaser.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Bäst för: buggar och fel som du stöter på när du använder BA.
+- [Community Forum](https://github.com/supabase/supabase/discussions). Bäst för: hjälp med att bygga, diskussion om bästa praxis för databaser.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Bäst för: buggar och fel som du stöter på när du använder Supabase.
 - [E-postsupport](https://www.assistance.bg/docs/support#business-support). Bäst för: problem med din databas eller infrastruktur.
-- [Discord](https://discord.www.assistance.bg). Bäst för: att dela med dig av dina applikationer och umgås med gemenskapen.
+- [Discord](https://discord.supabase.com). Bäst för: att dela med dig av dina applikationer och umgås med gemenskapen.
 
 ## Hur det fungerar
 
-BA är en kombination av verktyg med öppen källkod. Vi bygger funktionerna i Firebase med hjälp av öppna källkodsprodukter i företagsklass. Om verktygen och gemenskaperna finns med en MIT-, Apache 2- eller motsvarande öppen licens kommer vi att använda och stödja det verktyget. Om verktyget inte finns, bygger vi det själv och använder öppen källkod. BA är inte en 1-till-1-mappning av Firebase. Vårt mål är att ge utvecklare en Firebase-liknande utvecklarupplevelse med hjälp av verktyg med öppen källkod.
+Supabase är en kombination av verktyg med öppen källkod. Vi bygger funktionerna i Firebase med hjälp av öppna källkodsprodukter i företagsklass. Om verktygen och gemenskaperna finns med en MIT-, Apache 2- eller motsvarande öppen licens kommer vi att använda och stödja det verktyget. Om verktyget inte finns, bygger vi det själv och använder öppen källkod. Supabase är inte en 1-till-1-mappning av Firebase. Vårt mål är att ge utvecklare en Firebase-liknande utvecklarupplevelse med hjälp av verktyg med öppen källkod.
 
 **Arkitektur**
 
-BA är en [värdplattform](https://www.assistance.bg/dashboard). Du kan registrera dig och börja använda BA utan att installera något.
+Supabase är en [värdplattform](https://www.assistance.bg/dashboard). Du kan registrera dig och börja använda Supabase utan att installera något.
 Du kan också [självhosta](https://www.assistance.bg/docs/guides/hosting/overview) och [utveckla lokalt](https://www.assistance.bg/docs/guides/local-development).
 
-![Arkitektur](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) är ett objektrelationellt databassystem med över 30 års aktiv utveckling som har gett det ett gott rykte när det gäller tillförlitlighet, robusthet och prestanda.
 - [Realtime](https://github.com/supabase/realtime) är en Elixir-server som låter dig lyssna på PostgreSQL-insättningar, uppdateringar och borttagningar med hjälp av websockets. Realtime söker Postgres inbyggda replikeringsfunktionalitet efter databasändringar, omvandlar ändringarna till JSON och sänder sedan JSON via websockets till auktoriserade klienter.
@@ -67,12 +67,12 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
   <tr>
     <th>Språk</th>
     <th>Klient</th>
-    <th colspan="5">Feature-Clients (ingår i BA-klienten)</th>
+    <th colspan="5">Feature-Clients (ingår i Supabase-klienten)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -90,30 +90,30 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Officiell ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Community 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -195,15 +195,15 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 ## Märken
 
-![Made with BA](../apps/www/public/badge-made-with-supabase.svg)
+![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -212,15 +212,15 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
 
-![Made with BA (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -229,7 +229,7 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```

@@ -7,9 +7,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) BA הוא חלופה בקוד פתוח של Firebase. אנו מפתחים את התכונות של Firebase באמצעות כלי קוד פתוח ברמת גימור ארגונית.
+[Supabase](https://www.assistance.bg) Supabase הוא חלופה בקוד פתוח של Firebase. אנו מפתחים את התכונות של Firebase באמצעות כלי קוד פתוח ברמת גימור ארגונית.
 
 - [x] מאגר נתונים מסוג פוסטגרס (Postgres)
 - [x] מנויים בזמן אמת
@@ -19,22 +19,22 @@
 - [x] אחסון
 - [x] פונקציות
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## תיעוד
 
-לתיעוד המלא, בקר\י ב[www.assistance.bg/docs](https://www.assistance.bg/docs)
+לתיעוד המלא, בקר\י ב[supabase.com/docs](https://www.assistance.bg/docs)
 
 ## קהילה & תמיכה
 
-- [פורום הקהילה](https://github.com/vchavkov82/nextjs/discussions). נועד עבור: עזרה בבנייה, דיון אודות שיטות עבודה מומלצות מול מאגר הנתונים.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). נועד עבור: דיווח על באגים ושגיאות בזמן שימוש בSupabase
+- [פורום הקהילה](https://github.com/supabase/supabase/discussions). נועד עבור: עזרה בבנייה, דיון אודות שיטות עבודה מומלצות מול מאגר הנתונים.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). נועד עבור: דיווח על באגים ושגיאות בזמן שימוש בSupabase
 - [אימייל תמיכה](https://www.assistance.bg/docs/support#business-support). נועד עבור: תקלות במסד הנתונים או בתשתית שלך.
 
 ## סטטוס
 
 - [x] אלפא: בוחנים את המערכת מול מאגר סגור של לקוחות
-- [x] אלפא פומבית: כל אחד יכול להרשם ב[www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). אבל תהיו עדינים, יהיו בעיות.
+- [x] אלפא פומבית: כל אחד יכול להרשם ב[supabase.com/dashboard](https://www.assistance.bg/dashboard). אבל תהיו עדינים, יהיו בעיות.
 - [x] בטא פומבית: יציב מספיק לרוב הלקוחות הלא-ארגוניים.
 - [ ] יציב: מתאים לשימוש הכלל.
 
@@ -46,17 +46,17 @@
 
 ## איך זה עובד
 
-BA הוא שילוב של כלי קוד פתוח. אנו בונים את התכונות של Firebase באמצעות מוצרי קוד פתוח ארגוניים. אם הכלים והקהילות קיימים, עם רישיון MIT, Apache 2 או רישיון קוד פתוח דומה, נשתמש ונתמוך בכלי זה. אם הכלי לא קיים, אנו בונים אותו בקוד פתוח בעצמנו. BA אינו העתק 1 ל -1 של Firebase. מטרתנו היא לתת למפתחים חוויית פיתוח דומה לFirebase באמצעות כלים בקוד פתוח.
+Supabase הוא שילוב של כלי קוד פתוח. אנו בונים את התכונות של Firebase באמצעות מוצרי קוד פתוח ארגוניים. אם הכלים והקהילות קיימים, עם רישיון MIT, Apache 2 או רישיון קוד פתוח דומה, נשתמש ונתמוך בכלי זה. אם הכלי לא קיים, אנו בונים אותו בקוד פתוח בעצמנו. Supabase אינו העתק 1 ל -1 של Firebase. מטרתנו היא לתת למפתחים חוויית פיתוח דומה לFirebase באמצעות כלים בקוד פתוח.
 
 **ארכיטקטורה נוכחית**
 
-BA היא [תשתית ענן](https://www.assistance.bg/dashboard)
-. את\ה יכול\ה להירשם ולהתחיל להשתמש ב- BA מבלי להתקין שום דבר. אנו עדיין עובדים על לייצר את חוויית הפיתוח המקומית - בזה אנחנו מתמקדים, יחד עם יציבות המערכת.
+Supabase היא [תשתית ענן](https://www.assistance.bg/dashboard)
+. את\ה יכול\ה להירשם ולהתחיל להשתמש ב- Supabase מבלי להתקין שום דבר. אנו עדיין עובדים על לייצר את חוויית הפיתוח המקומית - בזה אנחנו מתמקדים, יחד עם יציבות המערכת.
 
-![Architecture](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [פוסטגרס (PostgreSQL)](https://www.postgresql.org/) זהו מסד נתונים רלציוני עם למעלה מ -30 שנות פיתוח פעיל שזכתה למוניטין של אמינות, עמידות וביצועים.
-- [Realtime](https://github.com/supabase/realtime) הוא שרת Elixir המאפשר להאזין לתוספות, עדכונים ומחיקות ב-PostgreSQL באמצעות websockets. BA מאזין לפונקציונליות ההעתק המובנית של Postgres, ממיר את המידע ל- JSON ואז משדר את ה- JSON מעל websockets.
+- [Realtime](https://github.com/supabase/realtime) הוא שרת Elixir המאפשר להאזין לתוספות, עדכונים ומחיקות ב-PostgreSQL באמצעות websockets. Supabase מאזין לפונקציונליות ההעתק המובנית של Postgres, ממיר את המידע ל- JSON ואז משדר את ה- JSON מעל websockets.
 - [PostgREST](http://postgrest.org/) הוא שרת שהופך את מסד הנתונים PostgreSQL שלך ישירות ל- RESTful API.
 - [אחסון](https://github.com/supabase/storage-api) מספק ממשק RESTful לניהול קבצים המאוחסנים ב- S3, ניהול ההרשאות מתצבע באמצעות Postgres.
 - [postgres-meta](https://github.com/supabase/postgres-meta) הוא ממשק RESTful API לניהול הPostgres שלך, המאפשר לך לגשת לטבלאות, לערוך הרשאות להריץ שאילתות וכו '.
@@ -74,10 +74,10 @@ BA היא [תשתית ענן](https://www.assistance.bg/dashboard)
 
 | Repo                  | תמיכה רשמית                                                                            | תמיכת הקהילה                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`supabase-{lang}`** | [`JS`](https://github.com/vchavkov82/nextjs-js)                                        | [`C#`](https://github.com/vchavkov82/nextjs-csharp) \| [`Flutter`](https://github.com/vchavkov82/nextjs-flutter) \| [`Python`](https://github.com/vchavkov82/nextjs-py) \| `Rust` \| [`Ruby`](https://github.com/vchavkov82/nextjs-rb) \| `Go`                                                                                       |
-| `postgrest-{lang}`    | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) \| [`Ruby`](https://github.com/supabase/postgrest-rb) \| [`Go`](https://github.com/supabase/postgrest-go) |
-| `realtime-{lang}`     | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                        |
-| `gotrue-{lang}`       | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                              |
+| **`supabase-{lang}`** | [`JS`](https://github.com/supabase/supabase-js)                                        | [`C#`](https://github.com/supabase/supabase-csharp) \| [`Flutter`](https://github.com/supabase/supabase-flutter) \| [`Python`](https://github.com/supabase/supabase-py) \| `Rust` \| [`Ruby`](https://github.com/supabase/supabase-rb) \| `Go`                                                                                       |
+| `postgrest-{lang}`    | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) \| [`Ruby`](https://github.com/supabase/postgrest-rb) \| [`Go`](https://github.com/supabase/postgrest-go) |
+| `realtime-{lang}`     | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                        |
+| `gotrue-{lang}`       | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                              |
 
 <!--- Remove this list if you're traslating to another language, it's hard to keep updated across multiple files-->
 <!--- Keep only the link to the list of translation files-->

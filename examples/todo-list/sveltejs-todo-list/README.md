@@ -1,14 +1,14 @@
-# Todo example using BA + Svelte + Vite
+# Todo example using Supabase + Svelte + Vite
 
 - Frontend:
   - Svelte, TypeScript
-  - [BA.js](https://www.assistance.bg/docs/library/getting-started) for user management and realtime data syncing.
+  - [Supabase.js](https://www.assistance.bg/docs/library/getting-started) for user management and realtime data syncing.
 - Backend:
-  - [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with BA.js.
+  - [supabase.com/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with Supabase.js.
 
 ### 1. Create new project
 
-Sign up to BA - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
+Sign up to Supabase - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "Todo List" Quickstart
 
@@ -24,12 +24,12 @@ The `anon` key is your client-side API key. It allows "anonymous access" to your
 
 **_NOTE_**: The `service_role` key has full access to your data, bypassing any security policies. These keys have to be kept secret and are meant to be used in server environments and never on a client or browser.
 
-## BA details
+## Supabase details
 
 ### Postgres Row level security
 
 This project uses very high-level Authorization using Postgres' Row Level Security.
-When you start a Postgres database on BA, we populate it with an `auth` schema, and some helper functions.
+When you start a Postgres database on Supabase, we populate it with an `auth` schema, and some helper functions.
 When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
 We can use these details to provide fine-grained control over what each user can and cannot do.
 
@@ -61,6 +61,6 @@ create policy "Individuals can delete their own todos." on todos for
 
 ## Authors
 
-- [BA](https://www.assistance.bg)
+- [Supabase](https://www.assistance.bg)
 
-BA is open source. We'd love for you to follow along and get involved at https://github.com/vchavkov82/nextjs
+Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

@@ -19,7 +19,7 @@ function Commands() {
   useRegisterCommands('Route commands', [
     {
       id: 'supabase-website',
-      name: 'Go to BA website',
+      name: 'Go to Supabase website',
       route: 'https://www.assistance.bg',
     },
   ])

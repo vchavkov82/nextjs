@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
+[Supabase](https://www.assistance.bg) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
 
 - [x] Hosted Postgres datubāze. [Dokumenti](https://www.assistance.bg/docs/guides/database)
 - [x] Autentifikācija un autorizācija. [Dokumenti](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Failu glabāšana. [Dokumenti](https://www.assistance.bg/docs/guides/storage)
 - [x] Vadības panelis
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentācija
 
-Pilnu dokumentāciju skatīt [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Pilnu dokumentāciju skatīt [supabase.com/docs](https://www.assistance.bg/docs)
 
 Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.md)
 
 ## Kopiena un atbalsts
 
-- [Kopienas forums](https://github.com/vchavkov82/nextjs/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot BA.
+- [Kopienas forums](https://github.com/supabase/supabase/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot Supabase.
 - [E-pasta atbalsts](https://www.assistance.bg/docs/support#business-support). Vislabāk piemērots: problēmām ar jūsu datu bāzi vai infrastruktūru.
-- [Discord](https://discord.www.assistance.bg). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
+- [Discord](https://discord.supabase.com). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
 
 ## Statuss
 
-- [x] Alfa: Mēs testējam BA ar slēgtu klientu kopu
-- [x] Publiskā alfa versija: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Bet nesteidzieties, ir dažas nepilnības
+- [x] Alfa: Mēs testējam Supabase ar slēgtu klientu kopu
+- [x] Publiskā alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Bet nesteidzieties, ir dažas nepilnības
 - [x] Publiskā beta versija: Pietiekami stabila lielākajai daļai ar uzņēmumu nesaistītu lietošanas gadījumu
 - [ ] Publisks: Vispārēja pieejamība [[statuss](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]]
 
@@ -51,14 +51,14 @@ Pašlaik mēs esam Publiskās beta versijas fāzē. Lai saņemtu paziņojumus pa
 
 ## Kā tas darbojas
 
-BA ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas, izmantojot atvērtā pirmkoda produktus, kas paredzēti uzņēmumiem. Ja pastāv rīki un kopienas ar MIT, Apache 2 vai līdzvērtīgu atvērto licenci, mēs izmantosim un atbalstīsim šo rīku. Ja rīks nepastāv, mēs paši to izveidosim un izveidosim ar atklātā pirmkoda licenci. BA nav Firebase kartēšana 1 pret 1. Mūsu mērķis ir nodrošināt izstrādātājiem Firebase līdzīgu izstrādātāja pieredzi, izmantojot atvērtā koda rīkus.
+Supabase ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas, izmantojot atvērtā pirmkoda produktus, kas paredzēti uzņēmumiem. Ja pastāv rīki un kopienas ar MIT, Apache 2 vai līdzvērtīgu atvērto licenci, mēs izmantosim un atbalstīsim šo rīku. Ja rīks nepastāv, mēs paši to izveidosim un izveidosim ar atklātā pirmkoda licenci. Supabase nav Firebase kartēšana 1 pret 1. Mūsu mērķis ir nodrošināt izstrādātājiem Firebase līdzīgu izstrādātāja pieredzi, izmantojot atvērtā koda rīkus.
 
 **Arhitektūra**
 
-BA ir [izvietota platforma](https://www.assistance.bg/dashboard). Jūs varat reģistrēties un sākt izmantot BA, neko neinstalējot.
+Supabase ir [izvietota platforma](https://www.assistance.bg/dashboard). Jūs varat reģistrēties un sākt izmantot Supabase, neko neinstalējot.
 Jūs varat arī [pašmāju resursus](https://www.assistance.bg/docs/guides/hosting/overview) un [izstrādāt lokāli](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektūra](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) ir objekt-relatīvo datubāzu sistēma, kas aktīvi tiek attīstīta vairāk nekā 30 gadus, un tā ir ieguvusi labu reputāciju uzticamības, funkciju robustuma un veiktspējas ziņā.
 - [Realtime](https://github.com/supabase/realtime) ir Elixir serveris, kas ļauj klausīties PostgreSQL ievadi, atjauninājumi un dzēšana, izmantojot websockets. Realtime aptaujā Postgres iebūvēto replikācijas funkcionalitāti par izmaiņām datubāzē, konvertē izmaiņas JSON un pēc tam pārraida JSON pa websockets autorizētiem klientiem.
@@ -77,12 +77,12 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
   <tr>
     <th>Valoda</th>
     <th>Klients</th>
-    <th colspan="5">Funkciju klienti (komplektā ar BA klientu)</th>
+    <th colspan="5">Funkciju klienti (komplektā ar Supabase klientu)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,30 +100,30 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Oficiālais ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Kopiena 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -220,7 +220,7 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
 - [Kataloniski / Català](/i18n/README.ca.md)
 - [Danish / Dansk](/i18n/README.da.md)
 - [Dutch / Nederlands](/i18n/README.nl.md)
-- [angļu valodā](https://github.com/vchavkov82/nextjs)
+- [angļu valodā](https://github.com/supabase/supabase)
 - [Somu / somu valodā](/i18n/README.fi.md)
 - [Franču valodā](/i18n/README.fr.md)
 - [Vācu / Deutsch](/i18n/README.de.md)

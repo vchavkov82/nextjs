@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
+[Supabase](https://www.assistance.bg) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
 
 - [x] hostovaná databáze Postgres. [Dokumenty](https://www.assistance.bg/docs/guides/database)
 - [x] Ověřování a autorizace. [Dokumenty](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Ukládání souborů. [Dokumenty](https://www.assistance.bg/docs/guides/storage)
 - [x] Přístrojový panel
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentace
 
-Úplnou dokumentaci naleznete na adrese [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Úplnou dokumentaci naleznete na adrese [supabase.com/docs](https://www.assistance.bg/docs)
 
 Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOPERS.md)
 
 ## Komunita a podpora
 
-- [Fórum komunity](https://github.com/vchavkov82/nextjs/discussions). Nejlépe pro: pomoc při vytváření, diskuse o osvědčených postupech při práci s databází.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze BA.
+- [Fórum komunity](https://github.com/supabase/supabase/discussions). Nejlépe pro: pomoc při vytváření, diskuse o osvědčených postupech při práci s databází.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze Supabase.
 - [E-mailová podpora](https://www.assistance.bg/docs/support#business-support). Nejlepší pro: problémy s vaší databází nebo infrastrukturou.
-- [Discord](https://discord.www.assistance.bg). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
+- [Discord](https://discord.supabase.com). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
 
 ## Stav
 
-- [x] Alfa: Testujeme BA s uzavřenou skupinou zákazníků
-- [x] Veřejná alfa: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
+- [x] Alfa: Testujeme Supabase s uzavřenou skupinou zákazníků
+- [x] Veřejná alfa: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
 - [x] Veřejná beta verze: Dostatečně stabilní pro většinu případů použití mimo podniky
 - [ ] Veřejná: Všeobecná dostupnost [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
@@ -51,14 +51,14 @@ V současné době jsme ve fázi Public Beta. Sledujte "releases" tohoto repozit
 
 ## Jak to funguje
 
-BA je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Firebase vytváříme pomocí open source produktů podnikové třídy. Pokud existují nástroje a komunity s otevřenou licencí MIT, Apache 2 nebo ekvivalentní, budeme tento nástroj používat a podporovat. Pokud nástroj neexistuje, vytvoříme jej a použijeme open source sami. BA není mapováním Firebase v poměru 1:1. Naším cílem je poskytnout vývojářům vývojářské prostředí podobné Firebase s využitím nástrojů s otevřeným zdrojovým kódem.
+Supabase je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Firebase vytváříme pomocí open source produktů podnikové třídy. Pokud existují nástroje a komunity s otevřenou licencí MIT, Apache 2 nebo ekvivalentní, budeme tento nástroj používat a podporovat. Pokud nástroj neexistuje, vytvoříme jej a použijeme open source sami. Supabase není mapováním Firebase v poměru 1:1. Naším cílem je poskytnout vývojářům vývojářské prostředí podobné Firebase s využitím nástrojů s otevřeným zdrojovým kódem.
 
 **Architektura**
 
-BA je [hostovaná platforma](https://www.assistance.bg/dashboard). Můžete se zaregistrovat a začít používat BA, aniž byste museli cokoli instalovat.
+Supabase je [hostovaná platforma](https://www.assistance.bg/dashboard). Můžete se zaregistrovat a začít používat Supabase, aniž byste museli cokoli instalovat.
 Můžete také [hostovat sami](https://www.assistance.bg/docs/guides/hosting/overview) a [vyvíjet lokálně](https://www.assistance.bg/docs/guides/local-development).
 
-![Architektura](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) je objektově-relační databázový systém s více než 30 lety aktivního vývoje, který si získal dobrou pověst díky spolehlivosti, robustnosti funkcí a výkonu.
 - [Realtime](https://github.com/supabase/realtime) je server v jazyce Elixir, který umožňuje naslouchat vkládání, aktualizacím a mazání dat do PostgreSQL pomocí webových soketů. Realtime zjišťuje změny v databázi pomocí replikačních funkcí Postgresu, převádí změny do JSON a poté vysílá JSON přes webové sockety autorizovaným klientům.
@@ -77,12 +77,12 @@ Náš přístup ke klientským knihovnám je modulární. Každá dílčí kniho
   <tr>
     <th>Jazyk</th>
     <th>Klient</th>
-    <th colspan="5">Feature-Clients (v rámci klienta BA)</th>
+    <th colspan="5">Feature-Clients (v rámci klienta Supabase)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,30 +100,30 @@ Náš přístup ke klientským knihovnám je modulární. Každá dílčí kniho
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Oficiální ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Komunita 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Náš přístup ke klientským knihovnám je modulární. Každá dílčí kniho
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -220,7 +220,7 @@ Náš přístup ke klientským knihovnám je modulární. Každá dílčí kniho
 - [Katalánština / Català](/i18n/README.ca.md)
 - [Dánština / Dansk](/i18n/README.da.md)
 - [Dutch / Nederlands](/i18n/README.nl.md)
-- [Angličtina](https://github.com/vchavkov82/nextjs)
+- [Angličtina](https://github.com/supabase/supabase)
 - [Finsky / Suomalainen](/i18n/README.fi.md)
 - [Francouzština / Français](/i18n/README.fr.md)
 - [Němčina / Deutsch](/i18n/README.de.md)

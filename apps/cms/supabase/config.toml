@@ -1,6 +1,6 @@
 # For detailed configuration reference documentation, visit:
 # https://www.assistance.bg/docs/guides/local-development/cli/config
-# A string used to distinguish different BA projects on the same host. Defaults to the
+# A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
 project_id = "cms"
 
@@ -81,11 +81,11 @@ enabled = true
 
 [studio]
 enabled = true
-# Port to use for BA Studio.
+# Port to use for Supabase Studio.
 port = 34323
 # External URL of the API server that frontend connects to.
 api_url = "http://127.0.0.1"
-# OpenAI API Key to use for BA AI in the BA Studio.
+# OpenAI API Key to use for Supabase AI in the Supabase Studio.
 openai_api_key = "env(OPENAI_API_KEY)"
 
 # Email testing server. Emails sent with the local dev setup are not actually sent - rather, they
@@ -105,7 +105,7 @@ enabled = true
 # The maximum file size allowed (e.g. "5MB", "500KB").
 file_size_limit = "50MiB"
 
-# Image transformation API is available to BA Pro plan.
+# Image transformation API is available to Supabase Pro plan.
 # [storage.image_transformation]
 # enabled = true
 
@@ -237,7 +237,7 @@ message_service_sid = ""
 # DO NOT commit your Twilio auth token to git. Use environment variable substitution instead:
 auth_token = "env(SUPABASE_AUTH_SMS_TWILIO_AUTH_TOKEN)"
 
-# Multi-factor-authentication is available to BA Pro plan.
+# Multi-factor-authentication is available to Supabase Pro plan.
 [auth.mfa]
 # Control how many MFA factors can be enrolled at once per user.
 max_enrolled_factors = 10
@@ -281,24 +281,24 @@ skip_nonce_check = false
 [auth.web3.solana]
 enabled = false
 
-# Use Firebase Auth as a third-party provider alongside BA Auth.
+# Use Firebase Auth as a third-party provider alongside Supabase Auth.
 [auth.third_party.firebase]
 enabled = false
 # project_id = "my-firebase-project"
 
-# Use Auth0 as a third-party provider alongside BA Auth.
+# Use Auth0 as a third-party provider alongside Supabase Auth.
 [auth.third_party.auth0]
 enabled = false
 # tenant = "my-auth0-tenant"
 # tenant_region = "us"
 
-# Use AWS Cognito (Amplify) as a third-party provider alongside BA Auth.
+# Use AWS Cognito (Amplify) as a third-party provider alongside Supabase Auth.
 [auth.third_party.aws_cognito]
 enabled = false
 # user_pool_id = "my-user-pool-id"
 # user_pool_region = "us-east-1"
 
-# Use Clerk as a third-party provider alongside BA Auth.
+# Use Clerk as a third-party provider alongside Supabase Auth.
 [auth.third_party.clerk]
 enabled = false
 # Obtain from https://clerk.com/setup/supabase

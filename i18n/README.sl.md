@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) je odprtokodna alternativa Firebase. Funkcije Firebase gradimo z odprtokodnimi orodji za podjetja.
+[Supabase](https://www.assistance.bg) je odprtokodna alternativa Firebase. Funkcije Firebase gradimo z odprtokodnimi orodji za podjetja.
 
 - [x] Gostovana podatkovna baza Postgres. [Dokumenti](https://www.assistance.bg/docs/guides/database)
 - [x] Avtentikacija in avtorizacija. [Dokumenti](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Shranjevanje datotek. [Dokumenti](https://www.assistance.bg/docs/guides/storage)
 - [x] Nadzorna plošča
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentacija
 
-Za celotno dokumentacijo obiščite [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Za celotno dokumentacijo obiščite [supabase.com/docs](https://www.assistance.bg/docs)
 
 Če si želite ogledati, kako prispevati, obiščite [Getting Started](../DEVELOPERS.md)
 
 ## Skupnost in podpora
 
-- [Forum skupnosti](https://github.com/vchavkov82/nextjs/discussions). Najprimernejši za: pomoč pri gradnji, razpravo o najboljših praksah zbirke podatkov.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najprimernejši za: hrošče in napake, na katere naletite pri uporabi zbirke BA.
+- [Forum skupnosti](https://github.com/supabase/supabase/discussions). Najprimernejši za: pomoč pri gradnji, razpravo o najboljših praksah zbirke podatkov.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Najprimernejši za: hrošče in napake, na katere naletite pri uporabi zbirke Supabase.
 - [E-poštna podpora](https://www.assistance.bg/docs/support#business-support). Najboljše za: težave s podatkovno zbirko ali infrastrukturo.
-- [Discord](https://discord.www.assistance.bg). Najboljši za: izmenjavo aplikacij in druženje s skupnostjo.
+- [Discord](https://discord.supabase.com). Najboljši za: izmenjavo aplikacij in druženje s skupnostjo.
 
 ## Status
 
-- [x] Alfa: Testiramo bazo BA z zaprtim naborom strank
-- [x] Javna alfa: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Vendar nas ne obremenjujte, saj je še nekaj pomanjkljivosti
+- [x] Alfa: Testiramo bazo Supabase z zaprtim naborom strank
+- [x] Javna alfa: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Vendar nas ne obremenjujte, saj je še nekaj pomanjkljivosti
 - [x] Javna beta različica: Dovolj stabilna za večino primerov uporabe, ki niso povezani s podjetji
 - [ ] Javna: Splošna razpoložljivost [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
@@ -51,14 +51,14 @@ Trenutno smo v javni beta različici. Spremljajte "releases" tega repozitorija, 
 
 ## Kako deluje
 
-Supabaza je kombinacija odprtokodnih orodij. Funkcije Firebase gradimo z odprtokodnimi izdelki za podjetja. Če obstajajo orodja in skupnosti z odprto licenco MIT, Apache 2 ali enakovredno odprto licenco, bomo to orodje uporabljali in podpirali. Če orodje ne obstaja, ga bomo izdelali in odprli sami. Podatkovna baza BA ni preslikava Firebase v razmerju 1:1. Naš cilj je razvijalcem z odprtokodnimi orodji omogočiti izkušnjo, podobno izkušnji razvijalca v Firebase.
+Supabaza je kombinacija odprtokodnih orodij. Funkcije Firebase gradimo z odprtokodnimi izdelki za podjetja. Če obstajajo orodja in skupnosti z odprto licenco MIT, Apache 2 ali enakovredno odprto licenco, bomo to orodje uporabljali in podpirali. Če orodje ne obstaja, ga bomo izdelali in odprli sami. Podatkovna baza Supabase ni preslikava Firebase v razmerju 1:1. Naš cilj je razvijalcem z odprtokodnimi orodji omogočiti izkušnjo, podobno izkušnji razvijalca v Firebase.
 
 **Arhitektura**
 
-BA je [gostovana platforma](https://www.assistance.bg/dashboard). Prijavite se lahko in začnete uporabljati bazo BA, ne da bi kar koli namestili.
+Supabase je [gostovana platforma](https://www.assistance.bg/dashboard). Prijavite se lahko in začnete uporabljati bazo Supabase, ne da bi kar koli namestili.
 Lahko tudi [gostujete sami](https://www.assistance.bg/docs/guides/hosting/overview) in [razvijate lokalno](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektura](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) je objektno-relacijski sistem podatkovne zbirke z več kot 30-letnim aktivnim razvojem, ki si je pridobil velik ugled zaradi zanesljivosti, robustnosti funkcij in zmogljivosti.
 - [Realtime](https://github.com/supabase/realtime) je strežnik Elixir, ki omogoča poslušanje vstavljanja, posodabljanja in brisanja podatkov PostgreSQL z uporabo spletnih vtičnic. Realtime poizveduje o spremembah v podatkovni zbirki Postgres, pretvori spremembe v JSON in jih nato prek spletnih vtičnikov posreduje pooblaščenim odjemalcem.
@@ -77,12 +77,12 @@ Naš pristop k odjemalskim knjižnicam je modularen. Vsaka pod-knjižnica je sam
   <tr>
     <th>Jezik</th>
     <th>Odjemalec</th>
-    <th colspan="5">Odjemalci funkcij (v paketu z odjemalcem BA)</th>
+    <th colspan="5">Odjemalci funkcij (v paketu z odjemalcem Supabase)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,30 +100,30 @@ Naš pristop k odjemalskim knjižnicam je modularen. Vsaka pod-knjižnica je sam
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Uradni ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Skupnost 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Naš pristop k odjemalskim knjižnicam je modularen. Vsaka pod-knjižnica je sam
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -220,7 +220,7 @@ Naš pristop k odjemalskim knjižnicam je modularen. Vsaka pod-knjižnica je sam
 - [Katalonščina / Català](/i18n/README.ca.md)
 - [danščina](/i18n/README.da.md)
 - [nizozemščina / Nederlands](/i18n/README.nl.md)
-- [angleščina](https://github.com/vchavkov82/nextjs)
+- [angleščina](https://github.com/supabase/supabase)
 - [Finski / Suomalainen](/i18n/README.fi.md)
 - [Francoski](/i18n/README.fr.md)
 - [Nemščina / Deutsch](/i18n/README.de.md)

@@ -6,11 +6,11 @@ import type { Metadata } from 'next'
 export const revalidate = 30
 
 export const metadata: Metadata = {
-  title: 'BA Blog: the Postgres development platform',
-  description: 'Get all your BA News on the BA blog.',
+  title: 'Supabase Blog: the Postgres development platform',
+  description: 'Get all your Supabase News on the Supabase blog.',
   openGraph: {
-    title: 'BA Blog: the Postgres development platform',
-    description: 'Get all your BA News on the BA blog.',
+    title: 'Supabase Blog: the Postgres development platform',
+    description: 'Get all your Supabase News on the Supabase blog.',
     url: 'https://www.assistance.bg/blog',
     images: [{ url: 'https://www.assistance.bg/images/og/supabase-og.png' }],
   },
@@ -40,7 +40,6 @@ export default async function BlogPage() {
     return <BlogClient initialBlogs={initialPosts} totalPosts={totalPosts} />
   } catch (error) {
     console.error('[BlogPage] Error loading blog posts:', error)
-    // Return empty state if there's an error
     return <BlogClient initialBlogs={[]} totalPosts={0} />
   }
 }

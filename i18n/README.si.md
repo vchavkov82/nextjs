@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
+[Supabase](https://www.assistance.bg) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
 
 - [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -22,7 +22,7 @@
 - [x] AI + Vector/Embeddings Toolkit. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] Dashboard
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ප්‍රධාන යාවත්කාල කිරීම් පිළිබඳ දැනුම් දීම සඳහා "releases" පිළිබඳව අවධානයෙන් සිටින්න.
 
@@ -30,24 +30,24 @@
 
 ## ප්‍රලේඛනය
 
-සම්පූර්ණ විස්තරය කියවන්න ,මෙතනින් [www.assistance.bg/docs](https://www.assistance.bg/docs)
+සම්පූර්ණ විස්තරය කියවන්න ,මෙතනින් [supabase.com/docs](https://www.assistance.bg/docs)
 
 දායක වන ආකාරය බැලීමට, ආරම්භ කිරීම වෙත [පිවිසෙන්න](./DEVELOPERS.md)
 
 ## Community එක හා සහයෝගය ගැනීමට
 
-- [Community Forum](https://github.com/vchavkov82/nextjs/discussions). වඩාත්ම සුදුසු: දේවල් සෑදීමට උදව් ගැනීම.database best practices පිළිබඳ සාකච්ඡා කිරීමට.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). වඩාත්ම සුදුසු: BA භාවිතා කිරීමේදී ඔබට හමුවන වැරදී හා ප්‍රශ්න.
+- [Community Forum](https://github.com/supabase/supabase/discussions). වඩාත්ම සුදුසු: දේවල් සෑදීමට උදව් ගැනීම.database best practices පිළිබඳ සාකච්ඡා කිරීමට.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). වඩාත්ම සුදුසු: Supabase භාවිතා කිරීමේදී ඔබට හමුවන වැරදී හා ප්‍රශ්න.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). වඩාත්ම සුදුසු: database හා infrastructure පිළිබඳ ඔබේ ඇති ප්‍රශ්න.
-- [Discord](https://discord.www.assistance.bg). වඩාත්ම සුදුසු: ඔබගේ applications බෙදාගැනීම සහ community සමඟ රැඳී සිටීම.
+- [Discord](https://discord.supabase.com). වඩාත්ම සුදුසු: ඔබගේ applications බෙදාගැනීම සහ community සමඟ රැඳී සිටීම.
 
 ## කොහොමද මෙය වැඩකරන්නෙ
 
-BA යනු විවෘත පරිශීලක උපාංග කිහිපයක එකතුවකි.අප Firebase වල ඇති පහසුකම් enterprise-grade, විවෘත පරිශීලක උපාංග භාවිතා කරමින් නිපදවයි.උපාංග හා communities ඇත්නම්,ඒවා MIT,Apache 2, හෝ ඒ ආකාරයේ open license නම් අප ඒවා භාවිතා කර සහයෝගය දක්වනවා.එවැනි උපාංග නොමැතිනම්,අප ඒවා විවෘත පරිශීලක විදියට නිපදවනවා.BA යනු 1-ට-1 Firebase වලට සමාන දෙයක් නොවේ.අපේ අරමුණ developers ලට Firebase වැනි අත්දැකීමක් විවෘත පරිශීලක උපාංග මඟින් ලබාදීමයි.
+Supabase යනු විවෘත පරිශීලක උපාංග කිහිපයක එකතුවකි.අප Firebase වල ඇති පහසුකම් enterprise-grade, විවෘත පරිශීලක උපාංග භාවිතා කරමින් නිපදවයි.උපාංග හා communities ඇත්නම්,ඒවා MIT,Apache 2, හෝ ඒ ආකාරයේ open license නම් අප ඒවා භාවිතා කර සහයෝගය දක්වනවා.එවැනි උපාංග නොමැතිනම්,අප ඒවා විවෘත පරිශීලක විදියට නිපදවනවා.Supabase යනු 1-ට-1 Firebase වලට සමාන දෙයක් නොවේ.අපේ අරමුණ developers ලට Firebase වැනි අත්දැකීමක් විවෘත පරිශීලක උපාංග මඟින් ලබාදීමයි.
 
 **Architecture**
 
-BA යනු [hosted platform](https://www.assistance.bg/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී BA භාවිතා කිරීම ආරම්භ කළ හැකිය.
+Supabase යනු [hosted platform](https://www.assistance.bg/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී Supabase භාවිතා කිරීම ආරම්භ කළ හැකිය.
 ඔබට [self-host](https://www.assistance.bg/docs/guides/hosting/overview) සහ [develop locally](https://www.assistance.bg/docs/guides/local-development) කළ හැකිය.
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -69,12 +69,12 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
   <tr>
     <th>Language</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (bundled in BA client)</th>
+    <th colspan="5">Feature-Clients (bundled in Supabase client)</th>
   </tr>
   <!-- notranslate -->
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -97,16 +97,16 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
   <!-- notranslate -->
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -115,16 +115,16 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
   </tr>
   <tr>
     <td>Swift</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift" target="_blank" rel="noopener noreferrer">supabase-swift</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift/tree/main/Sources/PostgREST" target="_blank" rel="noopener noreferrer">postgrest-swift</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift/tree/main/Sources/Auth" target="_blank" rel="noopener noreferrer">auth-swift</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift/tree/main/Sources/Realtime" target="_blank" rel="noopener noreferrer">realtime-swift</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift/tree/main/Sources/Storage" target="_blank" rel="noopener noreferrer">storage-swift</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-swift/tree/main/Sources/Functions" target="_blank" rel="noopener noreferrer">functions-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift" target="_blank" rel="noopener noreferrer">supabase-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift/tree/main/Sources/PostgREST" target="_blank" rel="noopener noreferrer">postgrest-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift/tree/main/Sources/Auth" target="_blank" rel="noopener noreferrer">auth-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift/tree/main/Sources/Realtime" target="_blank" rel="noopener noreferrer">realtime-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift/tree/main/Sources/Storage" target="_blank" rel="noopener noreferrer">storage-swift</a></td>
+    <td><a href="https://github.com/supabase/supabase-swift/tree/main/Sources/Functions" target="_blank" rel="noopener noreferrer">functions-swift</a></td>
   </tr>
   <tr>
     <td>Python</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-py" target="_blank" rel="noopener noreferrer">supabase-py</a></td>
+    <td><a href="https://github.com/supabase/supabase-py" target="_blank" rel="noopener noreferrer">supabase-py</a></td>
     <td><a href="https://github.com/supabase/postgrest-py" target="_blank" rel="noopener noreferrer">postgrest-py</a></td>
     <td><a href="https://github.com/supabase/gotrue-py" target="_blank" rel="noopener noreferrer">gotrue-py</a></td>
     <td><a href="https://github.com/supabase/realtime-py" target="_blank" rel="noopener noreferrer">realtime-py</a></td>
@@ -205,10 +205,10 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
 
 ## Badges
 
-![Made with BA](./apps/www/public/badge-made-with-supabase.svg)
+![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -217,15 +217,15 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
 
-![Made with BA (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -234,7 +234,7 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
@@ -249,7 +249,7 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
 - [Czech / čeština](/i18n/README.cs.md)
 - [Danish / Dansk](/i18n/README.da.md)
 - [Dutch / Nederlands](/i18n/README.nl.md)
-- [English](https://github.com/vchavkov82/nextjs)
+- [English](https://github.com/supabase/supabase)
 - [Estonian / eesti keel](/i18n/README.et.md)
 - [Finnish / Suomalainen](/i18n/README.fi.md)
 - [French / Français](/i18n/README.fr.md)

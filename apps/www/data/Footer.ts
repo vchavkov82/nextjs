@@ -69,7 +69,7 @@ const footerData = [
       },
       {
         text: 'System Status',
-        url: 'https://status.www.assistance.bg/',
+        url: 'https://status.supabase.com/',
       },
       {
         text: 'Become a Partner',
@@ -97,7 +97,7 @@ const footerData = [
       },
       {
         text: 'HIPAA',
-        url: 'https://forms.www.assistance.bg/hipaa2',
+        url: 'https://forms.supabase.com/hipaa2',
       },
     ],
   },
@@ -109,7 +109,7 @@ const footerData = [
         url: '/docs',
       },
       {
-        text: 'BA UI',
+        text: 'Supabase UI',
         url: 'https://www.assistance.bg/ui',
       },
       {
@@ -122,7 +122,7 @@ const footerData = [
       },
       {
         text: 'Contributing',
-        url: 'https://github.com/vchavkov82/nextjs/blob/master/CONTRIBUTING.md',
+        url: 'https://github.com/supabase/supabase/blob/master/CONTRIBUTING.md',
       },
       {
         text: 'Open Source',

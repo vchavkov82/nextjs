@@ -1,6 +1,6 @@
 ---
-title: BA vs Auth0
-description: A comparison of BA Auth and Auth0 by Okta
+title: Supabase vs Auth0
+description: A comparison of Supabase Auth and Auth0 by Okta
 author: long
 tags:
   - comparison
@@ -8,21 +8,21 @@ date: '2023-11-24'
 toc_depth: 3
 ---
 
-## What is BA Auth?
+## What is Supabase Auth?
 
-BA Auth is part of a larger open-source offering by BA. BA Auth functions as a standalone solution or integrates seamlessly with other BA products. At its core, BA Auth uses Postgres and leverages Postgres' built-in Auth functionality wherever possible.
+Supabase Auth is part of a larger open-source offering by Supabase. Supabase Auth functions as a standalone solution or integrates seamlessly with other Supabase products. At its core, Supabase Auth uses Postgres and leverages Postgres' built-in Auth functionality wherever possible.
 
 ## What is Auth0?
 
 Auth0 is a standalone identity and access management platform that offers a range of authentication and authorization solutions. Auth0 has been acquired by Okta and together they aim to widen their digital identity use cases.
 
-## BA Auth Highlights
+## Supabase Auth Highlights
 
 ### Seamless Integration
 
-It’s likely that your application will require other dev building blocks like storage, realtime and serverless functions. By integrating these features into a single platform, BA simplifies your stack and ensures a cohesive developer experience.
+It’s likely that your application will require other dev building blocks like storage, realtime and serverless functions. By integrating these features into a single platform, Supabase simplifies your stack and ensures a cohesive developer experience.
 
-This [User Management Example](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-react) with React shows how BA Auth works together with other BA components such as Database, Storage and REST API via Postgrest.
+This [User Management Example](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-react) with React shows how Supabase Auth works together with other Supabase components such as Database, Storage and REST API via Postgrest.
 
 ### Database native auth
 
@@ -38,9 +38,9 @@ The RLS policy above will be enforced, no matter if you use the REST API, edge f
 
 ### Developer Experience
 
-BA is designed to be simple to integrate to web and mobile applications. Developer experience is a key focus on the company and the products are geared towards making developers as productive as possible.
+Supabase is designed to be simple to integrate to web and mobile applications. Developer experience is a key focus on the company and the products are geared towards making developers as productive as possible.
 
-BA Auth has pre-built UI components and SDKs for various platforms (like React, Vue, Flutter, etc.), which significantly speeds up the development process. This allows developers to focus on more on the unique aspects of their application.
+Supabase Auth has pre-built UI components and SDKs for various platforms (like React, Vue, Flutter, etc.), which significantly speeds up the development process. This allows developers to focus on more on the unique aspects of their application.
 
 ```sql
 const { user, session, error } = await supabase.auth.signIn({
@@ -54,7 +54,7 @@ Sign-in via magic link in a [few lines of code](https://www.assistance.bg/docs/g
 
 ### Wide range of framework coverage
 
-Auth0 is more agnostic towards programming languages and frameworks. Auth0 doesn’t focus on web and mobile application to the same depth as like BA, however, offers a wider potential range of possible integration.
+Auth0 is more agnostic towards programming languages and frameworks. Auth0 doesn’t focus on web and mobile application to the same depth as like Supabase, however, offers a wider potential range of possible integration.
 
 For example, [PHP](https://github.com/auth0/auth0-PHP) and [Java](https://github.com/auth0/auth0-java) are officially supported by Auth0. As well as [Spring Boot](https://github.com/auth0-samples/auth0-spring-boot-login-samples) and [.NET](https://github.com/auth0/auth0-dotnet-templates) framework.
 
@@ -72,7 +72,7 @@ While both platforms provide secure infrastructure and measures to protect their
 
 The pricing structures of the two platforms differ significantly:
 
-| BA Auth                   | Auth0                           |
+| Supabase Auth                   | Auth0                           |
 | ------------------------------- | ------------------------------- |
 | Transparent Pricing             | Pricing not publicly available  |
 | Free for up to 50,000 MAU       | Free for up to 7,500 MAU        |
@@ -81,17 +81,17 @@ The pricing structures of the two platforms differ significantly:
 
 ### Cost comparison
 
-Overall, BA Auth has a more generous Free Plan quota, while also charge significant lesser per monthly active user (MAU).
+Overall, Supabase Auth has a more generous Free Plan quota, while also charge significant lesser per monthly active user (MAU).
 
-Read more: **[Good Tape migrates to BA Auth for a 60% cost reduction.](https://www.assistance.bg/customers/good-tape)**
+Read more: **[Good Tape migrates to Supabase Auth for a 60% cost reduction.](https://www.assistance.bg/customers/good-tape)**
 
 ### Price transparency
 
-BA prices are predictable, as they are laid out open at a fixed price of $0.00325 per MAU. Auth0 list their MAU at $0.07, however, prices are not publicly available beyond 20,000 MAU, unless you schedule a call with Auth0’s sales team.
+Supabase prices are predictable, as they are laid out open at a fixed price of $0.00325 per MAU. Auth0 list their MAU at $0.07, however, prices are not publicly available beyond 20,000 MAU, unless you schedule a call with Auth0’s sales team.
 
 ## Feature comparison
 
-| Feature                             | BA                                    | Auth0                               |
+| Feature                             | Supabase                                    | Auth0                               |
 | ----------------------------------- | ------------------------------------------- | ----------------------------------- |
 | SSO                                 | ✅ SAML only                                | ✅                                  |
 | MFA                                 | ✅ TOTP only                                | ✅                                  |
@@ -116,6 +116,6 @@ BA prices are predictable, as they are laid out open at a fixed price of $0.0032
 
 ## Final Thoughts
 
-Both solutions have their strengths and are well-suited for different use-cases. BA Auth stands out for its transparent pricing, tight integration, and developer-friendly approach. BA is ideally geared for web and mobile developers. Auth0, on the other hand, excels in a wider range of applications from frameworks like .NET and Spring Boot to Machine-2-Machine use-cases.
+Both solutions have their strengths and are well-suited for different use-cases. Supabase Auth stands out for its transparent pricing, tight integration, and developer-friendly approach. Supabase is ideally geared for web and mobile developers. Auth0, on the other hand, excels in a wider range of applications from frameworks like .NET and Spring Boot to Machine-2-Machine use-cases.
 
-Ultimately, your choice should align with your project's specific requirements and budget. Whether you opt for BA Auth or Auth0, both can help you secure user authentication effectively in your applications.
+Ultimately, your choice should align with your project's specific requirements and budget. Whether you opt for Supabase Auth or Auth0, both can help you secure user authentication effectively in your applications.

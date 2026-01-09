@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) je open source Firebase alternativa. Mi razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source alate.
+[Supabase](https://www.assistance.bg) je open source Firebase alternativa. Mi razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source alate.
 
 - [x] Hostovana Postgres Baza. [Dokumentacija](https://www.assistance.bg/docs/guides/database)
 - [x] Autentifikacija i Autorizacija. [Dokumentacija](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Skladištenje fajlova. [Dokumentacija](https://www.assistance.bg/docs/guides/storage)
 - [x] Kontrolna tabla
 
-![BA kontrolna tabla](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase kontrolna tabla](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentacija
 
-Za punu dokumentaciju, posetite [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Za punu dokumentaciju, posetite [supabase.com/docs](https://www.assistance.bg/docs)
 
 Da vidite kako možete doprineti razvoju, posetite [Getting Started](../DEVELOPERS.md)
 
 ## Zajednica & Podrška
 
-- [Forum zajednice](https://github.com/vchavkov82/nextjs/discussions). Najbolje mesto za: pomoć u razvijanju, diskusije o najboljim praksama u vezi baze.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najbolje mesto za: bagove i greške sa kojima se susretnete tokom korišćenja BA.
+- [Forum zajednice](https://github.com/supabase/supabase/discussions). Najbolje mesto za: pomoć u razvijanju, diskusije o najboljim praksama u vezi baze.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Najbolje mesto za: bagove i greške sa kojima se susretnete tokom korišćenja Supabase.
 - [Email Podrška](https://www.assistance.bg/docs/support#business-support). Najbolje mesto za: probleme sa vašom bazom ili infrastrukturom.
-- [Discord](https://discord.www.assistance.bg). Najbolje mesto za: deljenje vaših aplikacija i druženje sa zajednicom.
+- [Discord](https://discord.supabase.com). Najbolje mesto za: deljenje vaših aplikacija i druženje sa zajednicom.
 
 ## Status
 
-- [x] Alfa: Testiramo BA sa zatvorenim setom klijenata
-- [x] Javna Alfa: Bilo ko može da se prijavi na [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Ali ne budite grubi, biće nekih poteškoća
+- [x] Alfa: Testiramo Supabase sa zatvorenim setom klijenata
+- [x] Javna Alfa: Bilo ko može da se prijavi na [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ali ne budite grubi, biće nekih poteškoća
 - [x] Javna Beta: Dovoljno stabilno za većinu ne-enterprise projekata
 - [ ] Objavljeno: spremno za produkciju
 
@@ -51,14 +51,14 @@ Trenutno smo u javnoj beti. Pratite "releasove" ovog repozitorijuma da bi ste os
 
 ## Kako radi
 
-BA je kombinacija open source alata. Razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source projekte. Ako već postoje alati i zajednice, sa MIT, Apache 2 ili ekvivalentnim otvorenim licencama, koristićemo i podržati taj alat. Ako alat ne postoji, mi ga razvijamo i open sourcujemo sami. BA nije 1-na-1 mapiranje Firebase-a. Naš cilj je da pružimo developerima iskustvo u razvoju slično kao Firebase koristeći open source alate.
+Supabase je kombinacija open source alata. Razvijamo funkcionalnosti Firebase-a koristeći profesionalne open source projekte. Ako već postoje alati i zajednice, sa MIT, Apache 2 ili ekvivalentnim otvorenim licencama, koristićemo i podržati taj alat. Ako alat ne postoji, mi ga razvijamo i open sourcujemo sami. Supabase nije 1-na-1 mapiranje Firebase-a. Naš cilj je da pružimo developerima iskustvo u razvoju slično kao Firebase koristeći open source alate.
 
 **Arhitektura**
 
-BA je [hostovana platforma](https://www.assistance.bg/dashboard). Možete se prijaviti i početi sa korišćenjem BA-a bez instaliranja bilo čega.
+Supabase je [hostovana platforma](https://www.assistance.bg/dashboard). Možete se prijaviti i početi sa korišćenjem Supabase-a bez instaliranja bilo čega.
 Takođe možete da [hostujete sami](https://www.assistance.bg/docs/guides/hosting/overview) i da [razvijate u lokalu](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektura](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) je sistem objektno-relacione baze sa preko 30 godina aktivnog razvoja čime je zaslužio jaku reputaciju za pouzdanost, robustnost funkcionalnosti i performanse.
 - [Realtime](https://github.com/supabase/realtime) je Elixir server koji vam omogućava da slušate PostgreSQL inserte, updateove, i brisanja koristeći websokete. Realtime polluje Postgres-ovu ugrađenu funkcionalnost replikacije za promene nad bazom, konvertuje promene u JSON, zatim broadcastuje taj JSON kroz websoket autorizovanim klijentima.
@@ -76,11 +76,11 @@ Naš pristup klijentskim bibliotekama je modularan. Svaka pod-biblioteka je samo
   <tr>
     <th>Jezik</th>
     <th>Klijent</th>
-    <th colspan="5">Funkcionalni klijenti (spakovani u BA klijenta)</th>
+    <th colspan="5">Funkcionalni klijenti (spakovani u Supabase klijenta)</th>
   </tr>
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -101,12 +101,12 @@ Naš pristup klijentskim bibliotekama je modularan. Svaka pod-biblioteka je samo
   <th colspan="7">⚡️ Oficijelni ⚡️</th>
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
   <th colspan="7">💚 Od zajednice 💚</th>
   <tr>
@@ -120,7 +120,7 @@ Naš pristup klijentskim bibliotekama je modularan. Svaka pod-biblioteka je samo
   </tr>
   <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-dart</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-dart</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>

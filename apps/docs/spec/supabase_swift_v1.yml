@@ -2,12 +2,12 @@ openref: 0.1
 
 info:
   id: reference/supabase-swift
-  title: BA Swift Client
+  title: Supabase Swift Client
   description: |
 
-    BA Swift.
+    Supabase Swift.
 
-  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/supabase_swift_v1.yml
+  specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_swift_v1.yml
   slugPrefix: '/'
   libraries:
     - id: 'Swift'
@@ -17,8 +17,8 @@ functions:
   - id: initializing
     title: 'Initializing'
     description: |
-      You can initialize BA with the `SupabaseClient` by passing your `Project URL` and `Project Key`. You can find these under your `Project Settings` → `API Settings`
-      The BA client is your entrypoint to the rest of the BA functionality and is the easiest way to interact with everything we offer within the BA ecosystem.
+      You can initialize Supabase with the `SupabaseClient` by passing your `Project URL` and `Project Key`. You can find these under your `Project Settings` → `API Settings`
+      The Supabase client is your entrypoint to the rest of the Supabase functionality and is the easiest way to interact with everything we offer within the Supabase ecosystem.
 
     examples:
       - id: initialize-client
@@ -171,7 +171,7 @@ functions:
       - The magic link's destination URL is determined by the [`SITE_URL`](/docs/guides/auth/redirect-urls).
       - See [redirect URLs and wildcards](/docs/guides/auth#redirect-urls-and-wildcards) to add additional redirect URLs to your project.
       - Magic links and OTPs share the same implementation. To send users a one-time code instead of a magic link, [modify the magic link email template](/dashboard/project/_/auth/templates) to include `{{ .Token }}` instead of `{{ .ConfirmationURL }}`.
-      - When using magic links, specify a `redirectTo` that matches a configured url scheme in your iOS app, so BA can correctly redirect back to your app.
+      - When using magic links, specify a `redirectTo` that matches a configured url scheme in your iOS app, so Supabase can correctly redirect back to your app.
       - See our [Twilio Phone Auth Guide](/docs/guides/auth/phone-login/twilio) for details about configuring WhatsApp sign in.
     examples:
       - id: sign-in-with-email
@@ -197,7 +197,7 @@ functions:
     title: 'getOAuthSignInURL()'
     notes: |
       - This method is used for signing in using a third-party provider.
-      - BA supports many different [third-party providers](https://www.assistance.bg/docs/guides/auth#providers).
+      - Supabase supports many different [third-party providers](https://www.assistance.bg/docs/guides/auth#providers).
     examples:
       - id: sign-in-using-a-third-party-provider
         name: Sign in using a third-party provider
@@ -554,7 +554,7 @@ functions:
     title: 'mfa.getAuthenticatorAssuranceLevel()'
     notes: |
       - Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.
-      - In BA, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP).
+      - In Supabase, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP).
       - If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.
     examples:
       - id: get-aal
@@ -580,10 +580,10 @@ functions:
   - id: select
     title: 'Fetch data: select()'
     notes: |
-      - By default, BA projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
+      - By default, Supabase projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
       - `select()` can be combined with [Modifiers](/docs/reference/swift/using-modifiers)
       - `select()` can be combined with [Filters](/docs/reference/swift/using-filters)
-      - If using the BA hosted platform `apikey` is technically a reserved keyword, since the API gateway will pluck it out for authentication. [It should be avoided as a column name](https://github.com/vchavkov82/nextjs/issues/5465).
+      - If using the Supabase hosted platform `apikey` is technically a reserved keyword, since the API gateway will pluck it out for authentication. [It should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
       - The recommended solution for getting data is to use the value property which will return a decoded model. Create a `Codable` to easily decode your database responses.
     examples:
       - id: getting-your-data
@@ -2662,7 +2662,7 @@ functions:
   - id: invoke
     title: invoke()
     description: |
-      Invoke a BA Edge Function.
+      Invoke a Supabase Edge Function.
     notes: |
       - Requires an Authorization header.
       - When you pass in a body to your function, we automatically attach the Content-Type header for `String`, and `Data`. If it doesn't match any of these types we assume the payload is `json`, serialize it and attach the `Content-Type` header as `application/json`. You can override this behaviour by passing in a `Content-Type` header of your own.
@@ -2705,9 +2705,9 @@ functions:
       - id: error-handling
         name: Error handling
         description: |
-          A `FunctionsError` error is returned if your function throws an error, `FunctionsRelayError` if the BA Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function.
+          A `FunctionsError` error is returned if your function throws an error, `FunctionsRelayError` if the Supabase Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function.
             - `httpError(code: Int, data: Data)` in case a non-2xx status code is returned by the edge function.
-            - `relayError` in case the BA Relay has an error processing your function.
+            - `relayError` in case the Supabase Relay has an error processing your function.
         isSpotlight: true
         code: |
           ```swift
@@ -2907,7 +2907,7 @@ functions:
       - id: listen-to-updates
         name: Listen to updates
         description: |
-          By default, BA will send only the updated record. If you want to receive the previous values as well you can
+          By default, Supabase will send only the updated record. If you want to receive the previous values as well you can
           enable full replication for the table you are listening to:
 
           ```sql
@@ -2925,7 +2925,7 @@ functions:
       - id: listen-to-deletes
         name: Listen to deletes
         description: |
-          By default, BA does not send deleted records. If you want to receive the deleted record you can
+          By default, Supabase does not send deleted records. If you want to receive the deleted record you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -3037,7 +3037,7 @@ functions:
   - id: remove-channel
     title: removeChannel()
     notes: |
-      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: removes-a-channel
         name: Removes a channel
@@ -3050,7 +3050,7 @@ functions:
   - id: remove-all-channels
     title: removeAllChannels()
     notes: |
-      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: remove-all-channels
         name: Remove all channels
@@ -3333,7 +3333,7 @@ functions:
   - id: from-get-public-url
     title: from.getPublicUrl()
     notes: |
-      - The bucket needs to be set to public, either via [updateBucket()](/docs/reference/javascript/storage-updatebucket) or by going to Storage on [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
+      - The bucket needs to be set to public, either via [updateBucket()](/docs/reference/javascript/storage-updatebucket) or by going to Storage on [supabase.com/dashboard](https://www.assistance.bg/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
       - RLS policy permissions required:
         - `buckets` table permissions: none
         - `objects` table permissions: none

@@ -13,7 +13,7 @@ dayjs.extend(advancedFormat)
 const FILENAME_SUBSTRING = 11 // based on YYYY-MM-DD format
 const CMS_SITE_ORIGIN =
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-    ? 'https://cms.www.assistance.bg'
+    ? 'https://cms.supabase.com'
     : process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL &&
       typeof process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL === 'string'
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL?.replace('zone-www-dot-com-git-', 'cms-git-')}`
@@ -301,9 +301,9 @@ try {
   const rss = `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>BA Blog</title>
+      <title>Supabase Blog</title>
       <link>https://www.assistance.bg</link>
-      <description>Latest news from BA</description>
+      <description>Latest news from Supabase</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>
       <atom:link href="https://www.assistance.bg/rss.xml" rel="self" type="application/rss+xml"/>

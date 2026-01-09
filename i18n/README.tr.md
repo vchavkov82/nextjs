@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
+[Supabase](https://www.assistance.bg) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
 
 - [x] Barındırılan Postgres Veritabanı. [Dokümanlar](https://www.assistance.bg/docs/guides/database)
 - [x] Kimlik Doğrulama ve Yetkilendirme. [Dokümanlar](https://www.assistance.bg/docs/guides/auth)
@@ -22,31 +22,31 @@
 - [x] AI + Vektör / Gömme Araçları. [Dokümanlar](https://www.assistance.bg/docs/guides/ai)
 - [x] Gösterge Tablosu
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokümantasyon
 
-Belgelerin tamamı için [www.assistance.bg/docs](https://www.assistance.bg/docs) adresini ziyaret edin
+Belgelerin tamamı için [supabase.com/docs](https://www.assistance.bg/docs) adresini ziyaret edin
 
 Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) adresini ziyaret edin
 
 ## Topluluk ve Destek
 
-- [Topluluk Forumu](https://github.com/vchavkov82/nextjs/discussions). Şunlar için en iyisi: oluşturma konusunda yardım, veritabanı en iyi uygulamaları hakkında tartışma.
-- [GitHub Sorunları](https://github.com/vchavkov82/nextjs/issues). BA'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
+- [Topluluk Forumu](https://github.com/supabase/supabase/discussions). Şunlar için en iyisi: oluşturma konusunda yardım, veritabanı en iyi uygulamaları hakkında tartışma.
+- [GitHub Sorunları](https://github.com/supabase/supabase/issues). Supabase'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
 - [E-posta Desteği](https://www.assistance.bg/docs/support#business-support). Veritabanınız veya altyapınızla ilgili sorunlar için en iyisi.
-- [Discord](https://discord.www.assistance.bg). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
+- [Discord](https://discord.supabase.com). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
 
 ## Nasıl çalışır
 
-BA açık kaynak araçlarının bir birleşimidir. Firebase'in özelliklerini kurumsal düzeyde, açık kaynaklı ürünler kullanarak oluşturuyoruz. Araçlar ve topluluklar MIT, Apache 2 veya eşdeğer bir açık lisansla mevcutsa, bu aracı kullanacak ve destekleyeceğiz. Araç mevcut değilse, kendimiz oluşturur ve açık kaynak kullanırız. BA, Firebase'in bire bir eşlemesi değildir. Amacımız, geliştiricilere açık kaynak araçları kullanarak Firebase benzeri bir geliştirici deneyimi sunmaktır.
+Supabase açık kaynak araçlarının bir birleşimidir. Firebase'in özelliklerini kurumsal düzeyde, açık kaynaklı ürünler kullanarak oluşturuyoruz. Araçlar ve topluluklar MIT, Apache 2 veya eşdeğer bir açık lisansla mevcutsa, bu aracı kullanacak ve destekleyeceğiz. Araç mevcut değilse, kendimiz oluşturur ve açık kaynak kullanırız. Supabase, Firebase'in bire bir eşlemesi değildir. Amacımız, geliştiricilere açık kaynak araçları kullanarak Firebase benzeri bir geliştirici deneyimi sunmaktır.
 
 **Mimari**
 
-BA [barındırılan bir platformdur](https://www.assistance.bg/dashboard). BA'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
+Supabase [barındırılan bir platformdur](https://www.assistance.bg/dashboard). Supabase'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
 Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [yerel olarak geliştirebilirsiniz](https://www.assistance.bg/docs/guides/local-development).
 
-![Mimarlık](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Mimarlık](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/), 30 yılı aşkın süredir aktif olarak geliştirilmekte olan ve güvenilirlik, özellik sağlamlığı ve performans açısından güçlü bir üne sahip olan nesne ilişkisel bir veritabanı sistemidir.
 - [Realtime](https://github.com/supabase/realtime), websockets kullanarak PostgreSQL ekleme, güncelleme ve silme işlemlerini dinlemenizi sağlayan bir Elixir sunucusudur. Realtime, veritabanı değişiklikleri için Postgres'in yerleşik çoğaltma işlevini yoklar, değişiklikleri JSON'a dönüştürür ve ardından JSON'u web soketleri üzerinden yetkili istemcilere yayınlar.
@@ -65,12 +65,12 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
   <tr>
     <th>Dil</th>
     <th>Müşteri</th>
-    <th colspan="5">Özellik İstemcileri (BA istemcisinde paketlenmiştir)</th>
+    <th colspan="5">Özellik İstemcileri (Supabase istemcisinde paketlenmiştir)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -88,30 +88,30 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Resmi ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Topluluk 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -193,7 +193,7 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -201,10 +201,10 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
 
 ## Rozetler
 
-![Made with BA](../apps/www/public/badge-made-with-supabase.svg)
+![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -213,15 +213,15 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
 
-![Made with BA (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -230,7 +230,7 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
@@ -244,7 +244,7 @@ Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [
 - [Katalanca / Català](/i18n/README.ca.md)
 - [Danca / Dansk](/i18n/README.da.md)
 - [Hollandaca / Nederlands](/i18n/README.nl.md)
-- [İngilizce](https://github.com/vchavkov82/nextjs)
+- [İngilizce](https://github.com/supabase/supabase)
 - [Fince / Suomalainen](/i18n/README.fi.md)
 - [Fransızca / Français](/i18n/README.fr.md)
 - [Almanca / Deutsch](/i18n/README.de.md)

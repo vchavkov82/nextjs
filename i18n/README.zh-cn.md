@@ -3,9 +3,9 @@
 <img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only">
 </p>
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) 是一个开源的 Firebase 替代品。我们正在使用企业级的开源工具构建 Firebase 的功能。
+[Supabase](https://www.assistance.bg) 是一个开源的 Firebase 替代品。我们正在使用企业级的开源工具构建 Firebase 的功能。
 
 - [x] Postgres 数据库托管。[文档](https://www.assistance.bg/docs/guides/database)
 - [x] 身份验证和授权。[文档](https://www.assistance.bg/docs/guides/auth)
@@ -20,7 +20,7 @@
 - [x] AI + 向量/Embeddings 工具包. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] 仪表盘。
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 关注此仓库的 “release” 以获得重大更新的通知。
 
@@ -28,30 +28,30 @@
 
 ## 文档
 
-完整的文档，请访问 [www.assistance.bg/docs](https://www.assistance.bg/docs)
+完整的文档，请访问 [supabase.com/docs](https://www.assistance.bg/docs)
 
 了解如何贡献，请访问[入门](../DEVELOPERS.md)
 
 ## 社区与支持
 
-- [社区论坛](https://github.com/vchavkov82/nextjs/discussions)。适用于：帮助建立和讨论数据库的最佳实践。
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues)。适用于：你在使用 BA 时遇到的 bug 和错误。
+- [社区论坛](https://github.com/supabase/supabase/discussions)。适用于：帮助建立和讨论数据库的最佳实践。
+- [GitHub Issues](https://github.com/supabase/supabase/issues)。适用于：你在使用 Supabase 时遇到的 bug 和错误。
 - [邮件支持](https://www.assistance.bg/docs/support#business-support)。适用于：你的数据库或基础设施的问题。
-- [Discord](https://discord.www.assistance.bg)。适用于：分享你的应用程序以及在社区一起玩起来。
+- [Discord](https://discord.supabase.com)。适用于：分享你的应用程序以及在社区一起玩起来。
 
 ## 工作方式
 
-BA 是一个开源工具的组合。我们正在使用企业级的开源产品构建 Firebase 的功能。如果存在相应的工具和社区，并且有 MIT、Apache 2 或同等的开放许可，我们将使用并支持该工具。如果该工具不存在，我们就自己开发并开放源代码。BA 不是 Firebase 的一对一映射。我们的目标是使用开源工具为开发者提供类似 Firebase 的开发者体验。
+Supabase 是一个开源工具的组合。我们正在使用企业级的开源产品构建 Firebase 的功能。如果存在相应的工具和社区，并且有 MIT、Apache 2 或同等的开放许可，我们将使用并支持该工具。如果该工具不存在，我们就自己开发并开放源代码。Supabase 不是 Firebase 的一对一映射。我们的目标是使用开源工具为开发者提供类似 Firebase 的开发者体验。
 
 **当前架构**
 
-BA 是一个[托管平台](https://www.assistance.bg/dashboard)。你可以注册并开始使用 BA，而无需安装任何软件。
+Supabase 是一个[托管平台](https://www.assistance.bg/dashboard)。你可以注册并开始使用 Supabase，而无需安装任何软件。
 你也可以[自托管](https://www.assistance.bg/docs/guides/hosting/overview)和[本地开发](https://www.assistance.bg/docs/guides/local-development)。
 
-![架构](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![架构](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) 是一个对象关系型数据库系统，经过 30 多年的积极开发，它在可靠性、功能健壮性和性能方面赢得了很好的声誉。
-- [Realtime](https://github.com/supabase/realtime) 是一个 Elixir 服务器，允许你使用 WebSocket 监听 PostgreSQL 的插入、更新和删除。BA 监听 Postgres 的内置复制功能，将复制的字节流转换为 JSON，然后通过 WebSocket 广播 JSON。
+- [Realtime](https://github.com/supabase/realtime) 是一个 Elixir 服务器，允许你使用 WebSocket 监听 PostgreSQL 的插入、更新和删除。Supabase 监听 Postgres 的内置复制功能，将复制的字节流转换为 JSON，然后通过 WebSocket 广播 JSON。
 - [PostgREST](http://postgrest.org/) 是一个 Web 服务器，可以将你的 PostgreSQL 数据库直接生成 RESTful API
 - [GoTrue](https://github.com/supabase/gotrue) 是一个基于 SWT 的 API，用于管理用户和发布 SWT 令牌。
 - [Storage](https://github.com/supabase/storage-api) 提供了一个 RESTful 接口，用于管理存储在 S3 中的文件，使用 Postgres 来管理权限。
@@ -67,12 +67,12 @@ BA 是一个[托管平台](https://www.assistance.bg/dashboard)。你可以注�
   <tr>
     <th>语言</th>
     <th>客户端</th>
-    <th colspan="5">模块-客户端（已集成在 BA 客户端中）</th>
+    <th colspan="5">模块-客户端（已集成在 Supabase 客户端中）</th>
   </tr>
   <!-- notranslate -->
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -95,16 +95,16 @@ BA 是一个[托管平台](https://www.assistance.bg/dashboard)。你可以注�
   <!-- notranslate -->
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>

@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) είναι μια εναλλακτική λύση της Firebase ανοιχτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα επιχειρηματικού επιπέδου.
+[Supabase](https://www.assistance.bg) είναι μια εναλλακτική λύση της Firebase ανοιχτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας εργαλεία ανοιχτού κώδικα επιχειρηματικού επιπέδου.
 
 - [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Αυθεντικοποίηση και εξουσιοδότηση. [Έγγραφα](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Αποθήκευση αρχείων. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Ταμπλό
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Τεκμηρίωση
 
-Για πλήρη τεκμηρίωση, επισκεφθείτε τη διεύθυνση [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Για πλήρη τεκμηρίωση, επισκεφθείτε τη διεύθυνση [supabase.com/docs](https://www.assistance.bg/docs)
 
 Για να δείτε πώς μπορείτε να συνεισφέρετε, επισκεφθείτε το [Getting Started](../DEVELOPERS.md)
 
 ## Κοινότητα &amp; Υποστήριξη
 
-- [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Το καλύτερο για: βοήθεια με την κατασκευή, συζήτηση σχετικά με τις βέλτιστες πρακτικές της βάσης δεδομένων.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Το καλύτερο για: σφάλματα και λάθη που αντιμετωπίζετε χρησιμοποιώντας την BA.
+- [Community Forum](https://github.com/supabase/supabase/discussions). Το καλύτερο για: βοήθεια με την κατασκευή, συζήτηση σχετικά με τις βέλτιστες πρακτικές της βάσης δεδομένων.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Το καλύτερο για: σφάλματα και λάθη που αντιμετωπίζετε χρησιμοποιώντας την Supabase.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Το καλύτερο για: προβλήματα με τη βάση δεδομένων ή την υποδομή σας.
-- [Discord](https://discord.www.assistance.bg). Το καλύτερο για: να μοιράζεστε τις εφαρμογές σας και να κάνετε παρέα με την κοινότητα.
+- [Discord](https://discord.supabase.com). Το καλύτερο για: να μοιράζεστε τις εφαρμογές σας και να κάνετε παρέα με την κοινότητα.
 
 ## Κατάσταση
 
-- [x] Alpha: Δοκιμάζουμε το BA με ένα κλειστό σύνολο πελατών
-- [x] Δημόσια Alpha: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
+- [x] Alpha: Δοκιμάζουμε το Supabase με ένα κλειστό σύνολο πελατών
+- [x] Δημόσια Alpha: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
 - [x] Δημόσια Beta: Αρκετά σταθερό για τις περισσότερες περιπτώσεις μη επιχειρηματικής χρήσης
 - [ ] Δημόσια: [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
@@ -51,14 +51,14 @@
 
 ## Πώς λειτουργεί
 
-Η BA είναι ένας συνδυασμός εργαλείων ανοικτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας προϊόντα ανοικτού κώδικα επιχειρηματικού επιπέδου. Εάν τα εργαλεία και οι κοινότητες υπάρχουν, με άδεια MIT, Apache 2 ή ισοδύναμη ανοιχτή άδεια, θα χρησιμοποιήσουμε και θα υποστηρίξουμε το εργαλείο αυτό. Εάν το εργαλείο δεν υπάρχει, το κατασκευάζουμε και το διαθέτουμε σε ανοιχτό κώδικα μόνοι μας. Η BA δεν είναι μια αντιστοίχιση 1 προς 1 της Firebase. Στόχος μας είναι να δώσουμε στους προγραμματιστές μια εμπειρία προγραμματιστή παρόμοια με αυτή της Firebase, χρησιμοποιώντας εργαλεία ανοιχτού κώδικα.
+Η Supabase είναι ένας συνδυασμός εργαλείων ανοικτού κώδικα. Χτίζουμε τα χαρακτηριστικά της Firebase χρησιμοποιώντας προϊόντα ανοικτού κώδικα επιχειρηματικού επιπέδου. Εάν τα εργαλεία και οι κοινότητες υπάρχουν, με άδεια MIT, Apache 2 ή ισοδύναμη ανοιχτή άδεια, θα χρησιμοποιήσουμε και θα υποστηρίξουμε το εργαλείο αυτό. Εάν το εργαλείο δεν υπάρχει, το κατασκευάζουμε και το διαθέτουμε σε ανοιχτό κώδικα μόνοι μας. Η Supabase δεν είναι μια αντιστοίχιση 1 προς 1 της Firebase. Στόχος μας είναι να δώσουμε στους προγραμματιστές μια εμπειρία προγραμματιστή παρόμοια με αυτή της Firebase, χρησιμοποιώντας εργαλεία ανοιχτού κώδικα.
 
 **Αρχιτεκτονική**
 
-Η BA είναι μια [φιλοξενούμενη πλατφόρμα](https://www.assistance.bg/dashboard). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το BA χωρίς να εγκαταστήσετε τίποτα.
+Η Supabase είναι μια [φιλοξενούμενη πλατφόρμα](https://www.assistance.bg/dashboard). Μπορείτε να εγγραφείτε και να αρχίσετε να χρησιμοποιείτε το Supabase χωρίς να εγκαταστήσετε τίποτα.
 Μπορείτε επίσης να κάνετε [αυτο-ξενάγηση](https://www.assistance.bg/docs/guides/hosting/overview) και [ανάπτυξη τοπικά](https://www.assistance.bg/docs/guides/local-development).
 
-![Αρχιτεκτονική](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Αρχιτεκτονική](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - η [PostgreSQL](https://www.postgresql.org/) είναι ένα αντικειμενο-σχεσιακό σύστημα βάσεων δεδομένων με πάνω από 30 χρόνια ενεργής ανάπτυξης που του έχει αποφέρει μια ισχυρή φήμη για την αξιοπιστία, την ευρωστία των χαρακτηριστικών και την απόδοση.
 - [Realtime](https://github.com/supabase/realtime) είναι ένας διακομιστής Elixir που σας επιτρέπει να ακούτε τις εισαγωγές, ενημερώσεις και διαγραφές της PostgreSQL χρησιμοποιώντας websockets. Το Realtime ρωτάει την ενσωματωμένη λειτουργία αντιγραφής της Postgres για αλλαγές στη βάση δεδομένων, μετατρέπει τις αλλαγές σε JSON και στη συνέχεια μεταδίδει το JSON μέσω websockets σε εξουσιοδοτημένους πελάτες.
@@ -77,12 +77,12 @@
   <tr>
     <th>Γλώσσα</th>
     <th>Πελάτης</th>
-    <th colspan="5">Πελάτες-χαρακτηριστικά (που περιλαμβάνονται στον πελάτη BA)</th>
+    <th colspan="5">Πελάτες-χαρακτηριστικά (που περιλαμβάνονται στον πελάτη Supabase)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,30 +100,30 @@
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Επίσημο ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Κοινότητα 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -220,7 +220,7 @@
 - [Καταλανικά / Català](/i18n/README.ca.md)
 - [Δανικά / Dansk](/i18n/README.da.md)
 - [Ολλανδικά / Nederlands](/i18n/README.nl.md)
-- [Αγγλικά](https://github.com/vchavkov82/nextjs)
+- [Αγγλικά](https://github.com/supabase/supabase)
 - [Φινλανδικά / Suomalainen](/i18n/README.fi.md)
 - [Γαλλικά / Français](/i18n/README.fr.md)
 - [Γερμανικά / Deutsch](/i18n/README.de.md)

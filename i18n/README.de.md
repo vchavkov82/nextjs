@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) ist eine Open-Source-Alternative zu Firebase. Wir bauen die Funktionen von Firebase mit Open-Source-Tools für Unternehmen auf.
+[Supabase](https://www.assistance.bg) ist eine Open-Source-Alternative zu Firebase. Wir bauen die Funktionen von Firebase mit Open-Source-Tools für Unternehmen auf.
 
 - [x] Gehostete Postgres-Datenbank. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Authentifizierung und Autorisierung. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,25 +21,25 @@
 - [x] Dateispeicher. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Dashboard
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentation
 
-Die vollständige Dokumentation finden Sie unter [www.assistance.bg/docs](https://www.assistance.bg/docs)
+Die vollständige Dokumentation finden Sie unter [supabase.com/docs](https://www.assistance.bg/docs)
 
 Wie Sie einen Beitrag leisten können, erfahren Sie unter [Erste Schritte](../DEVELOPERS.md)
 
 ## Gemeinschaft &amp; Unterstützung
 
-- [Gemeinschaftsforum](https://github.com/vchavkov82/nextjs/discussions). Am besten geeignet für: Hilfe bei der Erstellung, Diskussion über bewährte Datenbankverfahren.
-- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Am besten geeignet für: Bugs und Fehler, auf die Sie bei der Verwendung von BA stoßen.
+- [Gemeinschaftsforum](https://github.com/supabase/supabase/discussions). Am besten geeignet für: Hilfe bei der Erstellung, Diskussion über bewährte Datenbankverfahren.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Am besten geeignet für: Bugs und Fehler, auf die Sie bei der Verwendung von Supabase stoßen.
 - [E-Mail-Support](https://www.assistance.bg/docs/support#business-support). Am besten für: Probleme mit Ihrer Datenbank oder Infrastruktur.
-- [Discord](https://discord.www.assistance.bg). Am besten geeignet für: Austausch von Anwendungen und Austausch mit der Community.
+- [Discord](https://discord.supabase.com). Am besten geeignet für: Austausch von Anwendungen und Austausch mit der Community.
 
 ## Status
 
-- [x] Alpha: Wir testen BA mit einer geschlossenen Gruppe von Kunden
-- [x] Öffentliche Alpha: Jeder kann sich unter [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) anmelden. Aber seien Sie nachsichtig mit uns, es gibt noch ein paar Macken
+- [x] Alpha: Wir testen Supabase mit einer geschlossenen Gruppe von Kunden
+- [x] Öffentliche Alpha: Jeder kann sich unter [supabase.com/dashboard](https://www.assistance.bg/dashboard) anmelden. Aber seien Sie nachsichtig mit uns, es gibt noch ein paar Macken
 - [x] Öffentliche Beta: Stabil genug für die meisten nicht-unternehmerischen Anwendungsfälle
 - [Öffentlich: Allgemeine Verfügbarkeit [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
@@ -51,14 +51,14 @@ Wir befinden uns derzeit in der Public Beta. Beobachten Sie "releases" dieses Re
 
 ## Wie es funktioniert
 
-BA ist eine Kombination aus Open-Source-Tools. Wir entwickeln die Funktionen von Firebase unter Verwendung von Open-Source-Produkten in Unternehmensqualität. Wenn die Tools und Communities mit einer MIT-, Apache-2- oder einer vergleichbaren offenen Lizenz existieren, verwenden und unterstützen wir dieses Tool. Wenn es das Tool nicht gibt, entwickeln wir es selbst und stellen es als Open Source zur Verfügung. BA ist keine 1:1-Abbildung von Firebase. Unser Ziel ist es, Entwicklern eine Firebase-ähnliche Entwicklungserfahrung mit Open-Source-Tools zu bieten.
+Supabase ist eine Kombination aus Open-Source-Tools. Wir entwickeln die Funktionen von Firebase unter Verwendung von Open-Source-Produkten in Unternehmensqualität. Wenn die Tools und Communities mit einer MIT-, Apache-2- oder einer vergleichbaren offenen Lizenz existieren, verwenden und unterstützen wir dieses Tool. Wenn es das Tool nicht gibt, entwickeln wir es selbst und stellen es als Open Source zur Verfügung. Supabase ist keine 1:1-Abbildung von Firebase. Unser Ziel ist es, Entwicklern eine Firebase-ähnliche Entwicklungserfahrung mit Open-Source-Tools zu bieten.
 
 **Architektur**
 
-BA ist eine [gehostete Plattform](https://www.assistance.bg/dashboard). Sie können sich anmelden und BA verwenden, ohne etwas zu installieren.
+Supabase ist eine [gehostete Plattform](https://www.assistance.bg/dashboard). Sie können sich anmelden und Supabase verwenden, ohne etwas zu installieren.
 Sie können auch [selbst hosten](https://www.assistance.bg/docs/guides/hosting/overview) und [lokal entwickeln](https://www.assistance.bg/docs/guides/local-development).
 
-![Architektur](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) ist ein objektrelationales Datenbanksystem, das seit über 30 Jahren aktiv entwickelt wird und sich einen guten Ruf in Bezug auf Zuverlässigkeit, Robustheit der Funktionen und Leistung erworben hat.
 - [Realtime](https://github.com/supabase/realtime) ist ein Elixir-Server, mit dem Sie PostgreSQL-Einsätze, -Updates und -Löschvorgänge über Websockets abhören können. Realtime fragt die in Postgres eingebaute Replikationsfunktionalität nach Datenbankänderungen ab, konvertiert die Änderungen in JSON und sendet dann das JSON über Websockets an autorisierte Clients.
@@ -77,12 +77,12 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
   <tr>
     <th>Sprache</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (gebündelt im BA-Client)</th>
+    <th colspan="5">Feature-Clients (gebündelt im Supabase-Client)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,30 +100,30 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Offiziell ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Gemeinschaft 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -220,7 +220,7 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
 - [Katalanisch / Català](/i18n/README.ca.md)
 - [Dänisch / Dansk](/i18n/README.da.md)
 - [Niederländisch / Nederlands](/i18n/README.nl.md)
-- [Englisch](https://github.com/vchavkov82/nextjs)
+- [Englisch](https://github.com/supabase/supabase)
 - [Finnisch / Suomalainen](/i18n/README.fi.md)
 - [Französisch / Français](/i18n/README.fr.md)
 - [Deutsch / Deutsch](/i18n/README.de.md)

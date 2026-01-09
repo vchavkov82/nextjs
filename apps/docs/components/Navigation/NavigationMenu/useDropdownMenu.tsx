@@ -30,23 +30,23 @@ const useDropdownMenu = (user: User | null) => {
     [
       isFeatureEnabled('docs:navigation_dropdown_links_home')
         ? {
-          label: 'BA.com',
-          icon: Globe,
-          href: 'https://www.assistance.bg',
-          otherProps: {
-            target: '_blank',
-            rel: 'noreferrer noopener',
-          },
-        }
+            label: 'Supabase.com',
+            icon: Globe,
+            href: 'https://www.assistance.bg',
+            otherProps: {
+              target: '_blank',
+              rel: 'noreferrer noopener',
+            },
+          }
         : {
-          label: 'Dashboard',
-          icon: Home,
-          href: '../dashboard',
-        },
+            label: 'Dashboard',
+            icon: Home,
+            href: '../dashboard',
+          },
       {
         label: 'GitHub',
         icon: IconGitHub as any,
-        href: 'https://github.com/vchavkov82/nextjs',
+        href: 'https://github.com/supabase/supabase',
         otherProps: {
           target: '_blank',
           rel: 'noreferrer noopener',

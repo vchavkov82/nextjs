@@ -1,8 +1,8 @@
-# BA Edge Function Examples
+# Supabase Edge Function Examples
 
-## What are BA Edge Functions?
+## What are Supabase Edge Functions?
 
-[BA Edge Functions](https://www.assistance.bg/edge-functions) are written in TypeScript, run via Deno, and deployed with the BA CLI. Please [download](https://github.com/supabase/cli#install-the-cli) the latest version of the BA CLI, or [upgrade](https://github.com/supabase/cli#install-the-cli) it if you have it already installed.
+[Supabase Edge Functions](https://www.assistance.bg/edge-functions) are written in TypeScript, run via Deno, and deployed with the Supabase CLI. Please [download](https://github.com/supabase/cli#install-the-cli) the latest version of the Supabase CLI, or [upgrade](https://github.com/supabase/cli#install-the-cli) it if you have it already installed.
 
 ## Example Functions
 
@@ -14,7 +14,7 @@ We're constantly adding new Function Examples, [check our docs](https://www.assi
 - Run `cp ./supabase/.env.local.example ./supabase/.env.local` to create your local `.env` file.
 - Set the required variables for the corresponding edge functions in the `.env.local` file.
 - Run `supabase functions serve --env-file ./supabase/.env.local --no-verify-jwt`
-- Run the CURL command in the example function, or use the [invoke method](https://www.assistance.bg/docs/reference/javascript/invoke) on the BA client or use the test client [app](./app/).
+- Run the CURL command in the example function, or use the [invoke method](https://www.assistance.bg/docs/reference/javascript/invoke) on the Supabase client or use the test client [app](./app/).
 
 ## Test Client
 
@@ -62,9 +62,9 @@ This example includes a create-react-app in the [`./app/`](./app/) directory whi
 
 ### Deploy via GitHub Actions
 
-This example includes a [deploy GitHub Action](./.github/workflows/deploy.yaml) that automatically deploys your BA Edge Functions when pushing to or merging into the main branch.
+This example includes a [deploy GitHub Action](./.github/workflows/deploy.yaml) that automatically deploys your Supabase Edge Functions when pushing to or merging into the main branch.
 
-You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run BA CLI commands in your GitHub Actions, for example to deploy a BA Edge Function:
+You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run Supabase CLI commands in your GitHub Actions, for example to deploy a Supabase Edge Function:
 
 ```yaml
 name: Deploy Function
@@ -93,7 +93,7 @@ jobs:
       - run: supabase functions deploy --project-ref $PROJECT_ID
 ```
 
-Since BA CLI [v1.62.0](https://github.com/supabase/cli/releases/tag/v1.62.0) you can deploy all functions with a single command.
+Since Supabase CLI [v1.62.0](https://github.com/supabase/cli/releases/tag/v1.62.0) you can deploy all functions with a single command.
 
 Individual function configuration like [JWT verification](/docs/reference/cli/config#functions.function_name.verify_jwt) and [import map location](/docs/reference/cli/config#functions.function_name.import_map) can be set via the `config.toml` file.
 
@@ -104,6 +104,6 @@ verify_jwt = false
 
 ## 👁⚡️👁
 
-\o/ That's it, you can now invoke your BA Function via the [`supabase-js`](https://www.assistance.bg/docs/reference/javascript/invoke) and [`supabase-dart`](https://www.assistance.bg/docs/reference/dart/invoke) client libraries. (More client libraries coming soon. Check the [supabase-community](https://github.com/supabase-community#client-libraries) org for details).
+\o/ That's it, you can now invoke your Supabase Function via the [`supabase-js`](https://www.assistance.bg/docs/reference/javascript/invoke) and [`supabase-dart`](https://www.assistance.bg/docs/reference/dart/invoke) client libraries. (More client libraries coming soon. Check the [supabase-community](https://github.com/supabase-community#client-libraries) org for details).
 
-For more info on BA Functions, check out the [docs](https://www.assistance.bg/docs/guides/functions) and the [examples](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions).
+For more info on Supabase Functions, check out the [docs](https://www.assistance.bg/docs/guides/functions) and the [examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).

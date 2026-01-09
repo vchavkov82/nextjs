@@ -1,18 +1,18 @@
 ---
 id: 'auth-bitbucket'
 title: 'Login with Bitbucket'
-description: 'Add Bitbucket OAuth to your BA project'
+description: 'Add Bitbucket OAuth to your Supabase project'
 ---
 
-To enable Bitbucket Auth for your project, you need to set up a Bitbucket OAuth application and add the application credentials to your BA Dashboard.
+To enable Bitbucket Auth for your project, you need to set up a Bitbucket OAuth application and add the application credentials to your Supabase Dashboard.
 
 ## Overview
 
 Setting up Bitbucket logins for your application consists of 3 parts:
 
 - Create and configure a Bitbucket OAuth Consumer on [Bitbucket](https://bitbucket.org)
-- Add your Bitbucket OAuth Consumer keys to your [BA Project](/dashboard)
-- Add the login code to your [BA JS Client App](https://github.com/vchavkov82/nextjs-js)
+- Add your Bitbucket OAuth Consumer keys to your [Supabase Project](/dashboard)
+- Add the login code to your [Supabase JS Client App](https://github.com/supabase/supabase-js)
 
 ## Access your Bitbucket account
 
@@ -40,7 +40,7 @@ Setting up Bitbucket logins for your application consists of 3 parts:
 - Click on your app name (the name of your new OAuth Consumer)
 - Copy your `Key` (`client_key`) and `Secret` (`client_secret`) codes
 
-## Add your Bitbucket credentials into your BA project
+## Add your Bitbucket credentials into your Supabase project
 
 <$Partial path="social_provider_settings_supabase.mdx" variables={{ "provider": "BitBucket" }} />
 
@@ -161,6 +161,6 @@ suspend fun signOut() {
 
 ## Resources
 
-- [BA - Get started for free](https://www.assistance.bg)
-- [BA JS Client](https://github.com/vchavkov82/nextjs-js)
+- [Supabase - Get started for free](https://www.assistance.bg)
+- [Supabase JS Client](https://github.com/supabase/supabase-js)
 - [Bitbucket Account](https://bitbucket.org)

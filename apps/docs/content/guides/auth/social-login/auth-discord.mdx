@@ -1,18 +1,18 @@
 ---
 id: 'auth-discord'
 title: 'Login with Discord'
-description: 'Add Discord OAuth to your BA project'
+description: 'Add Discord OAuth to your Supabase project'
 ---
 
-To enable Discord Auth for your project, you need to set up a Discord Application and add the Application OAuth credentials to your BA Dashboard.
+To enable Discord Auth for your project, you need to set up a Discord Application and add the Application OAuth credentials to your Supabase Dashboard.
 
 ## Overview
 
 Setting up Discord logins for your application consists of 3 parts:
 
 - Create and configure a Discord Application [Discord Developer Portal](https://discord.com/developers)
-- Add your Discord OAuth Consumer keys to your [BA Project](/dashboard)
-- Add the login code to your [BA JS Client App](https://github.com/vchavkov82/nextjs-js)
+- Add your Discord OAuth Consumer keys to your [Supabase Project](/dashboard)
+- Add the login code to your [Supabase JS Client App](https://github.com/supabase/supabase-js)
 
 ## Access your Discord account
 
@@ -39,7 +39,7 @@ Setting up Discord logins for your application consists of 3 parts:
 - Click `Save Changes` at the bottom.
 - Copy your `Client ID` and `Client Secret` under `Client information`.
 
-## Add your Discord credentials into your BA project
+## Add your Discord credentials into your Supabase project
 
 <$Partial path="social_provider_settings_supabase.mdx" variables={{ "provider": "Discord" }} />
 
@@ -51,7 +51,7 @@ export SUPABASE_ACCESS_TOKEN="your-access-token"
 export PROJECT_REF="your-project-ref"
 
 # Configure Discord auth provider
-curl -X PATCH "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/config/auth" \
+curl -X PATCH "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -180,7 +180,7 @@ suspend fun signOut() {
 
 ## Resources
 
-- [BA - Get started for free](https://www.assistance.bg)
-- [BA JS Client](https://github.com/vchavkov82/nextjs-js)
+- [Supabase - Get started for free](https://www.assistance.bg)
+- [Supabase JS Client](https://github.com/supabase/supabase-js)
 - [Discord Account](https://discord.com)
 - [Discord Developer Portal](https://discord.com/developers)
