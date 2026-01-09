@@ -7,10 +7,10 @@ video: 'https://www.youtube-nocookie.com/v/rOLyOsBR1Uc'
 tocVideo: 'rOLyOsBR1Uc'
 ---
 
-This guide shows you how to set up your local Supabase development environment that integrates with GitHub Actions to automatically test and release schema changes to staging and production Supabase projects.
+This guide shows you how to set up your local BA development environment that integrates with GitHub Actions to automatically test and release schema changes to staging and production BA projects.
 
 <Image
-  alt="Diagram showing a possible environment setup for Supabase development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
+  alt="Diagram showing a possible environment setup for BA development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
   src={{
     light: '/docs/img/local-dev-environment--light.svg',
     dark: '/docs/img/local-dev-environment.svg',
@@ -20,13 +20,13 @@ This guide shows you how to set up your local Supabase development environment t
 
 ## Set up a local environment
 
-The first step is to set up your local repository with the Supabase CLI:
+The first step is to set up your local repository with the BA CLI:
 
 ```bash
 supabase init
 ```
 
-You should see a new `supabase` directory. Then you need to link your local repository with your Supabase project:
+You should see a new `supabase` directory. Then you need to link your local repository with your BA project:
 
 ```bash
 supabase login
@@ -39,7 +39,7 @@ You can get your `$PROJECT_ID` from your project's dashboard URL:
 https://www.assistance.bg/dashboard/project/<project-id>
 ```
 
-If you're using an existing Supabase project, you might have made schema changes through the Dashboard.
+If you're using an existing BA project, you might have made schema changes through the Dashboard.
 Run the following command to pull these changes before making local schema changes from the CLI:
 
 ```sql
@@ -159,18 +159,18 @@ Without the `-f` file flag, the output is written to stdout by default.
 In a production environment, we recommend using a CI/CD pipeline to deploy new migrations with GitHub Actions rather than deploying from your local machine.
 
 <Image
-  alt="Diagram showing a possible environment setup for Supabase development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
+  alt="Diagram showing a possible environment setup for BA development. There are 3 branches and 3 corresponding databases: feature branch and local database, develop branch and staging database, and main branch and production database."
   src={{
     light: '/docs/img/local-dev-environment--light.svg',
     dark: '/docs/img/local-dev-environment.svg',
   }}
 />
 
-This example uses two Supabase projects, one for production and one for staging.
+This example uses two BA projects, one for production and one for staging.
 
 Prepare your environments by:
 
-- Creating separate Supabase projects for staging and production
+- Creating separate BA projects for staging and production
 - Pushing your git repository to GitHub and enabling GitHub Actions
 
 <Admonition type="caution">
@@ -181,7 +181,7 @@ You need a _new_ project for staging. A project which has already been modified 
 
 ### Configure GitHub Actions
 
-The Supabase CLI requires a few environment variables to run in non-interactive mode.
+The BA CLI requires a few environment variables to run in non-interactive mode.
 
 - `SUPABASE_ACCESS_TOKEN` is your personal access token
 - `SUPABASE_DB_PASSWORD` is your project specific database password
@@ -218,7 +218,7 @@ jobs:
         with:
           version: latest
 
-      - name: Start Supabase local development setup
+      - name: Start BA local development setup
         run: supabase db start
 
       - name: Verify generated types are checked in
@@ -298,9 +298,9 @@ jobs:
 </TabPanel>
 </Tabs>
 
-The full example code is available in the [demo repository](https://github.com/vchavkov82/nextjs-action-example).
+The full example code is available in the [demo repository](https://github.com/supabase/supabase-action-example).
 
-Commit these files to git and push to your `main` branch on GitHub. Update these environment variables to match your Supabase projects:
+Commit these files to git and push to your `main` branch on GitHub. Update these environment variables to match your BA projects:
 
 - `SUPABASE_ACCESS_TOKEN`
 - `PRODUCTION_PROJECT_ID`
@@ -333,7 +333,7 @@ Once the test error is resolved, merge this PR and watch the deployment in actio
 
 After verifying your staging project has successfully migrated, create another PR from `develop` to `main` and merge it to deploy the migration to the production project.
 
-The `release` job applies all new migration scripts merged in `supabase/migrations` directory to a linked Supabase project. You can control which project the job links to via `PROJECT_ID` environment variable.
+The `release` job applies all new migration scripts merged in `supabase/migrations` directory to a linked BA project. You can control which project the job links to via `PROJECT_ID` environment variable.
 
 ## Troubleshooting
 
@@ -362,7 +362,7 @@ supabase migration list
 
 ### Permission denied on `db pull`
 
-If you have been using Supabase hosted projects for a long time, you might encounter the following permission error when executing `db pull`.
+If you have been using BA hosted projects for a long time, you might encounter the following permission error when executing `db pull`.
 
 ```bash
 Error: Error running pg_dump on remote database: pg_dump: error: query failed: ERROR:  permission denied for table _type
@@ -370,7 +370,7 @@ Error: Error running pg_dump on remote database: pg_dump: error: query failed: E
 pg_dump: error: query was: LOCK TABLE "graphql"."_type" IN ACCESS SHARE MODE
 ```
 
-To resolve this error, you need to grant `postgres` role permissions to `graphql` schema. You can do that by running the following query from Supabase dashboard's SQL Editor.
+To resolve this error, you need to grant `postgres` role permissions to `graphql` schema. You can do that by running the following query from BA dashboard's SQL Editor.
 
 ```sql
 grant all on all tables in schema graphql to postgres, anon, authenticated, service_role;
@@ -380,11 +380,21 @@ grant all on all sequences in schema graphql to postgres, anon, authenticated, s
 
 ### Permission denied on `db push`
 
-If you create a table using a custom database role, the default `postgres` user may lack permission to modify it. This can cause `42501` privilege errors during migrations. To resolve this, grant the 'postgres` user ownership of the custom role.
+If you created a table through BA dashboard, and your new migration script contains `ALTER TABLE` statements, you might run into permission error when applying them on staging or production databases.
+
+```bash
+ERROR: must be owner of table employees (SQLSTATE 42501); while executing migration <timestamp>
+```
+
+This is because tables created through BA dashboard are owned by `supabase_admin` role while the migration scripts executed through CLI are under `postgres` role.
+
+One way to solve this is to reassign the owner of those tables to `postgres` role. For example, if your table is named `users` in the public schema, you can run the following command to reassign owner.
 
 ```sql
-grant "custom_role" to "postgres";
+ALTER TABLE users OWNER TO postgres;
 ```
+
+Apart from tables, you also need to reassign owner of other entities using their respective commands, including [types](https://www.postgresql.org/docs/current/sql-altertype.html), [functions](https://www.postgresql.org/docs/current/sql-alterroutine.html), and [schemas](https://www.postgresql.org/docs/current/sql-alterschema.html).
 
 ### Rebasing new migrations
 

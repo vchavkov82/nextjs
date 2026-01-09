@@ -7,7 +7,7 @@ Database backups are an integral part of any disaster recovery plan. Disasters c
 
 <Admonition type="note">
 
-The BA team regularly monitors the status of backups. In case of any issues, you can [contact support](/dashboard/support/new). Also you can check out our [status page](https://status.www.assistance.bg/) at any time.
+The BA team regularly monitors the status of backups. In case of any issues, you can [contact support](/dashboard/support/new). Also you can check out our [status page](https://status.supabase.com/) at any time.
 
 </Admonition>
 
@@ -78,10 +78,10 @@ export PROJECT_REF="your-project-ref"
 
 # List all available backups
 curl -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
-  "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/database/backups"
+  "https://api.supabase.com/v1/projects/$PROJECT_REF/database/backups"
 
 # Restore from a PITR (not logical) backup (replace ISO timestamp with desired restore point)
-curl -X POST "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/database/backups/restore-pitr" \
+curl -X POST "https://api.supabase.com/v1/projects/$PROJECT_REF/database/backups/restore-pitr" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -177,7 +177,7 @@ See the [Duplicate Project docs](/docs/guides/platform/clone-project).
 
 During the `pg_restore` process, the `search_path` is set to an empty string for predictability, and security. Using unqualified references to functions or relations can cause restorations using logical backups to fail, as the database will not be able to locate the function or relation being referenced. This can happen even if the database functions without issues during normal operations, as the `search_path` is usually set to include several schemas during normal operations. Therefore, you should always use schema-qualified names within your SQL code.
 
-You can refer to [an example PR](https://github.com/vchavkov82/nextjs/pull/28393/files) on how to update SQL code to use schema-qualified names.
+You can refer to [an example PR](https://github.com/supabase/supabase/pull/28393/files) on how to update SQL code to use schema-qualified names.
 
 #### Invalid check constraints
 

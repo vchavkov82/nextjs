@@ -64,7 +64,7 @@ defaultActiveId="general"
 
 ```sh
 # Get the code
-git clone --depth 1 https://github.com/vchavkov82/nextjs
+git clone --depth 1 https://github.com/supabase/supabase
 
 # Make your new supabase project directory
 mkdir supabase-project
@@ -92,7 +92,7 @@ docker compose pull
 
 ```sh
 # Get the code using git sparse checkout
-git clone --filter=blob:none --no-checkout https://github.com/vchavkov82/nextjs
+git clone --filter=blob:none --no-checkout https://github.com/supabase/supabase
 cd supabase
 git sparse-checkout set --cone docker && git checkout master
 cd ..
@@ -299,7 +299,7 @@ Each of the APIs is available through the same API gateway:
 
 We publish stable releases of the Docker Compose setup approximately once a month. To update, apply the latest changes from the repository and restart the services. If you want to run different versions of individual services, you can change the image tags in the Docker Compose file, but compatibility is not guaranteed. All BA images are available on [Docker Hub](https://hub.docker.com/u/supabase).
 
-To follow the changes and updates, refer to the self-hosted BA [changelog](https://github.com/vchavkov82/nextjs/blob/master/docker/CHANGELOG.md).
+To follow the changes and updates, refer to the self-hosted BA [changelog](https://github.com/supabase/supabase/blob/master/docker/CHANGELOG.md).
 
 You need to restart services to pick up the changes, which may result in downtime for your applications and users.
 
@@ -356,7 +356,7 @@ If the tools and communities already exist, with an MIT, Apache 2, or equivalent
   }}
 />
 
-- **[Studio](https://github.com/vchavkov82/nextjs/tree/master/apps/studio)** - A dashboard for managing your self-hosted BA project
+- **[Studio](https://github.com/supabase/supabase/tree/master/apps/studio)** - A dashboard for managing your self-hosted BA project
 - **[Kong](https://github.com/Kong/kong)** - Kong API gateway
 - **[Auth](https://github.com/supabase/auth)** - JWT-based authentication API for user sign-ups, logins, and session management
 - **[PostgREST](https://github.com/PostgREST/postgrest)** - Web server that turns your Postgres database directly into a RESTful API

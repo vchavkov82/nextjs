@@ -2,7 +2,7 @@
 
 Our docs help developers to get started and keep succeeding with BA. We welcome contributions from everyone.
 
-If you'd like to contribute, see our list of [recommended issues](https://github.com/vchavkov82/nextjs/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation+label%3A%22help+wanted%22). We also welcome you to open a PR or a new issue with your question.
+If you'd like to contribute, see our list of [recommended issues](https://github.com/supabase/supabase/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation+label%3A%22help+wanted%22). We also welcome you to open a PR or a new issue with your question.
 
 Here are some general guidelines on writing docs for BA.
 
@@ -110,7 +110,7 @@ hideToc: true
 ---
 ```
 
-The navigation is defined in [`NavigationMenu.constants.ts`](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/components/Navigation/NavigationMenu/NavigationMenu.constants.ts).
+The navigation is defined in [`NavigationMenu.constants.ts`](https://github.com/supabase/supabase/blob/master/apps/docs/components/Navigation/NavigationMenu/NavigationMenu.constants.ts).
 
 Add an entry with the `name`, `url`, and (optional) `icon` for your page.
 
@@ -120,7 +120,7 @@ Reference docs are produced from the reference specs and library source code. A 
 
 ### Common spec file
 
-Each type of library (for example, language SDK or CLI) has a common spec file. For example, see the [spec file for the language SDKs](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/spec/common-client-libs-sections.json). This file contains definitions for the common SDK functions:
+Each type of library (for example, language SDK or CLI) has a common spec file. For example, see the [spec file for the language SDKs](https://github.com/supabase/supabase/blob/master/apps/docs/spec/common-client-libs-sections.json). This file contains definitions for the common SDK functions:
 
 - **id** - Identifies the function
 - **title** - Human-readable title
@@ -132,11 +132,11 @@ To add a new function, manually add an entry to this common file.
 
 ### Specific spec file
 
-Each library also has its own spec file containing library-specific details. For example, see the [JavaScript SDK spec file](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/spec/supabase_js_v2.yml).
+Each library also has its own spec file containing library-specific details. For example, see the [JavaScript SDK spec file](https://github.com/supabase/supabase/blob/master/apps/docs/spec/supabase_js_v2.yml).
 
 The functions listed in this file match the ones defined in the common spec file.
 
-Each function contains a description, code examples, and optional notes. The parameters are pulled from the source code via the `$ref` property, which references a function definition in the source code repo. These references are pulled down and transformed using commands in the spec [Makefile](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/spec/Makefile). Unless you're a library maintainer, you don't need to worry about this.
+Each function contains a description, code examples, and optional notes. The parameters are pulled from the source code via the `$ref` property, which references a function definition in the source code repo. These references are pulled down and transformed using commands in the spec [Makefile](https://github.com/supabase/supabase/blob/master/apps/docs/spec/Makefile). Unless you're a library maintainer, you don't need to worry about this.
 
 If you're a library maintainer, follow these steps when updating function parameters or return values:
 
@@ -147,9 +147,9 @@ If you're a library maintainer, follow these steps when updating function parame
 
 ## Content reuse
 
-If you copy the same content multiple times across different files, create a **partial** for content reuse instead. Partials are MDX files contained in [`apps/docs/content/_partials`](https://github.com/vchavkov82/nextjs/tree/master/apps/docs/content/_partials). They contain reusable snippets that can be inserted in multiple pages. For example, you can create a partial to define a common setup step for a group of tutorials.
+If you copy the same content multiple times across different files, create a **partial** for content reuse instead. Partials are MDX files contained in [`apps/docs/content/_partials`](https://github.com/supabase/supabase/tree/master/apps/docs/content/_partials). They contain reusable snippets that can be inserted in multiple pages. For example, you can create a partial to define a common setup step for a group of tutorials.
 
-To use a partial, import it into your MDX file. You can also set up a partial to automatically import by including it in the `components` within [`apps/docs/features/docs/MdxBase.shared.tsx`](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/features/docs/MdxBase.shared.tsx).
+To use a partial, import it into your MDX file. You can also set up a partial to automatically import by including it in the `components` within [`apps/docs/features/docs/MdxBase.shared.tsx`](https://github.com/supabase/supabase/blob/master/apps/docs/features/docs/MdxBase.shared.tsx).
 
 ## Components and elements
 
@@ -225,7 +225,7 @@ Link text should be descriptive. The reader should understand where the link goe
 
 But link text shouldn't be too long. Use the shortest part of the link that is descriptive enough. For example, `see the [reference section](/link)` rather than `[see the reference section](/link)`.
 
-Use relative links when linking within the `www.assistance.bg` domain. For example, `[link to another page in BA docs](/docs/guides/getting-started)`.
+Use relative links when linking within the `supabase.com` domain. For example, `[link to another page in BA docs](/docs/guides/getting-started)`.
 
 ### Lists
 
@@ -329,6 +329,6 @@ Here are some exceptions and BA-specific guidelines.
 
 ## Search
 
-Search is handled using a BA instance. During CI, [a script](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/scripts/search/generate-embeddings.ts) aggregates all content sources (eg. guides, reference docs, etc), indexes them using OpenAI embeddings, and stores them in a BA database.
+Search is handled using a BA instance. During CI, [a script](https://github.com/supabase/supabase/blob/master/apps/docs/scripts/search/generate-embeddings.ts) aggregates all content sources (eg. guides, reference docs, etc), indexes them using OpenAI embeddings, and stores them in a BA database.
 
-Search uses a hybrid of native Postgres FTS and embedding similarity search based on [`pgvector`](https://github.com/pgvector/pgvector). At runtime, a PostgREST call triggers the RPC that runs the weighted FTS search, and an [Edge Function](https://github.com/vchavkov82/nextjs/tree/master/supabase/functions) is executed to perform the embedding search.
+Search uses a hybrid of native Postgres FTS and embedding similarity search based on [`pgvector`](https://github.com/pgvector/pgvector). At runtime, a PostgREST call triggers the RPC that runs the weighted FTS search, and an [Edge Function](https://github.com/supabase/supabase/tree/master/supabase/functions) is executed to perform the embedding search.

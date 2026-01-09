@@ -8,7 +8,7 @@ import aiEditorRules from './default/ai-editor-rules/registry-item.json' with { 
 import { platform } from './platform'
 
 export const registry = {
-  name: 'Supabase UI Library',
+  name: 'BA UI Library',
   homepage: 'https://www.assistance.bg/ui',
   items: [
     ...blocks,

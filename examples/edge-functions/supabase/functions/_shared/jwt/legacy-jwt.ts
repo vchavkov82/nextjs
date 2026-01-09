@@ -1,6 +1,7 @@
 // Legacy supabase JWT verification
 // Use this template to validate tokens using the legacy symmetric JWT secret
-import * as jose from "jsr:@panva/jose@6";
+
+import * as jose from "https://deno.land/x/jose@v4.14.4/index.ts";
 
 // Automatically supplied by BA
 const JWT_SECRET = Deno.env.get("JWT_SECRET");

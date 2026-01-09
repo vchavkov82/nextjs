@@ -38,7 +38,7 @@ BA provides 3 database connection strings that can be used simultaneously if nec
 <img
   width="999"
   alt="Screenshot 2024-07-04 at 10 40 38 AM"
-  src="https://github.com/vchavkov82/nextjs/assets/91111415/1d653203-84d9-406a-a7c9-1f7d097f5a29"
+  src="https://github.com/supabase/supabase/assets/91111415/1d653203-84d9-406a-a7c9-1f7d097f5a29"
 />
 
 #### Direct connections:
@@ -54,14 +54,14 @@ postgresql://postgres:[YOUR-PASSWORD]@db.ajrbwkcuthywfihaarmflo.supabase.co:5432
 
 ```sh
 # Example transaction string
-postgresql://postgres.ajrbwkcuthywddfihrmflo:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.www.assistance.bg:6543/postgres
+postgresql://postgres.ajrbwkcuthywddfihrmflo:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:6543/postgres
 ```
 
 #### Supavisor in session mode (port 5432)
 
 ```sh
 # Example session string
-postgresql://postgres.ajrbwkcuthywfddihrmflo:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.www.assistance.bg:5432/postgres
+postgresql://postgres.ajrbwkcuthywfddihrmflo:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:5432/postgres
 ```
 
 ### Supavisor: Transaction mode vs. Session mode?
@@ -112,7 +112,7 @@ The modes are transaction (port 6543) and session (port 5432) mode.
 The "user+database+mode" combinations are formed from the above variables and are used within the connection string:
 
 ```
-postgres://[USER].shfmmplnqscentnakbkl:[password]@aws-0-ca-central-1.pooler.www.assistance.bg:[MODE]/[DATABASE]
+postgres://[USER].shfmmplnqscentnakbkl:[password]@aws-0-ca-central-1.pooler.supabase.com:[MODE]/[DATABASE]
 ```
 
 When a distinct combination connects to your database, a new direct connection pool will be created. That means if you have two combinations connecting and the "Pool Size" is set to 120, each combination will have permission to form 120 connections. This can become problematic if collectively they exhaust all available direct connections.
@@ -134,7 +134,7 @@ In the [Dashboard's Database Settings](/dashboard/project/_/database/settings), 
 <img
   width="673"
   alt="Screenshot 2024-02-25 at 10 06 25 PM"
-  src="https://github.com/vchavkov82/nextjs/assets/91111415/ce9e9d28-67c2-4dd2-ac0a-0a0150e63b4f"
+  src="https://github.com/supabase/supabase/assets/91111415/ce9e9d28-67c2-4dd2-ac0a-0a0150e63b4f"
 />
 
 You can also change the pool size for PostgREST's (DB API) internal pooler at the bottom of the [application settings](/dashboard/project/_/settings/api).
@@ -159,7 +159,7 @@ As a rule of thumb, if you're using the DB REST API or multiple app-based "user+
 
 Connection usage can be monitored with a BA Grafana Dashboard. It provides realtime visibility of over 200 database metrics, such as graphs of CPU, EBS, and active direct/pooler connections. It can be extremely useful for monitoring and debugging instances.
 
-You can check our [GitHub repo](https://github.com/vchavkov82/nextjs-grafana) for setup instructions for local deployments or free cloud deployments on [Fly.io](http://fly.io/). Refer to BA [documentation](/docs/guides/platform/metrics) to learn more about the metrics endpoint.
+You can check our [GitHub repo](https://github.com/supabase/supabase-grafana) for setup instructions for local deployments or free cloud deployments on [Fly.io](http://fly.io/). Refer to BA [documentation](/docs/guides/platform/metrics) to learn more about the metrics endpoint.
 
 ### **Can Supavisor really support a million connections?**
 

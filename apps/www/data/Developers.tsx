@@ -26,7 +26,7 @@ export const data = {
           icon: IconIntegrations,
         },
         {
-          text: 'Supabase UI',
+          text: 'BA UI',
           url: 'https://www.assistance.bg/ui',
           icon: (props: any) => (
             <svg

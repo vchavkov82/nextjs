@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   applicationName: metadataApplicationName,
   title: metadataTitle,
   description:
-    'Supabase is the Postgres development platform providing all the backend features you need to build a product.',
+    'BA is the Postgres development platform providing all the backend features you need to build a product.',
   metadataBase: new URL('https://www.assistance.bg'),
   icons: genFaviconData(BASE_PATH),
   robots: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    authors: 'Supabase',
+    authors: 'BA',
     url: `${BASE_PATH}`,
     images: `${BASE_PATH}/img/supabase-og-image.png`,
     publishedTime: buildDate,

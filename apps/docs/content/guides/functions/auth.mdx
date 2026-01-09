@@ -30,9 +30,33 @@ Following the [upcoming API key changes](https://github.com/orgs/supabase/discus
 
 </Admonition>
 
-## Integrating with Supabase Auth
+## Verifying JWT
 
-The simplest way to secure your endpoints is by using Supabase Auth to verify users.
+### Using BA template
+
+You can see [a custom JWT verification example on GitHub](https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/custom-jwt-validation) and a variety of [auth function templates](https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/_shared/jwt) also on GitHub.
+
+To verify incoming requests, you can download the specified template and start using it:
+
+```bash
+curl -O https://raw.githubusercontent.com/supabase/supabase/refs/heads/master/examples/edge-functions/supabase/functions/_shared/jwt/default.ts
+```
+
+```ts
+import { AuthMiddleware } from '../_shared/jwt/default.ts'
+
+Deno.serve((r) =>
+  AuthMiddleware(r, async (req) => {
+    const { name } = await req.json()
+
+    return Response.json({ message: `hello ${name}` })
+  })
+)
+```
+
+### Integrating with BA Auth
+
+You can also use the BA Auth to verify users
 
 <$Partial path="api_settings.mdx" variables={{ "framework": "", "tab": "" }} />
 
@@ -70,28 +94,66 @@ Deno.serve(async (req) => {
 })
 ```
 
-## Verifying JWT
+### Using JWT library
 
-### Using Supabase template
+You can use the popular [`jose`](https://www.npmjs.com/package/jose/v/4.10.0) library can be used to verify received JWTs, like the following example:
 
-You can see [a custom JWT verification example on GitHub](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions/supabase/functions/custom-jwt-validation) and a variety of [auth function templates](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions/supabase/functions/_shared/jwt) also on GitHub.
+```ts
+import { createRemoteJWKSet, jwtVerify } from 'https://deno.land/x/jose@v4.14.4/index.ts'
 
-To verify incoming requests, you can copy/download the specified template and start using it:
+// While developing you may populate the 'SB_JWT_ISSUER' to match the same issuer from your local environment
+// The issuer can also be customised from [auth.jwt_issuer] property
+const SUPABASE_JWT_ISSUER =
+  Deno.env.get('SB_JWT_ISSUER') ?? Deno.env.get('SUPABASE_URL') + '/auth/v1'
 
-<Admonition type="tip">
+const SUPABASE_JWT_KEYS = createRemoteJWKSet(
+  new URL(Deno.env.get('SUPABASE_URL')! + '/auth/v1/.well-known/jwks.json')
+)
 
-The following example uses [`jose`](https://jsr.io/@panva/jose) library to verify received JWTs.
+function getAuthToken(req: Request) {
+  const authHeader = req.headers.get('authorization')
+  if (!authHeader) {
+    throw new Error('Missing authorization header')
+  }
+  const [bearer, token] = authHeader.split(' ')
+  if (bearer !== 'Bearer') {
+    throw new Error(`Auth header is not 'Bearer {token}'`)
+  }
+  return token
+}
 
-</Admonition>
-{/* prettier-ignore */}
-<$CodeSample
-path="/edge-functions/supabase/functions/_shared/jwt/default.ts"
-meta="name=_shared/jwt/default.ts"
-lines={[[3, -1]]}
-/>
+function verifySupabaseJWT(jwt: string) {
+  return jwtVerify(jwt, SUPABASE_JWT_KEYS, {
+    issuer: SUPABASE_JWT_ISSUER,
+  })
+}
 
-<$CodeSample
-path="/edge-functions/supabase/functions/custom-jwt-validation/index.ts"
-meta="name=hello/index.ts"
-lines={[[4, -1]]}
-/>
+Deno.serve(async (req: Request) => {
+  if (req.method !== 'OPTIONS') {
+    try {
+      const token = getAuthToken(req)
+      const isValidJWT = await verifySupabaseJWT(token)
+
+      if (!isValidJWT) {
+        return Response.json(
+          { msg: 'Invalid JWT' },
+          {
+            status: 401,
+          }
+        )
+      }
+    } catch (e) {
+      console.error(e)
+      return Response.json(
+        { msg: e.toString() },
+        {
+          status: 401,
+        }
+      )
+    }
+  }
+
+  const { name } = await req.json()
+  return Response.json({ message: `hello ${name}` })
+})
+```

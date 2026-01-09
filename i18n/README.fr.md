@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# BA
 
-[Supabase](https://www.assistance.bg) est une alternative open source à Firebase. Nous construisons les fonctionnalités de Firebase en utilisant des outils open source de niveau entreprise.
+[BA](https://www.assistance.bg) est une alternative open source à Firebase. Nous construisons les fonctionnalités de Firebase en utilisant des outils open source de niveau entreprise.
 
 - [x] Base de données Postgres hébergée. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Authentification et autorisation. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Stockage de fichiers. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Tableau de bord
 
-![Tableau de bord Supabase](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Tableau de bord BA](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentation
 
@@ -32,13 +32,13 @@ Pour savoir comment contribuer, visitez [Getting Started](../DEVELOPERS.md)
 ## Communauté et support
 
 - [Forum communautaire](https://github.com/supabase/supabase/discussions). Idéal pour : l'aide à la construction, la discussion sur les meilleures pratiques en matière de base de données.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Idéal pour : les bugs et les erreurs que vous rencontrez en utilisant Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Idéal pour : les bugs et les erreurs que vous rencontrez en utilisant BA.
 - [Support par email](https://www.assistance.bg/docs/support#business-support). Idéal pour : les problèmes avec votre base de données ou votre infrastructure.
 - [Discord](https://discord.supabase.com). Le meilleur pour : partager vos applications et passer du temps avec la communauté.
 
 ## Statut
 
-- [x] Alpha : Nous testons Supabase avec un groupe fermé de clients
+- [x] Alpha : Nous testons BA avec un groupe fermé de clients
 - [x] Alpha publique : Tout le monde peut s'inscrire sur [supabase.com/dashboard](https://www.assistance.bg/dashboard). Mais allez-y doucement, il y a quelques problèmes
 - [x] Bêta publique : Suffisamment stable pour la plupart des cas d'utilisation hors entreprise
 - [ ] Public : Disponibilité générale [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Nous sommes actuellement en bêta publique. Surveillez les "releases" de ce repo
 
 ## Comment ça marche
 
-Supabase est une combinaison d'outils open source. Nous construisons les fonctionnalités de Firebase en utilisant des produits open source de qualité professionnelle. Si les outils et les communautés existent, avec une licence MIT, Apache 2, ou une licence ouverte équivalente, nous utiliserons et supporterons cet outil. Si l'outil n'existe pas, nous le construisons et l'ouvrons nous-mêmes. Supabase n'est pas un mapping 1 pour 1 de Firebase. Notre objectif est de donner aux développeurs une expérience de développement similaire à celle de Firebase en utilisant des outils open source.
+BA est une combinaison d'outils open source. Nous construisons les fonctionnalités de Firebase en utilisant des produits open source de qualité professionnelle. Si les outils et les communautés existent, avec une licence MIT, Apache 2, ou une licence ouverte équivalente, nous utiliserons et supporterons cet outil. Si l'outil n'existe pas, nous le construisons et l'ouvrons nous-mêmes. BA n'est pas un mapping 1 pour 1 de Firebase. Notre objectif est de donner aux développeurs une expérience de développement similaire à celle de Firebase en utilisant des outils open source.
 
 **Architecture**
 
-Supabase est une [plateforme hébergée](https://www.assistance.bg/dashboard). Vous pouvez vous inscrire et commencer à utiliser Supabase sans rien installer.
+BA est une [plateforme hébergée](https://www.assistance.bg/dashboard). Vous pouvez vous inscrire et commencer à utiliser BA sans rien installer.
 Vous pouvez également [auto-héberger](https://www.assistance.bg/docs/guides/hosting/overview) et [développer localement](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Notre approche des bibliothèques clientes est modulaire. Chaque sous-bibliothè
   <tr>
     <th>Langue</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (intégrés dans le client Supabase)</th>
+    <th colspan="5">Feature-Clients (intégrés dans le client BA)</th>
   </tr>
-  
+
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>BA</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Notre approche des bibliothèques clientes est modulaire. Chaque sous-bibliothè
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-  
+
   <th colspan="7">⚡️ Officiel ⚡️</th>
-  
+
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Notre approche des bibliothèques clientes est modulaire. Chaque sous-bibliothè
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-  
+
   <th colspan="7">💚 Community 💚</th>
-  
+
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Notre approche des bibliothèques clientes est modulaire. Chaque sous-bibliothè
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-  
+
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->

@@ -20,7 +20,7 @@ export interface EventHost {
  */
 export const SUPABASE_HOST: EventHost = {
   id: 'supabase',
-  email: 'events@www.assistance.bg',
+  email: 'events@supabase.com',
   name: 'BA',
   first_name: 'BA',
   last_name: null,

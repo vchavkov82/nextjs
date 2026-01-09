@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.assistance.bg/',
-    siteName: 'Supabase',
+    siteName: 'BA',
     images: [
       {
         url: 'https://www.assistance.bg/images/og/supabase-og.png',
         width: 800,
         height: 600,
-        alt: 'Supabase Og Image',
+        alt: 'BA Og Image',
       },
     ],
   },

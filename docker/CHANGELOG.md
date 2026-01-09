@@ -1,8 +1,8 @@
 # Changelog
 
-All notable changes to the Supabase self-hosted Docker configuration.
+All notable changes to the BA self-hosted Docker configuration.
 
-Changes are grouped by service rather than by change type. See [versions.md](./versions.md) 
+Changes are grouped by service rather than by change type. See [versions.md](./versions.md)
 for complete image version history and rollback information.
 
 Check updates for each service to learn more.

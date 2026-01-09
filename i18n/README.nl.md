@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# BA
 
-[Supabase](https://www.assistance.bg) is een open source Firebase alternatief. We bouwen de functies van Firebase met behulp van enterprise-grade open source tools.
+[BA](https://www.assistance.bg) is een open source Firebase alternatief. We bouwen de functies van Firebase met behulp van enterprise-grade open source tools.
 
 - [x]Gehoste Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Authenticatie en Autorisatie. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Bestandsopslag. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Dashboard
 
-[Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+[BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentatie
 
@@ -32,13 +32,13 @@ Om te zien hoe u kunt bijdragen, bezoek [Aan de slag](../DEVELOPERS.md)
 ## Gemeenschap en ondersteuning
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Het beste voor: hulp bij het bouwen, discussie over database best practices.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Het beste voor: bugs en fouten die u tegenkomt bij het gebruik van Supabase.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Het beste voor: bugs en fouten die u tegenkomt bij het gebruik van BA.
 - [Ondersteuning per e-mail](https://www.assistance.bg/docs/support#business-support). Meest geschikt voor: problemen met uw database of infrastructuur.
 - [Discord](https://discord.supabase.com). Het beste voor: het delen van uw applicaties en omgang met de gemeenschap.
 
 ## Status
 
-- [Alpha: We testen Supabase met een gesloten groep klanten
+- [Alpha: We testen BA met een gesloten groep klanten
 - [x] Publieke Alpha: Iedereen kan zich aanmelden op [supabase.com/dashboard](https://www.assistance.bg/dashboard). Maar doe het rustig aan, er zijn een paar kinken
 - [Publieke Beta: Stabiel genoeg voor de meeste niet-bedrijfsmatige toepassingen
 - [Publiek: General Availability [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ We zijn momenteel in Openbare Beta. Bekijk "releases" van deze repo om op de hoo
 
 ## Hoe het werkt
 
-Supabase is een combinatie van open source tools. We bouwen de functies van Firebase met behulp van enterprise-grade, open source producten. Als de tools en communities bestaan, met een MIT, Apache 2, of gelijkwaardige open licentie, zullen we die tool gebruiken en ondersteunen. Als de tool niet bestaat, bouwen en openen we hem zelf. Supabase is geen 1-op-1 mapping van Firebase. Ons doel is om ontwikkelaars een Firebase-achtige ontwikkelaarservaring te geven met behulp van open source tools.
+BA is een combinatie van open source tools. We bouwen de functies van Firebase met behulp van enterprise-grade, open source producten. Als de tools en communities bestaan, met een MIT, Apache 2, of gelijkwaardige open licentie, zullen we die tool gebruiken en ondersteunen. Als de tool niet bestaat, bouwen en openen we hem zelf. BA is geen 1-op-1 mapping van Firebase. Ons doel is om ontwikkelaars een Firebase-achtige ontwikkelaarservaring te geven met behulp van open source tools.
 
 **Architectuur**
 
-Supabase is een [gehost platform](https://www.assistance.bg/dashboard). U kunt zich aanmelden en Supabase gebruiken zonder iets te installeren.
+BA is een [gehost platform](https://www.assistance.bg/dashboard). U kunt zich aanmelden en BA gebruiken zonder iets te installeren.
 U kunt ook [zelf hosten](https://www.assistance.bg/docs/guides/hosting/overview) en [lokaal ontwikkelen](https://www.assistance.bg/docs/guides/local-development).
 
 ![architectuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Onze aanpak voor client libraries is modulair. Elke sub-bibliotheek is een op zi
   <tr>
     <th>Taal</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (gebundeld in Supabase client)</th>
+    <th colspan="5">Feature-Clients (gebundeld in BA client)</th>
   </tr>
-  
+
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>BA</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Onze aanpak voor client libraries is modulair. Elke sub-bibliotheek is een op zi
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-  
+
   <th colspan="7">⚡️ Officieel ⚡️</th>
-  
+
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Onze aanpak voor client libraries is modulair. Elke sub-bibliotheek is een op zi
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-  
+
   <th colspan="7">💚 gemeenschap 💚</th>
-  
+
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Onze aanpak voor client libraries is modulair. Elke sub-bibliotheek is een op zi
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-  
+
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
