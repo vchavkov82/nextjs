@@ -24,8 +24,13 @@
 
 set -e
 
-if ! docker compose version > /dev/null 2>&1; then
-    echo "Docker Compose not found."
+# Prefer podman compose, fallback to docker compose
+if command -v podman >/dev/null 2>&1 && podman compose version > /dev/null 2>&1; then
+    COMPOSE_CMD="podman compose"
+elif command -v docker >/dev/null 2>&1 && docker compose version > /dev/null 2>&1; then
+    COMPOSE_CMD="docker compose"
+else
+    echo "Neither podman compose nor docker compose found."
     exit 1
 fi
 
@@ -43,7 +48,7 @@ new_passwd="$(openssl rand -hex 16)"
 # Check Postgres service
 db_image_prefix="supabase.postgres:"
 
-compose_output=$(docker compose ps \
+compose_output=$($COMPOSE_CMD ps \
   --format '{{.Image}}\t{{.Service}}\t{{.Status}}' 2>/dev/null | \
   grep -m1 "^$db_image_prefix" || true)
 
@@ -108,7 +113,7 @@ esac
 echo "Updating passwords..."
 echo "Connecting to the database service container..."
 
-docker compose exec -T "$db_srv_name" psql -U "$db_admin_user" -d "_supabase" -v ON_ERROR_STOP=1 <<EOF
+$COMPOSE_CMD exec -T "$db_srv_name" psql -U "$db_admin_user" -d "_supabase" -v ON_ERROR_STOP=1 <<EOF
 alter user anon with password '${new_passwd}';
 alter user authenticated with password '${new_passwd}';
 alter user authenticator with password '${new_passwd}';
@@ -153,5 +158,5 @@ sed -i.old "s|^POSTGRES_PASSWORD=.*$|POSTGRES_PASSWORD=$new_passwd|" .env
 echo ""
 echo "Success. To update and restart containers use:"
 echo ""
-echo "docker compose up -d --force-recreate"
+echo "$COMPOSE_CMD up -d --force-recreate"
 echo ""

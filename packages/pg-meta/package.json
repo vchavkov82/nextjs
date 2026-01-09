@@ -9,8 +9,8 @@
     "preinstall": "npx only-allow pnpm",
     "clean": "rimraf node_modules",
     "test": "run-s db:clean db:run test:run db:clean",
-    "db:clean": "cd test/db && docker compose down",
-    "db:run": "cd test/db && docker compose up --detach --wait",
+    "db:clean": "cd test/db && podman compose down",
+    "db:run": "cd test/db && podman compose up --detach --wait",
     "test:run": "vitest run --coverage",
     "test:update": "vitest run --update",
     "lint": "tsc --noEmit"
