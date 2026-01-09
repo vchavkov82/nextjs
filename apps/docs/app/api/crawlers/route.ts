@@ -51,7 +51,7 @@ export async function GET(request: Request) {
       (section) =>
         (section.type === 'markdown' || section.type === 'function') && section.slug === slug
     )
-  } catch { }
+  } catch {}
 
   if (!section) {
     notFound()
@@ -83,8 +83,8 @@ function htmlShell(
   return (
     '<!doctype html><html>' +
     '<head>' +
-    `<title>${title} | BA Docs</title>` +
-    `<meta name="description" content="BA API reference for ${libraryName}${section.title ? ': ' + section.title : ''}">` +
+    `<title>${title} | Supabase Docs</title>` +
+    `<meta name="description" content="Supabase API reference for ${libraryName}${section.title ? ': ' + section.title : ''}">` +
     `<meta name="og:image" content="https://www.assistance.bg/docs/img/supabase-og-image.png">` +
     `<meta name="twitter:image" content="https://www.assistance.bg/docs/img/supabase-og-image.png">` +
     `<link rel="canonical" href="https://www.assistance.bg/docs/reference/${lib}` +

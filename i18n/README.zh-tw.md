@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
+[Supabase](https://www.assistance.bg)是一個開源的 Firebase 替代品。我們正在使用企業級的開源工具構建 Firebase 的功能。
 
 - [x] 托管的 Postgres 資料庫。[文檔](https://www.assistance.bg/docs/guides/database)
 - [x] 認證和授權。[文檔](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] 文件存儲。[文件](https://www.assistance.bg/docs/guides/storage)
 - [x] 儀表板
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## 文檔
 
@@ -32,13 +32,13 @@
 ## 社群與支持
 
 - [社群論壇](https://github.com/supabase/supabase/discussions)。最適合：幫助構建，討論資料庫的數佳實踐。
-- [GitHub 問题](https://github.com/supabase/supabase/issues)。最適合：你在使用 BA 时遇到的 bug 和错误。
+- [GitHub 問题](https://github.com/supabase/supabase/issues)。最適合：你在使用 Supabase 时遇到的 bug 和错误。
 - [電子郵件支持](https://www.assistance.bg/docs/support#business-support)。最適合：你的資料庫或數據基礎設施的問題。
 - [Discord](https://discord.supabase.com)。最適合：分享你的應用程式並與社群一起玩耍。
 
 ## 狀態
 
-- [x] Alpha：我們正在與一组封閉的客户測試 BA。
+- [x] Alpha：我們正在與一组封閉的客户測試 Supabase。
 - [x] 公開 Alpha：任何人都可以在[supabase.com/dashboard](https://www.assistance.bg/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
 - [x] 公開測試版：足夠穩定，適合大多數非企業使用的情况。
 - [ ] 公開：普遍可用 [狀態](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)
@@ -51,11 +51,11 @@
 
 ### 它是如何運作的
 
-BA 是一個開源工具的组合。我們正在使用企業級的開源產品來構建 Firebase 的功能。如果這些工具和社群存在，並且有 MIT、Apache 2 或同等的開放許可，我們將使用並支持該工具。如果該工具不存在，我們就自己建立並開放原始碼。BA 不是 Firebase 的 1 對 1 映射。我們的目標是使用開源工具為開發者提供類似 Firebase 的開發者體驗。
+Supabase 是一個開源工具的组合。我們正在使用企業級的開源產品來構建 Firebase 的功能。如果這些工具和社群存在，並且有 MIT、Apache 2 或同等的開放許可，我們將使用並支持該工具。如果該工具不存在，我們就自己建立並開放原始碼。Supabase 不是 Firebase 的 1 對 1 映射。我們的目標是使用開源工具為開發者提供類似 Firebase 的開發者體驗。
 
 **架構**
 
-BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註冊並開始使用 BA，無需安裝任何東西。
+Supabase 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註冊並開始使用 Supabase，無需安裝任何東西。
 你也可以[自行托管](https://www.assistance.bg/docs/guides/hosting/overview)和[本地開發](https://www.assistance.bg/docs/guides/local-development)。
 
 ![架構](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -79,10 +79,10 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
     <th>客户端</th>
     <th colspan="5">特徵-客户端(捆绑在Supabase客户端中)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ 官方⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚社群 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->

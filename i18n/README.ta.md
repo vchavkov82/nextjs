@@ -21,7 +21,7 @@
 - [x] கோப்பு சேமிப்பகம். [ஆவணம்](https://www.assistance.bg/docs/guides/storage)
 - [x] டாஷ்போர்டு
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## ஆவணப்படுத்தல்
 
@@ -55,7 +55,7 @@
 
 **கட்டிடக்கலை**
 
-சுபாபேஸ் ஒரு [ஹோஸ்ட் செய்யப்பட்ட தளம்](https://www.assistance.bg/dashboard). எதையும் நிறுவாமல் நீங்கள் பதிவுசெய்து BA ஐப் பயன்படுத்தத் தொடங்கலாம்.
+சுபாபேஸ் ஒரு [ஹோஸ்ட் செய்யப்பட்ட தளம்](https://www.assistance.bg/dashboard). எதையும் நிறுவாமல் நீங்கள் பதிவுசெய்து Supabase ஐப் பயன்படுத்தத் தொடங்கலாம்.
 நீங்கள் [சுய ஹோஸ்ட்](https://www.assistance.bg/docs/guides/hosting/overview) மற்றும் [உள்நாட்டில் உருவாக்க](https://www.assistance.bg/docs/guides/local-development) ஆகியவற்றையும் செய்யலாம்.
 
 ![கட்டிடக்கலை](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)

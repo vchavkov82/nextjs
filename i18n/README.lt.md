@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) yra atvirojo kodo Firebase alternatyva. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo įrankius.
+[Supabase](https://www.assistance.bg) yra atvirojo kodo Firebase alternatyva. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo įrankius.
 
 - [x] Prieglobos Postgres duomenų bazė. [Dokumentai](https://www.assistance.bg/docs/guides/database)
 - [x] Autentiškumo nustatymas ir autorizavimas. [Dokumentai](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Failų saugojimas. [Dokumentai](https://www.assistance.bg/docs/guides/storage)
 - [x] Prietaisų skydelis
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentacija
 
@@ -32,13 +32,13 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 ## Bendruomenė ir palaikymas
 
 - [Bendrijos forumas](https://github.com/supabase/supabase/discussions). Geriausiai tinka: pagalbai kuriant, diskusijoms apie geriausią duomenų bazių praktiką.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Geriausia: klaidos ir klaidos, su kuriomis susiduriate naudodami "BA".
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Geriausia: klaidos ir klaidos, su kuriomis susiduriate naudodami "Supabase".
 - [Pagalba el. paštu](https://www.assistance.bg/docs/support#business-support). Geriausiai tinka: problemoms, susijusioms su jūsų duomenų baze ar infrastruktūra, spręsti.
 - [Discord](https://discord.supabase.com). Geriausiai tinka: dalytis savo programomis ir bendrauti su bendruomene.
 
 ## Statusas
 
-- [x] Alfa: Bandome "BA" su uždaru klientų rinkiniu
+- [x] Alfa: Bandome "Supabase" su uždaru klientų rinkiniu
 - [x] Viešoji Alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
 - [x] Viešoji beta versija: Pakankamai stabili daugeliui ne įmonių naudojimo atvejų
 - [ ] Vieša: Bendras prieinamumas [[statusas](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 
 ## Kaip tai veikia
 
-"BA" yra atvirojo kodo įrankių derinys. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo produktus. Jei egzistuoja įrankiai ir bendruomenės, turinčios MIT, "Apache 2" ar lygiavertę atvirąją licenciją, mes naudosime ir palaikysime tą įrankį. Jei įrankis neegzistuoja, mes patys jį sukursime ir naudosime atvirąjį kodą. "BA" nėra "Firebase" atvaizdavimas 1:1. Mūsų tikslas - suteikti kūrėjams panašią į "Firebase" kūrėjų patirtį naudojant atvirojo kodo įrankius.
+"Supabase" yra atvirojo kodo įrankių derinys. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo produktus. Jei egzistuoja įrankiai ir bendruomenės, turinčios MIT, "Apache 2" ar lygiavertę atvirąją licenciją, mes naudosime ir palaikysime tą įrankį. Jei įrankis neegzistuoja, mes patys jį sukursime ir naudosime atvirąjį kodą. "Supabase" nėra "Firebase" atvaizdavimas 1:1. Mūsų tikslas - suteikti kūrėjams panašią į "Firebase" kūrėjų patirtį naudojant atvirojo kodo įrankius.
 
 **Architektūra**
 
-BA yra [prieglobos platforma](https://www.assistance.bg/dashboard). Galite užsiregistruoti ir pradėti naudotis "BA" nieko neįdiegę.
+Supabase yra [prieglobos platforma](https://www.assistance.bg/dashboard). Galite užsiregistruoti ir pradėti naudotis "Supabase" nieko neįdiegę.
 Taip pat galite [savarankiškai talpinti](https://www.assistance.bg/docs/guides/hosting/overview) ir [kurti vietoje](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Mūsų požiūris į klientų bibliotekas yra modulinis. Kiekviena dalinė bibli
   <tr>
     <th>Kalba</th>
     <th>Klientas</th>
-    <th colspan="5">Funkcijų klientai (įtraukti į "BA" klientą)</th>
+    <th colspan="5">Funkcijų klientai (įtraukti į "Supabase" klientą)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Mūsų požiūris į klientų bibliotekas yra modulinis. Kiekviena dalinė bibli
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Oficialus ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Mūsų požiūris į klientų bibliotekas yra modulinis. Kiekviena dalinė bibli
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Bendruomenė 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Mūsų požiūris į klientų bibliotekas yra modulinis. Kiekviena dalinė bibli
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->

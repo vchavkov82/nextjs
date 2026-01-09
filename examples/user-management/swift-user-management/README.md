@@ -1,14 +1,14 @@
-# BA Swift User Management
+# Supabase Swift User Management
 
-This repo is a quick sample of how you can get started building apps using Swift and BA. You can find a step by step guide of how to build out this app in the [Quickstart: Swift guide](https://www.assistance.bg/docs/guides/getting-started/quickstarts/ios-swiftui).
+This repo is a quick sample of how you can get started building apps using Swift and Supabase. You can find a step by step guide of how to build out this app in the [Quickstart: Swift guide](https://www.assistance.bg/docs/guides/getting-started/quickstarts/ios-swiftui).
 
 This repo will demonstrate how to:
 
-- Sign users in with BA Auth using [magic link](https://www.assistance.bg/docs/reference/dart/auth-signinwithotp)
-- Store and retrieve data with [BA database](https://supabase.io/docs/guides/database)
-- Store image files in [BA storage](https://supabase.io/docs/guides/storage)
+- Sign users in with Supabase Auth using [magic link](https://www.assistance.bg/docs/reference/dart/auth-signinwithotp)
+- Store and retrieve data with [Supabase database](https://supabase.io/docs/guides/database)
+- Store image files in [Supabase storage](https://supabase.io/docs/guides/storage)
 
-![BA User Management example](supabase-swift-demo.png)
+![Supabase User Management example](supabase-swift-demo.png)
 
 ## Getting Started
 

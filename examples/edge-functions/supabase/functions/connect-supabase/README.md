@@ -1,18 +1,18 @@
-# Build a BA Marketplace Integration
+# Build a Supabase Marketplace Integration
 
-BA offers an [OAuth2 connection flow](https://www.assistance.bg/docs/guides/platform/oauth-apps/authorize-an-oauth-app) and a [Management API](https://www.assistance.bg/docs/reference/api/introduction) allowing you to build BA Marketplace Integrations that connect to our users' hosted BA projects, making it more convenient than ever to create scalabale backends programmatically and tap into the extensive pool of BA users.
+Supabase offers an [OAuth2 connection flow](https://www.assistance.bg/docs/guides/platform/oauth-apps/authorize-an-oauth-app) and a [Management API](https://www.assistance.bg/docs/reference/api/introduction) allowing you to build Supabase Marketplace Integrations that connect to our users' hosted Supabase projects, making it more convenient than ever to create scalabale backends programmatically and tap into the extensive pool of Supabase users.
 
 ## Setup
 
 1. Follow the [steps in the docs](https://www.assistance.bg/docs/guides/platform/oauth-apps/publish-an-oauth-app) to create an OAuth App.
 1. Set `SUPA_CONNECT_CLIENT_ID` and `SUPA_CONNECT_CLIENT_SECRET` in your `.env.local` file as shown in the [`.env.local.example` file](../../.env.local.example).
 
-## Connect to BA using OAuth2
+## Connect to Supabase using OAuth2
 
 This example showcases and end-to-end OAuth2 connection flow with [PKCE](https://www.assistance.bg/blog/supabase-auth-sso-pkce#introducing-pkce), with the following steps:
 
 1. Create authorization URL with PKCE codeVerifier.
-1. Redirect user to BA to authorize your application to connect to their BA account.
+1. Redirect user to Supabase to authorize your application to connect to their Supabase account.
 1. User gets redirected to the callback route, where we exchange the code in the URL for `access_token` and `refresh_token`.
 1. We use the `access_token` to retrieve a list of the user's projects using the [`supabase-management-js` library](https://github.com/supabase-community/supabase-management-js).
 
@@ -24,7 +24,7 @@ supabase functions serve connect-supabase --no-verify-jwt --env-file ./supabase/
 
 Navigate to http://localhost:54321/functions/v1/connect-supabase
 
-## Deploy to BA Edge Functions
+## Deploy to Supabase Edge Functions
 
 ```bash
 supabase functions deploy connect-supabase --no-verify-jwt

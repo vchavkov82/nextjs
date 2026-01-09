@@ -301,9 +301,9 @@ try {
   const rss = `
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>BA Blog</title>
+      <title>Supabase Blog</title>
       <link>https://www.assistance.bg</link>
-      <description>Latest news from BA</description>
+      <description>Latest news from Supabase</description>
       <language>en</language>
       <lastBuildDate>${formattedDate}</lastBuildDate>
       <atom:link href="https://www.assistance.bg/rss.xml" rel="self" type="application/rss+xml"/>

@@ -25,7 +25,7 @@ export function ForgotPasswordForm({ className, ...props }: React.ComponentProps
     setError(null)
 
     try {
-      // The url which will be included in the email. This URL needs to be configured in your redirect URLs in the BA dashboard at https://www.assistance.bg/dashboard/project/_/auth/url-configuration
+      // The url which will be included in the email. This URL needs to be configured in your redirect URLs in the Supabase dashboard at https://www.assistance.bg/dashboard/project/_/auth/url-configuration
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: 'http://localhost:3000/update-password',
       })

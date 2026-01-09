@@ -1,6 +1,6 @@
 -- Insert your <PROJECT-REF> and <SUPABASE_ANON_KEY> below, then uncomment the trigger creation and run `supabase db push`
 -- Alternatively, head to the Database Webhook settings https://www.assistance.bg/dashboard/project/_/database/hooks
--- Select "Create a new Hook" > Table "public.embeddings" > check "INSERT" & "Update" > BA Edge Functions > Add auth header with service key
+-- Select "Create a new Hook" > Table "public.embeddings" > check "INSERT" & "Update" > Supabase Edge Functions > Add auth header with service key
 
 -- CREATE TRIGGER "on_inserted_or_updated_embedding"
 -- AFTER INSERT

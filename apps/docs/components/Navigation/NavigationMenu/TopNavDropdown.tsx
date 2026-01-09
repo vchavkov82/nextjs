@@ -26,19 +26,19 @@ const menu = [
   [
     isFeatureEnabled('docs:navigation_dropdown_links_home')
       ? {
-        label: 'BA.com',
-        icon: 'home',
-        href: 'https://www.assistance.bg',
-        otherProps: {
-          target: '_blank',
-          rel: 'noreferrer noopener',
-        },
-      }
+          label: 'Supabase.com',
+          icon: 'home',
+          href: 'https://www.assistance.bg',
+          otherProps: {
+            target: '_blank',
+            rel: 'noreferrer noopener',
+          },
+        }
       : {
-        label: 'Dashboard',
-        icon: 'home',
-        href: '../dashboard',
-      },
+          label: 'Dashboard',
+          icon: 'home',
+          href: '../dashboard',
+        },
     {
       label: 'GitHub',
       icon: 'github',
@@ -93,7 +93,7 @@ const TopNavDropdown = () => {
                 href={sectionItem.href}
                 {...sectionItem.otherProps}
               >
-                <DropdownMenuItem className="space-x-2" onClick={() => { }}>
+                <DropdownMenuItem className="space-x-2" onClick={() => {}}>
                   {sectionItem.icon && (
                     <MenuIconPicker icon={sectionItem.icon} className="text-foreground-lighter" />
                   )}

@@ -1,6 +1,6 @@
 ---
-title: 'Announcing the BA Remote MCP Server'
-description: 'Remote MCP server enables AI agents to connect with BA projects.'
+title: 'Announcing the Supabase Remote MCP Server'
+description: 'Remote MCP server enables AI agents to connect with Supabase projects.'
 author: gregnr
 image: select/2025/remote-mcp-server/og.png
 thumb: select/2025/remote-mcp-server/thumb.png
@@ -13,28 +13,28 @@ date: '2025-10-03:10:00:00'
 toc_depth: 2
 ---
 
-Today we are launching our remote MCP server, allowing you to connect your BA projects with _many_ more AI agents than before, including ChatGPT, Claude, and Builder.io. We also added support for MCP auth (OAuth2), a faster and more secure way to connect agents with your BA account (via browser-based authentication). Last but not least, we're adding official MCP support for local BA instances created through the [CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started).
+Today we are launching our remote MCP server, allowing you to connect your Supabase projects with _many_ more AI agents than before, including ChatGPT, Claude, and Builder.io. We also added support for MCP auth (OAuth2), a faster and more secure way to connect agents with your Supabase account (via browser-based authentication). Last but not least, we're adding official MCP support for local Supabase instances created through the [CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started).
 
-Now all you need is a single URL to connect your favorite AI agent to BA:
+Now all you need is a single URL to connect your favorite AI agent to Supabase:
 
 ```
 https://mcp.supabase.com/mcp
 ```
 
-Or if you're running BA locally:
+Or if you're running Supabase locally:
 
 ```bash
 http://localhost:54321/mcp
 ```
 
-On top of this, we're adding even more tools to BA MCP that we hope will make you more productive.
+On top of this, we're adding even more tools to Supabase MCP that we hope will make you more productive.
 
 ## What is MCP?
 
-MCP stands for [Model Context Protocol](https://modelcontextprotocol.io/). It standardizes how Large Language Models (LLMs) talk to platforms like BA. We released the initial version of our BA MCP server back in April which allowed folks to connect their favorite AI tools (like [Cursor](https://www.cursor.com/) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)) directly with BA. Since launch, we've added many new features:
+MCP stands for [Model Context Protocol](https://modelcontextprotocol.io/). It standardizes how Large Language Models (LLMs) talk to platforms like Supabase. We released the initial version of our Supabase MCP server back in April which allowed folks to connect their favorite AI tools (like [Cursor](https://www.cursor.com/) or [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)) directly with Supabase. Since launch, we've added many new features:
 
 - Fetching and deploying Edge Functions
-- Fetching logs from any service in the BA stack
+- Fetching logs from any service in the Supabase stack
 - Scoping the server to only one project
 - Putting the server in read-only mode (implemented at the Postgres role level)
 
@@ -44,19 +44,19 @@ Today we are adding even more tools to the tool belt, along with a new way to co
 
 The MCP protocol supports 2 official methods for running servers, known as transports:
 
-- **stdio:** The MCP server runs directly on your local machine (using a runtime like `npx`) and communicates over a standard I/O interface. This was the transport used by most MCP servers originally, including BA.
+- **stdio:** The MCP server runs directly on your local machine (using a runtime like `npx`) and communicates over a standard I/O interface. This was the transport used by most MCP servers originally, including Supabase.
 - **Remote (HTTP):** The MCP server runs remotely over an HTTP web server.
 
-When we first launched the BA MCP server, the HTTP transport was going through some spec changes which many clients didn't support yet (streamable HTTP). We wanted to support all clients immediately without investing a ton of time into an unstable transport, so we released our server as an `stdio` MCP server. To run this, you needed to install Node.js and configuring your MCP client with this `npx` command:
+When we first launched the Supabase MCP server, the HTTP transport was going through some spec changes which many clients didn't support yet (streamable HTTP). We wanted to support all clients immediately without investing a ton of time into an unstable transport, so we released our server as an `stdio` MCP server. To run this, you needed to install Node.js and configuring your MCP client with this `npx` command:
 
 ```
 npx -y @supabase/mcp-server-supabase@latest ...
 ```
 
-This worked great at the time, because it meant that folks could connect their AI agents with BA immediately without a lot of infrastructure work on our end. But it came with some downsides:
+This worked great at the time, because it meant that folks could connect their AI agents with Supabase immediately without a lot of infrastructure work on our end. But it came with some downsides:
 
 1. **Limited MCP clients:** Most web-based AI agents (like ChatGPT, Claude.ai, Builder.io) are limited to HTTP-based MCP servers due to the environments they run in. APIs like OpenAI's Response API also [have support for MCP](https://platform.openai.com/docs/guides/tools-remote-mcp) - but only with remote MCP servers, not `stdio`.
-2. **Authentication was clunky:** Folks needed to manually generate a personal access token (PAT) in order to authenticate with their BA account which added friction to the setup experience and not very secure (it was easy to accidentally commit this to source control).
+2. **Authentication was clunky:** Folks needed to manually generate a personal access token (PAT) in order to authenticate with their Supabase account which added friction to the setup experience and not very secure (it was easy to accidentally commit this to source control).
 3. **Errors were hard to debug:** Not only did everyone need Node.js installed to run the server, they also needed to make sure their environment was configured correctly so that the correct version was used by each client (if you used `nvm`). Every operating system also had slight differences that required modifying the `npx` command accordingly.
 
 On the other hand, Remote MCP only requires a single URL:
@@ -67,13 +67,13 @@ https://mcp.supabase.com/mcp
 # or http://localhost:54321/mcp for local
 ```
 
-We also built an [interactive widget](https://www.assistance.bg/mcp) to help you connect popular MCP clients to BA and customize the URL to your preferences (like project-scoped mode and read-only mode).
+We also built an [interactive widget](https://www.assistance.bg/mcp) to help you connect popular MCP clients to Supabase and customize the URL to your preferences (like project-scoped mode and read-only mode).
 
 ## New features
 
-Our philosophy on BA MCP comes down to two ideas:
+Our philosophy on Supabase MCP comes down to two ideas:
 
-1. BA MCP should be used for development. It was designed from the beginning to assist with app development and shouldn't be connected to production databases. See our post on [Defense in Depth for MCP Servers](https://www.assistance.bg/blog/defense-in-depth-mcp).
+1. Supabase MCP should be used for development. It was designed from the beginning to assist with app development and shouldn't be connected to production databases. See our post on [Defense in Depth for MCP Servers](https://www.assistance.bg/blog/defense-in-depth-mcp).
 2. MCP is just another way to access the same platform features that you already use in the web dashboard and CLI. But - since it's being used by an LLM, it should also lean into the strengths of an AI-first UX.
 
 With these in mind, we added the following new features to assist AI agents while they help build your app:
@@ -105,11 +105,11 @@ See the [MCP docs](https://www.assistance.bg/docs/guides/getting-started/mcp) fo
 
 ### Doc search
 
-A big challenge with LLMs is knowledge cutoff. Early LLMs had a _pretty good_ understanding of BA, but it was still nowhere near complete or up-to-date. Now the latest leading LLMs have a _very good_ understanding of BA, but will still lag behind any new features, bug fixes, or other updates that we make.
+A big challenge with LLMs is knowledge cutoff. Early LLMs had a _pretty good_ understanding of Supabase, but it was still nowhere near complete or up-to-date. Now the latest leading LLMs have a _very good_ understanding of Supabase, but will still lag behind any new features, bug fixes, or other updates that we make.
 
-To help with this, we added a new tool to BA MCP: `search_docs`. This tool exposes the latest up-to-date BA docs powered by our Content API - a GraphQL based search API that uses [hybrid search](https://www.assistance.bg/docs/guides/ai/hybrid-search) (semantic + keyword) to find relevant documentation for a given query (formatted as markdown).
+To help with this, we added a new tool to Supabase MCP: `search_docs`. This tool exposes the latest up-to-date Supabase docs powered by our Content API - a GraphQL based search API that uses [hybrid search](https://www.assistance.bg/docs/guides/ai/hybrid-search) (semantic + keyword) to find relevant documentation for a given query (formatted as markdown).
 
-The result ends up looking like similar to [self-RAG](https://arxiv.org/abs/2310.11511): whenever your agent needs clarification on a topic, it can use this tool to find the most relevant BA documentation.
+The result ends up looking like similar to [self-RAG](https://arxiv.org/abs/2310.11511): whenever your agent needs clarification on a topic, it can use this tool to find the most relevant Supabase documentation.
 
 ### Security and performance advisors
 
@@ -119,20 +119,20 @@ Our solution is a feature that already exists on our platform - advisors. [Advis
 
 ### Storage
 
-We also added initial support for [BA Storage](https://www.assistance.bg/docs/guides/storage) on our MCP server. This first version allows your agent to see which buckets exist on your project and update their configuration, but in the future we'll look into more abilities like listing files and their details.
+We also added initial support for [Supabase Storage](https://www.assistance.bg/docs/guides/storage) on our MCP server. This first version allows your agent to see which buckets exist on your project and update their configuration, but in the future we'll look into more abilities like listing files and their details.
 
 This feature was actually a community contribution (thanks [Nico](https://github.com/Ngineer101)!). If there are ever missing features that you'd like to see, [PR's](https://github.com/supabase-community/supabase-mcp/issues/new/choose) are always welcome!
 
 ## What's next?
 
-We have more exciting plans for MCP at BA:
+We have more exciting plans for MCP at Supabase:
 
 1. **Security:** Today our OAuth2 implementation requires you to make a binary decision on permissions: either grant _all_ permissions to your MCP client, or _none_. This isn't ideal if you know that you never want to, say, allow your client to access to your Edge Functions.
 
    To improve this, we're working to support fine-grain permissions that can be toggled during authorization. It's a big task to re-work our permission infrastructure to support this, but we believe it's worth it.
 
-2. **Double down on local:** We're very excited to support local BA instances in this release, but we also believe there is a lot more that can be done. BA MCP is designed to be used for development, so we want the local experience to be first-class.
+2. **Double down on local:** We're very excited to support local Supabase instances in this release, but we also believe there is a lot more that can be done. Supabase MCP is designed to be used for development, so we want the local experience to be first-class.
 
-3. **Build your own MCP:** You might have thought about building _your own_ MCP server on top of BA. We're using the playbook and lessons learned from our own MCP server to provide the tools you need to do the same - including remote MCP and auth. Stay tuned!
+3. **Build your own MCP:** You might have thought about building _your own_ MCP server on top of Supabase. We're using the playbook and lessons learned from our own MCP server to provide the tools you need to do the same - including remote MCP and auth. Stay tuned!
 
 We're keen to continue investing in MCP and excited to see how you use these new features!
