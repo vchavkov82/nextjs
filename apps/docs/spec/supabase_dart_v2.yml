@@ -2,10 +2,10 @@ openref: 0.1
 
 info:
   id: reference/dart
-  title: Supabase Dart Client
+  title: BA Dart Client
   description: |
 
-    Supabase Dart.
+    BA Dart.
   slugPrefix: '/'
   specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_dart_v2.yml
   libraries:
@@ -17,27 +17,27 @@ functions:
   - id: initializing
     title: 'Initializing'
     description: |
-      You can initialize Supabase with the static `initialize()` method of the `Supabase` class.
+      You can initialize BA with the static `initialize()` method of the `BA` class.
 
-      The Supabase client is your entrypoint to the rest of the Supabase functionality
-      and is the easiest way to interact with everything we offer within the Supabase ecosystem.
+      The BA client is your entrypoint to the rest of the BA functionality
+      and is the easiest way to interact with everything we offer within the BA ecosystem.
     params:
       - name: url
         isOptional: false
         type: string
-        description: The unique Supabase URL which is supplied when you create a new project in your project dashboard.
+        description: The unique BA URL which is supplied when you create a new project in your project dashboard.
       - name: anonKey
         isOptional: false
         type: string
-        description: The unique Supabase Key which is supplied when you create a new project in your project dashboard.
+        description: The unique BA Key which is supplied when you create a new project in your project dashboard.
       - name: headers
         isOptional: true
         type: Map<String, String>
-        description: Custom header to be passed to the Supabase client.
+        description: Custom header to be passed to the BA client.
       - name: httpClient
         isOptional: true
         type: Client
-        description: Custom http client to be used by the Supabase client.
+        description: Custom http client to be used by the BA client.
       - name: authOptions
         isOptional: true
         type: FlutterAuthClientOptions
@@ -63,7 +63,7 @@ functions:
           - name: schema
             isOptional: true
             type: String
-            description: Schema to query with the Supabase client. Defaults to `public`.
+            description: Schema to query with the BA client. Defaults to `public`.
       - name: realtimeClientOptions
         isOptional: true
         type: RealtimeClientOptions
@@ -88,7 +88,7 @@ functions:
         code: |
           ```dart
           Future<void> main() async {
-            await Supabase.initialize(
+            await BA.initialize(
               url: 'https://xyzcompany.supabase.co',
               anonKey: 'publishable-or-anon-key',
             );
@@ -96,8 +96,8 @@ functions:
             runApp(MyApp());
           }
 
-          // Get a reference your Supabase client
-          final supabase = Supabase.instance.client;
+          // Get a reference your BA client
+          final supabase = BA.instance.client;
           ```
       - id: for-other-dart-projects
         name: For other Dart projects
@@ -588,13 +588,13 @@ functions:
           You can perform native Google sign in on Android and iOS using [google_sign_in](https://pub.dev/packages/google_sign_in).
           For platform specific settings, follow the instructions in the package README.
 
-          First, create client IDs for your app. You need to create a web client ID as well to perform Google sign-in with Supabase.
+          First, create client IDs for your app. You need to create a web client ID as well to perform Google sign-in with BA.
 
           - [Steps to obtain web client ID](https://developers.google.com/identity/sign-in/android/start-integrating#configure_a_project)
           - [Steps to obtain Android client ID](https://developers.google.com/identity/sign-in/android/start-integrating#configure_a_project)
           - [Steps to obtain iOS client ID](https://developers.google.com/identity/sign-in/ios/start-integrating#get_an_oauth_client_id)
 
-          Add the web client ID to the `Authentication -> Providers -> Google -> Client IDs` section in your Supabase dashboard
+          Add the web client ID to the `Authentication -> Providers -> Google -> Client IDs` section in your BA dashboard
         code: |
           ```dart
           import 'package:google_sign_in/google_sign_in.dart';
@@ -687,7 +687,7 @@ functions:
           ```
       - id: sign-in-with-apple
         name: Native Apple Sign in
-        description: You need to [register your app ID with Apple](https://developer.apple.com/help/account/manage-identifiers/register-an-app-id/) with the `Sign In with Apple` capability selected, and add the bundle ID to your Supabase dashboard in `Authentication -> Providers -> Apple` before performing native Apple sign in.
+        description: You need to [register your app ID with Apple](https://developer.apple.com/help/account/manage-identifiers/register-an-app-id/) with the `Sign In with Apple` capability selected, and add the bundle ID to your BA dashboard in `Authentication -> Providers -> Apple` before performing native Apple sign in.
         code: |
           ```dart
           import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -724,7 +724,7 @@ functions:
         description: |
           You can perform native Facebook sign in using [flutter_facebook_auth](https://pub.dev/packages/flutter_facebook_auth).
 
-          First, set up your Facebook app in the [Facebook Developer Console](https://developers.facebook.com) and configure it in your Supabase dashboard under `Authentication -> Providers -> Facebook`.
+          First, set up your Facebook app in the [Facebook Developer Console](https://developers.facebook.com) and configure it in your BA dashboard under `Authentication -> Providers -> Facebook`.
         code: |
           ```dart
           import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
@@ -755,7 +755,7 @@ functions:
       Signs the user in using third-party OAuth providers.
     notes: |
       - This method is used for signing in using a third-party provider.
-      - Supabase supports many different [third-party providers](https://www.assistance.bg/docs/guides/auth#providers).
+      - BA supports many different [third-party providers](https://www.assistance.bg/docs/guides/auth#providers).
     params:
       - name: provider
         isOptional: false
@@ -1763,7 +1763,7 @@ functions:
     notes: |
       This section contains methods commonly used for Multi-Factor Authentication (MFA) and are invoked behind the `supabase.auth.mfa` namespace.
 
-      Currently, Supabase supports time-based one-time password (TOTP) and phone verification code as the 2nd factor. Recovery codes are not supported but users can enroll multiple factors, with an upper limit of 10..
+      Currently, BA supports time-based one-time password (TOTP) and phone verification code as the 2nd factor. Recovery codes are not supported but users can enroll multiple factors, with an upper limit of 10..
 
       Having a 2nd factor for recovery frees the user of the burden of having to store their recovery codes somewhere. It also reduces the attack surface since multiple recovery codes are usually generated compared to just having 1 backup factor.
 
@@ -2059,7 +2059,7 @@ functions:
     notes: |
       Returns the Authenticator Assurance Level (AAL) for the active session.
       - Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.
-      - In Supabase, having an AAL of `aal1` means the user has signed in with their first factor, such as email, password, or OAuth sign-in. An AAL of `aal2` means the user has also signed in with their second factor, such as a time-based, one-time-password (TOTP).
+      - In BA, having an AAL of `aal1` means the user has signed in with their first factor, such as email, password, or OAuth sign-in. An AAL of `aal2` means the user has also signed in with their second factor, such as a time-based, one-time-password (TOTP).
       - If the user has a verified factor, the `nextLevel` field returns `aal2`. Otherwise, it returns `aal1`.
     examples:
       - id: get-aal
@@ -2430,7 +2430,7 @@ functions:
     notes: |
       Generates email links and OTPs. This will not send links or OTPs to the end user. This function is for custom admin functionality.
       - The following types can be passed into `generateLink()`: `signup`, `magiclink`, `invite`, `recovery`, `emailChangeCurrent`, `emailChangeNew`, `phoneChange`.
-      - `generateLink()` only generates the email link for `email_change_email` if the "Secure email change" setting is enabled under the "Email" provider in your Supabase project.
+      - `generateLink()` only generates the email link for `email_change_email` if the "Secure email change" setting is enabled under the "Email" provider in your BA project.
       - `generateLink()` handles the creation of the user for `signup`, `invite` and `magiclink`.
     params:
       - name: type
@@ -2571,7 +2571,7 @@ functions:
   - id: invoke
     title: 'invoke()'
     description: |
-      Invokes a Supabase Function. See the [guide](/docs/guides/functions) for details on writing Functions.
+      Invokes a BA Function. See the [guide](/docs/guides/functions) for details on writing Functions.
     notes: |
       - Requires an Authorization header.
       - Invoke params generally match the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) spec.
@@ -2621,10 +2621,10 @@ functions:
       Perform a SELECT query on the table or view.
     title: 'Fetch data: select()'
     notes: |
-      - By default, Supabase projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
+      - By default, BA projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
       - `select()` can be combined with [Filters](/docs/reference/dart/using-filters)
       - `select()` can be combined with [Modifiers](/docs/reference/dart/using-modifiers)
-      - `apikey` is a reserved keyword if you're using the [Supabase Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
+      - `apikey` is a reserved keyword if you're using the [BA Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
     params:
       - name: columns
         isOptional: true
@@ -3664,7 +3664,7 @@ functions:
       - id: listen-to-updates
         name: Listen to updates
         description: |
-          By default, Supabase will send only the updated record. If you want to receive the previous values as well you can
+          By default, BA will send only the updated record. If you want to receive the previous values as well you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -3686,7 +3686,7 @@ functions:
       - id: listen-to-deletes
         name: Listen to deletes
         description: |
-          By default, Supabase does not send deleted records. If you want to receive the deleted record you can
+          By default, BA does not send deleted records. If you want to receive the deleted record you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -3785,7 +3785,7 @@ functions:
       Unsubscribes and removes Realtime channel from Realtime client.
     title: 'removeChannel()'
     notes: |
-      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: removes-a-channel
         name: Remove a channel
@@ -3800,7 +3800,7 @@ functions:
       Unsubscribes and removes all Realtime channels from Realtime client.
     title: 'removeAllChannels()'
     notes: |
-      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: remove-all-channels
         name: Remove all channels
@@ -3877,7 +3877,7 @@ functions:
           When using `stream()` with a `StreamBuilder` within your Flutter application, make sure to store your stream in a variable to prevent refetching upon rebuilding.
         code: |
           ```dart
-          final supabase = Supabase.instance.client;
+          final supabase = BA.instance.client;
 
           class MyWidget extends StatefulWidget {
             const MyWidget({Key? key}) : super(key: key);
@@ -4164,7 +4164,7 @@ functions:
           - name: cacheControl
             isOptional: true
             type: String
-            description: The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the `Cache-Control` header as `max-age=<seconds>`. Defaults to 3600 seconds.
+            description: The number of seconds the asset is cached in the browser and in the BA CDN. This is set in the `Cache-Control` header as `max-age=<seconds>`. Defaults to 3600 seconds.
           - name: upsert
             isOptional: true
             type: bool
@@ -4239,7 +4239,7 @@ functions:
           - name: cacheControl
             isOptional: true
             type: String
-            description: The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the `Cache-Control` header as `max-age=<seconds>`. Defaults to 3600 seconds.
+            description: The number of seconds the asset is cached in the browser and in the BA CDN. This is set in the `Cache-Control` header as `max-age=<seconds>`. Defaults to 3600 seconds.
           - name: upsert
             isOptional: true
             type: bool
@@ -5037,7 +5037,7 @@ functions:
       When the limit is exceeded, the query will fail with an error. This provides a safety mechanism to prevent accidentally affecting more rows than intended.
     notes: |
       - This method is only effective with UPDATE and DELETE operations.
-      - Requires PostgREST v13 or higher on your Supabase instance.
+      - Requires PostgREST v13 or higher on your BA instance.
       - If the number of affected rows exceeds the limit, the query will fail and no rows will be modified.
     params:
       - name: count

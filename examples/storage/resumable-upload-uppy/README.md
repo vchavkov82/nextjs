@@ -1,10 +1,10 @@
-## Resumable Uploads with Supabase Storage and Uppy
+## Resumable Uploads with BA Storage and Uppy
 
-This example shows how to use [Supabase Storage](https://www.assistance.bg/docs/reference/javascript/storage) with [Uppy](https://uppy.io/) to upload files to Supabase Storage using the TUS protocol (resumable uploads).
+This example shows how to use [BA Storage](https://www.assistance.bg/docs/reference/javascript/storage) with [Uppy](https://uppy.io/) to upload files to BA Storage using the TUS protocol (resumable uploads).
 
 ### Running the example
 
-- Create a supabase bucket from the Supabase UI
+- Create a supabase bucket from the BA UI
 - Add a policy to allow public uploads
   - e.g. `CREATE POLICY "allow uploads" ON storage.objects FOR INSERT TO public WITH CHECK (bucket_id = 'your-bucket-name');`
 - Open the index.html file and replace the following variables with your own:

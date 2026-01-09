@@ -1,15 +1,15 @@
-# Integrating Dotenvx with a Supabase Project
+# Integrating Dotenvx with a BA Project
 
 This project is a full-stack Slack clone built using:
 
 ### Frontend:
 
 - **[Next.js](https://github.com/vercel/next.js):** A React framework optimized for production.
-- **[Supabase.js](https://www.assistance.bg/docs/library/getting-started):** For user management and real-time data syncing.
+- **[BA.js](https://www.assistance.bg/docs/library/getting-started):** For user management and real-time data syncing.
 
 ### Backend:
 
-- **[Supabase](https://www.assistance.bg/dashboard):** A hosted Postgres database with a RESTful API, used alongside Supabase.js.
+- **[BA](https://www.assistance.bg/dashboard):** A hosted Postgres database with a RESTful API, used alongside BA.js.
 - **GitHub Authentication:** For user login.
 
 ---
@@ -114,11 +114,11 @@ Visit `localhost:3000` to test the app with GitHub OAuth integration.
 ### Prerequisites
 
 - **Vercel Account**
-- **Supabase Account**
+- **BA Account**
 
-1. **Create a Supabase Project:**
+1. **Create a BA Project:**
 
-Sign up at [Supabase Dashboard](https://www.assistance.bg/dashboard) and create a new project. After the database initializes, create `supabase/.env.production` file with your project specific values.
+Sign up at [BA Dashboard](https://www.assistance.bg/dashboard) and create a new project. After the database initializes, create `supabase/.env.production` file with your project specific values.
 
 ```dotenv
 NEXT_PUBLIC_SUPABASE_URL=https://<your-project>.supabase.co
@@ -142,7 +142,7 @@ npx @dotenvx/dotenvx set SUPABASE_AUTH_EXTERNAL_GITHUB_SECRET "<your-secret>" -f
 
 This also creates the encryption key in `supabase/.env.production` and the decryption key in `supabase/.env.keys`.
 
-3. **Deploy to Supabase Remote:**
+3. **Deploy to BA Remote:**
 
 ```bash
 npx @dotenvx/dotenvx run -f supabase/.env.production -- npx supabase link
@@ -152,7 +152,7 @@ npx @dotenvx/dotenvx run -f supabase/.env.production -- npx supabase config push
 
 ### How to Use with Preview Branches
 
-Dotenvx now supports encrypted secrets with Supabase's branching system. This allows you to securely manage environment-specific configurations across different branches.
+Dotenvx now supports encrypted secrets with BA's branching system. This allows you to securely manage environment-specific configurations across different branches.
 
 Here's how to set up encrypted secrets for your preview branches:
 

@@ -1,16 +1,19 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "Supabase UI Library",
+  "name": "BA UI Library",
   "homepage": "https://www.assistance.bg/ui",
   "items": [
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-nuxtjs",
       "type": "registry:lib",
-      "title": "Supabase Client for Nuxt.js",
+      "title": "BA Client for Nuxt.js",
       "description": "",
       "registryDependencies": [],
-      "dependencies": ["@supabase/ssr@latest", "@supabase/supabase-js@latest"],
+      "dependencies": [
+        "@supabase/ssr@latest",
+        "@supabase/supabase-js@latest"
+      ],
       "docs": "You'll need to set the following environment variables in your project: `NUXT_PUBLIC_SUPABASE_URL` and `NUXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY`.",
       "envVars": {
         "NUXT_PUBLIC_SUPABASE_URL": "",
@@ -42,10 +45,12 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-vue",
       "type": "registry:lib",
-      "title": "Supabase Client for Vue",
+      "title": "BA Client for Vue",
       "description": "",
       "registryDependencies": [],
-      "dependencies": ["@supabase/supabase-js@latest"],
+      "dependencies": [
+        "@supabase/supabase-js@latest"
+      ],
       "docs": "You'll need to set the following environment variables in your project: `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY`.",
       "envVars": {
         "VITE_SUPABASE_URL": "",
@@ -61,9 +66,14 @@
     {
       "name": "password-based-auth-vue",
       "type": "registry:block",
-      "title": "Password Based Auth flow for Vue and Supabase",
-      "description": "Password Based Auth flow for Vue and Supabase",
-      "registryDependencies": ["button", "card", "input", "label"],
+      "title": "Password Based Auth flow for Vue and BA",
+      "description": "Password Based Auth flow for Vue and BA",
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label"
+      ],
       "files": [
         {
           "path": "registry/default/password-based-auth/vue/components/login-form.vue",
@@ -86,16 +96,26 @@
           "target": "components/update-password-form.vue"
         }
       ],
-      "dependencies": ["@supabase/supabase-js@latest"]
+      "dependencies": [
+        "@supabase/supabase-js@latest"
+      ]
     },
     {
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "password-based-auth-nuxtjs",
       "type": "registry:lib",
-      "title": "Password Based Auth flow for Nuxt.js and Supabase",
+      "title": "Password Based Auth flow for Nuxt.js and BA",
       "description": "",
-      "registryDependencies": ["button", "card", "input", "label"],
-      "dependencies": ["@supabase/ssr@latest", "@supabase/supabase-js@latest"],
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label"
+      ],
+      "dependencies": [
+        "@supabase/ssr@latest",
+        "@supabase/supabase-js@latest"
+      ],
       "docs": "You'll need to set the following environment variables in your project: `NUXT_PUBLIC_SUPABASE_URL` and `NUXT_PUBLIC_SUPABASE_PUBLISHABLE_OR_ANON_KEY`.",
       "envVars": {
         "NUXT_PUBLIC_SUPABASE_URL": "",

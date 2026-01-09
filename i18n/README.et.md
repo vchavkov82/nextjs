@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# BA
 
-[Supabase](https://www.assistance.bg) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
+[BA](https://www.assistance.bg) on avatud lähtekoodiga Firebase'i alternatiiv. Me ehitame Firebase'i funktsioonid, kasutades ettevõtlusklassi avatud lähtekoodiga tööriistu.
 
 - [x] Hostitud Postgres andmebaas. [Dokumendid](https://www.assistance.bg/docs/guides/database)
 - [x] Autentimine ja autoriseerimine. [Dokumendid](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Faili salvestamine. [Dokumendid](https://www.assistance.bg/docs/guides/storage)
 - [x] Armatuurlaud
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentatsioon
 
@@ -32,13 +32,13 @@ Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 ## Kogukond ja tugi
 
 - [Ühenduse foorum](https://github.com/supabase/supabase/discussions). Parim: abi ehitamisel, arutelu andmebaasi parimate tavade üle.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Parim lahendus: vead ja vead, millega Supabase'i kasutades kokku puutute.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Parim lahendus: vead ja vead, millega BA'i kasutades kokku puutute.
 - [E-posti tugi](https://www.assistance.bg/docs/support#business-support). Parim lahendus: probleemid andmebaasi või infrastruktuuriga.
 - [Discord](https://discord.supabase.com). Parim: oma rakenduste jagamiseks ja kogukonnaga suhtlemiseks.
 
 ## Staatus
 
-- [x] Alpha: Me testime Supabase'i suletud kliendikogumiga
+- [x] Alpha: Me testime BA'i suletud kliendikogumiga
 - [x] Avalik Alpha: Igaüks saab registreeruda aadressil [supabase.com/dashboard](https://www.assistance.bg/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
 - [x] Avalik beeta: Piisavalt stabiilne enamiku mitte-ettevõtluskasutuse jaoks
 - [ ] Avalik: Üldine kättesaadavus [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Oleme praegu Public Beta versioonis. Jälgige selle repo "releases", et saada te
 
 ## Kuidas see töötab
 
-Supabase on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'i funktsioonid üles, kasutades ettevõtte kvaliteediga avatud lähtekoodiga tooteid. Kui tööriistad ja kogukonnad on olemas MIT, Apache 2 või samaväärse avatud litsentsiga, kasutame ja toetame seda tööriista. Kui tööriista ei ole olemas, siis ehitame selle ise ja kasutame avatud lähtekoodi. Supabase ei ole Firebase'i 1:1 kaardistus. Meie eesmärk on pakkuda arendajatele Firebase'ile sarnast arenduskogemust, kasutades avatud lähtekoodiga tööriistu.
+BA on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'i funktsioonid üles, kasutades ettevõtte kvaliteediga avatud lähtekoodiga tooteid. Kui tööriistad ja kogukonnad on olemas MIT, Apache 2 või samaväärse avatud litsentsiga, kasutame ja toetame seda tööriista. Kui tööriista ei ole olemas, siis ehitame selle ise ja kasutame avatud lähtekoodi. BA ei ole Firebase'i 1:1 kaardistus. Meie eesmärk on pakkuda arendajatele Firebase'ile sarnast arenduskogemust, kasutades avatud lähtekoodiga tööriistu.
 
 **Arhitektuur**
 
-Supabase on [hostitud platvorm](https://www.assistance.bg/dashboard). Võite registreeruda ja alustada Supabase'i kasutamist ilma midagi installimata.
+BA on [hostitud platvorm](https://www.assistance.bg/dashboard). Võite registreeruda ja alustada BA'i kasutamist ilma midagi installimata.
 Võite ka [ise hostida](https://www.assistance.bg/docs/guides/hosting/overview) ja [arendada lokaalselt](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arhitektuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
   <tr>
     <th>Keel</th>
     <th>Klient</th>
-    <th colspan="5">Funktsioon-kliendid (komplekteeritud Supabase'i kliendiga)</th>
+    <th colspan="5">Funktsioon-kliendid (komplekteeritud BA'i kliendiga)</th>
   </tr>
-  
+
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>BA</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-  
+
   <th colspan="7">⚡️ Ametlik ⚡️</th>
-  
+
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-  
+
   <th colspan="7">💚 Kogukond 💚</th>
-  
+
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-  
+
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->

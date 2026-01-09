@@ -1,0 +1,95 @@
+# BA UI Library
+Last updated: 2026-01-10T18:22:09.751Z
+
+## Overview
+Library of components for your project. The components integrate with BA and are shadcn compatible.
+
+## Docs
+- [Prompts](https://www.assistance.bg/ui/docs/ai-editors-rules/prompts)
+    - Rules for AI Code Editors for BA
+- [FAQ](https://www.assistance.bg/ui/docs/getting-started/faq)
+    - Frequently asked questions
+- [Introduction](https://www.assistance.bg/ui/docs/getting-started/introduction)
+    - A flexible, open-source, React-based UI component library built on shadcn/ui, designed to simplify BA-powered projects with pre-built Auth, Storage, and Realtime features.
+- [Quick Start](https://www.assistance.bg/ui/docs/getting-started/quickstart)
+    - Install shadcn/ui and use the components in your project
+- [Infinite Query Hook](https://www.assistance.bg/ui/docs/infinite-query-hook)
+    - React hook for infinite lists, fetching data from BA.
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/nextjs/client)
+    - BA client for Next.js
+- [Current User Avatar](https://www.assistance.bg/ui/docs/nextjs/current-user-avatar)
+    - BA Auth-aware avatar
+- [Dropzone (File Upload)](https://www.assistance.bg/ui/docs/nextjs/dropzone)
+    - Displays a control for easier uploading of files directly to BA Storage
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/nextjs/password-based-auth)
+    - Password-based authentication block for Next.js
+- [Realtime Avatar Stack](https://www.assistance.bg/ui/docs/nextjs/realtime-avatar-stack)
+    - Avatar stack in realtime
+- [Realtime Chat](https://www.assistance.bg/ui/docs/nextjs/realtime-chat)
+    - Real-time chat component for collaborative applications
+- [Realtime Cursor](https://www.assistance.bg/ui/docs/nextjs/realtime-cursor)
+    - Real-time cursor sharing for collaborative applications
+- [Social Authentication](https://www.assistance.bg/ui/docs/nextjs/social-auth)
+    - Social authentication block for Next.js
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/nuxtjs/client)
+    - BA client for Nuxt.js
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/nuxtjs/password-based-auth)
+    - Password-based authentication block for Nuxt.js
+- [Social Authentication](https://www.assistance.bg/ui/docs/nuxtjs/social-auth)
+    - Social authentication block for Nuxt.js
+- [Platform Kit](https://www.assistance.bg/ui/docs/platform/platform-kit)
+    - The easiest way to build platforms on top of BA
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/react-router/client)
+    - BA client for React Router
+- [Current User Avatar](https://www.assistance.bg/ui/docs/react-router/current-user-avatar)
+    - BA Auth-aware avatar
+- [Dropzone (File Upload)](https://www.assistance.bg/ui/docs/react-router/dropzone)
+    - Displays a control for easier uploading of files directly to BA Storage
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/react-router/password-based-auth)
+    - Password-based authentication block for React Router
+- [Realtime Avatar Stack](https://www.assistance.bg/ui/docs/react-router/realtime-avatar-stack)
+    - Avatar stack in realtime
+- [Realtime Chat](https://www.assistance.bg/ui/docs/react-router/realtime-chat)
+    - Real-time chat component for collaborative applications
+- [Realtime Cursor](https://www.assistance.bg/ui/docs/react-router/realtime-cursor)
+    - Real-time cursor sharing for collaborative applications
+- [Social Authentication](https://www.assistance.bg/ui/docs/react-router/social-auth)
+    - Social authentication block for React Router
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/react/client)
+    - BA client for React Single Page Applications
+- [Current User Avatar](https://www.assistance.bg/ui/docs/react/current-user-avatar)
+    - BA Auth-aware avatar
+- [Dropzone (File Upload)](https://www.assistance.bg/ui/docs/react/dropzone)
+    - Displays a control for easier uploading of files directly to BA Storage
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/react/password-based-auth)
+    - Password-based authentication block for React Single Page Applications
+- [Realtime Avatar Stack](https://www.assistance.bg/ui/docs/react/realtime-avatar-stack)
+    - Avatar stack in realtime
+- [Realtime Chat](https://www.assistance.bg/ui/docs/react/realtime-chat)
+    - Real-time chat component for collaborative applications
+- [Realtime Cursor](https://www.assistance.bg/ui/docs/react/realtime-cursor)
+    - Real-time cursor sharing for collaborative applications
+- [Social Authentication](https://www.assistance.bg/ui/docs/react/social-auth)
+    - Social authentication block for React Single Page Applications
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/tanstack/client)
+    - BA client for TanStack Start
+- [Current User Avatar](https://www.assistance.bg/ui/docs/tanstack/current-user-avatar)
+    - BA Auth-aware avatar
+- [Dropzone (File Upload)](https://www.assistance.bg/ui/docs/tanstack/dropzone)
+    - Displays a control for easier uploading of files directly to BA Storage
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/tanstack/password-based-auth)
+    - Password-based authentication block for TanStack Start
+- [Realtime Avatar Stack](https://www.assistance.bg/ui/docs/tanstack/realtime-avatar-stack)
+    - Avatar stack in realtime
+- [Realtime Chat](https://www.assistance.bg/ui/docs/tanstack/realtime-chat)
+    - Real-time chat component for collaborative applications
+- [Realtime Cursor](https://www.assistance.bg/ui/docs/tanstack/realtime-cursor)
+    - Real-time cursor sharing for collaborative applications
+- [Social Authentication](https://www.assistance.bg/ui/docs/tanstack/social-auth)
+    - Social authentication block for Tanstack Start
+- [BA Client Libraries](https://www.assistance.bg/ui/docs/vue/client)
+    - BA client for Vue Single Page Applications
+- [Password-based Authentication](https://www.assistance.bg/ui/docs/vue/password-based-auth)
+    - Password-based authentication block for Vue Single Page Applications
+- [Social Authentication](https://www.assistance.bg/ui/docs/vue/social-auth)
+    - Social authentication block for Vue Single Page Applications
