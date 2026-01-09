@@ -7,6 +7,7 @@ echo "🛑 Stopping all dev services..."
 
 # Kill next dev processes
 echo "  Killing next dev processes..."
+<<<<<<< HEAD
 pkill -9 -f "next dev" 2>/dev/null || true
 pkill -9 -f "next-server" 2>/dev/null || true
 
@@ -17,6 +18,18 @@ pkill -9 -f "turbo run" 2>/dev/null || true
 # Kill pnpm processes
 echo "  Killing pnpm dev processes..."
 pkill -9 -f "pnpm run dev" 2>/dev/null || true
+=======
+pkill -f "next dev" 2>/dev/null || true
+pkill -f "next-server" 2>/dev/null || true
+
+# Kill turbo processes
+echo "  Killing turbo processes..."
+pkill -f "turbo run" 2>/dev/null || true
+
+# Kill pnpm processes
+echo "  Killing pnpm dev processes..."
+pkill -f "pnpm run dev" 2>/dev/null || true
+>>>>>>> 3297abd6aa (clean up docs errors)
 
 # Kill node processes on specific ports
 PORTS=(3000 3001 3003 3004 3030 8082 5173 5174)
@@ -31,6 +44,7 @@ done
 
 # Give it a moment to clean up
 sleep 2
+<<<<<<< HEAD
 
 # Verify ports are actually free (retry if needed)
 echo "  Verifying ports are free..."
@@ -56,6 +70,8 @@ for port in 3000 3001; do
     echo "    ❌ Port $port is still in use after cleanup. Please manually free it."
   fi
 done
+=======
+>>>>>>> 3297abd6aa (clean up docs errors)
 
 echo "✅ All services stopped!"
 echo ""
