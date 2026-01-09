@@ -40,8 +40,8 @@ const NewFeatureCard = (props: CardProps) => (
       </div>
 
       <div className="flex items-center flex-wrap gap-1">
-        {props.ctas.map((cta: any) => (
-          <Button type={cta.type} asChild>
+        {props.ctas.map((cta: any, index: number) => (
+          <Button key={index} type={cta.type} asChild>
             <Link href={cta.href} target={cta.target}>
               {cta.label}
             </Link>
