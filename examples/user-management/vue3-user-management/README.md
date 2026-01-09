@@ -1,16 +1,16 @@
-# Supabase Vue 3 User Management
+# BA Vue 3 User Management
 
-This repo is a quick sample of how you can get started building apps using Vue 3 and Supabase. You can find a step by step guide of how to build out this app in the [Quickstart: Vue guide](https://supabase.io/docs/guides/with-vue-3).
+This repo is a quick sample of how you can get started building apps using Vue 3 and BA. You can find a step by step guide of how to build out this app in the [Quickstart: Vue guide](https://supabase.io/docs/guides/with-vue-3).
 
 This repo will demonstrate how to:
 
-- sign users in with Supabase Auth using [magic link](https://www.assistance.bg/docs/reference/dart/auth-signinwithotp)
-- store and retrieve data with [Supabase database](https://supabase.io/docs/guides/database)
-- store image files in [Supabase storage](https://supabase.io/docs/guides/storage)
+- sign users in with BA Auth using [magic link](https://www.assistance.bg/docs/reference/dart/auth-signinwithotp)
+- store and retrieve data with [BA database](https://supabase.io/docs/guides/database)
+- store image files in [BA storage](https://supabase.io/docs/guides/storage)
 
 ## Getting Started
 
-Before running this app, you need to create a Supabase project and copy [your credentials](https://supabase.io/docs/guides/with-vue-3#get-the-api-keys) to `.env`.
+Before running this app, you need to create a BA project and copy [your credentials](https://supabase.io/docs/guides/with-vue-3#get-the-api-keys) to `.env`.
 
 Run the following command to launch it on `localhost:5173`
 

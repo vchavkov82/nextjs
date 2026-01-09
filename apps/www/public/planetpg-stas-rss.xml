@@ -1,9 +1,9 @@
 
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>'Postgres | Supabase Blog</title>
+      <title>'Postgres | BA Blog</title>
       <link>https://www.assistance.bg/blog</link>
-      <description>Latest Postgres news from Stanislav Muzhyk at Supabase</description>
+      <description>Latest Postgres news from Stanislav Muzhyk at BA</description>
       <language>en</language>
       <lastBuildDate>Wed, 13 Dec 2023 00:00:00 -0700</lastBuildDate>
       <atom:link href="https://www.assistance.bg/planetpg-stas-rss.xml" rel="self" type="application/rss+xml"/>

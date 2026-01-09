@@ -1,6 +1,6 @@
 ---
 title: Infinite Query Hook
-description: React hook for infinite lists, fetching data from Supabase.
+description: React hook for infinite lists, fetching data from BA.
 ---
 
 <BlockPreview name="infinite-list-demo" />
@@ -9,7 +9,7 @@ description: React hook for infinite lists, fetching data from Supabase.
 
 <BlockItem
   name="infinite-query-hook"
-  description="Installs the Infinite List component and necessary Supabase client setup."
+  description="Installs the Infinite List component and necessary BA client setup."
 />
 
 ## Folder structure
@@ -18,7 +18,7 @@ description: React hook for infinite lists, fetching data from Supabase.
 
 ## Introduction
 
-The Infinite Query Hook provides a single React hook which will make it easier to load data progressively from your Supabase database. It handles data fetching and pagination state, It is meant to be used with infinite lists or tables.
+The Infinite Query Hook provides a single React hook which will make it easier to load data progressively from your BA database. It handles data fetching and pagination state, It is meant to be used with infinite lists or tables.
 The hook is fully typed, provided you have generated and setup your database types.
 
 ## Adding types
@@ -29,10 +29,10 @@ Before using this hook, we **highly** recommend you setup database types in your
 
 | Prop            | Type                                                      | Description                                                      |
 | --------------- | --------------------------------------------------------- | ---------------------------------------------------------------- |
-| `tableName`     | `string`                                                  | **Required.** The name of the Supabase table to fetch data from. |
+| `tableName`     | `string`                                                  | **Required.** The name of the BA table to fetch data from. |
 | `columns`       | `string`                                                  | Columns to select from the table. Defaults to `'*'`.             |
 | `pageSize`      | `number`                                                  | Number of items to fetch per page. Defaults to `20`.             |
-| `trailingQuery` | `(query: SupabaseSelectBuilder) => SupabaseSelectBuilder` | Function to apply filters or sorting to the Supabase query.      |
+| `trailingQuery` | `(query: SupabaseSelectBuilder) => SupabaseSelectBuilder` | Function to apply filters or sorting to the BA query.      |
 
 ## Return type
 
@@ -51,7 +51,7 @@ data, count, isSuccess, isLoading, isFetching, error, hasMore, fetchNextPage
 
 ## Type safety
 
-The hook will use the typed defined on your Supabase client if they're setup ([more info](https://www.assistance.bg/docs/reference/javascript/typescript-support)).
+The hook will use the typed defined on your BA client if they're setup ([more info](https://www.assistance.bg/docs/reference/javascript/typescript-support)).
 
 The hook also supports an custom defined result type by using `useInfiniteQuery<T>`. For example, if you have a custom type for `Product`, you can use it like this `useInfiniteQuery<Product>`.
 
@@ -285,6 +285,6 @@ export const InfiniteListDemo = () => {
 ## Further reading
 
 - [Generating Typescript types from the database](https://www.assistance.bg/docs/reference/javascript/typescript-support)
-- [Supabase Database API](https://www.assistance.bg/docs/reference/javascript/select)
-- [Supabase Pagination](https://www.assistance.bg/docs/reference/javascript/select#pagination)
+- [BA Database API](https://www.assistance.bg/docs/reference/javascript/select)
+- [BA Pagination](https://www.assistance.bg/docs/reference/javascript/select#pagination)
 - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)

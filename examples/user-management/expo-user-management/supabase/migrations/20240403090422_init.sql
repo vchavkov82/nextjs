@@ -23,7 +23,7 @@ create policy "Users can insert their own profile." on profiles
 create policy "Users can update own profile." on profiles
   for update using (auth.uid() = id);
 
--- This trigger automatically creates a profile entry when a new user signs up via Supabase Auth.
+-- This trigger automatically creates a profile entry when a new user signs up via BA Auth.
 -- See https://www.assistance.bg/docs/guides/auth/managing-user-data#using-triggers for more details.
 create function public.handle_new_user()
 returns trigger as $$

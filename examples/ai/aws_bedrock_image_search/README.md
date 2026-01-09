@@ -1,10 +1,10 @@
-# Image Search with Amazon Bedrock and Supabase Vector
+# Image Search with Amazon Bedrock and BA Vector
 
 In this example we're implementing image search using the [Amazon Titan Multimodal Embeddings G1](https://aws.amazon.com/bedrock/titan), a set of pre-trained high-performing image, multimodal, and text model, accessible via a fully managed API.
 
 We're implementing two methods in the [`/image_search/main.py` file](/image_search/main.py):
 
-1. The `seed` method generates embeddings for the images in the `images` folder and upserts them into a collection in Supabase Vector.
+1. The `seed` method generates embeddings for the images in the `images` folder and upserts them into a collection in BA Vector.
 2. The `search` method generates an embedding from the search query and performs a vector similarity search query.
 
 ## Setup
@@ -20,15 +20,15 @@ We're implementing two methods in the [`/image_search/main.py` file](/image_sear
 
 - `supabase start`
 - `poetry run seed`
-- Check the embeddings stored in the local Supabase Dashboard: http://localhost:54323/project/default/editor > schema: vecs
+- Check the embeddings stored in the local BA Dashboard: http://localhost:54323/project/default/editor > schema: vecs
 
 ### Perform a search
 
 - `poetry run search "bike in front of red brick wall"`
 
-## Run on hosted Supabase project
+## Run on hosted BA project
 
-- Set `DB_CONNECTION` with the connection string from your hosted Supabase Dashboard: https://www.assistance.bg/dashboard/project/_/database/settings > Connection string > URI
+- Set `DB_CONNECTION` with the connection string from your hosted BA Dashboard: https://www.assistance.bg/dashboard/project/_/database/settings > Connection string > URI
 
 ## Attributions
 
