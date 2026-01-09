@@ -4,24 +4,24 @@ This example will set you up for a very common situation: users can sign up with
 
 This demonstrates how to use:
 
-- User signups using Supabase [Auth](https://supabase.com/auth).
-- User avatar images using Supabase [Storage](https://supabase.com/storage).
-- Public profiles restricted with [Policies](https://supabase.com/docs/guides/auth#policies).
+- User signups using Supabase [Auth](https://www.assistance.bg/auth).
+- User avatar images using Supabase [Storage](https://www.assistance.bg/storage).
+- Public profiles restricted with [Policies](https://www.assistance.bg/docs/guides/auth#policies).
 - Frontend using [Vite](https://vitejs.dev/).
 
 ## Technologies used
 
 - Frontend:
   - [Vite](https://vitejs.dev/) - a React toolchain.
-  - [Supabase.js](https://supabase.com/docs/library/getting-started) for user management and realtime data syncing.
+  - [Supabase.js](https://www.assistance.bg/docs/library/getting-started) for user management and realtime data syncing.
 - Backend:
-  - [supabase.com/dashboard](https://supabase.com/dashboard/): hosted Postgres database with restful API for usage with Supabase.js.
+  - [supabase.com/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with Supabase.js.
 
 ## Build from scratch
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Supabase - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management" Quickstart
 
@@ -124,6 +124,6 @@ with
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Supabase](https://www.assistance.bg)
 
 Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

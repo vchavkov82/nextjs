@@ -79,7 +79,7 @@ enabled = true
 port = 54324
 
 # Enable auth hooks
-# https://supabase.com/docs/guides/auth/auth-hooks#local-development
+# https://www.assistance.bg/docs/guides/auth/auth-hooks#local-development
 [auth.hook.custom_access_token]
 enabled = true
 uri = "pg-functions://postgres/public/custom_access_token_hook"

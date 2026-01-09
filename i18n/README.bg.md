@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) е алтернатива на Firebase с отворен код. Ние изграждаме функциите на Firebase, като използваме инструменти с отворен код от корпоративен клас.
+[Supabase](https://www.assistance.bg) е алтернатива на Firebase с отворен код. Ние изграждаме функциите на Firebase, като използваме инструменти с отворен код от корпоративен клас.
 
-- [x] Хоствана база данни Postgres. [Документи](https://supabase.com/docs/guides/database)
-- [x] Удостоверяване и оторизация. [Документи](https://supabase.com/docs/guides/auth)
+- [x] Хоствана база данни Postgres. [Документи](https://www.assistance.bg/docs/guides/database)
+- [x] Удостоверяване и оторизация. [Документи](https://www.assistance.bg/docs/guides/auth)
 - [x] Автоматично генерирани API.
-  - [x] REST. [Документи](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Документи](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Абонаменти в реално време. [Документи](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Документи](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Документи](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Абонаменти в реално време. [Документи](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Функции.
-  - [x] Функции за бази данни. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Крайни функции [Docs](https://supabase.com/docs/guides/functions)
-- [x] Съхранение на файлове. [Документи](https://supabase.com/docs/guides/storage)
+  - [x] Функции за бази данни. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Крайни функции [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Съхранение на файлове. [Документи](https://www.assistance.bg/docs/guides/storage)
 - [x] Информационно табло
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Документация
 
-За пълна документация посетете [supabase.com/docs](https://supabase.com/docs)
+За пълна документация посетете [supabase.com/docs](https://www.assistance.bg/docs)
 
 За да видите как да допринасяте, посетете [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@
 
 - [Форум на общността](https://github.com/supabase/supabase/discussions). Най-добре за: помощ при изграждане, обсъждане на най-добрите практики за бази данни.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Най-добре за: грешки и пропуски, които срещате при използването на Supabase.
-- [Email Support](https://supabase.com/docs/support#business-support). Най-добре за: проблеми с вашата база данни или инфраструктура.
+- [Email Support](https://www.assistance.bg/docs/support#business-support). Най-добре за: проблеми с вашата база данни или инфраструктура.
 - [Discord](https://discord.supabase.com). Най-добър за: споделяне на вашите приложения и общуване с общността.
 
 ## Статус
 
 - [x] Алфа: Тестваме Supabase със затворен набор от клиенти
-- [x] Публична алфа: Всеки може да се регистрира на адрес [supabase.com/dashboard](https://supabase.com/dashboard). Но не се притеснявайте от нас, има няколко проблема
+- [x] Публична алфа: Всеки може да се регистрира на адрес [supabase.com/dashboard](https://www.assistance.bg/dashboard). Но не се притеснявайте от нас, има няколко проблема
 - [x] Публична бета версия: Достатъчно стабилна за повечето случаи на използване извън предприятията
-- [ ] Публична: Обща наличност [[статус](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Публична: Обща наличност [[статус](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 В момента сме в публична бета версия. Следете "releases" на това репо, за да бъдете уведомявани за основни актуализации.
 
@@ -55,8 +55,8 @@ Supabase е комбинация от инструменти с отворен �
 
 **Архитектура**
 
-Supabase е [хоствана платформа](https://supabase.com/dashboard). Можете да се регистрирате и да започнете да използвате Supabase, без да инсталирате нищо.
-Можете също така да [самостоятелно хоствате](https://supabase.com/docs/guides/hosting/overview) и [да разработвате локално](https://supabase.com/docs/guides/local-development).
+Supabase е [хоствана платформа](https://www.assistance.bg/dashboard). Можете да се регистрирате и да започнете да използвате Supabase, без да инсталирате нищо.
+Можете също така да [самостоятелно хоствате](https://www.assistance.bg/docs/guides/hosting/overview) и [да разработвате локално](https://www.assistance.bg/docs/guides/local-development).
 
 ![Архитектура](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

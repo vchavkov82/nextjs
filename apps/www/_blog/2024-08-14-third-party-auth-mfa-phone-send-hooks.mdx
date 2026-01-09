@@ -34,7 +34,7 @@ Let's dive into each new feature.
 
 ## Support for third-party Auth providers
 
-The headline feature today is [third-party Authentication](https://supabase.com/docs/guides/auth/third-party/overview).
+The headline feature today is [third-party Authentication](https://www.assistance.bg/docs/guides/auth/third-party/overview).
 
 ![Third-party auth](/images/blog/lw12/third-party-auth/third-party-auth.png)
 
@@ -44,9 +44,9 @@ Until today, using third-party auth products required developers to translate JW
 
 So we fixed it. Today we're adding first-class support for the following third-party authentication products:
 
-1. [Auth0](https://supabase.com/docs/guides/auth/third-party/firebase-auth)
-2. [AWS Cognito](https://supabase.com/docs/guides/auth/third-party/aws-cognito) (standalone or via AWS Amplify)
-3. [Firebase Auth](https://supabase.com/docs/guides/auth/third-party/firebase-auth)
+1. [Auth0](https://www.assistance.bg/docs/guides/auth/third-party/firebase-auth)
+2. [AWS Cognito](https://www.assistance.bg/docs/guides/auth/third-party/aws-cognito) (standalone or via AWS Amplify)
+3. [Firebase Auth](https://www.assistance.bg/docs/guides/auth/third-party/firebase-auth)
 
 <Admonition>
 
@@ -73,13 +73,13 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
 
 ## Phone-based multi-factor authentication
 
-We've extended MFA to [support SMS and WhatsApp](https://supabase.com/docs/guides/auth/auth-mfa).
+We've extended MFA to [support SMS and WhatsApp](https://www.assistance.bg/docs/guides/auth/auth-mfa).
 
 ![Phone MFA](/images/blog/lw12/third-party-auth/phone-mfa.png)
 
 We have a strong conviction that all applications should have access to an open and secure authentication provider. Secure-by-default should not be a luxury: developers should have affordable access to security best-practices.
 
-[Almost two years ago](https://supabase.com/blog/mfa-auth-via-rls) we launched [MFA with TOTP (app authenticator)](https://supabase.com/docs/guides/auth/auth-mfa) free of charge. Since then, we've heard a common complaint from developers: app authenticators can be hard to adopt for non-techies. Phone-based MFA is for those developers who want to provide a more accessible MFA experience for their users.
+[Almost two years ago](https://www.assistance.bg/blog/mfa-auth-via-rls) we launched [MFA with TOTP (app authenticator)](https://www.assistance.bg/docs/guides/auth/auth-mfa) free of charge. Since then, we've heard a common complaint from developers: app authenticators can be hard to adopt for non-techies. Phone-based MFA is for those developers who want to provide a more accessible MFA experience for their users.
 
 <Admonition>
 
@@ -109,22 +109,22 @@ await supabase.auth.mfa.verify({
 
 ## Auth Hooks for SMS and Email
 
-We've added a few new [Auth Hooks](https://supabase.com/docs/guides/auth/auth-hooks), which supports HTTP endpoints as a webhook now.
+We've added a few new [Auth Hooks](https://www.assistance.bg/docs/guides/auth/auth-hooks), which supports HTTP endpoints as a webhook now.
 
 **Email Hooks**
 
-We've heard the (rather loud) feedback that the built-in email templates (based on the Go templating language) can be limiting. There's been a lot of development in email rendering libraries like [Resend's React Email](https://resend.com/blog/react-email-2). To help make this available for developers, we've added a ["Send Email" Auth Hook](https://supabase.com/docs/guides/auth/auth-hooks/send-email-hook), which you can use to customize your emails and how they are sent.
+We've heard the (rather loud) feedback that the built-in email templates (based on the Go templating language) can be limiting. There's been a lot of development in email rendering libraries like [Resend's React Email](https://resend.com/blog/react-email-2). To help make this available for developers, we've added a ["Send Email" Auth Hook](https://www.assistance.bg/docs/guides/auth/auth-hooks/send-email-hook), which you can use to customize your emails and how they are sent.
 
 **SMS Hooks**
 
 Supabase Auth has built-in support for popular SMS sending providers like Twilio, Messagebird, Textlocal and Vonage, but we realize this choice can be limiting.
 
-Today we're launching a new ["Send SMS" Auth Hook](https://supabase.com/docs/guides/auth/auth-hooks/send-sms-hook). You no longer need to use the built-in provider - you can implement your own by specifying a HTTP endpoint that receives a POST request when a message needs to be sent.
+Today we're launching a new ["Send SMS" Auth Hook](https://www.assistance.bg/docs/guides/auth/auth-hooks/send-sms-hook). You no longer need to use the built-in provider - you can implement your own by specifying a HTTP endpoint that receives a POST request when a message needs to be sent.
 
 ## Getting started
 
 Check out the docs for more details on how to get started:
 
-- [Third-party Authentication](https://supabase.com/docs/guides/auth/third-party/overview)
-- [Multi-factor Authentication](https://supabase.com/docs/guides/auth/auth-mfa)
-- [Auth Hooks](https://supabase.com/docs/guides/auth/auth-hooks)
+- [Third-party Authentication](https://www.assistance.bg/docs/guides/auth/third-party/overview)
+- [Multi-factor Authentication](https://www.assistance.bg/docs/guides/auth/auth-mfa)
+- [Auth Hooks](https://www.assistance.bg/docs/guides/auth/auth-hooks)

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Supabase Wrapped 2025',
     description:
       'In 2025, developers around the world shipped faster, scaled further, and built things we never imagined. Here is what you accomplished on Supabase.',
-    url: 'https://supabase.com/wrapped',
+    url: 'https://www.assistance.bg/wrapped',
     siteName: 'Supabase',
     images: [
       {

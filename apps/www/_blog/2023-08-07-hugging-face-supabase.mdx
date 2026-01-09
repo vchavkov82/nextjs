@@ -14,13 +14,13 @@ image: launch-week-8/day-1/hugging-face-supabase-og.jpg
 thumb: launch-week-8/day-1/hugging-face-supabase-thumb.jpg
 ---
 
-Since launching our [Vector Toolkit](https://supabase.com/modules/vector) a few months ago, the number of AI applications on Supabase has grown - a lot. Hundreds of new databases every week are using [pgvector](https://github.com/pgvector/pgvector).
+Since launching our [Vector Toolkit](https://www.assistance.bg/modules/vector) a few months ago, the number of AI applications on Supabase has grown - a lot. Hundreds of new databases every week are using [pgvector](https://github.com/pgvector/pgvector).
 
 98% of those applications use OpenAI to store embeddings using the `text-embedding-ada-002` model. While OpenAI is easy, it’s not open source, which means it can’t be self-hosted.
 
-Our goal at Supabase is to [promote open source collaboration](https://supabase.com/docs/guides/getting-started/architecture#support-existing-tools), and [Hugging Face](https://huggingface.co/) is one of the open source communities we admire most. Today, we’re adding first-class support for Hugging Face, starting with embeddings. Why embeddings? Because this is one area where open source models are [measurably ahead](https://supabase.com/blog/fewer-dimensions-are-better-pgvector) for pgvector performance.
+Our goal at Supabase is to [promote open source collaboration](https://www.assistance.bg/docs/guides/getting-started/architecture#support-existing-tools), and [Hugging Face](https://huggingface.co/) is one of the open source communities we admire most. Today, we’re adding first-class support for Hugging Face, starting with embeddings. Why embeddings? Because this is one area where open source models are [measurably ahead](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector) for pgvector performance.
 
-We’ve added support in our [Python Vector Client](https://supabase.com/docs/guides/ai/python/api) and [Edge Functions](https://supabase.com/docs/guides/functions) (Deno/Javascript). Let’s start with Python.
+We’ve added support in our [Python Vector Client](https://www.assistance.bg/docs/guides/ai/python/api) and [Edge Functions](https://www.assistance.bg/docs/guides/functions) (Deno/Javascript). Let’s start with Python.
 
 <div className="video-container">
   <iframe
@@ -150,7 +150,7 @@ curl --request POST 'http://localhost:54321/functions/v1/embed' \
 
 With just 40 lines of code, we’ve created an API route that can accept some user content, convert it to an embedding, store it in your database, and then return the database row as JSON. This is especially useful for sensitive data since you can run this entirely on your own infrastructure.
 
-Supabase also provides [Database Webhooks](https://supabase.com/docs/guides/database/webhooks) which can trigger an Edge Function any time a row is inserted. This means you can upload plain text to your database and use a background job to convert the text to an embedding.
+Supabase also provides [Database Webhooks](https://www.assistance.bg/docs/guides/database/webhooks) which can trigger an Edge Function any time a row is inserted. This means you can upload plain text to your database and use a background job to convert the text to an embedding.
 
 ## Hugging Face from the browser
 
@@ -181,7 +181,7 @@ as $$
 $$;
 ```
 
-Now, we can call that function directly from the browser using [supabase-js](https://supabase.com/docs/reference/javascript/installing):
+Now, we can call that function directly from the browser using [supabase-js](https://www.assistance.bg/docs/reference/javascript/installing):
 
 ```js
 let { data: images, error } = await supabase.rpc('match_images', {
@@ -199,7 +199,7 @@ Check out [this demo](https://huggingface.co/spaces/Xenova/semantic-image-search
 
 ## Choosing a Hugging Face model
 
-Supabase is mainly used to store embeddings, so that’s where we’re starting. Over time we’ll add more Hugging Face support - even beyond embeddings. To help you identify which Hugging Face model to use, we ran a detailed analysis and found that embeddings with [fewer dimensions are better](https://supabase.com/blog/fewer-dimensions-are-better-pgvector) within pgvector. Fewer dimensions have several advantages:
+Supabase is mainly used to store embeddings, so that’s where we’re starting. Over time we’ll add more Hugging Face support - even beyond embeddings. To help you identify which Hugging Face model to use, we ran a detailed analysis and found that embeddings with [fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector) within pgvector. Fewer dimensions have several advantages:
 
 1. They require less space in your database (saving you money!)
 2. Retrieval is faster
@@ -218,7 +218,7 @@ Cold starts are the time it takes for the “initial load” of an Edge Function
 
 ### Handling heavier workloads
 
-The current quotas provided by Edge Functions are sufficient for running common embedding models. Larger AI models and tasks may require extra memory, CPU, and wall-clock limits to run successfully. We will offer customizable compute resources for Edge Functions in the next few months. If you have a workload that may require extra resources [reach out](https://supabase.com/support) for early access.
+The current quotas provided by Edge Functions are sufficient for running common embedding models. Larger AI models and tasks may require extra memory, CPU, and wall-clock limits to run successfully. We will offer customizable compute resources for Edge Functions in the next few months. If you have a workload that may require extra resources [reach out](https://www.assistance.bg/support) for early access.
 
 ### Audio and image models
 
@@ -230,14 +230,14 @@ Images have the same challenge. Models like CLIP, which can generate embeddings 
 
 ## Getting started
 
-If you’re a Python Dev, check out our [Hello World notebook](https://supabase.com/docs/guides/ai/quickstarts/hello-world). If you’re a JavaScript developer, check out our [Text Embeddings docs](https://supabase.com/docs/guides/ai/quickstarts/generate-text-embeddings).
+If you’re a Python Dev, check out our [Hello World notebook](https://www.assistance.bg/docs/guides/ai/quickstarts/hello-world). If you’re a JavaScript developer, check out our [Text Embeddings docs](https://www.assistance.bg/docs/guides/ai/quickstarts/generate-text-embeddings).
 
 And no matter your language preference, remember to jump into the [Hugging Face community](https://github.com/huggingface) and show your support.
 
 ## More Launch Week 8
 
-- [Day 2: Supabase Local Dev: migrations, branching, and observability](https://supabase.com/blog/supabase-local-dev)
-- [Launch Week 8](https://supabase.com/launch-week)
-- [Coding the stars - an interactive constellation with Three.js and React Three Fiber](https://supabase.com/blog/interactive-constellation-threejs-react-three-fiber)
-- [Why we'll stay remote](https://supabase.com/blog/why-supabase-remote)
+- [Day 2: Supabase Local Dev: migrations, branching, and observability](https://www.assistance.bg/blog/supabase-local-dev)
+- [Launch Week 8](https://www.assistance.bg/launch-week)
+- [Coding the stars - an interactive constellation with Three.js and React Three Fiber](https://www.assistance.bg/blog/interactive-constellation-threejs-react-three-fiber)
+- [Why we'll stay remote](https://www.assistance.bg/blog/why-supabase-remote)
 - [Postgres Language Server](https://github.com/supabase/postgres_lsp)

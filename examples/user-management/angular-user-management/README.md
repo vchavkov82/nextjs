@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Supabase - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management" Quickstart
 
@@ -102,6 +102,6 @@ create policy "Anyone can upload an avatar."
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Supabase](https://www.assistance.bg)
 
 Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

@@ -88,7 +88,7 @@ const data: () => {
       ctas: [
         {
           label: 'Start your project',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
             sendTelemetryEvent({
@@ -98,7 +98,7 @@ const data: () => {
         },
         {
           label: 'Request a demo',
-          href: 'https://supabase.com/contact/sales',
+          href: 'https://www.assistance.bg/contact/sales',
           type: 'default' as any,
           onClick: () =>
             sendTelemetryEvent({
@@ -808,7 +808,7 @@ const data: () => {
           <Sparkles size={24} className="inline text-foreground" />
         </>
       ),
-      docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts',
+      docsUrl: 'https://www.assistance.bg/docs/guides/getting-started/ai-prompts',
       leftFooter: (
         <div className="grid grid-cols-5 divide-x divide-y rounded-lg overflow-hidden border">
           {frameworks.map((framework) => (
@@ -829,7 +829,7 @@ const data: () => {
 `,
           language: 'markdown',
           docsUrl:
-            'https://supabase.com/docs/guides/getting-started/ai-prompts/nextjs-supabase-auth',
+            'https://www.assistance.bg/docs/guides/getting-started/ai-prompts/nextjs-supabase-auth',
         },
         {
           id: 'edge-functions',
@@ -843,7 +843,7 @@ const data: () => {
 5. For external dependencies, importing via 'npm:' and 'jsr:' is preferred. Minimize the use of imports from @'deno.land/x' , 'esm.sh' and @'unpkg.com' . If you have a package from one of those CDNs, you can replace the CDN hostname with 'npm:' specifier.
 `,
           language: 'markdown',
-          docsUrl: 'https://supabase.com/docs/guides/getting-started/ai-prompts/edge-functions',
+          docsUrl: 'https://www.assistance.bg/docs/guides/getting-started/ai-prompts/edge-functions',
         },
         {
           id: 'declarative-db-schema',
@@ -855,7 +855,7 @@ const data: () => {
 -**All database schema modifications must be defined within '.sql' files located in the 'supabase/schemas/' directory.`,
           language: 'markdown',
           docsUrl:
-            'https://supabase.com/docs/guides/getting-started/ai-prompts/declarative-database-schema',
+            'https://www.assistance.bg/docs/guides/getting-started/ai-prompts/declarative-database-schema',
         },
         {
           id: 'rls-policies',
@@ -868,7 +868,7 @@ The output should use the following instructions:
 - The generated SQL must be valid SQL.`,
           language: 'markdown',
           docsUrl:
-            'https://supabase.com/docs/guides/getting-started/ai-prompts/database-rls-policies',
+            'https://www.assistance.bg/docs/guides/getting-started/ai-prompts/database-rls-policies',
         },
       ],
     },

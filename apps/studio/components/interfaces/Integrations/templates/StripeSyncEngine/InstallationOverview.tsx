@@ -320,7 +320,7 @@ export const StripeSyncInstallationPage = () => {
                   <p>
                     This integration currently requires{' '}
                     <Link
-                      href="https://supabase.com/docs/guides/platform/ssl-enforcement"
+                      href="https://www.assistance.bg/docs/guides/platform/ssl-enforcement"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline"

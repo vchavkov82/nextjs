@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) - это альтернатива Firebase с открытым исходным кодом. Мы создаем функции Firebase, используя инструменты корпоративного уровня с открытым исходным кодом.
+[Supabase](https://www.assistance.bg) - это альтернатива Firebase с открытым исходным кодом. Мы создаем функции Firebase, используя инструменты корпоративного уровня с открытым исходным кодом.
 
-- [x] Хостируемая база данных Postgres. [Docs](https://supabase.com/docs/guides/database)
-- [x] Аутентификация и авторизация. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Хостируемая база данных Postgres. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Аутентификация и авторизация. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] Автоматически генерируемые API.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Подписки в реальном времени. [Docs](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Подписки в реальном времени. [Docs](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Функции.
-  - [x] Функции базы данных. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge Functions [Docs](https://supabase.com/docs/guides/functions)
-- [x] Файловое хранилище. [Docs](https://supabase.com/docs/guides/storage)
+  - [x] Функции базы данных. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge Functions [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Файловое хранилище. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Приборная панель
 
 [Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Документация
 
-Для получения полной документации посетите [supabase.com/docs](https://supabase.com/docs)
+Для получения полной документации посетите [supabase.com/docs](https://www.assistance.bg/docs)
 
 Чтобы узнать, как внести вклад, посетите [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Лучше всего подходит для: помощи в создании, обсуждения лучших практик работы с базами данных.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Лучше всего подходит для: багов и ошибок, с которыми вы столкнулись при использовании Supabase.
-- [Email Support](https://supabase.com/docs/support#business-support). Лучше всего подходит для: проблем с вашей базой данных или инфраструктурой.
+- [Email Support](https://www.assistance.bg/docs/support#business-support). Лучше всего подходит для: проблем с вашей базой данных или инфраструктурой.
 - [Discord](https://discord.supabase.com). Лучше всего подходит для: обмена информацией о ваших приложениях и общения с сообществом.
 
 ## Статус
 
 - [x] Альфа: Мы тестируем Supabase с закрытым набором клиентов
-- [x] Публичная Альфа: Любой желающий может зарегистрироваться на [supabase.com/dashboard](https://supabase.com/dashboard). Но будьте с нами помягче, есть несколько недоработок
+- [x] Публичная Альфа: Любой желающий может зарегистрироваться на [supabase.com/dashboard](https://www.assistance.bg/dashboard). Но будьте с нами помягче, есть несколько недоработок
 - [x] Публичная бета-версия: Достаточно стабильна для большинства случаев использования не на предприятиях
-- [ ] Public: Общая доступность [[статус](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Public: Общая доступность [[статус](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 В настоящее время мы находимся в публичной бета-версии. Следите за "релизами" этого репозитория, чтобы получать уведомления об основных обновлениях.
 
@@ -55,8 +55,8 @@ Supabase - это комбинация инструментов с открыт�
 
 \*\*Архитектура
 
-Supabase - это [размещенная платформа](https://supabase.com/dashboard). Вы можете зарегистрироваться и начать использовать Supabase, ничего не устанавливая.
-Вы также можете [самостоятельно размещать](https://supabase.com/docs/guides/hosting/overview) и [разрабатывать локально](https://supabase.com/docs/guides/local-development).
+Supabase - это [размещенная платформа](https://www.assistance.bg/dashboard). Вы можете зарегистрироваться и начать использовать Supabase, ничего не устанавливая.
+Вы также можете [самостоятельно размещать](https://www.assistance.bg/docs/guides/hosting/overview) и [разрабатывать локально](https://www.assistance.bg/docs/guides/local-development).
 
 ![Архитектура](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

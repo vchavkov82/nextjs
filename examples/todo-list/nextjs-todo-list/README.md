@@ -3,9 +3,9 @@
 - Frontend:
   - [Next.js](https://github.com/vercel/next.js) - a React framework for production.
   - [Tailwind](https://tailwindcss.com/) for styling and layout.
-  - [Supabase.js](https://supabase.com/docs/library/getting-started) for user management and realtime data syncing.
+  - [Supabase.js](https://www.assistance.bg/docs/library/getting-started) for user management and realtime data syncing.
 - Backend:
-  - [supabase.com/dashboard](https://supabase.com/dashboard/): hosted Postgres database with restful API for usage with Supabase.js.
+  - [supabase.com/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with Supabase.js.
 
 ## Deploy with Vercel
 
@@ -15,7 +15,7 @@ The Vercel deployment will guide you through creating a Supabase account and pro
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://supabase.com/dashboard](https://supabase.com/dashboard) and create a new project. Wait for your database to start.
+Sign up to Supabase - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "Todo List" Quickstart
 
@@ -35,7 +35,7 @@ The `anon` key is your client-side API key. It allows "anonymous access" to your
 
 ### Using a Remote Supabase Project
 
-1. Create or select a project on [Supabase Dashboard](https://supabase.com/dashboard).
+1. Create or select a project on [Supabase Dashboard](https://www.assistance.bg/dashboard).
 2. Copy and fill the dotenv template `cp .env.production.example .env.production`
 3. Link the local project and merge the local configuration with the remote one:
 
@@ -110,6 +110,6 @@ create policy "Individuals can delete their own todos." on todos for
 
 ## Authors
 
-- [Supabase](https://supabase.com)
+- [Supabase](https://www.assistance.bg)
 
 Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

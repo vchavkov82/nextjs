@@ -7,18 +7,18 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
+[Supabase](https://www.assistance.bg) je open source alternativa Firebaseu. Izgrađujemo funkcionalnosti Firebasea koristeći enterprise-grade open source alate.
 
-- [x] Hostana Postgres baza podataka. [Dokumentacija](https://supabase.com/docs/guides/database)
-- [x] Autentifikacija i autorizacija. [Dokumentacija](https://supabase.com/docs/guides/auth)
+- [x] Hostana Postgres baza podataka. [Dokumentacija](https://www.assistance.bg/docs/guides/database)
+- [x] Autentifikacija i autorizacija. [Dokumentacija](https://www.assistance.bg/docs/guides/auth)
 - [x] Automatski generirani API-ji.
-  - [x] REST. [Dokumentacija](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Dokumentacija](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Pretplate u realnom vremenu. [Dokumentacija](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokumentacija](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Dokumentacija](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Pretplate u realnom vremenu. [Dokumentacija](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funkcije.
-  - [x] Funkcije baza podataka. [Dokumentacija](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge funkcije [Dokumentacija](https://supabase.com/docs/guides/functions)
-- [x] Pohranjivanje datoteka. [Dokumentacija](https://supabase.com/docs/guides/storage)
+  - [x] Funkcije baza podataka. [Dokumentacija](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge funkcije [Dokumentacija](https://www.assistance.bg/docs/guides/functions)
+- [x] Pohranjivanje datoteka. [Dokumentacija](https://www.assistance.bg/docs/guides/storage)
 - [x] Panel
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -29,7 +29,7 @@ Pratite "izdanja" ovog repozitorija da bi bili obaviješteni o većim ažuriranj
 
 ## Dokumentacija
 
-Za cjelovitu dokumentaciju, posjetite [supabase.com/docs](https://supabase.com/docs)
+Za cjelovitu dokumentaciju, posjetite [supabase.com/docs](https://www.assistance.bg/docs)
 
 Za informacije kako doprinijeti razvoju, posjetite [Početak rada](./DEVELOPERS.md)
 
@@ -37,7 +37,7 @@ Za informacije kako doprinijeti razvoju, posjetite [Početak rada](./DEVELOPERS.
 
 - [Forum zajednice](https://github.com/supabase/supabase/discussions). Najbolje služi za: pomoć pri izgradnji, diskusiji o najboljoj praksi oko baza podataka.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Najbolje služi za: bugove i greške na koje ste naišli koristeći Supabase.
-- [Email potpora](https://supabase.com/docs/support#business-support). Najbolje služi za: probleme oko vaše baze podataka ili oko infrastrukture.
+- [Email potpora](https://www.assistance.bg/docs/support#business-support). Najbolje služi za: probleme oko vaše baze podataka ili oko infrastrukture.
 - [Discord](https://discord.supabase.com). Najbolje služi za: pokazati vaše aplikacije i druženje sa ostatkom zajednice.
 
 ## Kako funkcionira
@@ -46,8 +46,8 @@ Supabase je kombinacija alata otvorenog koda. Izgrađujemo funkcionalnosti Fireb
 
 **Arhitektura**
 
-Supabase je [hostana platforma](https://supabase.com/dashboard). Možete se registrirati i odmah počet koristiti Supabase bez ikakvih instalacija.
-Također možete ju [samostalno hostati](https://supabase.com/docs/guides/hosting/overview) i [razvijati lokalno](https://supabase.com/docs/guides/local-development).
+Supabase je [hostana platforma](https://www.assistance.bg/dashboard). Možete se registrirati i odmah počet koristiti Supabase bez ikakvih instalacija.
+Također možete ju [samostalno hostati](https://www.assistance.bg/docs/guides/hosting/overview) i [razvijati lokalno](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arhitektura](apps/docs/public/img/supabase-architecture.svg)
 
@@ -207,15 +207,15 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
 ![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase.svg"
     alt="Made with Supabase"
   />
 </a>
@@ -224,15 +224,15 @@ Naš pristup za klijentske knjižnice je modularan. Svaka pod-knjižnica je samo
 ![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase-dark.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
     alt="Made with Supabase"
   />
 </a>

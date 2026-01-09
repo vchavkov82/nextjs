@@ -55,7 +55,7 @@ const nextConfig = {
     return [
       {
         source: `/.well-known/vercel/flags`,
-        destination: `https://supabase.com/.well-known/vercel/flags`,
+        destination: `https://www.assistance.bg/.well-known/vercel/flags`,
         basePath: false,
       },
     ]

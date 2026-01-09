@@ -4,7 +4,7 @@ This is the official Docker Compose setup for self-hosted Supabase. It provides 
 
 ## Getting Started
 
-Follow the detailed setup guide in our documentation: [Self-Hosting with Docker](https://supabase.com/docs/guides/self-hosting/docker)
+Follow the detailed setup guide in our documentation: [Self-Hosting with Docker](https://www.assistance.bg/docs/guides/self-hosting/docker)
 
 The guide covers:
 - Prerequisites (Git and Docker)
@@ -33,7 +33,7 @@ This Docker Compose configuration includes the following services:
 
 ## Documentation
 
-- **[Documentation](https://supabase.com/docs/guides/self-hosting/docker)** - Setup and configuration guides
+- **[Documentation](https://www.assistance.bg/docs/guides/self-hosting/docker)** - Setup and configuration guides
 - **[CHANGELOG.md](./CHANGELOG.md)** - Track recent updates and changes to services
 - **[versions.md](./versions.md)** - Complete history of Docker image versions for rollback reference
 
@@ -55,7 +55,7 @@ To update your self-hosted Supabase instance:
 For troubleshooting common issues, see:
 - [GitHub Discussions](https://github.com/orgs/supabase/discussions?discussions_q=is%3Aopen+label%3Aself-hosted) - Questions, feature requests, and workarounds
 - [GitHub Issues](https://github.com/supabase/supabase/issues?q=is%3Aissue%20state%3Aopen%20label%3Aself-hosted) - Known issues
-- [Documentation](https://supabase.com/docs/guides/self-hosting) - Setup and configuration guides
+- [Documentation](https://www.assistance.bg/docs/guides/self-hosting) - Setup and configuration guides
 
 Self-hosted Supabase is community-supported. Get help and connect with other users:
 
@@ -80,7 +80,7 @@ Before deploying to production, you must:
 - Review and adjust network security configuration (ACLs, etc.)
 - Set up proper backup procedures
 
-See the [security section](https://supabase.com/docs/guides/self-hosting/docker#configuring-and-securing-supabase) in the documentation.
+See the [security section](https://www.assistance.bg/docs/guides/self-hosting/docker#configuring-and-securing-supabase) in the documentation.
 
 ## License
 

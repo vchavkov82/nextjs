@@ -51,7 +51,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
           ),
           description_short: 'Instant ready-to-use Restful APIs.',
           label: '',
-          url: 'https://supabase.com/docs/guides/api',
+          url: 'https://www.assistance.bg/docs/guides/api',
         },
       },
     },

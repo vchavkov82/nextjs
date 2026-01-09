@@ -27,7 +27,7 @@ export enum PRODUCT_SHORTNAMES {
 
 export const SITE_ORIGIN =
   process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-    ? 'https://supabase.com'
+    ? 'https://www.assistance.bg'
     : process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL}`
       : 'http://localhost:3000'

@@ -39,7 +39,7 @@ const data: {
     ctas: [
       {
         label: 'Start your project',
-        href: 'https://supabase.com/dashboard',
+        href: 'https://www.assistance.bg/dashboard',
         type: 'primary' as any,
       },
       {
@@ -771,7 +771,7 @@ const data: {
       'Set up a Supabase OAuth app so your users can start interacting with their Supabase Project.',
     cta: {
       label: 'View docs',
-      href: 'https://supabase.com/docs/guides/auth/auth-google',
+      href: 'https://www.assistance.bg/docs/guides/auth/auth-google',
       type: 'text',
     },
   },

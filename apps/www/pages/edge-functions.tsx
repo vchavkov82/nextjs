@@ -37,10 +37,10 @@ function EdgeFunctions() {
         openGraph={{
           title: pageData.metaTitle,
           description: pageData.metaDescription,
-          url: `https://supabase.com/edge-functions`,
+          url: `https://www.assistance.bg/edge-functions`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/functions/functions-og.jpg`,
+              url: `https://www.assistance.bg${basePath}/images/product/functions/functions-og.jpg`,
             },
           ],
         }}

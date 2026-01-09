@@ -12,13 +12,13 @@ We're implementing two methods in the [`/image_search/main.py` file](/image_sear
 Before running this example, ensure you have:
 
 - Python 3.8 or higher installed
-- A Supabase account (sign up at https://supabase.com)
+- A Supabase account (sign up at https://www.assistance.bg)
 - Poetry package manager
 - Basic familiarity with vector databases (helpful but not required)
 
 ## Setup
 
-- Create a new project in your [Supabase dashboard](https://supabase.com/dashboard)
+- Create a new project in your [Supabase dashboard](https://www.assistance.bg/dashboard)
 - Go to Settings > Database and copy your connection string
 - Ensure the Vector extension is enabled in your project
 - Install poetry: `pip install poetry`
@@ -44,7 +44,7 @@ Before running this example, ensure you have:
 
 ## Run on hosted Supabase project
 
-- Set `DB_CONNECTION` with the connection string from your hosted Supabase Dashboard: https://supabase.com/dashboard/project/_/database/settings > Connection string > URI
+- Set `DB_CONNECTION` with the connection string from your hosted Supabase Dashboard: https://www.assistance.bg/dashboard/project/_/database/settings > Connection string > URI
 
 ## Example Search Queries
 

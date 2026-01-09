@@ -643,7 +643,7 @@ const BetaPricing = () => (
 
       <div className="grid grid-cols-12 col-span-12 mb-10 text-foreground gap-x-2 lg:gap-x-8">
         <div className="col-span-12 text-base sm:col-span-9 xl:col-span-7">
-          <p className="mb-10">For up to date pricing info see: https://supabase.com/pricing</p>
+          <p className="mb-10">For up to date pricing info see: https://www.assistance.bg/pricing</p>
           <p className="mb-10">
             We're working closely with many open source projects, infrastructure providers, and of
             course our Alpha Users, to provide a predictable and sustainable pricing model.
@@ -693,7 +693,7 @@ const BetaPricing = () => (
           </ul>
           <p>
             The Supabase Base plan is now called the Supabase Pro Plan as per the{' '}
-            <a href="https://supabase.com/pricing" className="text-brand hover:text-brand">
+            <a href="https://www.assistance.bg/pricing" className="text-brand hover:text-brand">
               pricing page
             </a>
             .
@@ -950,7 +950,7 @@ const Beta = (props: Props) => {
         openGraph={{
           title: site_title,
           description: DEFAULT_META_DESCRIPTION,
-          url: `https://supabase.com/beta`,
+          url: `https://www.assistance.bg/beta`,
           type: 'article',
           article: {
             //
@@ -965,7 +965,7 @@ const Beta = (props: Props) => {
           },
           images: [
             {
-              url: 'https://supabase.com/og/supabase-og.png',
+              url: 'https://www.assistance.bg/og/supabase-og.png',
             },
           ],
         }}

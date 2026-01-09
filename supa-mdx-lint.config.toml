@@ -20,4 +20,4 @@ rules.preferred_usage = "include('supa-mdx-lint/Rule004ExcludeWords/preferred_us
 rules.slang = "include('supa-mdx-lint/Rule004ExcludeWords/slang.toml')"
 
 [Rule006NoAbsoluteUrls]
-base_url = "https://supabase.com"
+base_url = "https://www.assistance.bg"

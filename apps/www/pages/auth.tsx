@@ -44,10 +44,10 @@ function AuthPage() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/auth`,
+          url: `https://www.assistance.bg/auth`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/product/auth/auth-og.jpg`,
+              url: `https://www.assistance.bg${basePath}/images/product/auth/auth-og.jpg`,
             },
           ],
         }}

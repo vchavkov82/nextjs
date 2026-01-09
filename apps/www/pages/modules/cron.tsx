@@ -25,7 +25,7 @@ function CronPage() {
         openGraph={{
           title: pageData.metaTitle,
           description: pageData.metaDescription,
-          url: `https://supabase.com/modules/cron`,
+          url: `https://www.assistance.bg/modules/cron`,
           images: [
             {
               url: pageData.metaImage,

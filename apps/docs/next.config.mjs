@@ -397,7 +397,7 @@ const nextConfig = {
       // Redirect dashboard links in dev/preview envs
       {
         source: '/dashboard/:path*',
-        destination: 'https://supabase.com/dashboard/:path*',
+        destination: 'https://www.assistance.bg/dashboard/:path*',
         basePath: false,
         permanent: false,
       },
@@ -405,7 +405,7 @@ const nextConfig = {
       // Redirect blog links in dev/preview envs
       {
         source: '/blog/:path*',
-        destination: 'https://supabase.com/blog/:path*',
+        destination: 'https://www.assistance.bg/blog/:path*',
         basePath: false,
         permanent: false,
       },

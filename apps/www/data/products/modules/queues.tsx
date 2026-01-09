@@ -7,7 +7,7 @@ export default () => ({
   metaDescription:
     'Postgres module that uses the pgmq database extension to manage Message Queues with guaranteed delivery.',
   metaImage: '/images/modules/queues/og.png',
-  url: 'https://supabase.com/dashboard/project/_/integrations/queues/overview',
+  url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
   docsUrl: '/docs/guides/queues',
   heroSection: {
     title: 'Supabase Queues',
@@ -21,7 +21,7 @@ export default () => ({
     icon: PRODUCT_MODULES.queues.icon[24],
     cta: {
       label: 'Create your first Queue',
-      link: 'https://supabase.com/dashboard/project/_/integrations/queues/overview',
+      link: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
     },
     secondaryCta: {
       label: 'Explore documentation',
@@ -175,7 +175,7 @@ export default () => ({
     subheading: 'Create Queues and manage messages using SQL with any Postgres client.',
     cta: {
       label: 'Start message queuing',
-      url: 'https://supabase.com/dashboard/project/_/integrations/queues/overview',
+      url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
     },
     image: (
       <Image
@@ -200,7 +200,7 @@ export default () => ({
       'Create and manage messages either server-side or client-side via PostgREST using any Supabase client library.',
     cta: {
       label: 'Start message queuing',
-      url: 'https://supabase.com/dashboard/project/_/integrations/queues/overview',
+      url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
     },
     reverse: true,
     image: (
@@ -227,7 +227,7 @@ export default () => ({
       'Create Queues and manage messages in the Dashboard as well as monitor your Queues and message processing in real-time.',
     cta: {
       label: 'Start message queuing',
-      url: 'https://supabase.com/dashboard/project/_/integrations/queues/overview',
+      url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
     },
     image: (
       <Image

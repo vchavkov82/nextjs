@@ -386,7 +386,7 @@ const getContent = async (params: Params) => {
 
 const getDashboardIntegrationURL = (wrapperPath?: string) => {
   return wrapperPath
-    ? `https://supabase.com/dashboard/project/_/integrations/${wrapperPath}/overview`
+    ? `https://www.assistance.bg/dashboard/project/_/integrations/${wrapperPath}/overview`
     : null
 }
 

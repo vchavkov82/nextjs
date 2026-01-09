@@ -18,7 +18,7 @@ thumb: 2023-07-13-pgvector-performance/vector-benchmarks-thumb.jpeg
 <div className="bg-gray-300 rounded-lg px-6 py-2 bold">
 
 🚀 The incorporation of the HNSW index in pgvector v0.5.0 ensures lightning-fast vector searches. We tested it, benchmarked it, and shared everything.
-[Read the new post](https://supabase.com/blog/increase-performance-pgvector-hnsw)
+[Read the new post](https://www.assistance.bg/blog/increase-performance-pgvector-hnsw)
 
 </div>
 
@@ -70,7 +70,7 @@ We tested using the same dataset as the Qdrant comparison: [dbpedia-entities-ope
 
 <div className="bg-gray-300 rounded-lg px-6 py-2 italic">
 
-We also have some useful [benchmarks in our docs](https://supabase.com/docs/guides/ai/choosing-compute-addon#results) for [gist-960-angular](http://corpus-texmex.irisa.fr/) (1M image embeddings, 960 dimensions) and [GloVe Reddit comments](https://nlp.stanford.edu/projects/glove/) (1.6M text embeddings, 512 dimensions).
+We also have some useful [benchmarks in our docs](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon#results) for [gist-960-angular](http://corpus-texmex.irisa.fr/) (1M image embeddings, 960 dimensions) and [GloVe Reddit comments](https://nlp.stanford.edu/projects/glove/) (1.6M text embeddings, 512 dimensions).
 
 </div>
 
@@ -182,7 +182,7 @@ With a 64-core, 256 GB server we achieve ~1800 QPS and 0.91 accuracy. This is fo
 
 ## Other performance factors
 
-It's been about 5 months since we [added](https://supabase.com/blog/openai-embeddings-postgres-vector) pgvector to the platform. Since then we've discovered a few other important things to keep in mind.
+It's been about 5 months since we [added](https://www.assistance.bg/blog/openai-embeddings-postgres-vector) pgvector to the platform. Since then we've discovered a few other important things to keep in mind.
 
 ### Increasing lists improves performance
 
@@ -267,7 +267,7 @@ First, a few generic tips which you can pick and choose from:
 Before running your pgvector workload in production, here are a few steps you can take to maximize performance.
 
 1. Over-provision RAM during preparation. You can scale down in step `5`, but it's better to start with a larger size to get the best results for RAM requirements. (We'd recommend at least 8XL if you're using Supabase.)
-2. Upload your data to the database. If you use [`vecs`](https://supabase.com/docs/guides/ai/python/api) library, it will automatically generate an index with default parameters.
+2. Upload your data to the database. If you use [`vecs`](https://www.assistance.bg/docs/guides/ai/python/api) library, it will automatically generate an index with default parameters.
 3. Run a benchmark using randomly generated queries and see the results. Again, you can use `vecs` library with the `ann-benchmarks` tool. Do it with probes set to 10 (default) and then with probes set to 100 or more, so QPS will be lower than 10.
 4. Take a look at the RAM usage, and save it as a note for yourself. You would likely want to use compute add-on in the future that would have the same amount of RAM as used at the moment (both actual RAM usage and RAM used for cache and buffers).
 5. Scale down your compute add-on to the one that would have the same amount of RAM as used at the moment.
@@ -281,15 +281,15 @@ pgvector is still early in development. As with any open source tool, it needs t
 
 What's next on the roadmap? Andrew has an impressive list of features [planned for v0.5.0](https://github.com/pgvector/pgvector/issues/27):
 
-✅ [Adding HNSW](https://supabase.com/blog/increase-performance-pgvector-hnsw): an index with better speed & accuracy than IVFFlat (at a higher memory cost)
+✅ [Adding HNSW](https://www.assistance.bg/blog/increase-performance-pgvector-hnsw): an index with better speed & accuracy than IVFFlat (at a higher memory cost)
 
 - Product quantization: better storage for IVFFLAT, improving speed and recall
 - Parallel index builds: building your IVFFLAT indexes will be much faster
 
 ## More AI resources
 
-- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://supabase.com/blog/building-chatgpt-plugins-template)
-- [Docs pgvector: Embeddings and vector similarity](https://supabase.com/docs/guides/database/extensions/pgvector)
+- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
+- [Docs pgvector: Embeddings and vector similarity](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
 - [pgvector vs Qdrant](https://nirantk.com/writing/pgvector-vs-qdrant)
-- [Choosing Compute Add-on for AI workloads](https://supabase.com/docs/guides/ai/choosing-compute-addon)
-- [pgvector v0.5.0: Faster semantic search with HNSW indexes](https://supabase.com/blog/pgvector-v0-5-0-hnsw)
+- [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
+- [pgvector v0.5.0: Faster semantic search with HNSW indexes](https://www.assistance.bg/blog/pgvector-v0-5-0-hnsw)

@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
+[Supabase](https://www.assistance.bg) je open source alternativa Firebase. Vytváříme funkce Firebase pomocí open source nástrojů podnikové třídy.
 
-- [x] hostovaná databáze Postgres. [Dokumenty](https://supabase.com/docs/guides/database)
-- [x] Ověřování a autorizace. [Dokumenty](https://supabase.com/docs/guides/auth)
+- [x] hostovaná databáze Postgres. [Dokumenty](https://www.assistance.bg/docs/guides/database)
+- [x] Ověřování a autorizace. [Dokumenty](https://www.assistance.bg/docs/guides/auth)
 - [x] Automaticky generované rozhraní API.
-  - [x] REST. [Dokumenty](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Dokumenty](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Odběry v reálném čase. [Dokumenty](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokumenty](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Dokumenty](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Odběry v reálném čase. [Dokumenty](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funkce.
-  - [x] Databázové funkce. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Okrajové funkce [Docs](https://supabase.com/docs/guides/functions)
-- [x] Ukládání souborů. [Dokumenty](https://supabase.com/docs/guides/storage)
+  - [x] Databázové funkce. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Okrajové funkce [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Ukládání souborů. [Dokumenty](https://www.assistance.bg/docs/guides/storage)
 - [x] Přístrojový panel
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentace
 
-Úplnou dokumentaci naleznete na adrese [supabase.com/docs](https://supabase.com/docs)
+Úplnou dokumentaci naleznete na adrese [supabase.com/docs](https://www.assistance.bg/docs)
 
 Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOP
 
 - [Fórum komunity](https://github.com/supabase/supabase/discussions). Nejlépe pro: pomoc při vytváření, diskuse o osvědčených postupech při práci s databází.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze Supabase.
-- [E-mailová podpora](https://supabase.com/docs/support#business-support). Nejlepší pro: problémy s vaší databází nebo infrastrukturou.
+- [E-mailová podpora](https://www.assistance.bg/docs/support#business-support). Nejlepší pro: problémy s vaší databází nebo infrastrukturou.
 - [Discord](https://discord.supabase.com). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
 
 ## Stav
 
 - [x] Alfa: Testujeme Supabase s uzavřenou skupinou zákazníků
-- [x] Veřejná alfa: [supabase.com/dashboard](https://supabase.com/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
+- [x] Veřejná alfa: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
 - [x] Veřejná beta verze: Dostatečně stabilní pro většinu případů použití mimo podniky
-- [ ] Veřejná: Všeobecná dostupnost [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Veřejná: Všeobecná dostupnost [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 V současné době jsme ve fázi Public Beta. Sledujte "releases" tohoto repozitáře, abyste byli upozorněni na hlavní aktualizace.
 
@@ -55,8 +55,8 @@ Supabase je kombinací nástrojů s otevřeným zdrojovým kódem. Funkce Fireba
 
 **Architektura**
 
-Supabase je [hostovaná platforma](https://supabase.com/dashboard). Můžete se zaregistrovat a začít používat Supabase, aniž byste museli cokoli instalovat.
-Můžete také [hostovat sami](https://supabase.com/docs/guides/hosting/overview) a [vyvíjet lokálně](https://supabase.com/docs/guides/local-development).
+Supabase je [hostovaná platforma](https://www.assistance.bg/dashboard). Můžete se zaregistrovat a začít používat Supabase, aniž byste museli cokoli instalovat.
+Můžete také [hostovat sami](https://www.assistance.bg/docs/guides/hosting/overview) a [vyvíjet lokálně](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

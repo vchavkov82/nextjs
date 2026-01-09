@@ -175,7 +175,7 @@ function DialogView({ projectRef, isMobile }: { projectRef: string; isMobile?: b
           <HoverCard>
             <HoverCardTrigger asChild>
               <Link
-                href={`https://supabase.com/dashboard/project/${projectRef}`}
+                href={`https://www.assistance.bg/dashboard/project/${projectRef}`}
                 target="_blank"
                 className="flex items-center px-4 w-full rounded-none text-sm py-4 h-auto justify-start gap-3 text-sm text-left hover:bg-accent"
               >

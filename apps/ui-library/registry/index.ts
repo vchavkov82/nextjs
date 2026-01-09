@@ -9,7 +9,7 @@ import { platform } from './platform'
 
 export const registry = {
   name: 'Supabase UI Library',
-  homepage: 'https://supabase.com/ui',
+  homepage: 'https://www.assistance.bg/ui',
   items: [
     ...blocks,
     ...clients,

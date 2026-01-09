@@ -166,7 +166,7 @@ That is all the dependencies that we need. Let’s dive into coding!
 
 Let’s first create a signup flow. Again, the user will register with the app using email and password, and after confirming their email address, they will enroll in MFA using an authenticator app.
 
-The register page contains a form with an email and password field for the user to create a new account. We are just calling the [.signUp()](https://supabase.com/docs/reference/dart/auth-signup) method with it.
+The register page contains a form with an email and password field for the user to create a new account. We are just calling the [.signUp()](https://www.assistance.bg/docs/reference/dart/auth-signup) method with it.
 As you can see in the code below at `emailRedirectTo` option of the `.signUp()`method, upon clicking on the confirmation link sent to the user, they will be taken to MFA enrollment page, which we will implement later.
 
 Create a `lib/pages/auth/signup_page.dart` file and add the following. There will be some errors, but that is because we haven’t created some of the files yet. The errors will go away as we move on, so ignore them for now.
@@ -427,7 +427,7 @@ class _MFAEnrollPageState extends State<MFAEnrollPage> {
 
 ![Login flow](/images/blog/flutter-mfa/login.png)
 
-Now that we have created a registration flow, we can get to the login flow for returning existing users. Again, the login page has nothing fancy going. We are just collecting the user’s email and password, and calling the good old [.signInWithPassword()](https://supabase.com/docs/reference/dart/auth-signinwithpassword) method. Upon signing in, the user will be taken to a verify page where the user will then enter their verification code from their authenticator app.
+Now that we have created a registration flow, we can get to the login flow for returning existing users. Again, the login page has nothing fancy going. We are just collecting the user’s email and password, and calling the good old [.signInWithPassword()](https://www.assistance.bg/docs/reference/dart/auth-signinwithpassword) method. Upon signing in, the user will be taken to a verify page where the user will then enter their verification code from their authenticator app.
 
 Create `lib/pages/auth/login_page.dart` and add the following.
 
@@ -631,7 +631,7 @@ values
   ('Postgres is awesome!');
 ```
 
-Now, we can add some [row security policy](https://supabase.com/docs/guides/auth/row-level-security) to lock those data down so that only users who have signed in using MFA can view them.
+Now, we can add some [row security policy](https://www.assistance.bg/docs/guides/auth/row-level-security) to lock those data down so that only users who have signed in using MFA can view them.
 
 Run the following SQL to secure our data from malicious users.
 
@@ -648,7 +648,7 @@ select
 
 `aal` here stands for [Authenticator Assurance Level](https://pages.nist.gov/800-63-3-Implementation-Resources/63B/AAL/), and it will be `aal1` for users who have only signed in with 1 sign-in method, and `aal2` for users who have completed the MFA flow. Checking the `aal` inside RLS policy ensures that the data cannot be viewed by users unless they complete the entire MFA flow.
 
-The nice thing about RLS is that it gives us the flexibility to control how users can interact with the data. In this particular example, we are mandating MFA to view the data, but you could easily create layered permissions where for example a user can view the data with 1 factor, but can edit the data when signed in with MFA. You can see more examples in our official MFA guide [here](https://supabase.com/docs/guides/auth/auth-mfa).
+The nice thing about RLS is that it gives us the flexibility to control how users can interact with the data. In this particular example, we are mandating MFA to view the data, but you could easily create layered permissions where for example a user can view the data with 1 factor, but can edit the data when signed in with MFA. You can see more examples in our official MFA guide [here](https://www.assistance.bg/docs/guides/auth/auth-mfa).
 
 Now that we have the secure data in our Supabase instance, all we need to do is to display them in the HomePage. We can simply query the table and display it using a `FutureBuilder`.
 
@@ -929,7 +929,7 @@ Another common use case is to make MFA optional and allow the user to opt-in whe
 
 ## More Flutter content
 
-- [Flutter Tutorial: building a Flutter chat app](https://supabase.com/blog/flutter-tutorial-building-a-chat-app)
-- [Flutter Authentication and Authorization with RLS](https://supabase.com/blog/flutter-authentication-and-authorization-with-rls)
-- [How to build a real-time multiplayer game with Flutter Flame](https://supabase.com/blog/flutter-real-time-multiplayer-game)
-- [Write backend code using Dart Edge](https://supabase.com/docs/guides/functions/dart-edge)
+- [Flutter Tutorial: building a Flutter chat app](https://www.assistance.bg/blog/flutter-tutorial-building-a-chat-app)
+- [Flutter Authentication and Authorization with RLS](https://www.assistance.bg/blog/flutter-authentication-and-authorization-with-rls)
+- [How to build a real-time multiplayer game with Flutter Flame](https://www.assistance.bg/blog/flutter-real-time-multiplayer-game)
+- [Write backend code using Dart Edge](https://www.assistance.bg/docs/guides/functions/dart-edge)

@@ -251,7 +251,7 @@ const Examples: Example[] = [
     products: [PRODUCT_NAMES.FUNCTIONS],
     title: 'Sending Emails',
     description: 'Send emails in Edge Functions with Resend.',
-    repo_url: 'https://supabase.com/docs/guides/functions/examples/send-emails',
+    repo_url: 'https://www.assistance.bg/docs/guides/functions/examples/send-emails',
   },
   {
     type: 'example',
@@ -259,7 +259,7 @@ const Examples: Example[] = [
     products: [PRODUCT_NAMES.FUNCTIONS],
     title: 'Generating OpenAI GPT3 completions',
     description: 'Using OpenAI in Edge Functions.',
-    repo_url: 'https://supabase.com/docs/guides/ai/examples/openai',
+    repo_url: 'https://www.assistance.bg/docs/guides/ai/examples/openai',
   },
   // {
   //   type: 'example',
@@ -267,7 +267,7 @@ const Examples: Example[] = [
   //   products: [PRODUCT_NAMES.FUNCTIONS],
   //   title: 'With supabase-js',
   //   description: 'Use the Supabase client inside your Edge Function.',
-  //   repo_url: 'https://supabase.com/docs/guides/functions/auth',
+  //   repo_url: 'https://www.assistance.bg/docs/guides/functions/auth',
   // },
   {
     type: 'example',
@@ -275,7 +275,7 @@ const Examples: Example[] = [
     products: [PRODUCT_NAMES.FUNCTIONS],
     title: 'Stripe Webhooks',
     description: 'Handling signed Stripe Webhooks with Edge Functions.',
-    repo_url: 'https://supabase.com/docs/guides/functions/examples/stripe-webhooks',
+    repo_url: 'https://www.assistance.bg/docs/guides/functions/examples/stripe-webhooks',
   },
   {
     type: 'example',
@@ -283,7 +283,7 @@ const Examples: Example[] = [
     products: [PRODUCT_NAMES.FUNCTIONS],
     title: 'Connecting directly to Postgres',
     description: 'Connecting to Postgres from Edge Functions.',
-    repo_url: 'https://supabase.com/docs/guides/functions/connect-to-postgres',
+    repo_url: 'https://www.assistance.bg/docs/guides/functions/connect-to-postgres',
   },
   {
     type: 'example',
@@ -292,7 +292,7 @@ const Examples: Example[] = [
     title: 'Huggingface Image Captioning',
     description:
       'Use the Hugging Face Inference API to make calls to 100,000+ Machine Learning models from Supabase Edge Functions.',
-    repo_url: 'https://supabase.com/docs/guides/functions/auth',
+    repo_url: 'https://www.assistance.bg/docs/guides/functions/auth',
   },
   {
     type: 'example',

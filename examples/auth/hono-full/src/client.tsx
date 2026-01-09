@@ -58,7 +58,7 @@ function SignIn() {
       <p>
         Ready about and enable{' '}
         <a
-          href="https://supabase.com/docs/guides/auth/auth-anonymous"
+          href="https://www.assistance.bg/docs/guides/auth/auth-anonymous"
           target="_blank"
         >
           anonymous signins here!

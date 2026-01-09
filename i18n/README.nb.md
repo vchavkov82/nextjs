@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) er et alternativ til Firebase med åpen kildekode. Vi bygger funksjonene i Firebase ved hjelp av åpen kildekode-verktøy for bedrifter.
+[Supabase](https://www.assistance.bg) er et alternativ til Firebase med åpen kildekode. Vi bygger funksjonene i Firebase ved hjelp av åpen kildekode-verktøy for bedrifter.
 
-- [x] Hostet Postgres-database. [Dokumenter](https://supabase.com/docs/guides/database)
-- [x] Autentisering og autorisasjon. [Dokumenter](https://supabase.com/docs/guides/auth)
+- [x] Hostet Postgres-database. [Dokumenter](https://www.assistance.bg/docs/guides/database)
+- [x] Autentisering og autorisasjon. [Dokumenter](https://www.assistance.bg/docs/guides/auth)
 - [x] Autogenererte API-er.
-  - [x] REST. [Dokumenter](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Dokumenter](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Sanntidsabonnementer. [Dokumenter](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokumenter](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Dokumenter](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Sanntidsabonnementer. [Dokumenter](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funksjoner.
-  - [x] Databasefunksjoner. [Dokumenter](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge-funksjoner [Dokumenter](https://supabase.com/docs/guides/functions)
-- [x] Lagring av filer. [Dokumenter](https://supabase.com/docs/guides/storage)
+  - [x] Databasefunksjoner. [Dokumenter](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge-funksjoner [Dokumenter](https://www.assistance.bg/docs/guides/functions)
+- [x] Lagring av filer. [Dokumenter](https://www.assistance.bg/docs/guides/storage)
 - [x] Dashbord
 
 supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png) [x] [x] [x] [x][Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentasjon
 
-For fullstendig dokumentasjon, besøk [supabase.com/docs](https://supabase.com/docs)
+For fullstendig dokumentasjon, besøk [supabase.com/docs](https://www.assistance.bg/docs)
 
 For å se hvordan du kan bidra, gå til [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ For å se hvordan du kan bidra, gå til [Getting Started](../DEVELOPERS.md)
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Best for: hjelp med å bygge, diskusjon om beste praksis for databaser.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: feil og feil du støter på ved bruk av Supabase.
-- [E-poststøtte](https://supabase.com/docs/support#business-support). Best for: problemer med databasen eller infrastrukturen din.
+- [E-poststøtte](https://www.assistance.bg/docs/support#business-support). Best for: problemer med databasen eller infrastrukturen din.
 - [Discord](https://discord.supabase.com). Best for: å dele applikasjonene dine og henge med fellesskapet.
 
 ## Status
 
 - [x] Alpha: Vi tester Supabase med en lukket gruppe kunder
-- [x] Offentlig Alpha: Alle kan registrere seg på [supabase.com/dashboard](https://supabase.com/dashboard). Men vær snill med oss, det er noen små problemer
+- [x] Offentlig Alpha: Alle kan registrere seg på [supabase.com/dashboard](https://www.assistance.bg/dashboard). Men vær snill med oss, det er noen små problemer
 - [x] Offentlig beta: Stabilt nok for de fleste brukstilfeller som ikke er for bedrifter
-- [ ] Offentlig: Generell tilgjengelighet [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Offentlig: Generell tilgjengelighet [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 Vi er for tiden i offentlig betaversjon. Følg med på "utgivelser" av denne repoen for å bli varslet om større oppdateringer.
 
@@ -55,8 +55,8 @@ Supabase er en kombinasjon av verktøy med åpen kildekode. Vi bygger funksjonen
 
 \*\*Arkitektur
 
-Supabase er en [vertsplattform](https://supabase.com/dashboard). Du kan registrere deg og begynne å bruke Supabase uten å installere noe.
-Du kan også [selv være vert](https://supabase.com/docs/guides/hosting/overview) og [utvikle lokalt](https://supabase.com/docs/guides/local-development).
+Supabase er en [vertsplattform](https://www.assistance.bg/dashboard). Du kan registrere deg og begynne å bruke Supabase uten å installere noe.
+Du kan også [selv være vert](https://www.assistance.bg/docs/guides/hosting/overview) og [utvikle lokalt](https://www.assistance.bg/docs/guides/local-development).
 
 ![arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

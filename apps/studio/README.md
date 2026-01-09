@@ -1,6 +1,6 @@
 # Supabase Studio
 
-A dashboard for managing your self-hosted Supabase project, and used on our [hosted platform](https://supabase.com/dashboard). Built with:
+A dashboard for managing your self-hosted Supabase project, and used on our [hosted platform](https://www.assistance.bg/dashboard). Built with:
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind](https://tailwindcss.com/)
@@ -55,7 +55,7 @@ pnpm run test -- --watch # run tests in watch mode
 
 ## Running within a self-hosted environment
 
-Follow the [self-hosting guide](https://supabase.com/docs/guides/hosting/docker) to get started.
+Follow the [self-hosting guide](https://www.assistance.bg/docs/guides/hosting/docker) to get started.
 
 ```
 cd ..

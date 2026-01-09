@@ -13,7 +13,7 @@ const cards: { [name: string]: CardProps } = {
     ctas: [
       {
         label: 'Learn more',
-        href: 'https://supabase.com/docs/guides/platform/branching',
+        href: 'https://www.assistance.bg/docs/guides/platform/branching',
         target: '_blank',
         type: 'default',
       },
@@ -35,7 +35,7 @@ const cards: { [name: string]: CardProps } = {
     ctas: [
       {
         label: 'Learn more',
-        href: 'https://supabase.com/docs/guides/platform/read-replicas',
+        href: 'https://www.assistance.bg/docs/guides/platform/read-replicas',
         target: '_blank',
         type: 'default',
       },

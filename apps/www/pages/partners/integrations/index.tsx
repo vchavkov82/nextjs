@@ -95,10 +95,10 @@ function IntegrationPartnersPage(props: Props) {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/partners/integrations`,
+          url: `https://www.assistance.bg/partners/integrations`,
           images: [
             {
-              url: `https://supabase.com${router.basePath}/images/og/integrations.png`, // TODO
+              url: `https://www.assistance.bg${router.basePath}/images/og/integrations.png`, // TODO
             },
           ],
         }}

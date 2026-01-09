@@ -29,7 +29,7 @@ const BeginnersPage: NextPage = () => {
         openGraph={{
           title: content.metadata.metaTitle,
           description: content.metadata.metaDescription,
-          url: `https://supabase.com/solutions/postgres-developers`,
+          url: `https://www.assistance.bg/solutions/postgres-developers`,
         }}
       />
       <Layout className="overflow-visible">

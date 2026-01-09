@@ -220,7 +220,7 @@ const PlanExpectationInfoBox = ({ orgSlug, planId }: PlanExpectationInfoBoxProps
               </Link>
             </Button>
             <Button asChild type="default" icon={<ExternalLink />}>
-              <Link href="https://supabase.com/contact/enterprise" target="_blank" rel="noreferrer">
+              <Link href="https://www.assistance.bg/contact/enterprise" target="_blank" rel="noreferrer">
                 Enquire about Enterprise
               </Link>
             </Button>

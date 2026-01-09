@@ -110,7 +110,7 @@ const footerData = [
       },
       {
         text: 'Supabase UI',
-        url: 'https://supabase.com/ui',
+        url: 'https://www.assistance.bg/ui',
       },
       {
         text: 'Changelog',

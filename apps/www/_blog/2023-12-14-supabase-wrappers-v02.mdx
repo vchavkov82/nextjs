@@ -39,12 +39,12 @@ select * from products limit 10;
 - [Remote Subqueries](#remote-subqueries)
 - [Usage Statistics](#fdw-usage-statistics)
 
-To start using Wrappers on the Supabase platform, check out the [Wrappers docs](https://supabase.com/docs/guides/database/extensions/wrappers/overview).
+To start using Wrappers on the Supabase platform, check out the [Wrappers docs](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview).
 
 ## New Wrappers and Improvements
 
-- [Airtable](https://supabase.com/docs/guides/database/extensions/wrappers/airtable) (Read-only): query your Airtable bases with [support for jsonb](https://github.com/supabase/wrappers/pull/181)
-- [AWS S3](https://supabase.com/docs/guides/database/extensions/wrappers/s3) (Read-only): with support for CSV, JSON, and Parquet
+- [Airtable](https://www.assistance.bg/docs/guides/database/extensions/wrappers/airtable) (Read-only): query your Airtable bases with [support for jsonb](https://github.com/supabase/wrappers/pull/181)
+- [AWS S3](https://www.assistance.bg/docs/guides/database/extensions/wrappers/s3) (Read-only): with support for CSV, JSON, and Parquet
 - [Clerk](https://github.com/tembo-io/clerk_fdw) (from the team at [Tembo](https://tembo.io/)). Not yet available on our platform since it is a community wrapper, see below for details.
 - And a WIP Wrapper for [Auth0](https://github.com/supabase/wrappers/pull/183)
 
@@ -70,7 +70,7 @@ Query pushdown is a technique that enhances query performance by executing parts
 
 ### How to Use Query Pushdown in Wrappers
 
-In Wrappers, the pushdown logic is integrated into each extension. You don’t need to modify your queries to benefit from this feature. For example, the [Stripe FDW](https://supabase.com/docs/guides/database/extensions/wrappers/stripe) automatically applies query pushdown for `id` within the `customer` object:
+In Wrappers, the pushdown logic is integrated into each extension. You don’t need to modify your queries to benefit from this feature. For example, the [Stripe FDW](https://www.assistance.bg/docs/guides/database/extensions/wrappers/stripe) automatically applies query pushdown for `id` within the `customer` object:
 
 ```sql
 select *
@@ -84,7 +84,7 @@ This approach contrasts with fetching and filtering all customers locally, which
 https://api.stripe.com/v1/customers/cus_N5WMk7pvQPkY3B
 ```
 
-We can use push down criteria and other query parameters too. For example, [ClickHouse FDW](https://supabase.com/docs/guides/database/extensions/wrappers/clickhouse) supports `order by` and `limit` pushdown:
+We can use push down criteria and other query parameters too. For example, [ClickHouse FDW](https://www.assistance.bg/docs/guides/database/extensions/wrappers/clickhouse) supports `order by` and `limit` pushdown:
 
 ```sql
 select *
@@ -95,7 +95,7 @@ limit 20;
 
 This query executes `order by name limit 20` on ClickHouse before transferring the result to Postgres.
 
-For details on where pushdown is supported, consult each FDW's documentation in the [Wrappers Documentation](https://supabase.com/docs/guides/database/extensions/wrappers/overview).
+For details on where pushdown is supported, consult each FDW's documentation in the [Wrappers Documentation](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview).
 
 ## Remote Subqueries
 
@@ -145,7 +145,7 @@ from clickhouse.my_table
 where _param1 = 'abc' and _param2 = 42;
 ```
 
-Currently, this feature is supported by [ClickHouse FDW](https://supabase.com/docs/guides/database/extensions/wrappers/clickhouse) and [BigQuery FDW](https://supabase.com/docs/guides/database/extensions/wrappers/bigquery), with plans to expand support in the future.
+Currently, this feature is supported by [ClickHouse FDW](https://www.assistance.bg/docs/guides/database/extensions/wrappers/clickhouse) and [BigQuery FDW](https://www.assistance.bg/docs/guides/database/extensions/wrappers/bigquery), with plans to expand support in the future.
 
 ## FDW Usage Statistics
 
@@ -177,7 +177,7 @@ Want to join the Supabase Wrappers community contributors? [Check out our contri
 
 ## More About Wrappers
 
-- [Wrappers: 3rd Party Integrations](https://supabase.com/docs/guides/database/extensions/wrappers/overview)
+- [Wrappers: 3rd Party Integrations](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview)
 - [Wrappers Documentation](https://supabase.github.io/wrappers/)
-- [Blog Post: Supabase Wrappers, a Postgres FDW framework written in Rust](https://supabase.com/blog/postgres-foreign-data-wrappers-rust)
-- [Blog Post: Wrappers UI](https://supabase.com/blog/supabase-studio-3-0#wrappers-ui)
+- [Blog Post: Supabase Wrappers, a Postgres FDW framework written in Rust](https://www.assistance.bg/blog/postgres-foreign-data-wrappers-rust)
+- [Blog Post: Wrappers UI](https://www.assistance.bg/blog/supabase-studio-3-0#wrappers-ui)

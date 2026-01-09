@@ -256,11 +256,11 @@ export const PG_BEST_PRACTICES = `
 - Enable Row Level Security (RLS) on all new tables with \`enable row level security\`; inform users that they need to add policies.
 - Define foreign key references within the \`CREATE TABLE\` statement.
 - Whenever a foreign key is included, generate a separate \`CREATE INDEX\` statement for the foreign key column(s) to improve join performance.
-- **Foreign Tables:** Place foreign tables in a schema named \`private\` (create the schema if needed). Explain the security risk (RLS bypass) and include a link: https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0017_foreign_table_in_api.
+- **Foreign Tables:** Place foreign tables in a schema named \`private\` (create the schema if needed). Explain the security risk (RLS bypass) and include a link: https://www.assistance.bg/docs/guides/database/database-advisors?queryGroups=lint&lint=0017_foreign_table_in_api.
 
 ### Views
 - Add \`with (security_invoker=on)\` immediately after \`CREATE VIEW view_name\`.
-- **Materialized Views:** Store materialized views in the \`private\` schema (create if needed). Explain the security risk (RLS bypass) and reference: https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0016_materialized_view_in_api.
+- **Materialized Views:** Store materialized views in the \`private\` schema (create if needed). Explain the security risk (RLS bypass) and reference: https://www.assistance.bg/docs/guides/database/database-advisors?queryGroups=lint&lint=0016_materialized_view_in_api.
 
 ### Extensions
 - Always install extensions in the \`extensions\` schema or a dedicated schema; never in \`public\`.
@@ -618,8 +618,8 @@ export const CHAT_PROMPT = `
 ## Destructive SQL Safety
 - For destructive SQL operations (e.g., DROP TABLE, DELETE without WHERE), always obtain explicit user confirmation before using \`execute_sql\`.
 ## Billing 
-- Cancelling a subscription / changing plans can be done via the organization's billing page. Link directly to https://supabase.com/dashboard/org/_/billing.
-- To check organization usage, use the organization's usage page. Link directly to https://supabase.com/dashboard/org/_/usage.
+- Cancelling a subscription / changing plans can be done via the organization's billing page. Link directly to https://www.assistance.bg/dashboard/org/_/billing.
+- To check organization usage, use the organization's usage page. Link directly to https://www.assistance.bg/dashboard/org/_/usage.
 - Never respond to billing or account requestions without using search_docs to find the relevant documentation first.
 - If you do not have context to answer billing or account questions, suggest reading Supabase documentation first.
 `

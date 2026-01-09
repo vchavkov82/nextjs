@@ -19,12 +19,12 @@ const useDropdownMenu = (user: User | null) => {
       {
         label: 'Account Preferences',
         icon: Settings,
-        href: 'https://supabase.com/dashboard/account/me',
+        href: 'https://www.assistance.bg/dashboard/account/me',
       },
       {
         label: 'All Projects',
         icon: Database,
-        href: 'https://supabase.com/dashboard/projects',
+        href: 'https://www.assistance.bg/dashboard/projects',
       },
     ],
     [
@@ -32,7 +32,7 @@ const useDropdownMenu = (user: User | null) => {
         ? {
             label: 'Supabase.com',
             icon: Globe,
-            href: 'https://supabase.com',
+            href: 'https://www.assistance.bg',
             otherProps: {
               target: '_blank',
               rel: 'noreferrer noopener',
@@ -55,7 +55,7 @@ const useDropdownMenu = (user: User | null) => {
       {
         label: 'Support',
         icon: LifeBuoy,
-        href: 'https://supabase.com/support',
+        href: 'https://www.assistance.bg/support',
         otherProps: {
           target: '_blank',
           rel: 'noreferrer noopener',

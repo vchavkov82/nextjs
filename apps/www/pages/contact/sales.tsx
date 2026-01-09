@@ -24,7 +24,7 @@ const ContactSales = () => {
         openGraph={{
           title: data.meta_title,
           description: data.meta_description,
-          url: `https://supabase.com/${router.pathname}`,
+          url: `https://www.assistance.bg/${router.pathname}`,
         }}
       />
       <DefaultLayout className="!min-h-fit">

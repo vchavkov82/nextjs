@@ -12,7 +12,7 @@ date: '2023-07-12'
 toc_depth: 3
 ---
 
-PostgREST 11.1 is now available on the Supabase platform. Besides the [pre-release](https://supabase.com/blog/postgrest-11-prerelease) features, we’ve added configuration and querying improvements. Here is what's new:
+PostgREST 11.1 is now available on the Supabase platform. Besides the [pre-release](https://www.assistance.bg/blog/postgrest-11-prerelease) features, we’ve added configuration and querying improvements. Here is what's new:
 
 ## Impersonated Role Settings
 
@@ -70,7 +70,7 @@ Then, after 5 seconds, the request will be aborted with the response:
 }
 ```
 
-Which is what we wanted. Note that there's already a global `statement_timeout` set but you can be more fine-grained with this feature. See [timeouts](https://supabase.com/docs/guides/database/timeouts) for more details.
+Which is what we wanted. Note that there's already a global `statement_timeout` set but you can be more fine-grained with this feature. See [timeouts](https://www.assistance.bg/docs/guides/database/timeouts) for more details.
 
 ### Statement Cost Limit
 
@@ -223,7 +223,7 @@ For completeness, the `all` modifier is also included.
 
 ## Minimal Breaking Changes from v10
 
-If you only use PostgREST through Supabase client libraries (like [`supabase-js`](https://supabase.com/docs/reference/javascript/introduction)) then it's safe to upgrade to v11. If you use PostgREST with other HTTP clients (like `curl`), consider the breaking changes for this version:
+If you only use PostgREST through Supabase client libraries (like [`supabase-js`](https://www.assistance.bg/docs/reference/javascript/introduction)) then it's safe to upgrade to v11. If you use PostgREST with other HTTP clients (like `curl`), consider the breaking changes for this version:
 
 - The `Range` header is now only considered on GET requests and is ignored for any other method. Previously PostgREST responded with an error but [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html#name-range) dictates that we should ignore the `Range` header instead.
 - RPC requests no longer consider the `Prefer: params=multiple-objects` header. This header was already deprecated on [v10.1.0](https://github.com/PostgREST/postgrest/releases/tag/v10.1.0).
@@ -243,8 +243,8 @@ PostgREST v11.1 is available for all Supabase projects created after 5 July 2023
 
 ## More Postgres resources
 
-- [Storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
-- [Choosing a Postgres Primary Key](https://supabase.com/blog/choosing-a-postgres-primary-key)
-- [SQL or NoSQL? Why not use both (with PostgreSQL)?](https://supabase.com/blog/sql-or-nosql-both-with-postgresql)
-- [pg_jsonschema: JSON Schema support for Postgres](https://supabase.com/blog/pg-jsonschema-a-postgres-extension-for-json-validation)
-- [Implementing "seen by" functionality with Postgres](https://supabase.com/blog/seen-by-in-postgresql)
+- [Storing OpenAI embeddings in Postgres with pgvector](https://www.assistance.bg/blog/openai-embeddings-postgres-vector)
+- [Choosing a Postgres Primary Key](https://www.assistance.bg/blog/choosing-a-postgres-primary-key)
+- [SQL or NoSQL? Why not use both (with PostgreSQL)?](https://www.assistance.bg/blog/sql-or-nosql-both-with-postgresql)
+- [pg_jsonschema: JSON Schema support for Postgres](https://www.assistance.bg/blog/pg-jsonschema-a-postgres-extension-for-json-validation)
+- [Implementing "seen by" functionality with Postgres](https://www.assistance.bg/blog/seen-by-in-postgresql)

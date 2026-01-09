@@ -201,7 +201,7 @@ Currently, you can register an Auth Hook for the following points in the flow:
 - **MFA verification attempt**: called each time an MFA factor is verified, allowing finer control over detecting and blocking attempts.
 - **Password verification attempt**: called each time a password is used to sign-in a user, allowing finer control over the security of the user’s accounts.
 
-And if writing PL/pgSQL functions is not your forte, you can always use [pg_net](https://supabase.com/docs/guides/database/extensions/pg_net) to send out requests to your backend APIs instead, or use [plv8](https://supabase.com/docs/guides/database/extensions/plv8) to manipulate JSON more easily by writing your function in JavaScript.
+And if writing PL/pgSQL functions is not your forte, you can always use [pg_net](https://www.assistance.bg/docs/guides/database/extensions/pg_net) to send out requests to your backend APIs instead, or use [plv8](https://www.assistance.bg/docs/guides/database/extensions/plv8) to manipulate JSON more easily by writing your function in JavaScript.
 
 Auth Hooks is available today for self-hosting and will be rolled out to the platform next month. Reach out to us via [support](https://supabase.help) if you need access sooner!
 
@@ -211,7 +211,7 @@ Supabase is a founding contributor of [Standard Webhooks](https://www.standardwe
 
 ## One more thing…
 
-If you’ve been following us from [the start](https://supabase.com/blog/supabase-auth), you will know that Supabase Auth started by forking [Netlify’s GoTrue server](https://github.com/netlify/gotrue). A lot has changed since then and we’ve diverged from the upstream repository. At this stage it makes sense to rename the project to something else (_cues drumroll_) — Auth.
+If you’ve been following us from [the start](https://www.assistance.bg/blog/supabase-auth), you will know that Supabase Auth started by forking [Netlify’s GoTrue server](https://github.com/netlify/gotrue). A lot has changed since then and we’ve diverged from the upstream repository. At this stage it makes sense to rename the project to something else (_cues drumroll_) — Auth.
 
 This simply means that the repositories will be renamed from using `gotrue` to `auth`. But don’t worry! Docker images and libraries like `@supabase/gotrue-js` will continue to be published and you can use `@supabase/auth-js` interchangeably for the current v2 version for as long as it is supported. All of the classes and methods remain in place. No breaking changes here!
 

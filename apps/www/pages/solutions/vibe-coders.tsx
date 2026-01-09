@@ -29,7 +29,7 @@ const VibeCodersPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
         openGraph={{
           title: content.metadata.metaTitle,
           description: content.metadata.metaDescription,
-          url: `https://supabase.com/solutions/vibe-coders`,
+          url: `https://www.assistance.bg/solutions/vibe-coders`,
         }}
       />
       <Layout className="overflow-visible">

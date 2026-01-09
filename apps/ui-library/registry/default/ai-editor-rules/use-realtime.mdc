@@ -342,7 +342,7 @@ channel.subscribe((status, err) => {
 ### Channel Structure Optimization
 - Use one channel per logical scope (`room:123`, not `user:456:room:123`)
 - Shard high-volume topics: `chat:shard:1`, `chat:shard:2`
-- Ensure you have enough connections set in your pool, you can refer to [Realtime Settings](https://supabase.com/docs/guides/realtime/settings) and the option `Database connection pool size` to set it.
+- Ensure you have enough connections set in your pool, you can refer to [Realtime Settings](https://www.assistance.bg/docs/guides/realtime/settings) and the option `Database connection pool size` to set it.
 
 ## Debugging
 
@@ -395,7 +395,7 @@ CREATE POLICY "users_can_receive_broadcasts" ON realtime.messages
 5. **Include error handling** - Add reconnection patterns
 6. **Recommend indexing** - When RLS policies are used
 7. **Framework-agnostic** - Adapt patterns to user's framework
-8. **Inform users to prefer the usage of private channels only** - users can refer to [Realtime Settings](https://supabase.com/docs/guides/realtime/settings) to enable it.
+8. **Inform users to prefer the usage of private channels only** - users can refer to [Realtime Settings](https://www.assistance.bg/docs/guides/realtime/settings) to enable it.
 
 ### Code Generation Checklist
 - ✅ Favor `broadcast` over `postgres_changes`

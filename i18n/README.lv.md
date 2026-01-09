@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
+[Supabase](https://www.assistance.bg) ir atvērtā koda Firebase alternatīva. Mēs veidojam Firebase funkcijas, izmantojot uzņēmumu klases atvērtā pirmkoda rīkus.
 
-- [x] Hosted Postgres datubāze. [Dokumenti](https://supabase.com/docs/guides/database)
-- [x] Autentifikācija un autorizācija. [Dokumenti](https://supabase.com/docs/guides/auth)
+- [x] Hosted Postgres datubāze. [Dokumenti](https://www.assistance.bg/docs/guides/database)
+- [x] Autentifikācija un autorizācija. [Dokumenti](https://www.assistance.bg/docs/guides/auth)
 - [x] Automātiski ģenerēti API.
-  - [x] REST. [Dokumenti](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Dokumenti](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Reāllaika abonēšana. [Dokumenti](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokumenti](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Dokumenti](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Reāllaika abonēšana. [Dokumenti](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funkcijas.
-  - [x] Datubāzes funkcijas. [Dokumenti](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge funkcijas [Dokumenti](https://supabase.com/docs/guides/functions)
-- [x] Failu glabāšana. [Dokumenti](https://supabase.com/docs/guides/storage)
+  - [x] Datubāzes funkcijas. [Dokumenti](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge funkcijas [Dokumenti](https://www.assistance.bg/docs/guides/functions)
+- [x] Failu glabāšana. [Dokumenti](https://www.assistance.bg/docs/guides/storage)
 - [x] Vadības panelis
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentācija
 
-Pilnu dokumentāciju skatīt [supabase.com/docs](https://supabase.com/docs)
+Pilnu dokumentāciju skatīt [supabase.com/docs](https://www.assistance.bg/docs)
 
 Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.
 
 - [Kopienas forums](https://github.com/supabase/supabase/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot Supabase.
-- [E-pasta atbalsts](https://supabase.com/docs/support#business-support). Vislabāk piemērots: problēmām ar jūsu datu bāzi vai infrastruktūru.
+- [E-pasta atbalsts](https://www.assistance.bg/docs/support#business-support). Vislabāk piemērots: problēmām ar jūsu datu bāzi vai infrastruktūru.
 - [Discord](https://discord.supabase.com). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
 
 ## Statuss
 
 - [x] Alfa: Mēs testējam Supabase ar slēgtu klientu kopu
-- [x] Publiskā alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Bet nesteidzieties, ir dažas nepilnības
+- [x] Publiskā alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Bet nesteidzieties, ir dažas nepilnības
 - [x] Publiskā beta versija: Pietiekami stabila lielākajai daļai ar uzņēmumu nesaistītu lietošanas gadījumu
-- [ ] Publisks: Vispārēja pieejamība [[statuss](https://supabase.com/docs/guides/getting-started/features#feature-status)]]
+- [ ] Publisks: Vispārēja pieejamība [[statuss](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]]
 
 Pašlaik mēs esam Publiskās beta versijas fāzē. Lai saņemtu paziņojumus par galvenajiem atjauninājumiem, skatiet šīs repozitorija "releases".
 
@@ -55,8 +55,8 @@ Supabase ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas,
 
 **Arhitektūra**
 
-Supabase ir [izvietota platforma](https://supabase.com/dashboard). Jūs varat reģistrēties un sākt izmantot Supabase, neko neinstalējot.
-Jūs varat arī [pašmāju resursus](https://supabase.com/docs/guides/hosting/overview) un [izstrādāt lokāli](https://supabase.com/docs/guides/local-development).
+Supabase ir [izvietota platforma](https://www.assistance.bg/dashboard). Jūs varat reģistrēties un sākt izmantot Supabase, neko neinstalējot.
+Jūs varat arī [pašmāju resursus](https://www.assistance.bg/docs/guides/hosting/overview) un [izstrādāt lokāli](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

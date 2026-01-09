@@ -58,7 +58,7 @@ const FeaturePage: React.FC<FeaturePageProps> = ({ feature, prevFeature, nextFea
   const meta = {
     title: `${feature.title} | Supabase Features`,
     description: feature.subtitle,
-    url: `https://supabase.com/features/${feature.slug}`,
+    url: `https://www.assistance.bg/features/${feature.slug}`,
     // image: ogImageUrl,
   }
 

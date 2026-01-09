@@ -648,7 +648,7 @@ module.exports = [
   {
     permanent: true,
     source: '/join',
-    destination: 'https://supabase.com/',
+    destination: 'https://www.assistance.bg/',
   },
   {
     permanent: true,
@@ -663,7 +663,7 @@ module.exports = [
   {
     permanent: true,
     source: '/_app',
-    destination: 'https://supabase.com/dashboard',
+    destination: 'https://www.assistance.bg/dashboard',
   },
   {
     permanent: true,
@@ -1535,17 +1535,17 @@ module.exports = [
   {
     permanent: true,
     source: '/sign-in',
-    destination: 'https://supabase.com/dashboard/sign-in',
+    destination: 'https://www.assistance.bg/dashboard/sign-in',
   },
   {
     permanent: true,
     source: '/sign-up',
-    destination: 'https://supabase.com/dashboard/sign-up',
+    destination: 'https://www.assistance.bg/dashboard/sign-up',
   },
   {
     permanent: true,
     source: '/forgot-password',
-    destination: 'https://supabase.com/dashboard/forgot-password',
+    destination: 'https://www.assistance.bg/dashboard/forgot-password',
   },
   {
     permanent: true,
@@ -1570,7 +1570,7 @@ module.exports = [
   {
     permanent: true,
     source: '/projects',
-    destination: 'https://supabase.com/dashboard/projects',
+    destination: 'https://www.assistance.bg/dashboard/projects',
   },
   // Reorganizing pooler docs:-----------------------------
 

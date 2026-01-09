@@ -29,10 +29,10 @@ const OpenSource = () => {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/${router.pathname}`,
+          url: `https://www.assistance.bg/${router.pathname}`,
           images: [
             {
-              url: `https://supabase.com/images/og/supabase-og.png`,
+              url: `https://www.assistance.bg/images/og/supabase-og.png`,
             },
           ],
         }}

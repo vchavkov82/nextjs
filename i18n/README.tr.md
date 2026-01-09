@@ -7,26 +7,26 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
+[Supabase](https://www.assistance.bg) açık kaynaklı bir Firebase alternatifidir. Kurumsal düzeyde açık kaynak araçları kullanarak Firebase'in özelliklerini geliştiriyoruz.
 
-- [x] Barındırılan Postgres Veritabanı. [Dokümanlar](https://supabase.com/docs/guides/database)
-- [x] Kimlik Doğrulama ve Yetkilendirme. [Dokümanlar](https://supabase.com/docs/guides/auth)
+- [x] Barındırılan Postgres Veritabanı. [Dokümanlar](https://www.assistance.bg/docs/guides/database)
+- [x] Kimlik Doğrulama ve Yetkilendirme. [Dokümanlar](https://www.assistance.bg/docs/guides/auth)
 - [x] Otomatik oluşturulan API'ler.
-  - [x] REST. [Dokümanlar](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Gerçek zamanlı abonelikler. [Dokümanlar](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokümanlar](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Gerçek zamanlı abonelikler. [Dokümanlar](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Fonksiyonlar.
-  - [x] Veritabanı Fonksiyonları. [Dokümanlar](https://supabase.com/docs/guides/database/functions)
-  - [x] Kenar İşlevleri [Dokümanlar](https://supabase.com/docs/guides/functions)
-- [x] Dosya Depolama. [Docs](https://supabase.com/docs/guides/storage)
-- [x] AI + Vektör / Gömme Araçları. [Dokümanlar](https://supabase.com/docs/guides/ai)
+  - [x] Veritabanı Fonksiyonları. [Dokümanlar](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Kenar İşlevleri [Dokümanlar](https://www.assistance.bg/docs/guides/functions)
+- [x] Dosya Depolama. [Docs](https://www.assistance.bg/docs/guides/storage)
+- [x] AI + Vektör / Gömme Araçları. [Dokümanlar](https://www.assistance.bg/docs/guides/ai)
 - [x] Gösterge Tablosu
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokümantasyon
 
-Belgelerin tamamı için [supabase.com/docs](https://supabase.com/docs) adresini ziyaret edin
+Belgelerin tamamı için [supabase.com/docs](https://www.assistance.bg/docs) adresini ziyaret edin
 
 Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) adresini ziyaret edin
 
@@ -34,7 +34,7 @@ Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) 
 
 - [Topluluk Forumu](https://github.com/supabase/supabase/discussions). Şunlar için en iyisi: oluşturma konusunda yardım, veritabanı en iyi uygulamaları hakkında tartışma.
 - [GitHub Sorunları](https://github.com/supabase/supabase/issues). Supabase'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
-- [E-posta Desteği](https://supabase.com/docs/support#business-support). Veritabanınız veya altyapınızla ilgili sorunlar için en iyisi.
+- [E-posta Desteği](https://www.assistance.bg/docs/support#business-support). Veritabanınız veya altyapınızla ilgili sorunlar için en iyisi.
 - [Discord](https://discord.supabase.com). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
 
 ## Nasıl çalışır
@@ -43,8 +43,8 @@ Supabase açık kaynak araçlarının bir birleşimidir. Firebase'in özellikler
 
 **Mimari**
 
-Supabase [barındırılan bir platformdur](https://supabase.com/dashboard). Supabase'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
-Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel olarak geliştirebilirsiniz](https://supabase.com/docs/guides/local-development).
+Supabase [barındırılan bir platformdur](https://www.assistance.bg/dashboard). Supabase'e kaydolabilir ve hiçbir şey yüklemeden kullanmaya başlayabilirsiniz.
+Ayrıca [self-host](https://www.assistance.bg/docs/guides/hosting/overview) ve [yerel olarak geliştirebilirsiniz](https://www.assistance.bg/docs/guides/local-development).
 
 ![Mimarlık](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
@@ -204,15 +204,15 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
 ![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase.svg"
     alt="Made with Supabase"
   />
 </a>
@@ -221,15 +221,15 @@ Ayrıca [self-host](https://supabase.com/docs/guides/hosting/overview) ve [yerel
 ![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase-dark.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
     alt="Made with Supabase"
   />
 </a>

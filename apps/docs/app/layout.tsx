@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: metadataTitle,
   description:
     'Supabase is the Postgres development platform providing all the backend features you need to build a product.',
-  metadataBase: new URL('https://supabase.com'),
+  metadataBase: new URL('https://www.assistance.bg'),
   icons: genFaviconData(BASE_PATH),
   robots: {
     index: IS_PRODUCTION,

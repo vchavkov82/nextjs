@@ -158,7 +158,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                   <>
                     <Button type="default" className="hidden lg:block" asChild>
                       <Link
-                        href="https://supabase.com/dashboard"
+                        href="https://www.assistance.bg/dashboard"
                         onClick={() =>
                           sendTelemetryEvent({
                             action: 'sign_in_button_clicked',
@@ -171,7 +171,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                     </Button>
                     <Button className="hidden lg:block" asChild>
                       <Link
-                        href="https://supabase.com/dashboard"
+                        href="https://www.assistance.bg/dashboard"
                         onClick={() =>
                           sendTelemetryEvent({
                             action: 'start_project_button_clicked',

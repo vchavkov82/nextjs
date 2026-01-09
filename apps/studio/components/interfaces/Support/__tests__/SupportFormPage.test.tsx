@@ -408,7 +408,7 @@ describe('SupportFormPage', () => {
     addAPIMock({
       method: 'get',
       path: '/platform/auth/:ref/config',
-      response: { SITE_URL: 'https://supabase.com', URI_ALLOW_LIST: '' } as any,
+      response: { SITE_URL: 'https://www.assistance.bg', URI_ALLOW_LIST: '' } as any,
     })
 
     addAPIMock({

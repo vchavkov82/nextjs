@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) er et Open Source Firebase-alternativ. Vi opbygger Firebase-funktionerne ved hjælp af open source-værktøjer i virksomhedskvalitet.
+[Supabase](https://www.assistance.bg) er et Open Source Firebase-alternativ. Vi opbygger Firebase-funktionerne ved hjælp af open source-værktøjer i virksomhedskvalitet.
 
-- [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
-- [x] Autentifikation og autorisering. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Autentifikation og autorisering. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] Automatisk genererede API'er.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Realtidsabonnementer. [Docs](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Realtidsabonnementer. [Docs](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funktioner.
-  - [x] Databasefunktioner. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge-funktioner [Docs](https://supabase.com/docs/guides/functions)
-- [x] Filopbevaring. [Docs](https://supabase.com/docs/guides/storage)
+  - [x] Databasefunktioner. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge-funktioner [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Filopbevaring. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Dashboard
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentation
 
-Du kan finde den fulde dokumentation på [supabase.com/docs](https://supabase.com/docs)
+Du kan finde den fulde dokumentation på [supabase.com/docs](https://www.assistance.bg/docs)
 
 For at se, hvordan man bidrager, besøg [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ For at se, hvordan man bidrager, besøg [Getting Started](../DEVELOPERS.md)
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Bedst til: hjælp med at bygge, diskussion om bedste praksis for databaser.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Bedst til: fejl og fejl, du støder på ved brug af Supabase.
-- [Email Support](https://supabase.com/docs/support#business-support). Bedst til: problemer med din database eller infrastruktur.
+- [Email Support](https://www.assistance.bg/docs/support#business-support). Bedst til: problemer med din database eller infrastruktur.
 - [Discord](https://discord.supabase.com). Bedst til: deling af dine applikationer og hygge med fællesskabet.
 
 ## Status
 
 - [x] Alpha: Vi tester Supabase med et lukket sæt af kunder
-- [x] Offentlig Alpha: Alle kan tilmelde sig på [supabase.com/dashboard](https://supabase.com/dashboard). Men vær forsigtig med os, der er et par knuder
+- [x] Offentlig Alpha: Alle kan tilmelde sig på [supabase.com/dashboard](https://www.assistance.bg/dashboard). Men vær forsigtig med os, der er et par knuder
 - [x] Public Beta: Stabil nok til de fleste ikke-virksomhedsrelaterede brugssager
-- [ ] Public: Generel tilgængelighed [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Public: Generel tilgængelighed [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 Vi er i øjeblikket i Public Beta. Hold øje med "releases" i denne repo for at få besked om større opdateringer.
 
@@ -55,8 +55,8 @@ Supabase er en kombination af open source-værktøjer. Vi opbygger funktionerne 
 
 **Arkitektur**
 
-Supabase er en [hosted platform](https://supabase.com/dashboard). Du kan tilmelde dig og begynde at bruge Supabase uden at installere noget.
-Du kan også [selv hoste](https://supabase.com/docs/guides/hosting/overview) og [udvikle lokalt](https://supabase.com/docs/guides/local-development).
+Supabase er en [hosted platform](https://www.assistance.bg/dashboard). Du kan tilmelde dig og begynde at bruge Supabase uden at installere noget.
+Du kan også [selv hoste](https://www.assistance.bg/docs/guides/hosting/overview) og [udvikle lokalt](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

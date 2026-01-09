@@ -73039,7 +73039,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Return \`data\` as the EXPLAIN plan for the query.\\n\\nYou need to enable the\\n[db_plan_enabled](https://supabase.com/docs/guides/database/debugging-performance#enabling-explain)\\nsetting before using this method."
+          "shortText": "Return \`data\` as the EXPLAIN plan for the query.\\n\\nYou need to enable the\\n[db_plan_enabled](https://www.assistance.bg/docs/guides/database/debugging-performance#enabling-explain)\\nsetting before using this method."
         }
       },
       "@supabase/postgrest-js.PostgrestFilterBuilder.filter": {
@@ -76176,7 +76176,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Return \`data\` as the EXPLAIN plan for the query.\\n\\nYou need to enable the\\n[db_plan_enabled](https://supabase.com/docs/guides/database/debugging-performance#enabling-explain)\\nsetting before using this method."
+          "shortText": "Return \`data\` as the EXPLAIN plan for the query.\\n\\nYou need to enable the\\n[db_plan_enabled](https://www.assistance.bg/docs/guides/database/debugging-performance#enabling-explain)\\nsetting before using this method."
         }
       },
       "@supabase/postgrest-js.PostgrestTransformBuilder.geojson": {

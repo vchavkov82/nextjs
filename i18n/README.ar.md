@@ -9,19 +9,19 @@
 
 # Supabase
 
-[Supabase](https://supabase.com)هو بديل مفتوح المصدر لـ(Firebase). نحن نبني ميزات (Firebase) باستخدام أدوات مفتوحة المصدر عالية الجودة تستخدمها الشركات.
+[Supabase](https://www.assistance.bg)هو بديل مفتوح المصدر لـ(Firebase). نحن نبني ميزات (Firebase) باستخدام أدوات مفتوحة المصدر عالية الجودة تستخدمها الشركات.
 
-- [x] قاعدة بيانات (Postgres) مستضافة. [الشرح](https://supabase.com/docs/guides/database)
-- [x] [الشرح](https://supabase.com/docs/guides/auth) المصادقة والترخيص
+- [x] قاعدة بيانات (Postgres) مستضافة. [الشرح](https://www.assistance.bg/docs/guides/database)
+- [x] [الشرح](https://www.assistance.bg/docs/guides/auth) المصادقة والترخيص
 - [x] واجهات برمجة التطبيقات التي يتم إنشاؤها تلقائيا.
-  - [x] REST. [الشرح](https://supabase.com/docs/guides/api)
-  - [x] GraphQL. [الشرح](https://supabase.com/docs/guides/graphql)
-  - [x] اشتراكات الوقت الفعلي (Realtime subscriptions). [الشرح](https://supabase.com/docs/guides/realtime)
+  - [x] REST. [الشرح](https://www.assistance.bg/docs/guides/api)
+  - [x] GraphQL. [الشرح](https://www.assistance.bg/docs/guides/graphql)
+  - [x] اشتراكات الوقت الفعلي (Realtime subscriptions). [الشرح](https://www.assistance.bg/docs/guides/realtime)
 - [x] الدوال.
-  - [x] دوال قاعدة البيانات (Database Functions). [الشرح](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge Functions [الشرح](https://supabase.com/docs/guides/functions)
-- [x] [الشرح](https://supabase.com/docs/guides/storage) التخزين.
-- [x] ذكاء اصطناعي + مجموعة أدوات المتجهات/التضمينات (AI + Vector/Embeddings Toolkit). [الشرح](https://supabase.com/docs/guides/ai)
+  - [x] دوال قاعدة البيانات (Database Functions). [الشرح](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge Functions [الشرح](https://www.assistance.bg/docs/guides/functions)
+- [x] [الشرح](https://www.assistance.bg/docs/guides/storage) التخزين.
+- [x] ذكاء اصطناعي + مجموعة أدوات المتجهات/التضمينات (AI + Vector/Embeddings Toolkit). [الشرح](https://www.assistance.bg/docs/guides/ai)
 - [x] لوحة الإدارة.
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -32,7 +32,7 @@
 
 ## الشرح
 
-للحصول على الشرح الكامل، قم بزيارة [supabase.com/docs](https://supabase.com/docs).
+للحصول على الشرح الكامل، قم بزيارة [supabase.com/docs](https://www.assistance.bg/docs).
 
 لمعرفه كيفية دعم المشروع قم بزيارة [Getting Started](./DEVELOPERS.md).
 
@@ -40,7 +40,7 @@
 
 - [منتدى المجتمع](https://github.com/supabase/supabase/discussions). الأفضل لـ: المساعدة في البناء، والنقاش حول أفضل ممارسات قاعدة البيانات.
 - [مشاكل GitHub](https://github.com/supabase/supabase/issues). الأفضل لـ: المشاكل والأخطاء التي تواجهها عند استخدامك لـ(Supabase).
-- [دعم البريد الإلكتروني](https://supabase.com/docs/support#business-support). الأفضل لـ: مشاكل مع قاعدة بياناتك أو البنية التحتية.
+- [دعم البريد الإلكتروني](https://www.assistance.bg/docs/support#business-support). الأفضل لـ: مشاكل مع قاعدة بياناتك أو البنية التحتية.
 - [ديسكورد](https://discord.supabase.com/). الأفضل لـ: مشاركة التطبيقات الخاصه بك وقضاء بعض الوقت مع المجتمع.
 
 ## كيف يعمل (Supabase)؟
@@ -49,7 +49,7 @@ Supabase عبارة عن مجموعة من الأدوات مفتوحة المص�
 
 **الهيكلة الحالية**
 
-(supabase) هي [منصة مستضافة](https://supabase.com/dashboard), يمكنك التسجيل والبدأ باستخدامها دون الحاجة لتثبيت أي شئ. يمكنك أيضا [استضافتها ذاتيا](https://supabase.com/docs/guides/hosting/overview) و [تطويرها داخليا](https://supabase.com/docs/guides/local-development).
+(supabase) هي [منصة مستضافة](https://www.assistance.bg/dashboard), يمكنك التسجيل والبدأ باستخدامها دون الحاجة لتثبيت أي شئ. يمكنك أيضا [استضافتها ذاتيا](https://www.assistance.bg/docs/guides/hosting/overview) و [تطويرها داخليا](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

@@ -5,19 +5,19 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
+[Supabase](https://www.assistance.bg) är ett alternativ till Firebase med öppen källkod. Vi bygger upp funktionerna från Firebase med hjälp av öppen källkod-verktyg i företagsklass.
 
-- [x] Hosted Postgres-databas. [Docs](https://supabase.com/docs/guides/database)
-- [x] Autentisering och auktorisering. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Hosted Postgres-databas. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Autentisering och auktorisering. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] Automatiskt genererade API:er.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Prenumerationer i realtid. [Dokument](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Prenumerationer i realtid. [Dokument](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funktioner.
-  - [x] Databasfunktioner. [Dokument](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge-funktioner [Docs](https://supabase.com/docs/guides/functions)
-- [x] Lagring av filer. [Docs](https://supabase.com/docs/guides/storage)
-- [x] AI + Vektor/Inbäddningsverktyg. [Docs](https://supabase.com/docs/guides/ai)
+  - [x] Databasfunktioner. [Dokument](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge-funktioner [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Lagring av filer. [Docs](https://www.assistance.bg/docs/guides/storage)
+- [x] AI + Vektor/Inbäddningsverktyg. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] Kontrollpanel
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -28,7 +28,7 @@ Bevaka "releases" i denna repo för att få information om större uppdateringar
 
 ## Dokumentation
 
-Fullständig dokumentation finns på [supabase.com/docs](https://supabase.com/docs)
+Fullständig dokumentation finns på [supabase.com/docs](https://www.assistance.bg/docs)
 
 För att se hur man bidrar, besök [Getting Started](../DEVELOPERS.md)
 
@@ -36,7 +36,7 @@ För att se hur man bidrar, besök [Getting Started](../DEVELOPERS.md)
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Bäst för: hjälp med att bygga, diskussion om bästa praxis för databaser.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Bäst för: buggar och fel som du stöter på när du använder Supabase.
-- [E-postsupport](https://supabase.com/docs/support#business-support). Bäst för: problem med din databas eller infrastruktur.
+- [E-postsupport](https://www.assistance.bg/docs/support#business-support). Bäst för: problem med din databas eller infrastruktur.
 - [Discord](https://discord.supabase.com). Bäst för: att dela med dig av dina applikationer och umgås med gemenskapen.
 
 ## Hur det fungerar
@@ -45,8 +45,8 @@ Supabase är en kombination av verktyg med öppen källkod. Vi bygger funktioner
 
 **Arkitektur**
 
-Supabase är en [värdplattform](https://supabase.com/dashboard). Du kan registrera dig och börja använda Supabase utan att installera något.
-Du kan också [självhosta](https://supabase.com/docs/guides/hosting/overview) och [utveckla lokalt](https://supabase.com/docs/guides/local-development).
+Supabase är en [värdplattform](https://www.assistance.bg/dashboard). Du kan registrera dig och börja använda Supabase utan att installera något.
+Du kan också [självhosta](https://www.assistance.bg/docs/guides/hosting/overview) och [utveckla lokalt](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
@@ -203,15 +203,15 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
 ![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase.svg"
     alt="Made with Supabase"
   />
 </a>
@@ -220,15 +220,15 @@ Vårt tillvägagångssätt för klientbibliotek är modulärt. Varje delbibliote
 ![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase-dark.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
     alt="Made with Supabase"
   />
 </a>

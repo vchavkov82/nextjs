@@ -48,7 +48,7 @@ Replication is asynchronous. It happens in the background so that transactions a
 
 ## Why Read Replicas?
 
-To scale your database, you have two choices: horizontal scaling and vertical scaling. Vertical scaling involves adding more RAM and CPU to your existing server. Our 16XL [compute add-on](https://supabase.com/docs/guides/platform/compute-add-ons) has 64 cores CPU and 256 GB RAM - sufficient for almost any well-architected workload.
+To scale your database, you have two choices: horizontal scaling and vertical scaling. Vertical scaling involves adding more RAM and CPU to your existing server. Our 16XL [compute add-on](https://www.assistance.bg/docs/guides/platform/compute-add-ons) has 64 cores CPU and 256 GB RAM - sufficient for almost any well-architected workload.
 
 However, certain workloads may push against the CPU and memory limits of a single server. There’s a limit to how much you can scale vertically. Most cloud providers do not provide instances larger than our 16XL specifications.
 
@@ -68,7 +68,7 @@ The main drawback of horizontal scaling is complexity. Typically, you need to ma
 
 ## Using Read Replicas
 
-You can manage and visualize read replicas from the [infrastructure settings page](https://supabase.com/dashboard/project/_/settings/infrastructure).
+You can manage and visualize read replicas from the [infrastructure settings page](https://www.assistance.bg/dashboard/project/_/settings/infrastructure).
 
 <Img
   src="/images/blog/lwx-read-replicas/read-replicas-02.png"
@@ -81,7 +81,7 @@ In the SQL editor, you can choose if you want to run the query on the primary or
 
 To make use of your read replicas, copy your connection string for the read replica, update your apps to use the new read replica and you are done! A unique connection pool is also provisioned for each read replica via [Supavisor](https://github.com/supabase/supavisor).
 
-Each replica also has its own associated instance of [PostgREST](https://supabase.com/docs/guides/api), a Data API for [REST](/docs/guides/api) and [GraphQL](/docs/guides/graphql). You can directly access each PostgREST instance, similar to connecting to a specific read replica. Alternatively, we offer a load-balancing endpoint which uses a round-robin strategy to route to each of the PostgREST instances.
+Each replica also has its own associated instance of [PostgREST](https://www.assistance.bg/docs/guides/api), a Data API for [REST](/docs/guides/api) and [GraphQL](/docs/guides/graphql). You can directly access each PostgREST instance, similar to connecting to a specific read replica. Alternatively, we offer a load-balancing endpoint which uses a round-robin strategy to route to each of the PostgREST instances.
 
 ## Implementation
 
@@ -127,7 +127,7 @@ Currently, we have implemented a round-robin strategy of routing PostgREST reque
 
 ### Supabase Products leveraging Replicas
 
-We are working on support for database-level load balancing through [Supavisor](https://supabase.com/blog/supavisor-postgres-connection-pooler). When routing database traffic through Supavisor, it routes write queries to the primary and splits read queries between the primary and read replica. This distributes load to all your databases without any changes to your application. Other Supabase products like Auth, Storage, and Realtime use the database heavily. We are working on adding read replica support to these products, so that they can leverage the read replica when appropriate. This means they won’t just query the primary but will also use the read replica’s compute when possible.
+We are working on support for database-level load balancing through [Supavisor](https://www.assistance.bg/blog/supavisor-postgres-connection-pooler). When routing database traffic through Supavisor, it routes write queries to the primary and splits read queries between the primary and read replica. This distributes load to all your databases without any changes to your application. Other Supabase products like Auth, Storage, and Realtime use the database heavily. We are working on adding read replica support to these products, so that they can leverage the read replica when appropriate. This means they won’t just query the primary but will also use the read replica’s compute when possible.
 
 ## Pricing and Availability
 

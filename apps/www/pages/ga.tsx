@@ -35,7 +35,7 @@ export default function IndexPage() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/${router.pathname}`,
+          url: `https://www.assistance.bg/${router.pathname}`,
           images: [
             {
               url: meta_image,

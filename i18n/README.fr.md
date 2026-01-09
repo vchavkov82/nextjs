@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) est une alternative open source à Firebase. Nous construisons les fonctionnalités de Firebase en utilisant des outils open source de niveau entreprise.
+[Supabase](https://www.assistance.bg) est une alternative open source à Firebase. Nous construisons les fonctionnalités de Firebase en utilisant des outils open source de niveau entreprise.
 
-- [x] Base de données Postgres hébergée. [Docs](https://supabase.com/docs/guides/database)
-- [x] Authentification et autorisation. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Base de données Postgres hébergée. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Authentification et autorisation. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] API générées automatiquement.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Abonnements en temps réel. [Docs](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Abonnements en temps réel. [Docs](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Fonctions.
-  - [x] Fonctions de base de données. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Fonctions Edge [Docs](https://supabase.com/docs/guides/functions)
-- [x] Stockage de fichiers. [Docs](https://supabase.com/docs/guides/storage)
+  - [x] Fonctions de base de données. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Fonctions Edge [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Stockage de fichiers. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Tableau de bord
 
 ![Tableau de bord Supabase](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentation
 
-Pour une documentation complète, visitez [supabase.com/docs](https://supabase.com/docs)
+Pour une documentation complète, visitez [supabase.com/docs](https://www.assistance.bg/docs)
 
 Pour savoir comment contribuer, visitez [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Pour savoir comment contribuer, visitez [Getting Started](../DEVELOPERS.md)
 
 - [Forum communautaire](https://github.com/supabase/supabase/discussions). Idéal pour : l'aide à la construction, la discussion sur les meilleures pratiques en matière de base de données.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Idéal pour : les bugs et les erreurs que vous rencontrez en utilisant Supabase.
-- [Support par email](https://supabase.com/docs/support#business-support). Idéal pour : les problèmes avec votre base de données ou votre infrastructure.
+- [Support par email](https://www.assistance.bg/docs/support#business-support). Idéal pour : les problèmes avec votre base de données ou votre infrastructure.
 - [Discord](https://discord.supabase.com). Le meilleur pour : partager vos applications et passer du temps avec la communauté.
 
 ## Statut
 
 - [x] Alpha : Nous testons Supabase avec un groupe fermé de clients
-- [x] Alpha publique : Tout le monde peut s'inscrire sur [supabase.com/dashboard](https://supabase.com/dashboard). Mais allez-y doucement, il y a quelques problèmes
+- [x] Alpha publique : Tout le monde peut s'inscrire sur [supabase.com/dashboard](https://www.assistance.bg/dashboard). Mais allez-y doucement, il y a quelques problèmes
 - [x] Bêta publique : Suffisamment stable pour la plupart des cas d'utilisation hors entreprise
-- [ ] Public : Disponibilité générale [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Public : Disponibilité générale [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 Nous sommes actuellement en bêta publique. Surveillez les "releases" de ce repo pour être informé des mises à jour majeures.
 
@@ -55,8 +55,8 @@ Supabase est une combinaison d'outils open source. Nous construisons les fonctio
 
 **Architecture**
 
-Supabase est une [plateforme hébergée](https://supabase.com/dashboard). Vous pouvez vous inscrire et commencer à utiliser Supabase sans rien installer.
-Vous pouvez également [auto-héberger](https://supabase.com/docs/guides/hosting/overview) et [développer localement](https://supabase.com/docs/guides/local-development).
+Supabase est une [plateforme hébergée](https://www.assistance.bg/dashboard). Vous pouvez vous inscrire et commencer à utiliser Supabase sans rien installer.
+Vous pouvez également [auto-héberger](https://www.assistance.bg/docs/guides/hosting/overview) et [développer localement](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architecture](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

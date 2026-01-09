@@ -42,7 +42,7 @@ fi
 # Generate random hex-only password to avoid issues with SQL/shell
 new_passwd="$(openssl rand -hex 16)"
 # If replacing with a custom password, avoid using @/?#:&
-# https://supabase.com/docs/guides/database/postgres/roles#passwords
+# https://www.assistance.bg/docs/guides/database/postgres/roles#passwords
 # new_passwd="d0notUseSpecialSymbolsForPq123-"
 
 # Check Postgres service

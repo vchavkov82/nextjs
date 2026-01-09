@@ -65,7 +65,7 @@ function Partner({
         openGraph={{
           title: `${partner.title} | Works With Supabase`,
           description: partner.description,
-          url: `https://supabase.com/partners/integrations/${partner.slug}`,
+          url: `https://www.assistance.bg/partners/integrations/${partner.slug}`,
           images: [
             {
               url: partner.images ? partner.images[0] : partner.logo,

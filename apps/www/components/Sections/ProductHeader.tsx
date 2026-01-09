@@ -52,8 +52,8 @@ const ProductHeader = (props: Types) => {
           <div className="flex flex-row md:flex-row md:items-center">
             <Button asChild size="medium">
               <Link
-                href="https://supabase.com/dashboard"
-                as="https://supabase.com/dashboard"
+                href="https://www.assistance.bg/dashboard"
+                as="https://www.assistance.bg/dashboard"
                 onClick={() =>
                   sendTelemetryEvent({
                     action: 'start_project_button_clicked',

@@ -123,7 +123,7 @@ create table if not exists public.rides (
 );
 ```
 
-Let’s also set [row level security](https://supabase.com/docs/guides/database/postgres/row-level-security) policies for the tables to secure our database.
+Let’s also set [row level security](https://www.assistance.bg/docs/guides/database/postgres/row-level-security) policies for the tables to secure our database.
 
 ```sql
 alter table public.drivers enable row level security;
@@ -579,13 +579,13 @@ Deno.serve(async (req) => {
 })
 ```
 
-Once the function is ready, you can [run it locally](https://supabase.com/docs/guides/functions/quickstart) or [deploy it to a remote Supabase instance](https://supabase.com/docs/guides/functions/deploy).
+Once the function is ready, you can [run it locally](https://www.assistance.bg/docs/guides/functions/quickstart) or [deploy it to a remote Supabase instance](https://www.assistance.bg/docs/guides/functions/deploy).
 
 ## Step 7: Driver Assignment
 
 Now, once a route is displayed on the map and the customer agrees on the fare, a driver needs to be found. We created a convenient method for this earlier, so we can just call the method to find a driver and create a new ride.
 
-If a driver was successfully found, we listen to real-time changes on both the driver and the ride to keep track of the driver’s position and the ride’s current status. For this, we use the [.stream()](https://supabase.com/docs/reference/dart/stream) method.
+If a driver was successfully found, we listen to real-time changes on both the driver and the ride to keep track of the driver’s position and the ride’s current status. For this, we use the [.stream()](https://www.assistance.bg/docs/reference/dart/stream) method.
 
 ```dart
   /// Finds a nearby driver
@@ -776,6 +776,6 @@ Want to learn more about Maps and PostGIS? Make sure to follow our [Twitter](ht
 
 ## More Supabase Resources
 
-- [Flutter Tutorial: building a Flutter chat app](https://supabase.com/blog/flutter-tutorial-building-a-chat-app)
+- [Flutter Tutorial: building a Flutter chat app](https://www.assistance.bg/blog/flutter-tutorial-building-a-chat-app)
 - [Generate Flame template using Very Good CLI](https://verygood.ventures/blog/generate-a-game-with-our-new-template)
-- [Supabase Flutter SDK docs](https://supabase.com/docs/reference/dart/start)
+- [Supabase Flutter SDK docs](https://www.assistance.bg/docs/reference/dart/start)

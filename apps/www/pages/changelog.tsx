@@ -278,7 +278,7 @@ function ChangelogPage({ changelog, pageInfo, restPage }: ChangelogPageProps) {
         openGraph={{
           title: TITLE,
           description: DESCRIPTION,
-          url: `https://supabase.com/changelog`,
+          url: `https://www.assistance.bg/changelog`,
           type: 'article',
         }}
       />

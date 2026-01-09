@@ -26,10 +26,10 @@ const Partners = () => {
         openGraph={{
           title: pageData.metaTitle,
           description: pageData.metaDescription,
-          url: `https://supabase.com/partners`,
+          url: `https://www.assistance.bg/partners`,
           images: [
             {
-              url: `https://supabase.com${router.basePath}/images/og/integrations.png`, // TODO
+              url: `https://www.assistance.bg${router.basePath}/images/og/integrations.png`, // TODO
             },
           ],
         }}
@@ -106,7 +106,7 @@ const Partners = () => {
                 Discover how technology and consulting partners are already working with Supabase.
               </p>
               <TextLink
-                url="https://supabase.com/docs/guides/platform/marketplace"
+                url="https://www.assistance.bg/docs/guides/platform/marketplace"
                 label="View docs"
               />
             </div>
@@ -184,7 +184,7 @@ const Partners = () => {
                   projects programmatically.
                 </p>
                 <TextLink
-                  url="https://supabase.com/docs/guides/platform/oauth-apps/publish-an-oauth-app"
+                  url="https://www.assistance.bg/docs/guides/platform/oauth-apps/publish-an-oauth-app"
                   label="Learn more"
                 />
               </div>

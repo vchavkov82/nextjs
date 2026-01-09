@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) yra atvirojo kodo Firebase alternatyva. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo įrankius.
+[Supabase](https://www.assistance.bg) yra atvirojo kodo Firebase alternatyva. Kuriame "Firebase" funkcijas naudodami įmonių klasės atvirojo kodo įrankius.
 
-- [x] Prieglobos Postgres duomenų bazė. [Dokumentai](https://supabase.com/docs/guides/database)
-- [x] Autentiškumo nustatymas ir autorizavimas. [Dokumentai](https://supabase.com/docs/guides/auth)
+- [x] Prieglobos Postgres duomenų bazė. [Dokumentai](https://www.assistance.bg/docs/guides/database)
+- [x] Autentiškumo nustatymas ir autorizavimas. [Dokumentai](https://www.assistance.bg/docs/guides/auth)
 - [x] Automatiškai generuojamos API.
-  - [x] REST. [Dokumentai](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Dokumentai](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Realaus laiko prenumeratos. [Dokumentai](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Dokumentai](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Dokumentai](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Realaus laiko prenumeratos. [Dokumentai](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funkcijos.
-  - [x] Duomenų bazės funkcijos. [Dokumentai](https://supabase.com/docs/guides/database/functions)
-  - [x] Kraštų funkcijos [Docs](https://supabase.com/docs/guides/functions)
-- [x] Failų saugojimas. [Dokumentai](https://supabase.com/docs/guides/storage)
+  - [x] Duomenų bazės funkcijos. [Dokumentai](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Kraštų funkcijos [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Failų saugojimas. [Dokumentai](https://www.assistance.bg/docs/guides/storage)
 - [x] Prietaisų skydelis
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentacija
 
-Išsamios dokumentacijos rasite [supabase.com/docs](https://supabase.com/docs)
+Išsamios dokumentacijos rasite [supabase.com/docs](https://www.assistance.bg/docs)
 
 Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 
 - [Bendrijos forumas](https://github.com/supabase/supabase/discussions). Geriausiai tinka: pagalbai kuriant, diskusijoms apie geriausią duomenų bazių praktiką.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Geriausia: klaidos ir klaidos, su kuriomis susiduriate naudodami "Supabase".
-- [Pagalba el. paštu](https://supabase.com/docs/support#business-support). Geriausiai tinka: problemoms, susijusioms su jūsų duomenų baze ar infrastruktūra, spręsti.
+- [Pagalba el. paštu](https://www.assistance.bg/docs/support#business-support). Geriausiai tinka: problemoms, susijusioms su jūsų duomenų baze ar infrastruktūra, spręsti.
 - [Discord](https://discord.supabase.com). Geriausiai tinka: dalytis savo programomis ir bendrauti su bendruomene.
 
 ## Statusas
 
 - [x] Alfa: Bandome "Supabase" su uždaru klientų rinkiniu
-- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
+- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
 - [x] Viešoji beta versija: Pakankamai stabili daugeliui ne įmonių naudojimo atvejų
-- [ ] Vieša: Bendras prieinamumas [[statusas](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Vieša: Bendras prieinamumas [[statusas](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 Šiuo metu esame viešojoje beta versijoje. Stebėkite šios repozitorijos "releases", kad gautumėte pranešimus apie svarbius atnaujinimus.
 
@@ -55,8 +55,8 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 
 **Architektūra**
 
-Supabase yra [prieglobos platforma](https://supabase.com/dashboard). Galite užsiregistruoti ir pradėti naudotis "Supabase" nieko neįdiegę.
-Taip pat galite [savarankiškai talpinti](https://supabase.com/docs/guides/hosting/overview) ir [kurti vietoje](https://supabase.com/docs/guides/local-development).
+Supabase yra [prieglobos platforma](https://www.assistance.bg/dashboard). Galite užsiregistruoti ir pradėti naudotis "Supabase" nieko neįdiegę.
+Taip pat galite [savarankiškai talpinti](https://www.assistance.bg/docs/guides/hosting/overview) ir [kurti vietoje](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

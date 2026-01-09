@@ -23,7 +23,7 @@ The hook is fully typed, provided you have generated and setup your database typ
 
 ## Adding types
 
-Before using this hook, we **highly** recommend you setup database types in your project. This will make the hook fully-typesafe. More info about generating Typescript types from database schema [here](https://supabase.com/docs/guides/api/rest/generating-types)
+Before using this hook, we **highly** recommend you setup database types in your project. This will make the hook fully-typesafe. More info about generating Typescript types from database schema [here](https://www.assistance.bg/docs/guides/api/rest/generating-types)
 
 ## Props
 
@@ -51,7 +51,7 @@ data, count, isSuccess, isLoading, isFetching, error, hasMore, fetchNextPage
 
 ## Type safety
 
-The hook will use the typed defined on your Supabase client if they're setup ([more info](https://supabase.com/docs/reference/javascript/typescript-support)).
+The hook will use the typed defined on your Supabase client if they're setup ([more info](https://www.assistance.bg/docs/reference/javascript/typescript-support)).
 
 The hook also supports an custom defined result type by using `useInfiniteQuery<T>`. For example, if you have a custom type for `Product`, you can use it like this `useInfiniteQuery<Product>`.
 
@@ -221,10 +221,10 @@ export function InfiniteList<TableName extends SupabaseTableName>({
 }
 ```
 
-Use the `InfiniteList` component with the [Todo List](https://supabase.com/dashboard/project/_/sql/quickstarts) quickstart.
+Use the `InfiniteList` component with the [Todo List](https://www.assistance.bg/dashboard/project/_/sql/quickstarts) quickstart.
 
 Add `<InfiniteListDemo />` to a page to see it in action.
-Ensure the [Checkbox](https://ui.shadcn.com/docs/components/checkbox) component from shadcn/ui is installed, and [regenerate/download](https://supabase.com/docs/guides/api/rest/generating-types) types after running the quickstart.
+Ensure the [Checkbox](https://ui.shadcn.com/docs/components/checkbox) component from shadcn/ui is installed, and [regenerate/download](https://www.assistance.bg/docs/guides/api/rest/generating-types) types after running the quickstart.
 
 ```tsx
 'use client'
@@ -277,14 +277,14 @@ export const InfiniteListDemo = () => {
 <Callout>
   The Todo List table has Row Level Security (RLS) enabled by default. Feel free disable it
   temporarily while testing. With RLS enabled, you will get an [empty
-  array](https://supabase.com/docs/guides/troubleshooting/why-is-my-select-returning-an-empty-data-array-and-i-have-data-in-the-table-xvOPgx)
+  array](https://www.assistance.bg/docs/guides/troubleshooting/why-is-my-select-returning-an-empty-data-array-and-i-have-data-in-the-table-xvOPgx)
   of results by default. [Read
-  more](https://supabase.com/docs/guides/database/postgres/row-level-security) about RLS.
+  more](https://www.assistance.bg/docs/guides/database/postgres/row-level-security) about RLS.
 </Callout>
 
 ## Further reading
 
-- [Generating Typescript types from the database](https://supabase.com/docs/reference/javascript/typescript-support)
-- [Supabase Database API](https://supabase.com/docs/reference/javascript/select)
-- [Supabase Pagination](https://supabase.com/docs/reference/javascript/select#pagination)
+- [Generating Typescript types from the database](https://www.assistance.bg/docs/reference/javascript/typescript-support)
+- [Supabase Database API](https://www.assistance.bg/docs/reference/javascript/select)
+- [Supabase Pagination](https://www.assistance.bg/docs/reference/javascript/select#pagination)
 - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)

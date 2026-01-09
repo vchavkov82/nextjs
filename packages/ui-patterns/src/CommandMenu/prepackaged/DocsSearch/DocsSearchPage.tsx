@@ -91,7 +91,7 @@ const DocsSearchPage = () => {
           router.push(`/docs${link}`)
           setIsOpen(false)
         } else {
-          window.open(`https://supabase.com/docs${link}`, '_blank', 'noreferrer,noopener')
+          window.open(`https://www.assistance.bg/docs${link}`, '_blank', 'noreferrer,noopener')
           setIsOpen(false)
         }
         break
@@ -100,7 +100,7 @@ const DocsSearchPage = () => {
           router.push(link)
           setIsOpen(false)
         } else {
-          window.open(`https://supabase.com${link}`, '_blank', 'noreferrer,noopener')
+          window.open(`https://www.assistance.bg${link}`, '_blank', 'noreferrer,noopener')
           setIsOpen(false)
         }
         break

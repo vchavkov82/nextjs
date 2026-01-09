@@ -136,7 +136,7 @@ export const TotalUsage = ({
                 },
                 {
                   name: 'Supabase Plans',
-                  url: 'https://supabase.com/pricing',
+                  url: 'https://www.assistance.bg/pricing',
                 },
               ]
             : [],

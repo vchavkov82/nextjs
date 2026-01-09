@@ -14,7 +14,7 @@ date: '2023-10-08'
 toc_depth: 3
 ---
 
-Using the [Supabase JavaScript Client](https://supabase.com/docs/reference/javascript/introduction) in a React Native app, it's super easy to fetch data from a Supabase backend by simply calling functions like `supabase.from('countries').select()` wherever the data is needed. However, another approach to handling data in mobile apps recently gained a lot of popularity: Offline-first - meaning an app works primarily offline and synchronizes data whenever possible.
+Using the [Supabase JavaScript Client](https://www.assistance.bg/docs/reference/javascript/introduction) in a React Native app, it's super easy to fetch data from a Supabase backend by simply calling functions like `supabase.from('countries').select()` wherever the data is needed. However, another approach to handling data in mobile apps recently gained a lot of popularity: Offline-first - meaning an app works primarily offline and synchronizes data whenever possible.
 
 This has multiple advantages, the obvious being that the app can be used offline. But even when the app is used online, the user experience still profits from this approach as reading and updating data feels instantaneous as it happens on the device first and is then synced in the background. The approach also has drawbacks: Data can become stale, and if it is changed in multiple places while offline, data conflicts can occur.
 
@@ -104,7 +104,7 @@ static associations = {
 
 ## Syncing the local DB with Supabase
 
-The [WatermelonDB docs](https://watermelondb.dev/docs/) outline how to set up a sync function that talks with the backend server. In our case, the backend is a Postgres database hosted on Supabase. As indicated earlier, we'll implement the sync via two [Postgres functions](https://supabase.com/docs/guides/database/functions) called via Supabase RPC. This way, each sync is only two database calls (one push, one pull), and most of the logic is carried out directly within the database.
+The [WatermelonDB docs](https://watermelondb.dev/docs/) outline how to set up a sync function that talks with the backend server. In our case, the backend is a Postgres database hosted on Supabase. As indicated earlier, we'll implement the sync via two [Postgres functions](https://www.assistance.bg/docs/guides/database/functions) called via Supabase RPC. This way, each sync is only two database calls (one push, one pull), and most of the logic is carried out directly within the database.
 
 ```typescript
 import { SyncDatabaseChangeSet, synchronize } from '@nozbe/watermelondb/sync'
@@ -247,7 +247,7 @@ With the approach described above, I need to maintain the database schema in Sup
 
 ## More React Native/Expo resources
 
-- [Getting started with React Native authentication](https://supabase.com/blog/react-native-authentication)
-- [React Native file upload with Supabase Storage](https://supabase.com/blog/react-native-storage)
-- [React Native Quickstart](https://supabase.com/docs/guides/auth/quickstarts/react-native)
+- [Getting started with React Native authentication](https://www.assistance.bg/blog/react-native-authentication)
+- [React Native file upload with Supabase Storage](https://www.assistance.bg/blog/react-native-storage)
+- [React Native Quickstart](https://www.assistance.bg/docs/guides/auth/quickstarts/react-native)
 - [Watch our React Native video tutorials](https://youtube.com/playlist?list=PL5S4mPUpp4OsrbRTx21k34aACOgpqQGlx&si=Ez-0S4QhBxtayYsq)

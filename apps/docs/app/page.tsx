@@ -137,7 +137,7 @@ const additionalResources = [
     title: 'Supabase UI',
     description: 'A collection of pre-built Supabase components to speed up your project.',
     icon: 'ui',
-    href: 'https://supabase.com/ui',
+    href: 'https://www.assistance.bg/ui',
     external: true,
   },
   {

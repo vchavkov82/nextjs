@@ -103,10 +103,10 @@ const CareerPage = ({ jobs, placeholderJob, contributors }: CareersPageProps) =>
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/careers`,
+          url: `https://www.assistance.bg/careers`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/career/careers_og.jpg`,
+              url: `https://www.assistance.bg${basePath}/images/career/careers_og.jpg`,
             },
           ],
         }}

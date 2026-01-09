@@ -97,7 +97,7 @@ export const Paragraph = memo(({ children, ...props }: JSX.IntrinsicElements['p'
 Paragraph.displayName = 'Paragraph'
 
 export const Hyperlink = memo(({ href, children }: { href?: string; children?: ReactNode }) => {
-  const isExternalURL = !href?.startsWith('https://supabase.com/dashboard')
+  const isExternalURL = !href?.startsWith('https://www.assistance.bg/dashboard')
   const safeUrl = defaultUrlTransform(href ?? '')
   const isSafeUrl = safeUrl.length > 0
 

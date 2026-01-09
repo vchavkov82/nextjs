@@ -7,19 +7,19 @@
 
 # Supabase
 
-[Supabase](https://supabase.com)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
+[Supabase](https://www.assistance.bg)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
 
-- [x] 호스팅된 Postgres 데이터베이스. [문서](https://supabase.com/docs/guides/database)
-- [x] 인증 및 권한 부여. [문서](https://supabase.com/docs/guides/auth)
+- [x] 호스팅된 Postgres 데이터베이스. [문서](https://www.assistance.bg/docs/guides/database)
+- [x] 인증 및 권한 부여. [문서](https://www.assistance.bg/docs/guides/auth)
 - [x] 자동 생성 API.
-  - [x] REST. [문서](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [문서](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] 실시간 구독. [문서](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [문서](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [문서](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] 실시간 구독. [문서](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] 함수.
-  - [x] 데이터베이스 함수. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] 엣지 기능 [문서](https://supabase.com/docs/guides/functions)
-- [x] 파일 스토리지. [Docs](https://supabase.com/docs/guides/storage)
-- [x] AI + 벡터/임베딩스 툴킷. [Docs](https://supabase.com/docs/guides/ai)
+  - [x] 데이터베이스 함수. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] 엣지 기능 [문서](https://www.assistance.bg/docs/guides/functions)
+- [x] 파일 스토리지. [Docs](https://www.assistance.bg/docs/guides/storage)
+- [x] AI + 벡터/임베딩스 툴킷. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] 대시보드
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -30,7 +30,7 @@
 
 ## 문서
 
-전체 문서는 [supabase.com/docs](https://supabase.com/docs)에서 확인하실 수 있습니다
+전체 문서는 [supabase.com/docs](https://www.assistance.bg/docs)에서 확인하실 수 있습니다
 
 기여 방법을 확인하려면 [시작하기](../DEVELOPERS.md)를 방문하세요
 
@@ -38,7 +38,7 @@
 
 - [커뮤니티 포럼](https://github.com/supabase/supabase/discussions). 가장 적합한 대상: 구축에 대한 도움말, 데이터베이스 모범 사례에 대한 토론.
 - [깃허브 이슈](https://github.com/supabase/supabase/issues). 최상의 용도: Supabase 사용 중 발생하는 버그 및 오류.
-- [이메일 지원](https://supabase.com/docs/support#business-support). 최상의 대상: 데이터베이스 또는 인프라 문제.
+- [이메일 지원](https://www.assistance.bg/docs/support#business-support). 최상의 대상: 데이터베이스 또는 인프라 문제.
 - [디스코드](https://discord.supabase.com). 최고의 용도: 애플리케이션 공유 및 커뮤니티와의 교류.
 
 ---
@@ -49,8 +49,8 @@ Supabase는 오픈 소스 도구의 조합입니다. 저희는 엔터프라이�
 
 **아키텍처**
 
-Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가입만 하면 아무것도 설치하지 않고 Supabase를 사용할 수 있습니다.
-[자체 호스팅](https://supabase.com/docs/guides/hosting/overview) 및 [로컬 개발](https://supabase.com/docs/guides/local-development)도 가능합니다.
+Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다. 가입만 하면 아무것도 설치하지 않고 Supabase를 사용할 수 있습니다.
+[자체 호스팅](https://www.assistance.bg/docs/guides/hosting/overview) 및 [로컬 개발](https://www.assistance.bg/docs/guides/local-development)도 가능합니다.
 
 ![아키텍처](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
@@ -210,15 +210,15 @@ Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가�
 ![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase.svg"
     alt="Made with Supabase"
   />
 </a>
@@ -227,15 +227,15 @@ Supabase는 [호스팅 플랫폼](https://supabase.com/dashboard)입니다. 가�
 ![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase-dark.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
     alt="Made with Supabase"
   />
 </a>

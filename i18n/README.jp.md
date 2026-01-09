@@ -7,17 +7,17 @@
 
 # Supabase
 
-[Supabase](https://supabase.com)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
+[Supabase](https://www.assistance.bg)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
 
-- [x] ホスティングされた Postgres データベース [Docs](https://supabase.com/docs/guides/database)
-- [x] 認証・認可 [Docs](https://supabase.com/docs/guides/auth)
+- [x] ホスティングされた Postgres データベース [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] 認証・認可 [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] API を自動生成
-  - [x] REST [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] リアルタイムサブスクリプション [Docs](https://supabase.com/docs/guides/api#realtime-api-overview)
-  - [x] GraphQL (Beta) [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
+  - [x] REST [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] リアルタイムサブスクリプション [Docs](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
+  - [x] GraphQL (Beta) [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
 - [x] 関数
-  - [x] データベース関数 [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge Functions [Docs](https://supabase.com/docs/guides/functions)
+  - [x] データベース関数 [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge Functions [Docs](https://www.assistance.bg/docs/guides/functions)
 - [x] ストレージ
 - [x] ダッシュボード
 
@@ -25,7 +25,7 @@
 
 ## ドキュメンテーション
 
-詳しいドキュメントは[supabase.com/docs](https://supabase.com/docs)をご覧ください。
+詳しいドキュメントは[supabase.com/docs](https://www.assistance.bg/docs)をご覧ください。
 
 コントリビュート方法は[Getting Started](../DEVELOPERS.md)をご覧ください。
 
@@ -33,13 +33,13 @@
 
 - [コミュニティフォーラム](https://github.com/supabase/supabase/discussions) どんな時に使うか：構築の手助け、データベースのベストプラクティスに関する議論など
 - [GitHub Issue](https://github.com/supabase/supabase/issues) どんな時に使うか: Supabase で起こったバグやエラーについて
-- [Email サポート](https://supabase.com/docs/support#business-support) どんな時に使うか: ユーザー自身のデータベースやインフラに何か問題が発生した場合
+- [Email サポート](https://www.assistance.bg/docs/support#business-support) どんな時に使うか: ユーザー自身のデータベースやインフラに何か問題が発生した場合
 - [Discord](https://discord.supabase.com) どんな時に使うか: アプリケーションの共有やコミュニティとの交流
 
 ## ステータス
 
 - [x] Alpha: 限られたユーザーで Supabase をテストしています。
-- [x] Public Alpha: 誰でも[supabase.com/dashboard](https://supabase.com/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
+- [x] Public Alpha: 誰でも[supabase.com/dashboard](https://www.assistance.bg/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
 - [x] Public Beta: 企業以外のほとんどのユースケースに耐えうる十分な安定性を確保。
 - [ ] Public: 実用的な用途に対応
 
@@ -55,8 +55,8 @@ Supabase は、オープンソースのツールを組み合わせてできて�
 
 **現在のアーキテクチャ**
 
-Supabase は[ホスティングされたプラットフォーム](https://supabase.com/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
-さらに、 [セルフホスティング](https://supabase.com/docs/guides/hosting/overview) や [ローカル開発](https://supabase.com/docs/guides/local-development)も可能です。
+Supabase は[ホスティングされたプラットフォーム](https://www.assistance.bg/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
+さらに、 [セルフホスティング](https://www.assistance.bg/docs/guides/hosting/overview) や [ローカル開発](https://www.assistance.bg/docs/guides/local-development)も可能です。
 
 ![アーキテクチャー](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

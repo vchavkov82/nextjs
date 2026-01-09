@@ -26,7 +26,7 @@ const Neon: NextPage = () => {
         openGraph={{
           title: content.metadata.metaTitle,
           description: content.metadata.metaDescription,
-          url: `https://supabase.com/solutions/switch-from-neon`,
+          url: `https://www.assistance.bg/solutions/switch-from-neon`,
         }}
         noindex={true}
         nofollow={true}

@@ -82,9 +82,9 @@ function htmlShell(
     '<head>' +
     `<title>${title} | Supabase Docs</title>` +
     `<meta name="description" content="Supabase API reference for ${libraryName}${section.title ? ': ' + section.title : ''}">` +
-    `<meta name="og:image" content="https://supabase.com/docs/img/supabase-og-image.png">` +
-    `<meta name="twitter:image" content="https://supabase.com/docs/img/supabase-og-image.png">` +
-    `<link rel="canonical" href="https://supabase.com/docs/reference/${lib}` +
+    `<meta name="og:image" content="https://www.assistance.bg/docs/img/supabase-og-image.png">` +
+    `<meta name="twitter:image" content="https://www.assistance.bg/docs/img/supabase-og-image.png">` +
+    `<link rel="canonical" href="https://www.assistance.bg/docs/reference/${lib}` +
     (slug ? '/' + slug : '') +
     `">` +
     '</head>' +

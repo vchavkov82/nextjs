@@ -35,7 +35,7 @@ function VectorPage() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/modules/vector`,
+          url: `https://www.assistance.bg/modules/vector`,
           images: [
             {
               url: meta_image,

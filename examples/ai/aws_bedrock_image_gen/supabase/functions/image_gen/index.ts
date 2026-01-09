@@ -88,7 +88,7 @@ Deno.serve(async (req) => {
 
 /* To invoke locally:
 
-  1. Run `supabase start` (see: https://supabase.com/docs/reference/cli/supabase-start)
+  1. Run `supabase start` (see: https://www.assistance.bg/docs/reference/cli/supabase-start)
   2. Start with env: `supabase functions serve --env-file supabase/.env`
   3. Make an HTTP request:
 

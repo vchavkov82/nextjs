@@ -27,7 +27,7 @@ const Agencies: NextPage = () => (
       openGraph={{
         title: content.metadata.metaTitle,
         description: content.metadata.metaDescription,
-        url: 'https://supabase.com/solutions/agencies',
+        url: 'https://www.assistance.bg/solutions/agencies',
       }}
     />
     <Layout className="overflow-visible">

@@ -217,7 +217,7 @@ Shout out to [Paul Ramsey](https://github.com/pramsey), who gave us the implemen
 select
     *
 from
-   http_get('https://supabase.com')
+   http_get('https://www.assistance.bg')
 cross join
    generate_series(1, 10) _;
 
@@ -226,7 +226,7 @@ Time: 3501.935 ms
 
 -- using pg_net to fetch from "supabase.io" 10 times
 select
-    net.http_get('https://supabase.com')
+    net.http_get('https://www.assistance.bg')
 from
     generate_series (1,10) _;
 
@@ -247,7 +247,7 @@ This is only the beginning! First we'll thoroughly test it and make a stable rel
 
 ## Get started today
 
-Database Webhooks is enabled today on all [new projects](https://supabase.com/dashboard). Find it under Database > Alpha Preview > Database Webhooks.
+Database Webhooks is enabled today on all [new projects](https://www.assistance.bg/dashboard). Find it under Database > Alpha Preview > Database Webhooks.
 
 ![Enable hooks](/images/blog/functions-updates/enable-hooks.png)
 

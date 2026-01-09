@@ -56,7 +56,7 @@ const data: () => {
       ctas: [
         {
           label: 'Start your project',
-          href: 'https://supabase.com/dashboard',
+          href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
             sendTelemetryEvent({

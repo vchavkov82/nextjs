@@ -1,6 +1,6 @@
 # Supabase Specs
 
-These spec files are used to generate the [reference documentation](https://supabase.com/docs/reference/cli/introduction).
+These spec files are used to generate the [reference documentation](https://www.assistance.bg/docs/reference/cli/introduction).
 
 ## Preparation
 

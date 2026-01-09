@@ -16,7 +16,7 @@ const addons = [
     description:
       "The Pro Plan has a spend cap enabled by default to keep costs under control. If you want to scale beyond the plan's included quota, simply switch off the spend cap to pay for additional resources.",
     ctaText: 'Learn about Cost Control',
-    ctaLink: 'https://supabase.com/docs/guides/platform/cost-control#spend-cap',
+    ctaLink: 'https://www.assistance.bg/docs/guides/platform/cost-control#spend-cap',
     ctaTarget: '_blank',
   },
   {
@@ -28,7 +28,7 @@ const addons = [
     description:
       'Use your own domain for your Supabase project to present a branded experience to your users.',
     ctaText: 'Documentation',
-    ctaLink: 'https://supabase.com/docs/guides/platform/custom-domains',
+    ctaLink: 'https://www.assistance.bg/docs/guides/platform/custom-domains',
     ctaTarget: '_blank',
   },
   {
@@ -39,7 +39,7 @@ const addons = [
     price: 'Starts from $100/month',
     description: 'Roll back to any specific point in time, down to the second.',
     ctaText: 'Documentation',
-    ctaLink: 'https://supabase.com/docs/guides/platform/backups',
+    ctaLink: 'https://www.assistance.bg/docs/guides/platform/backups',
     ctaTarget: '_blank',
   },
 ]

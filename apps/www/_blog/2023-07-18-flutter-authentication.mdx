@@ -13,7 +13,7 @@ image: flutter-authentication/flutter-authentication.jpg
 thumb: flutter-authentication/flutter-authentication.jpg
 ---
 
-Flutter is Google’s open-source framework to develop cross-platform applications. In this article, we will take a look at how we can implement authentication using Google sign-in to secure our application using the [Supabase SDK for Flutter](https://supabase.com/docs/reference/dart/introduction).
+Flutter is Google’s open-source framework to develop cross-platform applications. In this article, we will take a look at how we can implement authentication using Google sign-in to secure our application using the [Supabase SDK for Flutter](https://www.assistance.bg/docs/reference/dart/introduction).
 
 We will also dive into the deep ends of Open ID Connect sign-in to better understand how third-party sign-ins are being performed. You can check out the code of the sample in this article [here](https://github.com/supabase/supabase/tree/master/examples/auth/flutter-native-google-auth).
 
@@ -57,7 +57,7 @@ flutter pub add supabase_flutter google_sign_in
 
 The [supabase_flutter](https://pub.dev/packages/supabase_flutter) package is used to interact with a Supabase instance. The [google_sign_in](https://pub.dev/packages/google_sign_in) package is used to implement social sign-in with Google.
 
-We are done installing our dependencies. Let’s set up [authentication](https://supabase.com/docs/guides/auth) now.
+We are done installing our dependencies. Let’s set up [authentication](https://www.assistance.bg/docs/guides/auth) now.
 
 ## Configure Google sign-in on Supabase Auth
 
@@ -97,7 +97,7 @@ We also need some iOS specific settings. Open `ios/Runner/Info.plist` file and a
 </array>
 ```
 
-That is it for setting up our [Supabase auth to prepare for Google sign-in](https://supabase.com/docs/guides/auth/social-login/auth-google?platform=flutter).
+That is it for setting up our [Supabase auth to prepare for Google sign-in](https://www.assistance.bg/docs/guides/auth/social-login/auth-google?platform=flutter).
 
 Finally, we can initialize Supabase in our Flutter application with the credentials of our Supabase instance. Update your `main.dart` file and add `Supabase.initialize()` in the `main` function like the following. Note that you will see some errors since the home screen is set to the `LoginScreen`, which we will create later.
 
@@ -135,7 +135,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-You can find your Supabase URL and Anon key in `Settings -> API` from your [Supabase dashboard](https://supabase.com/dashboard/project/_/settings/api).
+You can find your Supabase URL and Anon key in `Settings -> API` from your [Supabase dashboard](https://www.assistance.bg/dashboard/project/_/settings/api).
 
 ![Supabase credentials](/images/blog/flutter-authentication/supabase-credentials.png)
 
@@ -309,11 +309,11 @@ And with that, we now have a basic working personalized application that utilize
 
 In this post, we learned how to implement authentication in a Flutter application using Google sign-in and the Supabase SDK for Flutter. We also delved into the Open ID Connect functionality, which allows third-party sign-ins and the retrieval of personal information through identity tokens.
 
-You can also check out the [Flutter reference documents](https://supabase.com/docs/reference/dart/installing) to see how you can use `supabase-flutter` to implement a Postgres database, Storage, Realtime, and more.
+You can also check out the [Flutter reference documents](https://www.assistance.bg/docs/reference/dart/installing) to see how you can use `supabase-flutter` to implement a Postgres database, Storage, Realtime, and more.
 
 ## More Flutter and Supabase resources
 
 - [supabase_flutter package](https://pub.dev/packages/supabase_flutter)
-- [Build a chat application using Flutter and Supabase](https://supabase.com/blog/flutter-tutorial-building-a-chat-app)
-- [Securing your Flutter apps with Multi-Factor Authentication](https://supabase.com/blog/flutter-multi-factor-authentication)
-- [How to build a real-time multiplayer game with Flutter Flame](https://supabase.com/blog/flutter-real-time-multiplayer-game)
+- [Build a chat application using Flutter and Supabase](https://www.assistance.bg/blog/flutter-tutorial-building-a-chat-app)
+- [Securing your Flutter apps with Multi-Factor Authentication](https://www.assistance.bg/blog/flutter-multi-factor-authentication)
+- [How to build a real-time multiplayer game with Flutter Flame](https://www.assistance.bg/blog/flutter-real-time-multiplayer-game)

@@ -5,7 +5,7 @@ const ShareArticleActions = ({
   title,
   slug,
   iconSize = 20,
-  basePath = 'https://supabase.com/blog/',
+  basePath = 'https://www.assistance.bg/blog/',
   className,
 }: {
   title: string

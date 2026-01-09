@@ -136,7 +136,7 @@ With this workflow, we can guarantee from the very beginning that the columns an
   <Img alt="Migrations" src="/images/blog/lw12/day-1/migrations.png" />
 </div>
 
-Under the hood we use a browser-compatible version of [postgres-meta](https://github.com/supabase/postgres-meta) to load PGlite tables into JavaScript, then render them using the [schema visualizer](https://supabase.com/blog/supabase-studio-3-0#schema-visualizer). For migrations, we scan through the chat history and concatenate all DDL-related SQL queries into a single view.
+Under the hood we use a browser-compatible version of [postgres-meta](https://github.com/supabase/postgres-meta) to load PGlite tables into JavaScript, then render them using the [schema visualizer](https://www.assistance.bg/blog/supabase-studio-3-0#schema-visualizer). For migrations, we scan through the chat history and concatenate all DDL-related SQL queries into a single view.
 
 In the future, we would also like to support a “seeds” section that outputs `INSERT` statements for sample data created by the language model. Unfortunately we can't simply concatenate these queries together like we do with migrations, since table and column structure can change over time and break earlier seeds. To make this work properly we'll need something like a WASM version of `pg_dump` that can dump all data at the end (stay tuned - the ElectricSQL team is working on it!)
 

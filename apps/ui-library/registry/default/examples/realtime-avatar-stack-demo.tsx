@@ -104,7 +104,7 @@ const RealtimeAvatarStackDemo = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://supabase.com/dashboard/sign-in"
+            href="https://www.assistance.bg/dashboard/sign-in"
             className="text-foreground underline decoration-1 decoration-foreground-muted underline-offset-4 transition-colors hover:decoration-brand hover:decoration-2"
           >
             Dashboard

@@ -1,7 +1,7 @@
 import { load } from 'cheerio'
 import { describe, expect, it } from 'vitest'
 
-const REFERENCE_DOCS_URL = 'https://supabase.com/docs/reference'
+const REFERENCE_DOCS_URL = 'https://www.assistance.bg/docs/reference'
 // For dev testing: comment out above and uncomment below
 // const REFERENCE_DOCS_URL = 'http://localhost:3001/docs/reference'
 
@@ -26,13 +26,13 @@ describe('prod smoke test: crawler pages return correct data', () => {
     )
 
     const canonical = $('link[rel="canonical"]')
-    expect(canonical.attr('href')).toBe('https://supabase.com/docs/reference/javascript/rangelte')
+    expect(canonical.attr('href')).toBe('https://www.assistance.bg/docs/reference/javascript/rangelte')
 
     const ogImage = $('meta[name="og:image"]')
-    expect(ogImage.attr('content')).toBe('https://supabase.com/docs/img/supabase-og-image.png')
+    expect(ogImage.attr('content')).toBe('https://www.assistance.bg/docs/img/supabase-og-image.png')
 
     const twitterImage = $('meta[name="twitter:image"]')
-    expect(twitterImage.attr('content')).toBe('https://supabase.com/docs/img/supabase-og-image.png')
+    expect(twitterImage.attr('content')).toBe('https://www.assistance.bg/docs/img/supabase-og-image.png')
   })
 
   it('markdown pages', async () => {

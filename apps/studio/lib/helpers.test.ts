@@ -96,7 +96,7 @@ describe('getURL', () => {
   it('should return prod url by default', () => {
     const result = getURL()
 
-    expect(result).toEqual('https://supabase.com/dashboard')
+    expect(result).toEqual('https://www.assistance.bg/dashboard')
   })
 })
 
@@ -299,7 +299,7 @@ describe('pluralize', () => {
 
 describe('isValidHttpUrl', () => {
   it('should return true if the URL is valid', () => {
-    const result = isValidHttpUrl('https://supabase.com')
+    const result = isValidHttpUrl('https://www.assistance.bg')
 
     expect(result).toBe(true)
   })

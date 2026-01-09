@@ -57,10 +57,10 @@ function RealtimePage() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/realtime`,
+          url: `https://www.assistance.bg/realtime`,
           images: [
             {
-              url: `https://supabase.com${basePath}/images/realtime/og.jpg`,
+              url: `https://www.assistance.bg${basePath}/images/realtime/og.jpg`,
             },
           ],
         }}

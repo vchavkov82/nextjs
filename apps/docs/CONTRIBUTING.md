@@ -41,7 +41,7 @@ Tutorials are goal-oriented. They help a reader to finish a large, complex goal,
 
 Tutorials mix prose explanations with procedures (lists of steps for the reader to follow). They provide context for why certain instructions are given.
 
-For inspiration, see [an example of a tutorial](https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs).
+For inspiration, see [an example of a tutorial](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-nextjs).
 
 ### Guides
 
@@ -49,7 +49,7 @@ Guides are also goal-oriented, but they focus on shorter, more targeted tasks. F
 
 Guides contain mostly procedures. Think of an instruction manual for building a desk: it's a list of concise steps that the user can go through quickly.
 
-For inspiration, see [an example of a guide](https://supabase.com/docs/guides/auth/auth-email).
+For inspiration, see [an example of a guide](https://www.assistance.bg/docs/guides/auth/auth-email).
 
 ### Reference
 
@@ -251,7 +251,7 @@ Don't nest lists more than two deep.
 
 Use tabs to provide alternative instructions for different platforms or languages.
 
-The `queryGroup` param is optional. It lets you link directly to a tab by using the query group as a query param in the URL, for example: `https://supabase.com/docs/my-page?packagemanager=ts`
+The `queryGroup` param is optional. It lets you link directly to a tab by using the query group as a query param in the URL, for example: `https://www.assistance.bg/docs/my-page?packagemanager=ts`
 
 ```
 <Tabs

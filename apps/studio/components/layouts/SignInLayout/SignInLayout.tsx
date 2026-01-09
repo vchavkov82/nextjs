@@ -117,7 +117,7 @@ const SignInLayout = ({
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <Link href={logoLinkToMarketingSite ? 'https://supabase.com' : '/organizations'}>
+                <Link href={logoLinkToMarketingSite ? 'https://www.assistance.bg' : '/organizations'}>
                   <img
                     src={
                       resolvedTheme?.includes('dark')
@@ -153,14 +153,14 @@ const SignInLayout = ({
                 <p className="text-xs text-foreground-lighter sm:mx-auto sm:max-w-sm">
                   By continuing, you agree to Supabase’s{' '}
                   <Link
-                    href="https://supabase.com/terms"
+                    href="https://www.assistance.bg/terms"
                     className="underline hover:text-foreground-light"
                   >
                     Terms of Service
                   </Link>{' '}
                   and{' '}
                   <Link
-                    href="https://supabase.com/privacy"
+                    href="https://www.assistance.bg/privacy"
                     className="underline hover:text-foreground-light"
                   >
                     Privacy Policy
@@ -187,7 +187,7 @@ const SignInLayout = ({
                   className="flex items-center gap-4"
                 >
                   <img
-                    src={`https://supabase.com${quote.img_url}`}
+                    src={`https://www.assistance.bg${quote.img_url}`}
                     alt={quote.handle}
                     className="w-12 h-12 rounded-full"
                   />

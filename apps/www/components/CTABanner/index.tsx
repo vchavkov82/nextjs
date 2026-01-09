@@ -26,7 +26,7 @@ const CTABanner = ({ darkerBg, className }: Props) => {
       <div className="flex items-center justify-center gap-2 col-span-12 mt-4">
         <Button asChild size="medium">
           <Link
-            href="https://supabase.com/dashboard"
+            href="https://www.assistance.bg/dashboard"
             onClick={() =>
               sendTelemetryEvent({
                 action: 'start_project_button_clicked',

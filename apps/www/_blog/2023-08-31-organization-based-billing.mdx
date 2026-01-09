@@ -12,7 +12,7 @@ date: '2023-08-31'
 toc_depth: 2
 ---
 
-To simplify our continuously growing platform, we're updating our billing system with some improvements requested by our community. This change provides a more intuitive and industry-aligned approach to billing. We're also laying the groundwork for features like [branching](/blog/supabase-local-dev#branching-and-preview-environments), rolling out a self-serve [Team Plan](https://supabase.com/pricing), [long-requested](https://github.com/orgs/supabase/discussions/6681) project transfers between organizations, and an extra 1GB of egress on the Free Plan.
+To simplify our continuously growing platform, we're updating our billing system with some improvements requested by our community. This change provides a more intuitive and industry-aligned approach to billing. We're also laying the groundwork for features like [branching](/blog/supabase-local-dev#branching-and-preview-environments), rolling out a self-serve [Team Plan](https://www.assistance.bg/pricing), [long-requested](https://github.com/orgs/supabase/discussions/6681) project transfers between organizations, and an extra 1GB of egress on the Free Plan.
 
 We've attempted to keep these changes as simple as possible, offering _more generous_ quotas for the Free Plan. If we missed anything, it's because [billing is hard](https://www.getlago.com/blog/why-billing-systems-are-a-nightmare-for-engineers). We're still committed to our [original goals](/blog/pricing#goals-for-our-pricing-structure) for predictable pricing.
 
@@ -50,7 +50,7 @@ As the plan is set for your entire organization, upgrading your organization to 
 
 You can launch as many organizations as you want. For example, you can create two organizations on the Pro Plan for $25 each and launch a single project in each. This provides the same quotas and pricing that you'd receive today. Importantly, each subsequent database inside that Organization will cost $0.01344/hour (roughly $10 per month), rather than $25.
 
-Read more about quotas and Organization-based Billing including examples in our [docs](https://supabase.com/docs/guides/platform/billing-on-supabase).
+Read more about quotas and Organization-based Billing including examples in our [docs](https://www.assistance.bg/docs/guides/platform/billing-on-supabase).
 
 ## Free Plan
 
@@ -79,7 +79,7 @@ This should be done before the end of October, but don't worry - we'll give you 
 
 ## No more upfront payments for databases
 
-Currently, plans include one Micro Compute instance. When you upgrade the [Compute Add-On](https://supabase.com/docs/guides/platform/compute-add-ons), you immediately prepay the prorated amount (days remaining in your current billing cycle), and then pay upfront for the entire month when your billing cycle resets. When you downgrade, you get the appropriate credits for unused time.
+Currently, plans include one Micro Compute instance. When you upgrade the [Compute Add-On](https://www.assistance.bg/docs/guides/platform/compute-add-ons), you immediately prepay the prorated amount (days remaining in your current billing cycle), and then pay upfront for the entire month when your billing cycle resets. When you downgrade, you get the appropriate credits for unused time.
 
 Full-month upfront payments are annoying, especially when you just want to do a temporary upgrade. We've heard your feedback and are moving billing for compute to hourly usage.
 
@@ -92,7 +92,7 @@ If you launch a second or third instance on your paid plan, it just adds additio
   compute usage.
 </div>
 
-To read more about usage-based billing for compute, head over to the [docs](https://supabase.com/docs/guides/platform/manage-your-usage/compute).
+To read more about usage-based billing for compute, head over to the [docs](https://www.assistance.bg/docs/guides/platform/manage-your-usage/compute).
 
 ## Unified Egress
 
@@ -130,11 +130,11 @@ A [highly requested feature](https://github.com/orgs/supabase/discussions/6681) 
   />
 </div>
 
-Read more about [Project Transfers](https://supabase.com/docs/guides/platform/project-transfer).
+Read more about [Project Transfers](https://www.assistance.bg/docs/guides/platform/project-transfer).
 
 ## Self-Serve Team Plan
 
-We did a soft launch of the [Team Plan](https://supabase.com/pricing) in June. With the previous billing, it required manual adjustments of the subscriptions as all projects are supposed to be covered by the Team Plan, whereas you're only paying $599 for the plan once. This required Supabase intervention to communicate the confusing state of billing and also do the adjustments. With Organization-based Billing the Team Plan becomes fully self-serve. Users can upgrade a Free/Pro organization to Team Plan or downgrade to a Pro/Free Plan from a Team Plan organization. The main benefits of the Team Plan include:
+We did a soft launch of the [Team Plan](https://www.assistance.bg/pricing) in June. With the previous billing, it required manual adjustments of the subscriptions as all projects are supposed to be covered by the Team Plan, whereas you're only paying $599 for the plan once. This required Supabase intervention to communicate the confusing state of billing and also do the adjustments. With Organization-based Billing the Team Plan becomes fully self-serve. Users can upgrade a Free/Pro organization to Team Plan or downgrade to a Pro/Free Plan from a Team Plan organization. The main benefits of the Team Plan include:
 
 - Additional Organization member roles
 - Daily backups stored for 14 days
@@ -187,7 +187,7 @@ We are not changing your 2 free project limit. You can have two organizations on
 <details className="cursor-default mb-2">
   <summary className="cursor-pointer"><span className="pl-2">What happens to the spend cap?</span></summary>
 
-The spend cap still exists, it's just set on the organization-level and not per project. Head over to your [organization billing settings](https://supabase.com/dashboard/org/_/billing) to toggle your spend cap. We're working on more fine-grained control over costs to supersede the spend cap.
+The spend cap still exists, it's just set on the organization-level and not per project. Head over to your [organization billing settings](https://www.assistance.bg/dashboard/org/_/billing) to toggle your spend cap. We're working on more fine-grained control over costs to supersede the spend cap.
 
 </details>
 

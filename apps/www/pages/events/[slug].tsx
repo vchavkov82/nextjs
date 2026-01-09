@@ -165,7 +165,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
         hadEndDate ? `DD` : `DD MMM YYYY`
       )}${hadEndDate ? dayjs(event.end_date).tz(event.timezone).format(` - DD MMM`) : ''} | ${capitalize(event.type)}`,
     description: event.meta_description ?? event.description,
-    url: `https://supabase.com/events/${event.slug}`,
+    url: `https://www.assistance.bg/events/${event.slug}`,
     image: ogImageUrl,
   }
 

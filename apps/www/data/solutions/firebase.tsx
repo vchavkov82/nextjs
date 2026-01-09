@@ -55,13 +55,13 @@ const data = {
     ctas: [
       {
         label: 'Compare Firebase and Supabase',
-        href: 'https://supabase.com/alternatives/supabase-vs-firebase',
+        href: 'https://www.assistance.bg/alternatives/supabase-vs-firebase',
         type: 'default' as any,
         icon: <ArrowUpRight className="w-4 h-4 text-current" />,
       },
       {
         label: 'Start your migration',
-        href: 'https://supabase.com/docs/guides/platform/migrating-to-supabase/firestore-data',
+        href: 'https://www.assistance.bg/docs/guides/platform/migrating-to-supabase/firestore-data',
         type: 'primary' as any,
         icon: <ArrowUpRight className="w-4 h-4 text-current" />,
       },
@@ -695,7 +695,7 @@ const data = {
     ),
     primaryCta: {
       label: 'Open migration guide',
-      url: 'https://supabase.com/docs/guides/platform/migrating-to-supabase/firestore-data',
+      url: 'https://www.assistance.bg/docs/guides/platform/migrating-to-supabase/firestore-data',
       target: '_blank',
       icon: <ArrowUpRight className="w-4 h-4 text-current" />,
     },

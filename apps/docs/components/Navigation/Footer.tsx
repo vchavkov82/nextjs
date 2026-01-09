@@ -27,7 +27,7 @@ const Footer = ({ className }: { className?: string }) => (
       <hr className="border-default my-6"></hr>
       <div className="flex gap-4 items-center justify-between">
         <div className="flex flex-col lg:flex-row gap-3 ">
-          <Link href="https://supabase.com/" className="text-xs text-foreground-lighter">
+          <Link href="https://www.assistance.bg/" className="text-xs text-foreground-lighter">
             &copy; Supabase Inc
           </Link>
           <span className="text-xs text-foreground-lighter">—</span>

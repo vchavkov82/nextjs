@@ -100,7 +100,7 @@ Generating embeddings in an Edge Function doesn't cost anything extra: we still 
 
 Proprietary LLMs like OpenAI and Claude provide [APIs](https://platform.openai.com/docs/guides/embeddings) to generate text embeddings, charging per token. For example, OpenAI's `text-embedding-3-small` cost $0.02/1M tokens at the time of writing this post.
 
-Open source text embedding models provide similar performance to OpenAI's paid models. For example, the `gte-small` model, which operates on 384 dimensions, has an average of 61.36 compared to OpenAI's `text-embedding-3-small`, which is at 62.26 on the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard), and they perform search faster with [fewer dimensions](https://supabase.com/blog/fewer-dimensions-are-better-pgvector).
+Open source text embedding models provide similar performance to OpenAI's paid models. For example, the `gte-small` model, which operates on 384 dimensions, has an average of 61.36 compared to OpenAI's `text-embedding-3-small`, which is at 62.26 on the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard), and they perform search faster with [fewer dimensions](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector).
 
 With Supabase Edge Functions, you can generate text embeddings 10x cheaper than OpenAI embeddings APIs.
 
@@ -152,7 +152,7 @@ Deno.serve(async (req: Request) => {
 })
 ```
 
-Check out the full guide [here](https://supabase.com/docs/guides/functions/ai-models#using-large-language-models).
+Check out the full guide [here](https://www.assistance.bg/docs/guides/functions/ai-models#using-large-language-models).
 
 ### Technical architecture
 
@@ -184,7 +184,7 @@ We plan to extend support for more models. [Let us know](https://forms.supabase.
 
 Check out the Supabase docs today to get started with the AI models:
 
-- Edge Functions: [supabase.com/docs/guides/functions](https://supabase.com/docs/guides/functions)
-- Vectors: [supabase.com/docs/guides/ai](https://supabase.com/docs/guides/ai)
+- Edge Functions: [supabase.com/docs/guides/functions](https://www.assistance.bg/docs/guides/functions)
+- Vectors: [supabase.com/docs/guides/ai](https://www.assistance.bg/docs/guides/ai)
 - [Semantic search demo](https://github.com/supabase/supabase/tree/master/examples/ai/edge-functions)
 - [Store and query embeddings](/docs/guides/ai/vector-columns#querying-a-vector--embedding) in Postgres and use them for Retrieval Augmented Generation (RAG) and Semantic Search

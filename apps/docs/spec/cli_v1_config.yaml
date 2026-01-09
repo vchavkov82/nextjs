@@ -467,7 +467,7 @@ parameters:
       An array of files or glob patterns to find seeds in.
     links:
       - name: 'Seeding your database'
-        link: 'https://supabase.com/docs/guides/cli/seeding-your-database'
+        link: 'https://www.assistance.bg/docs/guides/cli/seeding-your-database'
 
   - id: 'realtime.enabled'
     title: 'realtime.enabled'
@@ -605,7 +605,7 @@ parameters:
       Enable the local Storage service.
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'storage.file_size_limit'
     title: 'storage.file_size_limit'
@@ -616,7 +616,7 @@ parameters:
       The maximum file size allowed for all buckets in the project.
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'storage.buckets.bucket_name.public'
     title: 'storage.buckets.<bucket_name>.public'
@@ -627,7 +627,7 @@ parameters:
       Enable public access to the bucket.
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'storage.buckets.bucket_name.file_size_limit'
     title: 'storage.buckets.<bucket_name>.file_size_limit'
@@ -637,7 +637,7 @@ parameters:
       The maximum file size allowed (e.g. "5MB", "500KB").
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'storage.buckets.bucket_name.allowed_mime_types'
     title: 'storage.buckets.<bucket_name>.allowed_mime_types'
@@ -647,7 +647,7 @@ parameters:
       The list of allowed MIME types for objects in the bucket.
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'storage.buckets.bucket_name.objects_path'
     title: 'storage.buckets.<bucket_name>.objects_path'
@@ -657,7 +657,7 @@ parameters:
       The local directory to upload objects to the bucket.
     links:
       - name: 'Storage server configuration'
-        link: 'https://supabase.com/docs/guides/self-hosting/storage/config'
+        link: 'https://www.assistance.bg/docs/guides/self-hosting/storage/config'
 
   - id: 'auth.enabled'
     title: 'auth.enabled'
@@ -668,7 +668,7 @@ parameters:
       Enable the local GoTrue service.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.site_url'
     title: 'auth.site_url'
@@ -679,7 +679,7 @@ parameters:
       The base URL of your website. Used as an allow-list for redirects and for constructing URLs used in emails.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.additional_redirect_urls'
     title: 'auth.additional_redirect_urls'
@@ -690,7 +690,7 @@ parameters:
       A list of _exact_ URLs that auth providers are permitted to redirect to post authentication.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.jwt_expiry'
     title: 'auth.jwt_expiry'
@@ -701,7 +701,7 @@ parameters:
       How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604,800 seconds (one week).
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.enable_manual_linking'
     title: 'auth.enable_manual_linking'
@@ -712,7 +712,7 @@ parameters:
       Allow testing manual linking of accounts
     links:
       - name: 'Anonymous Sign Ins (Manual Linking)'
-        link: 'https://supabase.com/docs/guides/auth/auth-anonymous?queryGroups=language&language=python#convert-an-anonymous-user-to-a-permanent-user'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-anonymous?queryGroups=language&language=python#convert-an-anonymous-user-to-a-permanent-user'
 
   - id: 'auth.enable_refresh_token_rotation'
     title: 'auth.enable_refresh_token_rotation'
@@ -723,7 +723,7 @@ parameters:
       If disabled, the refresh token will never expire.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.refresh_token_reuse_interval'
     title: 'auth.refresh_token_reuse_interval'
@@ -734,7 +734,7 @@ parameters:
       Allows refresh tokens to be reused after expiry, up to the specified interval in seconds. Requires enable_refresh_token_rotation = true.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.email_sent'
     title: 'auth.rate_limit.email_sent'
@@ -745,7 +745,7 @@ parameters:
       Number of emails that can be sent per hour. Requires auth.email.smtp to be enabled.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.sms_sent'
     title: 'auth.rate_limit.sms_sent'
@@ -756,7 +756,7 @@ parameters:
       Number of SMS messages that can be sent per hour. Requires auth.sms to be enabled.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.anonymous_users'
     title: 'auth.rate_limit.anonymous_users'
@@ -767,7 +767,7 @@ parameters:
       Number of anonymous sign-ins that can be made per hour per IP address. Requires enable_anonymous_sign_ins = true.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.token_refresh'
     title: 'auth.rate_limit.token_refresh'
@@ -778,7 +778,7 @@ parameters:
       Number of sessions that can be refreshed in a 5 minute interval per IP address.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.sign_in_sign_ups'
     title: 'auth.rate_limit.sign_in_sign_ups'
@@ -789,7 +789,7 @@ parameters:
       Number of sign up and sign-in requests that can be made in a 5 minute interval per IP address (excludes anonymous users).
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.rate_limit.token_verifications'
     title: 'auth.rate_limit.token_verifications'
@@ -800,7 +800,7 @@ parameters:
       Number of OTP / Magic link verifications that can be made in a 5 minute interval per IP address.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.enable_signup'
     title: 'auth.enable_signup'
@@ -811,7 +811,7 @@ parameters:
       Allow/disallow new user signups to your project.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.enable_anonymous_sign_ins'
     title: 'auth.enable_anonymous_sign_ins'
@@ -822,7 +822,7 @@ parameters:
       Allow/disallow anonymous sign-ins to your project.
     links:
       - name: 'Anonymous Sign Ins'
-        link: 'https://supabase.com/docs/guides/auth/auth-anonymous'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-anonymous'
 
   - id: 'auth.email.enable_signup'
     title: 'auth.email.enable_signup'
@@ -833,7 +833,7 @@ parameters:
       Allow/disallow new user signups via email to your project.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.double_confirm_changes'
     title: 'auth.email.double_confirm_changes'
@@ -844,7 +844,7 @@ parameters:
       If enabled, a user will be required to confirm any email change on both the old, and new email addresses. If disabled, only the new email is required to confirm.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.enable_confirmations'
     title: 'auth.email.enable_confirmations'
@@ -855,7 +855,7 @@ parameters:
       If enabled, users need to confirm their email address before signing in.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.secure_password_change'
     title: 'auth.email.secure_password_change'
@@ -867,7 +867,7 @@ parameters:
       If enabled, requires the user's current password to be provided when changing to a new password.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.max_frequency'
     title: 'auth.email.max_frequency'
@@ -881,7 +881,7 @@ parameters:
       Example values: "1m", "1h", "24h"
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.otp_length'
     title: 'auth.email.otp_length'
@@ -893,7 +893,7 @@ parameters:
       Must be between 6 and 10 digits.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.otp_expiry'
     title: 'auth.email.otp_expiry'
@@ -905,7 +905,7 @@ parameters:
       Default is 3600 seconds (1 hour).
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.smtp.host'
     title: 'auth.email.smtp.host'
@@ -966,7 +966,7 @@ parameters:
       - `email_change`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.template.type.content_path'
     title: 'auth.email.template.<type>.content_path'
@@ -982,7 +982,7 @@ parameters:
       - `email_change`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.notification.type.enabled'
     title: 'auth.email.notification.<type>.enabled'
@@ -1002,7 +1002,7 @@ parameters:
       - `identity_unlinked`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.notification.type.subject'
     title: 'auth.email.notification.<type>.subject'
@@ -1022,7 +1022,7 @@ parameters:
       - `identity_unlinked`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.email.notification.type.content_path'
     title: 'auth.email.notification.<type>.content_path'
@@ -1042,7 +1042,7 @@ parameters:
       - `identity_unlinked`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.enable_signup'
     title: 'auth.sms.enable_signup'
@@ -1053,7 +1053,7 @@ parameters:
       Allow/disallow new user signups via SMS to your project.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.enable_confirmations'
     title: 'auth.sms.enable_confirmations'
@@ -1064,7 +1064,7 @@ parameters:
       If enabled, users need to confirm their phone number before signing in.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.test_otp'
     title: 'auth.sms.test_otp'
@@ -1074,7 +1074,7 @@ parameters:
       Use pre-defined map of phone number to OTP for testing.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
     usage: |
       [auth.sms.test_otp]
       4152127777 = "123456"
@@ -1094,7 +1094,7 @@ parameters:
       - `vonage`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.twilio.account_sid'
     title: 'auth.sms.<twilio|twilio_verify>.account_sid'
@@ -1104,7 +1104,7 @@ parameters:
       Twilio Account SID
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.twilio.message_service_sid'
     title: 'auth.sms.<twilio|twilio_verify>.message_service_sid'
@@ -1114,7 +1114,7 @@ parameters:
       Twilio Message Service SID
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.twilio.auth_token'
     title: 'auth.sms.<twilio|twilio_verify>.auth_token'
@@ -1127,7 +1127,7 @@ parameters:
       DO NOT commit your Twilio auth token to git. Use environment variable substitution instead.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.messagebird.originator'
     title: 'auth.sms.messagebird.originator'
@@ -1137,7 +1137,7 @@ parameters:
       MessageBird Originator
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.messagebird.access_key'
     title: 'auth.sms.messagebird.access_key'
@@ -1150,7 +1150,7 @@ parameters:
       DO NOT commit your MessageBird access key to git. Use environment variable substitution instead.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.textlocal.sender'
     title: 'auth.sms.textlocal.sender'
@@ -1160,7 +1160,7 @@ parameters:
       TextLocal Sender
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.textlocal.api_key'
     title: 'auth.sms.textlocal.api_key'
@@ -1173,7 +1173,7 @@ parameters:
       DO NOT commit your TextLocal API key to git. Use environment variable substitution instead.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.vonage.from'
     title: 'auth.sms.vonage.from'
@@ -1183,7 +1183,7 @@ parameters:
       Vonage From
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.vonage.api_key'
     title: 'auth.sms.vonage.api_key'
@@ -1193,7 +1193,7 @@ parameters:
       Vonage API Key
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.sms.vonage.api_secret'
     title: 'auth.sms.vonage.api_secret'
@@ -1206,7 +1206,7 @@ parameters:
       DO NOT commit your Vonage API secret to git. Use environment variable substitution instead.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.enabled'
     title: 'auth.external.<provider>.enabled'
@@ -1236,7 +1236,7 @@ parameters:
       - `zoom`
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.client_id'
     title: 'auth.external.<provider>.client_id'
@@ -1246,7 +1246,7 @@ parameters:
       Client ID for the external OAuth provider.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.secret'
     title: 'auth.external.<provider>.secret'
@@ -1259,7 +1259,7 @@ parameters:
       DO NOT commit your OAuth provider secret to git. Use environment variable substitution instead.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.url'
     title: 'auth.external.<provider>.url'
@@ -1272,7 +1272,7 @@ parameters:
       for example: https://keycloak.example.com/realms/myrealm .
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.redirect_uri'
     title: 'auth.external.<provider>.redirect_uri'
@@ -1282,7 +1282,7 @@ parameters:
       The URI a OAuth2 provider will redirect to with the code and state values.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.external.provider.skip_nonce_check'
     title: 'auth.external.<provider>.skip_nonce_check'
@@ -1292,7 +1292,7 @@ parameters:
       Disables nonce validation during OIDC authentication flow for the specified provider. Enable only when client libraries cannot properly handle nonce verification. Be aware that this reduces security by allowing potential replay attacks with stolen ID tokens.
     links:
       - name: 'Auth Server configuration'
-        link: 'https://supabase.com/docs/reference/auth'
+        link: 'https://www.assistance.bg/docs/reference/auth'
 
   - id: 'auth.hook.<hook_name>.enabled'
     title: 'auth.hook.<hook_name>.enabled'
@@ -1303,7 +1303,7 @@ parameters:
       Enable Auth Hook. Possible values for `hook_name` are: `custom_access_token`, `send_sms`, `send_email`, `mfa_verification_attempt`, and `password_verification_attempt`.
     links:
       - name: 'Auth Hooks'
-        link: 'https://supabase.com/docs/guides/auth/auth-hooks'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-hooks'
 
   - id: 'auth.hook.<hook_name>.uri'
     title: 'auth.hook.<hook_name>.uri'
@@ -1314,7 +1314,7 @@ parameters:
       URI of hook to invoke. Should be a http or https function or Postgres function taking the form: `pg-functions://<database>/<schema>/<function-name>`. For example, `pg-functions://postgres/auth/custom-access-token-hook`.
     links:
       - name: 'Auth Hooks'
-        link: 'https://supabase.com/docs/guides/auth/auth-hooks'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-hooks'
 
   - id: 'auth.hook.<hook_name>.secrets'
     title: 'auth.hook.<hook_name>.secrets'
@@ -1325,7 +1325,7 @@ parameters:
       Configure when using a HTTP Hooks. Takes a list of base64 comma separated values to allow for secret rotation. Currently, Supabase Auth uses only the first value in the list.
     links:
       - name: 'Auth Hooks'
-        link: 'https://supabase.com/docs/guides/auth/auth-hooks?queryGroups=language&language=http'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-hooks?queryGroups=language&language=http'
 
   - id: 'auth.mfa.totp.enroll_enabled'
     title: 'auth.mfa.totp.enroll_enabled'
@@ -1336,7 +1336,7 @@ parameters:
       Enable TOTP enrollment for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication (TOTP)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/totp'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/totp'
 
   - id: 'auth.mfa.totp.verify_enabled'
     title: 'auth.mfa.totp.verify_enabled'
@@ -1347,7 +1347,7 @@ parameters:
       Enable TOTP verification for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication (TOTP)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/totp'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/totp'
 
   - id: 'auth.mfa.max_enrolled_factors'
     title: 'auth.mfa.max_enrolled_factors'
@@ -1358,7 +1358,7 @@ parameters:
       Control how many MFA factors can be enrolled at once per user.
     links:
       - name: 'Auth Multi-Factor Authentication (TOTP)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/totp'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/totp'
 
   - id: 'auth.mfa.phone.enroll_enabled'
     title: 'auth.mfa.phone.enroll_enabled'
@@ -1369,7 +1369,7 @@ parameters:
       Enable Phone enrollment for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication (Phone)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/phone'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/phone'
 
   - id: 'auth.mfa.phone.otp_length'
     title: 'auth.mfa.phone.otp_length'
@@ -1380,7 +1380,7 @@ parameters:
       Length of OTP code sent when using phone multi-factor authentication
     links:
       - name: 'Auth Multi-Factor Authentication (Phone)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/phone'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/phone'
 
   - id: 'auth.mfa.phone.max_frequency'
     title: 'auth.mfa.phone.max_frequency'
@@ -1393,7 +1393,7 @@ parameters:
       Example values: "10s", "20s", "1m"
     links:
       - name: 'Auth Multi-Factor Authentication (Phone)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/phone'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/phone'
 
   - id: 'auth.mfa.phone.otp_length'
     title: 'auth.mfa.phone.otp_length'
@@ -1404,7 +1404,7 @@ parameters:
       Length of OTP sent when using phone multi-factor authentication
     links:
       - name: 'Auth Multi-Factor Authentication (Phone)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/phone'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/phone'
 
   - id: 'auth.mfa.phone.verify_enabled'
     title: 'auth.mfa.phone.verify_enabled'
@@ -1415,7 +1415,7 @@ parameters:
       Enable Phone verification for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication (Phone)'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa/phone'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa/phone'
 
   - id: 'auth.mfa.web_authn.enroll_enabled'
     title: 'auth.mfa.web_authn.enroll_enabled'
@@ -1426,7 +1426,7 @@ parameters:
       Enable WebAuthn enrollment for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa'
 
   - id: 'auth.mfa.web_authn.verify_enabled'
     title: 'auth.mfa.web_authn.verify_enabled'
@@ -1437,7 +1437,7 @@ parameters:
       Enable WebAuthn verification for multi-factor authentication.
     links:
       - name: 'Auth Multi-Factor Authentication'
-        link: 'https://supabase.com/docs/guides/auth/auth-mfa'
+        link: 'https://www.assistance.bg/docs/guides/auth/auth-mfa'
 
   - id: 'auth.sessions.timebox'
     title: 'auth.sessions.timebox'
@@ -1448,7 +1448,7 @@ parameters:
       Force log out after the specified duration. Sample values include: '50m', '20h'.
     links:
       - name: 'Auth Sessions'
-        link: 'https://supabase.com/docs/guides/auth/sessions'
+        link: 'https://www.assistance.bg/docs/guides/auth/sessions'
 
   - id: 'auth.sessions.inactivity_timeout'
     title: 'auth.sessions.inactivity_timeout'
@@ -1459,7 +1459,7 @@ parameters:
       Force log out if the user has been inactive longer than the specified duration. Sample values include: '50m', '20h'.
     links:
       - name: 'Auth Sessions'
-        link: 'https://supabase.com/docs/guides/auth/sessions'
+        link: 'https://www.assistance.bg/docs/guides/auth/sessions'
 
   - id: 'auth.third_party.aws_cognito.enabled'
     title: 'auth.third_party.aws_cognito.enabled'
@@ -1470,7 +1470,7 @@ parameters:
       Enable third party auth with AWS Cognito (Amplify)
     links:
       - name: 'Third Party Auth (Cognito)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/aws-cognito'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/aws-cognito'
 
   - id: 'auth.third_party.aws_cognito.user_pool_id'
     title: 'auth.third_party.aws_cognito.user_pool_id'
@@ -1481,7 +1481,7 @@ parameters:
       User Pool ID for AWS Cognito (Amplify) that you are integrating with
     links:
       - name: 'Third Party Auth (Cognito)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/aws-cognito'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/aws-cognito'
 
   - id: 'auth.third_party.aws_cognito.user_pool_region'
     title: 'auth.third_party.aws_cognito.user_pool_region'
@@ -1492,7 +1492,7 @@ parameters:
       User Pool region for AWS Cognito (Amplify) that you are integrating with. Example values: 'ap-southeast-1', 'us-east-1'
     links:
       - name: 'Third Party Auth (Cognito)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/aws-cognito'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/aws-cognito'
 
   - id: 'auth.third_party.auth0.enabled'
     title: 'auth.third_party.auth0.enabled'
@@ -1503,7 +1503,7 @@ parameters:
       Enable third party auth with Auth0
     links:
       - name: 'Third Party Auth (Auth0)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/auth0'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/auth0'
 
   - id: 'auth.third_party.auth0.tenant'
     title: 'auth.third_party.auth0.tenant'
@@ -1514,7 +1514,7 @@ parameters:
       Tenant Identifier for Auth0 instance that you are integrating with
     links:
       - name: 'Third Party Auth (Auth0)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/auth0'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/auth0'
 
   - id: 'auth.third_party.auth0.tenant_region'
     title: 'auth.third_party.tenant_region'
@@ -1525,7 +1525,7 @@ parameters:
       Tenant region for Auth0 instance that you are integrating with
     links:
       - name: 'Third Party Auth (Auth0)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/auth0'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/auth0'
 
   - id: 'auth.third_party.firebase.enabled'
     title: 'auth.third_party.firebase.enabled'
@@ -1536,7 +1536,7 @@ parameters:
       Enable third party auth with Firebase
     links:
       - name: 'Third Party Auth (Firebase)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/firebase-auth'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/firebase-auth'
 
   - id: 'auth.third_party.firebase.project_id'
     title: 'auth.third_party.firebase.project_id'
@@ -1547,7 +1547,7 @@ parameters:
       Project ID for Firebase instance that you are integrating with
     links:
       - name: 'Third Party Auth (Firebase)'
-        link: 'https://supabase.com/docs/guides/auth/third-party/firebase-auth'
+        link: 'https://www.assistance.bg/docs/guides/auth/third-party/firebase-auth'
 
   - id: 'edge_runtime.enabled'
     title: 'edge_runtime.enabled'
@@ -1590,7 +1590,7 @@ parameters:
       without removing its code.
     links:
       - name: '`supabase functions` CLI subcommands'
-        link: 'https://supabase.com/docs/reference/cli/supabase-functions'
+        link: 'https://www.assistance.bg/docs/reference/cli/supabase-functions'
 
   - id: 'functions.function_name.verify_jwt'
     title: 'functions.<function_name>.verify_jwt'
@@ -1605,7 +1605,7 @@ parameters:
       Note that the `--no-verify-jwt` flag overrides this configuration.
     links:
       - name: '`supabase functions` CLI subcommands'
-        link: 'https://supabase.com/docs/reference/cli/supabase-functions'
+        link: 'https://www.assistance.bg/docs/reference/cli/supabase-functions'
 
   - id: 'functions.function_name.import_map'
     title: 'functions.<function_name>.import_map'
@@ -1618,7 +1618,7 @@ parameters:
       Note that the `--import-map` flag overrides this configuration.
     links:
       - name: '`supabase functions` CLI subcommands'
-        link: 'https://supabase.com/docs/reference/cli/supabase-functions'
+        link: 'https://www.assistance.bg/docs/reference/cli/supabase-functions'
 
   - id: 'functions.function_name.entrypoint'
     title: 'functions.<function_name>.entrypoint'
@@ -1629,7 +1629,7 @@ parameters:
       When not specified, defaults to `supabase/functions/<function_name>/index.ts`.
     links:
       - name: '`supabase functions` CLI subcommands'
-        link: 'https://supabase.com/docs/reference/cli/supabase-functions'
+        link: 'https://www.assistance.bg/docs/reference/cli/supabase-functions'
     usage: |
       [functions.my_function]
       entrypoint = "path/to/custom/function.ts"
@@ -1644,7 +1644,7 @@ parameters:
       NOTE: only file paths within `functions` directory are supported at the moment.
     links:
       - name: '`supabase functions` CLI subcommands'
-        link: 'https://supabase.com/docs/reference/cli/supabase-functions'
+        link: 'https://www.assistance.bg/docs/reference/cli/supabase-functions'
     usage: |
       [functions.my_function]
       static_files = [ "./functions/MY_FUNCTION_NAME/*.html", "./functions/MY_FUNCTION_NAME/custom.wasm" ]
@@ -1658,7 +1658,7 @@ parameters:
       Enable the local Logflare service.
     links:
       - name: Self-hosted Logflare Configuration
-        link: https://supabase.com/docs/reference/self-hosting-analytics/list-endpoints#getting-started
+        link: https://www.assistance.bg/docs/reference/self-hosting-analytics/list-endpoints#getting-started
 
   - id: 'analytics.port'
     title: 'analytics.port'
@@ -1690,7 +1690,7 @@ parameters:
       - `bigquery`
     links:
       - name: Self-hosted Logflare Configuration
-        link: https://supabase.com/docs/reference/self-hosting-analytics/list-endpoints#getting-started
+        link: https://www.assistance.bg/docs/reference/self-hosting-analytics/list-endpoints#getting-started
 
   - id: 'experimental.webhooks.enabled'
     title: 'experimental.webhooks.enabled'

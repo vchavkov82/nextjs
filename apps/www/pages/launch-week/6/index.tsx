@@ -152,7 +152,7 @@ export default function launchweek() {
         openGraph={{
           title: title,
           description: description,
-          url: `https://supabase.com/launch-week`,
+          url: `https://www.assistance.bg/launch-week`,
           images: [
             {
               url: `${SITE_ORIGIN}/images/launchweek/launch-week-6.jpg`,
@@ -886,7 +886,7 @@ export default function launchweek() {
               Supabase and you can win $1500 in GitHub sponsorships and a coveted Supabase Darkmode
               Keyboard! For more info check the{' '}
               <a
-                href="https://supabase.com/blog/launch-week-6-hackathon"
+                href="https://www.assistance.bg/blog/launch-week-6-hackathon"
                 target="_blank"
                 rel="nooper noreferrer"
                 className="text-brand"

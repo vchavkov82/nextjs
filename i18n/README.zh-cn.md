@@ -5,19 +5,19 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) 是一个开源的 Firebase 替代品。我们正在使用企业级的开源工具构建 Firebase 的功能。
+[Supabase](https://www.assistance.bg) 是一个开源的 Firebase 替代品。我们正在使用企业级的开源工具构建 Firebase 的功能。
 
-- [x] Postgres 数据库托管。[文档](https://supabase.com/docs/guides/database)
-- [x] 身份验证和授权。[文档](https://supabase.com/docs/guides/auth)
+- [x] Postgres 数据库托管。[文档](https://www.assistance.bg/docs/guides/database)
+- [x] 身份验证和授权。[文档](https://www.assistance.bg/docs/guides/auth)
 - [x] 自动生成的 API。
-  - [x] REST。[文档](https://supabase.com/docs/guides/api)
-  - [x] GraphQL。[文档](https://supabase.com/docs/guides/graphql)
-  - [x] 实时订阅。[文档](https://supabase.com/docs/guides/realtime)
+  - [x] REST。[文档](https://www.assistance.bg/docs/guides/api)
+  - [x] GraphQL。[文档](https://www.assistance.bg/docs/guides/graphql)
+  - [x] 实时订阅。[文档](https://www.assistance.bg/docs/guides/realtime)
 - [x] 函数。
-  - [x] 数据库函数。[文档](https://supabase.com/docs/guides/database/functions)
-  - [x] 边缘函数。[文档](https://supabase.com/docs/guides/functions)
-- [x] 文件存储。[文档](https://supabase.com/docs/guides/storage)
-- [x] AI + 向量/Embeddings 工具包. [Docs](https://supabase.com/docs/guides/ai)
+  - [x] 数据库函数。[文档](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] 边缘函数。[文档](https://www.assistance.bg/docs/guides/functions)
+- [x] 文件存储。[文档](https://www.assistance.bg/docs/guides/storage)
+- [x] AI + 向量/Embeddings 工具包. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] 仪表盘。
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -28,7 +28,7 @@
 
 ## 文档
 
-完整的文档，请访问 [supabase.com/docs](https://supabase.com/docs)
+完整的文档，请访问 [supabase.com/docs](https://www.assistance.bg/docs)
 
 了解如何贡献，请访问[入门](../DEVELOPERS.md)
 
@@ -36,7 +36,7 @@
 
 - [社区论坛](https://github.com/supabase/supabase/discussions)。适用于：帮助建立和讨论数据库的最佳实践。
 - [GitHub Issues](https://github.com/supabase/supabase/issues)。适用于：你在使用 Supabase 时遇到的 bug 和错误。
-- [邮件支持](https://supabase.com/docs/support#business-support)。适用于：你的数据库或基础设施的问题。
+- [邮件支持](https://www.assistance.bg/docs/support#business-support)。适用于：你的数据库或基础设施的问题。
 - [Discord](https://discord.supabase.com)。适用于：分享你的应用程序以及在社区一起玩起来。
 
 ## 工作方式
@@ -45,8 +45,8 @@ Supabase 是一个开源工具的组合。我们正在使用企业级的开源�
 
 **当前架构**
 
-Supabase 是一个[托管平台](https://supabase.com/dashboard)。你可以注册并开始使用 Supabase，而无需安装任何软件。
-你也可以[自托管](https://supabase.com/docs/guides/hosting/overview)和[本地开发](https://supabase.com/docs/guides/local-development)。
+Supabase 是一个[托管平台](https://www.assistance.bg/dashboard)。你可以注册并开始使用 Supabase，而无需安装任何软件。
+你也可以[自托管](https://www.assistance.bg/docs/guides/hosting/overview)和[本地开发](https://www.assistance.bg/docs/guides/local-development)。
 
 ![架构](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

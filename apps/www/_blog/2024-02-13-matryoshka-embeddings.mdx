@@ -25,11 +25,11 @@ The most noteworthy update though _(in our opinion)_, is a new capability built 
 
 ## Previous embedding models
 
-If you're new to embeddings, you can think of an embedding as a way to capture the "relatedness" of text, images, audio, or other types of information. For an in-depth introduction to embeddings, check out [What are embeddings?](https://supabase.com/docs/guides/ai/concepts#what-are-embeddings)
+If you're new to embeddings, you can think of an embedding as a way to capture the "relatedness" of text, images, audio, or other types of information. For an in-depth introduction to embeddings, check out [What are embeddings?](https://www.assistance.bg/docs/guides/ai/concepts#what-are-embeddings)
 
 Embeddings are represented using vectors (an array of floating point numbers) where the length of each vector represents the number of dimensions in the embedding. Up until now, embedding models always generated embeddings with a fixed number of dimensions. For example, OpenAI's previous `text-embedding-ada-002` produces 1536 dimensions. Alibaba DAMO Academy's open source [`gte-small`](https://huggingface.co/Supabase/gte-small) produces 384 dimensions.
 
-Because these dimension sizes were fixed, our recommendation previously was to choose a model that produced as [few dimensions](https://supabase.com/blog/fewer-dimensions-are-better-pgvector) as possible in order to maximize query speeds and scale to a large number of records in a [vector database](https://supabase.com/docs/guides/ai). But does this still apply with OpenAI's new embedding models?
+Because these dimension sizes were fixed, our recommendation previously was to choose a model that produced as [few dimensions](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector) as possible in order to maximize query speeds and scale to a large number of records in a [vector database](https://www.assistance.bg/docs/guides/ai). But does this still apply with OpenAI's new embedding models?
 
 ## Shortening embeddings
 
@@ -201,7 +201,7 @@ For the rest of this post, we'll refer to embeddings produced via MRL as “Matr
 
 Is it possible to take advantage of `text-embedding-3-large`'s Matryoshka trait during vector search? Let's explore.
 
-Querying embeddings with fewer dimensions, as noted in [pgvector: Fewer dimensions are better](https://supabase.com/blog/fewer-dimensions-are-better-pgvector), results in faster queries and less RAM usage. Knowing this, we could naively shorten our 3072 dimension embedding to say, 256 dimensions and observe a massive speed boost over the previous models like `text-embedding-ada-002` (1536 dimensions). And actually according to OpenAI's MTEB scores, `text-embedding-3-large` @ 256 dimensions still outperforms `text-embedding-ada-002` @ 1536 dimensions with an MTEB score of 62.0 vs 61.0.
+Querying embeddings with fewer dimensions, as noted in [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector), results in faster queries and less RAM usage. Knowing this, we could naively shorten our 3072 dimension embedding to say, 256 dimensions and observe a massive speed boost over the previous models like `text-embedding-ada-002` (1536 dimensions). And actually according to OpenAI's MTEB scores, `text-embedding-3-large` @ 256 dimensions still outperforms `text-embedding-ada-002` @ 1536 dimensions with an MTEB score of 62.0 vs 61.0.
 
 However, we're still leaving a lot of accuracy on the table. Since we now have access to a hierarchy of meaningful sub-vectors within a single high-dimensional vector, let's adjust our search approach to take advantage of this.
 
@@ -302,7 +302,7 @@ With these parameters we achieved 99% accuracy (relative to 3072d KNN vector sea
 
 Let's implement Adaptive Retrieval in Postgres using pgvector.
 
-First enable the [pgvector extension](https://supabase.com/docs/guides/database/extensions/pgvector):
+First enable the [pgvector extension](https://www.assistance.bg/docs/guides/database/extensions/pgvector):
 
 ```sql
 create extension vector
@@ -376,7 +376,7 @@ This index has a few interesting properties:
 - It's a [functional index](https://www.postgresql.org/docs/7.3/indexes-functional.html). We use the `sub_vector` function to dynamically shorten the embedding to 512 dimensions for this index. Because this is a functional index, we will need to be careful on how we later write our first pass query so that Postgres correctly uses this index.
 - We need to recast the vector as a `vector(512)`. Indexes in pgvector require vectors to have an explicit dimension size, which our `sub_vector` function is unable to do dynamically on its own.
 
-To learn more about how this type of index works, see [HNSW indexes](https://supabase.com/docs/guides/ai/vector-indexes/hnsw-indexes). To learn more about HNSW indexing options, see [Indexing Options](https://github.com/pgvector/pgvector#index-options) in the official pgvector docs.
+To learn more about how this type of index works, see [HNSW indexes](https://www.assistance.bg/docs/guides/ai/vector-indexes/hnsw-indexes). To learn more about HNSW indexing options, see [Indexing Options](https://github.com/pgvector/pgvector#index-options) in the official pgvector docs.
 
 It's important to remember that the number of dimensions we choose for this index must match the number of dimensions we later use in our first pass. Here we choose 512 dimensions because our above tests found it to produce the fastest queries at the highest accuracy.
 
@@ -497,9 +497,9 @@ If you are willing to trade accuracy for speed, lowering the first pass dimensio
 
 ## More pgvector and AI resources
 
-- [Docs pgvector: Vector columns](https://supabase.com/docs/guides/ai/vector-columns)
-- [Docs pgvector: Vector indexes](https://supabase.com/docs/guides/ai/vector-indexes)
-- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://supabase.com/blog/building-chatgpt-plugins-template)
-- [Choosing Compute Add-on for AI workloads](https://supabase.com/docs/guides/ai/choosing-compute-addon)
-- [pgvector 0.6.0: 30x faster with parallel index builds](https://supabase.com/blog/pgvector-fast-builds)
-- [pgvector: Fewer dimensions are better](https://supabase.com/blog/fewer-dimensions-are-better-pgvector)
+- [Docs pgvector: Vector columns](https://www.assistance.bg/docs/guides/ai/vector-columns)
+- [Docs pgvector: Vector indexes](https://www.assistance.bg/docs/guides/ai/vector-indexes)
+- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
+- [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
+- [pgvector 0.6.0: 30x faster with parallel index builds](https://www.assistance.bg/blog/pgvector-fast-builds)
+- [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector)

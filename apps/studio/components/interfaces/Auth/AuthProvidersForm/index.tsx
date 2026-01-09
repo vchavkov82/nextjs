@@ -68,7 +68,7 @@ export const AuthProvidersForm = () => {
                       hour.
                     </p>
                     <Button asChild type="default" className="w-min" icon={<ExternalLink />}>
-                      <Link href="https://supabase.com/docs/guides/platform/going-into-prod#security">
+                      <Link href="https://www.assistance.bg/docs/guides/platform/going-into-prod#security">
                         View security recommendations
                       </Link>
                     </Button>

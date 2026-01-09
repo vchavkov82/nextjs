@@ -13,7 +13,7 @@ date: '2024-01-26'
 toc_depth: 3
 ---
 
-Supabase has a low latency real-time communication feature called [Broadcast](https://supabase.com/docs/guides/realtime/broadcast). With it, you can have your clients communicate with other clients with low latencies. This is useful for creating apps with connected experiences. Flutter has a [CustomPainter](https://api.flutter.dev/flutter/rendering/CustomPainter-class.html) class, which allows developers to interact with the low-level canvas API allowing us to render virtually anything on the app. Combining these two tools allows us to create interactive apps.
+Supabase has a low latency real-time communication feature called [Broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast). With it, you can have your clients communicate with other clients with low latencies. This is useful for creating apps with connected experiences. Flutter has a [CustomPainter](https://api.flutter.dev/flutter/rendering/CustomPainter-class.html) class, which allows developers to interact with the low-level canvas API allowing us to render virtually anything on the app. Combining these two tools allows us to create interactive apps.
 
 In this article, I am combining the Supabase Realtime Broadcast with Flutter’s `CustomPainter` to create a collaborative design board app like Figma.
 
@@ -64,11 +64,11 @@ flutter pub add supabase_flutter uuid
 
 ### Setup the Supabase project
 
-In this example, we will be using a remote Supabase instance, but if you would like to follow along with a [local Supabase instance](https://supabase.com/docs/guides/cli/local-development), that is fine too.
+In this example, we will be using a remote Supabase instance, but if you would like to follow along with a [local Supabase instance](https://www.assistance.bg/docs/guides/cli/local-development), that is fine too.
 
 You can head to [database.new](https://database.new) to create a new Supabase project for free. It will only take a minute or two to set up your project with a fully-fledged Postgres database.
 
-Once your project is ready, run the following SQL from the SQL editor of your dashboard to set up the table and [RLS policies](https://supabase.com/docs/guides/auth/row-level-security) for this app. To keep this article simple, we will not implement auth, so the policies you see are fairly simple.
+Once your project is ready, run the following SQL from the SQL editor of your dashboard to set up the table and [RLS policies](https://www.assistance.bg/docs/guides/auth/row-level-security) for this app. To keep this article simple, we will not implement auth, so the policies you see are fairly simple.
 
 ```sql
 create table canvas_objects (
@@ -556,7 +556,7 @@ class _CanvasPageState extends State<CanvasPage> {
 }
 ```
 
-First, we can define all of the properties we need for this widget. `_userCursors` and `_canvasObjects` will hold the cursors and canvas objects the app receives from the real-time listener. `_canvasChanel` is the gateway for the client to communicate with other clients using [Supabase Realtime](https://supabase.com/docs/guides/realtime). We will later implement the logic to send and receive information about the canvas. Then there are a few states that will be used when we implement the drawing on the canvas.
+First, we can define all of the properties we need for this widget. `_userCursors` and `_canvasObjects` will hold the cursors and canvas objects the app receives from the real-time listener. `_canvasChanel` is the gateway for the client to communicate with other clients using [Supabase Realtime](https://www.assistance.bg/docs/guides/realtime). We will later implement the logic to send and receive information about the canvas. Then there are a few states that will be used when we implement the drawing on the canvas.
 
 ```dart
 class _CanvasPageState extends State<CanvasPage> {
@@ -595,7 +595,7 @@ class _CanvasPageState extends State<CanvasPage> {
 
 Now that we have the properties defined, we can run some initialization code to set up the scene. There are a few things we are doing in this initialization step.
 
-One, assigning a randomly generated UUID to the user. Two, setting up the real-time listener for Supabase. We are listening to [Realtime Broadcast events](https://supabase.com/docs/guides/realtime/broadcast?language=dart), which are low-latency real-time communication mechanisms that Supabase offers. Within the callback of the broadcast event, we obtain the cursor and object information sent from other clients and set the state accordingly. And three, we load the initial state of the canvas from the database and set it as the initial state of the widget.
+One, assigning a randomly generated UUID to the user. Two, setting up the real-time listener for Supabase. We are listening to [Realtime Broadcast events](https://www.assistance.bg/docs/guides/realtime/broadcast?language=dart), which are low-latency real-time communication mechanisms that Supabase offers. Within the callback of the broadcast event, we obtain the cursor and object information sent from other clients and set the state accordingly. And three, we load the initial state of the canvas from the database and set it as the initial state of the widget.
 
 Now that the app has been initialized, we are ready to implement the logic of the user drawing and interacting with the canvas.
 
@@ -854,14 +854,14 @@ At this point, we have implemented everything we need to create a collaborative 
 
 ## Conclusion
 
-In this article, we learned how we can combine the [Supabase Realtime Broadcast](https://supabase.com/docs/guides/realtime/broadcast) feature with Flutter’s `CustomPainter` to create a collaborative design app. We learned how to implement real-time communication between multiple clients using the Broadcast feature, and how we can broadcast the shape and cursor data to other connected clients in real-time.
+In this article, we learned how we can combine the [Supabase Realtime Broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast) feature with Flutter’s `CustomPainter` to create a collaborative design app. We learned how to implement real-time communication between multiple clients using the Broadcast feature, and how we can broadcast the shape and cursor data to other connected clients in real-time.
 
-This article only used circles and rectangles to keep things simple, but you can easily add support for other types of objects like texts or arrows just by extending the `CanvasObject` class to make the app more like Figma. Another fun way to expand this app would be to add authentication using [Supabase Auth](https://supabase.com/docs/guides/auth) so that we can add proper authorizations. Adding an image upload feature using [Supabase Storage](https://supabase.com/docs/guides/storage) would certainly open up more creative options for the app.
+This article only used circles and rectangles to keep things simple, but you can easily add support for other types of objects like texts or arrows just by extending the `CanvasObject` class to make the app more like Figma. Another fun way to expand this app would be to add authentication using [Supabase Auth](https://www.assistance.bg/docs/guides/auth) so that we can add proper authorizations. Adding an image upload feature using [Supabase Storage](https://www.assistance.bg/docs/guides/storage) would certainly open up more creative options for the app.
 
 ## Resources
 
 - [Add live cursor sharing using Flutter and Supabase | Flutter Figma Clone #1](https://youtu.be/QhRNXlFLaeE?si=_hi5WcILUsAv8jJY)
 - [Draw and sync canvas in real-time | Flutter Figma Clone #2](https://youtu.be/zKjrmAMf2Cs?si=i7zILCFKitjDb45K)
 - [Track online users with Supabase Realtime Presence | Flutter Figma Clone #3](https://youtu.be/B2NZvZ2uLNs?si=0rMj7u1gaMH9Bmdm)
-- [How to build a real-time multiplayer game with Flutter Flame](https://supabase.com/blog/flutter-real-time-multiplayer-game)
-- [Getting started with Flutter authentication](https://supabase.com/blog/flutter-authentication)
+- [How to build a real-time multiplayer game with Flutter Flame](https://www.assistance.bg/blog/flutter-real-time-multiplayer-game)
+- [Getting started with Flutter authentication](https://www.assistance.bg/blog/flutter-authentication)

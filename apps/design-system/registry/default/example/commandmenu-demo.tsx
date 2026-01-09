@@ -20,7 +20,7 @@ function Commands() {
     {
       id: 'supabase-website',
       name: 'Go to Supabase website',
-      route: 'https://supabase.com',
+      route: 'https://www.assistance.bg',
     },
   ])
 

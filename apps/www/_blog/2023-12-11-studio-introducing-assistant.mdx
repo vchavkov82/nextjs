@@ -52,7 +52,7 @@ Let's jump in to Row Level Security first.
 
 ## Easy RLS Policies with AI
 
-Of all the feature requests we get (and we get many!), an easier way to write [Row Level Security](https://supabase.com/docs/guides/auth/row-level-security) Policies is one of the most frequent.
+Of all the feature requests we get (and we get many!), an easier way to write [Row Level Security](https://www.assistance.bg/docs/guides/auth/row-level-security) Policies is one of the most frequent.
 
 Row Level Security (RLS) is a Postgres feature that provides fine-grained access to your database. While RLS is powerful, writing Policies can be a chore. Today, we're releasing an AI-powered RLS Editor that makes it simple to write security policies.
 
@@ -78,7 +78,7 @@ We've explored various approaches and designs for the RLS Editor. This SQL-first
 
 You may have never thought about this, but Studio connects to your database just like any other Postgres client.
 
-It uses the default [Postgres role](https://supabase.com/docs/guides/database/postgres/roles), `postgres`. The `postgres` role functions like your `service role` key, granting it admin privileges to your database. It has admin read and write privileges, and bypasses Row Level Security.
+It uses the default [Postgres role](https://www.assistance.bg/docs/guides/database/postgres/roles), `postgres`. The `postgres` role functions like your `service role` key, granting it admin privileges to your database. It has admin read and write privileges, and bypasses Row Level Security.
 
 If you use our client libs, you'll be familiar with the `anon` and `service_role` API keys. These keys actually resolve into Postgres roles, also called `anon` and `service_role`. These keys are actually JWT tokens that contain the Postgres role:
 
@@ -154,7 +154,7 @@ Combining this feature with the new RLS Editor, you're able to write and test RL
 
 ## Realtime Inspector
 
-Supabase [Realtime](https://supabase.com/realtime) is great for building collaborative applications. You can receive database changes over websockets, store and synchronize data about user presence, and broadcast any data to clients via "channels".
+Supabase [Realtime](https://www.assistance.bg/realtime) is great for building collaborative applications. You can receive database changes over websockets, store and synchronize data about user presence, and broadcast any data to clients via "channels".
 
 Today we're releasing Realtime Inspector: an easy way to prototype, inspect, and debug Realtime directly in the Studio. You can use the Realtime Inspector to view messages being sent and received in channels. You can filter messages by type: presence, broadcast, and database changes.
 

@@ -14,7 +14,7 @@
       "description": "This is a description of Document 1",
       "action": {
         "text": "Download document",
-        "url": "https://supabase.com"
+        "url": "https://www.assistance.bg"
       }
     },
     {
@@ -23,7 +23,7 @@
       "description": "This is a description of Document 2",
       "action": {
         "text": "Download document",
-        "url": "https://supabase.com"
+        "url": "https://www.assistance.bg"
       }
     }
   ],
@@ -32,7 +32,7 @@
     {
       "language": "JavaScript",
       "officialSupport": true,
-      "docsUrl": "https://supabase.com/docs/reference/javascript/installing",
+      "docsUrl": "https://www.assistance.bg/docs/reference/javascript/installing",
       "gitUrl": "https://github.com/supabase/supabase-js"
     }
   ],
@@ -40,14 +40,14 @@
     {
       "title": "Framework 1",
       "description": "This is a description of Framework 1",
-      "iconUrl": "https://supabase.com/dashboard/img/supabase-logo.svg",
-      "url": "https://supabase.com"
+      "iconUrl": "https://www.assistance.bg/dashboard/img/supabase-logo.svg",
+      "url": "https://www.assistance.bg"
     },
     {
       "title": "Framework 2",
       "description": "This is a description of Framework 2",
-      "iconUrl": "https://supabase.com/dashboard/img/supabase-logo.svg",
-      "url": "https://supabase.com"
+      "iconUrl": "https://www.assistance.bg/dashboard/img/supabase-logo.svg",
+      "url": "https://www.assistance.bg"
     }
   ],
 

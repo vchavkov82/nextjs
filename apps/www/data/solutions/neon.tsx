@@ -56,7 +56,7 @@ const data = {
     ctas: [
       {
         label: 'Start your migration',
-        href: 'https://supabase.com/docs/guides/platform/migrating-to-supabase/neon',
+        href: 'https://www.assistance.bg/docs/guides/platform/migrating-to-supabase/neon',
         type: 'primary' as any,
         icon: <ArrowUpRight className="w-4 h-4 text-current" />,
       },
@@ -687,7 +687,7 @@ const data = {
     ),
     primaryCta: {
       label: 'Open migration guide',
-      url: 'https://supabase.com/docs/guides/platform/migrating-to-supabase/neon',
+      url: 'https://www.assistance.bg/docs/guides/platform/migrating-to-supabase/neon',
       target: '_blank',
       icon: <ArrowUpRight className="w-4 h-4 text-current" />,
     },

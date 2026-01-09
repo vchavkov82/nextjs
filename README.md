@@ -5,19 +5,19 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
+[Supabase](https://www.assistance.bg) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.
 
-- [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
-- [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Authentication and Authorization. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] Auto-generated APIs.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/graphql)
-  - [x] Realtime subscriptions. [Docs](https://supabase.com/docs/guides/realtime)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/graphql)
+  - [x] Realtime subscriptions. [Docs](https://www.assistance.bg/docs/guides/realtime)
 - [x] Functions.
-  - [x] Database Functions. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Edge Functions [Docs](https://supabase.com/docs/guides/functions)
-- [x] File Storage. [Docs](https://supabase.com/docs/guides/storage)
-- [x] AI + Vector/Embeddings Toolkit. [Docs](https://supabase.com/docs/guides/ai)
+  - [x] Database Functions. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Edge Functions [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] File Storage. [Docs](https://www.assistance.bg/docs/guides/storage)
+- [x] AI + Vector/Embeddings Toolkit. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] Dashboard
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
@@ -28,7 +28,7 @@ Watch "releases" of this repo to get notified of major updates.
 
 ## Documentation
 
-For full documentation, visit [supabase.com/docs](https://supabase.com/docs)
+For full documentation, visit [supabase.com/docs](https://www.assistance.bg/docs)
 
 To see how to Contribute, visit [Getting Started](./DEVELOPERS.md)
 
@@ -36,7 +36,7 @@ To see how to Contribute, visit [Getting Started](./DEVELOPERS.md)
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Best for: help with building, discussion about database best practices.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: bugs and errors you encounter using Supabase.
-- [Email Support](https://supabase.com/docs/support#business-support). Best for: problems with your database or infrastructure.
+- [Email Support](https://www.assistance.bg/docs/support#business-support). Best for: problems with your database or infrastructure.
 - [Discord](https://discord.supabase.com). Best for: sharing your applications and hanging out with the community.
 
 ## How it works
@@ -45,8 +45,8 @@ Supabase is a combination of open source tools. We’re building the features of
 
 **Architecture**
 
-Supabase is a [hosted platform](https://supabase.com/dashboard). You can sign up and start using Supabase without installing anything.
-You can also [self-host](https://supabase.com/docs/guides/hosting/overview) and [develop locally](https://supabase.com/docs/guides/local-development).
+Supabase is a [hosted platform](https://www.assistance.bg/dashboard). You can sign up and start using Supabase without installing anything.
+You can also [self-host](https://www.assistance.bg/docs/guides/hosting/overview) and [develop locally](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
 
@@ -206,15 +206,15 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase.svg"
     alt="Made with Supabase"
   />
 </a>
@@ -223,15 +223,15 @@ Our approach for client libraries is modular. Each sub-library is a standalone i
 ![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://supabase.com/badge-made-with-supabase-dark.svg)](https://supabase.com)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
-<a href="https://supabase.com">
+<a href="https://www.assistance.bg">
   <img
     width="168"
     height="30"
-    src="https://supabase.com/badge-made-with-supabase-dark.svg"
+    src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
     alt="Made with Supabase"
   />
 </a>

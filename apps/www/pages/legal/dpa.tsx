@@ -19,7 +19,7 @@ const DPA = () => {
                   part of this commitment, we have prepared a Data Processing Addendum ("DPA"). You
                   can review a static PDF version of our latest DPA document{' '}
                   <a
-                    href="https://supabase.com/downloads/docs/Supabase+DPA+250805.pdf"
+                    href="https://www.assistance.bg/downloads/docs/Supabase+DPA+250805.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-link hover:underline"
@@ -39,7 +39,7 @@ const DPA = () => {
                   To make the DPA legally binding, you need to sign and complete the details through
                   a PandaDoc document that we prepare. To get this version of the DPA,{' '}
                   <a
-                    href="https://supabase.com/dashboard/org/_/documents"
+                    href="https://www.assistance.bg/dashboard/org/_/documents"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-link hover:underline"

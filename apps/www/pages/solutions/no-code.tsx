@@ -33,7 +33,7 @@ const BeginnersPage: NextPage = () => {
         openGraph={{
           title: content.metadata.metaTitle,
           description: content.metadata.metaDescription,
-          url: `https://supabase.com/solutions/no-code`,
+          url: `https://www.assistance.bg/solutions/no-code`,
         }}
       />
       <Layout className="overflow-visible relative">

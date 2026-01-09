@@ -193,10 +193,10 @@ function StateOfStartupsPage() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/state-of-startups`,
+          url: `https://www.assistance.bg/state-of-startups`,
           images: [
             {
-              url: `https://supabase.com/images/state-of-startups/state-of-startups-og.png`,
+              url: `https://www.assistance.bg/images/state-of-startups/state-of-startups-og.png`,
             },
           ],
         }}
@@ -328,7 +328,7 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
       <div className="flex items-center justify-center gap-2 mt-4">
         <Button asChild size="medium">
           <Link
-            href="https://supabase.com/dashboard"
+            href="https://www.assistance.bg/dashboard"
             onClick={() =>
               sendTelemetryEvent({
                 action: 'start_project_button_clicked',

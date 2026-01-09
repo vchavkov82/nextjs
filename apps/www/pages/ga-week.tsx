@@ -74,7 +74,7 @@ export default function GAWeekIndex() {
         openGraph={{
           title: TITLE,
           description: DESCRIPTION,
-          url: 'https://supabase.com/ga-week',
+          url: 'https://www.assistance.bg/ga-week',
           images: [
             {
               url: OG_IMAGE,

@@ -13,7 +13,7 @@ date: '2025-10-03:10:00:00'
 toc_depth: 2
 ---
 
-Today we are launching our remote MCP server, allowing you to connect your Supabase projects with _many_ more AI agents than before, including ChatGPT, Claude, and Builder.io. We also added support for MCP auth (OAuth2), a faster and more secure way to connect agents with your Supabase account (via browser-based authentication). Last but not least, we're adding official MCP support for local Supabase instances created through the [CLI](https://supabase.com/docs/guides/local-development/cli/getting-started).
+Today we are launching our remote MCP server, allowing you to connect your Supabase projects with _many_ more AI agents than before, including ChatGPT, Claude, and Builder.io. We also added support for MCP auth (OAuth2), a faster and more secure way to connect agents with your Supabase account (via browser-based authentication). Last but not least, we're adding official MCP support for local Supabase instances created through the [CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started).
 
 Now all you need is a single URL to connect your favorite AI agent to Supabase:
 
@@ -67,13 +67,13 @@ https://mcp.supabase.com/mcp
 # or http://localhost:54321/mcp for local
 ```
 
-We also built an [interactive widget](https://supabase.com/mcp) to help you connect popular MCP clients to Supabase and customize the URL to your preferences (like project-scoped mode and read-only mode).
+We also built an [interactive widget](https://www.assistance.bg/mcp) to help you connect popular MCP clients to Supabase and customize the URL to your preferences (like project-scoped mode and read-only mode).
 
 ## New features
 
 Our philosophy on Supabase MCP comes down to two ideas:
 
-1. Supabase MCP should be used for development. It was designed from the beginning to assist with app development and shouldn't be connected to production databases. See our post on [Defense in Depth for MCP Servers](https://supabase.com/blog/defense-in-depth-mcp).
+1. Supabase MCP should be used for development. It was designed from the beginning to assist with app development and shouldn't be connected to production databases. See our post on [Defense in Depth for MCP Servers](https://www.assistance.bg/blog/defense-in-depth-mcp).
 2. MCP is just another way to access the same platform features that you already use in the web dashboard and CLI. But - since it's being used by an LLM, it should also lean into the strengths of an AI-first UX.
 
 With these in mind, we added the following new features to assist AI agents while they help build your app:
@@ -101,13 +101,13 @@ Today we support the following feature groups:
 - [`storage`](https://github.com/supabase-community/supabase-mcp#storage)
 - [`branching`](https://github.com/supabase-community/supabase-mcp#branching-experimental-requires-a-paid-plan)
 
-See the [MCP docs](https://supabase.com/docs/guides/getting-started/mcp) for instructions on how to enable or disable these groups.
+See the [MCP docs](https://www.assistance.bg/docs/guides/getting-started/mcp) for instructions on how to enable or disable these groups.
 
 ### Doc search
 
 A big challenge with LLMs is knowledge cutoff. Early LLMs had a _pretty good_ understanding of Supabase, but it was still nowhere near complete or up-to-date. Now the latest leading LLMs have a _very good_ understanding of Supabase, but will still lag behind any new features, bug fixes, or other updates that we make.
 
-To help with this, we added a new tool to Supabase MCP: `search_docs`. This tool exposes the latest up-to-date Supabase docs powered by our Content API - a GraphQL based search API that uses [hybrid search](https://supabase.com/docs/guides/ai/hybrid-search) (semantic + keyword) to find relevant documentation for a given query (formatted as markdown).
+To help with this, we added a new tool to Supabase MCP: `search_docs`. This tool exposes the latest up-to-date Supabase docs powered by our Content API - a GraphQL based search API that uses [hybrid search](https://www.assistance.bg/docs/guides/ai/hybrid-search) (semantic + keyword) to find relevant documentation for a given query (formatted as markdown).
 
 The result ends up looking like similar to [self-RAG](https://arxiv.org/abs/2310.11511): whenever your agent needs clarification on a topic, it can use this tool to find the most relevant Supabase documentation.
 
@@ -115,11 +115,11 @@ The result ends up looking like similar to [self-RAG](https://arxiv.org/abs/2310
 
 How do you know if LLMs are really following best coding practices? When a project reaches even a moderate level of complexity, the amount of context and moving parts becomes a real challenge to navigate, even for humans.
 
-Our solution is a feature that already exists on our platform - advisors. [Advisors](https://supabase.com/dashboard/project/_/advisors/security) are essentially lints on your database that help you follow security and performance best practices. We added a new `get_advisors` MCP tool that fetches these same advisors so that your agent can both discover and fix any outstanding issues on your database.
+Our solution is a feature that already exists on our platform - advisors. [Advisors](https://www.assistance.bg/dashboard/project/_/advisors/security) are essentially lints on your database that help you follow security and performance best practices. We added a new `get_advisors` MCP tool that fetches these same advisors so that your agent can both discover and fix any outstanding issues on your database.
 
 ### Storage
 
-We also added initial support for [Supabase Storage](https://supabase.com/docs/guides/storage) on our MCP server. This first version allows your agent to see which buckets exist on your project and update their configuration, but in the future we'll look into more abilities like listing files and their details.
+We also added initial support for [Supabase Storage](https://www.assistance.bg/docs/guides/storage) on our MCP server. This first version allows your agent to see which buckets exist on your project and update their configuration, but in the future we'll look into more abilities like listing files and their details.
 
 This feature was actually a community contribution (thanks [Nico](https://github.com/Ngineer101)!). If there are ever missing features that you'd like to see, [PR's](https://github.com/supabase-community/supabase-mcp/issues/new/choose) are always welcome!
 

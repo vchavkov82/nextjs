@@ -267,7 +267,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
           {
             label: 'UI Library',
             icon: 'ui',
-            href: 'https://supabase.com/ui' as `/${string}`,
+            href: 'https://www.assistance.bg/ui' as `/${string}`,
             level: 'ui',
           },
         ],
@@ -304,7 +304,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
             label: 'Changelog',
             icon: 'changelog',
             hasLightIcon: true,
-            href: 'https://supabase.com/changelog' as `/${string}`,
+            href: 'https://www.assistance.bg/changelog' as `/${string}`,
             level: 'changelog',
           },
           {

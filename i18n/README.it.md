@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) è un'alternativa open source a Firebase. Stiamo costruendo le funzionalità di Firebase utilizzando strumenti open source di livello enterprise.
+[Supabase](https://www.assistance.bg) è un'alternativa open source a Firebase. Stiamo costruendo le funzionalità di Firebase utilizzando strumenti open source di livello enterprise.
 
-- Database Postgres ospitato. [Documenti](https://supabase.com/docs/guides/database)
-- [x] Autenticazione e autorizzazione. [Documenti](https://supabase.com/docs/guides/auth)
+- Database Postgres ospitato. [Documenti](https://www.assistance.bg/docs/guides/database)
+- [x] Autenticazione e autorizzazione. [Documenti](https://www.assistance.bg/docs/guides/auth)
 - [x] API generate automaticamente.
-  - [x] REST. [Documenti](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Documenti](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Sottoscrizioni in tempo reale. [Documenti](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Documenti](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Documenti](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Sottoscrizioni in tempo reale. [Documenti](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funzioni.
-  - [x] Funzioni di database. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Funzioni Edge [Docs](https://supabase.com/docs/guides/functions)
-- [x] Memorizzazione dei file. [Docs](https://supabase.com/docs/guides/storage)
+  - [x] Funzioni di database. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Funzioni Edge [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Memorizzazione dei file. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Cruscotto
 
 ![Cruscotto Supabase](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentazione
 
-Per la documentazione completa, visitate [supabase.com/docs](https://supabase.com/docs)
+Per la documentazione completa, visitate [supabase.com/docs](https://www.assistance.bg/docs)
 
 Per vedere come contribuire, visitate [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Per vedere come contribuire, visitate [Getting Started](../DEVELOPERS.md)
 
 - [Forum della comunità](https://github.com/supabase/supabase/discussions). Ideale per: aiuto nella costruzione, discussioni sulle migliori pratiche per i database.
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Ideale per: bug ed errori riscontrati nell'uso di Supabase.
-- [Supporto via e-mail](https://supabase.com/docs/support#business-support). Ideale per: problemi con il database o l'infrastruttura.
+- [Supporto via e-mail](https://www.assistance.bg/docs/support#business-support). Ideale per: problemi con il database o l'infrastruttura.
 - [Discord](https://discord.supabase.com). Ideale per: condividere le proprie applicazioni e stare insieme alla comunità.
 
 ## Stato
 
 - [Alfa: Stiamo testando Supabase con un gruppo chiuso di clienti
-- [x] Alfa pubblica: Chiunque può iscriversi all'indirizzo [supabase.com/dashboard](https://supabase.com/dashboard). Ma andateci piano, ci sono alcuni problemi
+- [x] Alfa pubblica: Chiunque può iscriversi all'indirizzo [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ma andateci piano, ci sono alcuni problemi
 - [x] Beta pubblica: Abbastanza stabile per la maggior parte degli usi non aziendali
-- [ ] Pubblico: Disponibilità generale [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Pubblico: Disponibilità generale [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 Siamo attualmente in Beta pubblica. Guardate i "rilasci" di questo repo per essere avvisati dei principali aggiornamenti.
 
@@ -55,8 +55,8 @@ Supabase è una combinazione di strumenti open source. Stiamo costruendo le funz
 
 **Architettura**
 
-Supabase è una [piattaforma hosted](https://supabase.com/dashboard). È possibile registrarsi e iniziare a usare Supabase senza installare nulla.
-È anche possibile fare [self-hosting](https://supabase.com/docs/guides/hosting/overview) e [sviluppare localmente](https://supabase.com/docs/guides/local-development).
+Supabase è una [piattaforma hosted](https://www.assistance.bg/dashboard). È possibile registrarsi e iniziare a usare Supabase senza installare nulla.
+È anche possibile fare [self-hosting](https://www.assistance.bg/docs/guides/hosting/overview) e [sviluppare localmente](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architettura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

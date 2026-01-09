@@ -20,7 +20,7 @@ const router = new Router<AppState>()
 // Note: path should be prefixed with function name.
 router.get('/connect-supabase', (ctx) => {
   ctx.response.body =
-    'This is an example of implementing https://supabase.com/docs/guides/integrations/oauth-apps/authorize-an-oauth-app . Navigate to /login to start the OAuth flow.'
+    'This is an example of implementing https://www.assistance.bg/docs/guides/integrations/oauth-apps/authorize-an-oauth-app . Navigate to /login to start the OAuth flow.'
 })
 router.get('/connect-supabase/login', async (ctx) => {
   // Construct the URL for the authorization redirect and get a PKCE codeVerifier.

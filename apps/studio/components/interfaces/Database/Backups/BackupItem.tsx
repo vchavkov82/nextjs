@@ -115,7 +115,7 @@ export const BackupItem = ({ index, isHealthy, backup, onSelectBackup }: BackupI
           </TooltipTrigger>
           <TooltipContent side="bottom">
             Learn more about backup types{' '}
-            <InlineLink href="https://supabase.com/blog/postgresql-physical-logical-backups">
+            <InlineLink href="https://www.assistance.bg/blog/postgresql-physical-logical-backups">
               here
             </InlineLink>
           </TooltipContent>

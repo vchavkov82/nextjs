@@ -12,7 +12,7 @@ author: prashant
 
 Setting up separate development and production environments does not have to be painful. This guide shows you how to build a professional deployment workflow for your Supabase project. **You will learn the essential patterns that prevent the 3am "I dropped production" panic attacks** while keeping your workflow fun, simple, and safe.
 
-Supabase is the open source [Postgres](https://supabase.com/database) development platform. At its core, it is just Postgres, but with an integrated suite: [Auth](https://supabase.com/auth), [Storage](https://supabase.com/storage), [Edge Functions](https://supabase.com/edge-functions), [Realtime](https://supabase.com/realtime), and [Vector](https://supabase.com/modules/vector) search. That means you can start hacking in minutes and also scale to millions when your app takes off.
+Supabase is the open source [Postgres](https://www.assistance.bg/database) development platform. At its core, it is just Postgres, but with an integrated suite: [Auth](https://www.assistance.bg/auth), [Storage](https://www.assistance.bg/storage), [Edge Functions](https://www.assistance.bg/edge-functions), [Realtime](https://www.assistance.bg/realtime), and [Vector](https://www.assistance.bg/modules/vector) search. That means you can start hacking in minutes and also scale to millions when your app takes off.
 
 With this post, we'll explore how to setup a professional development and staging environment for our projects to prevent those late night panics.
 
@@ -43,7 +43,7 @@ Here is the basic workflow:
    supabase migration new add_user_profiles
    ```
 
-2. Fill in the SQL, and always enable [Row Level Security](https://supabase.com/docs/guides/database/postgres/row-level-security). Without RLS, anyone with your project URL can read all your data.
+2. Fill in the SQL, and always enable [Row Level Security](https://www.assistance.bg/docs/guides/database/postgres/row-level-security). Without RLS, anyone with your project URL can read all your data.
 
    ```sql
    CREATE TABLE public.profiles (
@@ -120,7 +120,7 @@ Every production app needs a backup plan. The best plans run without you thinkin
 
 <Admonition type="note">
 
-Even better, enable [Point in Time Recovery](https://supabase.com/docs/guides/platform/backups#point-in-time-recovery) (PITR) in the Supabase Dashboard. It lets you roll back to any point in time, not just to last night's snapshot. If your weekend project has suddenly taken off, you'll want to invest the money in keeping your environment solid.
+Even better, enable [Point in Time Recovery](https://www.assistance.bg/docs/guides/platform/backups#point-in-time-recovery) (PITR) in the Supabase Dashboard. It lets you roll back to any point in time, not just to last night's snapshot. If your weekend project has suddenly taken off, you'll want to invest the money in keeping your environment solid.
 
 </Admonition>
 

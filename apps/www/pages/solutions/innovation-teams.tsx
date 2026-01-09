@@ -27,7 +27,7 @@ const InnovationTeams: NextPage = () => {
         openGraph={{
           title: data.metadata.metaTitle,
           description: data.metadata.metaDescription,
-          url: `https://supabase.com/solutions/innovation-teams`,
+          url: `https://www.assistance.bg/solutions/innovation-teams`,
         }}
         noindex={true}
         nofollow={true}

@@ -6,7 +6,7 @@
 # description = "Error description."
 # resolution = "How to resolve this error."
 # [[error_code.references]]
-# href = "https://supabase.com/docs/some/relevant/guide"
+# href = "https://www.assistance.bg/docs/some/relevant/guide"
 # description = "Guide for doing some relevant thing"
 #
 # error_code should be a unique and stable identifier for the error, that the
@@ -69,7 +69,7 @@ description = "Realtime was not able to connect to the tenant's database."
 description = "Realtime was not able to connect to the tenant's database due to not having enough available connections."
 resolution = "Verify your database connection limits."
 [[DatabaseLackOfConnections.references]]
-href = "https://supabase.com/docs/guides/database/connection-management"
+href = "https://www.assistance.bg/docs/guides/database/connection-management"
 description = "Connection management guide"
 
 [RealtimeNodeDisconnected]
@@ -84,7 +84,7 @@ description = "Error when starting the replication and listening of errors for d
 [ReplicationMaxWalSendersReached]
 description = "Maximum number of WAL senders reached in tenant database."
 [[ReplicationMaxWalSendersReached.references]]
-href = "https://supabase.com/docs/guides/database/custom-postgres-config#cli-configurable-settings"
+href = "https://www.assistance.bg/docs/guides/database/custom-postgres-config#cli-configurable-settings"
 description = "Configuring max WAL senders"
 
 [MigrationCheckFailed]

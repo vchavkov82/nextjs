@@ -38,7 +38,7 @@ You can also install the CLI from:
 
 For more details, check out [our documentation](https://pg-language-server.com/latest/) or the [GitHub repo](https://github.com/supabase-community/postgres-language-server). We would love for the community’s support by reporting issues and contributing documentation.
 
-Getting to the initial release has been a 2-year-long journey. We have learned Rust, spent weeks on research and iterations, dug our way out of rabbit holes, and made friends along the way. We have also discarded most of what we so proudly wrote about in the previous blog post [Postgres Language Server: implementing the Parser](https://supabase.com/blog/postgres-language-server-implementing-parser) – but more on that later.
+Getting to the initial release has been a 2-year-long journey. We have learned Rust, spent weeks on research and iterations, dug our way out of rabbit holes, and made friends along the way. We have also discarded most of what we so proudly wrote about in the previous blog post [Postgres Language Server: implementing the Parser](https://www.assistance.bg/blog/postgres-language-server-implementing-parser) – but more on that later.
 
 Below is a mix of what we've come up with, challenges we've encountered, and where we'll go from here.
 
@@ -79,7 +79,7 @@ const bar: Foo = { bar: 'I am a string' }
 
 Many languages use variations of this.
 
-But for most parts of Postgres (or any SQL dialect, really), the rules are different: While types can be defined within the source code (e.g., within a migration file by using [declarative schema management](https://supabase.com/docs/guides/local-development/declarative-database-schemas)), the database itself is the single source of truth, and there is no relation between files.
+But for most parts of Postgres (or any SQL dialect, really), the rules are different: While types can be defined within the source code (e.g., within a migration file by using [declarative schema management](https://www.assistance.bg/docs/guides/local-development/declarative-database-schemas)), the database itself is the single source of truth, and there is no relation between files.
 
 Besides, the variety of schema and migration management tools employed today means we cannot make assumptions about how the source code is structured and whether it reflects the current state.
 
@@ -93,7 +93,7 @@ For our Postgres Language Server, we can therefore assume that
 
 For this project, the most challenging part is the parser – both when initially parsing the document and when processing user input.
 
-As laid out in a [previous blog post](https://supabase.com/blog/postgres-language-server-implementing-parser), implementing a parser for Postgres is hard because of the ever-evolving and complex syntax of Postgres. It's also one of the reasons why existing Postgres tooling is scarce, hardly maintained, and often does not work very well.
+As laid out in a [previous blog post](https://www.assistance.bg/blog/postgres-language-server-implementing-parser), implementing a parser for Postgres is hard because of the ever-evolving and complex syntax of Postgres. It's also one of the reasons why existing Postgres tooling is scarce, hardly maintained, and often does not work very well.
 
 This is why we decided not to create a custom parser. Instead, we leverage the existing [libpg_query](https://github.com/pganalyze/libpg_query) library to parse SQL code reliably. The pganalyze team has published a great blog post on [why this approach is preferred](https://pganalyze.com/blog/parse-postgresql-queries-in-ruby).
 
@@ -179,7 +179,7 @@ With both parsers combined, we get accurate results for valid SQL and can also d
 
 ![Hacker News comment](/images/blog/lw14-postgres-language-server/hacker-news-comment.png)
 
-Ironically, the parser we wrote [an entire blog post about](https://supabase.com/blog/postgres-language-server-implementing-parser) isn't even in use anymore.
+Ironically, the parser we wrote [an entire blog post about](https://www.assistance.bg/blog/postgres-language-server-implementing-parser) isn't even in use anymore.
 
 It did enable us to pin-point the exact location of a node within the abstract syntax tree (AST). For example, in the following statement, we could show the diagnostics only on `DROP COLUMN test` instead of the entire `ALTER TABLE` statement:
 

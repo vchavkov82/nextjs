@@ -27,7 +27,7 @@ export const data = {
         },
         {
           text: 'Supabase UI',
-          url: 'https://supabase.com/ui',
+          url: 'https://www.assistance.bg/ui',
           icon: (props: any) => (
             <svg
               width="17"

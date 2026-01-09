@@ -277,7 +277,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   ) : (
                     <>
                       <Link
-                        href="https://supabase.com/dashboard"
+                        href="https://www.assistance.bg/dashboard"
                         passHref
                         legacyBehavior
                         onClick={() =>
@@ -294,7 +294,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         </Button>
                       </Link>
                       <Link
-                        href="https://supabase.com/dashboard"
+                        href="https://www.assistance.bg/dashboard"
                         passHref
                         legacyBehavior
                         onClick={() =>

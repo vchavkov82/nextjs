@@ -168,7 +168,7 @@ async function generate() {
 
       return `
         <url>
-            <loc>${`https://supabase.com${route}`}</loc>
+            <loc>${`https://www.assistance.bg${route}`}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.5</priority>
         </url>
@@ -181,7 +181,7 @@ async function generate() {
     const lastmod = new Date(post.updatedAt).toISOString().split('T')[0]
     return `
       <url>
-          <loc>https://supabase.com/blog/${post.slug}</loc>
+          <loc>https://www.assistance.bg/blog/${post.slug}</loc>
           <lastmod>${lastmod}</lastmod>
           <changefreq>weekly</changefreq>
           <priority>0.7</priority>
@@ -209,10 +209,10 @@ async function generate() {
   const sitemapRouter = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://supabase.com/sitemap_www.xml</loc>
+    <loc>https://www.assistance.bg/sitemap_www.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://supabase.com/docs/sitemap.xml</loc>
+    <loc>https://www.assistance.bg/docs/sitemap.xml</loc>
   </sitemap>
 </sitemapindex>
 `

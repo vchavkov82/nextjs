@@ -48,7 +48,7 @@ export type IntegrationDefinition = {
 
 const authorSupabase = {
   name: 'Supabase',
-  websiteUrl: 'https://supabase.com',
+  websiteUrl: 'https://www.assistance.bg',
 }
 
 const SUPABASE_INTEGRATIONS: IntegrationDefinition[] = [

@@ -237,7 +237,7 @@ export default (isMobile?: boolean) => ({
           <>
             Use the{' '}
             <Link
-              href="https://supabase.com/docs/guides/functions/cicd-workflow"
+              href="https://www.assistance.bg/docs/guides/functions/cicd-workflow"
               className="underline hover:text-foreground-light transition-colors"
             >
               Supabase CLI with GitHub actions
@@ -265,7 +265,7 @@ export default (isMobile?: boolean) => ({
           <>
             Edge functions run globally or can be{' '}
             <Link
-              href="https://supabase.com/docs/guides/functions/regional-invocation"
+              href="https://www.assistance.bg/docs/guides/functions/regional-invocation"
               className="underline hover:text-foreground-light transition-colors"
             >
               pinned to your database's proximity
@@ -337,7 +337,7 @@ export default (isMobile?: boolean) => ({
           <>
             Edge Functions are designed to work seamlessly with{' '}
             <Link
-              href="https://supabase.com/docs/guides/functions/auth"
+              href="https://www.assistance.bg/docs/guides/functions/auth"
               className="underline hover:text-foreground-light transition-colors"
             >
               Supabase Auth
@@ -352,7 +352,7 @@ export default (isMobile?: boolean) => ({
           <>
             Edge Functions are designed to work seamlessly with{' '}
             <Link
-              href="https://supabase.com/docs/guides/functions/storage-caching"
+              href="https://www.assistance.bg/docs/guides/functions/storage-caching"
               className="underline hover:text-foreground-light transition-colors"
             >
               Supabase Storage

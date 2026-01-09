@@ -100,7 +100,7 @@ We're still working through a few challenges with the Fly team.
 
 ### Support for Network Restrictions
 
-The [network restrictions](https://supabase.com/docs/guides/platform/network-restrictions) feature relies on the container receiving the correct IP of the client connecting to it. With our current setup, the container sees the Fly proxy IP instead. Connections run through the Fly proxy, which exposes the Proxy protocol. Postgres can't use this information directly, but we're looking at [making Supavisor proxy-protocol aware](https://github.com/supabase/supavisor).
+The [network restrictions](https://www.assistance.bg/docs/guides/platform/network-restrictions) feature relies on the container receiving the correct IP of the client connecting to it. With our current setup, the container sees the Fly proxy IP instead. Connections run through the Fly proxy, which exposes the Proxy protocol. Postgres can't use this information directly, but we're looking at [making Supavisor proxy-protocol aware](https://github.com/supabase/supavisor).
 
 ### Backups within Fly
 
@@ -108,6 +108,6 @@ Fly projects are backed up to AWS S3 as Fly doesn't provide managed Blob storage
 
 ## Getting started
 
-Sign up for the preview [here](https://forms.supabase.com/fly-postgres), wait till we allowlist your org, and get started with the [Quickstart](https://supabase.com/docs/guides/platform/fly-postgres#quickstart) in our docs.
+Sign up for the preview [here](https://forms.supabase.com/fly-postgres), wait till we allowlist your org, and get started with the [Quickstart](https://www.assistance.bg/docs/guides/platform/fly-postgres#quickstart) in our docs.
 
-Fly organizations will get one free project. We're still working through some of the finer details on billing, but the pricing will remain relatively unchanged from our current [pricing](https://supabase.com/pricing).
+Fly organizations will get one free project. We're still working through some of the finer details on billing, but the pricing will remain relatively unchanged from our current [pricing](https://www.assistance.bg/pricing).

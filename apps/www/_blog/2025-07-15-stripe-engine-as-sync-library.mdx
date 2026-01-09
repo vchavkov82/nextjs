@@ -31,7 +31,7 @@ Stripe-Sync-Engine is a webhook listener that transforms Stripe webhooks into st
 
 ## Why sync Stripe data to Postgres?
 
-While Supabase offers a convenient [foreign data wrapper](https://supabase.com/partners/integrations/supabase_wrapper_stripe) (FDW) for Stripe, sometimes you want your Stripe data _locally available_ in your Postgres database for:
+While Supabase offers a convenient [foreign data wrapper](https://www.assistance.bg/partners/integrations/supabase_wrapper_stripe) (FDW) for Stripe, sometimes you want your Stripe data _locally available_ in your Postgres database for:
 
 - **Lower latency**: Avoid round-trips to the Stripe API.
 - **Better joins**: Query subscriptions, invoices, and charges together.
@@ -64,7 +64,7 @@ For a full list of configuration options, refer to our [stripe-sync-engine READM
 
 ## Use via Supabase Edge Function
 
-To use the Stripe-Sync-Engine in an [Edge Function](https://supabase.com/edge-functions), you first have to ensure that the schema and tables exist. While you can technically do this inside the Edge Function, it is recommended to run the schema migrations outside of that. You can do a one-off migration via
+To use the Stripe-Sync-Engine in an [Edge Function](https://www.assistance.bg/edge-functions), you first have to ensure that the schema and tables exist. While you can technically do this inside the Edge Function, it is recommended to run the schema migrations outside of that. You can do a one-off migration via
 
 ```tsx
 import { runMigrations } from '@supabase/stripe-sync-engine'

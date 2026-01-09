@@ -61,7 +61,7 @@ const LayoutComparison = ({ components, props }: Props) => {
         openGraph={{
           title: props.blog.title,
           description: props.blog.description,
-          url: `https://supabase.com/alternatives/${props.blog.slug}`,
+          url: `https://www.assistance.bg/alternatives/${props.blog.slug}`,
           type: 'article',
           article: {
             //
@@ -78,7 +78,7 @@ const LayoutComparison = ({ components, props }: Props) => {
           },
           images: [
             {
-              url: `https://supabase.com${basePath}/images/blog/${
+              url: `https://www.assistance.bg${basePath}/images/blog/${
                 props.blog.image ? props.blog.image : props.blog.thumb
               }`,
             },
@@ -135,7 +135,7 @@ const LayoutComparison = ({ components, props }: Props) => {
               <div className="text-foreground-lighter text-sm">Share this article</div>
               <div className="mt-4 flex items-center space-x-4">
                 <Link
-                  href={`https://twitter.com/share?text=${props.blog.title}&url=https://supabase.com/blog/${props.blog.slug}`}
+                  href={`https://twitter.com/share?text=${props.blog.title}&url=https://www.assistance.bg/blog/${props.blog.slug}`}
                   target="_blank"
                   className="text-muted hover:text-foreground"
                 >
@@ -154,7 +154,7 @@ const LayoutComparison = ({ components, props }: Props) => {
                 </Link>
 
                 <Link
-                  href={`https://www.linkedin.com/shareArticle?url=https://supabase.com/blog/${props.blog.slug}&title=${props.blog.title}`}
+                  href={`https://www.linkedin.com/shareArticle?url=https://www.assistance.bg/blog/${props.blog.slug}&title=${props.blog.title}`}
                   target="_blank"
                   className="text-muted hover:text-foreground"
                 >

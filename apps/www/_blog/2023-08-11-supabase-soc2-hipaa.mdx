@@ -22,7 +22,7 @@ That’s all you need to know. The rest of this blog post will give you some bac
 
 ## SOC2
 
-We previously [discussed](https://supabase.com/blog/supabase-soc2) the process the SOC2 Type 1. To recap,
+We previously [discussed](https://www.assistance.bg/blog/supabase-soc2) the process the SOC2 Type 1. To recap,
 
 1. Type 1 certification verifies adherence to the guidelines at a specific _point in time_.
 2. Type 2 certification verifies compliance over a _period of time_.
@@ -44,7 +44,7 @@ Health Insurance Portability and Accountability Act (HIPAA) is a US law that set
 
 A couple of definitions before go further. A **covered entity** refers to healthcare providers, health plans, and health insurance companies. **Business associates** are entities that perform certain functions with protected health information (PHI) on behalf of a covered entity. Both Business Associates and Covered entities are covered (pun intended) under HIPAA. Supabase is a business associate and our customers handling PHI can either be covered entities or other business associates.
 
-We receive many requests from users who want to build healthcare apps on top of Supabase. Since you can [self-host Supabase](https://supabase.com/docs/guides/self-hosting), we often [encourage](https://github.com/orgs/supabase/discussions/1219) these users to do so. Starting today, these users have the option to use our hosted platform too with the HIPAA add-on 🎉.
+We receive many requests from users who want to build healthcare apps on top of Supabase. Since you can [self-host Supabase](https://www.assistance.bg/docs/guides/self-hosting), we often [encourage](https://github.com/orgs/supabase/discussions/1219) these users to do so. Starting today, these users have the option to use our hosted platform too with the HIPAA add-on 🎉.
 
 ### Going from SOC2 to HIPAA
 
@@ -56,7 +56,7 @@ We receive many requests from users who want to build healthcare apps on top of 
 
 Going from zero to a SOC2 certification was much harder, than going from SOC2 to HIPAA.
 
-We used the same auditor to streamline the process. Many of the controls required for HIPAA compliance could be mapped to the testing they had already done for SOC2. Additional evidence for encryption, audit logs, business continuity and disaster recovery exercises was unnecessary since the auditor already had access to it. And some of the HIPAA checks such as Facility Access Controls were not applicable to us since [we are a remote company](https://supabase.com/blog/why-supabase-remote).
+We used the same auditor to streamline the process. Many of the controls required for HIPAA compliance could be mapped to the testing they had already done for SOC2. Additional evidence for encryption, audit logs, business continuity and disaster recovery exercises was unnecessary since the auditor already had access to it. And some of the HIPAA checks such as Facility Access Controls were not applicable to us since [we are a remote company](https://www.assistance.bg/blog/why-supabase-remote).
 
 We also had to sign a Business Associate Agreement (BAA) with all of our vendors who would have access to PHI, such as AWS, and ensure that we follow their terms listed in the agreements. For example, when using AWS to store PHI, we could only use their [HIPAA Eligible Services](https://aws.amazon.com/compliance/hipaa-eligible-services-reference/). There were similar requirements from the other vendors we use and to ensure that we were complying with all their requirements.
 
@@ -74,9 +74,9 @@ If you want to start developing healthcare apps on Supabase, reach out to our te
 
 ## More Launch Week 8
 
-- [Supabase Local Dev: migrations, branching, and observability](https://supabase.com/blog/supabase-local-dev)
-- [Hugging Face is now supported in Supabase](https://supabase.com/blog/hugging-face-supabase)
-- [Launch Week 8](https://supabase.com/launch-week)
-- [Coding the stars - an interactive constellation with Three.js and React Three Fiber](https://supabase.com/blog/interactive-constellation-threejs-react-three-fiber)
-- [Why we'll stay remote](https://supabase.com/blog/why-supabase-remote)
+- [Supabase Local Dev: migrations, branching, and observability](https://www.assistance.bg/blog/supabase-local-dev)
+- [Hugging Face is now supported in Supabase](https://www.assistance.bg/blog/hugging-face-supabase)
+- [Launch Week 8](https://www.assistance.bg/launch-week)
+- [Coding the stars - an interactive constellation with Three.js and React Three Fiber](https://www.assistance.bg/blog/interactive-constellation-threejs-react-three-fiber)
+- [Why we'll stay remote](https://www.assistance.bg/blog/why-supabase-remote)
 - [Postgres Language Server](https://github.com/supabase/postgres_lsp)

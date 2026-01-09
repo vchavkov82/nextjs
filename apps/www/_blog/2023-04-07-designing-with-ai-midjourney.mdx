@@ -59,7 +59,7 @@ And voila, we had a baseline for generating variations:
 
 The final visual that you see everywhere won us over because of its vibrant swirls. While each swirl looks slightly different, a consistent style is still maintained throughout.
 
-Fortunately, we didn't require full-width images for each ticket. Upscaled MidJourney images sufficed. Nevertheless, we had to recreate the main visual on the landing page in vectors to use it effectively. You can view it in full glory at [https://supabase.com/launch-week/7](https://supabase.com/launch-week/7).
+Fortunately, we didn't require full-width images for each ticket. Upscaled MidJourney images sufficed. Nevertheless, we had to recreate the main visual on the landing page in vectors to use it effectively. You can view it in full glory at [https://www.assistance.bg/launch-week/7](https://www.assistance.bg/launch-week/7).
 
 ![Screenshot 2023-04-06 at 09.47.47.png](/images/blog/launch-week-7/designing-with-ai-midjourney/launch-week-7-ticket-home.png)
 
@@ -69,7 +69,7 @@ An important aspect of Launch Week tickets is their shareability. Each Launch We
 
 When you share your unique ticket URL, the image shown on the social preview is called an Open Graph image (or OG image for short).
 
-These images are generated for each unique URL and ticket. This requires a bit of magic, which in our case means using a [Supabase Edge Function](https://supabase.com/docs/guides/functions) together with [Supabase Storage](https://supabase.com/docs/guides/storage) for smart caching.
+These images are generated for each unique URL and ticket. This requires a bit of magic, which in our case means using a [Supabase Edge Function](https://www.assistance.bg/docs/guides/functions) together with [Supabase Storage](https://www.assistance.bg/docs/guides/storage) for smart caching.
 
 ### Supabase Edge Function 🤝 Supabase Storage
 
@@ -93,7 +93,7 @@ if (userAgent?.toLocaleLowerCase().includes('twitter')) {
 }
 ```
 
-We want to be as efficient as possible because generating a png file in an edge function is an expensive operation. We generate each ticket only once and then save it to Supabase Storage (which has a [smart CDN cache built in](https://supabase.com/blog/storage-image-resizing-smart-cdn#smart-cdn-deep-dive)).
+We want to be as efficient as possible because generating a png file in an edge function is an expensive operation. We generate each ticket only once and then save it to Supabase Storage (which has a [smart CDN cache built in](https://www.assistance.bg/blog/storage-image-resizing-smart-cdn#smart-cdn-deep-dive)).
 
 So in the first step we check if we can fetch the user’s image from storage:
 
@@ -106,9 +106,9 @@ storageResponse = await fetch(
 
 If we can’t find the image in storage, then we kick off the ticket generation pipeline, using Vercel’s awesome [open-source satori library](https://github.com/vercel/satori) transforms HTML & CSS into svgs!
 
-Each image includes the user’s GitHub details. We use [`supabase-js`](https://supabase.com/docs/reference/javascript/installing) for authentication: users log in with their GitHub account and we store their username in a table in Postgres.
+Each image includes the user’s GitHub details. We use [`supabase-js`](https://www.assistance.bg/docs/reference/javascript/installing) for authentication: users log in with their GitHub account and we store their username in a table in Postgres.
 
-Since this table includes email addresses, we secure it using [RLS](https://supabase.com/docs/guides/auth/row-level-security) to ensure each user can only view their own data. At the same time, we want these tickets to be publicly shareable, and that’s where [Postgres Views](https://supabase.com/blog/postgresql-views) come in handy.
+Since this table includes email addresses, we secure it using [RLS](https://www.assistance.bg/docs/guides/auth/row-level-security) to ensure each user can only view their own data. At the same time, we want these tickets to be publicly shareable, and that’s where [Postgres Views](https://www.assistance.bg/blog/postgresql-views) come in handy.
 
 By creating a view, we can selectively publicize parts of our table and also compute some additional values on the fly:
 
@@ -231,7 +231,7 @@ case
 end as golden
 ```
 
-As folks are sharing their tickets on socials to earn their gold status, we also want to give them realtime feedback on their progress. Luckily we also have a feature for that, [Supabase Realtime](https://supabase.com/realtime).
+As folks are sharing their tickets on socials to earn their gold status, we also want to give them realtime feedback on their progress. Luckily we also have a feature for that, [Supabase Realtime](https://www.assistance.bg/realtime).
 
 Something that would have been a headache in the past is just a couple of lines of client-side JavaScript:
 
@@ -264,9 +264,9 @@ Interested to know how this fits within your Next.js application? Find the code 
 
 ## Displaying the images
 
-We have some images, so how can we now display them somewhere? [@Francesco Sansalvadore](https://twitter.com/frnk_snslvdr) saw one of our team members trying to “swipe” on the tickets slider component on the [launch week page](https://supabase.com/launch-week/7/tickets) and he thought, why not feature all the fantastic people who generated tickets on a single page?
+We have some images, so how can we now display them somewhere? [@Francesco Sansalvadore](https://twitter.com/frnk_snslvdr) saw one of our team members trying to “swipe” on the tickets slider component on the [launch week page](https://www.assistance.bg/launch-week/7/tickets) and he thought, why not feature all the fantastic people who generated tickets on a single page?
 
-We built a [ticket wall](https://supabase.com/launch-week/7/tickets) that you can scroll endlessly. We approached it with an infinite scroll technique, lazy-loading a few tickets at a time.
+We built a [ticket wall](https://www.assistance.bg/launch-week/7/tickets) that you can scroll endlessly. We approached it with an infinite scroll technique, lazy-loading a few tickets at a time.
 
 ![launch week 7 ticket wall](/images/blog/launch-week-7/designing-with-ai-midjourney/launch-week-7-ticket-wall.png)
 
@@ -285,7 +285,7 @@ Up for grabs are:
 
 ## More Supabase AI reading
 
-- [Supabase storing OpenAI embeddings in Postgres with pgvector](https://supabase.com/blog/openai-embeddings-postgres-vector)
+- [Supabase storing OpenAI embeddings in Postgres with pgvector](https://www.assistance.bg/blog/openai-embeddings-postgres-vector)
 - [Supabase Docs Search](http://supabase.com/docs)
 - [Streaming Data in Edge Functions](https://www.youtube.com/watch?v=9N66JBRLNYU)
 - [Next.js OpenAI Doc Search template](https://github.com/supabase-community/nextjs-openai-doc-search)

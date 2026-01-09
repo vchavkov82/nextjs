@@ -7,25 +7,25 @@
 
 # Supabase
 
-[Supabase](https://supabase.com) este o alternativă open source la Firebase. Construim caracteristicile Firebase folosind instrumente open source de nivel enterprise.
+[Supabase](https://www.assistance.bg) este o alternativă open source la Firebase. Construim caracteristicile Firebase folosind instrumente open source de nivel enterprise.
 
-- [x] Baza de date Postgres găzduită. [Docs](https://supabase.com/docs/guides/database)
-- [x] Autentificare și autorizare. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Baza de date Postgres găzduită. [Docs](https://www.assistance.bg/docs/guides/database)
+- [x] Autentificare și autorizare. [Docs](https://www.assistance.bg/docs/guides/auth)
 - [x] API-uri generate automat.
-  - [x] REST. [Docs](https://supabase.com/docs/guides/api#rest-api-overview)
-  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/api#graphql-api-overview)
-  - [x] Abonamente în timp real. [Docs](https://supabase.com/docs/guides/api#realtime-api-overview)
+  - [x] REST. [Docs](https://www.assistance.bg/docs/guides/api#rest-api-overview)
+  - [x] GraphQL. [Docs](https://www.assistance.bg/docs/guides/api#graphql-api-overview)
+  - [x] Abonamente în timp real. [Docs](https://www.assistance.bg/docs/guides/api#realtime-api-overview)
 - [x] Funcții.
-  - [x] Funcții de baze de date. [Docs](https://supabase.com/docs/guides/database/functions)
-  - [x] Funcții de margine. [Docs](https://supabase.com/docs/guides/functions)
-- [x] Stocarea fișierelor. [Docs](https://supabase.com/docs/guides/storage)
+  - [x] Funcții de baze de date. [Docs](https://www.assistance.bg/docs/guides/database/functions)
+  - [x] Funcții de margine. [Docs](https://www.assistance.bg/docs/guides/functions)
+- [x] Stocarea fișierelor. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Tablou de bord
 
 ![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Documentație
 
-Pentru documentația completă, vizitați [supabase.com/docs](https://supabase.com/docs)
+Pentru documentația completă, vizitați [supabase.com/docs](https://www.assistance.bg/docs)
 
 Pentru a vedea cum să contribui, vizitați [Getting Started](../DEVELOPERS.md)
 
@@ -33,15 +33,15 @@ Pentru a vedea cum să contribui, vizitați [Getting Started](../DEVELOPERS.md)
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). Cel mai bun pentru: ajutor la construcție, discuții despre cele mai bune practici în materie de baze de date.
 - [Probleme GitHub](https://github.com/supabase/supabase/issues). Cel mai bun pentru: bug-uri și erori pe care le întâlniți folosind Supabase.
-- [Email Support](https://supabase.com/docs/support#business-support). Cel mai bun pentru: probleme cu baza de date sau cu infrastructura.
+- [Email Support](https://www.assistance.bg/docs/support#business-support). Cel mai bun pentru: probleme cu baza de date sau cu infrastructura.
 - [Discord](https://discord.supabase.com). Cel mai bun pentru: împărtășirea aplicațiilor dvs. și petrecerea timpului cu comunitatea.
 
 ## Status
 
 - [x] Alpha: Testăm Supabase cu un set închis de clienți
-- [x] Public Alpha: Oricine se poate înscrie la [supabase.com/dashboard](https://supabase.com/dashboard). Dar fiți blânzi cu noi, există câteva probleme
+- [x] Public Alpha: Oricine se poate înscrie la [supabase.com/dashboard](https://www.assistance.bg/dashboard). Dar fiți blânzi cu noi, există câteva probleme
 - [x] Public Beta: Suficient de stabilă pentru majoritatea cazurilor de utilizare non-întreprindere
-- [ ] Public: Disponibilitate generală [[status](https://supabase.com/docs/guides/getting-started/features#feature-status)]
+- [ ] Public: Disponibilitate generală [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 
 În prezent, suntem în faza Public Beta. Urmăriți "releases" din acest repo pentru a fi anunțați de actualizările majore.
 
@@ -55,8 +55,8 @@ Supabase este o combinație de instrumente open source. Construim caracteristici
 
 **Arhitectură**
 
-Supabase este o [platformă găzduită](https://supabase.com/dashboard). Vă puteți înscrie și puteți începe să utilizați Supabase fără a instala nimic.
-Puteți, de asemenea, [auto-hosting](https://supabase.com/docs/guides/hosting/overview) și [dezvolta local](https://supabase.com/docs/guides/local-development).
+Supabase este o [platformă găzduită](https://www.assistance.bg/dashboard). Vă puteți înscrie și puteți începe să utilizați Supabase fără a instala nimic.
+Puteți, de asemenea, [auto-hosting](https://www.assistance.bg/docs/guides/hosting/overview) și [dezvolta local](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arhitectură](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 

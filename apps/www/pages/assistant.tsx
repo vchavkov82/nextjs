@@ -657,7 +657,7 @@ function Assistant() {
         openGraph={{
           title: meta_title,
           description: meta_description,
-          url: `https://supabase.com/ai`,
+          url: `https://www.assistance.bg/ai`,
         }}
       />
       <DefaultLayout className="lg:h-screen min-h-screen overflow-hidden">
@@ -691,7 +691,7 @@ function Assistant() {
                     <Link
                       target="_blank"
                       rel="noreferrer noopener"
-                      href="https://supabase.com/blog/supabase-ai-assistant-v2"
+                      href="https://www.assistance.bg/blog/supabase-ai-assistant-v2"
                     >
                       Blog Post
                     </Link>
