@@ -4,6 +4,27 @@ set -e
 
 auto_confirm=0
 
+# Detect container runtime (Docker or Podman)
+detect_compose_command() {
+    if command -v podman >/dev/null 2>&1 && podman compose version >/dev/null 2>&1; then
+        echo "podman compose"
+    elif command -v docker >/dev/null 2>&1 && docker compose version >/dev/null 2>&1; then
+        echo "docker compose"
+    elif command -v docker-compose >/dev/null 2>&1; then
+        echo "docker-compose"
+    else
+        echo "ERROR: Neither 'docker compose', 'podman compose', nor 'docker-compose' found" >&2
+        exit 1
+    fi
+}
+
+COMPOSE_CMD=$(detect_compose_command)
+
+# Execute compose command with proper argument handling
+compose_cmd() {
+    eval "$COMPOSE_CMD $*"
+}
+
 confirm () {
     if [ "$auto_confirm" = "1" ]; then
         return 0
@@ -34,12 +55,12 @@ confirm
 echo "===> Stopping and removing all containers..."
 
 if [ -f ".env" ]; then
-    docker compose -f docker-compose.yml -f ./dev/docker-compose.dev.yml down -v --remove-orphans
+    compose_cmd -f docker-compose.yml -f ./dev/docker-compose.dev.yml down -v --remove-orphans
 elif [ -f ".env.example" ]; then
-    echo "No .env found, using .env.example for docker compose down..."
-    docker compose --env-file .env.example -f docker-compose.yml -f ./dev/docker-compose.dev.yml down -v --remove-orphans
+    echo "No .env found, using .env.example for compose down..."
+    compose_cmd --env-file .env.example -f docker-compose.yml -f ./dev/docker-compose.dev.yml down -v --remove-orphans
 else
-    echo "Skipping 'docker compose down' because there's no env-file."
+    echo "Skipping 'compose down' because there's no env-file."
 fi
 
 echo "===> Cleaning up bind-mounted directories..."
@@ -72,5 +93,5 @@ else
 fi
 
 echo "Cleanup complete!"
-echo "Re-run 'docker compose pull' to update images."
+echo "Re-run '$COMPOSE_CMD pull' to update images."
 echo ""
