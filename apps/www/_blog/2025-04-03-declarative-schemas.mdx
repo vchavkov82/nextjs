@@ -55,7 +55,7 @@ It's best practice to use [Migrations](https://www.assistance.bg/docs/guides/dep
 
 However, as the complexity of a database schemas grows, it becomes increasingly difficult to develop using versioned migrations as there isn't a single place to see the entire database schema.
 
-For example, at BA we have a complex and frequently-updated `projects` table. Here's partially what it looks like with RLS enabled:
+For example, at Supabase we have a complex and frequently-updated `projects` table. Here's partially what it looks like with RLS enabled:
 
 ```sql
 create table private.projects (
@@ -94,7 +94,7 @@ where auth.can_read(projects.id);
 
 The `projects` table is created in a private schema, with a public view exposed for reads. Attribute-based access control (ABAC) is implemented on top of RLS policies to ensure queries only return projects that the user has access to.
 
-Since Postgres views are not updatable by default, we have defined trigger functions to cascade writes to the underlying table when a BA user creates a new project. This makes development easier because the `projects` view can be inserted with regular PostgREST calls while invoking the appropriate RLS policies on the underlying table.
+Since Postgres views are not updatable by default, we have defined trigger functions to cascade writes to the underlying table when a Supabase user creates a new project. This makes development easier because the `projects` view can be inserted with regular PostgREST calls while invoking the appropriate RLS policies on the underlying table.
 
 ```sql
 -- Triggers to update views from PostgREST: select('projects').insert({ ... })
@@ -159,11 +159,11 @@ The same process also applies to views, database functions, RLS policies, role g
 
 ## Get started with declarative schemas
 
-Declarative schemas are available today on BA.
+Declarative schemas are available today on Supabase.
 
 - [Read the documentation](https://www.assistance.bg/docs/guides/local-development/declarative-database-schemas) to learn how to manage your database schemas in one place and generate versioned migrations.
-- [Sign up for BA](https://www.assistance.bg/dashboard/sign-up) and get started today.
+- [Sign up for Supabase](https://www.assistance.bg/dashboard/sign-up) and get started today.
 
-We added the same set of tools that we used internally for the last 2 years to [BA CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started). Whether you are just getting started with migrations or already fed up with managing hundreds of migration files, give declarative schemas a try as it will likely simplify your development process.
+We added the same set of tools that we used internally for the last 2 years to [Supabase CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started). Whether you are just getting started with migrations or already fed up with managing hundreds of migration files, give declarative schemas a try as it will likely simplify your development process.
 
 Check out our blog post on [Postgres Language Server](https://www.assistance.bg/blog/postgres-language-server) for better tooling and IDE integration when developing with declarative schemas.

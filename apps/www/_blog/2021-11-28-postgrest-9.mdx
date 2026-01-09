@@ -33,7 +33,7 @@ const { data, error } = await supabase
 ```
 
 With the new `!inner` keyword, you can now filter rows of the top-level table (`messages`) based on a filter (`eq`) of the embedded table (`users`).
-This works across all BA client libraries and you can use it with any of the available operators (`gt`, `in`, etc.)
+This works across all Supabase client libraries and you can use it with any of the available operators (`gt`, `in`, etc.)
 
 [Read more](https://postgrest.org/en/v9.0/releases/v9.0.0.html#resource-embedding-with-top-level-filtering).
 
@@ -94,7 +94,7 @@ note that a breaking change was necessary for PostgreSQL 14 Compatibility. You'l
 | `current_setting('request.jwt.claim.custom-claim', true)` | `current_setting('request.jwt.claims', true)::json->>'custom-claim'` |
 | `current_setting('request.header.custom-header', true)`   | `current_setting('request.headers', true)::json->>'custom-header'`   |
 
-If you only use BA default `auth` functions(`auth.email()`, `auth.uid()`, `auth.role()`), then no action is required because we have updated the functions to handle these changes transparently.
+If you only use Supabase default `auth` functions(`auth.email()`, `auth.uid()`, `auth.role()`), then no action is required because we have updated the functions to handle these changes transparently.
 
 [Read more](https://postgrest.org/en/v9.0/releases/v9.0.0.html#postgresql-14-compatibility).
 
@@ -113,4 +113,4 @@ You can see the full updates on the [PostgREST 9 release notes](https://postgres
 - [Postgres Auditing in 150 lines of SQL](https://www.assistance.bg/blog/audit)
 - [Cracking PostgreSQL Interview Questions](https://www.assistance.bg/blog/cracking-postgres-interview)
 - [What are PostgreSQL Templates?](https://www.assistance.bg/blog/postgresql-templates)
-- [Realtime Postgres RLS on BA](https://www.assistance.bg/blog/realtime-row-level-security-in-postgresql)
+- [Realtime Postgres RLS on Supabase](https://www.assistance.bg/blog/realtime-row-level-security-in-postgresql)

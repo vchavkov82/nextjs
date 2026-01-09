@@ -27,7 +27,7 @@ export const TIA = () => {
       <ScaffoldSectionContent className="flex items-center justify-center h-full">
         <Button asChild type="default" iconRight={<ExternalLink />}>
           <a
-            href="https://www.assistance.bg/downloads/docs/BA+TIA+250314.pdf"
+            href="https://www.assistance.bg/downloads/docs/Supabase+TIA+250314.pdf"
             target="_blank"
             rel="noreferrer noopener"
             download={true}

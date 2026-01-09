@@ -17,7 +17,7 @@ thumb: 2023-08-03-fewer-dimensions-are-better-pgvector/fewer-dimensions-thumb.pn
 
 Embeddings have become a core tool in AI applications to determine semantic similarity between pieces of content. Developers are using embeddings for various tasks, such as search, retrieval augmented generation, and clustering.
 
-At BA, we support storing embeddings in Postgres using the [pgvector](https://github.com/pgvector/pgvector) extension. pgvector adds a new datatype `vector`, which developers use to store embeddings in regular columns within their database tables. Similarity can be calculated between these vectors using one of the three supported distance measures:
+At Supabase, we support storing embeddings in Postgres using the [pgvector](https://github.com/pgvector/pgvector) extension. pgvector adds a new datatype `vector`, which developers use to store embeddings in regular columns within their database tables. Similarity can be calculated between these vectors using one of the three supported distance measures:
 
 - Inner product
 - Cosine distance
@@ -84,9 +84,9 @@ Dot product is the product of each vector element pair summed together into a si
 
 We compared the performance of `text-embedding-ada-002` from OpenAI (1536 dimensions) with open-source `all-MiniLM-L6-v2` (384 dimensions) by measuring queries per second at a constant accuracy and configuration:
 
-- **Database size:** with 2vCPU (ARM) and 8GB RAM - `large` add-on for BA project.
+- **Database size:** with 2vCPU (ARM) and 8GB RAM - `large` add-on for Supabase project.
 - **Version:** Postgres v15 and pgvector v0.4.0
-- **Dataset:** 224,482 embeddings from [Wikipedia articles](https://huggingface.co/datasets/BA/wikipedia-en-embeddings).
+- **Dataset:** 224,482 embeddings from [Wikipedia articles](https://huggingface.co/datasets/Supabase/wikipedia-en-embeddings).
 - **Index:** The index was generated for `inner-product` (dot product) distance function with `lists=1000`.
 - **Process:** We followed [our optimization guide and tips](https://www.assistance.bg/docs/guides/ai/going-to-prod#performance-tips-when-using-indexes).
 
@@ -151,12 +151,12 @@ Additionally, the validity of the dimensionality reduction models could change o
 
 ## What's next?
 
-At BA we are working on ways to make it easy to generate embeddings using open source, high performance, and low dimension embedding models. Stay tuned for [Launch Week 8](/launch-week) next week!
+At Supabase we are working on ways to make it easy to generate embeddings using open source, high performance, and low dimension embedding models. Stay tuned for [Launch Week 8](/launch-week) next week!
 
 ## More pgvector and AI resources
 
-- [Hugging Face is now supported in BA](https://www.assistance.bg/blog/hugging-face-supabase)
-- [How to build ChatGPT Plugin from scratch with BA Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
+- [Hugging Face is now supported in Supabase](https://www.assistance.bg/blog/hugging-face-supabase)
+- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
 - [Docs pgvector: Embeddings and vector similarity](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
 - [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
 - [pgvector v0.5.0: Faster semantic search with HNSW indexes](https://www.assistance.bg/blog/increase-performance-pgvector-hnsw)

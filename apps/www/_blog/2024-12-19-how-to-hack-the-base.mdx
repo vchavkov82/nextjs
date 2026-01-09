@@ -42,7 +42,7 @@ You will need the following tools installed on your computer to follow along in 
 - psql client
 - Burp Suite (optional)
 
-To follow along with this walkthrough practically, you will need to run the challenge app locally. Clone [this repo here](https://github.com/supabase/hack-the-base) and follow the README instructions in the dec-24 directory. You will only need to run the web app locally as the BA backend project is still up and usable (for the foreseeable future).
+To follow along with this walkthrough practically, you will need to run the challenge app locally. Clone [this repo here](https://github.com/supabase/hack-the-base) and follow the README instructions in the dec-24 directory. You will only need to run the web app locally as the Supabase backend project is still up and usable (for the foreseeable future).
 
 ## **The Flags**
 
@@ -120,7 +120,7 @@ curl 'https://ubssibzsnwtwbbvbhbvb.supabase.co/rest/v1/bulletins?select=*' -H 'a
 
 This will return a json array of all the bulletins, the oldest of which includes our flag\!
 
-We can do better this though, so before we move onto the next flag, lets clean up our CLI by putting the BA anon key into an environmental variable:
+We can do better this though, so before we move onto the next flag, lets clean up our CLI by putting the Supabase anon key into an environmental variable:
 
 ```bash
 export ANON_KEY=’eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVic3NpYnpzbnd0d2JidmJoYnZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEwMTYxMjksImV4cCI6MjA0NjU5MjEyOX0.hUbR1lqlGnQZlvjOgt4Wzn9iHidJP4iVHyWE76d9FUk'
@@ -155,15 +155,15 @@ Fill out the form with your account information, check the hCaptcha, find the bu
   }}
 />
 
-Or at least it would have been simple if you did this during a quiet period. For reasons known only to my coffee levels that morning, this BA project did not have Custom SMTP setup, meaning a very strict rate limit of two emails per hour.
+Or at least it would have been simple if you did this during a quiet period. For reasons known only to my coffee levels that morning, this Supabase project did not have Custom SMTP setup, meaning a very strict rate limit of two emails per hour.
 
 If you tried this during a busy period there was an extra step of setting up a script to bot the registration. The hCaptcha field was checked for but didn’t need to be valid so this was slightly easier than it sounds.
 
-Unfortunately, more than half of the successful registrations were for people trying to register a miskatonicuniveristy.us email account, so I needed to apply an emergency fix to filter out these attempts so they wouldn’t consume the SMTP limit (and BA’s bounce rate).
+Unfortunately, more than half of the successful registrations were for people trying to register a miskatonicuniveristy.us email account, so I needed to apply an emergency fix to filter out these attempts so they wouldn’t consume the SMTP limit (and Supabase’s bounce rate).
 
 I won’t go into details about how you could have scripted this, you could have used your language of choice (i.e. java), or used the Intruder feature of Burp Suite.
 
-Regardless of how hard your registration journey was, once you receive the confirmation email in your inbox the hunt is almost over. Clicking the link in the email will confirm your account with the BA project, optionally you could change the redirect link to the real URL of the app but your account will be registered regardless.
+Regardless of how hard your registration journey was, once you receive the confirmation email in your inbox the hunt is almost over. Clicking the link in the email will confirm your account with the Supabase project, optionally you could change the redirect link to the real URL of the app but your account will be registered regardless.
 
 From here you just needed to login to the app and be presented the flag.
 
@@ -238,7 +238,7 @@ Right click this and “Send to Intruder”. In the Intruder panel. Find the pas
 
 If you are a dinosaur like me, you would load a password file like “Rockyou.txt”.
 
-BA Auth has a rate limit for sign in requests based on certain heuristics so we need to throttle our requests to about one request per 2000 milliseconds. You can do this in the “Resource Pool” section, create a new resource pool with maximum concurrent requests of 1 and delay between requests of 2000 milliseconds. From here on it is just a waiting game for Intruder to return us a valid result.
+Supabase Auth has a rate limit for sign in requests based on certain heuristics so we need to throttle our requests to about one request per 2000 milliseconds. You can do this in the “Resource Pool” section, create a new resource pool with maximum concurrent requests of 1 and delay between requests of 2000 milliseconds. From here on it is just a waiting game for Intruder to return us a valid result.
 
 Should I have included a password higher up on most wordlists? Yes, yes I should have.
 
@@ -274,7 +274,7 @@ The expert flag gets its label based on the number of hoops hackers need to jump
 
 Our journey for this flag starts with the other schema we found in the “open schema” flag error message \- storage.
 
-If you are familiar with BA, you will know that the storage schema is the same across every project. Each BA project has a table in the storage schema called objects, querying this will return all the files in all the buckets.
+If you are familiar with Supabase, you will know that the storage schema is the same across every project. Each Supabase project has a table in the storage schema called objects, querying this will return all the files in all the buckets.
 
 For some reason the owners of this project (read: me) have decided to expose this table, allowing anyone to see the full list of objects within all the projects buckets.
 
@@ -309,7 +309,7 @@ Viewing this directly in our browser reveals some information its clear we shoul
   }}
 />
 
-Lets try to connect to this database. We will need to translate the information in the README into a connection string. Looking at an example connection string in our example BA project we can see a pooler connection string has the pattern:
+Lets try to connect to this database. We will need to translate the information in the README into a connection string. Looking at an example connection string in our example Supabase project we can see a pooler connection string has the pattern:
 
 `postgresql://[USER].[PROJECT_ID]:[PASSWORD]@[REGION].pooler.supabase.com:6543/postgres`
 
@@ -331,7 +331,7 @@ And with that you have now collected all the flags. Congratulations\!
 
 ## **Thanks for stopping by**
 
-Now that you are a seasoned hacker, take a look at our [security.txt](https://www.assistance.bg/.well-known/security.txt) file to take part in our hackerone program to help make BA a safer place\!
+Now that you are a seasoned hacker, take a look at our [security.txt](https://www.assistance.bg/.well-known/security.txt) file to take part in our hackerone program to help make Supabase a safer place\!
 
 Once again, thanks to all of those that participated and we will see you in the next one\!
 

@@ -1,6 +1,6 @@
 ---
-title: 'BA Auth: SSO,  Mobile, and Server-side support'
-description: Supacharging BA Auth with Sign in with Apple on iOS, Single-Sign-On support with SAML 2.0, and PKCE for server-side rendering and mobile auth.
+title: 'Supabase Auth: SSO,  Mobile, and Server-side support'
+description: Supacharging Supabase Auth with Sign in with Apple on iOS, Single-Sign-On support with SAML 2.0, and PKCE for server-side rendering and mobile auth.
 launchweek: '7'
 categories:
   - product
@@ -14,7 +14,7 @@ image: launch-week-7/day-4-supabase-auth-sso-pkce/supabase-auth-sso-pkce-thumb.p
 thumb: launch-week-7/day-4-supabase-auth-sso-pkce/supabase-auth-sso-pkce-og.jpg
 ---
 
-Today we're excited to announce a few new features for BA Auth:
+Today we're excited to announce a few new features for Supabase Auth:
 
 1. [Easily add Single Sign-On support to your projects using SAML 2.0](/blog/supabase-auth-sso-pkce#single-sign-on-support-using-saml-20)
 2. [Better support for server-side rendering and mobile apps using PKCE](/blog/supabase-auth-sso-pkce#server-side-and-mobile-auth)
@@ -41,7 +41,7 @@ Building SSO into your application isn't necessarily hard, but does come with so
 
 ### Getting Started with SAML 2.0
 
-To get started, enable the [“SAML 2.0“](https://www.assistance.bg/dashboard/project/phcnitosaawbzytgyznx/auth/providers) [authentication method in the dashboard](https://www.assistance.bg/dashboard/project/_/auth/providers). We've added new commands to the [BA CLI](https://www.assistance.bg/docs/guides/cli) to help with the configuration process:
+To get started, enable the [“SAML 2.0“](https://www.assistance.bg/dashboard/project/phcnitosaawbzytgyznx/auth/providers) [authentication method in the dashboard](https://www.assistance.bg/dashboard/project/_/auth/providers). We've added new commands to the [Supabase CLI](https://www.assistance.bg/docs/guides/cli) to help with the configuration process:
 
 ```bash
 $ supabase sso --help
@@ -79,15 +79,15 @@ create policy "Only allow read-write access to tenants" on tablename as restrict
 );
 ```
 
-The journey to enterprise readiness isn't an end goal, it is a continuous process that demands constant attention and maintenance. With BA Auth, your team can offload this engineering burden to us and prioritize the features that matter.
+The journey to enterprise readiness isn't an end goal, it is a continuous process that demands constant attention and maintenance. With Supabase Auth, your team can offload this engineering burden to us and prioritize the features that matter.
 
 ## Server-Side and Mobile Auth
 
-Many developers today are using BA to build mobile apps, and server-side rendering is becoming popular (again!). This release will add support for these use cases by introducing the _Proof Key for Code Exchange flow (PKCE)_ authentication flow. This improves security for mobile apps and makes building server-first apps simple. Since this is a major update that touches many of the authentication routes, we will be rolling it out gradually over the next few weeks.
+Many developers today are using Supabase to build mobile apps, and server-side rendering is becoming popular (again!). This release will add support for these use cases by introducing the _Proof Key for Code Exchange flow (PKCE)_ authentication flow. This improves security for mobile apps and makes building server-first apps simple. Since this is a major update that touches many of the authentication routes, we will be rolling it out gradually over the next few weeks.
 
-### A brief history of BA Auth
+### A brief history of Supabase Auth
 
-When we [launched](https://news.ycombinator.com/item?id=24072051) BA Auth, our target was JAMstack developers. In these cases, the protocol used between the user's application and BA Auth is known as the [Implicit Grant Flow](https://www.rfc-editor.org/rfc/rfc6749#section-4.2):
+When we [launched](https://news.ycombinator.com/item?id=24072051) Supabase Auth, our target was JAMstack developers. In these cases, the protocol used between the user's application and Supabase Auth is known as the [Implicit Grant Flow](https://www.rfc-editor.org/rfc/rfc6749#section-4.2):
 
 <Img
   alt="diagram reference"
@@ -118,9 +118,9 @@ To solve these problems, we're introducing support for the _Proof Key for Code E
 
 The PKCE flow introduces a _code verifier_ (a randomly generated secret) and a _code challenge_ (the hash of the _code verifier_). The authorization code is returned as a query parameter so it's accessible on the server. During the PKCE flow:
 
-1. The _code challenge_ is sent to BA Auth, which returns an _authorization code._
+1. The _code challenge_ is sent to Supabase Auth, which returns an _authorization code._
 2. The client sends the _authorization code_ together with the _code verifier_ to obtain the user's session.
-3. BA Auth checks if the _code verifier_ matches the _code challenge_ sent earlier by computing the hash. This renders a malicious attacker's attempt to intercept the authorization code useless, since they need to know the value of the _code verifier_ as well.
+3. Supabase Auth checks if the _code verifier_ matches the _code challenge_ sent earlier by computing the hash. This renders a malicious attacker's attempt to intercept the authorization code useless, since they need to know the value of the _code verifier_ as well.
 
 <Img
   alt="diagram reference"
@@ -134,7 +134,7 @@ The PKCE flow introduces a _code verifier_ (a randomly generated secret) and a _
 
 ### Migrating to PKCE on the client
 
-Over the next few weeks, you'll be able to use it with the BA libraries. We've already added PKCE to the [JavaScript](https://www.assistance.bg/docs/reference/javascript/installing) client library and our [auth-helpers](https://www.assistance.bg/docs/guides/auth/auth-helpers) library. If you're using `supabase-js` , you can switch to PKCE by initializing your client with the following option:
+Over the next few weeks, you'll be able to use it with the Supabase libraries. We've already added PKCE to the [JavaScript](https://www.assistance.bg/docs/reference/javascript/installing) client library and our [auth-helpers](https://www.assistance.bg/docs/guides/auth/auth-helpers) library. If you're using `supabase-js` , you can switch to PKCE by initializing your client with the following option:
 
 ```tsx
 import { createClient } from '@supabase/supabase-js'
@@ -166,7 +166,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { createServerSupabaseClient } from '@supabase/auth-helpers-nextjs'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Create the BA Client
+  // Create the Supabase Client
   const supabase = createServerSupabaseClient(
     { req, res },
     {
@@ -199,7 +199,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { createServerSupabaseClient } from '@supabase/auth-helpers-nextjs'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // Create authenticated BA Client
+  // Create authenticated Supabase Client
   const supabase = createServerSupabaseClient(
     { req, res },
     {
@@ -248,6 +248,6 @@ We're just starting with Apple login, and soon add support for Google login.
 
 ## Wrapping Up
 
-BA Auth aims to continue developing auth features that are secure by default yet simple to implement. We use BA Auth for our hosted platform and continuously dogfood the latest version on it. If you are interested to migrate to BA Auth, you can check out this blog post on how [Parqet migrated 125,000 users from Auth0 to BA Auth](https://kevcodez.medium.com/migrating-125-000-users-from-auth0-to-supabase-81c0568de307).
+Supabase Auth aims to continue developing auth features that are secure by default yet simple to implement. We use Supabase Auth for our hosted platform and continuously dogfood the latest version on it. If you are interested to migrate to Supabase Auth, you can check out this blog post on how [Parqet migrated 125,000 users from Auth0 to Supabase Auth](https://kevcodez.medium.com/migrating-125-000-users-from-auth0-to-supabase-81c0568de307).
 
 [^1]: [App store review guidelines](https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple)

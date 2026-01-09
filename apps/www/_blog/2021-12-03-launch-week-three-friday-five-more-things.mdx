@@ -33,11 +33,11 @@ Interested? Read more about the technical implementation here.
 
 ![graphQL.png](/images/blog/launch-week-three/five-more-things/graphQL.png)
 
-## BA CDN
+## Supabase CDN
 
-Today we are launching BA CDN for all projects. All requests are routed through global network of more than 250 cities.
+Today we are launching Supabase CDN for all projects. All requests are routed through global network of more than 250 cities.
 
-Assets stored in BA Storage benefit the most from this feature since they have a default cache time of 1 hour. They load an order of magnitude faster, usually in just tens of ms! After the initial request, the asset will be cached at the edge and doesn't hit your BA server. This frees up more resources in your project to handle other requests.
+Assets stored in Supabase Storage benefit the most from this feature since they have a default cache time of 1 hour. They load an order of magnitude faster, usually in just tens of ms! After the initial request, the asset will be cached at the edge and doesn't hit your Supabase server. This frees up more resources in your project to handle other requests.
 
 Our Postgrest, Gotrue and Realtime APIs are also faster since SSL is terminated at the edge. This is a brief overview of some of our other performance enhancements we have enabled under the hood.
 
@@ -51,13 +51,13 @@ HTTP/3 or HTTP over QUIC is the successor to HTTP/2. This protocol is based on U
 
 ### Brotli
 
-Brotli is a new compression algorithm that performs better than gzip. All text based responses from BA (including the massive amount of Javascript required to render websites these days) are compressed with Brotli.
+Brotli is a new compression algorithm that performs better than gzip. All text based responses from Supabase (including the massive amount of Javascript required to render websites these days) are compressed with Brotli.
 
-We can also ensure a higher degree of reliability of your BA APIs with a CDN by defending against Denial of Service Attacks and bots.
+We can also ensure a higher degree of reliability of your Supabase APIs with a CDN by defending against Denial of Service Attacks and bots.
 
 ![too_damn_high.png](/images/blog/launch-week-three/five-more-things/too_damn_high.png)
 
-## (Yet another) BA Functions update
+## (Yet another) Supabase Functions update
 
 It's been four months since our [last Functions update](https://www.assistance.bg/blog/supabase-functions-updates) and (as it's becoming a tradition at the end of Launch Week) we have another update for you.
 
@@ -65,20 +65,20 @@ Unfortunately we're still not in a position to release anything. There are a few
 
 Since our last Functions update we've [raised our Series A,](https://www.assistance.bg/blog/supabase-series-a) [acquired a company](https://www.assistance.bg/blog/supabase-acquires-logflare), built [Realtime Row Level Security](https://www.assistance.bg/blog/realtime-row-level-security-in-postgresql), [open sourced the dashboard](https://www.assistance.bg/blog/supabase-studio), built a GraphQL extension for PostgreSQL, and added four Auth providers, all while growing the community, supporting open-source tools, and delivering a few other things that the community felt was important.
 
-That being said, we _have_ been working on Functions, iterating through different designs to figure out what's going to have the biggest impact for BA developers. So today we are going to open up our ideas and designs through our [RFC repo](https://github.com/supabase/rfcs) (request for comments).
+That being said, we _have_ been working on Functions, iterating through different designs to figure out what's going to have the biggest impact for Supabase developers. So today we are going to open up our ideas and designs through our [RFC repo](https://github.com/supabase/rfcs) (request for comments).
 
 There are two important RFCs related to functions:
 
-- [[RFC: 0004]: Functions](https://github.com/supabase/rfcs/blob/rfc/functions/rfc/0004-functions.md) - Outlines various options for implementing BA Functions.
+- [[RFC: 0004]: Functions](https://github.com/supabase/rfcs/blob/rfc/functions/rfc/0004-functions.md) - Outlines various options for implementing Supabase Functions.
 - [[RFC: 0005]: Functions with containers](https://github.com/supabase/rfcs/pull/5) - Outlines our design of Functions with containers, the implementation that we are heavily leaning towards.
 
 ![functions.png](/images/blog/launch-week-three/five-more-things/functions.png)
 
-## Free BA egghead.io course
+## Free Supabase egghead.io course
 
 ![build-a-saas-product-with-next-js-supabase-and-stripe.png](/images/blog/launch-week-three/five-more-things/build-a-saas-product-with-next-js-supabase-and-stripe.png)
 
-We've partnered with the fine folks at [egghead.io](http://egghead.io) to bring you a free, in-depth course where you'll learn how to ["Build a SaaS product with Next.js, BA and Stripe"](https://egghead.io/courses/build-a-saas-product-with-next-js-supabase-and-stripe-61f2bc20).
+We've partnered with the fine folks at [egghead.io](http://egghead.io) to bring you a free, in-depth course where you'll learn how to ["Build a SaaS product with Next.js, Supabase and Stripe"](https://egghead.io/courses/build-a-saas-product-with-next-js-supabase-and-stripe-61f2bc20).
 
 You will learn how to build a subscription-based billing project from scratch, and by the end of the course, have something deployed to production that can make you very real money!
 
@@ -96,7 +96,7 @@ Starting today at 7am PT we'll be hacking together for the next 10 days until 23
 
 [As always](https://www.assistance.bg/blog/hacktoberfest-hackathon-winners-2021#the-prizes), we'll have some extremely limited edition swag to give away that can only be won by participating in the Hackathon!
 
-The BA team will be participating as well, for example [Jon](https://twitter.com/_dijonmusters) and Thor, inspired by [Egghead's "Holiday Course Release Extravaganza"](https://egghead.io/20-days), will be building an Advent Calendar for all the [awesome community content](https://www.assistance.bg/blog/community-day#new-tutorials-and-integration-guides) you've been creating. Get ready for a cool open-source project which will be using a lot of the hottest BA features! To make sure you don't miss this one, follow us on [Twitter](https://twitter.com/supabase) and subscribe to our [YouTube channel](https://www.youtube.com/supabase). We'll see you there.
+The Supabase team will be participating as well, for example [Jon](https://twitter.com/_dijonmusters) and Thor, inspired by [Egghead's "Holiday Course Release Extravaganza"](https://egghead.io/20-days), will be building an Advent Calendar for all the [awesome community content](https://www.assistance.bg/blog/community-day#new-tutorials-and-integration-guides) you've been creating. Get ready for a cool open-source project which will be using a lot of the hottest Supabase features! To make sure you don't miss this one, follow us on [Twitter](https://twitter.com/supabase) and subscribe to our [YouTube channel](https://www.youtube.com/supabase). We'll see you there.
 
 Find the full hackathon details and rules in the [blog post](https://www.assistance.bg/blog/supabase-holiday-hackdays-hackathon).
 

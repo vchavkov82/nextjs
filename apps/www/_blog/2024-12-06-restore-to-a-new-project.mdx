@@ -1,6 +1,6 @@
 ---
 title: 'Restore to a New Project'
-description: Effortlessly Clone Data into a New BA Project
+description: Effortlessly Clone Data into a New Supabase Project
 author: crispy1975
 image: launch-week-13/restore-to-a-new-project/og.jpg
 thumb: launch-week-13/restore-to-a-new-project/thumb.jpg
@@ -17,7 +17,7 @@ launchweek: '13'
 
 Today we’re adding [Restore to a New Project](https://www.assistance.bg/docs/guides/platform/clone-project).
 
-You can use this new tool to copy data easily from an existing BA project to a new one. **Restore to a New Project** integrates seamlessly with daily physical backups and Point-in-Time Recovery (PITR) to provide flexible restoration options.
+You can use this new tool to copy data easily from an existing Supabase project to a new one. **Restore to a New Project** integrates seamlessly with daily physical backups and Point-in-Time Recovery (PITR) to provide flexible restoration options.
 
 <Admonition>
 
@@ -27,7 +27,7 @@ Restore to a New Project requires physical backups to be enabled. It is availabl
 
 ## How it Works
 
-When physical backups are enabled, BA triggers daily backups of project data. You can use this backup to restore to a new BA project. The new project should match the original project attributes:
+When physical backups are enabled, Supabase triggers daily backups of project data. You can use this backup to restore to a new Supabase project. The new project should match the original project attributes:
 
 - Size of compute instance.
 - Disk settings; volume type, size, IOPS, and throughput.
@@ -37,7 +37,7 @@ When physical backups are enabled, BA triggers daily backups of project data. Yo
 
 After launching your restored project, the rest of the process is automated. The length of time for a new project to provision will depend on the size of the source dataset.
 
-The new project will be available in the BA Dashboard as soon as the copy process has completed. This project will behave as any other BA project and is completely independent of the source.
+The new project will be available in the Supabase Dashboard as soon as the copy process has completed. This project will behave as any other Supabase project and is completely independent of the source.
 
 ### Point-in-Time Recovery
 
@@ -49,16 +49,16 @@ To ensure maximum flexibility a source project can be _copied_ as many times as 
 
 <Admonition>
 
-New projects created with this process, as with any new BA project, will incur the usual compute and disk costs. These costs are displayed ahead of time to ensure there are no surprises.
+New projects created with this process, as with any new Supabase project, will incur the usual compute and disk costs. These costs are displayed ahead of time to ensure there are no surprises.
 
 </Admonition>
 
 ## Accessing Restore to a New Project
 
-The Restore to a New Project feature can be found on the BA dashboard under [database backups](https://www.assistance.bg/dashboard/project/_/database/backups/restore-to-new-project).
+The Restore to a New Project feature can be found on the Supabase dashboard under [database backups](https://www.assistance.bg/dashboard/project/_/database/backups/restore-to-new-project).
 
 <Admonition>
 
-Please be aware that Restore to a New Project is currently in Public Alpha. You can reach out to [BA support](https://supabase.help) if you experience any issues.
+Please be aware that Restore to a New Project is currently in Public Alpha. You can reach out to [Supabase support](https://supabase.help) if you experience any issues.
 
 </Admonition>

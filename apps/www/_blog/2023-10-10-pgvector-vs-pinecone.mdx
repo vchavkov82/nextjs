@@ -14,7 +14,7 @@ image: 2023-10-10-pgvector-vs-pinecone/pgvector-pinecone-og.png
 thumb: 2023-10-10-pgvector-vs-pinecone/pgvector-pinecone-thumb.png
 ---
 
-At BA, we believe that a combination of Postgres and pgvector serves as a better alternative to single-purpose databases like Pinecone for AI tasks. This isn't the first time a Postgres-based solution has successfully rivaled specialized databases designed for specific data types. Timescale for time-series data and Greenplum for analytics are just a few examples.
+At Supabase, we believe that a combination of Postgres and pgvector serves as a better alternative to single-purpose databases like Pinecone for AI tasks. This isn't the first time a Postgres-based solution has successfully rivaled specialized databases designed for specific data types. Timescale for time-series data and Greenplum for analytics are just a few examples.
 
 We decided to put Postgres vector performance to the test and run a direct comparison between pgvector and Pinecone.
 
@@ -45,7 +45,7 @@ We utilized the [ANN Benchmarks](https://github.com/erikbern/ann-benchmarks) met
 
 To compare Pinecone and pgvector on equal grounds, we opted for the following setups:
 
-- **pgvector**: A single BA 2XL instance approximating ~410$/month (8-core ARM CPU and 32 GB RAM). An HNSW index with the following build parameters: `m='36'`, `ef_construction='128'`.
+- **pgvector**: A single Supabase 2XL instance approximating ~410$/month (8-core ARM CPU and 32 GB RAM). An HNSW index with the following build parameters: `m='36'`, `ef_construction='128'`.
 - **Pinecone**: Vertically scaled pod to the minimum option that fits the dbpedia dataset into the index on a single pod. We then added replicas to match the budget (slightly exceeding in all cases with ~$480/month).
 
 To reduce network latency, we placed our clients in the same cloud provider and region as the database. Experiments were run in a parallel configuration, varying the number of concurrent clients from 5 to 100 to determine the maximum QPS for each setup.
@@ -102,7 +102,7 @@ To match the .99 accuracy of Pinecone's p1.x2, we set `ef_search=40` for pgvecto
   />
 </div>
 
-pgvector demonstrated much better performance again with over 4x better QPS than the Pinecone setup, while still being $70 cheaper per month. As Pinecone can linearly scale by adding more replicas, you can estimate that you would need 12-13 p1.x2 pods to match pgvector performance. This equates to approximately $2000 per month versus ~$410 per month for a 2XL on BA.
+pgvector demonstrated much better performance again with over 4x better QPS than the Pinecone setup, while still being $70 cheaper per month. As Pinecone can linearly scale by adding more replicas, you can estimate that you would need 12-13 p1.x2 pods to match pgvector performance. This equates to approximately $2000 per month versus ~$410 per month for a 2XL on Supabase.
 
 ### p2 pod type
 
@@ -124,12 +124,12 @@ Here's something important to highlight: pgvector is faster than Pinecone's fast
 
 ## Additional thoughts on Pinecone vs. pgvector
 
-It's only fair to note that Pinecone may be cheaper than pgvector since you could use a single p1.x2 pod without replicas, costing about $160 per month, and you would still achieve approximately 60 QPS with `accuracy@10=0.99`. For pgvector on BA, this means you might not be able to fit the index in RAM as you may use a large ($110) or XL ($210) compute add-on and will fall back to KNN search without any indexes. However, this translates to potentially adding more vectors, similar to the s1 pod on Pinecone.
+It's only fair to note that Pinecone may be cheaper than pgvector since you could use a single p1.x2 pod without replicas, costing about $160 per month, and you would still achieve approximately 60 QPS with `accuracy@10=0.99`. For pgvector on Supabase, this means you might not be able to fit the index in RAM as you may use a large ($110) or XL ($210) compute add-on and will fall back to KNN search without any indexes. However, this translates to potentially adding more vectors, similar to the s1 pod on Pinecone.
 
 Real user stories indicate this might not be problematic. For instance, Quivr expanded to 1 million vectors without using any indexes:
 
 <Img
-  alt="tweet about quivr getting to almost 1M vectors with BA"
+  alt="tweet about quivr getting to almost 1M vectors with Supabase"
   src="/images/blog/2023-10-10-pgvector-vs-pinecone/quivr-tweet.png"
 />
 
@@ -144,7 +144,7 @@ There are also a couple of benefits from a developer experience perspective that
 
 ## Start using HNSW
 
-All [new BA databases](https://database.new/) automatically ship with pgvector v0.5.0 which includes the new HNSW indexes. Try it out today and let us know what you think!
+All [new Supabase databases](https://database.new/) automatically ship with pgvector v0.5.0 which includes the new HNSW indexes. Try it out today and let us know what you think!
 
 ## More pgvector and AI resources
 
@@ -152,5 +152,5 @@ All [new BA databases](https://database.new/) automatically ship with pgvector v
 - [Docs pgvector: Embeddings and vector similarity](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
 - [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
 - [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector)
-- [Hugging Face is now supported in BA](https://www.assistance.bg/blog/hugging-face-supabase)
-- [ChatGPT plugins now support Postgres & BA](https://www.assistance.bg/blog/chatgpt-plugins-support-postgres)
+- [Hugging Face is now supported in Supabase](https://www.assistance.bg/blog/hugging-face-supabase)
+- [ChatGPT plugins now support Postgres & Supabase](https://www.assistance.bg/blog/chatgpt-plugins-support-postgres)

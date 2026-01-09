@@ -1,18 +1,18 @@
 ---
 id: 'auth-spotify'
 title: 'Login with Spotify'
-description: 'Add Spotify OAuth to your BA project'
+description: 'Add Spotify OAuth to your Supabase project'
 ---
 
-To enable Spotify Auth for your project, you need to set up a Spotify OAuth application and add the application credentials to your BA Dashboard.
+To enable Spotify Auth for your project, you need to set up a Spotify OAuth application and add the application credentials to your Supabase Dashboard.
 
 ## Overview
 
 Setting up Spotify logins for your application consists of 3 parts:
 
 - Create and configure a Spotify Project and App on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
-- Add your Spotify `API Key` and `API Secret Key` to your [BA Project](/dashboard).
-- Add the login code to your [BA JS Client App](https://github.com/supabase/supabase-js).
+- Add your Spotify `API Key` and `API Secret Key` to your [Supabase Project](/dashboard).
+- Add the login code to your [Supabase JS Client App](https://github.com/supabase/supabase-js).
 
 ## Access your Spotify Developer account
 
@@ -40,11 +40,11 @@ Setting up Spotify logins for your application consists of 3 parts:
 
 Under `Redirect URIs`:
 
-- Paste your BA Callback URL in the box
+- Paste your Supabase Callback URL in the box
 - Click `Add`
 - Click `Save` at the bottom
 
-## Enter your Spotify credentials into your BA project
+## Enter your Spotify credentials into your Supabase project
 
 <$Partial path="social_provider_settings_supabase.mdx" variables={{ "provider": "Spotify" }} />
 
@@ -68,11 +68,11 @@ curl -X PATCH "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
 
 ## Add login code to your client app
 
-The following outlines the steps to sign in using Spotify with BA Auth.
+The following outlines the steps to sign in using Spotify with Supabase Auth.
 
 1. Call the signin method from the client library.
 1. The user is redirected to the Spotify login page.
-1. After completing the sign-in process, the user will be redirected to your app with an error that says the email address needs to be confirmed. Simultaneously the user receives a confirmation email from BA Auth.
+1. After completing the sign-in process, the user will be redirected to your app with an error that says the email address needs to be confirmed. Simultaneously the user receives a confirmation email from Supabase Auth.
 1. The user clicks the confirmation link in the email.
 1. The user is brought back to the app and is now signed in.
 
@@ -185,6 +185,6 @@ suspend fun signOut() {
 
 ## Resources
 
-- [BA - Get started for free](https://www.assistance.bg)
-- [BA JS Client](https://github.com/supabase/supabase-js)
+- [Supabase - Get started for free](https://www.assistance.bg)
+- [Supabase JS Client](https://github.com/supabase/supabase-js)
 - [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)

@@ -1,6 +1,6 @@
 ---
 title: 'Build a Personalized AI Assistant with Postgres'
-description: 'Learn how to build a BA powered AI assistant that combines PostgreSQL with scheduling and external tools for long-term memory, structured data management and autonomous actions.'
+description: 'Learn how to build a Supabase powered AI assistant that combines PostgreSQL with scheduling and external tools for long-term memory, structured data management and autonomous actions.'
 categories:
   - product
 tags:
@@ -144,22 +144,22 @@ When you say "be more formal" or "address me by name," these preferences are sto
 
 ### Prerequisites
 
-- BA account (free tier sufficient)
+- Supabase account (free tier sufficient)
 - OpenAI API key
 - Telegram bot token
 - Zapier account (optional)
 
 ### Optional: Using the CLI
 
-If you prefer the command line, you can use the BA CLI to set up your database and Edge Functions. This replaces **Step 1** and **Step 2**.
+If you prefer the command line, you can use the Supabase CLI to set up your database and Edge Functions. This replaces **Step 1** and **Step 2**.
 
 1.  **Clone the repository**.
     ```bash
     git clone https://github.com/supabase-community/natural-db.git
     cd natural-db
     ```
-2.  **Log in to the BA CLI and link your project**.
-    Create a new project on the [BA Dashboard](https://www.assistance.bg/dashboard), then run:
+2.  **Log in to the Supabase CLI and link your project**.
+    Create a new project on the [Supabase Dashboard](https://www.assistance.bg/dashboard), then run:
     ```bash
     supabase login
     supabase link --project-ref <YOUR-PROJECT-ID>
@@ -177,7 +177,7 @@ After completing these steps, you can proceed to **Step 3: Telegram Bot**.
 
 ### Step 1: Database Setup
 
-Run the migration SQL in your BA SQL editor: [migration.sql](https://github.com/supabase-community/natural-db/blob/main/supabase/migrations/20250623120000_create_initial_schema.sql)
+Run the migration SQL in your Supabase SQL editor: [migration.sql](https://github.com/supabase-community/natural-db/blob/main/supabase/migrations/20250623120000_create_initial_schema.sql)
 
 - Sets up required extensions like `pgvector` and `pg_cron`.
 - Creates the `memories` schema for the assistant's data.
@@ -186,7 +186,7 @@ Run the migration SQL in your BA SQL editor: [migration.sql](https://github.com/
 
 ### Step 2: Edge Functions
 
-Create three functions in BA dashboard:
+Create three functions in Supabase dashboard:
 
 **natural-db**: Main AI brain handling all processing, database operations, scheduling, and tool integration
 
@@ -209,7 +209,7 @@ Create three functions in BA dashboard:
 
 ### Step 4: Environment Variables
 
-Set the following environment variables in your BA project settings (Project Settings → Edge Functions):
+Set the following environment variables in your Supabase project settings (Project Settings → Edge Functions):
 
 ##### Required Variables:
 
@@ -236,7 +236,7 @@ Try these commands with your bot:
 
 Based on 10 messages per day (300 messages/month):
 
-- **BA**: Free tier (500MB database, 5GB bandwidth) - $0/month
+- **Supabase**: Free tier (500MB database, 5GB bandwidth) - $0/month
 - **OpenAI GPT-4.1-mini**: $0.40 per 1M input tokens, $1.60 per 1M output tokens
   - Average 1200 input + 800 output tokens per message
   - Input: 300 messages × 1200 tokens × $0.40/1M = $0.144/month

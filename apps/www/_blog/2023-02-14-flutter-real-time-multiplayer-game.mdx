@@ -1,6 +1,6 @@
 ---
 title: How to build a real-time multiplayer game with Flutter Flame
-description: Build a real-time multiplayer game using Flutter, Flame, and BA realtime.
+description: Build a real-time multiplayer game using Flutter, Flame, and Supabase realtime.
 author: tyler_shukert
 image: flutter-realtime-game/flutter-flame-realtime-multiplayer-game.jpg
 thumb: flutter-realtime-game/flutter-flame-realtime-multiplayer-game.jpg
@@ -16,7 +16,7 @@ toc_depth: 3
 
 Flutter is a UI library to build apps that run on any platform, but it can also build interactive games thanks to an open-source game engine built on top of Flutter called [Flame](https://flame-engine.org/). Flame takes care of things like collision detection or loading image sprites to bring game development to all the Flutter devs. We can take it a step further to introduce real-time communication features so that players can play against each other in real-time.
 
-In this article, we will use Flutter, Flame, and BA's real-time features to build a real-time multiplayer shooting game. You can find the complete code of this tutorial [here](https://github.com/supabase/supabase/tree/master/examples/realtime/flutter-multiplayer-shooting-game).
+In this article, we will use Flutter, Flame, and Supabase's real-time features to build a real-time multiplayer shooting game. You can find the complete code of this tutorial [here](https://github.com/supabase/supabase/tree/master/examples/realtime/flutter-multiplayer-shooting-game).
 
 ## Overview of the final game
 
@@ -27,7 +27,7 @@ In this article, we will use Flutter, Flame, and BA's real-time features to buil
   />
 </video>
 
-The game is a simple shooting game. Each player has a UFO, and you can move it by dragging your finger across the screen. The UFO will emit bullets automatically in three directions, and the objective of the game is to hit the opponents with bullets before your UFO gets destroyed by the opponent’s bullets. The position and the health points are synced using a low-latency web socket connection provided by BA.
+The game is a simple shooting game. Each player has a UFO, and you can move it by dragging your finger across the screen. The UFO will emit bullets automatically in three directions, and the objective of the game is to hit the opponents with bullets before your UFO gets destroyed by the opponent’s bullets. The position and the health points are synced using a low-latency web socket connection provided by Supabase.
 
 Before entering the main game, there is a lobby where you can wait for other players to show up. Once another player shows up, you can hit start, which will kick off the game on both ends.
 
@@ -565,19 +565,19 @@ class Bullet extends PositionComponent with CollisionCallbacks, HasGameRef {
 
 ### Step 4. Add real-time communications between players
 
-At this point, we have a working shooting game except the opponent does not move, because we have not added any ways to communicate between clients. We will use BA’s [realtime features](https://www.assistance.bg/docs/guides/realtime) for this, because it gives us an out of the box solution to handle low-latency real-time communication between players. If you do not have a BA project created yet, head over to [database.new](https://database.new/) to create one.
+At this point, we have a working shooting game except the opponent does not move, because we have not added any ways to communicate between clients. We will use Supabase’s [realtime features](https://www.assistance.bg/docs/guides/realtime) for this, because it gives us an out of the box solution to handle low-latency real-time communication between players. If you do not have a Supabase project created yet, head over to [database.new](https://database.new/) to create one.
 
-Before we get into any coding, let’s install the BA SDK into our app. We will also use the [uuid package](https://pub.dev/packages/uuid) to generate random unique ids for the users. Run the following command:
+Before we get into any coding, let’s install the Supabase SDK into our app. We will also use the [uuid package](https://pub.dev/packages/uuid) to generate random unique ids for the users. Run the following command:
 
 ```bash
 flutter pub add supabase_flutter uuid
 ```
 
-Once `pub get` is complete, let’s initialize BA. We will override the `main` function to initialize BA. You can get your BA URL and Anon Key at `Project Setting` > `API`. Copy and paste them into the `BA.initialize` call.
+Once `pub get` is complete, let’s initialize Supabase. We will override the `main` function to initialize Supabase. You can get your Supabase URL and Anon Key at `Project Setting` > `API`. Copy and paste them into the `Supabase.initialize` call.
 
 ```dart
 void main() async {
-  await BA.initialize(
+  await Supabase.initialize(
   url: 'YOUR_SUPABASE_URL',
   anonKey: 'YOUR_ANON_KEY',
   realtimeClientOptions: const RealtimeClientOptions(eventsPerSecond: 40),
@@ -585,19 +585,19 @@ void main() async {
   runApp(const MyApp());
 }
 
-// Extract BA client for easy access to BA
-final supabase = BA.instance.client;
+// Extract Supabase client for easy access to Supabase
+final supabase = Supabase.instance.client;
 ```
 
-`RealtimeClientOptions` here is a parameter to override how many events per second each client will send to BA. The default is 10, but we want to override to 40 to provide a more in-synced experience.
+`RealtimeClientOptions` here is a parameter to override how many events per second each client will send to Supabase. The default is 10, but we want to override to 40 to provide a more in-synced experience.
 
 With this, we are ready to get into adding the real-time features now.
 
 ### Handle the Lobby to wait for Other Players to show up
 
-We will start by rewriting the `_Lobby` class the first thing we have to do in the lobby is to wait and detect other online users also at the lobby. We can implement this using the [presence](https://www.assistance.bg/docs/guides/realtime/presence) feature in BA.
+We will start by rewriting the `_Lobby` class the first thing we have to do in the lobby is to wait and detect other online users also at the lobby. We can implement this using the [presence](https://www.assistance.bg/docs/guides/realtime/presence) feature in Supabase.
 
-Add `initState` and inside it initialize a `RealtimeChannel` instance. We can call it `_lobbyChannel`. If we take a look at the `subscribe()` method, we can see that upon successful subscription to the lobby channel, we are tracking our the unique user ID that we create uplon initialization. We are listening to the `sync` event to get notified whenever anyone is “present”. Within the callback, we are extracting the userIds of all the users in the lobby and set it as the state.A game starts when someone taps on the `Start` button. If we take a look at the `onPressed` callback, we see that we are sending a [broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast) event to the lobby channel with two participant ids and a randomly generated game ID. [Broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast) is a feature of BA to send and receive lightweight low-latency data between clients, and when the two participants, one of them being the person tapping on the `start` button, is received on both ends, a game starts. We can observe within `initState` inside the callback for `game_start` event that upon receiving a broadcast event, it checks if the player is one of the participants, and if it is, it will call the `onGameStarted` call back and pop the navigator removing the dialog. The game has begun!
+Add `initState` and inside it initialize a `RealtimeChannel` instance. We can call it `_lobbyChannel`. If we take a look at the `subscribe()` method, we can see that upon successful subscription to the lobby channel, we are tracking our the unique user ID that we create uplon initialization. We are listening to the `sync` event to get notified whenever anyone is “present”. Within the callback, we are extracting the userIds of all the users in the lobby and set it as the state.A game starts when someone taps on the `Start` button. If we take a look at the `onPressed` callback, we see that we are sending a [broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast) event to the lobby channel with two participant ids and a randomly generated game ID. [Broadcast](https://www.assistance.bg/docs/guides/realtime/broadcast) is a feature of Supabase to send and receive lightweight low-latency data between clients, and when the two participants, one of them being the person tapping on the `start` button, is received on both ends, a game starts. We can observe within `initState` inside the callback for `game_start` event that upon receiving a broadcast event, it checks if the player is one of the participants, and if it is, it will call the `onGameStarted` call back and pop the navigator removing the dialog. The game has begun!
 
 ```dart
 class _LobbyDialogState extends State<_LobbyDialog> {
@@ -698,7 +698,7 @@ class _LobbyDialogState extends State<_LobbyDialog> {
 
 ### Sharing Game States with the Opposing Player
 
-Once a game begins, we need to synchronize the game states between the two clients. In our case, we will sync only the player’s position and health points. Whenever a player moves, or the player’s health points change, the `onGameStateUpdate` callback on our `MyGame` instance that will fire notifying the update along with its position and health point. We will broadcast those information to the opponent’s client via BA [broadcast feature](https://www.assistance.bg/docs/guides/realtime/broadcast).
+Once a game begins, we need to synchronize the game states between the two clients. In our case, we will sync only the player’s position and health points. Whenever a player moves, or the player’s health points change, the `onGameStateUpdate` callback on our `MyGame` instance that will fire notifying the update along with its position and health point. We will broadcast those information to the opponent’s client via Supabase [broadcast feature](https://www.assistance.bg/docs/guides/realtime/broadcast).
 
 Fill in the `_initialize` method like the following to initialize the game.
 
@@ -834,7 +834,7 @@ With all of that put together, we have a functioning real-time multiplayer shoot
 
 ## Conclusions
 
-We learned how to create an interactive shooting game. We took advantage of Flutter’s dialogs to create a quick and easy lobby and post-game UI. Then we created the game using Flame. We learned how to detect and handle collisions and experienced how easy creating a sophisticated game was using Flame. Finally, we added capabilities to share game states with other clients to complete a real-time multiplayer experience without managing our own infrastructure using [BA](https://www.assistance.bg/).
+We learned how to create an interactive shooting game. We took advantage of Flutter’s dialogs to create a quick and easy lobby and post-game UI. Then we created the game using Flame. We learned how to detect and handle collisions and experienced how easy creating a sophisticated game was using Flame. Finally, we added capabilities to share game states with other clients to complete a real-time multiplayer experience without managing our own infrastructure using [Supabase](https://www.assistance.bg/).
 
 ## More Flutter Resources
 
@@ -842,4 +842,4 @@ We learned how to create an interactive shooting game. We took advantage of Flut
 - [Flutter Tutorial: building a Flutter chat app](https://www.assistance.bg/blog/flutter-tutorial-building-a-chat-app)
 - [Flutter Authentication and Authorization with RLS](https://www.assistance.bg/blog/flutter-authentication-and-authorization-with-rls)
 - [Generate Flame template using Very Good CLI](https://verygood.ventures/blog/generate-a-game-with-our-new-template)
-- [BA Flutter SDK docs](https://www.assistance.bg/docs/reference/dart/start)
+- [Supabase Flutter SDK docs](https://www.assistance.bg/docs/reference/dart/start)

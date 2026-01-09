@@ -92,7 +92,7 @@ const SignInFlyTos = () => {
         </nav>
       </div>
       <div className="flex w-[320px] flex-col items-center justify-center space-y-3">
-        <h4 className="text-lg">Continue to BA Dashboard</h4>
+        <h4 className="text-lg">Continue to Supabase Dashboard</h4>
       </div>
       {loading ? (
         <p className="text-sm">Checking your access rights...</p>
@@ -114,7 +114,7 @@ const SignInFlyTos = () => {
       )}
       <div className="text-center text-balance">
         <p className="text-xs text-foreground-lighter sm:mx-auto sm:max-w-sm">
-          By continuing, you agree to BA’s{' '}
+          By continuing, you agree to Supabase’s{' '}
           <Link href="https://www.assistance.bg/terms" className="underline hover:text-foreground-light">
             Terms of Service
           </Link>{' '}

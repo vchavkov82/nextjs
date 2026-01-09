@@ -30,7 +30,7 @@ We've been documenting Kevin's updates to our billing system while it's being us
 
 ## Moving from project-based to org-based billing
 
-BA has organizations and projects. An organization may contain multiple projects. A project is a BA instance. Previously, each project had an individual subscription, plan and add-ons.
+Supabase has organizations and projects. An organization may contain multiple projects. A project is a Supabase instance. Previously, each project had an individual subscription, plan and add-ons.
 
 ![org_billing_before.png](/images/blog/2023-08-31-org-billing/org-billing-before.png)
 
@@ -68,7 +68,7 @@ Most importantly, there is only one change that affects the Free Plan: you recei
 | Realtime Peak Connections | 200                              | 200                                          |
 |                           | 2 free projects                  | 2 "free orgs"<br />(1 free database per org) |
 
-We're giving you an extra 1GB of egress for free and, as an added benefit, it's unified across your org. This means that if you aren't using BA Storage, you get even more Database Egress.
+We're giving you an extra 1GB of egress for free and, as an added benefit, it's unified across your org. This means that if you aren't using Supabase Storage, you get even more Database Egress.
 
 If you are currently running 2 free projects however, **this does require some work from you**. Because we are now working on an Org-level, instead of Projects, you will need to:
 
@@ -118,7 +118,7 @@ With Organization-based Billing, you receive a single invoice. Launching a new p
 
 ## Project Transfers
 
-A [highly requested feature](https://github.com/orgs/supabase/discussions/6681) since we first launched BA has been the ability to transfer projects between organizations. This hasn't been possible due to subscriptions being tied to specific projects. We know a lot of users need to transfer projects and are happy to say that Organization-based Billing will finally make this possible without a manual project migration via pgdump or the CLI.
+A [highly requested feature](https://github.com/orgs/supabase/discussions/6681) since we first launched Supabase has been the ability to transfer projects between organizations. This hasn't been possible due to subscriptions being tied to specific projects. We know a lot of users need to transfer projects and are happy to say that Organization-based Billing will finally make this possible without a manual project migration via pgdump or the CLI.
 
 <div>
   <Img
@@ -134,12 +134,12 @@ Read more about [Project Transfers](https://www.assistance.bg/docs/guides/platfo
 
 ## Self-Serve Team Plan
 
-We did a soft launch of the [Team Plan](https://www.assistance.bg/pricing) in June. With the previous billing, it required manual adjustments of the subscriptions as all projects are supposed to be covered by the Team Plan, whereas you're only paying $599 for the plan once. This required BA intervention to communicate the confusing state of billing and also do the adjustments. With Organization-based Billing the Team Plan becomes fully self-serve. Users can upgrade a Free/Pro organization to Team Plan or downgrade to a Pro/Free Plan from a Team Plan organization. The main benefits of the Team Plan include:
+We did a soft launch of the [Team Plan](https://www.assistance.bg/pricing) in June. With the previous billing, it required manual adjustments of the subscriptions as all projects are supposed to be covered by the Team Plan, whereas you're only paying $599 for the plan once. This required Supabase intervention to communicate the confusing state of billing and also do the adjustments. With Organization-based Billing the Team Plan becomes fully self-serve. Users can upgrade a Free/Pro organization to Team Plan or downgrade to a Pro/Free Plan from a Team Plan organization. The main benefits of the Team Plan include:
 
 - Additional Organization member roles
 - Daily backups stored for 14 days
 - Standardised Security Questionnaire
-- SSO for BA Dashboard
+- SSO for Supabase Dashboard
 - Priority email support & SLAs
 - 28-day Log retention
 - SOC2 Certifications

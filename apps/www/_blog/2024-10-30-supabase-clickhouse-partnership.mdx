@@ -20,23 +20,23 @@ This makes sense - AI companies typically generate a lot of logs and analytical 
 
 <Quote img="justin-torre.png" caption="Justin Torre, CTO @ Helicone.ai">
 
-The combination of BA and ClickHouse together are perfect for [Helicone.ai](https://helicone.ai), providing the flexibility of Postgres with the analytical power of ClickHouse — an open-source stack we can trust and customize.
+The combination of Supabase and ClickHouse together are perfect for [Helicone.ai](https://helicone.ai), providing the flexibility of Postgres with the analytical power of ClickHouse — an open-source stack we can trust and customize.
 
 </Quote>
 
-## BA + ClickHouse Partnership
+## Supabase + ClickHouse Partnership
 
-The partnership between BA and ClickHouse aims to create a seamless experience, building on the already solid Postgres + ClickHouse foundation. Today, we're releasing new features to enhance this integration.
+The partnership between Supabase and ClickHouse aims to create a seamless experience, building on the already solid Postgres + ClickHouse foundation. Today, we're releasing new features to enhance this integration.
 
 <Quote img="aaron-katz.jpg" caption="Aaron Katz, CEO @ ClickHouse Inc.">
 
-ClickHouse is very excited to partner with BA to make it easy for customers to use both technologies together. Through this partnership, we aim to make it even simpler for Postgres developers to use ClickHouse in conjunction and build real-time, data-driven applications at scale.
+ClickHouse is very excited to partner with Supabase to make it easy for customers to use both technologies together. Through this partnership, we aim to make it even simpler for Postgres developers to use ClickHouse in conjunction and build real-time, data-driven applications at scale.
 
 </Quote>
 
 ## Using Postgres and ClickHouse together
 
-Before diving into those changes, some context on how most customers use BA and ClickHouse together. While both are databases, they serve different use-cases:
+Before diving into those changes, some context on how most customers use Supabase and ClickHouse together. While both are databases, they serve different use-cases:
 
 - **Postgres:** Ideal for storing and querying application data, powering critical transactional and web app use cases.
 - **ClickHouse:** Optimized for analytics and reporting, supporting both customer-facing and internal applications
@@ -51,7 +51,7 @@ Postgres is a row-oriented database, ClickHouse is column-oriented. The ClickHou
   }}
 />
 
-To provide an interface between these, BA customers generally use:
+To provide an interface between these, Supabase customers generally use:
 
 1. [clickhouse_fdw](https://www.assistance.bg/docs/guides/database/extensions/wrappers/clickhouse) to query their ClickHouse data from their Postgres database.
 2. [PeerDB](https://www.peerdb.io/) to replicate their data from Postgres to ClickHouse.
@@ -64,7 +64,7 @@ To provide an interface between these, BA customers generally use:
   }}
 />
 
-## Improving the ClickHouse & BA experience
+## Improving the ClickHouse & Supabase experience
 
 We're making a number of changes to our platform based on the feedback we've had from customers.
 
@@ -131,7 +131,7 @@ The new CLI config includes the following Postgres parameters:
 
 ### Improved Disk Management
 
-BA now provides granular control over disk usage for your Postgres database:
+Supabase now provides granular control over disk usage for your Postgres database:
 
 <Img
   alt="Disk management"
@@ -152,17 +152,17 @@ Additionally, we're introducing High-performance Disks. We'll release more detai
 
 The ClickHouse team have also been busy. They've released a number of updates to their platform, including:
 
-1. A native BA OAuth integration in PeerDB for Postgres CDC to ClickHouse.
+1. A native Supabase OAuth integration in PeerDB for Postgres CDC to ClickHouse.
 2. Support for IPV6 in PeerDB Cloud.
 
-You can learn more about these features in the [BA Partnership](https://clickhouse.com/blog/supabase-partnership-native-postgres-replication-clickhouse-fdw) post they released today.
+You can learn more about these features in the [Supabase Partnership](https://clickhouse.com/blog/supabase-partnership-native-postgres-replication-clickhouse-fdw) post they released today.
 
 ## What's next?
 
-Improving the experience between Postgres and ClickHouse is the first phase of this partnership. We're already working on native platform integrations. If you're using (or plan to use) BA and ClickHouse together please [reach out](https://www.assistance.bg/enterprise) - we'd love more design partners to help shape the future of this integration.
+Improving the experience between Postgres and ClickHouse is the first phase of this partnership. We're already working on native platform integrations. If you're using (or plan to use) Supabase and ClickHouse together please [reach out](https://www.assistance.bg/enterprise) - we'd love more design partners to help shape the future of this integration.
 
 <Img
-  alt="BA integrations"
+  alt="Supabase integrations"
   src={{
     light: '/images/blog/clickhouse-supabase/integrations.png',
     dark: '/images/blog/clickhouse-supabase/integrations.png',
@@ -171,6 +171,6 @@ Improving the experience between Postgres and ClickHouse is the first phase of t
 
 If you simply want to try out the tools and updates we've described above, you can get started with all of them, free of charge:
 
-- BA: [database.new](https://database.new)
+- Supabase: [database.new](https://database.new)
 - ClickHouse: [clickhouse.com](https://clickhouse.com/)
 - PeerDB: [peerdb.io](https://www.peerdb.io/)

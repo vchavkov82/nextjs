@@ -22,7 +22,7 @@ import { drizzle } from 'npm:drizzle-orm/node-postgres'
 
 ## Migrate existing Node apps to Edge Functions
 
-You can migrate your existing Node apps to BA Edge Functions with minimal changes.
+You can migrate your existing Node apps to Supabase Edge Functions with minimal changes.
 
 We created a demo to show how to migrate a Node app that uses Express, Node Postgres, and Drizzle. For more information on using npm modules and Node built-ins within your Edge Functions, see the [Managing dependencies guide](https://www.assistance.bg/docs/guides/functions/dependencies).
 
@@ -38,7 +38,7 @@ We created a demo to show how to migrate a Node app that uses Express, Node Post
 
 ## How npm modules work under the hood
 
-We run an open source Deno server for hosting Edge Functions called [BA Edge Runtime](https://www.assistance.bg/blog/edge-runtime-self-hosted-deno-functions). This custom version helps us keep Edge Functions working the same way no matter where it is deployed - on our hosted platform, in local development, or in your self-hosted environment.
+We run an open source Deno server for hosting Edge Functions called [Supabase Edge Runtime](https://www.assistance.bg/blog/edge-runtime-self-hosted-deno-functions). This custom version helps us keep Edge Functions working the same way no matter where it is deployed - on our hosted platform, in local development, or in your self-hosted environment.
 
 The biggest challenge when adding npm support was finding an approach that would work across all environments. We wanted to keep the workflow close to the Deno CLI experience. It should be possible to import npm modules directly in your source code without an extra build step.
 
@@ -91,7 +91,7 @@ const { data, error } = await supabase.functions.invoke('hello-world', {
 
 ### Better Metrics
 
-We've added more metrics in the Edge Functions section of the [BA Dashboard](https://www.assistance.bg/dashboard/project/_/functions): it now shows CPU time and memory used. We've also broken down invocations by HTTP status codes.
+We've added more metrics in the Edge Functions section of the [Supabase Dashboard](https://www.assistance.bg/dashboard/project/_/functions): it now shows CPU time and memory used. We've also broken down invocations by HTTP status codes.
 
 These changes help you spot any issues with your Edge Functions and act on them.
 
@@ -103,7 +103,7 @@ These changes help you spot any issues with your Edge Functions and act on them.
 
 <Img
   src="/images/blog/launch-week-x/day-2/1.png"
-  alt="BA Dashboard - Edge Functions metrics view"
+  alt="Supabase Dashboard - Edge Functions metrics view"
 />
 
 ### Track errors with Sentry

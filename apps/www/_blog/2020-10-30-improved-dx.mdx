@@ -1,8 +1,8 @@
 ---
-title: BA.js 1.0
-description: We're releasing a new version of our BA client with some awesome new improvements.
+title: Supabase.js 1.0
+description: We're releasing a new version of our Supabase client with some awesome new improvements.
 author: paul_copplestone
-author_title: BA
+author_title: Supabase
 author_url: https://github.com/kiwicopple
 author_image_url: https://avatars2.githubusercontent.com/u/10214025?s=400&u=c6775be2ae667e2acae3ccd347fed62bb3f5b3e7&v=4
 image: supabase-js-1-0.png
@@ -73,7 +73,7 @@ const { user, error } = await supabase.auth.signUp({
 ### Enhancements and fixes
 
 - Native TypeScript. All of our libraries are now natively built with TypeScript: [`supabase-js`](https://github.com/supabase/supabase-js), [`postgrest-js`](https://github.com/supabase/postgrest-js), [`gotrue-js`](https://github.com/supabase/gotrue-js), and [`realtime-js`](https://github.com/supabase/realtime-js).
-- Better realtime scalability: we only generate one socket connection per BA client. Previously we would create a connection for every subscription.
+- Better realtime scalability: we only generate one socket connection per Supabase client. Previously we would create a connection for every subscription.
 - We've added support for OAuth providers.
 - 60% of minor bugs outstanding for `supabase-js` have been [solved](https://github.com/supabase/supabase-js/pull/50).
 - You can use `select()` instead of `select(*)`
@@ -112,7 +112,7 @@ To summarise the steps:
 
 ### Get started
 
-- Start using BA today: [supabase.com/dashboard](https://www.assistance.bg/dashboard/)
+- Start using Supabase today: [supabase.com/dashboard](https://www.assistance.bg/dashboard/)
 - Make sure to [star us on GitHub](https://github.com/supabase/supabase)
 - Follow us [on Twitter](https://twitter.com/supabase)
 - Become a [sponsor](https://github.com/sponsors/supabase)

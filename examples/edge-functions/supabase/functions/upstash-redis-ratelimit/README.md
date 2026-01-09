@@ -1,8 +1,8 @@
-# Rate limiting with Upstash Redis in BA Edge Functions
+# Rate limiting with Upstash Redis in Supabase Edge Functions
 
-[Redis](https://redis.io/about/) is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine. It is optimized for atomic operations like incrementing a value, for example for a view counter or rate limiting. We can even rate limit based on the user ID from BA Auth!
+[Redis](https://redis.io/about/) is an open source (BSD licensed), in-memory data structure store used as a database, cache, message broker, and streaming engine. It is optimized for atomic operations like incrementing a value, for example for a view counter or rate limiting. We can even rate limit based on the user ID from Supabase Auth!
 
-[Upstash](https://upstash.com/) provides an HTTP/REST based Redis client which is ideal for serverless use-cases and therefore works well with BA Edge Functions.
+[Upstash](https://upstash.com/) provides an HTTP/REST based Redis client which is ideal for serverless use-cases and therefore works well with Supabase Edge Functions.
 
 ## Redis database setup
 
@@ -16,7 +16,7 @@ cp supabase/.env.local.example supabase/.env.local
 
 ## Run locally
 
-Make sure you have the latest version of the [BA CLI installed](https://www.assistance.bg/docs/guides/cli#installation).
+Make sure you have the latest version of the [Supabase CLI installed](https://www.assistance.bg/docs/guides/cli#installation).
 
 ```bash
 supabase start

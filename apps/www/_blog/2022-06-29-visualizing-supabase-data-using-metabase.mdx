@@ -1,6 +1,6 @@
 ---
-title: Visualizing BA Data using Metabase
-description: How to create different kinds of charts out of data stored in BA using Metabase.
+title: Visualizing Supabase Data using Metabase
+description: How to create different kinds of charts out of data stored in Supabase using Metabase.
 author: ant_wilson
 image: python-1/supabase-python-metabase.jpg
 thumb: python-1/supabase-python-metabase.jpg
@@ -18,21 +18,21 @@ Data helps organizations make better decisions. With a programming language like
 
 With Metabase, a powerful visualization tool, you can quickly turn your data into easy-to-understand visuals like graphs, pie charts, flow diagrams, and much more. Then, using Metabase’s intuitive interface, you can cut through the data noise and focus on what’s essential for your business.
 
-In the previous blog of this series, we explained [how to use Python to load data into BA](https://www.assistance.bg/blog/loading-data-supabase-python). In this blog, we will create different kinds of charts out of the data stored in BA using Metabase.
+In the previous blog of this series, we explained [how to use Python to load data into Supabase](https://www.assistance.bg/blog/loading-data-supabase-python). In this blog, we will create different kinds of charts out of the data stored in Supabase using Metabase.
 
 ## Prerequisites
 
 Before we dive in, let’s look at some prerequisites that you will need:
 
-- **BA project with data**
+- **Supabase project with data**
 
-Based on our [previous article](https://www.assistance.bg/blog/loading-data-supabase-python), we assume we already have a BA project setup and have data loaded into it.
+Based on our [previous article](https://www.assistance.bg/blog/loading-data-supabase-python), we assume we already have a Supabase project setup and have data loaded into it.
 
 - **Metabase Docker Container**
 
 To take advantage of the open-source version of Metabase, you can use the Metabase docker container [here](https://hub.docker.com/r/metabase/metabase).
 
-## Visualizing data in BA with Metabase
+## Visualizing data in Supabase with Metabase
 
 ### Launching Metabase
 
@@ -42,7 +42,7 @@ After Metabase is launched, select your preferred language and add your contact 
 
 ![screen shot of adding postgres data to metabase](/images/blog/python-1/adding-postgresql-data-metabase.png)
 
-You will be prompted to add the necessary connection information to your BA project. Go to your [BA project](https://www.assistance.bg/dashboard/) and hit _Settings > Database to get the database info_.
+You will be prompted to add the necessary connection information to your Supabase project. Go to your [Supabase project](https://www.assistance.bg/dashboard/) and hit _Settings > Database to get the database info_.
 
 ![screen shot of supabase dashboard database connection information](/images/blog/python-1/supabase-dashboard-connect-database-info.png)
 
@@ -50,7 +50,7 @@ Enter the necessary information on Metabase and hit next. Finally, select your d
 
 ### View Database and Tables
 
-We can now see the "BA DB" BA project under "Our data".
+We can now see the "Supabase DB" Supabase project under "Our data".
 
 ![screen shot of metabase dashboard](/images/blog/python-1/metabase-dashboard-with-supabase-db.png)
 
@@ -133,12 +133,12 @@ Data visualization empowers organizations to turn unused data into actionable in
 
 ![screen shot of a meme saying visualization works every time](/images/blog/python-1/final-meme.png)
 
-With our [Free Plan BA account](https://www.assistance.bg/dashboard/), you can start a new project today and use Metabase to visualize your app data.
+With our [Free Plan Supabase account](https://www.assistance.bg/dashboard/), you can start a new project today and use Metabase to visualize your app data.
 
 If you have any questions please reach out via [Twitter](https://twitter.com/supabase) or join our [Discord](https://discord.supabase.com).
 
-## More Python and BA resources
+## More Python and Supabase resources
 
 - [supabase-py](https://github.com/supabase-community/supabase-py)
-- [Slack Consolidate: a slackbot built with Python and BA](slack-consolidate-slackbot-to-consolidate-messages)
-- [BA-py (Database) on Replit](https://replit.com/@BA/BA-py-Database?v=1)
+- [Slack Consolidate: a slackbot built with Python and Supabase](slack-consolidate-slackbot-to-consolidate-messages)
+- [Supabase-py (Database) on Replit](https://replit.com/@Supabase/Supabase-py-Database?v=1)

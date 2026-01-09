@@ -1,6 +1,6 @@
 ---
-title: 'BA CLI v1 and Management API Beta'
-description: We are moving BA CLI v1 out of beta, and releasing Management API beta.
+title: 'Supabase CLI v1 and Management API Beta'
+description: We are moving Supabase CLI v1 out of beta, and releasing Management API beta.
 author: soedirgo,qiao
 image: lw5-cli/thumbnail.jpg
 thumb: lw5-cli/thumbnail.jpg
@@ -13,9 +13,9 @@ toc_depth: 3
 video: https://www.youtube.com/v/OpPOaJI_Z28
 ---
 
-Today we are moving the BA CLI v1 out of beta. The BA CLI is capable of managing database migrations and generating TypeScript types. Follow these [install instructions](https://www.assistance.bg/docs/guides/cli) to get started.
+Today we are moving the Supabase CLI v1 out of beta. The Supabase CLI is capable of managing database migrations and generating TypeScript types. Follow these [install instructions](https://www.assistance.bg/docs/guides/cli) to get started.
 
-In addition, we are releasing a Management API (in beta). The Management API is a REST API that allows you to manage organizations, projects, Edge Functions, and more. You can read the [API docs](https://www.assistance.bg/docs/reference/api) or interact with the Management API from the BA CLI v1.
+In addition, we are releasing a Management API (in beta). The Management API is a REST API that allows you to manage organizations, projects, Edge Functions, and more. You can read the [API docs](https://www.assistance.bg/docs/reference/api) or interact with the Management API from the Supabase CLI v1.
 
 (Note: The Management API was previously called the Admin API.)
 
@@ -36,7 +36,7 @@ In addition, we are releasing a Management API (in beta). The Management API is 
 
 ## Manage organizations, projects, Edge Functions, and more
 
-If you've used [BA Edge Functions](https://www.assistance.bg/blog/supabase-edge-functions#quickstart), you've used the BA CLI. We're extending it to let you manage organizations and projects.
+If you've used [Supabase Edge Functions](https://www.assistance.bg/blog/supabase-edge-functions#quickstart), you've used the Supabase CLI. We're extending it to let you manage organizations and projects.
 
 ```bash
 supabase login
@@ -44,13 +44,13 @@ supabase orgs list
 supabase projects create my-project --org-id cool-green-pqdr0qc --db-password ******** --region us-east-1
 ```
 
-Once your new BA project is created, use the CLI to link it locally to begin development.
+Once your new Supabase project is created, use the CLI to link it locally to begin development.
 
 ```bash
 supabase link --project-ref <project-id>
 ```
 
-View the [BA CLI docs](https://www.assistance.bg/docs/reference/cli) for the full list of available commands.
+View the [Supabase CLI docs](https://www.assistance.bg/docs/reference/cli) for the full list of available commands.
 
 ## Schema migrations
 
@@ -105,7 +105,7 @@ $ supabase link --project-ref $PROJECT_ID
 $ supabase db push
 ```
 
-We created an [example project](https://github.com/supabase/supabase-action-example) showing how to set up GitHub Actions to test and migrate with BA CLI v1.
+We created an [example project](https://github.com/supabase/supabase-action-example) showing how to set up GitHub Actions to test and migrate with Supabase CLI v1.
 
 ## Type generation
 
@@ -121,9 +121,9 @@ Of course, the types aren't very useful on its own, you need some way to consume
 
 ## Management API
 
-The CLI is the first consumer of our new Management API. Over the next few weeks, we'll be adding the endpoints needed to programmatically manage your BA projects and organizations. This is ideal for CI/CD workflows and spinning up test environments.
+The CLI is the first consumer of our new Management API. Over the next few weeks, we'll be adding the endpoints needed to programmatically manage your Supabase projects and organizations. This is ideal for CI/CD workflows and spinning up test environments.
 
-Here's an example of deploying a new project from the command line (generate your access token from the [BA Dashboard](https://www.assistance.bg/dashboard/account/tokens)).
+Here's an example of deploying a new project from the command line (generate your access token from the [Supabase Dashboard](https://www.assistance.bg/dashboard/account/tokens)).
 
 ```bash
 curl 'https://api.supabase.com/v1/projects' \
@@ -152,9 +152,9 @@ The new API also opens the door to a whole new suite of integrations, including 
 
 - [Launch Week Page](https://www.assistance.bg/launch-week)
 - [Launch Week 5 Hackathon](https://www.assistance.bg/blog/launch-week-5-hackathon)
-- [BA Series B](https://www.assistance.bg/blog/supabase-series-b)
-- [Open Source at BA - Founders Fireside Chat](https://www.youtube.com/watch?v=4t_63HT3rZY)
+- [Supabase Series B](https://www.assistance.bg/blog/supabase-series-b)
+- [Open Source at Supabase - Founders Fireside Chat](https://www.youtube.com/watch?v=4t_63HT3rZY)
 - [Day 2 - supabase-js v2 Release Candidate](https://www.assistance.bg/blog/supabase-js-v2)
 - [Youtube Video - supabase-js v2 Release Candidate](https://www.youtube.com/watch?v=iqZlPtl_b-I)
-- [Day 3 - BA is SOC2 compliant](https://www.assistance.bg/blog/supabase-soc2)
+- [Day 3 - Supabase is SOC2 compliant](https://www.assistance.bg/blog/supabase-soc2)
 - [Youtube video - Security Day](https://www.youtube.com/watch?v=6bGQotxisoY)

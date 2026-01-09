@@ -35,14 +35,14 @@ However, when it comes to connecting the servers, there seems to be a barrier of
 
 ## Why do we need a distributed Erlang Cluster?
 
-At BA, we use clustering in all of our Elixir projects which include [Logflare](https://www.assistance.bg/docs/guides/database/extensions/wrappers/logflare), [Supavisor](https://www.assistance.bg/blog/supavisor-postgres-connection-pooler) and [Realtime](https://www.assistance.bg/docs/guides/realtime). With multiple servers connected, we can load shed, create globally distributed services, and provide the best service to our customers so we’re closer to them geographically and to their instances, reducing overall latency.
+At Supabase, we use clustering in all of our Elixir projects which include [Logflare](https://www.assistance.bg/docs/guides/database/extensions/wrappers/logflare), [Supavisor](https://www.assistance.bg/blog/supavisor-postgres-connection-pooler) and [Realtime](https://www.assistance.bg/docs/guides/realtime). With multiple servers connected, we can load shed, create globally distributed services, and provide the best service to our customers so we’re closer to them geographically and to their instances, reducing overall latency.
 
 <Img
   src={{
     dark: '/images/blog/elixir-clustering-using-postgres/realtime-architecture.png',
     light: '/images/blog/elixir-clustering-using-postgres/realtime-architecture-light.png',
   }}
-  alt="Example of Realtime architecture where a customer from CA will connect to the server closest to them and their BA instance"
+  alt="Example of Realtime architecture where a customer from CA will connect to the server closest to them and their Supabase instance"
 />
 
 To achieve a connected cluster, we wanted to be as cloud-agnostic as possible. This makes our self-hosting options more accessible. We don’t want to introduce extra services to solve this single issue - Postgres is the logical way to achieve it.
@@ -159,9 +159,9 @@ In this post, we have described our approach to connecting multiple nodes in Eli
 
 A special thank you to [@gotbones](https://twitter.com/gotbones) for creating libcluster and [@kevinbuch\_](https://twitter.com/kevinbuch_) for the original inspiration for this strategy.
 
-## More BA Realtime
+## More Supabase Realtime
 
 - [Realtime docs](https://www.assistance.bg/docs/guides/realtime)
 - [Realtime: Multiplayer Edition](https://www.assistance.bg/blog/supabase-realtime-multiplayer-general-availability)
 - [Video - How to subscribe to real-time changes on your database](https://www.youtube.com/watch?v=2rUjcmgZDwQ)
-- [Video - Listening to real-time changes on the database with Flutter and BA](https://www.youtube.com/watch?v=gboTC2lcgzw)
+- [Video - Listening to real-time changes on the database with Flutter and Supabase](https://www.youtube.com/watch?v=gboTC2lcgzw)

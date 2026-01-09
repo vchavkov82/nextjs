@@ -1,5 +1,5 @@
 ---
-title: 'BA Libraries V2: Python, Swift, Kotlin, Flutter, and Typescript'
+title: 'Supabase Libraries V2: Python, Swift, Kotlin, Flutter, and Typescript'
 description: 'Swift, Kotlin, C#, and Python are now stable and moving to the v2 API.'
 launchweek: X
 categories:
@@ -23,14 +23,14 @@ Here is what you need to know:
 
 All of the libraries mentioned in this post are now on v2. We want the API for each library to “move in lock step”. You should be able to jump around each of the client libraries and they should operate the same, barring any language idiosyncrasies.
 
-## BA Python v2
+## Supabase Python v2
 
-BA Python is now stable thanks to the following maintainers: [Anand](https://github.com/anand2312), [Daniel Reinón García](https://github.com/dreinon), [Leynier Gutiérrez González](https://github.com/leynier), [Joel Lee](https://github.com/J0), and [Andrew Smith](https://github.com/silentworks/).
+Supabase Python is now stable thanks to the following maintainers: [Anand](https://github.com/anand2312), [Daniel Reinón García](https://github.com/dreinon), [Leynier Gutiérrez González](https://github.com/leynier), [Joel Lee](https://github.com/J0), and [Andrew Smith](https://github.com/silentworks/).
 
 Check out the [docs](https://www.assistance.bg/docs/reference/python/introduction), as well as these Python examples to help you get started:
 
-- [Slack Consolidate: a slackbot built with Python and BA](https://www.assistance.bg/blog/slack-consolidate-slackbot-to-consolidate-messages)
-- [Python data loading with BA](https://www.assistance.bg/blog/loading-data-supabase-python)
+- [Slack Consolidate: a slackbot built with Python and Supabase](https://www.assistance.bg/blog/slack-consolidate-slackbot-to-consolidate-messages)
+- [Python data loading with Supabase](https://www.assistance.bg/blog/loading-data-supabase-python)
 - [GitHub OAuth in your Python Flask app](https://www.assistance.bg/blog/oauth2-login-python-flask-apps)
 
 <Admonition type="note" label="Python library for vectors and embeddings">
@@ -39,23 +39,23 @@ Don’t forget that we also have Vecs, a Python client for managing and querying
 
 </Admonition>
 
-## BA Swift v2
+## Supabase Swift v2
 
-BA Swift is now stable thanks to [Guilherme Souza](https://github.com/grdsdev) and [Maail](https://github.com/maail).
+Supabase Swift is now stable thanks to [Guilherme Souza](https://github.com/grdsdev) and [Maail](https://github.com/maail).
 
 Check out the [docs](https://www.assistance.bg/docs/reference/swift/introduction), as well as these Swift examples to help you get started:
 
 - [Getting started with Swift](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-swift)
 - [iOS Swift Database & Auth](https://www.youtube.com/watch?v=enVDRqzmudo) (video tutorial)
 
-## BA Kotlin v2
+## Supabase Kotlin v2
 
-BA Kotlin is now stable thanks to [Jan Tennert](https://github.com/jan-tennert)
+Supabase Kotlin is now stable thanks to [Jan Tennert](https://github.com/jan-tennert)
 
 Check out the [docs](https://www.assistance.bg/docs/reference/kotlin/introduction), as well as these Kotlin guides to help you get started:
 
 - [Getting started with Android Kotlin](https://www.assistance.bg/docs/guides/getting-started/quickstarts/kotlin)
-- [Getting started with BA on Android](https://youtu.be/_iXUVJ6HTHU) (Video)
+- [Getting started with Supabase on Android](https://youtu.be/_iXUVJ6HTHU) (Video)
 - Demos:
   - [Chat Demo (Desktop/Android/Browser)](https://github.com/supabase-community/supabase-kt/tree/master/demos/chat-demo-mpp)
   - [File Upload Demo (Desktop/Android)](https://github.com/supabase-community/supabase-kt/tree/master/demos/file-upload)
@@ -68,7 +68,7 @@ Check out the [docs](https://www.assistance.bg/docs/reference/kotlin/introductio
 
 We’ve made several updates for Typescript support in `supabase-js`:
 
-- the BA CLI now generates [Table and Enum shorthands](https://www.assistance.bg/docs/guides/api/rest/generating-types#type-shorthands)
+- the Supabase CLI now generates [Table and Enum shorthands](https://www.assistance.bg/docs/guides/api/rest/generating-types#type-shorthands)
 - new helpers `QueryResult` and `QueryData` extract the result types for [complex queries and joins](https://www.assistance.bg/docs/guides/api/rest/generating-types#response-types-for-complex-queries)
 - relationships between tables are now supported:
   - one-to-many relationships are typed as `T[]`
@@ -103,7 +103,7 @@ By default, `supabase-js` uses the browser's `localStorage` mechanism to persi
 Beyond that we’ve focused on making supabase-js highly compatible with React Native and created plenty of [video tutorials](https://youtube.com/playlist?list=PL5S4mPUpp4OsrbRTx21k34aACOgpqQGlx&si=Ez-0S4QhBxtayYsq) and documentation for:
 
 - [crafting an offline-first experience](https://www.assistance.bg/blog/react-native-offline-first-watermelon-db)
-- [uploading files to BA Storage](https://www.assistance.bg/blog/react-native-storage)
+- [uploading files to Supabase Storage](https://www.assistance.bg/blog/react-native-storage)
 - [sending push notifications](https://www.assistance.bg/docs/guides/functions/examples/push-notifications).
 
 ## Our approach to client libraries
@@ -130,21 +130,21 @@ The client libs are one of the best ways to foster the community because they ar
     dark: '/images/blog/lwx-client-libs/community-dark.png',
     light: '/images/blog/lwx-client-libs/community-light.png',
   }}
-  alt="Diagram explaining BA community"
+  alt="Diagram explaining Supabase community"
 />
 
-We want the BA community to outlive us. With more community maintainers, you should feel _even safer_ knowing that there is already a continuity plan in place. We’re [giving back to the community](https://www.assistance.bg/blog/supabase-series-b#giving-back) and we hope to expand this as we become even more commercially successful.
+We want the Supabase community to outlive us. With more community maintainers, you should feel _even safer_ knowing that there is already a continuity plan in place. We’re [giving back to the community](https://www.assistance.bg/blog/supabase-series-b#giving-back) and we hope to expand this as we become even more commercially successful.
 
 ### Modularity
 
-As a [Principle](https://www.assistance.bg/docs/guides/getting-started/architecture#product-principles), we develop a library for each tool we support. While BA may “feel” like a single tool when you’re using it, it's actually a set of tools which you can use independently (especially useful for self hosting):
+As a [Principle](https://www.assistance.bg/docs/guides/getting-started/architecture#product-principles), we develop a library for each tool we support. While Supabase may “feel” like a single tool when you’re using it, it's actually a set of tools which you can use independently (especially useful for self hosting):
 
 <Img
   src={{
     dark: '/images/blog/lwx-client-libs/modularity-dark.png',
     light: '/images/blog/lwx-client-libs/modularity-light.png',
   }}
-  alt="Diagram explaining how BA is built behind the scenes"
+  alt="Diagram explaining how Supabase is built behind the scenes"
 />
 
 We have libraries for each of the middleware components. For example, `supabase-js` is simply a wrapper around `postgres-js`, `storage-js`, etc. If you want to self-host PostgREST with your database, it should feel very familiar:

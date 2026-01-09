@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "BA UI Library",
+  "name": "Supabase UI Library",
   "homepage": "https://www.assistance.bg/ui",
   "items": [
     {
       "name": "password-based-auth-nextjs",
       "type": "registry:block",
-      "title": "Password Based Auth flow for Nextjs and BA",
-      "description": "Password Based Auth flow for Nextjs and BA",
+      "title": "Password Based Auth flow for Nextjs and Supabase",
+      "description": "Password Based Auth flow for Nextjs and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -106,8 +106,8 @@
     {
       "name": "password-based-auth-react",
       "type": "registry:block",
-      "title": "Password Based Auth flow for React and BA",
-      "description": "Password Based Auth flow for React and BA",
+      "title": "Password Based Auth flow for React and Supabase",
+      "description": "Password Based Auth flow for React and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -148,8 +148,8 @@
     {
       "name": "password-based-auth-react-router",
       "type": "registry:block",
-      "title": "Password Based Auth flow for React Router and BA",
-      "description": "Password Based Auth flow for React Router and BA",
+      "title": "Password Based Auth flow for React Router and Supabase",
+      "description": "Password Based Auth flow for React Router and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -226,8 +226,8 @@
     {
       "name": "password-based-auth-tanstack",
       "type": "registry:block",
-      "title": "Password Based Auth flow for tanstack and BA",
-      "description": "Password Based Auth flow for tanstack and BA",
+      "title": "Password Based Auth flow for tanstack and Supabase",
+      "description": "Password Based Auth flow for tanstack and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -322,8 +322,8 @@
     {
       "name": "social-auth-nextjs",
       "type": "registry:block",
-      "title": "Social Auth flow for Nextjs and BA",
-      "description": "Social Auth flow for Nextjs and BA",
+      "title": "Social Auth flow for Nextjs and Supabase",
+      "description": "Social Auth flow for Nextjs and Supabase",
       "registryDependencies": [
         "button",
         "card"
@@ -388,8 +388,8 @@
     {
       "name": "social-auth-react",
       "type": "registry:block",
-      "title": "Social Auth flow for React and BA",
-      "description": "Social Auth flow for React and BA",
+      "title": "Social Auth flow for React and Supabase",
+      "description": "Social Auth flow for React and Supabase",
       "registryDependencies": [
         "button",
         "card"
@@ -416,8 +416,8 @@
     {
       "name": "social-auth-react-router",
       "type": "registry:block",
-      "title": "Social Auth flow for React Router and BA",
-      "description": "Social Auth flow for React Router and BA",
+      "title": "Social Auth flow for React Router and Supabase",
+      "description": "Social Auth flow for React Router and Supabase",
       "registryDependencies": [
         "button",
         "card"
@@ -477,8 +477,8 @@
     {
       "name": "social-auth-tanstack",
       "type": "registry:block",
-      "title": "Social Auth flow for TanStack and BA",
-      "description": "Social Auth flow for TanStack and BA",
+      "title": "Social Auth flow for TanStack and Supabase",
+      "description": "Social Auth flow for TanStack and Supabase",
       "registryDependencies": [
         "button",
         "card"
@@ -541,7 +541,7 @@
       "name": "dropzone-nextjs",
       "type": "registry:component",
       "title": "Dropzone (File Upload)",
-      "description": "Displays a control for easier uploading of files directly to BA Storage.",
+      "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
       "registryDependencies": [
         "button"
       ],
@@ -584,7 +584,7 @@
       "name": "dropzone-react",
       "type": "registry:component",
       "title": "Dropzone (File Upload)",
-      "description": "Displays a control for easier uploading of files directly to BA Storage.",
+      "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
       "registryDependencies": [
         "button"
       ],
@@ -618,7 +618,7 @@
       "name": "dropzone-react-router",
       "type": "registry:component",
       "title": "Dropzone (File Upload)",
-      "description": "Displays a control for easier uploading of files directly to BA Storage.",
+      "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
       "registryDependencies": [
         "button"
       ],
@@ -657,7 +657,7 @@
       "name": "dropzone-tanstack",
       "type": "registry:component",
       "title": "Dropzone (File Upload)",
-      "description": "Displays a control for easier uploading of files directly to BA Storage.",
+      "description": "Displays a control for easier uploading of files directly to Supabase Storage.",
       "registryDependencies": [
         "button"
       ],
@@ -1404,7 +1404,7 @@
       "name": "infinite-query-hook",
       "type": "registry:block",
       "title": "Infinite Query Hook",
-      "description": "React hook for infinite lists, fetching data from BA.",
+      "description": "React hook for infinite lists, fetching data from Supabase.",
       "dependencies": [
         "@supabase/supabase-js",
         "@supabase/postgrest-js@*"
@@ -1421,7 +1421,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-nextjs",
       "type": "registry:lib",
-      "title": "BA Client for Next.js",
+      "title": "Supabase Client for Next.js",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1452,7 +1452,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-react",
       "type": "registry:lib",
-      "title": "BA Client for React",
+      "title": "Supabase Client for React",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1474,7 +1474,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-react-router",
       "type": "registry:lib",
-      "title": "BA Client for React Router",
+      "title": "Supabase Client for React Router",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1501,7 +1501,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-tanstack",
       "type": "registry:lib",
-      "title": "BA Client for TanStack Start",
+      "title": "Supabase Client for TanStack Start",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1528,8 +1528,8 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "platform-kit-nextjs",
       "type": "registry:block",
-      "title": "Platform Kit for Nextjs and BA",
-      "description": "Platform Kit for Nextjs and BA",
+      "title": "Platform Kit for Nextjs and Supabase",
+      "description": "Platform Kit for Nextjs and Supabase",
       "registryDependencies": [
         "alert",
         "badge",
@@ -1705,7 +1705,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-nuxtjs",
       "type": "registry:lib",
-      "title": "BA Client for Nuxt.js",
+      "title": "Supabase Client for Nuxt.js",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1743,7 +1743,7 @@
       "$schema": "https://ui.shadcn.com/schema/registry-item.json",
       "name": "supabase-client-vue",
       "type": "registry:lib",
-      "title": "BA Client for Vue",
+      "title": "Supabase Client for Vue",
       "description": "",
       "registryDependencies": [],
       "dependencies": [
@@ -1764,8 +1764,8 @@
     {
       "name": "password-based-auth-nuxtjs",
       "type": "registry:block",
-      "title": "Password Based Auth flow for Nuxt.js and BA",
-      "description": "Password Based Auth flow for Nuxt.js and BA",
+      "title": "Password Based Auth flow for Nuxt.js and Supabase",
+      "description": "Password Based Auth flow for Nuxt.js and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -1842,8 +1842,8 @@
     {
       "name": "password-based-auth-vue",
       "type": "registry:block",
-      "title": "Password Based Auth flow for Vue and BA",
-      "description": "Password Based Auth flow for Vue and BA",
+      "title": "Password Based Auth flow for Vue and Supabase",
+      "description": "Password Based Auth flow for Vue and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -1879,8 +1879,8 @@
     {
       "name": "social-auth-vue",
       "type": "registry:block",
-      "title": "Social Auth flow for Vue and BA",
-      "description": "Social Auth flow for Vue and BA",
+      "title": "Social Auth flow for Vue and Supabase",
+      "description": "Social Auth flow for Vue and Supabase",
       "registryDependencies": [
         "button",
         "card"
@@ -1899,8 +1899,8 @@
     {
       "name": "social-auth-nuxtjs",
       "type": "registry:block",
-      "title": "Social Auth flow for Nuxt and BA",
-      "description": "Social Auth flow for Nuxt and BA",
+      "title": "Social Auth flow for Nuxt and Supabase",
+      "description": "Social Auth flow for Nuxt and Supabase",
       "registryDependencies": [
         "button",
         "card",
@@ -1954,7 +1954,7 @@
       "name": "ai-editor-rules",
       "type": "registry:file",
       "title": "Prompt rules for AI Editors",
-      "description": "Prompts for working with BA using AI-powered IDE tools",
+      "description": "Prompts for working with Supabase using AI-powered IDE tools",
       "registryDependencies": [],
       "dependencies": [],
       "files": [

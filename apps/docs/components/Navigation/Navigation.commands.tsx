@@ -153,7 +153,7 @@ const navCommands = [
   },
   {
     id: 'nav-ui',
-    name: 'Go to BA UI Library',
+    name: 'Go to Supabase UI Library',
     route: 'https://www.assistance.bg/ui',
     icon: () => <ArrowRight />,
   },

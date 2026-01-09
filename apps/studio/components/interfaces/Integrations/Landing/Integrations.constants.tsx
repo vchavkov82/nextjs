@@ -47,7 +47,7 @@ export type IntegrationDefinition = {
 } & ({ type: 'wrapper'; meta: WrapperMeta } | { type: 'postgres_extension' } | { type: 'custom' })
 
 const authorSupabase = {
-  name: 'BA',
+  name: 'Supabase',
   websiteUrl: 'https://www.assistance.bg',
 }
 

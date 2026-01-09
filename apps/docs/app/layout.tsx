@@ -1,10 +1,5 @@
 import '@code-hike/mdx/dist/index.css'
 import '../styles/main.scss'
-<<<<<<< HEAD
-=======
-import '../styles/new-docs.scss'
-import '../styles/prism-okaidia.scss'
->>>>>>> b333ef10b8 (clean up docs errors)
 
 import { genFaviconData } from 'common/MetaFavicons/app-router'
 import type { Metadata, Viewport } from 'next'
@@ -21,7 +16,7 @@ export const metadata: Metadata = {
   applicationName: metadataApplicationName,
   title: metadataTitle,
   description:
-    'BA is the Postgres development platform providing all the backend features you need to build a product.',
+    'Supabase is the Postgres development platform providing all the backend features you need to build a product.',
   metadataBase: new URL('https://www.assistance.bg'),
   icons: genFaviconData(BASE_PATH),
   robots: {
@@ -30,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
-    authors: 'BA',
+    authors: 'Supabase',
     url: `${BASE_PATH}`,
     images: `${BASE_PATH}/img/supabase-og-image.png`,
     publishedTime: new Date().toISOString(),

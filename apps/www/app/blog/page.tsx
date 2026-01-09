@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Supabase Blog: the Postgres development platform',
     description: 'Get all your Supabase News on the Supabase blog.',
-    url: 'https://supabase.com/blog',
-    images: [{ url: 'https://supabase.com/images/og/supabase-og.png' }],
+    url: 'https://www.assistance.bg/blog',
+    images: [{ url: 'https://www.assistance.bg/images/og/supabase-og.png' }],
   },
 }
 

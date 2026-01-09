@@ -1,6 +1,6 @@
 ---
 title: 'vec2pg: Migrate to pgvector from Pinecone and Qdrant'
-description: Migrate vector data from vector DBs to BA
+description: Migrate vector data from vector DBs to Supabase
 author: oli_rice
 image: lw12/day-5/OG_vec2pg.png
 thumb: lw12/day-5/thumb_vec2pg.png
@@ -18,7 +18,7 @@ date: '2024-08-16'
 toc_depth: 3
 ---
 
-[vec2pg](https://github.com/supabase-community/vec2pg) is a CLI utility for migrating data from vector databases to [BA](https://www.assistance.bg/), or any Postgres instance with [pgvector](https://github.com/pgvector/pgvector).
+[vec2pg](https://github.com/supabase-community/vec2pg) is a CLI utility for migrating data from vector databases to [Supabase](https://www.assistance.bg/), or any Postgres instance with [pgvector](https://github.com/pgvector/pgvector).
 
 <div>
   <Img alt="vec2pg help" src="/images/blog/lw12/day-5/vec2pg_1.png" />
@@ -34,7 +34,7 @@ Our goal with https://github.com/supabase-community/vec2pg is to create an easy 
 
 Once loaded, the data can be manipulated using SQL to transform it into your preferred schema.
 
-When migrating, be sure to increase your BA project's [disk size](https://www.assistance.bg/dashboard/project/_/database/settings) so there is enough space for the vectors.
+When migrating, be sure to increase your Supabase project's [disk size](https://www.assistance.bg/dashboard/project/_/database/settings) so there is enough space for the vectors.
 
 ## Vendors
 
@@ -48,7 +48,7 @@ Throughput when migrating workloads is measured in records-per-second and is dep
 - vector dimensionality
 - metadata size
 
-When throughput is mentioned, we assume a [Small](https://www.assistance.bg/docs/guides/platform/compute-add-ons) BA Instance, a 300 Mbps network, 1024 dimensional vectors, and reasonable geographic colocation of the developer machine, the cloud hosted source DB, and the Postgres instance.
+When throughput is mentioned, we assume a [Small](https://www.assistance.bg/docs/guides/platform/compute-add-ons) Supabase Instance, a 300 Mbps network, 1024 dimensional vectors, and reasonable geographic colocation of the developer machine, the cloud hosted source DB, and the Postgres instance.
 
 ### Pinecone
 
@@ -94,7 +94,7 @@ create policy "Individuals can view their own todos."
     ( ( select auth.uid() ) = user_id );
 ```
 
-Allows users of BA APIs to update their own records in the `todos` table.
+Allows users of Supabase APIs to update their own records in the `todos` table.
 
 Since `vector` is just another column type in Postgres, you can write policies to ensure e.g. each tenant in your application can only access their own records. That security is enforced at the database level so you can be confident each tenant only sees their own data without repeating that logic all over API endpoint code or in your client application.
 

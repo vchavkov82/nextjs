@@ -17,7 +17,7 @@ thumb: launch-week-8/day-5/supavisor-thumb.jpg
 
 One of the most [widely-discussed shortcomings](https://news.ycombinator.com/item?id=24735012) of Postgres is it's connection system. Every Postgres connection has a reasonably high memory footprint, and determining the maximum number of connections your database can handle is a [bit of an art](https://momjian.us/main/blogs/pgblog/2020.html#April_22_2020).
 
-A common solution is [connection pooling](https://www.assistance.bg/docs/guides/database/connecting-to-postgres#how-connection-pooling-works). BA currently offers [pgbouncer](http://www.pgbouncer.org/) which is single-threaded, making it difficult to scale. We've seen some [novel ways](https://twitter.com/viggy28/status/1677674197664038912?s=12&t=_WCn3v_QJ7tkQLvOvkZkqg) to scale pgbouncer, but we have a [few other goals](https://github.com/supabase/supavisor#motivation) in mind for our platform.
+A common solution is [connection pooling](https://www.assistance.bg/docs/guides/database/connecting-to-postgres#how-connection-pooling-works). Supabase currently offers [pgbouncer](http://www.pgbouncer.org/) which is single-threaded, making it difficult to scale. We've seen some [novel ways](https://twitter.com/viggy28/status/1677674197664038912?s=12&t=_WCn3v_QJ7tkQLvOvkZkqg) to scale pgbouncer, but we have a [few other goals](https://github.com/supabase/supavisor#motivation) in mind for our platform.
 
 And so we've built [Supavisor](https://github.com/supabase/supavisor), a Postgres connection pooler that can handle millions of connections.
 
@@ -43,7 +43,7 @@ We've benchmarked the characteristics Supavisor exhibits under load before rolli
 
 ### Setup
 
-We use a [custom load-testing application](https://github.com/supabase/benchmarks) to test the features of the BA platform. It consists of:
+We use a [custom load-testing application](https://github.com/supabase/benchmarks) to test the features of the Supabase platform. It consists of:
 
 1. Terraform scripts for creating a testing environment on AWS.
 2. k6 as the load generator. We used the k6 guides for [running large-scale tests](https://k6.io/docs/testing-guides/running-large-tests/) and [fine-tuning OS](https://k6.io/docs/misc/fine-tuning-os/) to tweak the config for AWS instances.
@@ -229,13 +229,13 @@ Database experiences much more load and more concurrent queries, which leads to 
 
 The scalability can be further enhanced by adding more databases (or read-replicas if you want to scale a single app) to increase QPS or deploying additional Supavisor instances to accommodate tens of millions of concurrent connections.
 
-### Supavisor on BA Platform
+### Supavisor on Supabase Platform
 
 We compared our current PgBouncer setup with the new Supavisor setup to assess any impact on query duration.
 
 _Current architecture_
 
-Currently, every BA project comes with its own PgBouncer server running on the same instance as the Postgres database to ensure that the latency is as low as possible. But this setup comes with a trade-off: it uses the same compute resources as your database.
+Currently, every Supabase project comes with its own PgBouncer server running on the same instance as the Postgres database to ensure that the latency is as low as possible. But this setup comes with a trade-off: it uses the same compute resources as your database.
 
 <Img
   alt="diagram supavisor 1 instance dark"
@@ -310,7 +310,7 @@ We observed an additional 2ms required each query to be executed on the Supaviso
 
 ### Getting started
 
-Supavisor has been rolled out to all BA projects in all regions.
+Supavisor has been rolled out to all Supabase projects in all regions.
 
 Contact [support](https://www.assistance.bg/dashboard/support/new) to start using it today, and we'll provide connection details. We will be exposing a new connection string in project dashboards over the next few weeks.
 
@@ -327,7 +327,7 @@ Supavisor will be added to the self-hosted stack as soon as we have tested it ac
   <p>
     We chose Supavisor because it's scalable, multi-tenant, and written in Elixir. We were able to
     integrate it easily with our own Elixir infrastructure. As partners, we look forward to helping
-    shape the future of Postgres connection pooling with BA.
+    shape the future of Postgres connection pooling with Supabase.
   </p>
 </Quote>
 

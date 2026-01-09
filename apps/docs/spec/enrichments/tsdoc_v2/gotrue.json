@@ -235,24 +235,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1531
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1537,
-            1536
-          ]
-=======
           "children": [1536]
         },
         {
           "title": "Properties",
           "children": [1542, 1541]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -282,7 +269,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Base error thrown by BA Auth helpers."
+            "text": "Base error thrown by Supabase Auth helpers."
           }
         ],
         "blockTags": [
@@ -494,24 +481,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1521
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1526,
-            1528
-          ]
-=======
           "children": [1526]
         },
         {
           "title": "Properties",
           "children": [1531, 1533]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -682,14 +656,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1594,
-                                1593
-                              ]
-=======
                               "children": [1599, 1598]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -874,14 +841,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1598,
-                        1597
-                      ]
-=======
                       "children": [1603, 1602]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -1068,14 +1028,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-<<<<<<< HEAD
-                                  "children": [
-                                    1608,
-                                    1607
-                                  ]
-=======
                                   "children": [1613, 1612]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                 }
                               ],
                               "sources": [
@@ -1156,16 +1109,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1605,
-                        1603,
-                        1602,
-                        1604
-                      ]
-=======
                       "children": [1610, 1608, 1607, 1609]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -1185,26 +1129,6 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1588
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1611,
-            1595,
-            1609,
-            1610
-          ]
-        },
-        {
-          "title": "Methods",
-          "children": [
-            1599
-          ]
-=======
           "children": [1593]
         },
         {
@@ -1214,7 +1138,6 @@
         {
           "title": "Methods",
           "children": [1604]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -1461,25 +1384,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1579
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1584,
-            1582,
-            1583
-          ]
-=======
           "children": [1584]
         },
         {
           "title": "Properties",
           "children": [1589, 1587, 1588]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -1726,25 +1635,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1672
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1677,
-            1675,
-            1676
-          ]
-=======
           "children": [1677]
         },
         {
           "title": "Properties",
           "children": [1682, 1680, 1681]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -1978,25 +1873,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1571
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1575,
-            1573,
-            1574
-          ]
-=======
           "children": [1576]
         },
         {
           "title": "Properties",
           "children": [1580, 1578, 1579]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -2230,25 +2111,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1642
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1646,
-            1644,
-            1645
-          ]
-=======
           "children": [1647]
         },
         {
           "title": "Properties",
           "children": [1651, 1649, 1650]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -2399,14 +2266,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1621,
-                                1620
-                              ]
-=======
                               "children": [1626, 1625]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -2591,14 +2451,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1625,
-                        1624
-                      ]
-=======
                       "children": [1630, 1629]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -2785,14 +2638,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-<<<<<<< HEAD
-                                  "children": [
-                                    1635,
-                                    1634
-                                  ]
-=======
                                   "children": [1640, 1639]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                 }
                               ],
                               "sources": [
@@ -2873,16 +2719,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1632,
-                        1630,
-                        1629,
-                        1631
-                      ]
-=======
                       "children": [1637, 1635, 1634, 1636]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -2902,26 +2739,6 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1615
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1638,
-            1622,
-            1636,
-            1637
-          ]
-        },
-        {
-          "title": "Methods",
-          "children": [
-            1626
-          ]
-=======
           "children": [1620]
         },
         {
@@ -2931,7 +2748,6 @@
         {
           "title": "Methods",
           "children": [1631]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -3189,25 +3005,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1650
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1656,
-            1654,
-            1655
-          ]
-=======
           "children": [1655]
         },
         {
           "title": "Properties",
           "children": [1661, 1659, 1660]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -3441,25 +3243,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1563
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1567,
-            1565,
-            1566
-          ]
-=======
           "children": [1568]
         },
         {
           "title": "Properties",
           "children": [1572, 1570, 1571]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -3719,25 +3507,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1541
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1546,
-            1545,
-            1548
-          ]
-=======
           "children": [1546]
         },
         {
           "title": "Properties",
           "children": [1551, 1550, 1553]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -4065,26 +3839,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1660
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1668,
-            1666,
-            1665,
-            1667
-          ]
-=======
           "children": [1665]
         },
         {
           "title": "Properties",
           "children": [1673, 1671, 1670, 1672]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -4369,25 +4128,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            1551
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            1559,
-            1557,
-            1558
-          ]
-=======
           "children": [1556]
         },
         {
           "title": "Properties",
           "children": [1564, 1562, 1563]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -4848,11 +4593,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            11,
-                            7,
-                            6
-                          ]
+                          "children": [11, 7, 6]
                         }
                       ],
                       "sources": [
@@ -4916,7 +4657,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
               }
             ]
           },
@@ -5437,10 +5178,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            46,
-                            47
-                          ]
+                          "children": [46, 47]
                         }
                       ],
                       "sources": [
@@ -5654,10 +5392,7 @@
                                       "groups": [
                                         {
                                           "title": "Properties",
-                                          "children": [
-                                            61,
-                                            60
-                                          ]
+                                          "children": [61, 60]
                                         }
                                       ],
                                       "sources": [
@@ -5702,10 +5437,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                58,
-                                62
-                              ]
+                              "children": [58, 62]
                             }
                           ],
                           "sources": [
@@ -5772,9 +5504,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        66
-                                      ]
+                                      "children": [66]
                                     }
                                   ],
                                   "sources": [
@@ -5813,10 +5543,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                64,
-                                67
-                              ]
+                              "children": [64, 67]
                             }
                           ],
                           "sources": [
@@ -5998,10 +5725,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            39,
-                            40
-                          ]
+                          "children": [39, 40]
                         }
                       ],
                       "sources": [
@@ -6124,29 +5848,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            2
-          ]
+          "children": [2]
         },
         {
           "title": "Properties",
-          "children": [
-            19,
-            20
-          ]
+          "children": [19, 20]
         },
         {
           "title": "Methods",
-          "children": [
-            51,
-            75,
-            48,
-            68,
-            41,
-            54,
-            34,
-            71
-          ]
+          "children": [51, 75, 48, 68, 41, 54, 34, 71]
         }
       ],
       "sources": [
@@ -6307,7 +6017,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\nUsed to implement the authorization code flow on the consent page."
+                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\nUsed to implement the authorization code flow on the consent page."
               }
             ]
           },
@@ -6619,13 +6329,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-<<<<<<< HEAD
-                                  "children": [
-                                    671
-                                  ]
-=======
                                   "children": [673]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                 }
                               ],
                               "sources": [
@@ -6683,15 +6387,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            668,
-                            669,
-                            667
-                          ]
-=======
                           "children": [670, 671, 669]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -6819,15 +6515,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        675,
-                                        676,
-                                        677
-                                      ]
-=======
                                       "children": [677, 678, 679]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -6864,14 +6552,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                673,
-                                678
-                              ]
-=======
                               "children": [675, 680]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -6937,14 +6618,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                680,
-                                681
-                              ]
-=======
                               "children": [682, 683]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -7008,14 +6682,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                683,
-                                684
-                              ]
-=======
                               "children": [685, 686]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -7111,73 +6778,6 @@
                               "sources": [
                                 {
                                   "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-<<<<<<< HEAD
-                                  "line": 1562,
-                                  "character": 12,
-                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1562"
-                                }
-                              ],
-                              "type": {
-                                "type": "reflection",
-                                "declaration": {
-                                  "id": 287,
-                                  "name": "__type",
-                                  "variant": "declaration",
-                                  "kind": 65536,
-                                  "flags": {},
-                                  "children": [
-                                    {
-                                      "id": 288,
-                                      "name": "session",
-                                      "variant": "declaration",
-                                      "kind": 1024,
-                                      "flags": {},
-                                      "sources": [
-                                        {
-                                          "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                          "line": 1563,
-                                          "character": 14,
-                                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1563"
-                                        }
-                                      ],
-                                      "type": {
-                                        "type": "reference",
-                                        "target": 822,
-                                        "name": "Session",
-                                        "package": "@supabase/auth-js"
-                                      }
-                                    }
-                                  ],
-                                  "groups": [
-                                    {
-                                      "title": "Properties",
-                                      "children": [
-                                        288
-                                      ]
-                                    }
-                                  ],
-                                  "sources": [
-                                    {
-                                      "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                      "line": 1562,
-                                      "character": 18,
-                                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1562"
-                                    }
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "id": 289,
-                              "name": "error",
-                              "variant": "declaration",
-                              "kind": 1024,
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                   "line": 1565,
                                   "character": 12,
                                   "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/auth-js/src/GoTrueClient.ts#L1565"
@@ -7230,40 +6830,7 @@
                                   ]
                                 }
                               }
-<<<<<<< HEAD
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Properties",
-                              "children": [
-                                286,
-                                289
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                              "line": 1561,
-                              "character": 10,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1561"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 290,
-                          "name": "__type",
-                          "variant": "declaration",
-                          "kind": 65536,
-                          "flags": {},
-                          "children": [
-=======
                             },
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             {
                               "id": 291,
                               "name": "error",
@@ -7275,185 +6842,7 @@
                                   "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
                                   "line": 1568,
                                   "character": 12,
-<<<<<<< HEAD
-                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1568"
-                                }
-                              ],
-                              "type": {
-                                "type": "reflection",
-                                "declaration": {
-                                  "id": 292,
-                                  "name": "__type",
-                                  "variant": "declaration",
-                                  "kind": 65536,
-                                  "flags": {},
-                                  "children": [
-                                    {
-                                      "id": 293,
-                                      "name": "session",
-                                      "variant": "declaration",
-                                      "kind": 1024,
-                                      "flags": {},
-                                      "sources": [
-                                        {
-                                          "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                          "line": 1569,
-                                          "character": 14,
-                                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1569"
-                                        }
-                                      ],
-                                      "type": {
-                                        "type": "literal",
-                                        "value": null
-                                      }
-                                    }
-                                  ],
-                                  "groups": [
-                                    {
-                                      "title": "Properties",
-                                      "children": [
-                                        293
-                                      ]
-                                    }
-                                  ],
-                                  "sources": [
-                                    {
-                                      "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                      "line": 1568,
-                                      "character": 18,
-                                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1568"
-                                    }
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "id": 294,
-                              "name": "error",
-                              "variant": "declaration",
-                              "kind": 1024,
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                  "line": 1571,
-                                  "character": 12,
-                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1571"
-                                }
-                              ],
-                              "type": {
-                                "type": "reference",
-                                "target": 1520,
-                                "name": "AuthError",
-                                "package": "@supabase/auth-js"
-                              }
-                            }
-                          ],
-                          "groups": [
-                            {
-                              "title": "Properties",
-                              "children": [
-                                291,
-                                294
-                              ]
-                            }
-                          ],
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                              "line": 1567,
-                              "character": 10,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1567"
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "type": "reflection",
-                        "declaration": {
-                          "id": 295,
-                          "name": "__type",
-                          "variant": "declaration",
-                          "kind": 65536,
-                          "flags": {},
-                          "children": [
-                            {
-                              "id": 296,
-                              "name": "data",
-                              "variant": "declaration",
-                              "kind": 1024,
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                  "line": 1574,
-                                  "character": 12,
-                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1574"
-                                }
-                              ],
-                              "type": {
-                                "type": "reflection",
-                                "declaration": {
-                                  "id": 297,
-                                  "name": "__type",
-                                  "variant": "declaration",
-                                  "kind": 65536,
-                                  "flags": {},
-                                  "children": [
-                                    {
-                                      "id": 298,
-                                      "name": "session",
-                                      "variant": "declaration",
-                                      "kind": 1024,
-                                      "flags": {},
-                                      "sources": [
-                                        {
-                                          "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                          "line": 1575,
-                                          "character": 14,
-                                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1575"
-                                        }
-                                      ],
-                                      "type": {
-                                        "type": "literal",
-                                        "value": null
-                                      }
-                                    }
-                                  ],
-                                  "groups": [
-                                    {
-                                      "title": "Properties",
-                                      "children": [
-                                        298
-                                      ]
-                                    }
-                                  ],
-                                  "sources": [
-                                    {
-                                      "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                      "line": 1574,
-                                      "character": 18,
-                                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1574"
-                                    }
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "id": 299,
-                              "name": "error",
-                              "variant": "declaration",
-                              "kind": 1024,
-                              "flags": {},
-                              "sources": [
-                                {
-                                  "fileName": "packages/core/auth-js/src/GoTrueClient.ts",
-                                  "line": 1577,
-                                  "character": 12,
-                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/GoTrueClient.ts#L1577"
-=======
                                   "url": "https://github.com/supabase/supabase-js/blob/bfa55bb390cf2996591a7cf92621e257c7618df0/packages/core/auth-js/src/GoTrueClient.ts#L1568"
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                 }
                               ],
                               "type": {
@@ -7465,14 +6854,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                296,
-                                299
-                              ]
-=======
                               "children": [288, 291]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -7731,7 +7113,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the BA Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
+                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Supabase Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
                   }
                 ]
               },
@@ -7893,13 +7275,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        470
-                                      ]
-=======
                                       "children": [472]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -7936,14 +7312,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                468,
-                                471
-                              ]
-=======
                               "children": [470, 473]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -8009,14 +7378,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                473,
-                                474
-                              ]
-=======
                               "children": [475, 476]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -8479,13 +7841,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                437
-                              ]
-=======
                               "children": [439]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -8503,13 +7859,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        435
-                      ]
-=======
                       "children": [437]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -8541,7 +7891,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other BA Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
+                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other Supabase Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
                   }
                 ],
                 "blockTags": [
@@ -8725,13 +8075,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                447
-                              ]
-=======
                               "children": [449]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -8749,13 +8093,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        445
-                      ]
-=======
                       "children": [447]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -8914,13 +8252,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            380
-                          ]
-=======
                           "children": [382]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -9161,14 +8493,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            457,
-                            456
-                          ]
-=======
                           "children": [459, 458]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -9251,14 +8576,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                459,
-                                461
-                              ]
-=======
                               "children": [461, 463]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -9324,14 +8642,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                463,
-                                464
-                              ]
-=======
                               "children": [465, 466]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -9456,14 +8767,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            368,
-                            369
-                          ]
-=======
                           "children": [370, 371]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -10110,14 +9414,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        217,
-                                        218
-                                      ]
-=======
                                       "children": [219, 220]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -10154,14 +9451,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                215,
-                                219
-                              ]
-=======
                               "children": [217, 221]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -10248,14 +9538,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        223,
-                                        224
-                                      ]
-=======
                                       "children": [225, 226]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -10294,14 +9577,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                221,
-                                225
-                              ]
-=======
                               "children": [223, 227]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -10466,13 +9742,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            421
-                          ]
-=======
                           "children": [423]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -10837,14 +10107,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                490,
-                                492
-                              ]
-=======
                               "children": [492, 494]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -10910,14 +10173,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                494,
-                                495
-                              ]
-=======
                               "children": [496, 497]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -11030,13 +10286,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            357
-                          ]
-=======
                           "children": [359]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -11148,54 +10398,17 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            109
-          ]
+          "children": [109]
         },
         {
           "title": "Properties",
-          "children": [
-            113,
-            114,
-            115
-          ]
+          "children": [113, 114, 115]
         },
         {
           "title": "Methods",
           "children": [
-<<<<<<< HEAD
-            208,
-            662,
-            283,
-            346,
-            465,
-            192,
-            179,
-            475,
-            427,
-            276,
-            376,
-            280,
-            451,
-            364,
-            196,
-            264,
-            205,
-            267,
-            202,
-            273,
-            211,
-            417,
-            199,
-            541,
-            543,
-            486,
-            352,
-            270
-=======
             210, 664, 285, 348, 467, 194, 181, 477, 429, 278, 378, 282, 453, 366, 198, 266, 207,
             269, 204, 275, 213, 419, 201, 543, 545, 488, 354, 272
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
           ]
         }
       ],
@@ -11328,23 +10541,11 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
-          "children": [
-            696
-          ]
-        },
-        {
-          "title": "Properties",
-          "children": [
-            699
-          ]
-=======
           "children": [698]
         },
         {
           "title": "Properties",
           "children": [701]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -11838,24 +11039,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            901,
-            904,
-            910,
-            902,
-            907,
-            908,
-            911,
-            906,
-            909,
-            903,
-            905,
-            900
-          ]
-=======
           "children": [906, 909, 915, 907, 912, 913, 916, 911, 914, 908, 910, 905]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -11982,14 +11166,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            834,
-            835
-          ]
-=======
           "children": [837, 838]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -12011,7 +11188,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThese methods are used to implement the consent page."
+            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThese methods are used to implement the consent page."
           }
         ]
       },
@@ -12041,7 +11218,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -12134,13 +11311,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1485
-                          ]
-=======
                           "children": [1490]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -12200,7 +11371,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -12293,13 +11464,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1491
-                          ]
-=======
                           "children": [1496]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -12359,7 +11524,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
+                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
                   }
                 ],
                 "blockTags": [
@@ -12448,7 +11613,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -12516,7 +11681,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
+                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
                   }
                 ],
                 "blockTags": [
@@ -12594,13 +11759,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1498
-                          ]
-=======
                           "children": [1503]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -12639,17 +11798,7 @@
       "groups": [
         {
           "title": "Methods",
-<<<<<<< HEAD
-          "children": [
-            1480,
-            1486,
-            1477,
-            1492,
-            1494
-          ]
-=======
           "children": [1485, 1491, 1482, 1497, 1499]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -12746,14 +11895,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1107,
-            1108
-          ]
-=======
           "children": [1112, 1113]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -12951,14 +12093,7 @@
       "groups": [
         {
           "title": "Methods",
-<<<<<<< HEAD
-          "children": [
-            1303,
-            1300
-          ]
-=======
           "children": [1308, 1305]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -12980,7 +12115,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -13010,7 +12145,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13090,7 +12225,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13192,14 +12327,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1443,
-                            1444
-                          ]
-=======
                           "children": [1448, 1449]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -13244,7 +12372,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13322,7 +12450,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13404,7 +12532,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13482,7 +12610,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -13552,18 +12680,7 @@
       "groups": [
         {
           "title": "Methods",
-<<<<<<< HEAD
-          "children": [
-            1429,
-            1439,
-            1432,
-            1426,
-            1445,
-            1435
-          ]
-=======
           "children": [1434, 1444, 1437, 1431, 1450, 1440]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -13716,13 +12833,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1194
-                          ]
-=======
                           "children": [1199]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -13800,14 +12911,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1196,
-                                1197
-                              ]
-=======
                               "children": [1201, 1202]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -13937,15 +13041,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        1203,
-                                        1201,
-                                        1202
-                                      ]
-=======
                                       "children": [1208, 1206, 1207]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -13982,14 +13078,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1199,
-                                1204
-                              ]
-=======
                               "children": [1204, 1209]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -14106,14 +13195,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1209,
-                            1208
-                          ]
-=======
                           "children": [1214, 1213]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -14191,14 +13273,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1211,
-                                1212
-                              ]
-=======
                               "children": [1216, 1217]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -14328,15 +13403,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        1218,
-                                        1216,
-                                        1217
-                                      ]
-=======
                                       "children": [1223, 1221, 1222]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -14373,14 +13440,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1214,
-                                1219
-                              ]
-=======
                               "children": [1219, 1224]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -14543,14 +13603,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-<<<<<<< HEAD
-                                  "children": [
-                                    1226,
-                                    1227
-                                  ]
-=======
                                   "children": [1231, 1232]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                 }
                               ],
                               "sources": [
@@ -14568,14 +13621,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1223,
-                            1224
-                          ]
-=======
                           "children": [1228, 1229]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -14653,14 +13699,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1229,
-                                1230
-                              ]
-=======
                               "children": [1234, 1235]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -14806,124 +13845,6 @@
                                           {
                                             "type": "reflection",
                                             "declaration": {
-<<<<<<< HEAD
-                                              "id": 1238,
-                                              "name": "__type",
-                                              "variant": "declaration",
-                                              "kind": 65536,
-                                              "flags": {},
-                                              "children": [
-                                                {
-                                                  "id": 1240,
-                                                  "name": "credential_options",
-                                                  "variant": "declaration",
-                                                  "kind": 1024,
-                                                  "flags": {},
-                                                  "sources": [
-                                                    {
-                                                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                                                      "line": 1101,
-                                                      "character": 8,
-                                                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1101"
-                                                    }
-                                                  ],
-                                                  "type": {
-                                                    "type": "reflection",
-                                                    "declaration": {
-                                                      "id": 1241,
-                                                      "name": "__type",
-                                                      "variant": "declaration",
-                                                      "kind": 65536,
-                                                      "flags": {},
-                                                      "children": [
-                                                        {
-                                                          "id": 1242,
-                                                          "name": "publicKey",
-                                                          "variant": "declaration",
-                                                          "kind": 1024,
-                                                          "flags": {},
-                                                          "sources": [
-                                                            {
-                                                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                                                              "line": 1101,
-                                                              "character": 30,
-                                                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1101"
-                                                            }
-                                                          ],
-                                                          "type": {
-                                                            "type": "reference",
-                                                            "target": {
-                                                              "sourceFileName": "src/lib/webauthn.dom.ts",
-                                                              "qualifiedName": "PublicKeyCredentialCreationOptionsFuture"
-                                                            },
-                                                            "name": "PublicKeyCredentialCreationOptionsFuture",
-                                                            "package": "@supabase/auth-js"
-                                                          }
-                                                        }
-                                                      ],
-                                                      "groups": [
-                                                        {
-                                                          "title": "Properties",
-                                                          "children": [
-                                                            1242
-                                                          ]
-                                                        }
-                                                      ],
-                                                      "sources": [
-                                                        {
-                                                          "fileName": "packages/core/auth-js/src/lib/types.ts",
-                                                          "line": 1101,
-                                                          "character": 28,
-                                                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1101"
-                                                        }
-                                                      ]
-                                                    }
-                                                  }
-                                                },
-                                                {
-                                                  "id": 1239,
-                                                  "name": "type",
-                                                  "variant": "declaration",
-                                                  "kind": 1024,
-                                                  "flags": {},
-                                                  "sources": [
-                                                    {
-                                                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                                                      "line": 1100,
-                                                      "character": 8,
-                                                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1100"
-                                                    }
-                                                  ],
-                                                  "type": {
-                                                    "type": "literal",
-                                                    "value": "create"
-                                                  }
-                                                }
-                                              ],
-                                              "groups": [
-                                                {
-                                                  "title": "Properties",
-                                                  "children": [
-                                                    1240,
-                                                    1239
-                                                  ]
-                                                }
-                                              ],
-                                              "sources": [
-                                                {
-                                                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                                                  "line": 1099,
-                                                  "character": 6,
-                                                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1099"
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          {
-                                            "type": "reflection",
-                                            "declaration": {
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                               "id": 1243,
                                               "name": "__type",
                                               "variant": "declaration",
@@ -15091,13 +14012,7 @@
                                                       "groups": [
                                                         {
                                                           "title": "Properties",
-<<<<<<< HEAD
-                                                          "children": [
-                                                            1247
-                                                          ]
-=======
                                                           "children": [1252]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                                         }
                                                       ],
                                                       "sources": [
@@ -15134,14 +14049,7 @@
                                               "groups": [
                                                 {
                                                   "title": "Properties",
-<<<<<<< HEAD
-                                                  "children": [
-                                                    1245,
-                                                    1244
-                                                  ]
-=======
                                                   "children": [1250, 1249]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                                 }
                                               ],
                                               "sources": [
@@ -15161,16 +14069,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-<<<<<<< HEAD
-                                      "children": [
-                                        1236,
-                                        1234,
-                                        1235,
-                                        1237
-                                      ]
-=======
                                       "children": [1241, 1239, 1240, 1242]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                                     }
                                   ],
                                   "sources": [
@@ -15207,14 +14106,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1232,
-                                1248
-                              ]
-=======
                               "children": [1237, 1253]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -15394,14 +14286,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1280,
-                            1279
-                          ]
-=======
                           "children": [1285, 1284]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -15612,15 +14497,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1174,
-                            1175,
-                            1176
-                          ]
-=======
                           "children": [1179, 1180, 1181]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -15770,15 +14647,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1180,
-                            1181,
-                            1182
-                          ]
-=======
                           "children": [1185, 1186, 1187]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -15812,135 +14681,6 @@
               }
             },
             {
-<<<<<<< HEAD
-              "id": 1183,
-              "name": "enroll",
-              "variant": "signature",
-              "kind": 4096,
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 1201,
-                  "character": 2,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1201"
-                }
-              ],
-              "parameters": [
-                {
-                  "id": 1184,
-                  "name": "params",
-                  "variant": "param",
-                  "kind": 32768,
-                  "flags": {},
-                  "type": {
-                    "type": "reflection",
-                    "declaration": {
-                      "id": 1185,
-                      "name": "__type",
-                      "variant": "declaration",
-                      "kind": 65536,
-                      "flags": {},
-                      "children": [
-                        {
-                          "id": 1186,
-                          "name": "factorType",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "The type of factor being enrolled."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 1376,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1376"
-                            }
-                          ],
-                          "type": {
-                            "type": "literal",
-                            "value": "webauthn"
-                          }
-                        },
-                        {
-                          "id": 1187,
-                          "name": "friendlyName",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {
-                            "isOptional": true
-                          },
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "Human readable name assigned to the factor."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 1378,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1378"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        }
-                      ],
-                      "groups": [
-                        {
-                          "title": "Properties",
-                          "children": [
-                            1186,
-                            1187
-                          ]
-                        }
-                      ],
-                      "sources": [
-                        {
-                          "fileName": "packages/core/auth-js/src/lib/types.ts",
-                          "line": 148,
-                          "character": 51,
-                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L148"
-                        }
-                      ]
-                    }
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "target": {
-                  "sourceFileName": "../../../node_modules/typescript/lib/lib.es5.d.ts",
-                  "qualifiedName": "Promise"
-                },
-                "typeArguments": [
-                  {
-                    "type": "reference",
-                    "target": 1332,
-                    "name": "AuthMFAEnrollWebauthnResponse",
-                    "package": "@supabase/auth-js"
-                  }
-                ],
-                "name": "Promise",
-                "package": "typescript"
-              }
-            },
-            {
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
               "id": 1188,
               "name": "enroll",
               "variant": "signature",
@@ -16482,315 +15222,7 @@
                       "flags": {},
                       "children": [
                         {
-<<<<<<< HEAD
-                          "id": 1256,
-                          "name": "challengeId",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "ID of the challenge being verified. Returned in challenge()."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 931,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L931"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        },
-                        {
-                          "id": 1257,
-                          "name": "code",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "Verification code provided by the user."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 936,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L936"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        },
-                        {
-                          "id": 1255,
-                          "name": "factorId",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "ID of the factor being verified. Returned in enroll()."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 929,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L929"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        }
-                      ],
-                      "groups": [
-                        {
-                          "title": "Properties",
-                          "children": [
-                            1256,
-                            1257,
-                            1255
-                          ]
-                        }
-                      ],
-                      "sources": [
-                        {
-                          "fileName": "packages/core/auth-js/src/lib/types.ts",
-                          "line": 148,
-                          "character": 51,
-                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L148"
-                        }
-                      ]
-                    }
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "target": {
-                  "sourceFileName": "../../../node_modules/typescript/lib/lib.es5.d.ts",
-                  "qualifiedName": "Promise"
-                },
-                "typeArguments": [
-                  {
-                    "type": "reference",
-                    "target": 1148,
-                    "name": "AuthMFAVerifyResponse",
-                    "package": "@supabase/auth-js"
-                  }
-                ],
-                "name": "Promise",
-                "package": "typescript"
-              }
-            },
-            {
-              "id": 1258,
-              "name": "verify",
-              "variant": "signature",
-              "kind": 4096,
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 1218,
-                  "character": 2,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1218"
-                }
-              ],
-              "parameters": [
-                {
-                  "id": 1259,
-                  "name": "params",
-                  "variant": "param",
-                  "kind": 32768,
-                  "flags": {},
-                  "type": {
-                    "type": "reflection",
-                    "declaration": {
-                      "id": 1260,
-                      "name": "__type",
-                      "variant": "declaration",
-                      "kind": 65536,
-                      "flags": {},
-                      "children": [
-                        {
-                          "id": 1262,
-                          "name": "challengeId",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "ID of the challenge being verified. Returned in challenge()."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 931,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L931"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        },
-                        {
-                          "id": 1263,
-                          "name": "code",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "Verification code provided by the user."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 936,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L936"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        },
-                        {
                           "id": 1261,
-                          "name": "factorId",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "comment": {
-                            "summary": [
-                              {
-                                "kind": "text",
-                                "text": "ID of the factor being verified. Returned in enroll()."
-                              }
-                            ]
-                          },
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 929,
-                              "character": 2,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L929"
-                            }
-                          ],
-                          "type": {
-                            "type": "intrinsic",
-                            "name": "string"
-                          }
-                        }
-                      ],
-                      "groups": [
-                        {
-                          "title": "Properties",
-                          "children": [
-                            1262,
-                            1263,
-                            1261
-                          ]
-                        }
-                      ],
-                      "sources": [
-                        {
-                          "fileName": "packages/core/auth-js/src/lib/types.ts",
-                          "line": 148,
-                          "character": 51,
-                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L148"
-                        }
-                      ]
-                    }
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "target": {
-                  "sourceFileName": "../../../node_modules/typescript/lib/lib.es5.d.ts",
-                  "qualifiedName": "Promise"
-                },
-                "typeArguments": [
-                  {
-                    "type": "reference",
-                    "target": 1148,
-                    "name": "AuthMFAVerifyResponse",
-                    "package": "@supabase/auth-js"
-                  }
-                ],
-                "name": "Promise",
-                "package": "typescript"
-              }
-            },
-            {
-              "id": 1264,
-              "name": "verify",
-              "variant": "signature",
-              "kind": 4096,
-              "flags": {},
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 1219,
-                  "character": 2,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1219"
-                }
-              ],
-              "parameters": [
-                {
-                  "id": 1265,
-                  "name": "params",
-                  "variant": "param",
-                  "kind": 32768,
-                  "flags": {},
-                  "type": {
-                    "type": "reflection",
-                    "declaration": {
-                      "id": 1266,
-                      "name": "__type",
-                      "variant": "declaration",
-                      "kind": 65536,
-                      "flags": {},
-                      "children": [
-                        {
-                          "id": 1268,
-=======
-                          "id": 1261,
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                           "name": "challengeId",
                           "variant": "declaration",
                           "kind": 1024,
@@ -17196,15 +15628,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1268,
-                            1267,
-                            1269
-                          ]
-=======
                           "children": [1273, 1272, 1274]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -17290,29 +15714,11 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1285
-          ]
-        },
-        {
-          "title": "Methods",
-          "children": [
-            1190,
-            1275,
-            1170,
-            1283,
-            1281,
-            1272,
-            1251
-          ]
-=======
           "children": [1290]
         },
         {
           "title": "Methods",
           "children": [1195, 1280, 1175, 1288, 1286, 1277, 1256]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -17431,16 +15837,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1371,
-            1370,
-            1372,
-            1369
-          ]
-=======
           "children": [1376, 1375, 1377, 1374]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -17496,7 +15893,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "JWT Payload containing claims for BA authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
+            "text": "JWT Payload containing claims for Supabase authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
           }
         ],
         "blockTags": [
@@ -17957,28 +16354,8 @@
         {
           "title": "Properties",
           "children": [
-<<<<<<< HEAD
-            1364,
-            1356,
-            1354,
-            1360,
-            1349,
-            1361,
-            1362,
-            1351,
-            1358,
-            1352,
-            1353,
-            1350,
-            1357,
-            1363,
-            1365,
-            1359,
-            1355
-=======
             1369, 1361, 1359, 1365, 1354, 1366, 1367, 1356, 1363, 1357, 1358, 1355, 1362, 1368,
             1370, 1364, 1360
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
           ]
         }
       ],
@@ -18278,20 +16655,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            825,
-            828,
-            827,
-            824,
-            823,
-            826,
-            829,
-            830
-          ]
-=======
           "children": [828, 831, 830, 827, 826, 829, 832, 833]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -18511,15 +16875,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            914,
-            913,
-            919
-          ]
-=======
           "children": [919, 918, 924]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -19150,36 +17506,8 @@
         {
           "title": "Properties",
           "children": [
-<<<<<<< HEAD
-            878,
-            869,
-            871,
-            872,
-            882,
-            881,
-            892,
-            879,
-            874,
-            883,
-            891,
-            868,
-            888,
-            877,
-            889,
-            890,
-            885,
-            875,
-            876,
-            880,
-            884,
-            873,
-            886,
-            887,
-            870
-=======
             882, 873, 875, 897, 876, 886, 885, 896, 883, 878, 887, 895, 872, 892, 881, 893, 894,
             889, 879, 880, 884, 888, 877, 890, 891, 874
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
           ]
         }
       ],
@@ -19264,14 +17592,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            860,
-            861
-          ]
-=======
           "children": [864, 865]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -19489,17 +17810,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            898,
-            894,
-            897,
-            896,
-            895
-          ]
-=======
           "children": [903, 899, 902, 901, 900]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -19730,20 +18041,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            845,
-            837,
-            839,
-            843,
-            846,
-            844,
-            847,
-            838
-          ]
-=======
           "children": [848, 840, 842, 846, 849, 847, 850, 841]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -19931,14 +18229,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1049,
-                    1048
-                  ]
-=======
                   "children": [1054, 1053]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -20012,16 +18303,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1043,
-            1046,
-            1044,
-            1045
-          ]
-=======
           "children": [1048, 1051, 1049, 1050]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -20133,14 +18415,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1041,
-                    1040
-                  ]
-=======
                   "children": [1046, 1045]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -20241,16 +18516,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1038,
-            1035,
-            1036,
-            1037
-          ]
-=======
           "children": [1043, 1040, 1041, 1042]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -20329,14 +18595,7 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
-          "children": [
-            1051,
-            1052
-          ]
-=======
           "children": [1056, 1057]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
         }
       ],
       "sources": [
@@ -20630,14 +18889,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1291,
-                1292
-              ]
-=======
               "children": [1296, 1297]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -20718,13 +18970,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1288
-                  ]
-=======
                   "children": [1293]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -20805,13 +19051,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1298
-              ]
-=======
               "children": [1303]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -20897,13 +19137,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1295
-                  ]
-=======
                   "children": [1300]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -21660,15 +19894,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1168,
-                    1166,
-                    1167
-                  ]
-=======
                   "children": [1173, 1171, 1172]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -21803,13 +20029,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1161
-                      ]
-=======
                       "children": [1166]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -21938,13 +20158,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1152
-                  ]
-=======
                   "children": [1157]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -22179,17 +20393,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1143,
-                1145,
-                1146,
-                1144,
-                1147
-              ]
-=======
               "children": [1148, 1150, 1151, 1149, 1152]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -22213,7 +20417,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -22250,7 +20454,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -22306,13 +20510,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1467
-                  ]
-=======
                   "children": [1472]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -22340,7 +20538,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -22380,7 +20578,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -22531,15 +20729,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    793,
-                    792,
-                    791
-                  ]
-=======
                   "children": [796, 795, 794]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -22648,14 +20838,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    783,
-                    782
-                  ]
-=======
                   "children": [786, 785]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -22796,15 +20979,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    787,
-                    786,
-                    788
-                  ]
-=======
                   "children": [790, 789, 791]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -22895,14 +21070,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    797,
-                    796
-                  ]
-=======
                   "children": [800, 799]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -23016,15 +21184,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    801,
-                    800,
-                    802
-                  ]
-=======
                   "children": [804, 803, 805]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -23081,7 +21241,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -23289,18 +21449,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1399,
-                1400,
-                1402,
-                1401,
-                1403,
-                1404
-              ]
-=======
               "children": [1404, 1405, 1407, 1406, 1408, 1409]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -23583,15 +21732,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1023,
-                            1024,
-                            1022
-                          ]
-=======
                           "children": [1028, 1029, 1027]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -23677,16 +21818,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1017,
-                    1020,
-                    1019,
-                    1018
-                  ]
-=======
                   "children": [1022, 1025, 1024, 1023]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -23836,13 +21968,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1031
-                          ]
-=======
                           "children": [1036]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -23892,16 +22018,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1026,
-                    1027,
-                    1029,
-                    1028
-                  ]
-=======
                   "children": [1031, 1032, 1034, 1033]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -24276,18 +22393,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                855,
-                853,
-                852,
-                851,
-                854,
-                856
-              ]
-=======
               "children": [858, 856, 855, 854, 860, 857, 859]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -24507,16 +22613,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1103,
-                1104,
-                1105,
-                1102
-              ]
-=======
               "children": [1108, 1109, 1110, 1107]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -24659,15 +22756,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1093,
-                1094,
-                1092
-              ]
-=======
               "children": [1098, 1099, 1097]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -24897,17 +22986,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1116,
-                1117,
-                1118,
-                1119,
-                1120
-              ]
-=======
               "children": [1121, 1122, 1123, 1124, 1125]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -24994,14 +23073,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1112,
-                    1113
-                  ]
-=======
                   "children": [1117, 1118]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -25174,15 +23246,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1098,
-                1099,
-                1097
-              ]
-=======
               "children": [1103, 1104, 1102]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -25327,16 +23391,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1087,
-                1089,
-                1088,
-                1086
-              ]
-=======
               "children": [1092, 1094, 1093, 1091]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -25492,7 +23547,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a BA auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a BA auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by BA Auth."
+                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Supabase auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -25697,9 +23752,7 @@
                     "text": "Set to \"true\" if there is a custom authorization header set globally."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -25798,9 +23851,7 @@
                     "text": "Provide your own locking mechanism based on the environment. By default no locking is done at this time."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -26052,9 +24103,7 @@
                     "text": " to fetch a user object in those scenarios."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -26076,24 +24125,7 @@
             {
               "title": "Properties",
               "children": [
-<<<<<<< HEAD
-                739,
-                745,
-                731,
-                743,
-                744,
-                751,
-                726,
-                750,
-                740,
-                741,
-                730,
-                752,
-                725,
-                742
-=======
                 741, 747, 733, 745, 746, 753, 728, 752, 755, 742, 743, 732, 754, 727, 744
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
               ]
             }
           ],
@@ -26165,13 +24197,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1311
-              ]
-=======
               "children": [1316]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -26282,15 +24308,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1335,
-                1336,
-                1337
-              ]
-=======
               "children": [1340, 1341, 1342]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -26325,9 +24343,7 @@
             "text": " async function, such that no other client instances will be able to\nhold it at the same time."
           }
         ],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -27011,13 +25027,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1125
-              ]
-=======
               "children": [1130]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -27286,13 +25296,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1130
-              ]
-=======
               "children": [1135]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -27460,7 +25464,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27593,16 +25597,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1450,
-                1453,
-                1451,
-                1452
-              ]
-=======
               "children": [1455, 1458, 1456, 1457]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -27626,7 +25621,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27848,14 +25843,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        1462,
-                        1461
-                      ]
-=======
                       "children": [1467, 1466]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -27873,17 +25861,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1456,
-                1458,
-                1457,
-                1463,
-                1459
-              ]
-=======
               "children": [1461, 1463, 1462, 1468, 1464]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -27907,7 +25885,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28336,24 +26314,7 @@
             {
               "title": "Properties",
               "children": [
-<<<<<<< HEAD
-                1383,
-                1384,
-                1385,
-                1386,
-                1389,
-                1395,
-                1392,
-                1390,
-                1391,
-                1388,
-                1393,
-                1394,
-                1387,
-                1396
-=======
                 1388, 1389, 1390, 1391, 1394, 1400, 1397, 1395, 1396, 1393, 1398, 1399, 1392, 1401
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
               ]
             }
           ],
@@ -28378,7 +26339,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28414,7 +26375,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28511,14 +26472,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                1418,
-                                1417
-                              ]
-=======
                               "children": [1423, 1422]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -28541,118 +26495,6 @@
                   }
                 },
                 {
-<<<<<<< HEAD
-                  "id": 1419,
-                  "name": "error",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 1630,
-                      "character": 6,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1630"
-                    }
-                  ],
-                  "type": {
-                    "type": "literal",
-                    "value": null
-                  }
-                }
-              ],
-              "groups": [
-                {
-                  "title": "Properties",
-                  "children": [
-                    1415,
-                    1419
-                  ]
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 1628,
-                  "character": 4,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1628"
-                }
-              ]
-            }
-          },
-          {
-            "type": "reflection",
-            "declaration": {
-              "id": 1420,
-              "name": "__type",
-              "variant": "declaration",
-              "kind": 65536,
-              "flags": {},
-              "children": [
-                {
-                  "id": 1421,
-                  "name": "data",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 1633,
-                      "character": 6,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1633"
-                    }
-                  ],
-                  "type": {
-                    "type": "reflection",
-                    "declaration": {
-                      "id": 1422,
-                      "name": "__type",
-                      "variant": "declaration",
-                      "kind": 65536,
-                      "flags": {},
-                      "children": [
-                        {
-                          "id": 1423,
-                          "name": "clients",
-                          "variant": "declaration",
-                          "kind": 1024,
-                          "flags": {},
-                          "sources": [
-                            {
-                              "fileName": "packages/core/auth-js/src/lib/types.ts",
-                              "line": 1633,
-                              "character": 14,
-                              "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1633"
-                            }
-                          ],
-                          "type": {
-                            "type": "tuple"
-                          }
-                        }
-                      ],
-                      "groups": [
-                        {
-                          "title": "Properties",
-                          "children": [
-                            1423
-                          ]
-                        }
-                      ],
-                      "sources": [
-                        {
-                          "fileName": "packages/core/auth-js/src/lib/types.ts",
-                          "line": 1633,
-                          "character": 12,
-                          "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L1633"
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                   "id": 1424,
                   "name": "error",
                   "variant": "declaration",
@@ -28781,14 +26623,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1421,
-                    1424
-                  ]
-=======
                   "children": [1426, 1429]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -28814,7 +26649,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28850,7 +26685,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28887,7 +26722,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28914,7 +26749,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -28950,7 +26785,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -29061,15 +26896,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1470,
-                1472,
-                1471
-              ]
-=======
               "children": [1475, 1477, 1476]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -29176,14 +27003,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            807,
-                            808
-                          ]
-=======
                           "children": [810, 811]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -29220,14 +27040,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    805,
-                    809
-                  ]
-=======
                   "children": [808, 812]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -29316,14 +27129,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            813,
-                            814
-                          ]
-=======
                           "children": [816, 817]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -29362,14 +27168,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    811,
-                    815
-                  ]
-=======
                   "children": [814, 818]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -29470,14 +27269,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1322,
-                1323
-              ]
-=======
               "children": [1327, 1328]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -29584,15 +27376,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1316,
-                1315,
-                1317
-              ]
-=======
               "children": [1321, 1320, 1322]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -29947,79 +27731,6 @@
           {
             "type": "reflection",
             "declaration": {
-<<<<<<< HEAD
-              "id": 764,
-              "name": "__type",
-              "variant": "declaration",
-              "kind": 65536,
-              "flags": {},
-              "children": [
-                {
-                  "id": 765,
-                  "name": "data",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 162,
-                      "character": 6,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L162"
-                    }
-                  ],
-                  "type": {
-                    "type": "reference",
-                    "target": 770,
-                    "name": "T",
-                    "package": "@supabase/auth-js",
-                    "refersToTypeParameter": true
-                  }
-                },
-                {
-                  "id": 766,
-                  "name": "error",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 163,
-                      "character": 6,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L163"
-                    }
-                  ],
-                  "type": {
-                    "type": "literal",
-                    "value": null
-                  }
-                }
-              ],
-              "groups": [
-                {
-                  "title": "Properties",
-                  "children": [
-                    765,
-                    766
-                  ]
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 161,
-                  "character": 4,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L161"
-                }
-              ]
-            }
-          },
-          {
-            "type": "reflection",
-            "declaration": {
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
               "id": 767,
               "name": "__type",
               "variant": "declaration",
@@ -30162,14 +27873,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    768,
-                    769
-                  ]
-=======
                   "children": [771, 772]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -30227,79 +27931,6 @@
           {
             "type": "reflection",
             "declaration": {
-<<<<<<< HEAD
-              "id": 773,
-              "name": "__type",
-              "variant": "declaration",
-              "kind": 65536,
-              "flags": {},
-              "children": [
-                {
-                  "id": 774,
-                  "name": "data",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 175,
-                      "character": 6,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L175"
-                    }
-                  ],
-                  "type": {
-                    "type": "reference",
-                    "target": 779,
-                    "name": "T",
-                    "package": "@supabase/auth-js",
-                    "refersToTypeParameter": true
-                  }
-                },
-                {
-                  "id": 775,
-                  "name": "error",
-                  "variant": "declaration",
-                  "kind": 1024,
-                  "flags": {},
-                  "sources": [
-                    {
-                      "fileName": "packages/core/auth-js/src/lib/types.ts",
-                      "line": 175,
-                      "character": 15,
-                      "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L175"
-                    }
-                  ],
-                  "type": {
-                    "type": "literal",
-                    "value": null
-                  }
-                }
-              ],
-              "groups": [
-                {
-                  "title": "Properties",
-                  "children": [
-                    774,
-                    775
-                  ]
-                }
-              ],
-              "sources": [
-                {
-                  "fileName": "packages/core/auth-js/src/lib/types.ts",
-                  "line": 175,
-                  "character": 4,
-                  "url": "https://github.com/supabase/supabase-js/blob/6c9bbdf67ec47516c34ebe224538b440bdb0ef90/packages/core/auth-js/src/lib/types.ts#L175"
-                }
-              ]
-            }
-          },
-          {
-            "type": "reflection",
-            "declaration": {
-=======
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
               "id": 776,
               "name": "__type",
               "variant": "declaration",
@@ -30450,14 +28081,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    777,
-                    778
-                  ]
-=======
                   "children": [780, 781]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -30666,20 +28290,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1346,
-                1342,
-                1343,
-                1344,
-                1340,
-                1345,
-                1347,
-                1341
-              ]
-=======
               "children": [1351, 1347, 1348, 1349, 1345, 1350, 1352, 1346]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -30832,14 +28443,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1062,
-                            1061
-                          ]
-=======
                           "children": [1067, 1066]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -30902,15 +28506,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1058,
-                    1059,
-                    1057
-                  ]
-=======
                   "children": [1063, 1064, 1062]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -30990,13 +28586,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1068
-                          ]
-=======
                           "children": [1073]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -31078,15 +28668,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1066,
-                    1065,
-                    1064
-                  ]
-=======
                   "children": [1071, 1070, 1069]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -31228,14 +28810,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        927,
-                        926
-                      ]
-=======
                       "children": [932, 931]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -31253,13 +28828,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                924
-              ]
-=======
               "children": [929]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -31428,13 +28997,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        980
-                      ]
-=======
                       "children": [985]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -31642,17 +29205,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                976,
-                977,
-                978,
-                973,
-                975
-              ]
-=======
               "children": [981, 982, 983, 978, 980]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -31882,16 +29435,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        966,
-                        964,
-                        965,
-                        970
-                      ]
-=======
                       "children": [971, 969, 970, 975]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -31938,14 +29482,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                962,
-                961
-              ]
-=======
               "children": [967, 966]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -32044,13 +29581,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            940
-                          ]
-=======
                           "children": [945]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -32068,13 +29599,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    938
-                  ]
-=======
                   "children": [943]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -32304,16 +29829,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            949,
-                            948,
-                            946,
-                            947
-                          ]
-=======
                           "children": [954, 953, 951, 952]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -32331,14 +29847,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    943,
-                    944
-                  ]
-=======
                   "children": [948, 949]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -32530,16 +30039,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            956,
-                            957,
-                            955,
-                            954
-                          ]
-=======
                           "children": [961, 962, 960, 959]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -32584,14 +30084,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    952,
-                    951
-                  ]
-=======
                   "children": [957, 956]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -32749,15 +30242,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1075,
-                            1074,
-                            1076
-                          ]
-=======
                           "children": [1080, 1079, 1081]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -32802,14 +30287,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1072,
-                    1071
-                  ]
-=======
                   "children": [1077, 1076]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -32974,15 +30452,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1082,
-                            1081,
-                            1083
-                          ]
-=======
                           "children": [1087, 1086, 1088]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -33000,14 +30470,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1078,
-                    1079
-                  ]
-=======
                   "children": [1083, 1084]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -33092,13 +30555,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1326
-              ]
-=======
               "children": [1331]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -33304,16 +30761,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-<<<<<<< HEAD
-                              "children": [
-                                934,
-                                935,
-                                933,
-                                932
-                              ]
-=======
                               "children": [939, 940, 938, 937]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                             }
                           ],
                           "sources": [
@@ -33331,13 +30779,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-<<<<<<< HEAD
-                      "children": [
-                        930
-                      ]
-=======
                       "children": [935]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                     }
                   ],
                   "sources": [
@@ -33458,13 +30900,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            989
-                          ]
-=======
                           "children": [994]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -33705,15 +31141,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                987,
-                983,
-                992
-              ]
-=======
               "children": [992, 988, 997]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -33932,15 +31360,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1005,
-                            1006,
-                            1004
-                          ]
-=======
                           "children": [1010, 1011, 1009]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -34026,16 +31446,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    999,
-                    1002,
-                    1001,
-                    1000
-                  ]
-=======
                   "children": [1004, 1007, 1006, 1005]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -34185,13 +31596,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-<<<<<<< HEAD
-                          "children": [
-                            1013
-                          ]
-=======
                           "children": [1018]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                         }
                       ],
                       "sources": [
@@ -34241,16 +31646,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1008,
-                    1009,
-                    1011,
-                    1010
-                  ]
-=======
                   "children": [1013, 1014, 1016, 1015]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -34332,13 +31728,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    818
-                  ]
-=======
                   "children": [821]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -34546,13 +31936,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    1308
-                  ]
-=======
                   "children": [1313]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -34578,7 +31962,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -34756,17 +32140,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                1407,
-                1408,
-                1411,
-                1409,
-                1410
-              ]
-=======
               "children": [1412, 1413, 1416, 1414, 1415]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -34832,13 +32206,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
-                  "children": [
-                    821
-                  ]
-=======
                   "children": [824]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
                 }
               ],
               "sources": [
@@ -34964,14 +32332,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                757,
-                756
-              ]
-=======
               "children": [760, 759]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -35116,9 +32477,7 @@
       },
       "comment": {
         "summary": [],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -35145,9 +32504,7 @@
               "flags": {},
               "comment": {
                 "summary": [],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -35167,13 +32524,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
-              "children": [
-                702
-              ]
-=======
               "children": [704]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
             }
           ],
           "sources": [
@@ -36063,170 +33414,19 @@
     {
       "title": "Classes",
       "children": [
-<<<<<<< HEAD
-        1530,
-        1520,
-        1587,
-        1578,
-        1671,
-        1570,
-        1641,
-        1614,
-        1649,
-        1562,
-        1540,
-        1659,
-        1550,
-        1,
-        107,
-        695
-=======
         1535, 1525, 1592, 1583, 1676, 1575, 1646, 1619, 1654, 1567, 1545, 1664, 1555, 1, 107, 697
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
       ]
     },
     {
       "title": "Interfaces",
       "children": [
-<<<<<<< HEAD
-        899,
-        833,
-        1476,
-        1106,
-        1299,
-        1425,
-        1169,
-        1368,
-        1348,
-        822,
-        912,
-        867,
-        859,
-        893,
-        836,
-        864,
-        1042,
-        1034,
-        1050
-=======
         904, 836, 1481, 1111, 1304, 1430, 1174, 1373, 1353, 825, 917, 871, 863, 898, 839, 868, 1047,
         1039, 1055
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
       ]
     },
     {
       "title": "Type Aliases",
       "children": [
-<<<<<<< HEAD
-        831,
-        713,
-        712,
-        1163,
-        958,
-        1289,
-        1286,
-        1296,
-        1293,
-        1154,
-        1158,
-        1153,
-        1155,
-        1156,
-        1157,
-        1331,
-        1149,
-        1330,
-        1332,
-        1164,
-        1159,
-        1150,
-        1148,
-        1141,
-        1464,
-        1465,
-        1473,
-        1474,
-        789,
-        780,
-        784,
-        794,
-        798,
-        1312,
-        1397,
-        1054,
-        1014,
-        1015,
-        849,
-        848,
-        1100,
-        1090,
-        1109,
-        1114,
-        1110,
-        1121,
-        1095,
-        1084,
-        723,
-        1309,
-        1333,
-        714,
-        1140,
-        1139,
-        1137,
-        1136,
-        1138,
-        1122,
-        1328,
-        1327,
-        1329,
-        1135,
-        1123,
-        1134,
-        1127,
-        1126,
-        1128,
-        1132,
-        1053,
-        1448,
-        1454,
-        1381,
-        1377,
-        1413,
-        1380,
-        1412,
-        1378,
-        1379,
-        1468,
-        803,
-        1320,
-        1313,
-        758,
-        711,
-        763,
-        772,
-        1338,
-        1055,
-        922,
-        971,
-        959,
-        936,
-        941,
-        1069,
-        1324,
-        1376,
-        928,
-        981,
-        997,
-        816,
-        760,
-        1306,
-        1405,
-        819,
-        1033,
-        754,
-        753,
-        1032
-=======
         834, 715, 714, 1168, 963, 1294, 1291, 1301, 1298, 1159, 1163, 1158, 1160, 1161, 1162, 1336,
         1154, 1335, 1337, 1169, 1164, 1155, 1153, 1146, 1469, 1470, 1478, 1479, 792, 783, 787, 797,
         801, 1317, 1402, 1059, 1019, 1020, 852, 851, 1105, 1095, 1114, 1119, 1115, 1126, 1100, 1089,
@@ -36234,46 +33434,22 @@
         1139, 1132, 1131, 1133, 1137, 1058, 1453, 1459, 1386, 1382, 1418, 1385, 1417, 1383, 1384,
         1473, 806, 1325, 1318, 761, 713, 766, 775, 1343, 1060, 927, 976, 964, 941, 946, 1074, 1329,
         1381, 933, 986, 1002, 819, 763, 1311, 1410, 822, 1038, 757, 756, 1037
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
       ]
     },
     {
       "title": "Variables",
-<<<<<<< HEAD
-      "children": [
-        685,
-        686,
-        700,
-        1375
-      ]
-    },
-    {
-      "title": "Functions",
-      "children": [
-        1502,
-        1499,
-        1508,
-        1511,
-        1514,
-        1505,
-        1517,
-        687,
-        703
-      ]
-=======
       "children": [687, 688, 702, 1380]
     },
     {
       "title": "Functions",
       "children": [1507, 1504, 1513, 1516, 1519, 1510, 1522, 689, 705]
->>>>>>> 69c9104702 (docs: update js client libraries (2.90.0) (#41764))
     }
   ],
   "packageName": "@supabase/auth-js",
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA Auth JS SDK</h1>\n\n  <h3 align=\"center\">An isomorphic JavaScript SDK for the <a href=\"https://github.com/supabase/auth\">BA Auth</a> API.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/auth\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/auth-signup\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/auth-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/auth-js)](https://www.npmjs.com/package/@supabase/auth-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/auth-js)](https://pkg.pr.new/~/supabase/auth-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick start\n\nInstall\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase Auth JS SDK</h1>\n\n  <h3 align=\"center\">An isomorphic JavaScript SDK for the <a href=\"https://github.com/supabase/auth\">Supabase Auth</a> API.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/auth\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/auth-signup\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/auth-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/auth-js)](https://www.npmjs.com/package/@supabase/auth-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/auth-js)](https://pkg.pr.new/~/supabase/auth-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick start\n\nInstall\n\n"
     },
     {
       "kind": "code",
@@ -36361,7 +33537,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Development\n\nThis package is part of the [BA JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
+      "text": "\n\n## Development\n\nThis package is part of the [Supabase JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
     },
     {
       "kind": "code",
@@ -36393,7 +33569,7 @@
     },
     {
       "kind": "text",
-      "text": ")** - Type definitions for TypeScript projects\n\n### Testing\n\n**Docker Required!** The auth-js tests require a local BA Auth server (GoTrue) running in Docker.\n\n"
+      "text": ")** - Type definitions for TypeScript projects\n\n### Testing\n\n**Docker Required!** The auth-js tests require a local Supabase Auth server (GoTrue) running in Docker.\n\n"
     },
     {
       "kind": "code",
@@ -36401,7 +33577,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\nThis command automatically:\n\n1. Stops any existing test containers\n2. Starts a BA Auth server (GoTrue) and PostgreSQL database in Docker\n3. Waits for services to be ready (30 seconds)\n4. Runs the test suite\n5. Cleans up Docker containers after tests complete\n\n#### Individual Test Commands\n\n"
+      "text": "\n\nThis command automatically:\n\n1. Stops any existing test containers\n2. Starts a Supabase Auth server (GoTrue) and PostgreSQL database in Docker\n3. Waits for services to be ready (30 seconds)\n4. Runs the test suite\n5. Cleans up Docker containers after tests complete\n\n#### Individual Test Commands\n\n"
     },
     {
       "kind": "code",
@@ -36417,7 +33593,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n#### Test Infrastructure\n\nThe Docker setup includes:\n\n- **BA Auth (GoTrue)** - The authentication server\n- **PostgreSQL** - Database for auth data\n- Pre-configured with test users and settings\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- Ports used by test infrastructure (check "
+      "text": "\n\n#### Test Infrastructure\n\nThe Docker setup includes:\n\n- **Supabase Auth (GoTrue)** - The authentication server\n- **PostgreSQL** - Database for auth data\n- Pre-configured with test users and settings\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- Ports used by test infrastructure (check "
     },
     {
       "kind": "code",
@@ -36425,7 +33601,7 @@
     },
     {
       "kind": "text",
-      "text": ")\n- No full BA instance needed - just the Auth server\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
+      "text": ")\n- No full Supabase instance needed - just the Auth server\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
     },
     {
       "kind": "relative-link",

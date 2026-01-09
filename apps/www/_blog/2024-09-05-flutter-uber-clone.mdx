@@ -1,6 +1,6 @@
 ---
-title: 'Building an Uber Clone with Flutter and BA'
-description: 'Learn how to handle real-time geospatial data using BA Realtime and Flutter.'
+title: 'Building an Uber Clone with Flutter and Supabase'
+description: 'Learn how to handle real-time geospatial data using Supabase Realtime and Flutter.'
 author: tyler_shukert
 image: flutter-uber-clone/flutter-uber-clone-thumb.png
 thumb: flutter-uber-clone/flutter-uber-clone-thumb.png
@@ -21,15 +21,15 @@ toc_depth: 3
 
 </Admonition>
 
-Postgres can handle geography data efficiently thanks to the PostGIS extension. Combining it with BA realtime and you can create a real-time location tracking app.
+Postgres can handle geography data efficiently thanks to the PostGIS extension. Combining it with Supabase realtime and you can create a real-time location tracking app.
 
-In this tutorial, we will guide you through the process of creating an Uber-like application using Flutter and BA. This project demonstrates the capabilities of BA for building complex, real-time applications with minimal backend code.
+In this tutorial, we will guide you through the process of creating an Uber-like application using Flutter and Supabase. This project demonstrates the capabilities of Supabase for building complex, real-time applications with minimal backend code.
 
 ## App Overview
 
 An actual Uber app has two apps, the consumer facing app and the driver facing app. This article only covers the consumer facing app. The app works by first choosing a destination, and then waiting for the driver to come pick them up. Once they are picked up, they head to the destination and the journey is complete once they arrive at the destination. Throughout the lifecycle of the app, the driver’s position is shared on screen in real-time.
 
-The focus of the app is to showcase how to use BA realtime with geographical data, so handling payments will not be covered in this article.
+The focus of the app is to showcase how to use Supabase realtime with geographical data, so handling payments will not be covered in this article.
 
 <video width="99%" loop muted playsInline controls={true}>
   <source
@@ -43,7 +43,7 @@ The focus of the app is to showcase how to use BA realtime with geographical dat
 Before beginning, ensure you have:
 
 1. Flutter installed
-2. A BA account - head to [database.new](http://database.new) if you don’t have one yet.
+2. A Supabase account - head to [database.new](http://database.new) if you don’t have one yet.
 3. Basic knowledge of Dart and Flutter
 
 ## Step 1: Project Setup
@@ -70,25 +70,25 @@ In addition to adding it to `pubspec.yaml` file, `google_maps_flutter` requires 
 
 Run `flutter pub get` to install these dependencies.
 
-## Step 2: BA Initialization
+## Step 2: Supabase Initialization
 
-In your `main.dart` file, initialize BA with the following code:
+In your `main.dart` file, initialize Supabase with the following code:
 
 ```dart
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  await BA.initialize(
+  await Supabase.initialize(
     url: 'YOUR_SUPABASE_URL',
     anonKey: 'YOUR_SUPABASE_ANON_KEY',
   );
   runApp(const MainApp());
 }
 
-final supabase = BA.instance.client;
+final supabase = Supabase.instance.client;
 ```
 
-Replace `YOUR_SUPABASE_URL` and `YOUR_SUPABASE_ANON_KEY` with your actual BA project credentials.
+Replace `YOUR_SUPABASE_URL` and `YOUR_SUPABASE_ANON_KEY` with your actual Supabase project credentials.
 
 ## Step 3: Database Configuration
 
@@ -278,7 +278,7 @@ Create a `UberCloneMainScreen` widget to serve as the main interface for the app
 4. In-ride - The customer has got on the car, and they are headed to the destination
 5. Post-ride - The customer has arrived at the destination, and a thank you modal is displayed
 
-For statuses 3, 4, and 5, the status update happens on the driver’s app, which we don’t have. So you can directly modify the data from the BA dashboard and update the status of the ride.
+For statuses 3, 4, and 5, the status update happens on the driver’s app, which we don’t have. So you can directly modify the data from the Supabase dashboard and update the status of the ride.
 
 ```dart
 class UberCloneMainScreen extends StatefulWidget {
@@ -440,7 +440,7 @@ The code above still has many missing methods, so do not worry if you see many e
 
 ## Step 6: Location Selection Implementation
 
-The way the customer chooses the destination is by scrolling through the map and tapping on the confirmation FAB. Once the FAB is pressed, the `_confirmLocation` method is called, which calls a BA Edge Function called `route`. This `route` function returns a list of coordinates to create a polyline to get from the current location to the destination. We then draw the polyline on the Google Maps to provide to simulate an Uber-like user experience.
+The way the customer chooses the destination is by scrolling through the map and tapping on the confirmation FAB. Once the FAB is pressed, the `_confirmLocation` method is called, which calls a Supabase Edge Function called `route`. This `route` function returns a list of coordinates to create a polyline to get from the current location to the destination. We then draw the polyline on the Google Maps to provide to simulate an Uber-like user experience.
 
 ```dart
 Future<void> _confirmLocation() async {
@@ -523,7 +523,7 @@ Let’s also create the `route` edge functions. This function calls the [routes 
 Run the following commands to create the edge functions.
 
 ```bash
-# initialize BA
+# initialize Supabase
 npx supabase init
 
 # Create a new function named route
@@ -579,7 +579,7 @@ Deno.serve(async (req) => {
 })
 ```
 
-Once the function is ready, you can [run it locally](https://www.assistance.bg/docs/guides/functions/quickstart) or [deploy it to a remote BA instance](https://www.assistance.bg/docs/guides/functions/deploy).
+Once the function is ready, you can [run it locally](https://www.assistance.bg/docs/guides/functions/quickstart) or [deploy it to a remote Supabase instance](https://www.assistance.bg/docs/guides/functions/deploy).
 
 ## Step 7: Driver Assignment
 
@@ -768,14 +768,14 @@ You can also find the complete code [here](https://github.com/dshukertjr/uber-cl
 
 ## Conclusion
 
-This tutorial has walked you through the process of building a basic Uber clone using Flutter and BA. The application demonstrates how easy it is to handle real-time geospatial data using BA and Flutter.
+This tutorial has walked you through the process of building a basic Uber clone using Flutter and Supabase. The application demonstrates how easy it is to handle real-time geospatial data using Supabase and Flutter.
 
 This implementation serves as a foundation that can be expanded upon. Additional features such as processing payments, ride history, and driver ratings can be incorporated to enhance the application's functionality.
 
-Want to learn more about Maps and PostGIS? Make sure to follow our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@BA) channels to not miss out! See you then!
+Want to learn more about Maps and PostGIS? Make sure to follow our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@Supabase) channels to not miss out! See you then!
 
-## More BA Resources
+## More Supabase Resources
 
 - [Flutter Tutorial: building a Flutter chat app](https://www.assistance.bg/blog/flutter-tutorial-building-a-chat-app)
 - [Generate Flame template using Very Good CLI](https://verygood.ventures/blog/generate-a-game-with-our-new-template)
-- [BA Flutter SDK docs](https://www.assistance.bg/docs/reference/dart/start)
+- [Supabase Flutter SDK docs](https://www.assistance.bg/docs/reference/dart/start)

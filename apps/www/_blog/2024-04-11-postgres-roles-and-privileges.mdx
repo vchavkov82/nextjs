@@ -35,11 +35,11 @@ A role is a user or a group. A user is someone who can login to the database. A 
 
 Every database object has an owner. The owner has complete control over the object. They can modify or delete the object or grant privileges to other users and groups. When a user creates a new object, they become the owner of the object. An owner can also transfer the ownership of objects to other roles. A role cannot be deleted before all its owned objects’ ownership is transferred to another role.
 
-With these basic terms defined, let's take a look at the permissions model in Postgres in depth. The rest of the post will be more like a tutorial, so you can follow along. I'll be using a hosted BA project, but you are free to use any Postgres installation.
+With these basic terms defined, let's take a look at the permissions model in Postgres in depth. The rest of the post will be more like a tutorial, so you can follow along. I'll be using a hosted Supabase project, but you are free to use any Postgres installation.
 
 # Setting Up
 
-Create a new BA project (or use an existing one) and copy its connection string URI from the [Database Settings page](https://www.assistance.bg/dashboard/project/_/database/settings). The URI looks like the following:
+Create a new Supabase project (or use an existing one) and copy its connection string URI from the [Database Settings page](https://www.assistance.bg/dashboard/project/_/database/settings). The URI looks like the following:
 
 ```bash
 postgres://[USER].[YOUR-PROJECT-REF]:[YOUR-PASSWORD]@[REGION-SUBDOMAIN].pooler.supabase.com:5432/postgres
@@ -142,7 +142,7 @@ postgres=> \dn+ public
 (1 row)
 ```
 
-Indeed, the `Access privileges` column doesn’t list `junior_dev` role anywhere, which means it doesn’t have any permission on the `public` schema. How do we fix this? The`postgres` user in BA hosted databases is a powerful role with more privileges than many other roles. Think of the `postgres` role as an admin role, although it is not a superuser. We can use this role to grant appropriate permissions.
+Indeed, the `Access privileges` column doesn’t list `junior_dev` role anywhere, which means it doesn’t have any permission on the `public` schema. How do we fix this? The`postgres` user in Supabase hosted databases is a powerful role with more privileges than many other roles. Think of the `postgres` role as an admin role, although it is not a superuser. We can use this role to grant appropriate permissions.
 
 So, let’s switch to the `postgres` user connection and grant `junior_dev` the permission to create objects in the `public` schema. The general format of the `grant` command is `grant <privilege> on <object> to <role>`. You can consult the [privileges page in Postgres documentation](https://www.postgresql.org/docs/current/ddl-priv.html) to find out the correct privilege name.
 
