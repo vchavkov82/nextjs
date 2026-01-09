@@ -133,17 +133,10 @@ export const HomePageContent = ({ products, postgresIntegrations, selfHostingOpt
         <div className="flex flex-col lg:grid grid-cols-12 gap-6 py-12 border-b">
           <div className="col-span-4 flex flex-col gap-1 [&_h2]:m-0">
             <h2 id="migrate-to-supabase" className="group scroll-mt-24">
-<<<<<<< HEAD
               Migrate to BA
             </h2>
             <p className="text-foreground-light text-sm p-0 m-0">
               Bring your existing data, auth and storage to BA following our migration guides.
-=======
-              Migrate to Supabase
-            </h2>
-            <p className="text-foreground-light text-sm p-0 m-0">
-              Bring your existing data, auth and storage to Supabase following our migration guides.
->>>>>>> b333ef10b8 (clean up docs errors)
             </p>
             <TextLink
               label="Explore more resources"
@@ -158,19 +151,11 @@ export const HomePageContent = ({ products, postgresIntegrations, selfHostingOpt
                 return (
                   <li key={guide.name} className="col-span-6 md:col-span-4">
                     <Link href={guide.url || '#'} passHref>
-<<<<<<< HEAD
                       <GlassPanelWithIconPicker
                         {...(guide as any)}
                         title={guide.name || ''}
                         background={true}
                         showLink={false}
-=======
-                      <GlassPanelWithIconPicker 
-                        {...(guide as any)} 
-                        title={guide.name || ''} 
-                        background={true} 
-                        showLink={false} 
->>>>>>> b333ef10b8 (clean up docs errors)
                       />
                     </Link>
                   </li>
@@ -220,11 +205,7 @@ export const HomePageContent = ({ products, postgresIntegrations, selfHostingOpt
                 </h3>
               </div>
               <p className="text-foreground-light text-sm">
-<<<<<<< HEAD
                 Get started with self-hosting BA.
-=======
-                Get started with self-hosting Supabase.
->>>>>>> b333ef10b8 (clean up docs errors)
               </p>
               <TextLink
                 label="More on Self-Hosting"

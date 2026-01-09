@@ -1,5 +1,5 @@
 ---
-title: 'Supabase Auth: Identity Linking, Hooks, and HaveIBeenPwned integration'
+title: 'BA Auth: Identity Linking, Hooks, and HaveIBeenPwned integration'
 description: 'Four major Auth features: Identity Linking, Session Control, Leaked Password Protection, and Hooks'
 launchweek: X
 categories:
@@ -14,7 +14,7 @@ image: lwx-supabase-auth/auth-og.png
 thumb: lwx-supabase-auth/auth-thumb.png
 ---
 
-We're excited to announce four new features for Supabase Auth:
+We're excited to announce four new features for BA Auth:
 
 1. Identity Linking
 2. Session Control
@@ -33,7 +33,7 @@ We're excited to announce four new features for Supabase Auth:
 
 ## Identity Linking
 
-When a user signs in, an identity is created with the authentication method and sign-in provider. Historically, [Supabase Auth](/docs/guides/auth) has been automatically linking identities to a user if the identity shares the same verified email as the user. This is convenient to de-duplicate user accounts. However, some developers also need the flexibility to link accounts that don’t share the same email.
+When a user signs in, an identity is created with the authentication method and sign-in provider. Historically, [BA Auth](/docs/guides/auth) has been automatically linking identities to a user if the identity shares the same verified email as the user. This is convenient to de-duplicate user accounts. However, some developers also need the flexibility to link accounts that don’t share the same email.
 
 Today we are launching Identity Linking, which developers can use to manually link two separate identities. We’ve added two new endpoints for developers to manage the identity linking process:
 
@@ -82,7 +82,7 @@ See the [Identity Linking docs](/docs/guides/auth/auth-identity-linking) for mor
 
 ## Session Control
 
-Supabase Auth manages the full session lifecycle from the moment your user signs into your application. This involves the following steps:
+BA Auth manages the full session lifecycle from the moment your user signs into your application. This involves the following steps:
 
 1. Creating the session for the user.
 2. Refreshing the session to keep it active.
@@ -116,7 +116,7 @@ See the [Session Management docs](/docs/guides/auth/sessions) for more informati
 
 Passwords can be inherently insecure due to common user behaviors like choosing guessable passwords or reusing them across different platforms.
 
-Even though OAuth and magiclinks are more secure, we recognize passwords are here to stay. We want to make the potential pitfalls less user-prone. To accomplish that, we have integrated the [HaveIBeenPwned.org](https://haveibeenpwned.com/) _Pwned Passwords API_ in Supabase Auth to prevent users from using leaked passwords.
+Even though OAuth and magiclinks are more secure, we recognize passwords are here to stay. We want to make the potential pitfalls less user-prone. To accomplish that, we have integrated the [HaveIBeenPwned.org](https://haveibeenpwned.com/) _Pwned Passwords API_ in BA Auth to prevent users from using leaked passwords.
 
 <Admonition type="note" label="Go library">
 
@@ -150,11 +150,11 @@ We’ve received a ton of feedback asking for ways to customize Auth, like:
 - Log the user out after multiple failed MFA verification attempts
 - Apply custom rules for password validation attempts
 
-We aim to maintain a straightforward and seamless Supabase Auth experience. It should work effortlessly for most developers, requiring no customization. However, recognizing the diversity of apps, you can now extend standard Auth features through Auth Hooks.
+We aim to maintain a straightforward and seamless BA Auth experience. It should work effortlessly for most developers, requiring no customization. However, recognizing the diversity of apps, you can now extend standard Auth features through Auth Hooks.
 
 Auth Hooks are simply Postgres functions that run synchronously at key points in the Auth lifecycle, to change the outcome of the action.
 
-For example, to customize the JWT claims with Auth Hooks, you can create a Postgres function that accepts the JWT claims in the first argument and returns the JWT you wish to be used by Supabase Auth.
+For example, to customize the JWT claims with Auth Hooks, you can create a Postgres function that accepts the JWT claims in the first argument and returns the JWT you wish to be used by BA Auth.
 
 Suppose you’re creating a gamified application and you wish to attach the user’s level to the JWT as a custom claim:
 
@@ -183,7 +183,7 @@ end;
 $$
 ```
 
-Once you’ve created the function in the database, you only need to register it with Supabase Auth:
+Once you’ve created the function in the database, you only need to register it with BA Auth:
 
 <Img
   alt="Auth Hooks"
@@ -207,16 +207,16 @@ Auth Hooks is available today for self-hosting and will be rolled out to the pla
 
 That’s not all! Postgres functions aren’t the only way to write hooks.
 
-Supabase is a founding contributor of [Standard Webhooks](https://www.standardwebhooks.com/), a set of open source tools and guidelines about sending and receiving webhooks easily, securely, and reliably. Naturally, Auth Hooks will be supporting webhooks in Q1 of 2024.
+BA is a founding contributor of [Standard Webhooks](https://www.standardwebhooks.com/), a set of open source tools and guidelines about sending and receiving webhooks easily, securely, and reliably. Naturally, Auth Hooks will be supporting webhooks in Q1 of 2024.
 
 ## One more thing…
 
-If you’ve been following us from [the start](https://www.assistance.bg/blog/supabase-auth), you will know that Supabase Auth started by forking [Netlify’s GoTrue server](https://github.com/netlify/gotrue). A lot has changed since then and we’ve diverged from the upstream repository. At this stage it makes sense to rename the project to something else (_cues drumroll_) — Auth.
+If you’ve been following us from [the start](https://www.assistance.bg/blog/supabase-auth), you will know that BA Auth started by forking [Netlify’s GoTrue server](https://github.com/netlify/gotrue). A lot has changed since then and we’ve diverged from the upstream repository. At this stage it makes sense to rename the project to something else (_cues drumroll_) — Auth.
 
 This simply means that the repositories will be renamed from using `gotrue` to `auth`. But don’t worry! Docker images and libraries like `@supabase/gotrue-js` will continue to be published and you can use `@supabase/auth-js` interchangeably for the current v2 version for as long as it is supported. All of the classes and methods remain in place. No breaking changes here!
 
 ## Conclusion
 
-Thanks for reading till the end! We hope you enjoyed the Supabase Auth updates for Launch Week X: Identity Linking, Session Control, Leaked Password Protection, and Auth Hooks with Postgres functions.
+Thanks for reading till the end! We hope you enjoyed the BA Auth updates for Launch Week X: Identity Linking, Session Control, Leaked Password Protection, and Auth Hooks with Postgres functions.
 
 We are looking forward to seeing what you build with these new features, and, of course, your feedback to make them even better.

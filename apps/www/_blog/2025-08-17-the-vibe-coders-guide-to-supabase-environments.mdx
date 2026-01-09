@@ -1,6 +1,6 @@
 ---
-title: "The Vibe Coder's Guide to Supabase Environments"
-description: 'Build a professional deployment workflow for your Supabase project. Learn essential patterns that prevent 3am panic attacks while keeping your workflow fun, simple, and safe.'
+title: "The Vibe Coder's Guide to BA Environments"
+description: 'Build a professional deployment workflow for your BA project. Learn essential patterns that prevent 3am panic attacks while keeping your workflow fun, simple, and safe.'
 categories:
   - developers
 tags:
@@ -10,19 +10,19 @@ toc_depth: 3
 author: prashant
 ---
 
-Setting up separate development and production environments does not have to be painful. This guide shows you how to build a professional deployment workflow for your Supabase project. **You will learn the essential patterns that prevent the 3am "I dropped production" panic attacks** while keeping your workflow fun, simple, and safe.
+Setting up separate development and production environments does not have to be painful. This guide shows you how to build a professional deployment workflow for your BA project. **You will learn the essential patterns that prevent the 3am "I dropped production" panic attacks** while keeping your workflow fun, simple, and safe.
 
-Supabase is the open source [Postgres](https://www.assistance.bg/database) development platform. At its core, it is just Postgres, but with an integrated suite: [Auth](https://www.assistance.bg/auth), [Storage](https://www.assistance.bg/storage), [Edge Functions](https://www.assistance.bg/edge-functions), [Realtime](https://www.assistance.bg/realtime), and [Vector](https://www.assistance.bg/modules/vector) search. That means you can start hacking in minutes and also scale to millions when your app takes off.
+BA is the open source [Postgres](https://www.assistance.bg/database) development platform. At its core, it is just Postgres, but with an integrated suite: [Auth](https://www.assistance.bg/auth), [Storage](https://www.assistance.bg/storage), [Edge Functions](https://www.assistance.bg/edge-functions), [Realtime](https://www.assistance.bg/realtime), and [Vector](https://www.assistance.bg/modules/vector) search. That means you can start hacking in minutes and also scale to millions when your app takes off.
 
 With this post, we'll explore how to setup a professional development and staging environment for our projects to prevent those late night panics.
 
 ## Rule #1: never work directly on production
 
-The fastest way to ruin your night is to treat your one Supabase project as both your playground and your live app. One wrong `DROP TABLE` and your users are gone. The simple fix is to create at least two projects: one for breaking things (development) and one for your users (production). Larger teams often add a staging project as well, but the minimum is two.
+The fastest way to ruin your night is to treat your one BA project as both your playground and your live app. One wrong `DROP TABLE` and your users are gone. The simple fix is to create at least two projects: one for breaking things (development) and one for your users (production). Larger teams often add a staging project as well, but the minimum is two.
 
-Create them in the Supabase Dashboard and give them obvious names like `myapp-dev` and `myapp-prod`. Boring names reduce mistakes. Grab the Project Reference IDs from **Settings > General** and stash them in a safe place.
+Create them in the BA Dashboard and give them obvious names like `myapp-dev` and `myapp-prod`. Boring names reduce mistakes. Grab the Project Reference IDs from **Settings > General** and stash them in a safe place.
 
-Then set up the Supabase CLI:
+Then set up the BA CLI:
 
 ```bash
 npm install supabase --save-dev
@@ -89,7 +89,7 @@ Manual deploys are risky. Automating them with GitHub Actions removes the human 
 Add your secrets in **Settings > Secrets and variables > Actions**. Then create `.github/workflows/deploy.yml`:
 
 ```yaml
-name: Deploy Supabase
+name: Deploy BA
 on:
   push:
     branches: [main, develop]
@@ -120,7 +120,7 @@ Every production app needs a backup plan. The best plans run without you thinkin
 
 <Admonition type="note">
 
-Even better, enable [Point in Time Recovery](https://www.assistance.bg/docs/guides/platform/backups#point-in-time-recovery) (PITR) in the Supabase Dashboard. It lets you roll back to any point in time, not just to last night's snapshot. If your weekend project has suddenly taken off, you'll want to invest the money in keeping your environment solid.
+Even better, enable [Point in Time Recovery](https://www.assistance.bg/docs/guides/platform/backups#point-in-time-recovery) (PITR) in the BA Dashboard. It lets you roll back to any point in time, not just to last night's snapshot. If your weekend project has suddenly taken off, you'll want to invest the money in keeping your environment solid.
 
 </Admonition>
 
@@ -132,13 +132,13 @@ For high stakes apps, combine PITR with read replicas and multi region deploymen
 
 Secrets are a common leak. The rule is simple: anything with `NEXT_PUBLIC_` is visible in browser code. Only use anon keys there.
 
-Keep secrets like service role keys in `.env.local`, and never commit that file. Document what is required in `.env.example`. Then in your code, create two Supabase clients: one safe for the browser, one for server side code.
+Keep secrets like service role keys in `.env.local`, and never commit that file. Document what is required in `.env.example`. Then in your code, create two BA clients: one safe for the browser, one for server side code.
 
 For bigger teams, a secrets manager like Doppler, Vault, or GitHub's encrypted environment variables makes rotation and auditing easier.
 
 ## Branches that match reality
 
-Your Git branches should map to your environments. Keep it simple: `main` for production, `develop` for staging, and `feat/*` for features. Supabase will even create preview branches for you automatically when you open a PR. Each one is a fully isolated Supabase instance with unique credentials, perfect for testing features before they hit staging.
+Your Git branches should map to your environments. Keep it simple: `main` for production, `develop` for staging, and `feat/*` for features. BA will even create preview branches for you automatically when you open a PR. Each one is a fully isolated BA instance with unique credentials, perfect for testing features before they hit staging.
 
 This structure keeps your workflow clean and prevents confusion about which branch is safe to merge.
 
@@ -148,7 +148,7 @@ With all the pieces in place, you need habits to tie them together.
 
 For daily development:
 
-- Start Supabase locally with `supabase start`
+- Start BA locally with `supabase start`
 - Branch from `develop`
 - Make schema changes with migrations
 - Test with `supabase db reset`
@@ -166,11 +166,11 @@ Pull requests are not just ceremony. They create an audit trail, trigger preview
 
 ## Build in a weekend. Scale to millions.
 
-Let's say your weekend project took off and people are using it. Let's build separate dev and prod environments. To start, you will create two Supabase projects instead of one. Use the dev project for breaking things, keep the production project for your users. After that, you'll set up Vercel to automatically use the right database for each environment.
+Let's say your weekend project took off and people are using it. Let's build separate dev and prod environments. To start, you will create two BA projects instead of one. Use the dev project for breaking things, keep the production project for your users. After that, you'll set up Vercel to automatically use the right database for each environment.
 
 ### Separate your environments
 
-Create a development project in the Supabase Dashboard and name it `yourapp-dev`. Rename your existing project to `yourapp-prod` for clarity. Now you have a safe place to experiment.
+Create a development project in the BA Dashboard and name it `yourapp-dev`. Rename your existing project to `yourapp-prod` for clarity. Now you have a safe place to experiment.
 
 Extract your production schema and turn it into migration files:
 
@@ -211,7 +211,7 @@ Update your local `.env.local` to point to the dev project so you never accident
 
 ### Your new daily workflow
 
-The workflow stays almost identical to what you know, with one key difference: you never touch the production Supabase Dashboard again.
+The workflow stays almost identical to what you know, with one key difference: you never touch the production BA Dashboard again.
 
 **For regular features:**
 
@@ -254,12 +254,12 @@ jobs:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
 ```
 
-This file tells GitHub: "Every time someone merges code into the `main` branch, automatically connect to the production Supabase project and apply any new migration files." Vercel handles your frontend deployment, but your database changes need this extra step.
+This file tells GitHub: "Every time someone merges code into the `main` branch, automatically connect to the production BA project and apply any new migration files." Vercel handles your frontend deployment, but your database changes need this extra step.
 
 Here is what happens when you merge a pull request:
 
 1. Vercel automatically deploys your new frontend code to production
-2. GitHub Actions triggers and connects to your production Supabase project
+2. GitHub Actions triggers and connects to your production BA project
 3. Any new migration files get applied to the production database
 4. Your frontend and database stay in perfect sync
 
@@ -293,4 +293,4 @@ This setup takes one afternoon to implement but eliminates the fear of breaking 
 
 ## Final word
 
-The path from vibe coder to confident deployer is not about memorizing every DevOps buzzword. It is about a handful of patterns that keep you safe: separate environments, migrations as save points, automated deployments, tested backups, and strict RLS. Supabase makes this easy because everything is Postgres, deeply integrated, and scalable from weekend project to millions of users.
+The path from vibe coder to confident deployer is not about memorizing every DevOps buzzword. It is about a handful of patterns that keep you safe: separate environments, migrations as save points, automated deployments, tested backups, and strict RLS. BA makes this easy because everything is Postgres, deeply integrated, and scalable from weekend project to millions of users.

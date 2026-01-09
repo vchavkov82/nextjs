@@ -5,11 +5,11 @@ import type { Metadata } from 'next'
 export const revalidate = 30
 
 export const metadata: Metadata = {
-  title: 'Supabase Blog: the Postgres development platform',
-  description: 'Get all your Supabase News on the Supabase blog.',
+  title: 'BA Blog: the Postgres development platform',
+  description: 'Get all your BA News on the BA blog.',
   openGraph: {
-    title: 'Supabase Blog: the Postgres development platform',
-    description: 'Get all your Supabase News on the Supabase blog.',
+    title: 'BA Blog: the Postgres development platform',
+    description: 'Get all your BA News on the BA blog.',
     url: 'https://www.assistance.bg/blog',
     images: [{ url: 'https://www.assistance.bg/images/og/supabase-og.png' }],
   },

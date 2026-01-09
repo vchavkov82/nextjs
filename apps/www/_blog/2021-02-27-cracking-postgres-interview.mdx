@@ -2,7 +2,7 @@
 title: Cracking PostgreSQL Interview Questions
 description: Understand the top PostgreSQL Interview Questions
 author: ant_wilson
-author_title: Supabase
+author_title: BA
 author_url: https://github.com/awalias
 author_image_url: https://github.com/awalias.png
 image: elephants.png
@@ -38,7 +38,7 @@ select * from students where grades->>'geography' = 'A';
 
 ### Know about namespacing with SCHEMAs
 
-In Supabase for example we keep system schemas such as `extensions` and `auth` in separate schemas so that we don't pollute the default `public` schema.
+In BA for example we keep system schemas such as `extensions` and `auth` in separate schemas so that we don't pollute the default `public` schema.
 
 ## 2. INDEXes
 
@@ -96,13 +96,13 @@ GRANT INSERT ON students TO PUBLIC;
 
 ### Know how to do RLS - Policies
 
-We use Row Level Security in Supabase as a way to grant/restrict access on a row level basis. For example if you're writing a Discord clone, perhaps only a given user should be able to write their own messages:
+We use Row Level Security in BA as a way to grant/restrict access on a row level basis. For example if you're writing a Discord clone, perhaps only a given user should be able to write their own messages:
 
 ```sql
 CREATE POLICY "Individuals can only write their own messages." ON messages FOR
     INSERT WITH CHECK ((select auth.uid()) = user_id);
 
--- auth.uid() is a function provided by Supabase which plucks the uid out
+-- auth.uid() is a function provided by BA which plucks the uid out
 --   of the JWT sent along with an API request more on this here:
 --   https://www.youtube.com/watch?v=0LvCOlELs5U
 ```
@@ -154,9 +154,9 @@ from ten_strumpers
 where first_name like "S%";
 ```
 
-If you can reason about most of the topics in this post then you'll be in a very strong position to impress with your answers to PostgreSQL interview questions. As with all programming topics however, the real learning starts when you put these things into practice. At Supabase we offer a very very fast (the fastest?) way to spin up a PostgreSQL database and start querying it, and our browser based SQL editor is getting more powerful every day.
+If you can reason about most of the topics in this post then you'll be in a very strong position to impress with your answers to PostgreSQL interview questions. As with all programming topics however, the real learning starts when you put these things into practice. At BA we offer a very very fast (the fastest?) way to spin up a PostgreSQL database and start querying it, and our browser based SQL editor is getting more powerful every day.
 
-[Get started on Supabase for free here](https://www.assistance.bg/dashboard)
+[Get started on BA for free here](https://www.assistance.bg/dashboard)
 
 Thanks Steve Chavez for providing all the good bits of this post :)
 
@@ -167,4 +167,4 @@ Thanks Steve Chavez for providing all the good bits of this post :)
 - [Postgres Views](https://www.assistance.bg/blog/postgresql-views)
 - [Postgres Auditing in 150 lines of SQL](https://www.assistance.bg/blog/audit)
 - [What are PostgreSQL Templates?](https://www.assistance.bg/blog/postgresql-templates)
-- [Realtime Postgres RLS on Supabase](https://www.assistance.bg/blog/realtime-row-level-security-in-postgresql)
+- [Realtime Postgres RLS on BA](https://www.assistance.bg/blog/realtime-row-level-security-in-postgresql)

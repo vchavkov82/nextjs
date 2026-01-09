@@ -7,12 +7,12 @@ const instanceId = Math.random().toString(36).substring(2, 9)
 const appJsCode = `import { useEffect, useState, useRef } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
+// Initialize BA client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -27,12 +27,12 @@ export default function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [activeUsers, setActiveUsers] = useState([]);
   const [animatingEmojis, setAnimatingEmojis] = useState([]);
-  
+
   const userId = useRef(Math.random().toString(36).substring(2, 15));
   const channelRef = useRef(null);
   const containerRef = useRef(null);
-  
-  // Set up Supabase channel
+
+  // Set up BA channel
   useEffect(() => {
     // Generate a random username
     const adjectives = ['Happy', 'Clever', 'Brave', 'Bright', 'Kind'];
@@ -41,7 +41,7 @@ export default function App() {
       nouns[Math.floor(Math.random() * nouns.length)]
     }\${Math.floor(Math.random() * 100)}\`;
     setUsername(randomName);
-    
+
     // Subscribe to channel
     const channel = supabase.channel(CHANNEL, {
       config: {
@@ -50,34 +50,34 @@ export default function App() {
         },
       },
     });
-    
+
     channelRef.current = channel;
-    
+
     // Handle presence for user list
     channel.on('presence', { event: 'sync' }, () => {
       const state = channel.presenceState();
       const users = [];
-      
+
       // Convert presence state to array
       Object.keys(state).forEach(key => {
         const presences = state[key];
         users.push(...presences);
       });
-      
+
       setActiveUsers(users);
     });
-    
+
     // Handle emoji click events
     channel.on('broadcast', { event: 'emoji_click' }, (payload) => {
       const { emoji, position, senderId } = payload.payload;
-      
+
       // Don't animate our own emoji clicks (we already did that)
       if (senderId === userId.current) return;
-      
+
       // Create a new animating emoji
       createAnimatingEmoji(emoji, position);
     });
-    
+
     // Subscribe to channel
     channel.subscribe(async (status) => {
       if (status === 'SUBSCRIBED') {
@@ -87,43 +87,43 @@ export default function App() {
           username: randomName,
           online_at: new Date().getTime()
         });
-        
+
         setIsConnected(true);
       }
     });
-    
+
     return () => {
       channel.unsubscribe();
     };
   }, []);
-  
+
   // Clean up finished animations
   useEffect(() => {
     if (animatingEmojis.length > 0) {
       const timer = setTimeout(() => {
         setAnimatingEmojis(emojis => emojis.filter(e => Date.now() - e.timestamp < 2000));
       }, 2000);
-      
+
       return () => clearTimeout(timer);
     }
   }, [animatingEmojis]);
-  
+
   // Handle emoji click
   const handleEmojiClick = (emoji, event) => {
     if (!isConnected) return;
-    
+
     // Get the position of the clicked emoji relative to the container
     const rect = event.currentTarget.getBoundingClientRect();
     const containerRect = containerRef.current.getBoundingClientRect();
-    
+
     const position = {
       x: rect.left + rect.width / 2 - containerRect.left,
       y: rect.top - containerRect.top
     };
-    
+
     // Create a new animating emoji locally
     createAnimatingEmoji(emoji, position);
-    
+
     // Broadcast the emoji click to other clients
     channelRef.current.send({
       type: 'broadcast',
@@ -135,7 +135,7 @@ export default function App() {
       }
     });
   };
-  
+
   // Create a new animating emoji
   const createAnimatingEmoji = (emoji, position) => {
     const newEmoji = {
@@ -144,17 +144,17 @@ export default function App() {
       position,
       timestamp: Date.now()
     };
-    
+
     setAnimatingEmojis(emojis => [...emojis, newEmoji]);
   };
-  
+
   return (
     <div className="h-screen flex flex-col bg-neutral-800 text-white relative overflow-hidden antialiased" ref={containerRef}>
       {/* Toolbar */}
       <div className="flex flex-wrap gap-2 absolute top-4 right-4">
         {activeUsers.map((user, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-900 text-neutral-300 text-xs"
           >
             <div className="w-1 h-1 rounded-full bg-green-400"></div>
@@ -162,13 +162,13 @@ export default function App() {
           </div>
         ))}
       </div>
-      
+
       {/* Main content */}
       <div className="flex-1 relative overflow-hidden">
         <div className="absolute inset-0">
           {/* Animating emojis */}
           {animatingEmojis.map((emojiObj) => (
-            <div 
+            <div
               key={emojiObj.id}
               className="absolute text-2xl pointer-events-none animate-float-up"
               style={{
@@ -181,7 +181,7 @@ export default function App() {
               {emojiObj.emoji}
             </div>
           ))}
-          
+
           {/* Instructions */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
             <h2 className="font-medium text-neutral-300 mb-2">Click an emoji below to send a reaction!</h2>
@@ -189,12 +189,12 @@ export default function App() {
           </div>
         </div>
       </div>
-      
+
       {/* Emoji picker bar */}
       <div className="flex justify-center items-center p-4 border-t border-neutral-700/50 z-10">
         {EMOJIS.map((emoji) => (
-          <button 
-            key={emoji} 
+          <button
+            key={emoji}
             className="text-2xl flex justify-center items-center w-16 h-16 rounded-full hover:bg-neutral-800 active:scale-90 transition-all duration-200"
             onClick={(e) => handleEmojiClick(emoji, e)}
           >
@@ -229,7 +229,7 @@ const layoutProps: ExampleLayoutProps = {
   files: emojiPickerFiles,
   title: 'Emoji Picker',
   description:
-    "An interactive emoji reaction system that uses Supabase Realtime's broadcast channel to sync emoji reactions across multiple users in real-time.",
+    "An interactive emoji reaction system that uses BA Realtime's broadcast channel to sync emoji reactions across multiple users in real-time.",
 }
 
 export default layoutProps

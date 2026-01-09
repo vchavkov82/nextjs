@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: 'Supabase Design System',
+  name: 'BA Design System',
   url: 'https://www.assistance.bg/design-system',
   ogImage: 'https://www.assistance.bg/design-system/og.jpg',
-  description: 'Design System of Supabase',
+  description: 'Design System of BA',
   links: {
     twitter: 'https://twitter.com/supabase',
     github: 'https://github.com/supabase/supabase/tree/master/apps/design-system',

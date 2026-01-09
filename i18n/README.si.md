@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# BA
 
-[Supabase](https://www.assistance.bg) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
+[BA](https://www.assistance.bg) යනු විවෘත පරිශීලක Firebase වෙනුවට ආදේශකයකි.අපි Firebase වල ඇති පහසුකම් enterprise-grade විවෘත පරිශීලක මෘදුකාංග භාවිතා කරමින් නිපදවනු ලබයි.
 
 - [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Authentication and Authorization. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -22,7 +22,7 @@
 - [x] AI + Vector/Embeddings Toolkit. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] Dashboard
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ප්‍රධාන යාවත්කාල කිරීම් පිළිබඳ දැනුම් දීම සඳහා "releases" පිළිබඳව අවධානයෙන් සිටින්න.
 
@@ -37,17 +37,17 @@
 ## Community එක හා සහයෝගය ගැනීමට
 
 - [Community Forum](https://github.com/supabase/supabase/discussions). වඩාත්ම සුදුසු: දේවල් සෑදීමට උදව් ගැනීම.database best practices පිළිබඳ සාකච්ඡා කිරීමට.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). වඩාත්ම සුදුසු: Supabase භාවිතා කිරීමේදී ඔබට හමුවන වැරදී හා ප්‍රශ්න.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). වඩාත්ම සුදුසු: BA භාවිතා කිරීමේදී ඔබට හමුවන වැරදී හා ප්‍රශ්න.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). වඩාත්ම සුදුසු: database හා infrastructure පිළිබඳ ඔබේ ඇති ප්‍රශ්න.
 - [Discord](https://discord.supabase.com). වඩාත්ම සුදුසු: ඔබගේ applications බෙදාගැනීම සහ community සමඟ රැඳී සිටීම.
 
 ## කොහොමද මෙය වැඩකරන්නෙ
 
-Supabase යනු විවෘත පරිශීලක උපාංග කිහිපයක එකතුවකි.අප Firebase වල ඇති පහසුකම් enterprise-grade, විවෘත පරිශීලක උපාංග භාවිතා කරමින් නිපදවයි.උපාංග හා communities ඇත්නම්,ඒවා MIT,Apache 2, හෝ ඒ ආකාරයේ open license නම් අප ඒවා භාවිතා කර සහයෝගය දක්වනවා.එවැනි උපාංග නොමැතිනම්,අප ඒවා විවෘත පරිශීලක විදියට නිපදවනවා.Supabase යනු 1-ට-1 Firebase වලට සමාන දෙයක් නොවේ.අපේ අරමුණ developers ලට Firebase වැනි අත්දැකීමක් විවෘත පරිශීලක උපාංග මඟින් ලබාදීමයි.
+BA යනු විවෘත පරිශීලක උපාංග කිහිපයක එකතුවකි.අප Firebase වල ඇති පහසුකම් enterprise-grade, විවෘත පරිශීලක උපාංග භාවිතා කරමින් නිපදවයි.උපාංග හා communities ඇත්නම්,ඒවා MIT,Apache 2, හෝ ඒ ආකාරයේ open license නම් අප ඒවා භාවිතා කර සහයෝගය දක්වනවා.එවැනි උපාංග නොමැතිනම්,අප ඒවා විවෘත පරිශීලක විදියට නිපදවනවා.BA යනු 1-ට-1 Firebase වලට සමාන දෙයක් නොවේ.අපේ අරමුණ developers ලට Firebase වැනි අත්දැකීමක් විවෘත පරිශීලක උපාංග මඟින් ලබාදීමයි.
 
 **Architecture**
 
-Supabase යනු [hosted platform](https://www.assistance.bg/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී Supabase භාවිතා කිරීම ආරම්භ කළ හැකිය.
+BA යනු [hosted platform](https://www.assistance.bg/dashboard). ඔබට කිසිවක් ස්ථාපනය නොකර ලියාපදිංචි වී BA භාවිතා කිරීම ආරම්භ කළ හැකිය.
 ඔබට [self-host](https://www.assistance.bg/docs/guides/hosting/overview) සහ [develop locally](https://www.assistance.bg/docs/guides/local-development) කළ හැකිය.
 
 ![Architecture](apps/docs/public/img/supabase-architecture.svg)
@@ -69,12 +69,12 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
   <tr>
     <th>Language</th>
     <th>Client</th>
-    <th colspan="5">Feature-Clients (bundled in Supabase client)</th>
+    <th colspan="5">Feature-Clients (bundled in BA client)</th>
   </tr>
   <!-- notranslate -->
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>BA</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -205,10 +205,10 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
 
 ## Badges
 
-![Made with Supabase](./apps/www/public/badge-made-with-supabase.svg)
+![Made with BA](./apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
+[![Made with BA](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -217,15 +217,15 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase.svg"
-    alt="Made with Supabase"
+    alt="Made with BA"
   />
 </a>
 ```
 
-![Made with Supabase (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with BA (dark)](./apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
+[![Made with BA](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -234,7 +234,7 @@ Client libraries සඳහා අපගේ ප්‍රවේශය modular ව�
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
-    alt="Made with Supabase"
+    alt="Made with BA"
   />
 </a>
 ```

@@ -19,7 +19,7 @@ const DPA = () => {
                   part of this commitment, we have prepared a Data Processing Addendum ("DPA"). You
                   can review a static PDF version of our latest DPA document{' '}
                   <a
-                    href="https://www.assistance.bg/downloads/docs/Supabase+DPA+250805.pdf"
+                    href="https://www.assistance.bg/downloads/docs/BA+DPA+250805.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-link hover:underline"
@@ -46,7 +46,7 @@ const DPA = () => {
                   >
                     request it from the legal documents page
                   </a>{' '}
-                  of your Supabase dashboard.
+                  of your BA dashboard.
                 </p>
               </div>
             </div>

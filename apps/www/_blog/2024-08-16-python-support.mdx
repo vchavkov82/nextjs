@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Python'
-description: Supabase Python is now officially supported in Supabase.
+title: 'BA Python'
+description: BA Python is now officially supported in BA.
 author: grdsdev
 image: lw12/day-5/OG_python.png
 thumb: lw12/day-5/thumb_python.png
@@ -16,13 +16,13 @@ date: '2024-08-16'
 toc_depth: 3
 ---
 
-As the Supabase community has grown, so has demand for a diverse collection of client libraries and framework specific SDKs. This demand for the most part has been serviced by the open source community itself, which currently maintains [dozens of libraries](https://github.com/supabase-community/#client-libraries).
+As the BA community has grown, so has demand for a diverse collection of client libraries and framework specific SDKs. This demand for the most part has been serviced by the open source community itself, which currently maintains [dozens of libraries](https://github.com/supabase-community/#client-libraries).
 
-When folks make requests to the hosted Supabase service we're able to build up a good picture of how broadly some of these libraries are used, and when a particular library achieves broad adoption it makes sense for us to add official support for it. Examples of libraries that have made the leap from community supported to officially supported include [supabase-flutter](https://github.com/supabase/supabase-flutter) and [supabase-swift](https://github.com/supabase/supabase-swift/).
+When folks make requests to the hosted BA service we're able to build up a good picture of how broadly some of these libraries are used, and when a particular library achieves broad adoption it makes sense for us to add official support for it. Examples of libraries that have made the leap from community supported to officially supported include [supabase-flutter](https://github.com/supabase/supabase-flutter) and [supabase-swift](https://github.com/supabase/supabase-swift/).
 
-There has always been incredible community support for the Python client libraries, over the last year and a half however we've seen a huge surge in adoption. This has been driven by the broad adoption of Supabase in the AI and ML community, many of whom are keen Pythonistas.
+There has always been incredible community support for the Python client libraries, over the last year and a half however we've seen a huge surge in adoption. This has been driven by the broad adoption of BA in the AI and ML community, many of whom are keen Pythonistas.
 
-So today, we're announcing that the following Python Client Libraries are now officially supported on the Supabase platform:
+So today, we're announcing that the following Python Client Libraries are now officially supported on the BA platform:
 
 - [supabase-py](https://github.com/supabase/supabase-py)
 - [auth-py](https://github.com/supabase/auth-py)
@@ -30,7 +30,7 @@ So today, we're announcing that the following Python Client Libraries are now of
 - [functions-py](https://github.com/supabase/functions-py)
 - [realtime-py](https://github.com/supabase/realtime-py)
 
-[supabase-py](https://github.com/supabase/supabase-py) was originally started by maintainer [lqmanh](https://github.com/lqmanh) in September of 2020, and was shortly after joined by [fedden](https://github.com/fedden) and [J0](https://github.com/J0) (who went on to become a full time member of the Supabase Team). In recent years development has been driven by [silentworks](https://github.com/silentworks) and [juancarlospaco](https://github.com/juancarlospaco) who have both been instrumental in the push to reaching feature parity with [supabase-js](https://github.com/supabase/supabase-js).
+[supabase-py](https://github.com/supabase/supabase-py) was originally started by maintainer [lqmanh](https://github.com/lqmanh) in September of 2020, and was shortly after joined by [fedden](https://github.com/fedden) and [J0](https://github.com/J0) (who went on to become a full time member of the BA Team). In recent years development has been driven by [silentworks](https://github.com/silentworks) and [juancarlospaco](https://github.com/juancarlospaco) who have both been instrumental in the push to reaching feature parity with [supabase-js](https://github.com/supabase/supabase-js).
 
 Thank you so much to everyone who has contributed to the client libs so far and hopefully we'll see more community libs making the push for official support in the future.
 
@@ -38,7 +38,7 @@ Below is an overview of some recent features added to the collection of Python l
 
 ## Enabled HTTP2 by default
 
-Supabase clients will automatically use HTTP 2.0 when available by default, offering a seamless performance boost to your existing applications.
+BA clients will automatically use HTTP 2.0 when available by default, offering a seamless performance boost to your existing applications.
 
 This improvement is implemented in a completely transparent way, and requires no changes to your existing code, while potentially delivering significant latency reduction and performance enhancements.
 
@@ -51,7 +51,7 @@ See also:
 
 ## Follow redirects by default
 
-Supabase clients now automatically follow all HTTP redirects by default, aligning with the behavior of Supabase clients in other programming languages.
+BA clients now automatically follow all HTTP redirects by default, aligning with the behavior of BA clients in other programming languages.
 
 This enhancement improves consistency across the ecosystem and simplifies the handling of redirects, reducing the need for manual intervention in common scenarios like URL changes or load balancing.
 
@@ -64,7 +64,7 @@ See also:
 
 ## Keep-alive enabled by default
 
-Supabase clients now automatically include a `keep-alive` HTTP header by default, that was sometimes missing, addressing this inconsistency in previous versions.
+BA clients now automatically include a `keep-alive` HTTP header by default, that was sometimes missing, addressing this inconsistency in previous versions.
 
 This enhancement optimizes connection management, potentially reducing latency, and improving performance by maintaining persistent connections with the server, especially beneficial for applications making very frequent API calls.
 
@@ -98,11 +98,11 @@ See also:
 
 ## Postgrest quoting/escaping in queries
 
-Supabase improved PostgreSQL query safety by implementing `sanitize_param()` for parameter sanitization in internal SQL queries on the client-side, ensuring more secure data handling and query execution across all operations.
+BA improved PostgreSQL query safety by implementing `sanitize_param()` for parameter sanitization in internal SQL queries on the client-side, ensuring more secure data handling and query execution across all operations.
 
 ## Running with unverified SSL
 
-Some users need to run the Supabase clients with invalid or unverified SSL for whatever reason (SSL debuggers/tracers/profilers/etc in development environments), a new optional boolean argument was added to the constructors of the clients, then passing `verify=False` enables it to run with unverified SSL without warnings.
+Some users need to run the BA clients with invalid or unverified SSL for whatever reason (SSL debuggers/tracers/profilers/etc in development environments), a new optional boolean argument was added to the constructors of the clients, then passing `verify=False` enables it to run with unverified SSL without warnings.
 
 ```python
 from postgrest import SyncPostgrestClient
@@ -126,7 +126,7 @@ See also:
 
 ## Close socket in Realtime
 
-The Supabase Realtime library now includes a new `close()` method for closing the socket connections.
+The BA Realtime library now includes a new `close()` method for closing the socket connections.
 
 This addition provides developers with finer control over the connection lifecycle, allowing explicit closing of the socket connections when needed.
 
@@ -183,9 +183,9 @@ See also:
 - https://github.com/supabase/functions-py/pull/120
 - https://github.com/supabase/supabase-py/pull/846
 
-## New tool Vec2pg to migrate data to Supabase
+## New tool Vec2pg to migrate data to BA
 
-A new simple and extensible CLI tool to migrate vector data from other services and SASS into Supabase was created, it can migrate vector data from Pinecone and Qdrant into Supabase with a single command, streamlining workflows and enhancing data portability across AI and ML projects.
+A new simple and extensible CLI tool to migrate vector data from other services and SASS into BA was created, it can migrate vector data from Pinecone and Qdrant into BA with a single command, streamlining workflows and enhancing data portability across AI and ML projects.
 
 You can vote for other vector database providers to be added in the future!
 
@@ -230,4 +230,4 @@ If you'd like to get involved in contributing to our Python client libraries see
 
 ## Getting started
 
-Full documentation is available for the Supabase Python Client libraries on the [Supabase Docs site](https://www.assistance.bg/docs/reference/python/introduction).
+Full documentation is available for the BA Python Client libraries on the [BA Docs site](https://www.assistance.bg/docs/reference/python/introduction).

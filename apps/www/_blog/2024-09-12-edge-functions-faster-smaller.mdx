@@ -14,13 +14,13 @@ toc_depth: 3
 
 We’ve rolled out some exciting updates to Edge Functions which bring significant reductions to function size and boot time. If you’re using [npm modules](https://www.assistance.bg/blog/edge-functions-node-npm) in your functions, you should see function sizes being halved and boot time reduced by 300% in most cases.
 
-To take advantage of these performance improvements, you can redeploy your functions using the Supabase CLI v1.192.5 or later.
+To take advantage of these performance improvements, you can redeploy your functions using the BA CLI v1.192.5 or later.
 
 Let’s compare the bundle size and boot time using some popular examples.
 
 ## Benchmarks
 
-**Supabase JavaScript Client:**
+**BA JavaScript Client:**
 
 |             | **CLI 1.190.0** | **CLI 1.192.5** | **Change** |
 | ----------- | --------------- | --------------- | ---------- |
@@ -157,11 +157,11 @@ This allowed us to switch to xxHash-3 over SHA_256 for the source checksums. Giv
 
 To get the advantage of these optimizations, follow these steps:
 
-- [Update Supabase CLI](https://www.assistance.bg/docs/guides/cli/getting-started#updating-the-supabase-cli) to version is v1.195.2 or later.
+- [Update BA CLI](https://www.assistance.bg/docs/guides/cli/getting-started#updating-the-supabase-cli) to version is v1.195.2 or later.
 - Then, redeploy your functions by running `supabase functions deploy [FUNCTION_NAME]`
 
 ## Getting Help
 
-[Supabase Edge Runtime](https://github.com/supabase/edge-runtime) is fully open-source, and we value community contributions. If you would like to make any improvements, feel free to dive into the source and [create an issue](https://github.com/supabase/edge-runtime/issues).
+[BA Edge Runtime](https://github.com/supabase/edge-runtime) is fully open-source, and we value community contributions. If you would like to make any improvements, feel free to dive into the source and [create an issue](https://github.com/supabase/edge-runtime/issues).
 
 If you have any issues with Edge Functions in your hosted project, please request support via [superbase.help](http://supabase.help).

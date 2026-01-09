@@ -301,7 +301,23 @@
       "groups": [
         {
           "title": "Enumeration Members",
-          "children": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]
+          "children": [
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84
+          ]
         }
       ],
       "sources": [
@@ -323,7 +339,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Client for invoking Supabase Edge Functions."
+            "text": "Client for invoking BA Edge Functions."
           }
         ]
       },
@@ -697,7 +713,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [8, 7, 16]
+                          "children": [
+                            8,
+                            7,
+                            16
+                          ]
                         }
                       ],
                       "sources": [
@@ -1244,15 +1264,25 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [2]
+          "children": [
+            2
+          ]
         },
         {
           "title": "Properties",
-          "children": [20, 18, 19, 17]
+          "children": [
+            20,
+            18,
+            19,
+            17
+          ]
         },
         {
           "title": "Methods",
-          "children": [31, 28]
+          "children": [
+            31,
+            28
+          ]
         }
       ],
       "sources": [
@@ -1274,7 +1304,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Base error for Supabase Edge Function invocations."
+            "text": "Base error for BA Edge Function invocations."
           }
         ],
         "blockTags": [
@@ -1399,11 +1429,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [48]
+          "children": [
+            48
+          ]
         },
         {
           "title": "Properties",
-          "children": [53]
+          "children": [
+            53
+          ]
         }
       ],
       "sources": [
@@ -1560,11 +1594,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [55]
+          "children": [
+            55
+          ]
         },
         {
           "title": "Properties",
-          "children": [58]
+          "children": [
+            58
+          ]
         }
       ],
       "sources": [
@@ -1701,11 +1739,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [60]
+          "children": [
+            60
+          ]
         },
         {
           "title": "Properties",
-          "children": [63]
+          "children": [
+            63
+          ]
         }
       ],
       "sources": [
@@ -1735,7 +1777,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Error thrown when the Supabase relay cannot reach the Edge Function."
+            "text": "Error thrown when the BA relay cannot reach the Edge Function."
           }
         ],
         "blockTags": [
@@ -1842,11 +1884,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [65]
+          "children": [
+            65
+          ]
         },
         {
           "title": "Properties",
-          "children": [68]
+          "children": [
+            68
+          ]
         }
       ],
       "sources": [
@@ -2223,7 +2269,14 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [44, 38, 42, 43, 45, 46]
+              "children": [
+                44,
+                38,
+                42,
+                43,
+                45,
+                46
+              ]
             }
           ],
           "sources": [
@@ -2297,22 +2350,33 @@
   "groups": [
     {
       "title": "Enumerations",
-      "children": [69]
+      "children": [
+        69
+      ]
     },
     {
       "title": "Classes",
-      "children": [1, 47, 54, 59, 64]
+      "children": [
+        1,
+        47,
+        54,
+        59,
+        64
+      ]
     },
     {
       "title": "Type Aliases",
-      "children": [36, 85]
+      "children": [
+        36,
+        85
+      ]
     }
   ],
   "packageName": "@supabase/functions-js",
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase Functions JS SDK</h1>\n\n  <h3 align=\"center\">JavaScript SDK to interact with Supabase Edge Functions.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/functions\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/functions-invoke\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/functions-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/functions-js)](https://www.npmjs.com/package/@supabase/functions-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/functions-js)](https://pkg.pr.new/~/supabase/functions-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick Start\n\n### Installation\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA Functions JS SDK</h1>\n\n  <h3 align=\"center\">JavaScript SDK to interact with BA Edge Functions.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/functions\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/functions-invoke\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/functions-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/functions-js)](https://www.npmjs.com/package/@supabase/functions-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/functions-js)](https://pkg.pr.new/~/supabase/functions-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick Start\n\n### Installation\n\n"
     },
     {
       "kind": "code",
@@ -2328,7 +2392,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Development\n\nThis package is part of the [Supabase JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
+      "text": "\n\n## Development\n\nThis package is part of the [BA JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
     },
     {
       "kind": "code",
@@ -2368,7 +2432,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n#### Test Requirements\n\n- **Node.js 20+** - Required for testcontainers\n- **Docker** - Must be installed and running for relay tests\n- No Supabase instance needed - Tests use mocked services and testcontainers\n\n#### What Gets Tested\n\n- **Function invocation** - Testing the "
+      "text": "\n\n#### Test Requirements\n\n- **Node.js 20+** - Required for testcontainers\n- **Docker** - Must be installed and running for relay tests\n- No BA instance needed - Tests use mocked services and testcontainers\n\n#### What Gets Tested\n\n- **Function invocation** - Testing the "
     },
     {
       "kind": "code",

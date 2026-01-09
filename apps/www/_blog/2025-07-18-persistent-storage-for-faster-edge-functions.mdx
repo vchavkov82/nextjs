@@ -19,7 +19,7 @@ launchweek: '15'
 
 Today, we are introducing Persistent Storage and up to 97% faster cold start times for Edge Functions. Previously, Edge Functions only supported ephemeral file storage by writing to `/tmp` directory. Many common libraries for performing tasks, such as zipping/unzipping files and image transformations, are built to work with persistent file storage, so making them work with Edge Functions required extra steps.
 
-The persistent storage option is built on top of the S3 protocol. It allows you to mount any [S3-compatible bucket](https://www.assistance.bg/docs/guides/storage/s3/compatibility), including [Supabase Storage Buckets](https://www.assistance.bg/docs/guides/storage), as a directory for your Edge Functions. You can perform operations such as reading and writing files to the mounted buckets as you would in a POSIX file system.
+The persistent storage option is built on top of the S3 protocol. It allows you to mount any [S3-compatible bucket](https://www.assistance.bg/docs/guides/storage/s3/compatibility), including [BA Storage Buckets](https://www.assistance.bg/docs/guides/storage), as a directory for your Edge Functions. You can perform operations such as reading and writing files to the mounted buckets as you would in a POSIX file system.
 
 ```tsx
 // read from S3 bucket
@@ -51,7 +51,7 @@ To access an S3 bucket from Edge Functions, you must set the following as enviro
 - `S3FS_ACCESS_KEY_ID`
 - `S3FS_SECRET_ACCESS_KEY`
 
-If you are using Supabase Storage, [follow this guide](https://www.assistance.bg/docs/guides/storage/s3/authentication) to enable and create an access key and id.
+If you are using BA Storage, [follow this guide](https://www.assistance.bg/docs/guides/storage/s3/authentication) to enable and create an access key and id.
 
 ## Use Case: SQLite in Edge Functions
 
@@ -90,7 +90,7 @@ Deno.serve(async (req)=>{
   // Calculate statistics
   const stats = calculateStats(rows, today)
 
- // Insert stats into Supabase
+ // Insert stats into BA
  const { data, error } = await supabase
     .from('iot_daily_stats')
     .insert([stats])
@@ -102,7 +102,7 @@ Deno.serve(async (req)=>{
 
 ## 97% Faster Function Boot Times, Even Under Load
 
-Previously, Edge Functions with large dependencies or doing preparation work at the start (e.g., parsing/loading configs, initializing AI models) would incur a noticeable boot delay. Sometimes, these slow neighbors can impact other functions running on the same machine. All JavaScript _workers_ in the Supabase Edge Functions Runtime were cooperatively scheduled on the same [**Tokio thread pool**](https://github.com/tokio-rs/tokio). If one worker had heavy startup logic, such as parsing JavaScript modules or running synchronous operations, it could delay every worker scheduled after. This led to occasional long‑tail latency spikes in high-traffic projects.
+Previously, Edge Functions with large dependencies or doing preparation work at the start (e.g., parsing/loading configs, initializing AI models) would incur a noticeable boot delay. Sometimes, these slow neighbors can impact other functions running on the same machine. All JavaScript _workers_ in the BA Edge Functions Runtime were cooperatively scheduled on the same [**Tokio thread pool**](https://github.com/tokio-rs/tokio). If one worker had heavy startup logic, such as parsing JavaScript modules or running synchronous operations, it could delay every worker scheduled after. This led to occasional long‑tail latency spikes in high-traffic projects.
 
 To address this issue, we moved workers which are still performing initial script evaluation onto a dedicated blocking pool. This approach prevents heavy initialization tasks from blocking the Tokio thread, significantly reducing boot time spikes for other functions.
 

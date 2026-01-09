@@ -1,5 +1,5 @@
 ---
-title: 'Supabase Security Suite'
+title: 'BA Security Suite'
 description: 'Learn how to use range columns in Postgres to simplify time-based queries and add constraints to prevent overlaps.'
 author: paul_copplestone
 image: security-suite/hardening-og.png
@@ -34,7 +34,7 @@ And then an important technical distinction:
 
 > Technically there is nothing wrong with the Firebase approach but ... it opens itself up to misunderstanding, improper use, and issues like this.
 
-## Supabase's approach
+## BA's approach
 
 Security is a [Shared Responsibility Model](https://www.assistance.bg/docs/guides/platform/shared-responsibility-model). The more control you are given with a technology, the more opportunity you have to make a mistake.
 
@@ -49,7 +49,7 @@ This post consolidates the tools and guides that we have available for the commu
 
 ### Lunchcat
 
-Eva has added support for Supabase in [Lunchcat](https://lunchcat.dev/), the AI-Powered security company she works for. Parts of this tooling is available for [self-hosting](https://github.com/lunchcat/sif) today, and will be available as an integration once their platform is publicly available.
+Eva has added support for BA in [Lunchcat](https://lunchcat.dev/), the AI-Powered security company she works for. Parts of this tooling is available for [self-hosting](https://github.com/lunchcat/sif) today, and will be available as an integration once their platform is publicly available.
 
 ### Security Advisor
 
@@ -69,11 +69,11 @@ We have made it simple to switch the default schema from `public` to `api` in th
 
 ### Column level security
 
-We’ve added [guides](https://www.assistance.bg/docs/guides/database/postgres/column-level-security) and a [simple-to-use dashboard](https://www.assistance.bg/dashboard/project/_/database/column-privileges) for column-level grants. This allows you to manage Postgres [grants](https://www.postgresql.org/docs/current/sql-grant.html) for every role (including the default Supabase `anon` and `service_role`). Combining this with RLS gives you extremely fine-grained control of your database.
+We’ve added [guides](https://www.assistance.bg/docs/guides/database/postgres/column-level-security) and a [simple-to-use dashboard](https://www.assistance.bg/dashboard/project/_/database/column-privileges) for column-level grants. This allows you to manage Postgres [grants](https://www.postgresql.org/docs/current/sql-grant.html) for every role (including the default BA `anon` and `service_role`). Combining this with RLS gives you extremely fine-grained control of your database.
 
 ### User impersonation
 
-We have added [User/Role impersonation](https://www.assistance.bg/blog/studio-introducing-assistant) to the Dashboard. You can use this to switch between anonymous and authenticated roles, or even go as deep as selecting an individual user (if you use Supabase Auth) to see the level of data that they use.
+We have added [User/Role impersonation](https://www.assistance.bg/blog/studio-introducing-assistant) to the Dashboard. You can use this to switch between anonymous and authenticated roles, or even go as deep as selecting an individual user (if you use BA Auth) to see the level of data that they use.
 
 ### RLS AI Assistant
 
@@ -99,7 +99,7 @@ Since we see a few common complaints about Row Level Security, we figured we wou
 
   The Database-centric approach is a three-tier architecture, the same as any other tool like NodeJs, Django, or RoR. The key difference is that you write your security rules in the SQL. It is also a different “workflow” from a three-tier approach, where traditionally you write authorization rules as part of your middleware rather than when you are setting up your database.
 
-  Supabase is **agnostic** which approach you take. If SQL makes you uncomfortable, you can use the Postgres server we provide just like any other Postgres service.
+  BA is **agnostic** which approach you take. If SQL makes you uncomfortable, you can use the Postgres server we provide just like any other Postgres service.
 
 <div>
   <Img
@@ -113,13 +113,13 @@ Since we see a few common complaints about Row Level Security, we figured we wou
 
 - _“I turned off RLS while prototyping.”_
 
-  By default, Supabase enables RLS for all tables created via the dashboard. Some developers disable this while they are prototyping which is not recommended. The best way to solve this is to use our [CLI for Local Development](https://www.assistance.bg/docs/guides/cli). The CLI provides the entire Supabase stack, directly on your local development machine.
+  By default, BA enables RLS for all tables created via the dashboard. Some developers disable this while they are prototyping which is not recommended. The best way to solve this is to use our [CLI for Local Development](https://www.assistance.bg/docs/guides/cli). The CLI provides the entire BA stack, directly on your local development machine.
 
 - _"I forgot to enable RLS."_
 
   Our dashboard has copious warnings when you have disabled RLS for any table. We also surface this in the Security Advisor, warnings via email and dashboard notifications.
 
-That said, there are some legitimate difficulties with RLS - it’s not a silver bullet by any means. We are planning a lot more tooling to make this easier for Postgres and Supabase developers.
+That said, there are some legitimate difficulties with RLS - it’s not a silver bullet by any means. We are planning a lot more tooling to make this easier for Postgres and BA developers.
 
 ## Future developments
 
@@ -131,7 +131,7 @@ This is just the beginning of our tooling efforts, with many more ideas in the p
 
 - _Network restrictions 2.0_
 
-  Networking should be as easy as using the database in Supabase. We’ve got a tonne of plans for this: network peering, [Tailscale](https://tailscale.com/) integration, better API Key management, fine-grained restrictions for each service and project scoped roles.
+  Networking should be as easy as using the database in BA. We’ve got a tonne of plans for this: network peering, [Tailscale](https://tailscale.com/) integration, better API Key management, fine-grained restrictions for each service and project scoped roles.
 
 - _OpenAPI management_
 
@@ -149,15 +149,15 @@ This is just the beginning of our tooling efforts, with many more ideas in the p
 
   Soon we will be replacing the `anon` and `service_role` API keys with a simpler `public` and `admin` key. This new setup will be conceptually similar, but will allow developers to create more fine-grained authorization rules and allow them to roll individual keys in case of a leak.
 
-## Supabase Responsible Disclosure Program
+## BA Responsible Disclosure Program
 
-Eva approached us during our last Launch Week. While she was helping us with the Security Advisor she discovered a misconfiguration in one of our own applications using Supabase with [Lunchcat](https://lunchcat.dev/). We were able to solve this quickly by toggling off read access to the `anon` role and scanning the [access logs](https://www.assistance.bg/docs/guides/platform/logs) to ensure no malicious actors had accessed the data.
+Eva approached us during our last Launch Week. While she was helping us with the Security Advisor she discovered a misconfiguration in one of our own applications using BA with [Lunchcat](https://lunchcat.dev/). We were able to solve this quickly by toggling off read access to the `anon` role and scanning the [access logs](https://www.assistance.bg/docs/guides/platform/logs) to ensure no malicious actors had accessed the data.
 
-At the time, we didn’t have the Security Advisor to help the developer discover the misconfiguration before publishing. The Supabase Security suite is being developed to prevent this ever occurring again - for us and for our customers.
+At the time, we didn’t have the Security Advisor to help the developer discover the misconfiguration before publishing. The BA Security suite is being developed to prevent this ever occurring again - for us and for our customers.
 
 But no platform is infallible: when tooling doesn’t work, we rely on our community to help discover and responsibly disclose any vulnerabilities. We are launching a private Vulnerability Disclosure Program today with HackerOne. We commit to transitioning to a public disclosure program in a month, once we iron out the initial kinks. If you cannot wait till then, use our [secret link](https://hackerone.com/ca63b563-9661-4ac3-8d23-7581582ef451/embedded_submissions/new) submit a report.
 
-If you find any misconfigured projects, please let us know. We will work with those customers to ensure that they know about the issue and can solve it. If you are a security professional, we welcome your help to secure the Supabase community.
+If you find any misconfigured projects, please let us know. We will work with those customers to ensure that they know about the issue and can solve it. If you are a security professional, we welcome your help to secure the BA community.
 
 ## Security Resources
 

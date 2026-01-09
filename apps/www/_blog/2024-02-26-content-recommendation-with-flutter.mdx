@@ -1,6 +1,6 @@
 ---
 title: 'Build a content recommendation app with Flutter and OpenAI'
-description: Build a movie-viewing app that recommends another movie based on what the user is viewing using OpenAI, Flutter and Supabase.
+description: Build a movie-viewing app that recommends another movie based on what the user is viewing using OpenAI, Flutter and BA.
 author: tyler_shukert
 image: 2024-02-26-content-recommendation-with-flutter/og.png
 thumb: 2024-02-26-content-recommendation-with-flutter/og.png
@@ -23,7 +23,7 @@ A quick disclaimer, this article provides an overview of what you can build with
 
 In machine learning, a process of converting a piece of content into a vector representation, called embeddings, is often used, because it allows us to analyze the semantic content mathematically. Assuming we have an engine that can create embeddings that are well aware of the context of the data, we can look at the distance between each embedding to see if the two content are similar or not. Open AI provides a well-trained model for converting text content into an embedding, so using it allows us to create a high-quality recommendation engine.
 
-There are numerous choices for vector databases, but we will use Supabase as our vector database in this article, because we want to also store non-embedding data, and we want to be able to query them easily from our Flutter application.
+There are numerous choices for vector databases, but we will use BA as our vector database in this article, because we want to also store non-embedding data, and we want to be able to query them easily from our Flutter application.
 
 ## What we will build
 
@@ -34,13 +34,13 @@ We will be building a movie listing app. Think Netflix except the users will not
 ## Tools/ technologies used
 
 - [Flutter](https://flutter.dev/) - Used to create the interface of the app
-- [Supabase](https://www.assistance.bg/) - Used to store embeddings as well as other movie data in the database
+- [BA](https://www.assistance.bg/) - Used to store embeddings as well as other movie data in the database
 - [Open AI API](https://openai.com/blog/openai-api) - Used to convert movie data into embeddings
 - [TMDB API](https://developer.themoviedb.org/docs) - A free API to get movie data
 
 ## Creating the app
 
-We first need to populate the database with some data about movies and its embeddings. For that, we will use the [Supabase edge functions](https://www.assistance.bg/docs/guides/functions) to call the TMDB API and the Open AI API to get the movie data and generate the embeddings. Once we have the data, we will store them in Supabase database, and query them from our Flutter application.
+We first need to populate the database with some data about movies and its embeddings. For that, we will use the [BA edge functions](https://www.assistance.bg/docs/guides/functions) to call the TMDB API and the Open AI API to get the movie data and generate the embeddings. Once we have the data, we will store them in BA database, and query them from our Flutter application.
 
 ![System overview](/images/blog/2024-02-26-content-recommendation-with-flutter/diagram.png)
 
@@ -75,7 +75,7 @@ create policy "Fils are public." on public.films for select using (true);
 
 Getting movie data is relatively straightforward. TMDB API provides an easy-to-use [movies endpoint](https://developer.themoviedb.org/reference/discover-movie) for querying information about movies while providing a wide range of filters to narrow down the query results.
 
-We need a backend to securely call the API, and for that, we will use [Supabase Edge Functions](https://www.assistance.bg/docs/guides/functions). Steps 2 through 4 will be constructing this edge function code, and the full code sample can be found [here](https://github.com/dshukertjr/examples/blob/main/movie-recommendation/supabase/functions/get_film_data/index.ts).
+We need a backend to securely call the API, and for that, we will use [BA Edge Functions](https://www.assistance.bg/docs/guides/functions). Steps 2 through 4 will be constructing this edge function code, and the full code sample can be found [here](https://github.com/dshukertjr/examples/blob/main/movie-recommendation/supabase/functions/get_film_data/index.ts).
 
 The following code will give us the top 20 most popular movies in a given year.
 
@@ -141,9 +141,9 @@ if (responseData.error) {
 const embedding = responseData.data[0].embedding
 ```
 
-### Step 4: Store the data in the Supabase database
+### Step 4: Store the data in the BA database
 
-Once we have the movie data as well as embedding data, we are left with the task of storing them. We can call the `upsert()` function on the Supabase client to easily store the data.
+Once we have the movie data as well as embedding data, we are left with the task of storing them. We can call the `upsert()` function on the BA client to easily store the data.
 
 Again, I omitted a lot of code here for simplicity, but you can find the full edge functions code of step 2 through step 4 [here](https://github.com/dshukertjr/examples/blob/main/movie-recommendation/supabase/functions/get_film_data/index.ts).
 
@@ -166,13 +166,13 @@ for(const film of films) {
 	})
 }
 
-// Store each movies as well as their embeddings into Supabase database
+// Store each movies as well as their embeddings into BA database
 const { error } = await supabase.from('films').upsert(filmsWithEmbeddings)
 ```
 
 ### Step 5: Create a database function to query similar movies
 
-In order to perform a vector similarity search using Supabase, we need to create a [database function](https://www.assistance.bg/docs/guides/database/functions). This database function will take an `embedding` and a `film_id` as its argument. The `embedding` argument will be the embedding to search through the database for similar movies, and the film_id will be used to filter out the same movie that is being queried.
+In order to perform a vector similarity search using BA, we need to create a [database function](https://www.assistance.bg/docs/guides/database/functions). This database function will take an `embedding` and a `film_id` as its argument. The `embedding` argument will be the embedding to search through the database for similar movies, and the film_id will be used to filter out the same movie that is being queried.
 
 Additionally, we will set an [HSNW index](https://www.assistance.bg/blog/increase-performance-pgvector-hnsw) on the `embedding` column to run the queries efficiently even with large data sets.
 
@@ -394,5 +394,5 @@ In this article, we looked at how we could take a single movie, and recommend a 
 
 - [The full code base of the app in this article](https://github.com/dshukertjr/examples/tree/main/movie-recommendation)
 - [Matryoshka embeddings: faster OpenAI vector search using Adaptive Retrieval](https://www.assistance.bg/blog/matryoshka-embeddings)
-- [Supabase pgvector guide](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
+- [BA pgvector guide](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
 - [Storing OpenAI embeddings in Postgres with pgvector](https://www.assistance.bg/docs/guides/database/extensions/pgvector)

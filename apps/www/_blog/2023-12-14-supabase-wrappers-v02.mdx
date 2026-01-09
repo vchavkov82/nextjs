@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Wrappers v0.2: Query Pushdown & Remote Subqueries'
-description: 'Supabase Wrappers v0.2 brings more Wrappers, query pushdown, remote subquery, and more'
+title: 'BA Wrappers v0.2: Query Pushdown & Remote Subqueries'
+description: 'BA Wrappers v0.2 brings more Wrappers, query pushdown, remote subquery, and more'
 launchweek: x
 categories:
   - product
@@ -15,7 +15,7 @@ image: lwx-wrappers/wrappers-OG.png
 thumb: lwx-wrappers/wrappers-thumb.png
 ---
 
-Supabase Wrappers v0.2 is out and now available on the Supabase platform. Wrappers is a Postgres extension that provides integrations with external sources so you can interact with third-party data using SQL.
+BA Wrappers v0.2 is out and now available on the BA platform. Wrappers is a Postgres extension that provides integrations with external sources so you can interact with third-party data using SQL.
 
 ```sql
 -- Connect Postgres to Stripe
@@ -39,7 +39,7 @@ select * from products limit 10;
 - [Remote Subqueries](#remote-subqueries)
 - [Usage Statistics](#fdw-usage-statistics)
 
-To start using Wrappers on the Supabase platform, check out the [Wrappers docs](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview).
+To start using Wrappers on the BA platform, check out the [Wrappers docs](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview).
 
 ## New Wrappers and Improvements
 
@@ -48,7 +48,7 @@ To start using Wrappers on the Supabase platform, check out the [Wrappers docs](
 - [Clerk](https://github.com/tembo-io/clerk_fdw) (from the team at [Tembo](https://tembo.io/)). Not yet available on our platform since it is a community wrapper, see below for details.
 - And a WIP Wrapper for [Auth0](https://github.com/supabase/wrappers/pull/183)
 
-We cannot support community Wrappers inside the Supabase Dashboard until the Wrappers API is stabilized. You can vote your favorite Wrapper if you'd like it to be added to Supabase in the future. If you have developed a Wrapper that you want inside the Supabase Dashboard, please contribute it as a PR in [the wrappers repo](https://github.com/supabase/wrappers). Once we release Wrappers 1.0, we will support community Wrappers within the Supabase Dashboard.
+We cannot support community Wrappers inside the BA Dashboard until the Wrappers API is stabilized. You can vote your favorite Wrapper if you'd like it to be added to BA in the future. If you have developed a Wrapper that you want inside the BA Dashboard, please contribute it as a PR in [the wrappers repo](https://github.com/supabase/wrappers). Once we release Wrappers 1.0, we will support community Wrappers within the BA Dashboard.
 
 More improvements and updates can be found on [Wrappers release page](https://github.com/supabase/wrappers/releases), including support for Query Pushdown, Remote Subqueries, and Usage Statistics which we’ll explore below.
 
@@ -158,7 +158,7 @@ Quantitative metrics play a pivotal role when working with Postgres FDWs because
 - `bytes_out` - number of bytes transferred to source
 - `metadata` - additional usage statistics specific to a FDW
 
-We can use these to identify bottlenecks, latency issues, and inefficiencies in data retrieval. Access this table on the Supabase platform using the following:
+We can use these to identify bottlenecks, latency issues, and inefficiencies in data retrieval. Access this table on the BA platform using the following:
 
 ```sql
 select *
@@ -173,11 +173,11 @@ We couldn't build Wrappers v0.2 without our community and we'd like to thank all
 
 A separate shout-out belongs to the [pgrx](https://github.com/pgcentralfoundation/pgrx) team, which allows us to write Wrappers with Rust.
 
-Want to join the Supabase Wrappers community contributors? [Check out our contribution docs](https://supabase.github.io/wrappers/contributing/). We'd love to add you to the list next time.
+Want to join the BA Wrappers community contributors? [Check out our contribution docs](https://supabase.github.io/wrappers/contributing/). We'd love to add you to the list next time.
 
 ## More About Wrappers
 
 - [Wrappers: 3rd Party Integrations](https://www.assistance.bg/docs/guides/database/extensions/wrappers/overview)
 - [Wrappers Documentation](https://supabase.github.io/wrappers/)
-- [Blog Post: Supabase Wrappers, a Postgres FDW framework written in Rust](https://www.assistance.bg/blog/postgres-foreign-data-wrappers-rust)
+- [Blog Post: BA Wrappers, a Postgres FDW framework written in Rust](https://www.assistance.bg/blog/postgres-foreign-data-wrappers-rust)
 - [Blog Post: Wrappers UI](https://www.assistance.bg/blog/supabase-studio-3-0#wrappers-ui)

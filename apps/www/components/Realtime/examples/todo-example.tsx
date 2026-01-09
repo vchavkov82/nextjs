@@ -8,12 +8,12 @@ const appJsCode = `import { useEffect, useState } from 'react';
 import './styles.css';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
+// Initialize BA client
 const supabaseUrl = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_URL || 'https://your-project.supabase.co'}';
 const supabaseKey = '${process.env.NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY || 'your-anon-key'}';
 
 if (!supabaseUrl || supabaseUrl === 'https://your-project.supabase.co' || !supabaseKey || supabaseKey === 'your-anon-key') {
-  console.error('Missing Supabase credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
+  console.error('Missing BA credentials. Please set NEXT_PUBLIC_EXAMPLES_SUPABASE_URL and NEXT_PUBLIC_EXAMPLES_SUPABASE_ANON_KEY environment variables.');
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -43,47 +43,47 @@ export default function App() {
             data: { instanceId }
           }
         });
-        
+
         if (error) {
           console.error('Error signing in anonymously:', error.message);
           return;
         }
-        
+
         setUser(data.user);
         console.log('Signed in anonymously with user ID:', data.user.id);
       } catch (error) {
         console.error('Unexpected error during sign in:', error.message);
       }
     };
-    
+
     signInAnonymously();
   }, []);
 
   // Fetch todos from the database when user is authenticated
   useEffect(() => {
     if (!user) return;
-    
+
     const fetchTodos = async () => {
       try {
         const { data, error } = await supabase
           .from(TABLE)
           .select('*')
           .eq('channel', instanceId)
-          
+
         if (error) {
           console.error('Error fetching todos:', error.message);
           return;
         }
-        
+
         setTodos(data || []);
         setIsLoading(false);
       } catch (error) {
         console.error('Unexpected error fetching todos:', error.message);
       }
     };
-    
+
     fetchTodos();
-    
+
     const setupRealtimeChannel = async () => {
       await supabase.realtime.setAuth(); // Needed for Realtime Authorization
       const changes = supabase
@@ -96,7 +96,7 @@ export default function App() {
         })
         .on('broadcast', { event: 'UPDATE' }, (payload) => {
           const { record: todo } = payload.payload;
-          setTodos(prev => 
+          setTodos(prev =>
             prev.map(t => t.id === todo.id ? todo : t)
           );
         })
@@ -108,7 +108,7 @@ export default function App() {
         .subscribe();
     };
     setupRealtimeChannel();
-    
+
   }, [user, instanceId]);
 
   useEffect(() => {
@@ -127,13 +127,13 @@ export default function App() {
     presenceChannel.on('presence', { event: 'sync' }, () => {
       const state = presenceChannel.presenceState();
       const presenceList = [];
-      
+
       // Convert presence state to array
       Object.keys(state).forEach(key => {
         const presences = state[key];
         presenceList.push(...presences);
       });
-      
+
       setOnlineUsers(presenceList);
     });
 
@@ -160,7 +160,7 @@ export default function App() {
     if (!newTodo.trim() || !isConnected || !user) return;
 
     try {
-      // Insert the todo into the Supabase table
+      // Insert the todo into the BA table
       // The database trigger will handle broadcasting
       const { error } = await supabase
         .from(TABLE)
@@ -170,12 +170,12 @@ export default function App() {
           created_by: user.id,
           channel: instanceId
         });
-        
+
       if (error) {
         console.error('Error adding todo:', error.message);
         return;
       }
-      
+
       // Clear the input
       setNewTodo('');
     } catch (error) {
@@ -194,7 +194,7 @@ export default function App() {
         .update({ completed: !todo.completed })
         .eq('id', todo.id)
         .eq('channel', instanceId);
-        
+
       if (error) {
         console.error('Error updating todo:', error.message);
       }
@@ -213,7 +213,7 @@ export default function App() {
         .from(TABLE)
         .delete()
         .eq('id', todo.id)
-        
+
       if (error) {
         console.error('Error deleting todo:', error.message);
       }
@@ -227,15 +227,15 @@ export default function App() {
       {/* Header */}
       <div className="flex justify-between items-center px-5 pt-3">
         <h1 className="font-medium text-sm text-neutral-400">
-          {user ? 
+          {user ?
             \`\${todos.filter((todo) => !todo.completed).length} todos to complete\` :
             'Connecting...'
           }
         </h1>
         <div className="flex gap-2 flex-wrap">
           {onlineUsers.map((user, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-neutral-800 text-neutral-300 text-xs"
             >
               <div className="w-2 h-2 rounded-full bg-green-400"></div>
@@ -244,7 +244,7 @@ export default function App() {
           ))}
         </div>
       </div>
-      
+
       {/* Main content */}
       <div className="flex-1 overflow-hidden p-4">
         <div className="mx-auto">
@@ -255,29 +255,29 @@ export default function App() {
               </div>
             ) : (
               todos.map((todo) => (
-                <div 
+                <div
                   key={todo.id}
                   className="flex items-center justify-between p-3 rounded-md bg-neutral-800 border border-neutral-700"
                 >
                   <div className="flex items-center gap-2">
-                    <button 
-                      onClick={() => handleToggleTodo(todo)} 
+                    <button
+                      onClick={() => handleToggleTodo(todo)}
                       className={\`w-5 h-5 rounded flex items-center justify-center border \${
-                        todo.completed 
-                          ? 'bg-green-900 border-green-700 text-green-400' 
+                        todo.completed
+                          ? 'bg-green-900 border-green-700 text-green-400'
                           : 'border-neutral-600'
                       }\`}
                     >
                       {todo.completed && (
-                        <svg 
-                          xmlns="http://www.w3.org/2000/svg" 
-                          width="12" 
-                          height="12" 
-                          viewBox="0 0 24 24" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
                           strokeLinejoin="round"
                         >
                           <polyline points="20 6 9 17 4 12"></polyline>
@@ -288,20 +288,20 @@ export default function App() {
                       {todo.text}
                     </span>
                   </div>
-                  
-                  <button 
+
+                  <button
                     onClick={() => handleDeleteTodo(todo)}
                     className="text-neutral-500 hover:text-neutral-300 transition-colors"
                   >
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="14" 
-                      height="14" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                     >
                       <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -312,7 +312,7 @@ export default function App() {
               ))
             )}
           </div>
-          
+
           <form onSubmit={handleAddTodo} className="mt-4 flex gap-2">
             <input
               type="text"

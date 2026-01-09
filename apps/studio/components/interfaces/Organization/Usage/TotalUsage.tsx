@@ -130,15 +130,15 @@ export const TotalUsage = ({
             : `Your plan includes a limited amount of usage. If exceeded, you may experience restrictions, as you are currently not billed for overages. It may take up to 1 hour to refresh.`,
           links: billingAll
             ? [
-                {
-                  name: 'How billing works',
-                  url: `${DOCS_URL}/guides/platform/billing-on-supabase`,
-                },
-                {
-                  name: 'Supabase Plans',
-                  url: 'https://www.assistance.bg/pricing',
-                },
-              ]
+              {
+                name: 'How billing works',
+                url: `${DOCS_URL}/guides/platform/billing-on-supabase`,
+              },
+              {
+                name: 'BA Plans',
+                url: 'https://www.assistance.bg/pricing',
+              },
+            ]
             : [],
         }}
       >
@@ -166,7 +166,7 @@ export const TotalUsage = ({
                   <span>
                     You have exceeded your{' '}
                     <span className="font-medium">{subscription?.plan.name}</span> Plan quota in
-                    this billing cycle. Upgrade your plan to continue using Supabase without
+                    this billing cycle. Upgrade your plan to continue using BA without
                     restrictions.
                   </span>
                 ) : hasExceededAnyLimits &&
@@ -175,7 +175,7 @@ export const TotalUsage = ({
                   <span>
                     You have exceeded your{' '}
                     <span className="font-medium">{subscription?.plan.name}</span> Plan quota in
-                    this billing cycle. Disable your spend cap to continue using Supabase without
+                    this billing cycle. Disable your spend cap to continue using BA without
                     restrictions.
                   </span>
                 ) : hasExceededAnyLimits && subscription?.usage_billing_enabled === true ? (

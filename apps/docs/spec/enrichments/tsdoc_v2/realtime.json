@@ -92,7 +92,16 @@
       "groups": [
         {
           "title": "Enumeration Members",
+<<<<<<< HEAD
           "children": [774, 776, 775, 777]
+=======
+          "children": [
+            770,
+            772,
+            771,
+            773
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -191,7 +200,16 @@
       "groups": [
         {
           "title": "Enumeration Members",
+<<<<<<< HEAD
           "children": [779, 782, 780, 781]
+=======
+          "children": [
+            775,
+            778,
+            776,
+            777
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -271,7 +289,15 @@
       "groups": [
         {
           "title": "Enumeration Members",
+<<<<<<< HEAD
           "children": [785, 786, 784]
+=======
+          "children": [
+            781,
+            782,
+            780
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -370,7 +396,16 @@
       "groups": [
         {
           "title": "Enumeration Members",
+<<<<<<< HEAD
           "children": [791, 790, 788, 789]
+=======
+          "children": [
+            787,
+            786,
+            784,
+            785
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -708,7 +743,12 @@
                         "groups": [
                           {
                             "title": "Properties",
-                            "children": [89, 85, 90, 84]
+                            "children": [
+                              89,
+                              85,
+                              90,
+                              84
+                            ]
                           }
                         ],
                         "sources": [
@@ -1162,7 +1202,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [336]
+                          "children": [
+                            336
+                          ]
                         }
                       ],
                       "sources": [
@@ -1220,7 +1262,9 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [338]
+                              "children": [
+                                338
+                              ]
                             }
                           ],
                           "sources": [
@@ -1303,7 +1347,11 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [342, 341, 340]
+                              "children": [
+                                342,
+                                341,
+                                340
+                              ]
                             }
                           ],
                           "sources": [
@@ -1496,7 +1544,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [140]
+                          "children": [
+                            140
+                          ]
                         }
                       ],
                       "sources": [
@@ -1698,7 +1748,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [152]
+                          "children": [
+                            152
+                          ]
                         }
                       ],
                       "sources": [
@@ -1924,7 +1976,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [165]
+                          "children": [
+                            165
+                          ]
                         }
                       ],
                       "sources": [
@@ -2877,7 +2931,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [218]
+                          "children": [
+                            218
+                          ]
                         }
                       ],
                       "sources": [
@@ -3040,7 +3096,10 @@
                                           "groups": [
                                             {
                                               "title": "Properties",
-                                              "children": [229, 228]
+                                              "children": [
+                                                229,
+                                                228
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -3077,7 +3136,11 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [225, 226, 224]
+                                      "children": [
+                                        225,
+                                        226,
+                                        224
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -3277,7 +3340,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [240]
+                          "children": [
+                            240
+                          ]
                         }
                       ],
                       "sources": [
@@ -3432,7 +3497,10 @@
                                           "groups": [
                                             {
                                               "title": "Properties",
-                                              "children": [251, 250]
+                                              "children": [
+                                                251,
+                                                250
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -3491,7 +3559,12 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [247, 248, 252, 246]
+                                      "children": [
+                                        247,
+                                        248,
+                                        252,
+                                        246
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -3627,7 +3700,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [258]
+                          "children": [
+                            258
+                          ]
                         }
                       ],
                       "sources": [
@@ -3772,7 +3847,11 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [265, 266, 264]
+                                      "children": [
+                                        265,
+                                        266,
+                                        264
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -3941,7 +4020,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [275]
+                          "children": [
+                            275
+                          ]
                         }
                       ],
                       "sources": [
@@ -4086,7 +4167,11 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [282, 283, 281]
+                                      "children": [
+                                        282,
+                                        283,
+                                        281
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -4255,7 +4340,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [292]
+                          "children": [
+                            292
+                          ]
                         }
                       ],
                       "sources": [
@@ -4400,7 +4487,11 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [299, 300, 298]
+                                      "children": [
+                                        299,
+                                        300,
+                                        298
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -4569,7 +4660,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [309]
+                          "children": [
+                            309
+                          ]
                         }
                       ],
                       "sources": [
@@ -4714,7 +4807,11 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [316, 317, 315]
+                                      "children": [
+                                        316,
+                                        317,
+                                        315
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -5216,7 +5313,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [348, 349, 347]
+                          "children": [
+                            348,
+                            349,
+                            347
+                          ]
                         }
                       ],
                       "sources": [
@@ -6043,15 +6144,43 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [74]
+          "children": [
+            74
+          ]
         },
         {
           "title": "Properties",
-          "children": [79, 98, 93, 94, 102, 97, 100, 96, 95, 103, 92, 99, 91, 101]
+          "children": [
+            79,
+            98,
+            93,
+            94,
+            102,
+            97,
+            100,
+            96,
+            95,
+            103,
+            92,
+            99,
+            91,
+            101
+          ]
         },
         {
           "title": "Methods",
-          "children": [330, 135, 112, 343, 104, 365, 119, 362, 129, 356]
+          "children": [
+            330,
+            135,
+            112,
+            343,
+            104,
+            365,
+            119,
+            362,
+            129,
+            356
+          ]
         }
       ],
       "sources": [
@@ -7409,7 +7538,16 @@
               "groups": [
                 {
                   "title": "Properties",
+<<<<<<< HEAD
                   "children": [506, 507, 508, 505]
+=======
+                  "children": [
+                    505,
+                    506,
+                    507,
+                    504
+                  ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -8733,19 +8871,74 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [464]
+          "children": [
+            464
+          ]
         },
         {
           "title": "Properties",
           "children": [
+<<<<<<< HEAD
             517, 468, 469, 471, 500, 498, 497, 472, 509, 474, 487, 484, 485, 473, 495, 496, 478,
             486, 499, 493, 492, 501, 502, 503, 482, 483, 494, 520, 522, 521
+=======
+            516,
+            468,
+            469,
+            471,
+            499,
+            497,
+            496,
+            472,
+            508,
+            474,
+            487,
+            484,
+            485,
+            473,
+            494,
+            495,
+            478,
+            486,
+            498,
+            492,
+            491,
+            500,
+            501,
+            502,
+            482,
+            483,
+            493,
+            519,
+            521,
+            520
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
           ]
         },
         {
           "title": "Methods",
           "children": [
+<<<<<<< HEAD
             555, 527, 547, 531, 529, 576, 535, 549, 551, 553, 542, 569, 559, 540, 537, 567, 562
+=======
+            553,
+            525,
+            545,
+            529,
+            527,
+            573,
+            533,
+            547,
+            549,
+            551,
+            540,
+            567,
+            557,
+            538,
+            535,
+            565,
+            560
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
           ]
         }
       ],
@@ -9010,7 +9203,11 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [40, 41, 42]
+                  "children": [
+                    40,
+                    41,
+                    42
+                  ]
                 }
               ],
               "sources": [
@@ -9160,11 +9357,20 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [30]
+          "children": [
+            30
+          ]
         },
         {
           "title": "Properties",
-          "children": [38, 45, 37, 36, 35, 34]
+          "children": [
+            38,
+            45,
+            37,
+            36,
+            35,
+            34
+          ]
         }
       ],
       "sources": [
@@ -9513,7 +9719,15 @@
       "groups": [
         {
           "title": "Methods",
+<<<<<<< HEAD
           "children": [802, 796, 806]
+=======
+          "children": [
+            798,
+            792,
+            802
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -10506,11 +10720,40 @@
       "groups": [
         {
           "title": "Properties",
+<<<<<<< HEAD
           "children": [853, 854, 814, 813, 811, 856, 855, 835, 840, 830, 825, 812, 817, 815, 816]
         },
         {
           "title": "Methods",
           "children": [845, 818, 849, 822]
+=======
+          "children": [
+            849,
+            850,
+            810,
+            809,
+            807,
+            852,
+            851,
+            831,
+            836,
+            826,
+            821,
+            808,
+            813,
+            811,
+            812
+          ]
+        },
+        {
+          "title": "Methods",
+          "children": [
+            841,
+            814,
+            845,
+            818
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -10639,7 +10882,13 @@
       "groups": [
         {
           "title": "Constructors",
+<<<<<<< HEAD
           "children": [861]
+=======
+          "children": [
+            857
+          ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -10836,7 +11085,11 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [455, 456, 454]
+                              "children": [
+                                455,
+                                456,
+                                454
+                              ]
                             }
                           ],
                           "sources": [
@@ -10929,7 +11182,10 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [460, 459]
+                              "children": [
+                                460,
+                                459
+                              ]
                             }
                           ],
                           "sources": [
@@ -10976,7 +11232,11 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [452, 457, 461]
+                      "children": [
+                        452,
+                        457,
+                        461
+                      ]
                     }
                   ],
                   "sources": [
@@ -10994,7 +11254,9 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [450]
+              "children": [
+                450
+              ]
             }
           ],
           "sources": [
@@ -11663,7 +11925,27 @@
             {
               "title": "Properties",
               "children": [
+<<<<<<< HEAD
                 692, 677, 676, 689, 679, 669, 668, 687, 675, 688, 683, 678, 667, 666, 674, 690, 691
+=======
+                688,
+                673,
+                672,
+                685,
+                675,
+                666,
+                665,
+                683,
+                671,
+                684,
+                679,
+                674,
+                664,
+                663,
+                670,
+                686,
+                687
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
               ]
             }
           ],
@@ -11802,7 +12084,17 @@
           "groups": [
             {
               "title": "Properties",
+<<<<<<< HEAD
               "children": [698, 701, 699, 700, 697]
+=======
+              "children": [
+                694,
+                697,
+                695,
+                696,
+                693
+              ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -11982,7 +12274,16 @@
           "groups": [
             {
               "title": "Properties",
+<<<<<<< HEAD
               "children": [704, 707, 705, 706]
+=======
+              "children": [
+                700,
+                703,
+                701,
+                702
+              ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -12318,7 +12619,15 @@
               "groups": [
                 {
                   "title": "Properties",
+<<<<<<< HEAD
                   "children": [735, 736, 738]
+=======
+                  "children": [
+                    731,
+                    732,
+                    734
+                  ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -12519,7 +12828,15 @@
               "groups": [
                 {
                   "title": "Properties",
+<<<<<<< HEAD
                   "children": [716, 717, 718]
+=======
+                  "children": [
+                    712,
+                    713,
+                    714
+                  ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -12720,7 +13037,15 @@
               "groups": [
                 {
                   "title": "Properties",
+<<<<<<< HEAD
                   "children": [726, 727, 728]
+=======
+                  "children": [
+                    722,
+                    723,
+                    724
+                  ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -12945,7 +13270,16 @@
           "groups": [
             {
               "title": "Properties",
+<<<<<<< HEAD
               "children": [747, 745, 746, 748]
+=======
+              "children": [
+                743,
+                741,
+                742,
+                744
+              ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -13168,7 +13502,16 @@
           "groups": [
             {
               "title": "Properties",
+<<<<<<< HEAD
               "children": [757, 755, 756, 758]
+=======
+              "children": [
+                753,
+                751,
+                752,
+                754
+              ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -13412,6 +13755,7 @@
   "groups": [
     {
       "title": "Enumerations",
+<<<<<<< HEAD
       "children": [773, 778, 783, 787]
     },
     {
@@ -13429,13 +13773,61 @@
     {
       "title": "Variables",
       "children": [792]
+=======
+      "children": [
+        769,
+        774,
+        779,
+        783
+      ]
+    },
+    {
+      "title": "Classes",
+      "children": [
+        59,
+        463,
+        1,
+        789
+      ]
+    },
+    {
+      "title": "Interfaces",
+      "children": [
+        806,
+        856
+      ]
+    },
+    {
+      "title": "Type Aliases",
+      "children": [
+        448,
+        462,
+        661,
+        691,
+        698,
+        705,
+        729,
+        710,
+        720,
+        739,
+        749,
+        759,
+        768
+      ]
+    },
+    {
+      "title": "Variables",
+      "children": [
+        788
+      ]
+>>>>>>> a500a04fd1 (Replace Supabase with BA)
     }
   ],
   "packageName": "@supabase/realtime-js",
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase Realtime JS SDK</h1>\n\n  <h3 align=\"center\">Send ephemeral messages with <b>Broadcast</b>, track and synchronize state with <b>Presence</b>, and listen to database changes with <b>Postgres Change Data Capture (CDC)</b>.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/realtime\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript\">Reference Docs</a>\n    ·\n    <a href=\"https://multiplayer.dev\">Multiplayer Demo</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/realtime-js)](https://www.npmjs.com/package/@supabase/realtime-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/realtime-js)](https://pkg.pr.new/~/supabase/realtime-js)\n\n</div>\n\n# Overview\n\nThis SDK enables you to use the following Supabase Realtime's features:\n\n- **Broadcast**: send ephemeral messages from client to clients with minimal latency. Use cases include sharing cursor positions between users.\n- **Presence**: track and synchronize shared state across clients with the help of CRDTs. Use cases include tracking which users are currently viewing a specific webpage.\n- **Postgres Change Data Capture (CDC)**: listen for changes in your PostgreSQL database and send them to clients.\n\n# Usage\n\n## Installing the Package\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA Realtime JS SDK</h1>\n\n  <h3 align=\"center\">Send ephemeral messages with <b>Broadcast</b>, track and synchronize state with <b>Presence</b>, and listen to database changes with <b>Postgres Change Data Capture (CDC)</b>.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/realtime\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript\">Reference Docs</a>\n    ·\n    <a href=\"https://multiplayer.dev\">Multiplayer Demo</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/realtime-js)](https://www.npmjs.com/package/@supabase/realtime-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/realtime-js)](https://pkg.pr.new/~/supabase/realtime-js)\n\n</div>\n\n# Overview\n\nThis SDK enables you to use the following BA Realtime's features:\n\n- **Broadcast**: send ephemeral messages from client to clients with minimal latency. Use cases include sharing cursor positions between users.\n- **Presence**: track and synchronize shared state across clients with the help of CRDTs. Use cases include tracking which users are currently viewing a specific webpage.\n- **Postgres Change Data Capture (CDC)**: listen for changes in your PostgreSQL database and send them to clients.\n\n# Usage\n\n## Installing the Package\n\n"
     },
     {
       "kind": "code",
@@ -13475,7 +13867,7 @@
     },
     {
       "kind": "text",
-      "text": " when connecting to your Supabase project.\n- "
+      "text": " when connecting to your BA project.\n- "
     },
     {
       "kind": "code",
@@ -13643,7 +14035,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Development\n\nThis package is part of the [Supabase JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
+      "text": "\n\n## Development\n\nThis package is part of the [BA JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
     },
     {
       "kind": "code",
@@ -13683,7 +14075,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\nThis command uses [\"Are the types wrong?\"](https://github.com/arethetypeswrong/arethetypeswrong.github.io) to verify that the package exports work correctly in different environments. Run this before publishing to ensure your package can be imported correctly by all consumers.\n\n### Testing\n\n**No Docker or Supabase instance required!** The realtime-js tests use mocked WebSocket connections, so they're completely self-contained.\n\n"
+      "text": "\n\nThis command uses [\"Are the types wrong?\"](https://github.com/arethetypeswrong/arethetypeswrong.github.io) to verify that the package exports work correctly in different environments. Run this before publishing to ensure your package can be imported correctly by all consumers.\n\n### Testing\n\n**No Docker or BA instance required!** The realtime-js tests use mocked WebSocket connections, so they're completely self-contained.\n\n"
     },
     {
       "kind": "code",
