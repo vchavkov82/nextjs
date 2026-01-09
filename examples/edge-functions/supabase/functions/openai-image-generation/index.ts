@@ -81,7 +81,7 @@ Deno.serve(async (req) => {
     }
     const generatedImageBlob = new Blob([uint8Array], { type: "image/png" });
 
-    // Upload the generated image to Supabase Storage
+    // Upload the generated image to BA Storage
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") || "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",
@@ -101,7 +101,7 @@ Deno.serve(async (req) => {
       });
 
     if (uploadError) {
-      console.error("Supabase Storage upload error:", uploadError);
+      console.error("BA Storage upload error:", uploadError);
       return new Response(
         JSON.stringify({
           error: "Failed to upload generated image to storage",

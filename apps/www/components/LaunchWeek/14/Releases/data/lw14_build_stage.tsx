@@ -60,7 +60,7 @@ export const days: AdventDay[] = [
     ),
   },
   {
-    title: 'Supabase Auth: Bring Your Own Clerk',
+    title: 'BA Auth: Bring Your Own Clerk',
     // description: '',
     id: 'clerk',
     is_shipped: true,
@@ -127,7 +127,7 @@ export const days: AdventDay[] = [
     ),
   },
   {
-    title: "Keeping Tabs: What's New in Supabase Studio",
+    title: "Keeping Tabs: What's New in BA Studio",
     description: 'And upgrades to AI Assistant, SQL, and Logs',
     id: 'tabs',
     is_shipped: true,

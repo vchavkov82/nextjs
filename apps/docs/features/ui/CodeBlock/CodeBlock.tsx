@@ -78,7 +78,7 @@ export async function CodeBlock({
   const highlighter = await getHighlighter()
   const { tokens } = highlighter.codeToTokens(code, {
     lang: lang || undefined,
-    theme: 'Supabase Theme',
+    theme: 'BA Theme',
   })
 
   return (

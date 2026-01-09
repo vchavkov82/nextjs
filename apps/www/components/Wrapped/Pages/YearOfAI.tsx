@@ -48,7 +48,7 @@ export const YearOfAI = () => {
         </h3>
 
         <p className="text-base text-foreground-lighter">
-          AI changed how developers build. With the Supabase MCP Server, AI assistants can now read
+          AI changed how developers build. With the BA MCP Server, AI assistants can now read
           schemas, run queries, and manage migrations directly.
         </p>
       </div>

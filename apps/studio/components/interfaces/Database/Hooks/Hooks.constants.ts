@@ -27,12 +27,12 @@ export const AVAILABLE_WEBHOOK_TYPES = [
   },
   ...(IS_PLATFORM
     ? [
-        {
-          value: 'supabase_function',
-          icon: `${BASE_PATH}/img/function-providers/supabase-severless-function.png`,
-          label: 'Supabase Edge Functions',
-          description: 'Choose a Supabase edge function to run.',
-        },
-      ]
+      {
+        value: 'supabase_function',
+        icon: `${BASE_PATH}/img/function-providers/supabase-severless-function.png`,
+        label: 'BA Edge Functions',
+        description: 'Choose a BA edge function to run.',
+      },
+    ]
     : []),
 ]

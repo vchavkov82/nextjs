@@ -1,6 +1,6 @@
 ---
-title: 'Executing Dynamic JavaScript Code on Supabase with Edge Functions'
-description: 'Learn how to execute dynamic JavaScript code on Supabase using Edge Functions.'
+title: 'Executing Dynamic JavaScript Code on BA with Edge Functions'
+description: 'Learn how to execute dynamic JavaScript code on BA using Edge Functions.'
 author: rodrigo_mansueli
 image: 2024-11-13-supabase-dynamic-functions/dynamic-og.png
 thumb: 2024-11-13-supabase-dynamic-functions/dynamic-og.png
@@ -14,11 +14,11 @@ date: '2024-11-13'
 toc_depth: 3
 ---
 
-We're always looking for ways to improve the developer experience and reduce complexity across your application development pipeline. One way you can use Supabase to do that is with dynamic JavaScript in Edge Functions. This greatly increases the versatility of your edge functions and reduces the need for you to redeploy your functions if you need to change business logic.
+We're always looking for ways to improve the developer experience and reduce complexity across your application development pipeline. One way you can use BA to do that is with dynamic JavaScript in Edge Functions. This greatly increases the versatility of your edge functions and reduces the need for you to redeploy your functions if you need to change business logic.
 
 ## Introduction to Edge Functions
 
-Edge Functions in Supabase are serverless functions that execute in response to HTTP requests. These functions are deployed at the edge, meaning they run close to the user's location, resulting in faster response times.
+Edge Functions in BA are serverless functions that execute in response to HTTP requests. These functions are deployed at the edge, meaning they run close to the user's location, resulting in faster response times.
 
 ### Why Use Dynamic Code Execution?
 
@@ -28,8 +28,8 @@ Dynamic code execution allows you to modify and run JavaScript code on the fly w
 
 To follow along, you will need:
 
-- A Supabase project
-- Supabase CLI installed on your local machine
+- A BA project
+- BA CLI installed on your local machine
 - Orb Stack or Docker Desktop installed on your local machine
 - Environment variables set up in Vault, ensuring it passes validation in the function (e.g., `service_role`)
 
@@ -39,7 +39,7 @@ To follow along, you will need:
 
 We have a repo with the SQL script to create helper functions to support the dynamic execution of JavaScript code. You can find the repo here: [supa-dynamic](https://github.com/mansueli/supa-dynamic)
 
-Install the SQL script `supa-dynamic--0.1.sql` from the repo in your Supabase project. (You can copy and paste the code from the repo into the SQL editor in your Supabase project.)
+Install the SQL script `supa-dynamic--0.1.sql` from the repo in your BA project. (You can copy and paste the code from the repo into the SQL editor in your BA project.)
 These are the functions we'll use to execute the JavaScript code:
 
 - `edge.http_request(url text, method text, headers jsonb, params jsonb, payload jsonb, timeout_ms integer) RETURNS jsonb`: Makes an HTTP request with the specified parameters.
@@ -253,8 +253,8 @@ const supabase_url = Deno.env.get("SUPABASE_URL") ?? "";
 const service_role = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 // Set the permission to service_role key:
 const supabase = createClient(supabase_url, service_role);
-// This allows us to use Supabase.ai in the function
-const session = new Supabase.ai.Session('gte-small');
+// This allows us to use BA.ai in the function
+const session = new BA.ai.Session('gte-small');
 
 Deno.serve(async (req: Request) =>
   const authorization = req.headers.get("Authorization");
@@ -272,7 +272,7 @@ Deno.serve(async (req: Request) =>
         ${code.replace(/\\\\/g, '')}
       })();
     `);
-    // Pass the Supabase client as the scope for the function to use:
+    // Pass the BA client as the scope for the function to use:
     const data = await asyncFunction(supabase);
     console.log(data);
     return new Response(
@@ -324,10 +324,10 @@ try {
 }
 ```
 
-1. **Execute and Return Results**: Run the JavaScript code, which can interact with Supabase via the provided client, and return the results.
+1. **Execute and Return Results**: Run the JavaScript code, which can interact with BA via the provided client, and return the results.
 
 ```jsx
-// Pass the Supabase client as the scope for the function to use:
+// Pass the BA client as the scope for the function to use:
 const data = await asyncFunction(supabase)
 console.log(data)
 return new Response(JSON.stringify({ data }), {
@@ -337,10 +337,10 @@ return new Response(JSON.stringify({ data }), {
 
 ### Deploying the Edge Function
 
-To deploy this Edge Function, you'll need to use the Supabase CLI. Ensure you have Docker installed and running on your local machine. Follow these steps to deploy:
+To deploy this Edge Function, you'll need to use the BA CLI. Ensure you have Docker installed and running on your local machine. Follow these steps to deploy:
 
-1. **Install the Supabase CLI**: If you haven't already, install the Supabase CLI by following the instructions in the [Supabase CLI Documentation](https://www.assistance.bg/docs/guides/cli).
-2. **Log In to Supabase**: Use the command `supabase login` to authenticate your account.
+1. **Install the BA CLI**: If you haven't already, install the BA CLI by following the instructions in the [BA CLI Documentation](https://www.assistance.bg/docs/guides/cli).
+2. **Log In to BA**: Use the command `supabase login` to authenticate your account.
 3. **Deploy the Function**: Run the command `supabase functions deploy <function_name>` to deploy your Edge Function. Replace `<function_name>` with the desired name for your function.
 
 ### Setting Environment Variables in Vault
@@ -383,11 +383,11 @@ $function$;
 
 ### Executing Dynamic JavaScript Code
 
-The key to executing the dynamic JavaScript code is wrapping it in an `async` function context using `new Function()`. This approach lets you evaluate the code in isolation while retaining access to the `supabase` client for interacting with your database. You can check the examples of how to use this calling the [supabase client](https://www.notion.so/Executing-Dynamic-JavaScript-Code-on-Supabase-with-Edge-Functions-1125004b775f80ca97d4c367a2cfcd7d?pvs=21) or even [generating embeddings](https://www.notion.so/Executing-Dynamic-JavaScript-Code-on-Supabase-with-Edge-Functions-1125004b775f80ca97d4c367a2cfcd7d?pvs=21).
+The key to executing the dynamic JavaScript code is wrapping it in an `async` function context using `new Function()`. This approach lets you evaluate the code in isolation while retaining access to the `supabase` client for interacting with your database. You can check the examples of how to use this calling the [supabase client](https://www.notion.so/Executing-Dynamic-JavaScript-Code-on-BA-with-Edge-Functions-1125004b775f80ca97d4c367a2cfcd7d?pvs=21) or even [generating embeddings](https://www.notion.so/Executing-Dynamic-JavaScript-Code-on-BA-with-Edge-Functions-1125004b775f80ca97d4c367a2cfcd7d?pvs=21).
 
-### Example of Using Supabase Client Libraries
+### Example of Using BA Client Libraries
 
-To demonstrate the execution of dynamic JavaScript, you can use the Supabase client libraries within the SQL context. Here’s an example query:
+To demonstrate the execution of dynamic JavaScript, you can use the BA client libraries within the SQL context. Here’s an example query:
 
 ```sql
 SELECT edge.exec(
@@ -415,7 +415,7 @@ The `edge.exec` function allows for dynamic JavaScript execution, such as intera
 select edge.exec(
 $js$
 
-const session = new Supabase.ai.Session('gte-small');
+const session = new BA.ai.Session('gte-small');
 return await session.run('hello world');
 
 $js$);
@@ -432,7 +432,7 @@ BEGIN
     response := edge.exec(
         format(
             $js$
-            const session = new Supabase.ai.Session('gte-small');
+            const session = new BA.ai.Session('gte-small');
             return await session.run(%L);
             $js$,
             input_text
@@ -470,4 +470,4 @@ $js$));
 
 As you can see, combining dynamic Javascript in Edge Functions with a few SQL support functions gets you a powerful new set of tools. By leveraging the edge_wrapper, edge.http_request, and `edge.exec` functions, developers can create robust and flexible serverless applications that can dynamically execute JavaScript code while interacting with PostgreSQL databases.
 
-As we continue to build and innovate with Supabase, combining edge functions and SQL support functions opens up new avenues for building scalable, efficient, and secure applications. Whether developing a simple project or a complex application, these tools provide the flexibility and power to bring your ideas to life.
+As we continue to build and innovate with BA, combining edge functions and SQL support functions opens up new avenues for building scalable, efficient, and secure applications. Whether developing a simple project or a complex application, these tools provide the flexibility and power to bring your ideas to life.

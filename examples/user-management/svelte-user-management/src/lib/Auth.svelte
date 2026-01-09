@@ -22,7 +22,7 @@
 
 <div class="row flex-center flex">
   <div class="col-6 form-widget" aria-live="polite">
-    <h1 class="header">Supabase + Svelte</h1>
+    <h1 class="header">BA + Svelte</h1>
     <p class="description">Sign in via magic link with your email below</p>
     <form class="form-widget" onsubmit={(e) => { e.preventDefault(); handleLogin(); }}>
       <div>

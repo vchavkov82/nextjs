@@ -69,8 +69,8 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     published_at: '2024-04-15T08:00:00.000-07:00',
     videoId: 'bRtdk8D4X8w',
     videoThumbnail: '/images/launchweek/11/video-cover.jpg',
-    title: 'Supabase is officially launching into General Availability',
-    description: 'Supabase is officially launching into General Availability',
+    title: 'BA is officially launching into General Availability',
+    description: 'BA is officially launching into General Availability',
     links: [
       {
         type: 'xSpace',
@@ -126,10 +126,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/ai-inference-now-available-in-supabase-edge-functions',
     date: '16 April',
     published_at: '2024-04-16T08:00:00.000-07:00',
-    title: 'Supabase Functions now supports AI models',
+    title: 'BA Functions now supports AI models',
     description: (
       <>
-        Supabase Functions now supports <strong>AI models</strong>
+        BA Functions now supports <strong>AI models</strong>
       </>
     ),
     links: [
@@ -148,7 +148,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     ],
     steps: [
       {
-        title: 'Supabase Functions now supports AI models',
+        title: 'BA Functions now supports AI models',
         blog: '#',
         bg_layers: [
           {
@@ -174,10 +174,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/anonymous-sign-ins',
     date: '17 April',
     published_at: '2024-04-17T08:00:00.000-07:00',
-    title: 'Supabase Auth now supports Anonymous sign-ins',
+    title: 'BA Auth now supports Anonymous sign-ins',
     description: (
       <>
-        Supabase Auth now supports <strong>Anonymous sign-ins</strong>
+        BA Auth now supports <strong>Anonymous sign-ins</strong>
       </>
     ),
     links: [
@@ -196,7 +196,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     ],
     steps: [
       {
-        title: 'Supabase Auth now supports Anonymous sign-ins',
+        title: 'BA Auth now supports Anonymous sign-ins',
         blog: '/blog/anonymous-sign-ins',
         bg_layers: [
           {
@@ -222,10 +222,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/s3-compatible-storage',
     date: '18 April',
     published_at: '2024-04-18T08:00:00.000-07:00',
-    title: 'Supabase Storage: now supports the S3 protocol',
+    title: 'BA Storage: now supports the S3 protocol',
     description: (
       <>
-        Supabase Storage: now supports the <strong>S3 protocol</strong>
+        BA Storage: now supports the <strong>S3 protocol</strong>
       </>
     ),
     links: [
@@ -244,7 +244,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     ],
     steps: [
       {
-        title: 'Supabase Storage: now supports the S3 protocol',
+        title: 'BA Storage: now supports the S3 protocol',
         blog: '/blog/s3-compatible-storage',
         bg_layers: [
           {
@@ -270,10 +270,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/security-performance-advisor',
     date: '19 April',
     published_at: '2024-04-19T08:00:00.000-07:00',
-    title: 'Supabase Security Advisor & Performance Advisor',
+    title: 'BA Security Advisor & Performance Advisor',
     description: (
       <>
-        Supabase <strong>Security Advisor</strong> & <strong>Performance Advisor</strong>
+        BA <strong>Security Advisor</strong> & <strong>Performance Advisor</strong>
       </>
     ),
     links: [
@@ -292,7 +292,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     ],
     steps: [
       {
-        title: 'Supabase Storage: now supports the S3 protocol',
+        title: 'BA Storage: now supports the S3 protocol',
         blog: '/blog/s3-compatible-storage',
         bg_layers: [
           {

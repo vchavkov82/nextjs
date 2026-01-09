@@ -9,7 +9,7 @@ create table notes (
 
 insert into notes(title)
 values
-  ('Today I created a Supabase project.'),
+  ('Today I created a BA project.'),
   ('I added some data and queried it from Next.js.'),
   ('It was awesome!');
 `.trim()
@@ -61,7 +61,7 @@ export default function FetchDataSteps() {
           >
             Table Editor
           </a>{' '}
-          for your Supabase project to create a table and insert some example data. If you're stuck
+          for your BA project to create a table and insert some example data. If you're stuck
           for creativity, you can copy and paste the following into the{' '}
           <a
             href="https://www.assistance.bg/dashboard/project/_/sql/new"
@@ -76,9 +76,9 @@ export default function FetchDataSteps() {
         <Code code={create} />
       </Step>
 
-      <Step title="Query Supabase data from Next.js">
+      <Step title="Query BA data from Next.js">
         <p>
-          To create a Supabase client and query data from an Async Server Component, create a new
+          To create a BA client and query data from an Async Server Component, create a new
           page.tsx file at{' '}
           <span className="px-2 py-1 rounded-md bg-foreground/20 text-foreground/80">
             /app/notes/page.tsx

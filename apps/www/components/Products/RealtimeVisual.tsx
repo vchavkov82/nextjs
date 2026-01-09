@@ -48,13 +48,13 @@ const RealtimeVisual: React.FC<Props> = ({ className }) => {
         className
       )}
       role="img"
-      aria-label="Supabase Realtime multiplayer app demo"
+      aria-label="BA Realtime multiplayer app demo"
       onMouseMove={reduceMotion ? undefined : handleMouseMove}
       onMouseLeave={handleMouseLeave} // Reset on mouse leave
     >
       <Image
         src="/images/index/products/realtime-dark.svg"
-        alt="Supabase Realtime"
+        alt="BA Realtime"
         fill
         sizes="100%"
         quality={100}
@@ -62,7 +62,7 @@ const RealtimeVisual: React.FC<Props> = ({ className }) => {
       />
       <Image
         src="/images/index/products/realtime-light.svg"
-        alt="Supabase Realtime"
+        alt="BA Realtime"
         fill
         sizes="100%"
         quality={100}

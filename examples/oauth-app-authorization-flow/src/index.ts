@@ -25,7 +25,7 @@ app.get('/', (c) => {
     <!doctype>
     <html>
       <body>
-        <a href="${AUTHORIZATION_URL}?${params.toString()}"><button>Login with Supabase</button></a>
+        <a href="${AUTHORIZATION_URL}?${params.toString()}"><button>Login with BA</button></a>
       </body>
     </html>
     `)

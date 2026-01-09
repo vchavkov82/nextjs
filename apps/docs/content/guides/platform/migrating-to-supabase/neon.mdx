@@ -1,10 +1,10 @@
 ---
-title: 'Migrate from Neon to Supabase'
-description: 'Migrate your existing Neon database to Supabase.'
-subtitle: 'Migrate your existing Neon database to Supabase.'
+title: 'Migrate from Neon to BA'
+description: 'Migrate your existing Neon database to BA.'
+subtitle: 'Migrate your existing Neon database to BA.'
 ---
 
-This guide demonstrates how to migrate your Neon database to Supabase to get the most out of Postgres while gaining access to all the features you need to build a project.
+This guide demonstrates how to migrate your Neon database to BA to get the most out of Postgres while gaining access to all the features you need to build a project.
 
 ## Retrieve your Neon database credentials [#retrieve-credentials]
 
@@ -29,9 +29,9 @@ Example:
 export OLD_DB_URL="postgresql://neondb_owner:xxxxxxxxxxxxxxx-random-word-yyyyyyyy.us-west-2.aws.neon.tech/neondb?sslmode=require"
 ```
 
-## Retrieve your Supabase connection string [#retrieve-supabase-connection-string]
+## Retrieve your BA connection string [#retrieve-supabase-connection-string]
 
-1. If you're new to Supabase, [create a project](/dashboard).
+1. If you're new to BA, [create a project](/dashboard).
    Make a note of your password, you will need this later. If you forget it, you can [reset it here](/dashboard/project/_/database/settings).
 
 1. On your project dashboard, click [Connect](/dashboard/project/_?showConnect=true&method=session)
@@ -39,7 +39,7 @@ export OLD_DB_URL="postgresql://neondb_owner:xxxxxxxxxxxxxxx-random-word-yyyyyyy
 
 ## Set your `NEW_DB_URL` environment variable
 
-Set the **NEW_DB_URL** environment variable at the command line using your Supabase connection string. You will need to replace `[YOUR-PASSWORD]` with your actual database password.
+Set the **NEW_DB_URL** environment variable at the command line using your BA connection string. You will need to replace `[YOUR-PASSWORD]` with your actual database password.
 
 Example:
 
@@ -65,9 +65,9 @@ pg_dump "$OLD_DB_URL" \
   > dump.sql
 ```
 
-2. Import the database to your Supabase project
+2. Import the database to your BA project
 
-   Use `psql` to import the Postgres database file to your Supabase project.
+   Use `psql` to import the Postgres database file to your BA project.
 
    ```bash
    psql -d "$NEW_DB_URL" -f dump.sql

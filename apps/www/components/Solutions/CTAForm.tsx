@@ -3,7 +3,7 @@ import { cn, TextLink } from 'ui'
 import SectionContainer from '@/components/Layouts/SectionContainer'
 import TalkToPartnershipTeamForm from '@/components/Forms/TalkToPartnershipTeamForm'
 
-interface Props {}
+interface Props { }
 
 const UseCases: FC<Props> = () => {
   return (
@@ -33,9 +33,9 @@ const UseCases: FC<Props> = () => {
 
 const PlatformConnectCallout: FC<{ className?: string }> = ({ className }) => (
   <div className={cn('border rounded-lg p-4 md:p-6 bg-surface-75 flex flex-col gap-2', className)}>
-    <h5>Supabase for Platforms</h5>
+    <h5>BA for Platforms</h5>
     <p className="text-foreground-lighter">
-      White label Supabase backends for your platform or tools.
+      White label BA backends for your platform or tools.
     </p>
     <TextLink url="/docs/guides/integrations/supabase-for-platforms" label="View docs" />
   </div>
@@ -43,9 +43,9 @@ const PlatformConnectCallout: FC<{ className?: string }> = ({ className }) => (
 
 const OAuthConnectCallout: FC<{ className?: string }> = ({ className }) => (
   <div className={cn('border rounded-lg p-4 md:p-6 bg-surface-75 flex flex-col gap-2', className)}>
-    <h5>Connect your app to your user's Supabase org now</h5>
+    <h5>Connect your app to your user's BA org now</h5>
     <p className="text-foreground-lighter">
-      Set up a Supabase OAuth app so you can start interacting with your user's Supabase project.
+      Set up a BA OAuth app so you can start interacting with your user's BA project.
     </p>
     <TextLink
       url="https://www.assistance.bg/docs/guides/integrations/build-a-supabase-integration"

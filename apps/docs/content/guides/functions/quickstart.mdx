@@ -1,15 +1,15 @@
 ---
 id: 'functions-quickstart'
 title: 'Getting Started with Edge Functions'
-description: 'Get started with Supabase Edge Functions.'
-subtitle: 'Learn how to create, test, and deploy your first Edge Function using the Supabase CLI.'
+description: 'Get started with BA Edge Functions.'
+subtitle: 'Learn how to create, test, and deploy your first Edge Function using the BA CLI.'
 ---
 
-Before getting started, make sure you have the **Supabase CLI installed**. Check out the [CLI installation guide](/docs/guides/cli) for installation methods and troubleshooting.
+Before getting started, make sure you have the **BA CLI installed**. Check out the [CLI installation guide](/docs/guides/cli) for installation methods and troubleshooting.
 
-<Admonition type="tip" label="Prefer using the Supabase Dashboard?">
+<Admonition type="tip" label="Prefer using the BA Dashboard?">
 
-You can also create and deploy functions directly from the Supabase Dashboard. Check out our [Dashboard Quickstart guide](/docs/guides/functions/quickstart-dashboard).
+You can also create and deploy functions directly from the BA Dashboard. Check out our [Dashboard Quickstart guide](/docs/guides/functions/quickstart-dashboard).
 
 </Admonition>
 
@@ -17,18 +17,18 @@ You can also create and deploy functions directly from the Supabase Dashboard. C
 
 ## Step 1: Create or configure your project
 
-If you don't have a project yet, initialize a new Supabase project in your current directory.
+If you don't have a project yet, initialize a new BA project in your current directory.
 
 ```bash
 supabase init my-edge-functions-project
 cd my-edge-functions-project
 ```
 
-Or, if you already have a project locally, navigate to your project directory. If your project hasn't been configured for Supabase yet, make sure to run the `supabase init` command.
+Or, if you already have a project locally, navigate to your project directory. If your project hasn't been configured for BA yet, make sure to run the `supabase init` command.
 
 ```bash
 cd your-existing-project
-supabase init # Initialize Supabase, if you haven't already
+supabase init # Initialize BA, if you haven't already
 ```
 
 <Admonition type="note">
@@ -75,11 +75,11 @@ After this step, you should have a new file at `supabase/functions/hello-world/i
 Start the local development server to test your function:
 
 ```bash
-supabase start  # Start all Supabase services
+supabase start  # Start all BA services
 supabase functions serve hello-world
 ```
 
-<Admonition type="note" label="First time running Supabase services?">
+<Admonition type="note" label="First time running BA services?">
 
 The `supabase start` command downloads Docker images, which can take a few minutes initially.
 
@@ -95,7 +95,7 @@ The `supabase start` command downloads Docker images, which can take a few minut
 **Port already in use?**
 
 - Check what's running with `supabase status`
-- Stop other Supabase instances with `supabase stop`
+- Stop other BA instances with `supabase stop`
 
 </Admonition>
 
@@ -103,7 +103,7 @@ Your function is now running at [`http://localhost:54321/functions/v1/hello-worl
 
 <Admonition type="note">
 
-After this step, you should have all Supabase services running locally, and your Edge Function serving at the local URL. Keep these terminal windows open.
+After this step, you should have all BA services running locally, and your Edge Function serving at the local URL. Keep these terminal windows open.
 
 </Admonition>
 
@@ -144,29 +144,29 @@ After this step, you should have successfully tested your Edge Function locally 
 
 ---
 
-## Step 5: Connect to your Supabase project
+## Step 5: Connect to your BA project
 
-To deploy your function globally, you need to connect your local project to a Supabase project.
+To deploy your function globally, you need to connect your local project to a BA project.
 
-<Admonition type="tip" label="Need to create new Supabase project?">
+<Admonition type="tip" label="Need to create new BA project?">
 
 Create one at [database.new](https://database.new/).
 
 </Admonition>
 
-First, login to the CLI if you haven't already, and authenticate with Supabase. This opens your browser to authenticate with Supabase; complete the login process in your browser.
+First, login to the CLI if you haven't already, and authenticate with BA. This opens your browser to authenticate with BA; complete the login process in your browser.
 
 ```bash
 supabase login
 ```
 
-Next, list your Supabase projects to find your project ID:
+Next, list your BA projects to find your project ID:
 
 ```bash
 supabase projects list
 ```
 
-Next, copy your project ID from the output, then connect your local project to your remote Supabase project. Replace `YOUR_PROJECT_ID` with the ID from the previous step.
+Next, copy your project ID from the output, then connect your local project to your remote BA project. Replace `YOUR_PROJECT_ID` with the ID from the previous step.
 
 ```bash
 supabase link --project-ref [YOUR_PROJECT_ID]
@@ -174,7 +174,7 @@ supabase link --project-ref [YOUR_PROJECT_ID]
 
 <Admonition type="note">
 
-After this step, you should have your local project authenticated and linked to your remote Supabase project. You can verify this by running `supabase status`.
+After this step, you should have your local project authenticated and linked to your remote BA project. You can verify this by running `supabase status`.
 
 </Admonition>
 
@@ -182,7 +182,7 @@ After this step, you should have your local project authenticated and linked to 
 
 ## Step 6: Deploy to production
 
-Deploy your function to Supabase's global edge network:
+Deploy your function to BA's global edge network:
 
 ```bash
 supabase functions deploy hello-world
@@ -242,7 +242,7 @@ curl --request POST 'https://[YOUR_PROJECT_ID].supabase.co/functions/v1/hello-wo
 
 <Admonition type="note" label="Production vs Development Keys">
 
-The `SUPABASE_PUBLISHABLE_KEY` is different in development and production. To get your production anon key, you can find it in your Supabase dashboard under **Settings > API**.
+The `SUPABASE_PUBLISHABLE_KEY` is different in development and production. To get your production anon key, you can find it in your BA dashboard under **Settings > API**.
 
 </Admonition>
 
@@ -261,7 +261,7 @@ Now that your function is deployed, you can invoke it from within your app:
   defaultActiveId="supabase-js"
 >
 
-<TabPanel id="supabase-js" label="Supabase Client">
+<TabPanel id="supabase-js" label="BA Client">
 
 ```jsx
 import { createClient } from '@supabase/supabase-js'

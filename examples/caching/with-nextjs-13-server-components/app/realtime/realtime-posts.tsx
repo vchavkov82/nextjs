@@ -5,7 +5,7 @@ import supabase from '../../utils/supabase'
 
 // realtime subscriptions need to be set up client-side
 // this component takes initial posts as props and automatically
-// updates when new posts are inserted into Supabase's `posts` table
+// updates when new posts are inserted into BA's `posts` table
 export default function RealtimePosts({ serverPosts }: { serverPosts: any }) {
   const [posts, setPosts] = useState(serverPosts)
 

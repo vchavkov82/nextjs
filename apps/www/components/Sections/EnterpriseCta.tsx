@@ -8,10 +8,10 @@ const EnterpriseCta = () => {
     <SectionContainer>
       <div className="flex flex-col text-center gap-4 py-8 items-center justify-center">
         <h2 className="heading-gradient text-2xl sm:text-3xl xl:text-4xl">
-          Supabase Vector for Enterprise
+          BA Vector for Enterprise
         </h2>
         <p className="mx-auto text-foreground-lighter w-full">
-          Talk to one of our experts about scaling Supabase Vector{' '}
+          Talk to one of our experts about scaling BA Vector{' '}
           <br className="hidden md:block" />
           and managing embeddings at scale.
         </p>

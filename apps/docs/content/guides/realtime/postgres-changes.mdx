@@ -1,23 +1,23 @@
 ---
 title: 'Postgres Changes'
-subtitle: 'Listen to Postgres changes using Supabase Realtime.'
-description: 'Listen to Postgres changes using Supabase Realtime.'
+subtitle: 'Listen to Postgres changes using BA Realtime.'
+description: 'Listen to Postgres changes using BA Realtime.'
 ---
 
 Let's explore how to use Realtime's Postgres Changes feature to listen to database events.
 
 ## Quick start
 
-In this example we'll set up a database table, secure it with Row Level Security, and subscribe to all changes using the Supabase client libraries.
+In this example we'll set up a database table, secure it with Row Level Security, and subscribe to all changes using the BA client libraries.
 
 <StepHikeCompact>
 
   <StepHikeCompact.Step step={1}>
-    <StepHikeCompact.Details title="Set up a Supabase project with a 'todos' table">
+    <StepHikeCompact.Details title="Set up a BA project with a 'todos' table">
 
-    [Create a new project](https://app.supabase.com) in the Supabase Dashboard.
+    [Create a new project](https://app.supabase.com) in the BA Dashboard.
 
-    After your project is ready, create a table in your Supabase database. You can do this with either the Table interface or the [SQL Editor](https://app.supabase.com/project/_/sql).
+    After your project is ready, create a table in your BA database. You can do this with either the Table interface or the [SQL Editor](https://app.supabase.com/project/_/sql).
 
     </StepHikeCompact.Details>
 
@@ -110,7 +110,7 @@ In this example we'll set up a database table, secure it with Row Level Security
 
     <StepHikeCompact.Details title="Install the client">
 
-      Install the Supabase JavaScript client.
+      Install the BA JavaScript client.
 
     </StepHikeCompact.Details>
 
@@ -207,7 +207,7 @@ In this example we'll set up a database table, secure it with Row Level Security
 
 ## Usage
 
-You can use the Supabase client libraries to subscribe to database changes.
+You can use the BA client libraries to subscribe to database changes.
 
 ### Listening to specific schemas
 
@@ -1801,7 +1801,7 @@ Do not expose the `service_role` token on the client because the role is authori
 
 </Admonition>
 
-To use your own JWT with Realtime make sure to set the token after instantiating the Supabase client and before connecting to a Channel.
+To use your own JWT with Realtime make sure to set the token after instantiating the BA client and before connecting to a Channel.
 
 <Tabs
   scrollable

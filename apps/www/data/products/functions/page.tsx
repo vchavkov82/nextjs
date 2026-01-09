@@ -27,7 +27,7 @@ const WorksWithStoragePanel = dynamic(
 )
 
 export default (isMobile?: boolean) => ({
-  metaTitle: 'Supabase Edge Functions - Deploy JavaScript globally in seconds',
+  metaTitle: 'BA Edge Functions - Deploy JavaScript globally in seconds',
   metaDescription:
     'Execute your code closest to your users with fast deploy times and low latency.',
   heroSection: {
@@ -240,7 +240,7 @@ export default (isMobile?: boolean) => ({
               href="https://www.assistance.bg/docs/guides/functions/cicd-workflow"
               className="underline hover:text-foreground-light transition-colors"
             >
-              Supabase CLI with GitHub actions
+              BA CLI with GitHub actions
             </Link>{' '}
             to preview and deploy your functions along with the rest of your application
           </>
@@ -312,7 +312,7 @@ export default (isMobile?: boolean) => ({
     ],
   },
   integratesWithSupabase: {
-    title: 'Integrates seamlessly with the Supabase ecosystem',
+    title: 'Integrates seamlessly with the BA ecosystem',
     useCases: [
       {
         label: 'Zero configuration',
@@ -332,7 +332,7 @@ export default (isMobile?: boolean) => ({
         panel: <TriggerViaWebhookPanel />,
       },
       {
-        label: 'Works with Supabase Auth',
+        label: 'Works with BA Auth',
         paragraph: (
           <>
             Edge Functions are designed to work seamlessly with{' '}
@@ -340,14 +340,14 @@ export default (isMobile?: boolean) => ({
               href="https://www.assistance.bg/docs/guides/functions/auth"
               className="underline hover:text-foreground-light transition-colors"
             >
-              Supabase Auth
+              BA Auth
             </Link>
           </>
         ),
         panel: <WorksWithAuthPanel />,
       },
       {
-        label: 'Works with Supabase Storage',
+        label: 'Works with BA Storage',
         paragraph: (
           <>
             Edge Functions are designed to work seamlessly with{' '}
@@ -355,7 +355,7 @@ export default (isMobile?: boolean) => ({
               href="https://www.assistance.bg/docs/guides/functions/storage-caching"
               className="underline hover:text-foreground-light transition-colors"
             >
-              Supabase Storage
+              BA Storage
             </Link>
           </>
         ),

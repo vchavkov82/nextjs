@@ -15,7 +15,7 @@ thumb: lw14-automatic-embeddings/automatic-embeddings-thumb.png
 launchweek: '14'
 ---
 
-Today we’re releasing [automatic embeddings](/docs/guides/ai/automatic-embeddings) - automate embedding generation and updates using Supabase [Vector](/modules/vector), [Queues](/modules/queues), [Cron](/modules/cron), and [pg_net](/docs/guides/database/extensions/pg_net) extension, and [Edge Functions](/edge-functions).
+Today we’re releasing [automatic embeddings](/docs/guides/ai/automatic-embeddings) - automate embedding generation and updates using BA [Vector](/modules/vector), [Queues](/modules/queues), [Cron](/modules/cron), and [pg_net](/docs/guides/database/extensions/pg_net) extension, and [Edge Functions](/edge-functions).
 
 Embeddings power features like semantic search, recommendations, and retrieval-augmented generation (RAG). They represent text or other content as high-dimensional vectors. At query time, you convert the input into a vector and compare it to stored vectors to find similar items.
 
@@ -80,7 +80,7 @@ This uses a generated column to call an embedding function on write. It only wor
 
 ### Trigger-based asynchronous embeddings
 
-This is the pattern we use at Supabase. It uses a few common extensions:
+This is the pattern we use at BA. It uses a few common extensions:
 
 - SQL triggers to enqueue work when rows are inserted or updates
 - `pgmq` to enqueue embedding jobs inside a transactional message queue
@@ -88,7 +88,7 @@ This is the pattern we use at Supabase. It uses a few common extensions:
 - `pg_cron` to run workers that process the queue
 - `pgvector` for storing and searching over embeddings
 
-You can inspect the queue, retry failed jobs, and customize the Edge Function used to generate embeddings. You can find the complete reference implementation in the [Supabase Automatic Embeddings Guide](/docs/guides/ai/automatic-embeddings).
+You can inspect the queue, retry failed jobs, and customize the Edge Function used to generate embeddings. You can find the complete reference implementation in the [BA Automatic Embeddings Guide](/docs/guides/ai/automatic-embeddings).
 
 ## How to use automatic embeddings
 
@@ -183,7 +183,7 @@ values
   ('Understanding Vector Databases', 'Vector databases are specialized...');
 ```
 
-This will kick off the embedding pipeline within a Supabase Edge Function. If you were to immediately query for the document you just inserted, the `embedding` column will be empty:
+This will kick off the embedding pipeline within a BA Edge Function. If you were to immediately query for the document you just inserted, the `embedding` column will be empty:
 
 ```sql
 select id, embedding
@@ -200,4 +200,4 @@ Similarly, if you were to come back and update the row you added to the `documen
 You can get started with automatic embeddings today:
 
 - [Read the full implementation details](/docs/guides/ai/automatic-embeddings) in our docs
-- [Get started with Supabase](/dashboard/sign-in?returnTo=%2Fprojects) and try it out today
+- [Get started with BA](/dashboard/sign-in?returnTo=%2Fprojects) and try it out today

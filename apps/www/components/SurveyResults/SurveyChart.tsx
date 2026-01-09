@@ -13,7 +13,7 @@ import { ChevronsUpDown } from 'lucide-react'
 import TwoOptionToggle from '../../../studio/components/ui/TwoOptionToggle'
 import CodeBlock from '@/components/CodeBlock/CodeBlock'
 
-// Separate Supabase client for survey project
+// Separate BA client for survey project
 const externalSupabase = createClient(
   process.env.NEXT_PUBLIC_SURVEY_SUPABASE_URL!,
   process.env.NEXT_PUBLIC_SURVEY_SUPABASE_ANON_KEY!
@@ -372,13 +372,12 @@ export function SurveyChart({
                     <div key={index} className="flex flex-col">
                       {/* Text above the bar */}
                       <div
-                        className={`mb-2 flex flex-row justify-between text-sm font-mono uppercase tracking-widest tabular-nums transition-colors duration-300 ${
-                          shouldAnimateBars
+                        className={`mb-2 flex flex-row justify-between text-sm font-mono uppercase tracking-widest tabular-nums transition-colors duration-300 ${shouldAnimateBars
                             ? item.value === maxValue
                               ? 'text-brand-link dark:text-brand'
                               : 'text-foreground'
                             : 'text-foreground-muted'
-                        }`}
+                          }`}
                       >
                         <span>{item.label}</span>
                         <span>{item.value < 1 ? '<1%' : `${item.value}%`}</span>

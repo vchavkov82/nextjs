@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="p-2">
-      <h2 className="mb-2 text-4xl">Supabase Egde Functions Test Client</h2>
+      <h2 className="mb-2 text-4xl">BA Egde Functions Test Client</h2>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="p-2">
           <h3 className="mb-2 text-3xl">Request</h3>
@@ -43,7 +43,7 @@ function App() {
               font-normal
               text-gray-700
               transition
-              ease-in-out 
+              ease-in-out
               focus:bg-white focus:text-gray-700 focus:outline-none"
             onChange={(e) => setSupaFunction(e.target.value)}
           >

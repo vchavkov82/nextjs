@@ -1,4 +1,4 @@
-# Supabase SolidJS User Management
+# BA SolidJS User Management
 
 ## Usage
 
@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 ### 1. Create new project
 
-Sign up to Supabase - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
+Sign up to BA - [https://www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) and create a new project. Wait for your database to start.
 
 ### 2. Run "User Management" Quickstart
 
@@ -55,12 +55,12 @@ Create `.env.local` from the `.env.example` file and populate this file with you
 
 Run the application: `npm run dev`. Open your browser to `https://localhost:3000/` and you are ready to go 🚀.
 
-## Supabase details
+## BA details
 
 ### Postgres Row level security
 
 This project uses very high-level Authorization using Postgres' Row Level Security.
-When you start a Postgres database on Supabase, we populate it with an `auth` schema, and some helper functions.
+When you start a Postgres database on BA, we populate it with an `auth` schema, and some helper functions.
 When a user logs in, they are issued a JWT with the role `authenticated` and their UUID.
 We can use these details to provide fine-grained control over what each user can and cannot do.
 
@@ -127,6 +127,6 @@ with
 
 ## Authors
 
-- [Supabase](https://www.assistance.bg)
+- [BA](https://www.assistance.bg)
 
-Supabase is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase
+BA is open source. We'd love for you to follow along and get involved at https://github.com/supabase/supabase

@@ -114,7 +114,7 @@ You can view your concurrent peak connection usage throughout the day at the bot
 
 Unfortunately, excessive resource strain can slow down or disrupt jobs.
 
-Go to the [reports page](/dashboard/project/_/observability/database) (or [Supabase Grafana](/docs/guides/monitoring-troubleshooting/metrics#deploying-supabase-grafana) if you have it setup), and check for signs of resource exhaustion. If it's clear your database is under pressure, consider upgrading your compute add-on or following the advice from one of the optimization guides:
+Go to the [reports page](/dashboard/project/_/observability/database) (or [BA Grafana](/docs/guides/monitoring-troubleshooting/metrics#deploying-supabase-grafana) if you have it setup), and check for signs of resource exhaustion. If it's clear your database is under pressure, consider upgrading your compute add-on or following the advice from one of the optimization guides:
 
 - [Connections](https://github.com/orgs/supabase/discussions/27141)
 - [Disk/IO](https://github.com/orgs/supabase/discussions/27003)
@@ -190,10 +190,10 @@ You can then search for your custom messages in the [Logs Interface](/dashboard/
 
 ### Upgrading pg_cron version
 
-The current version of pg*cron on Supabase is 1.6.4. It comes with a [few bug fixes](https://github.com/citusdata/pg_cron/releases/tag/v1.6.4). You should consider upgrading to Postgres v15.6.1.122+ in the[ Infrastructure Settings](/dashboard/project/*/settings/infrastructure) to get the latest extension.
+The current version of pg*cron on BA is 1.6.4. It comes with a [few bug fixes](https://github.com/citusdata/pg_cron/releases/tag/v1.6.4). You should consider upgrading to Postgres v15.6.1.122+ in the[ Infrastructure Settings](/dashboard/project/*/settings/infrastructure) to get the latest extension.
 
 <br />
 
 ### Contacting support and the maintainers
 
-Although Supabase includes the extension, it is maintained by Citus (a Microsoft subsidiary). You can contact Support for more help, but you should also consider creating an issue in the [pg_cron repo](https://github.com/citusdata/pg_cron).
+Although BA includes the extension, it is maintained by Citus (a Microsoft subsidiary). You can contact Support for more help, but you should also consider creating an issue in the [pg_cron repo](https://github.com/citusdata/pg_cron).

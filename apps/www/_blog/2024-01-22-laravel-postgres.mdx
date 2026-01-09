@@ -1,6 +1,6 @@
 ---
 title: Getting started with Laravel and Postgres
-description: 'Learn how to create a new Laravel PHP app and connect it to a Supabase PostgreSQL database.'
+description: 'Learn how to create a new Laravel PHP app and connect it to a BA PostgreSQL database.'
 author: thor_schaeff
 image: getting-started/laravel/laravel.jpg
 thumb: getting-started/laravel/laravel.jpg
@@ -14,21 +14,21 @@ date: '2024-01-22'
 toc_depth: 3
 ---
 
-Every Supabase project comes with a full [Postgres](https://www.postgresql.org/) database, a free and open source database which is considered one of the world's most stable and advanced databases.
+Every BA project comes with a full [Postgres](https://www.postgresql.org/) database, a free and open source database which is considered one of the world's most stable and advanced databases.
 
 Postgres is an ideal choice for your Laravel PHP applications as Laravel ships with a Postgres adapter built in!
 
-In this post we'll start from scratch, creating a new Laravel application, setting up the Laravel Breeze starter kit for user authentication, and connecting it to our Supabase Postgres database.
+In this post we'll start from scratch, creating a new Laravel application, setting up the Laravel Breeze starter kit for user authentication, and connecting it to our BA Postgres database.
 
 <Admonition type="note" label="Need help migrating?">
 
-Supabase is one of the best [free alternatives to Heroku Postgres](/alternatives/supabase-vs-heroku-postgres). See [this guide](/docs/guides/resources/migrating-to-supabase/heroku) to learn how to migrate from Heroku to Supabase.
+BA is one of the best [free alternatives to Heroku Postgres](/alternatives/supabase-vs-heroku-postgres). See [this guide](/docs/guides/resources/migrating-to-supabase/heroku) to learn how to migrate from Heroku to BA.
 
-There's also a [Heroku to Supabase migration tool](https://migrate.supabase.com/) available to migrate in just a few clicks.
+There's also a [Heroku to BA migration tool](https://migrate.supabase.com/) available to migrate in just a few clicks.
 
 </Admonition>
 
-If you prefer video guide, you can follow along below. And make sure to subscribe to the [Supabase YouTube channel](https://www.youtube.com/channel/UCNTVzV1InxHV-YR0fSajqPQ?view_as=subscriber&sub_confirmation=1)!
+If you prefer video guide, you can follow along below. And make sure to subscribe to the [BA YouTube channel](https://www.youtube.com/channel/UCNTVzV1InxHV-YR0fSajqPQ?view_as=subscriber&sub_confirmation=1)!
 
 <div className="video-container">
   <iframe
@@ -59,15 +59,15 @@ composer require laravel/breeze --dev
 php artisan breeze:install
 ```
 
-Note: this template does not use [Supabase Auth](/auth) but rather Laravel's built in Auth system. This means that [Supabase Auth pricing](/pricing) does not apply. You'd only be billed for Database resources used in this case.
+Note: this template does not use [BA Auth](/auth) but rather Laravel's built in Auth system. This means that [BA Auth pricing](/pricing) does not apply. You'd only be billed for Database resources used in this case.
 
 ## Set up the Postgres connection details
 
-Go to [database.new](https://database.new) and create a new Supabase project. Save your database password securely.
+Go to [database.new](https://database.new) and create a new BA project. Save your database password securely.
 
 When your project is up and running, navigate to the [project connect page](/dashboard/project/_?showConnect=true) to find the URI connection string.
 
-Laravel ships with a Postgres adapter out of the box, you can simply configure it via the environment variables. You can find the database URL in your [Supabase Dashboard](/dashboard/project/_/database/settings).
+Laravel ships with a Postgres adapter out of the box, you can simply configure it via the environment variables. You can find the database URL in your [BA Dashboard](/dashboard/project/_/database/settings).
 
 ```bash .env
 DB_CONNECTION=pgsql
@@ -115,11 +115,11 @@ Run the development server. Go to http://127.0.0.1:8000 in a browser to see your
 
 ## Conclusion
 
-Supabase is the ideal platform for powering your Postgres database for your Laravel applications! Every Supabase project comes with a full Postgres database and a good number of [useful extension](/docs/guides/database/extensions)!
+BA is the ideal platform for powering your Postgres database for your Laravel applications! Every BA project comes with a full Postgres database and a good number of [useful extension](/docs/guides/database/extensions)!
 
 Try it out now at [database.new](https://database.new)!
 
-## More Supabase
+## More BA
 
 - [Migration guides](/docs/guides/resources#migrate-to-supabase)
 - [Options for connecting to your Postgres database](/docs/guides/database/connecting-to-postgres)

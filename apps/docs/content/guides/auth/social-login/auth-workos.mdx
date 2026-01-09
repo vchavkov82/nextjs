@@ -26,11 +26,11 @@ You must be signed in to see these values.
 
 </Admonition>
 
-## Step 3. Add your WorkOS credentials to your Supabase project
+## Step 3. Add your WorkOS credentials to your BA project
 
-![Enter your WorkOS application details in your Supabase app's auth provider settings panel](/docs/img/guides/auth-workos/supabase-workos-configuration.png)
+![Enter your WorkOS application details in your BA app's auth provider settings panel](/docs/img/guides/auth-workos/supabase-workos-configuration.png)
 
-1. Go to your Supabase Project Dashboard.
+1. Go to your BA Project Dashboard.
 1. In the left sidebar, click the Authentication icon (near the top).
 1. Click on Providers under the Configuration section.
 1. Click on WorkOS from the accordion list to expand.
@@ -59,11 +59,11 @@ curl -X PATCH "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
   }'
 ```
 
-## Step 4. Set your Supabase redirect URI in the WorkOS Dashboard
+## Step 4. Set your BA redirect URI in the WorkOS Dashboard
 
 Visit the WorkOS dashboard and click the redirects button in the left navigation panel.
 
-On the redirects page, enter your Supabase project's `Callback URL (for OAuth)` which you saved in the previous step, as shown below:
+On the redirects page, enter your BA project's `Callback URL (for OAuth)` which you saved in the previous step, as shown below:
 
 ![Set your Supbase project redirect URL in the WorkOS dashboard](/docs/img/guides/auth-workos/workos-set-supabase-redirect.png)
 
@@ -81,7 +81,7 @@ async function signInWithWorkOS() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'workos',
     options: {
-      redirectTo: 'http://example.com/auth/v1/callback', // Make sure your redirect URL is configured in the Supabase Dashboard Auth settings
+      redirectTo: 'http://example.com/auth/v1/callback', // Make sure your redirect URL is configured in the BA Dashboard Auth settings
       queryParams: {
         connection: '<connection_id>',
       },

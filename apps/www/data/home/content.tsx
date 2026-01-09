@@ -22,7 +22,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
       ),
       subheading: (
         <>
-          Supabase is the Postgres development platform. <br className="hidden md:block" />
+          BA is the Postgres development platform. <br className="hidden md:block" />
           Start your project with a Postgres database, Authentication, instant APIs, Edge Functions,
           Realtime subscriptions, Storage, and Vector embeddings.
         </>
@@ -68,7 +68,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard table editor',
+                title: 'BA dashboard table editor',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-table-editor${isDark ? '' : '-light'}`,
@@ -101,7 +101,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard SQL editor',
+                title: 'BA dashboard SQL editor',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-sql-editor${isDark ? '' : '-light'}`,
@@ -133,7 +133,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
           panel: ({ isDark }: { isDark: boolean }) => (
             <VideoWithHighlights
               video={{
-                title: 'Supabase dashboard Row Level Security',
+                title: 'BA dashboard Row Level Security',
                 sources: [
                   {
                     src: `https://xguihxuzqibwxjnimxev.supabase.co/storage/v1/object/public/videos/marketing/website/supabase-rls${isDark ? '' : '-light'}`,
@@ -168,7 +168,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
     },
     twitterSocialSection: {
       heading: 'Join the community',
-      subheading: 'Discover what our community has to say about their Supabase experience.',
+      subheading: 'Discover what our community has to say about their BA experience.',
       ctas: (
         <Button asChild type="default" size="small" icon={<IconDiscord />}>
           <Link
@@ -178,9 +178,9 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
             onClick={
               sendTelemetryEvent
                 ? () =>
-                    sendTelemetryEvent({
-                      action: 'homepage_discord_button_clicked',
-                    })
+                  sendTelemetryEvent({
+                    action: 'homepage_discord_button_clicked',
+                  })
                 : undefined
             }
           >

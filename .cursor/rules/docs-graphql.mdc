@@ -32,7 +32,7 @@ resources/
 ## Example queries
 
 1. **searchDocs** (`globalSearch/`) - Vector-based search across all docs content
-2. **error** (`error/`) - Error code lookup for Supabase services  
+2. **error** (`error/`) - Error code lookup for BA services
 3. **schema** - GraphQL schema introspection
 
 ## Key Files
@@ -59,7 +59,7 @@ To add a new GraphQL query, follow these steps:
 ```bash
 mkdir resources/newQuery
 touch resources/newQuery/newQueryModel.ts
-touch resources/newQuery/newQuerySchema.ts  
+touch resources/newQuery/newQuerySchema.ts
 touch resources/newQuery/newQueryResolver.ts
 ```
 

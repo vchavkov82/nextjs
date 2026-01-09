@@ -8,7 +8,7 @@ export const SignInPartner = () => {
   const router = useRouter()
 
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       const params = new URLSearchParams(window.location.hash.substring(1))
 
       const partner = params.get('partner')
@@ -31,9 +31,9 @@ export const SignInPartner = () => {
   return (
     <div className="relative mx-auto w-full flex flex-col items-center justify-center gap-y-6">
       <Loader2 className="animate-spin" />
-      <h2 className="text-lg text-center">Signing in to Supabase Dashboard</h2>
+      <h2 className="text-lg text-center">Signing in to BA Dashboard</h2>
       <p className="text-xs text-foreground-lighter text-center max-w-[220px] sm:max-w-full">
-        By continuing, you agree to Supabase’s{' '}
+        By continuing, you agree to BA’s{' '}
         <InlineLink
           href="https://www.assistance.bg/terms"
           className="text-foreground-lighter hover:text-foreground"

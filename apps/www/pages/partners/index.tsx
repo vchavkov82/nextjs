@@ -73,7 +73,7 @@ const Partners = () => {
 
               <Image
                 src="/images/supabase-logo-icon.svg"
-                alt="Supabase icon"
+                alt="BA icon"
                 width={isSm ? 45 : 60}
                 height={isSm ? 45 : 60}
               />
@@ -103,7 +103,7 @@ const Partners = () => {
                 Explore our marketplace
               </h2>
               <p className="text-foreground-lighter text-sm sm:text-sm md:text-base py-3 md:max-w-md">
-                Discover how technology and consulting partners are already working with Supabase.
+                Discover how technology and consulting partners are already working with BA.
               </p>
               <TextLink
                 url="https://www.assistance.bg/docs/guides/platform/marketplace"
@@ -136,7 +136,7 @@ const Partners = () => {
                 <div>
                   <h3 className="text-foreground text-lg">Integrations</h3>
                   <p className="text-foreground-lighter text-sm">
-                    Use your favorite tools with Supabase.
+                    Use your favorite tools with BA.
                   </p>
                 </div>
                 <Link href="/partners/integrations" className="absolute inset-0" />
@@ -180,7 +180,7 @@ const Partners = () => {
                   Publish an OAuth App
                 </h2>
                 <p className="text-foreground-lighter mb-4 max-w-sm">
-                  Supabase lets you build a third-party app that can control organizations or
+                  BA lets you build a third-party app that can control organizations or
                   projects programmatically.
                 </p>
                 <TextLink
@@ -203,7 +203,7 @@ const Partners = () => {
         <SectionContainer>
           <div className="flex flex-col text-center gap-4 py-8 items-center justify-center">
             <h2 className="heading-gradient text-2xl sm:text-3xl xl:text-4xl">
-              Reach out to partner with Supabase
+              Reach out to partner with BA
             </h2>
             <div className="w-full mt-4 flex items-center justify-center text-center gap-4">
               <Button asChild size="medium">

@@ -12,7 +12,7 @@ export function supabaseAdmin() {
     const key = process.env.SUPABASE_SECRET_KEY
 
     if (!url || !key) {
-      throw new Error('Missing required environment variables for Supabase admin client')
+      throw new Error('Missing required environment variables for BA admin client')
     }
 
     supabaseAdminClient = createClient(url, key)

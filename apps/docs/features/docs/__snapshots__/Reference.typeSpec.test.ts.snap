@@ -1270,7 +1270,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.deleteClient": {
@@ -1319,7 +1319,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.getClient": {
@@ -1566,7 +1566,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.listClients": {
@@ -1656,7 +1656,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
@@ -1903,7 +1903,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminOAuthApi.updateClient": {
@@ -2230,7 +2230,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Updates an existing OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Updates an existing OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/supabase-js.GoTrueAdminApi.createUser": {
@@ -6406,7 +6406,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Set to \\"true\\" if you want to automatically detect OAuth grants in the URL and sign in the user.\\nSet to \\"false\\" to disable automatic detection.\\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\\nThe function receives the current URL and parsed parameters, and should return true if the URL\\nshould be processed as a Supabase auth callback, or false to ignore it.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth.",
+                    "shortText": "Set to \\"true\\" if you want to automatically detect OAuth grants in the URL and sign in the user.\\nSet to \\"false\\" to disable automatic detection.\\nSet to a function to provide custom logic for determining if a URL contains a BA auth callback.\\nThe function receives the current URL and parsed parameters, and should return true if the URL\\nshould be processed as a BA auth callback, or false to ignore it.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by BA Auth.",
                     "examples": [
                       {
                         "id": "example-1",
@@ -11057,7 +11057,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.denyAuthorization": {
@@ -11152,7 +11152,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.getAuthorizationDetails": {
@@ -11332,7 +11332,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves details about an OAuth authorization request.\\nUsed to display consent information to the user.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis method returns authorization details including client info, scopes, and user information.\\nIf the response includes a redirect_uri, it means consent was already given - the caller\\nshould handle the redirect manually if needed."
+          "shortText": "Retrieves details about an OAuth authorization request.\\nUsed to display consent information to the user.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis method returns authorization details including client info, scopes, and user information.\\nIf the response includes a redirect_uri, it means consent was already given - the caller\\nshould handle the redirect manually if needed."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.listGrants": {
@@ -11465,7 +11465,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/supabase-js.AuthOAuthServerApi.revokeGrant": {
@@ -11536,7 +11536,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Revokes a user's OAuth grant for a specific client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\\nand invalidates associated refresh tokens."
+          "shortText": "Revokes a user's OAuth grant for a specific client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\\nand invalidates associated refresh tokens."
         }
       },
       "@supabase/supabase-js.GoTrueClient._refreshSession": {
@@ -17463,7 +17463,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Gets the current user details if there is an existing session. This method\\nperforms a network request to the Supabase Auth server, so the returned\\nvalue is authentic and can be used to base authorization rules on."
+          "shortText": "Gets the current user details if there is an existing session. This method\\nperforms a network request to the BA Auth server, so the returned\\nvalue is authentic and can be used to base authorization rules on."
         }
       },
       "@supabase/supabase-js.GoTrueClient.getUserIdentities": {
@@ -22037,7 +22037,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               }
             },
             "comment": {
-              "shortText": "Avoid using an async function inside \`onAuthStateChange\` as you might end\\nup with a deadlock. The callback function runs inside an exclusive lock,\\nso calling other Supabase Client APIs that also try to acquire the\\nexclusive lock, might cause a deadlock. This behavior is observable across\\ntabs. In the next major library version, this behavior will not be supported.\\n\\nReceive a notification every time an auth event happens."
+              "shortText": "Avoid using an async function inside \`onAuthStateChange\` as you might end\\nup with a deadlock. The callback function runs inside an exclusive lock,\\nso calling other BA Client APIs that also try to acquire the\\nexclusive lock, might cause a deadlock. This behavior is observable across\\ntabs. In the next major library version, this behavior will not be supported.\\n\\nReceive a notification every time an auth event happens."
             }
           }
         ]
@@ -37980,7 +37980,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "name": "string"
             },
             "comment": {
-              "shortText": "The unique Supabase URL which is supplied when you create a new project in your project dashboard."
+              "shortText": "The unique BA URL which is supplied when you create a new project in your project dashboard."
             }
           },
           {
@@ -37990,7 +37990,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               "name": "string"
             },
             "comment": {
-              "shortText": "The unique Supabase Key which is supplied when you create a new project in your project dashboard."
+              "shortText": "The unique BA Key which is supplied when you create a new project in your project dashboard."
             }
           },
           {
@@ -38026,7 +38026,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Optional function for using a third-party authentication system with\\nSupabase. The function should return an access token or ID token (JWT) by\\nobtaining it from the third-party auth SDK. Note that this\\nfunction may be called concurrently and many times. Use memoization and\\nlocking techniques if this is not supported by the SDKs.\\n\\nWhen set, the \`auth\` namespace of the Supabase client cannot be used.\\nCreate another client if you wish to use Supabase Auth and third-party\\nauthentications concurrently in the same application."
+                    "shortText": "Optional function for using a third-party authentication system with\\nSupabase. The function should return an access token or ID token (JWT) by\\nobtaining it from the third-party auth SDK. Note that this\\nfunction may be called concurrently and many times. Use memoization and\\nlocking techniques if this is not supported by the SDKs.\\n\\nWhen set, the \`auth\` namespace of the BA client cannot be used.\\nCreate another client if you wish to use BA Auth and third-party\\nauthentications concurrently in the same application."
                   }
                 },
                 {
@@ -38101,7 +38101,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                         },
                         "isOptional": true,
                         "comment": {
-                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\\n\\nCan be set to a function to provide custom logic for determining if a URL contains\\na Supabase auth callback. The function receives the current URL and parsed parameters,\\nand should return true if the URL should be processed as a Supabase auth callback.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\\nalso return access_token in the URL fragment, which would otherwise be incorrectly\\nintercepted by Supabase Auth.",
+                          "shortText": "Detect a session from the URL. Used for OAuth login callbacks. Defaults to true.\\n\\nCan be set to a function to provide custom logic for determining if a URL contains\\na BA auth callback. The function receives the current URL and parsed parameters,\\nand should return true if the URL should be processed as a BA auth callback.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that\\nalso return access_token in the URL fragment, which would otherwise be incorrectly\\nintercepted by BA Auth.",
                           "examples": [
                             {
                               "id": "example-1",
@@ -38221,7 +38221,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to \`public\`."
+                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to \`public\`."
                   }
                 },
                 {
@@ -38848,7 +38848,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Select a schema to query or perform an function (rpc) call.\\n\\nThe schema needs to be on the list of exposed schemas inside Supabase."
+          "shortText": "Select a schema to query or perform an function (rpc) call.\\n\\nThe schema needs to be on the list of exposed schemas inside BA."
         }
       },
       "@supabase/supabase-js.WebSocketFactory.createWebSocket": {
@@ -40832,7 +40832,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Creates a new OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.deleteClient": {
@@ -40881,7 +40881,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Deletes an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.getClient": {
@@ -41128,7 +41128,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Gets details of a specific OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.listClients": {
@@ -41218,7 +41218,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Lists all OAuth clients with optional pagination.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.regenerateClientSecret": {
@@ -41465,7 +41465,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Regenerates the secret for an OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminOAuthApi.updateClient": {
@@ -41792,7 +41792,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Updates an existing OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
+          "shortText": "Updates an existing OAuth client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis function should only be called on a server. Never expose your \`service_role\` key in the browser."
         }
       },
       "@supabase/auth-js.GoTrueAdminApi.createUser": {
@@ -45965,7 +45965,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "Set to \\"true\\" if you want to automatically detect OAuth grants in the URL and sign in the user.\\nSet to \\"false\\" to disable automatic detection.\\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\\nThe function receives the current URL and parsed parameters, and should return true if the URL\\nshould be processed as a Supabase auth callback, or false to ignore it.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth.",
+                    "shortText": "Set to \\"true\\" if you want to automatically detect OAuth grants in the URL and sign in the user.\\nSet to \\"false\\" to disable automatic detection.\\nSet to a function to provide custom logic for determining if a URL contains a BA auth callback.\\nThe function receives the current URL and parsed parameters, and should return true if the URL\\nshould be processed as a BA auth callback, or false to ignore it.\\n\\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by BA Auth.",
                     "examples": [
                       {
                         "id": "example-1",
@@ -50616,7 +50616,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Approves an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.denyAuthorization": {
@@ -50711,7 +50711,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Denies an OAuth authorization request.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.getAuthorizationDetails": {
@@ -50891,7 +50891,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Retrieves details about an OAuth authorization request.\\nUsed to display consent information to the user.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nThis method returns authorization details including client info, scopes, and user information.\\nIf the response includes a redirect_uri, it means consent was already given - the caller\\nshould handle the redirect manually if needed."
+          "shortText": "Retrieves details about an OAuth authorization request.\\nUsed to display consent information to the user.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nThis method returns authorization details including client info, scopes, and user information.\\nIf the response includes a redirect_uri, it means consent was already given - the caller\\nshould handle the redirect manually if needed."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.listGrants": {
@@ -51024,7 +51024,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
+          "shortText": "Lists all OAuth grants that the authenticated user has authorized.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
         }
       },
       "@supabase/auth-js.AuthOAuthServerApi.revokeGrant": {
@@ -51095,7 +51095,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Revokes a user's OAuth grant for a specific client.\\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\\n\\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\\nand invalidates associated refresh tokens."
+          "shortText": "Revokes a user's OAuth grant for a specific client.\\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\\n\\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\\nand invalidates associated refresh tokens."
         }
       },
       "@supabase/auth-js.GoTrueClient.exchangeCodeForSession": {
@@ -53985,7 +53985,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Gets the current user details if there is an existing session. This method\\nperforms a network request to the Supabase Auth server, so the returned\\nvalue is authentic and can be used to base authorization rules on."
+          "shortText": "Gets the current user details if there is an existing session. This method\\nperforms a network request to the BA Auth server, so the returned\\nvalue is authentic and can be used to base authorization rules on."
         }
       },
       "@supabase/auth-js.GoTrueClient.getUserIdentities": {
@@ -58559,7 +58559,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
               }
             },
             "comment": {
-              "shortText": "Avoid using an async function inside \`onAuthStateChange\` as you might end\\nup with a deadlock. The callback function runs inside an exclusive lock,\\nso calling other Supabase Client APIs that also try to acquire the\\nexclusive lock, might cause a deadlock. This behavior is observable across\\ntabs. In the next major library version, this behavior will not be supported.\\n\\nReceive a notification every time an auth event happens."
+              "shortText": "Avoid using an async function inside \`onAuthStateChange\` as you might end\\nup with a deadlock. The callback function runs inside an exclusive lock,\\nso calling other BA Client APIs that also try to acquire the\\nexclusive lock, might cause a deadlock. This behavior is observable across\\ntabs. In the next major library version, this behavior will not be supported.\\n\\nReceive a notification every time an auth event happens."
             }
           }
         ]
@@ -72451,7 +72451,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Select a schema to query or perform an function (rpc) call.\\n\\nThe schema needs to be on the list of exposed schemas inside Supabase."
+          "shortText": "Select a schema to query or perform an function (rpc) call.\\n\\nThe schema needs to be on the list of exposed schemas inside BA."
         }
       },
       "@supabase/postgrest-js.PostgrestError.constructor": {
@@ -84479,7 +84479,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
           }
         },
         "comment": {
-          "shortText": "Get an Iceberg REST Catalog client configured for a specific analytics bucket\\nUse this to perform advanced table and namespace operations within the bucket\\nThe returned client provides full access to the Apache Iceberg REST Catalog API\\nwith the Supabase \`{ data, error }\` pattern for consistent error handling on all operations.\\n\\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
+          "shortText": "Get an Iceberg REST Catalog client configured for a specific analytics bucket\\nUse this to perform advanced table and namespace operations within the bucket\\nThe returned client provides full access to the Apache Iceberg REST Catalog API\\nwith the BA \`{ data, error }\` pattern for consistent error handling on all operations.\\n\\n**Public alpha:** This API is part of a public alpha release and may not be available to your account type.",
           "tags": [
             {
               "tag": "alpha",
@@ -87852,7 +87852,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the BA CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
                   }
                 },
                 {
@@ -88059,7 +88059,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the BA CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
                   }
                 },
                 {
@@ -88276,7 +88276,7 @@ exports[`TS type spec parsing > matches snapshot 1`] = `
                   },
                   "isOptional": true,
                   "comment": {
-                    "shortText": "The number of seconds the asset is cached in the browser and in the Supabase CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
+                    "shortText": "The number of seconds the asset is cached in the browser and in the BA CDN. This is set in the \`Cache-Control: max-age=<seconds>\` header. Defaults to 3600 seconds."
                   }
                 },
                 {

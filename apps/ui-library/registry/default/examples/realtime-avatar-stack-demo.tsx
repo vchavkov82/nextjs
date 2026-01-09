@@ -14,7 +14,7 @@ const roomName = 'realtime-avatar-stack-demo'
 
 const randomUser = getRandomUser()
 
-// This demo is using the supabase.com account to broadcast its data to a realtime channel from a normal Supabase project.
+// This demo is using the supabase.com account to broadcast its data to a realtime channel from a normal BA project.
 // This is a workaround to make the more interactive. Don't use it this way in production (it only works on supabase.com)
 const RealtimeAvatarStackDemo = () => {
   // this demo only works on supabase.com because all apps are on the same domain and share cookies

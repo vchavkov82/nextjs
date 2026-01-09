@@ -15,7 +15,7 @@ function Nextjs() {
 
   const meta_title = 'Next.js Database with Auth, Realtime, Fiel Storage, and more.'
   const meta_description =
-    'Supabase is the fastest way to build performant Next.js apps with Authentication & User Management, Realtime, File Storage on top of PostgreSQL Databases.'
+    'BA is the fastest way to build performant Next.js apps with Authentication & User Management, Realtime, File Storage on top of PostgreSQL Databases.'
 
   return (
     <>

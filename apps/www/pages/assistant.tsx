@@ -53,7 +53,7 @@ const welcomeMessages = [
           </g>
         </svg>
         <p>
-          Welcome Product Hunter! 👋 Thanks for checking out the Supabase Assistant. Let me show you
+          Welcome Product Hunter! 👋 Thanks for checking out the BA Assistant. Let me show you
           what I can do!
         </p>
       </div>
@@ -192,14 +192,14 @@ RETURNS INTEGER AS $$
 DECLARE
   total_points INTEGER;
 BEGIN
-  SELECT 
+  SELECT
     COALESCE(
       (SELECT COUNT(*) * 10 FROM posts WHERE author_id = user_id) + -- 10 points per post
       (SELECT COUNT(*) * 5 FROM comments WHERE user_id = user_id) + -- 5 points per comment
       (SELECT COUNT(*) * 2 FROM post_likes WHERE user_id = user_id), -- 2 points per like
       0
     ) INTO total_points;
-    
+
   RETURN total_points;
 END;
 $$ LANGUAGE plpgsql;`}
@@ -236,16 +236,16 @@ FOR SELECT
 USING (
   team_id IN (
     -- User can see members of teams they belong to
-    SELECT team_id 
-    FROM team_members 
+    SELECT team_id
+    FROM team_members
     WHERE user_id = auth.uid()
   )
-  OR 
+  OR
   -- Team admins can see all members
   EXISTS (
-    SELECT 1 
-    FROM team_admins 
-    WHERE user_id = auth.uid() 
+    SELECT 1
+    FROM team_admins
+    WHERE user_id = auth.uid()
     AND team_id = team_members.team_id
   )
 );`}
@@ -255,7 +255,7 @@ USING (
     ],
   },
   {
-    label: 'SQL to Supabase-js',
+    label: 'SQL to BA-js',
     messages: [
       {
         id: '23',
@@ -272,7 +272,7 @@ USING (
           <SqlSnippet
             id="projects-sql"
             title="Get All Projects SQL"
-            sql={`SELECT 
+            sql={`SELECT
   p.id,
   p.name,
   p.description,
@@ -306,18 +306,18 @@ ORDER BY p.created_at DESC;`}
       {
         id: '25',
         role: 'user' as const,
-        content: 'Can you show me how to do this with the Supabase client?',
+        content: 'Can you show me how to do this with the BA client?',
         createdAt: new Date(),
       },
       {
         id: '26',
         role: 'assistant' as const,
-        content: "Here's how to perform the same query using the Supabase JavaScript client:",
+        content: "Here's how to perform the same query using the BA JavaScript client:",
         createdAt: new Date(),
         render: (
           <SqlSnippet
             id="projects-js"
-            title="Get All Projects with Supabase Client"
+            title="Get All Projects with BA Client"
             sql={`const { data: projects, error } = await supabase
   .from('projects')
   .select(\`
@@ -626,8 +626,8 @@ function Assistant() {
   const [incomingMessages, setIncomingMessages] = useState<Message[]>([])
   const isLoggedIn = useIsLoggedIn()
   const isUserLoading = useIsUserLoading()
-  const meta_title = 'AI | Supabase'
-  const meta_description = 'Build AI-powered applications with Supabase'
+  const meta_title = 'AI | BA'
+  const meta_description = 'Build AI-powered applications with BA'
   const router = useRouter()
   const { query } = router
 

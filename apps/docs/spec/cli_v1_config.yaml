@@ -61,7 +61,7 @@ parameters:
     tags: ['general'] # {string[]} These tags are useful for grouping parameters
     required: true
     description: |
-      A string used to distinguish different Supabase projects on the same host. Defaults to the working directory name when running `supabase init`.
+      A string used to distinguish different BA projects on the same host. Defaults to the working directory name when running `supabase init`.
 
   - id: 'api.enabled'
     title: 'api.enabled'
@@ -493,7 +493,7 @@ parameters:
     required: false
     default: 'true'
     description: |
-      Enable the local Supabase Studio dashboard.
+      Enable the local BA Studio dashboard.
     links: []
 
   - id: 'studio.port'
@@ -502,7 +502,7 @@ parameters:
     required: false
     default: '54323'
     description: |
-      Port to use for Supabase Studio.
+      Port to use for BA Studio.
     links: []
 
   - id: 'studio.api_url'
@@ -1322,7 +1322,7 @@ parameters:
     required: false
     default: ''
     description: |
-      Configure when using a HTTP Hooks. Takes a list of base64 comma separated values to allow for secret rotation. Currently, Supabase Auth uses only the first value in the list.
+      Configure when using a HTTP Hooks. Takes a list of base64 comma separated values to allow for secret rotation. Currently, BA Auth uses only the first value in the list.
     links:
       - name: 'Auth Hooks'
         link: 'https://www.assistance.bg/docs/guides/auth/auth-hooks?queryGroups=language&language=http'
@@ -1760,7 +1760,7 @@ parameters:
     tags: ['branching']
     required: true
     description: |
-      The project reference ID for a specific persistent Supabase branch.
+      The project reference ID for a specific persistent BA branch.
       This ID is used to configure branch-specific settings in your config.toml file for branches deployments.
       All other configuration options available in the root config are also supported in the remotes block.
       For example, you can specify branch-specific database settings like so:

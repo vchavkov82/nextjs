@@ -242,7 +242,7 @@ const PrivilegesPage: NextPageWithLayout = () => {
                     <code className="text-code-inline">supabase db diff</code>.
                   </AlertTitle_Shadcn_>
                   <AlertDescription_Shadcn_>
-                    Column privileges are not supported in the current version of the Supabase CLI.
+                    Column privileges are not supported in the current version of the BA CLI.
                     <br />
                     You will need to manually apply these changes to your database.
                   </AlertDescription_Shadcn_>

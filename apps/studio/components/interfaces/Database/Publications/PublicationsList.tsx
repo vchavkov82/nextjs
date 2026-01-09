@@ -154,19 +154,19 @@ export const PublicationsList = () => {
                         {['supabase_realtime', 'supabase_realtime_messages_publication'].includes(
                           x.name
                         ) && (
-                          <Tooltip>
-                            <TooltipTrigger>
-                              <Info size={14} className="text-foreground-light" />
-                            </TooltipTrigger>
-                            <TooltipContent side="bottom">
-                              {x.name === 'supabase_realtime'
-                                ? 'Managed by Supabase and handles Postgres changes'
-                                : x.name === 'supabase_realtime_messages_publication'
-                                  ? 'Managed by Supabase and handles broadcasts from the database'
-                                  : undefined}
-                            </TooltipContent>
-                          </Tooltip>
-                        )}
+                            <Tooltip>
+                              <TooltipTrigger>
+                                <Info size={14} className="text-foreground-light" />
+                              </TooltipTrigger>
+                              <TooltipContent side="bottom">
+                                {x.name === 'supabase_realtime'
+                                  ? 'Managed by BA and handles Postgres changes'
+                                  : x.name === 'supabase_realtime_messages_publication'
+                                    ? 'Managed by BA and handles broadcasts from the database'
+                                    : undefined}
+                              </TooltipContent>
+                            </Tooltip>
+                          )}
                       </div>
                     </TableCell>
                     <TableCell>{x.id}</TableCell>

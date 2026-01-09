@@ -227,7 +227,7 @@ const calculateChartBucketing = (search: SearchParamsType | Record<string, any>)
  */
 const getEdgeLogsQuery = () => {
   return `
-    select 
+    select
       id,
       el.timestamp as timestamp,
       'edge' as log_type,
@@ -251,7 +251,7 @@ const getEdgeLogsQuery = () => {
     -- ONLY include logs where the path does not include /rest/
     WHERE edge_logs_request.path NOT LIKE '%/rest/%'
     AND edge_logs_request.path NOT LIKE '%/storage/%'
-    
+
   `
 }
 
@@ -260,7 +260,7 @@ const getEdgeLogsQuery = () => {
 // WHERE pathname includes `/rest/`
 const getPostgrestLogsQuery = () => {
   return `
-    select 
+    select
       id,
       el.timestamp as timestamp,
       'postgrest' as log_type,
@@ -291,7 +291,7 @@ const getPostgrestLogsQuery = () => {
  */
 const getPostgresLogsQuery = () => {
   return `
-    select 
+    select
       id,
       pgl.timestamp as timestamp,
       'postgres' as log_type,
@@ -319,8 +319,8 @@ const getPostgresLogsQuery = () => {
  */
 const getEdgeFunctionLogsQuery = () => {
   return `
-    select 
-      id, 
+    select
+      id,
       fel.timestamp as timestamp,
       'edge function' as log_type,
       CAST(fel_response.status_code AS STRING) as status,
@@ -359,8 +359,8 @@ const getEdgeFunctionLogsQuery = () => {
 const getAuthLogsQuery = () => {
   return `
     select
-      al.id as id, 
-      el_in_al.timestamp as timestamp, 
+      al.id as id,
+      el_in_al.timestamp as timestamp,
       'auth' as log_type,
       CAST(el_in_al_response.status_code AS STRING) as status,
       CASE
@@ -375,12 +375,12 @@ const getAuthLogsQuery = () => {
       null as log_count,
       null as logs
     from auth_logs as al
-    cross join unnest(metadata) as al_metadata 
+    cross join unnest(metadata) as al_metadata
     left join (
     edge_logs as el_in_al
-        cross join unnest (metadata) as el_in_al_metadata 
-        cross join unnest (el_in_al_metadata.response) as el_in_al_response 
-        cross join unnest (el_in_al_response.headers) as el_in_al_response_headers 
+        cross join unnest (metadata) as el_in_al_metadata
+        cross join unnest (el_in_al_metadata.response) as el_in_al_response
+        cross join unnest (el_in_al_response.headers) as el_in_al_response_headers
         cross join unnest (el_in_al_metadata.request) as el_in_al_request
     )
     on al_metadata.request_id = el_in_al_response_headers.cf_ray
@@ -389,11 +389,11 @@ const getAuthLogsQuery = () => {
 }
 
 /**
- * Supabase storage logs query fragment
+ * BA storage logs query fragment
  */
 const getSupabaseStorageLogsQuery = () => {
   return `
-    select 
+    select
       id,
       el.timestamp as timestamp,
       'storage' as log_type,
@@ -427,7 +427,7 @@ WITH unified_logs AS (
     ${getPostgrestLogsQuery()}
     union all
     ${getPostgresLogsQuery()}
-    union all 
+    union all
     ${getEdgeFunctionLogsQuery()}
     union all
     ${getAuthLogsQuery()}
@@ -525,7 +525,7 @@ export const getUnifiedLogsCountCTE = () => {
   return `
 WITH unified_logs AS (
     -- Edge logs (non-rest, non-storage)
-    select 
+    select
       id,
       'edge' as log_type,
       CAST(edge_logs_response.status_code AS STRING) as status,
@@ -543,11 +543,11 @@ WITH unified_logs AS (
     cross join unnest(edge_logs_metadata.response) as edge_logs_response
     WHERE edge_logs_request.path NOT LIKE '%/rest/%'
     AND edge_logs_request.path NOT LIKE '%/storage/%'
-    
+
     union all
-    
+
     -- Postgrest logs
-    select 
+    select
       id,
       'postgrest' as log_type,
       CAST(edge_logs_response.status_code AS STRING) as status,
@@ -564,11 +564,11 @@ WITH unified_logs AS (
     cross join unnest(edge_logs_metadata.request) as edge_logs_request
     cross join unnest(edge_logs_metadata.response) as edge_logs_response
     WHERE edge_logs_request.path LIKE '%/rest/%'
-    
+
     union all
-    
+
     -- Postgres logs
-    select 
+    select
       id,
       'postgres' as log_type,
       CAST(pgl_parsed.sql_state_code AS STRING) as status,
@@ -584,11 +584,11 @@ WITH unified_logs AS (
     from postgres_logs as pgl
     cross join unnest(pgl.metadata) as pgl_metadata
     cross join unnest(pgl_metadata.parsed) as pgl_parsed
-    
+
     union all
-    
+
     -- Edge function logs
-    select 
+    select
       id,
       'edge function' as log_type,
       CAST(fel_response.status_code AS STRING) as status,
@@ -604,9 +604,9 @@ WITH unified_logs AS (
     cross join unnest(metadata) as fel_metadata
     cross join unnest(fel_metadata.response) as fel_response
     cross join unnest(fel_metadata.request) as fel_request
-    
+
     union all
-    
+
     -- Auth logs
     select
       al.id as id,
@@ -621,21 +621,21 @@ WITH unified_logs AS (
       el_in_al_request.path as pathname,
       el_in_al_request.method as method
     from auth_logs as al
-    cross join unnest(metadata) as al_metadata 
+    cross join unnest(metadata) as al_metadata
     left join (
     edge_logs as el_in_al
-        cross join unnest (metadata) as el_in_al_metadata 
-        cross join unnest (el_in_al_metadata.response) as el_in_al_response 
-        cross join unnest (el_in_al_response.headers) as el_in_al_response_headers 
+        cross join unnest (metadata) as el_in_al_metadata
+        cross join unnest (el_in_al_metadata.response) as el_in_al_response
+        cross join unnest (el_in_al_response.headers) as el_in_al_response_headers
         cross join unnest (el_in_al_metadata.request) as el_in_al_request
     )
     on al_metadata.request_id = el_in_al_response_headers.cf_ray
     WHERE al_metadata.request_id is not null
-    
+
     union all
-    
+
     -- Storage logs
-    select 
+    select
       id,
       'storage' as log_type,
       CAST(edge_logs_response.status_code AS STRING) as status,
@@ -680,7 +680,7 @@ SELECT dimension, value, count from log_type_count
 
 UNION ALL
 
--- Get counts by method (exclude method filter to avoid self-filtering)  
+-- Get counts by method (exclude method filter to avoid self-filtering)
 SELECT dimension, value, count from method_count
 
 UNION ALL

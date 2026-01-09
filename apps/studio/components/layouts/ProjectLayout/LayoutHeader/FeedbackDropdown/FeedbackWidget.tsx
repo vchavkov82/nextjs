@@ -137,9 +137,9 @@ export const FeedbackWidget = ({ onClose }: FeedbackWidgetProps) => {
       const attachmentUrl =
         screenshot && profile?.gotrue_id
           ? await uploadAttachment({
-              image: screenshot,
-              userId: profile.gotrue_id,
-            })
+            image: screenshot,
+            userId: profile.gotrue_id,
+          })
           : undefined
       const formattedFeedback =
         attachmentUrl !== undefined ? `${feedback}\n\nAttachments:\n${attachmentUrl}` : feedback
@@ -168,7 +168,7 @@ export const FeedbackWidget = ({ onClose }: FeedbackWidgetProps) => {
     <>
       <div className="p-4">
         <TextArea_Shadcn_
-          placeholder="My idea for improving Supabase is..."
+          placeholder="My idea for improving BA is..."
           rows={6}
           value={feedback}
           onChange={(e) => setFeedback(e.target.value)}

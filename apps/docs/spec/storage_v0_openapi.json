@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Supabase Storage API",
-    "description": "API documentation for Supabase Storage",
+    "title": "BA Storage API",
+    "description": "API documentation for BA Storage",
     "version": "0.0.0"
   },
   "components": {
@@ -17,133 +17,282 @@
             ]
           }
         },
-        "required": ["authorization"],
+        "required": [
+          "authorization"
+        ],
         "title": "authSchema"
       },
       "def-1": {
         "type": "object",
         "properties": {
-          "statusCode": { "type": "string" },
-          "error": { "type": "string" },
-          "message": { "type": "string" }
+          "statusCode": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
         },
-        "required": ["statusCode", "error", "message"],
+        "required": [
+          "statusCode",
+          "error",
+          "message"
+        ],
         "title": "errorSchema"
       }
     }
   },
   "paths": {
-    "/metrics": { "get": { "responses": { "200": { "description": "Default Response" } } } },
+    "/metrics": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
+    },
     "/upload/resumable/": {
       "post": {
         "summary": "Handle POST request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "options": {
         "summary": "Handle OPTIONS request for TUS Resumable uploads",
-        "tags": ["resumable"],
+        "tags": [
+          "resumable"
+        ],
         "description": "Handle OPTIONS request for TUS Resumable uploads",
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     },
     "/upload/resumable/{wildcard}": {
       "post": {
         "summary": "Handle POST request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "put": {
         "summary": "Handle PUT request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "patch": {
         "summary": "Handle PATCH request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "delete": {
         "summary": "Handle DELETE request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "options": {
         "summary": "Handle OPTIONS request for TUS Resumable uploads",
-        "tags": ["resumable"],
+        "tags": [
+          "resumable"
+        ],
         "description": "Handle OPTIONS request for TUS Resumable uploads",
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     },
     "/upload/resumable/sign/": {
       "post": {
         "summary": "Handle POST request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "options": {
         "summary": "Handle OPTIONS request for TUS Resumable uploads",
-        "tags": ["resumable"],
+        "tags": [
+          "resumable"
+        ],
         "description": "Handle OPTIONS request for TUS Resumable uploads",
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     },
     "/upload/resumable/sign/{wildcard}": {
       "post": {
         "summary": "Handle POST request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "put": {
         "summary": "Handle PUT request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "patch": {
         "summary": "Handle PATCH request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "delete": {
         "summary": "Handle DELETE request for TUS Resumable uploads",
-        "tags": ["resumable"],
-        "responses": { "200": { "description": "Default Response" } }
+        "tags": [
+          "resumable"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       },
       "options": {
         "summary": "Handle OPTIONS request for TUS Resumable uploads",
-        "tags": ["resumable"],
+        "tags": [
+          "resumable"
+        ],
         "description": "Handle OPTIONS request for TUS Resumable uploads",
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     },
     "/bucket/": {
       "post": {
         "summary": "Create a bucket",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "name": { "type": "string", "examples": ["avatars"] },
-                  "id": { "type": "string", "examples": ["avatars"] },
-                  "public": { "type": "boolean", "examples": [false] },
-                  "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
+                  "name": {
+                    "type": "string",
+                    "examples": [
+                      "avatars"
+                    ]
+                  },
+                  "id": {
+                    "type": "string",
+                    "examples": [
+                      "avatars"
+                    ]
+                  },
+                  "public": {
+                    "type": "boolean",
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "STANDARD",
+                      "ANALYTICS"
+                    ]
+                  },
                   "file_size_limit": {
                     "anyOf": [
-                      { "type": "integer", "examples": [1000], "nullable": true, "minimum": 0 },
-                      { "type": "string", "examples": ["100MB"], "nullable": true }
+                      {
+                        "type": "integer",
+                        "examples": [
+                          1000
+                        ],
+                        "nullable": true,
+                        "minimum": 0
+                      },
+                      {
+                        "type": "string",
+                        "examples": [
+                          "100MB"
+                        ],
+                        "nullable": true
+                      }
                     ]
                   },
                   "allowed_mime_types": {
                     "type": "array",
                     "nullable": true,
-                    "examples": [["image/png", "image/jpg"]],
-                    "items": { "type": "string" }
+                    "examples": [
+                      [
+                        "image/png",
+                        "image/jpg"
+                      ]
+                    ],
+                    "items": {
+                      "type": "string"
+                    }
                   }
                 },
-                "required": ["name"]
+                "required": [
+                  "name"
+                ]
               }
             }
           },
@@ -151,7 +300,9 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -166,8 +317,17 @@
                 "schema": {
                   "description": "Successful response",
                   "type": "object",
-                  "properties": { "name": { "type": "string", "examples": ["avatars"] } },
-                  "required": ["name"]
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "examples": [
+                        "avatars"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
                 }
               }
             }
@@ -176,7 +336,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -184,43 +347,69 @@
       },
       "get": {
         "summary": "Gets all buckets",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "parameters": [
           {
-            "schema": { "type": "integer", "minimum": 1 },
+            "schema": {
+              "type": "integer",
+              "minimum": 1
+            },
             "example": 10,
             "in": "query",
             "name": "limit",
             "required": false
           },
           {
-            "schema": { "type": "integer", "minimum": 0 },
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
             "example": 0,
             "in": "query",
             "name": "offset",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["id", "name", "created_at", "updated_at"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "id",
+                "name",
+                "created_at",
+                "updated_at"
+              ]
+            },
             "in": "query",
             "name": "sortColumn",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["asc", "desc"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "asc",
+                "desc"
+              ]
+            },
             "in": "query",
             "name": "sortOrder",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "my-bucket",
             "in": "query",
             "name": "search",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -238,21 +427,54 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "id": { "type": "string" },
-                      "name": { "type": "string" },
-                      "owner": { "type": "string" },
-                      "owner_id": { "type": "string" },
-                      "public": { "type": "boolean" },
-                      "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
-                      "file_size_limit": { "type": ["null", "integer"] },
-                      "allowed_mime_types": {
-                        "type": ["null", "array"],
-                        "items": { "type": "string" }
+                      "id": {
+                        "type": "string"
                       },
-                      "created_at": { "type": "string" },
-                      "updated_at": { "type": "string" }
+                      "name": {
+                        "type": "string"
+                      },
+                      "owner": {
+                        "type": "string"
+                      },
+                      "owner_id": {
+                        "type": "string"
+                      },
+                      "public": {
+                        "type": "boolean"
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "STANDARD",
+                          "ANALYTICS"
+                        ]
+                      },
+                      "file_size_limit": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "allowed_mime_types": {
+                        "type": [
+                          "null",
+                          "array"
+                        ],
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      }
                     },
-                    "required": ["id", "name"],
+                    "required": [
+                      "id",
+                      "name"
+                    ],
                     "additionalProperties": false,
                     "examples": [
                       {
@@ -260,7 +482,10 @@
                         "name": "bucket2",
                         "public": false,
                         "file_size_limit": 1000000,
-                        "allowed_mime_types": ["image/png", "image/jpeg"],
+                        "allowed_mime_types": [
+                          "image/png",
+                          "image/jpeg"
+                        ],
                         "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                         "created_at": "2021-02-17T04:43:32.770206+00:00",
                         "updated_at": "2021-02-17T04:43:32.770206+00:00"
@@ -277,7 +502,10 @@
                     "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                     "public": false,
                     "file_size_limit": 1000000,
-                    "allowed_mime_types": ["image/png", "image/jpeg"],
+                    "allowed_mime_types": [
+                      "image/png",
+                      "image/jpeg"
+                    ],
                     "created_at": "2021-02-17T04:43:32.770206+00:00",
                     "updated_at": "2021-02-17T04:43:32.770206+00:00"
                   }
@@ -289,7 +517,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -299,17 +530,23 @@
     "/bucket/{bucketId}/empty": {
       "post": {
         "summary": "Empty a bucket",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketId",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -340,7 +577,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -350,17 +590,23 @@
     "/bucket/{bucketId}": {
       "get": {
         "summary": "Get details of a bucket",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketId",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -376,21 +622,54 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "id": { "type": "string" },
-                    "name": { "type": "string" },
-                    "owner": { "type": "string" },
-                    "owner_id": { "type": "string" },
-                    "public": { "type": "boolean" },
-                    "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
-                    "file_size_limit": { "type": ["null", "integer"] },
-                    "allowed_mime_types": {
-                      "type": ["null", "array"],
-                      "items": { "type": "string" }
+                    "id": {
+                      "type": "string"
                     },
-                    "created_at": { "type": "string" },
-                    "updated_at": { "type": "string" }
+                    "name": {
+                      "type": "string"
+                    },
+                    "owner": {
+                      "type": "string"
+                    },
+                    "owner_id": {
+                      "type": "string"
+                    },
+                    "public": {
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "STANDARD",
+                        "ANALYTICS"
+                      ]
+                    },
+                    "file_size_limit": {
+                      "type": [
+                        "null",
+                        "integer"
+                      ]
+                    },
+                    "allowed_mime_types": {
+                      "type": [
+                        "null",
+                        "array"
+                      ],
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
                   },
-                  "required": ["id", "name"],
+                  "required": [
+                    "id",
+                    "name"
+                  ],
                   "additionalProperties": false
                 },
                 "example": {
@@ -398,7 +677,10 @@
                   "name": "bucket2",
                   "public": false,
                   "file_size_limit": 1000000,
-                  "allowed_mime_types": ["image/png", "image/jpeg"],
+                  "allowed_mime_types": [
+                    "image/png",
+                    "image/jpeg"
+                  ],
                   "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                   "created_at": "2021-02-17T04:43:32.770206+00:00",
                   "updated_at": "2021-02-17T04:43:32.770206+00:00"
@@ -410,7 +692,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -418,24 +703,52 @@
       },
       "put": {
         "summary": "Update properties of a bucket",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "public": { "type": "boolean", "examples": [false] },
+                  "public": {
+                    "type": "boolean",
+                    "examples": [
+                      false
+                    ]
+                  },
                   "file_size_limit": {
                     "anyOf": [
-                      { "type": "integer", "examples": [1000], "nullable": true, "minimum": 0 },
-                      { "type": "string", "examples": ["100MB"], "nullable": true }
+                      {
+                        "type": "integer",
+                        "examples": [
+                          1000
+                        ],
+                        "nullable": true,
+                        "minimum": 0
+                      },
+                      {
+                        "type": "string",
+                        "examples": [
+                          "100MB"
+                        ],
+                        "nullable": true
+                      }
                     ]
                   },
                   "allowed_mime_types": {
                     "type": "array",
                     "nullable": true,
-                    "items": { "type": "string", "examples": [["image/png", "image/jpg"]] }
+                    "items": {
+                      "type": "string",
+                      "examples": [
+                        [
+                          "image/png",
+                          "image/jpg"
+                        ]
+                      ]
+                    }
                   }
                 }
               }
@@ -444,7 +757,9 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -460,9 +775,16 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "message": { "type": "string", "examples": ["Successfully updated"] }
+                    "message": {
+                      "type": "string",
+                      "examples": [
+                        "Successfully updated"
+                      ]
+                    }
                   },
-                  "required": ["message"]
+                  "required": [
+                    "message"
+                  ]
                 }
               }
             }
@@ -471,7 +793,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -479,17 +804,23 @@
       },
       "delete": {
         "summary": "Delete a bucket",
-        "tags": ["bucket"],
+        "tags": [
+          "bucket"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketId",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -505,7 +836,12 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "message": { "type": "string", "examples": ["Successfully deleted"] }
+                    "message": {
+                      "type": "string",
+                      "examples": [
+                        "Successfully deleted"
+                      ]
+                    }
                   }
                 }
               }
@@ -515,7 +851,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -525,24 +864,32 @@
     "/object/{bucketName}/{wildcard}": {
       "delete": {
         "summary": "Delete an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -558,7 +905,12 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "message": { "type": "string", "examples": ["Successfully deleted"] }
+                    "message": {
+                      "type": "string",
+                      "examples": [
+                        "Successfully deleted"
+                      ]
+                    }
                   }
                 }
               }
@@ -568,7 +920,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -576,18 +931,24 @@
       },
       "get": {
         "summary": "Get object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "description": "Serve objects",
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -598,31 +959,43 @@
           "4XX": {
             "description": "Default Response",
             "content": {
-              "application/json": { "schema": { "$ref": "#/components/schemas/def-1" } }
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/def-1"
+                }
+              }
             }
           }
         }
       },
       "put": {
         "summary": "Update the object at an existing key",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -638,10 +1011,19 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "Id": { "type": "string" },
-                    "Key": { "type": "string", "examples": ["avatars/folder/cat.png"] }
+                    "Id": {
+                      "type": "string"
+                    },
+                    "Key": {
+                      "type": "string",
+                      "examples": [
+                        "avatars/folder/cat.png"
+                      ]
+                    }
                   },
-                  "required": ["Key"]
+                  "required": [
+                    "Key"
+                  ]
                 }
               }
             }
@@ -650,7 +1032,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -658,24 +1043,32 @@
       },
       "post": {
         "summary": "Upload a new object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -691,10 +1084,19 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "Id": { "type": "string" },
-                    "Key": { "type": "string", "examples": ["avatars/folder/cat.png"] }
+                    "Id": {
+                      "type": "string"
+                    },
+                    "Key": {
+                      "type": "string",
+                      "examples": [
+                        "avatars/folder/cat.png"
+                      ]
+                    }
                   },
-                  "required": ["Key"]
+                  "required": [
+                    "Key"
+                  ]
                 }
               }
             }
@@ -703,7 +1105,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -713,7 +1118,9 @@
     "/object/{bucketName}": {
       "delete": {
         "summary": "Delete multiple objects",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -722,12 +1129,21 @@
                 "properties": {
                   "prefixes": {
                     "type": "array",
-                    "items": { "type": "string" },
+                    "items": {
+                      "type": "string"
+                    },
                     "minItems": 1,
-                    "examples": [["folder/cat.png", "folder/morecats.png"]]
+                    "examples": [
+                      [
+                        "folder/cat.png",
+                        "folder/morecats.png"
+                      ]
+                    ]
                   }
                 },
-                "required": ["prefixes"]
+                "required": [
+                  "prefixes"
+                ]
               }
             }
           },
@@ -735,14 +1151,18 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -760,45 +1180,134 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name": { "type": "string" },
-                      "bucket_id": { "type": "string" },
-                      "owner": { "type": "string" },
-                      "owner_id": { "type": "string" },
-                      "version": { "type": "string" },
-                      "id": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "updated_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "created_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "last_accessed_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+                      "name": {
+                        "type": "string"
+                      },
+                      "bucket_id": {
+                        "type": "string"
+                      },
+                      "owner": {
+                        "type": "string"
+                      },
+                      "owner_id": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "updated_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "created_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "last_accessed_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
                       "metadata": {
                         "anyOf": [
-                          { "type": "object", "additionalProperties": true },
-                          { "type": "null" }
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "user_metadata": {
                         "anyOf": [
-                          { "type": "object", "additionalProperties": true },
-                          { "type": "null" }
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "buckets": {
                         "type": "object",
                         "properties": {
-                          "id": { "type": "string" },
-                          "name": { "type": "string" },
-                          "owner": { "type": "string" },
-                          "owner_id": { "type": "string" },
-                          "public": { "type": "boolean" },
-                          "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
-                          "file_size_limit": { "type": ["null", "integer"] },
-                          "allowed_mime_types": {
-                            "type": ["null", "array"],
-                            "items": { "type": "string" }
+                          "id": {
+                            "type": "string"
                           },
-                          "created_at": { "type": "string" },
-                          "updated_at": { "type": "string" }
+                          "name": {
+                            "type": "string"
+                          },
+                          "owner": {
+                            "type": "string"
+                          },
+                          "owner_id": {
+                            "type": "string"
+                          },
+                          "public": {
+                            "type": "boolean"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "STANDARD",
+                              "ANALYTICS"
+                            ]
+                          },
+                          "file_size_limit": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "allowed_mime_types": {
+                            "type": [
+                              "null",
+                              "array"
+                            ],
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
                         },
-                        "required": ["id", "name"],
+                        "required": [
+                          "id",
+                          "name"
+                        ],
                         "additionalProperties": false,
                         "examples": [
                           {
@@ -806,7 +1315,10 @@
                             "name": "bucket2",
                             "public": false,
                             "file_size_limit": 1000000,
-                            "allowed_mime_types": ["image/png", "image/jpeg"],
+                            "allowed_mime_types": [
+                              "image/png",
+                              "image/jpeg"
+                            ],
                             "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                             "created_at": "2021-02-17T04:43:32.770206+00:00",
                             "updated_at": "2021-02-17T04:43:32.770206+00:00"
@@ -814,7 +1326,9 @@
                         ]
                       }
                     },
-                    "required": ["name"],
+                    "required": [
+                      "name"
+                    ],
                     "additionalProperties": false,
                     "examples": [
                       {
@@ -825,7 +1339,9 @@
                         "updated_at": "2021-04-06T16:30:35.394674+00:00",
                         "created_at": "2021-04-06T16:30:35.394674+00:00",
                         "last_accessed_at": "2021-04-06T16:30:35.394674+00:00",
-                        "metadata": { "size": 1234 }
+                        "metadata": {
+                          "size": 1234
+                        }
                       }
                     ],
                     "title": "objectSchema"
@@ -838,7 +1354,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -848,34 +1367,48 @@
     "/object/authenticated/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Retrieve an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "examples": {
-              "filename.jpg": { "value": "filename.jpg" },
-              "example2": { "value": null }
+              "filename.jpg": {
+                "value": "filename.jpg"
+              },
+              "example2": {
+                "value": null
+              }
             },
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -887,7 +1420,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -897,24 +1433,32 @@
     "/object/upload/sign/{bucketName}/{wildcard}": {
       "post": {
         "summary": "Generate a presigned url to upload an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -936,9 +1480,13 @@
                         "/object/sign/upload/avatars/folder/cat.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL2ZvbGRlci9jYXQucG5nIiwiaWF0IjoxNjE3NzI2MjczLCJleHAiOjE2MTc3MjcyNzN9.s7Gt8ME80iREVxPhH01ZNv8oUn4XtaWsmiQ5csiUHn4"
                       ]
                     },
-                    "token": { "type": "string" }
+                    "token": {
+                      "type": "string"
+                    }
                   },
-                  "required": ["url"]
+                  "required": [
+                    "url"
+                  ]
                 }
               }
             }
@@ -947,7 +1495,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -955,24 +1506,32 @@
       },
       "put": {
         "summary": "Uploads an object via a presigned URL",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJidWNrZXQyL3B1YmxpYy9zYWRjYXQtdXBsb2FkMjMucG5nIiwiaWF0IjoxNjE3NzI2MjczLCJleHAiOjE2MTc3MjcyNzN9.uBQcXzuvXxfw-9WgzWMBfE_nR3VOgpvfZe032sfLSSk",
             "in": "query",
             "name": "token",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -988,9 +1547,16 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "Key": { "type": "string", "examples": ["avatars/folder/cat.png"] }
+                    "Key": {
+                      "type": "string",
+                      "examples": [
+                        "avatars/folder/cat.png"
+                      ]
+                    }
                   },
-                  "required": ["Key"]
+                  "required": [
+                    "Key"
+                  ]
                 }
               }
             }
@@ -999,7 +1565,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1009,26 +1578,65 @@
     "/object/sign/{bucketName}/{wildcard}": {
       "post": {
         "summary": "Generate a presigned url to retrieve an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "expiresIn": { "type": "integer", "minimum": 1, "examples": [60000] },
+                  "expiresIn": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      60000
+                    ]
+                  },
                   "transform": {
                     "type": "object",
                     "properties": {
-                      "height": { "type": "integer", "examples": [100], "minimum": 0 },
-                      "width": { "type": "integer", "examples": [100], "minimum": 0 },
-                      "resize": { "type": "string", "enum": ["cover", "contain", "fill"] },
-                      "format": { "type": "string", "enum": ["origin", "avif"] },
-                      "quality": { "type": "integer", "minimum": 20, "maximum": 100 }
+                      "height": {
+                        "type": "integer",
+                        "examples": [
+                          100
+                        ],
+                        "minimum": 0
+                      },
+                      "width": {
+                        "type": "integer",
+                        "examples": [
+                          100
+                        ],
+                        "minimum": 0
+                      },
+                      "resize": {
+                        "type": "string",
+                        "enum": [
+                          "cover",
+                          "contain",
+                          "fill"
+                        ]
+                      },
+                      "format": {
+                        "type": "string",
+                        "enum": [
+                          "origin",
+                          "avif"
+                        ]
+                      },
+                      "quality": {
+                        "type": "integer",
+                        "minimum": 20,
+                        "maximum": 100
+                      }
                     }
                   }
                 },
-                "required": ["expiresIn"]
+                "required": [
+                  "expiresIn"
+                ]
               }
             }
           },
@@ -1036,21 +1644,27 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1073,7 +1687,9 @@
                       ]
                     }
                   },
-                  "required": ["signedURL"]
+                  "required": [
+                    "signedURL"
+                  ]
                 }
               }
             }
@@ -1082,7 +1698,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1090,34 +1709,48 @@
       },
       "get": {
         "summary": "Retrieve an object via a presigned URL",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "examples": {
-              "filename.jpg": { "value": "filename.jpg" },
-              "example2": { "value": null }
+              "filename.jpg": {
+                "value": "filename.jpg"
+              },
+              "example2": {
+                "value": null
+              }
             },
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJidWNrZXQyL3B1YmxpYy9zYWRjYXQtdXBsb2FkMjMucG5nIiwiaWF0IjoxNjE3NzI2MjczLCJleHAiOjE2MTc3MjcyNzN9.uBQcXzuvXxfw-9WgzWMBfE_nR3VOgpvfZe032sfLSSk",
             "in": "query",
             "name": "token",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1129,7 +1762,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1139,22 +1775,40 @@
     "/object/sign/{bucketName}": {
       "post": {
         "summary": "Generate presigned urls to retrieve objects",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "expiresIn": { "type": "integer", "minimum": 1, "examples": [60000] },
+                  "expiresIn": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      60000
+                    ]
+                  },
                   "paths": {
                     "type": "array",
-                    "items": { "type": "string" },
+                    "items": {
+                      "type": "string"
+                    },
                     "minItems": 1,
-                    "examples": [["folder/cat.png", "folder/morecats.png"]]
+                    "examples": [
+                      [
+                        "folder/cat.png",
+                        "folder/morecats.png"
+                      ]
+                    ]
                   }
                 },
-                "required": ["expiresIn", "paths"]
+                "required": [
+                  "expiresIn",
+                  "paths"
+                ]
               }
             }
           },
@@ -1162,14 +1816,18 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1188,20 +1846,35 @@
                     "type": "object",
                     "properties": {
                       "error": {
-                        "error": ["string", "null"],
+                        "error": [
+                          "string",
+                          "null"
+                        ],
                         "examples": [
                           "Either the object does not exist or you do not have access to it"
                         ]
                       },
-                      "path": { "type": "string", "examples": ["folder/cat.png"] },
+                      "path": {
+                        "type": "string",
+                        "examples": [
+                          "folder/cat.png"
+                        ]
+                      },
                       "signedURL": {
-                        "type": ["null", "string"],
+                        "type": [
+                          "null",
+                          "string"
+                        ],
                         "examples": [
                           "/object/sign/avatars/folder/cat.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL2ZvbGRlci9jYXQucG5nIiwiaWF0IjoxNjE3NzI2MjczLCJleHAiOjE2MTc3MjcyNzN9.s7Gt8ME80iREVxPhH01ZNv8oUn4XtaWsmiQ5csiUHn4"
                         ]
                       }
                     },
-                    "required": ["error", "path", "signedURL"]
+                    "required": [
+                      "error",
+                      "path",
+                      "signedURL"
+                    ]
                   }
                 }
               }
@@ -1211,7 +1884,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1221,19 +1897,45 @@
     "/object/move": {
       "post": {
         "summary": "Moves an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "bucketId": { "type": "string", "examples": ["avatars"] },
-                  "sourceKey": { "type": "string", "examples": ["folder/cat.png"] },
-                  "destinationBucket": { "type": "string", "examples": ["users"] },
-                  "destinationKey": { "type": "string", "examples": ["folder/newcat.png"] }
+                  "bucketId": {
+                    "type": "string",
+                    "examples": [
+                      "avatars"
+                    ]
+                  },
+                  "sourceKey": {
+                    "type": "string",
+                    "examples": [
+                      "folder/cat.png"
+                    ]
+                  },
+                  "destinationBucket": {
+                    "type": "string",
+                    "examples": [
+                      "users"
+                    ]
+                  },
+                  "destinationKey": {
+                    "type": "string",
+                    "examples": [
+                      "folder/newcat.png"
+                    ]
+                  }
                 },
-                "required": ["bucketId", "sourceKey", "destinationKey"]
+                "required": [
+                  "bucketId",
+                  "sourceKey",
+                  "destinationKey"
+                ]
               }
             }
           },
@@ -1241,7 +1943,9 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1257,9 +1961,16 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "message": { "type": "string", "examples": ["Successfully moved"] }
+                    "message": {
+                      "type": "string",
+                      "examples": [
+                        "Successfully moved"
+                      ]
+                    }
                   },
-                  "required": ["message"]
+                  "required": [
+                    "message"
+                  ]
                 }
               }
             }
@@ -1268,7 +1979,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1278,24 +1992,56 @@
     "/object/list-v2/{bucketName}": {
       "post": {
         "summary": "Search for objects under a prefix",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "prefix": { "type": "string", "examples": ["folder/subfolder"] },
-                  "limit": { "type": "integer", "minimum": 1, "examples": [10] },
-                  "cursor": { "type": "string" },
-                  "with_delimiter": { "type": "boolean" },
+                  "prefix": {
+                    "type": "string",
+                    "examples": [
+                      "folder/subfolder"
+                    ]
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      10
+                    ]
+                  },
+                  "cursor": {
+                    "type": "string"
+                  },
+                  "with_delimiter": {
+                    "type": "boolean"
+                  },
                   "sortBy": {
                     "type": "object",
                     "properties": {
-                      "column": { "type": "string", "enum": ["name", "updated_at", "created_at"] },
-                      "order": { "type": "string", "enum": ["asc", "desc"] }
+                      "column": {
+                        "type": "string",
+                        "enum": [
+                          "name",
+                          "updated_at",
+                          "created_at"
+                        ]
+                      },
+                      "order": {
+                        "type": "string",
+                        "enum": [
+                          "asc",
+                          "desc"
+                        ]
+                      }
                     },
-                    "required": ["column"]
+                    "required": [
+                      "column"
+                    ]
                   }
                 }
               }
@@ -1303,47 +2049,103 @@
           }
         },
         "parameters": [
-          { "schema": { "type": "string" }, "in": "path", "name": "bucketName", "required": true }
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "bucketName",
+            "required": true
+          }
         ],
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     },
     "/object/list/{bucketName}": {
       "post": {
         "summary": "Search for objects under a prefix",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "prefix": { "type": "string", "examples": ["folder/subfolder"] },
-                  "limit": { "type": "integer", "minimum": 1, "examples": [10] },
-                  "offset": { "type": "integer", "minimum": 0, "examples": [0] },
+                  "prefix": {
+                    "type": "string",
+                    "examples": [
+                      "folder/subfolder"
+                    ]
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "examples": [
+                      10
+                    ]
+                  },
+                  "offset": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
                   "sortBy": {
                     "type": "object",
                     "properties": {
                       "column": {
                         "type": "string",
-                        "enum": ["name", "updated_at", "created_at", "last_accessed_at"]
+                        "enum": [
+                          "name",
+                          "updated_at",
+                          "created_at",
+                          "last_accessed_at"
+                        ]
                       },
-                      "order": { "type": "string", "enum": ["asc", "desc"] }
+                      "order": {
+                        "type": "string",
+                        "enum": [
+                          "asc",
+                          "desc"
+                        ]
+                      }
                     },
-                    "required": ["column"]
+                    "required": [
+                      "column"
+                    ]
                   },
-                  "search": { "type": "string" }
+                  "search": {
+                    "type": "string"
+                  }
                 },
-                "required": ["prefix"]
+                "required": [
+                  "prefix"
+                ]
               }
             }
           },
           "required": true
         },
         "parameters": [
-          { "schema": { "type": "string" }, "in": "path", "name": "bucketName", "required": true },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
+            "in": "path",
+            "name": "bucketName",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1361,45 +2163,134 @@
                   "items": {
                     "type": "object",
                     "properties": {
-                      "name": { "type": "string" },
-                      "bucket_id": { "type": "string" },
-                      "owner": { "type": "string" },
-                      "owner_id": { "type": "string" },
-                      "version": { "type": "string" },
-                      "id": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "updated_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "created_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                      "last_accessed_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+                      "name": {
+                        "type": "string"
+                      },
+                      "bucket_id": {
+                        "type": "string"
+                      },
+                      "owner": {
+                        "type": "string"
+                      },
+                      "owner_id": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "updated_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "created_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "last_accessed_at": {
+                        "anyOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
                       "metadata": {
                         "anyOf": [
-                          { "type": "object", "additionalProperties": true },
-                          { "type": "null" }
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "user_metadata": {
                         "anyOf": [
-                          { "type": "object", "additionalProperties": true },
-                          { "type": "null" }
+                          {
+                            "type": "object",
+                            "additionalProperties": true
+                          },
+                          {
+                            "type": "null"
+                          }
                         ]
                       },
                       "buckets": {
                         "type": "object",
                         "properties": {
-                          "id": { "type": "string" },
-                          "name": { "type": "string" },
-                          "owner": { "type": "string" },
-                          "owner_id": { "type": "string" },
-                          "public": { "type": "boolean" },
-                          "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
-                          "file_size_limit": { "type": ["null", "integer"] },
-                          "allowed_mime_types": {
-                            "type": ["null", "array"],
-                            "items": { "type": "string" }
+                          "id": {
+                            "type": "string"
                           },
-                          "created_at": { "type": "string" },
-                          "updated_at": { "type": "string" }
+                          "name": {
+                            "type": "string"
+                          },
+                          "owner": {
+                            "type": "string"
+                          },
+                          "owner_id": {
+                            "type": "string"
+                          },
+                          "public": {
+                            "type": "boolean"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "STANDARD",
+                              "ANALYTICS"
+                            ]
+                          },
+                          "file_size_limit": {
+                            "type": [
+                              "null",
+                              "integer"
+                            ]
+                          },
+                          "allowed_mime_types": {
+                            "type": [
+                              "null",
+                              "array"
+                            ],
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
                         },
-                        "required": ["id", "name"],
+                        "required": [
+                          "id",
+                          "name"
+                        ],
                         "additionalProperties": false,
                         "examples": [
                           {
@@ -1407,7 +2298,10 @@
                             "name": "bucket2",
                             "public": false,
                             "file_size_limit": 1000000,
-                            "allowed_mime_types": ["image/png", "image/jpeg"],
+                            "allowed_mime_types": [
+                              "image/png",
+                              "image/jpeg"
+                            ],
                             "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                             "created_at": "2021-02-17T04:43:32.770206+00:00",
                             "updated_at": "2021-02-17T04:43:32.770206+00:00"
@@ -1415,7 +2309,9 @@
                         ]
                       }
                     },
-                    "required": ["name"],
+                    "required": [
+                      "name"
+                    ],
                     "additionalProperties": false,
                     "examples": [
                       {
@@ -1426,7 +2322,9 @@
                         "updated_at": "2021-04-06T16:30:35.394674+00:00",
                         "created_at": "2021-04-06T16:30:35.394674+00:00",
                         "last_accessed_at": "2021-04-06T16:30:35.394674+00:00",
-                        "metadata": { "size": 1234 }
+                        "metadata": {
+                          "size": 1234
+                        }
                       }
                     ]
                   }
@@ -1438,7 +2336,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1448,24 +2349,32 @@
     "/object/info/authenticated/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Retrieve object info",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1477,7 +2386,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1487,18 +2399,24 @@
     "/object/info/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Retrieve object info",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "description": "Object Info",
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1509,7 +2427,11 @@
           "4XX": {
             "description": "Default Response",
             "content": {
-              "application/json": { "schema": { "$ref": "#/components/schemas/def-1" } }
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/def-1"
+                }
+              }
             }
           }
         }
@@ -1518,27 +2440,62 @@
     "/object/copy": {
       "post": {
         "summary": "Copies an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "bucketId": { "type": "string", "examples": ["avatars"] },
-                  "sourceKey": { "type": "string", "examples": ["folder/source.png"] },
-                  "destinationBucket": { "type": "string", "examples": ["users"] },
-                  "destinationKey": { "type": "string", "examples": ["folder/destination.png"] },
+                  "bucketId": {
+                    "type": "string",
+                    "examples": [
+                      "avatars"
+                    ]
+                  },
+                  "sourceKey": {
+                    "type": "string",
+                    "examples": [
+                      "folder/source.png"
+                    ]
+                  },
+                  "destinationBucket": {
+                    "type": "string",
+                    "examples": [
+                      "users"
+                    ]
+                  },
+                  "destinationKey": {
+                    "type": "string",
+                    "examples": [
+                      "folder/destination.png"
+                    ]
+                  },
                   "metadata": {
                     "type": "object",
                     "properties": {
-                      "cacheControl": { "type": "string" },
-                      "mimetype": { "type": "string" }
+                      "cacheControl": {
+                        "type": "string"
+                      },
+                      "mimetype": {
+                        "type": "string"
+                      }
                     }
                   },
-                  "copyMetadata": { "type": "boolean", "examples": [true] }
+                  "copyMetadata": {
+                    "type": "boolean",
+                    "examples": [
+                      true
+                    ]
+                  }
                 },
-                "required": ["sourceKey", "bucketId", "destinationKey"]
+                "required": [
+                  "sourceKey",
+                  "bucketId",
+                  "destinationKey"
+                ]
               }
             }
           },
@@ -1546,7 +2503,9 @@
         },
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1562,47 +2521,143 @@
                   "description": "Successful response",
                   "type": "object",
                   "properties": {
-                    "Id": { "type": "string" },
-                    "Key": { "type": "string", "examples": ["folder/destination.png"] },
-                    "name": { "type": "string" },
-                    "bucket_id": { "type": "string" },
-                    "owner": { "type": "string" },
-                    "owner_id": { "type": "string" },
-                    "version": { "type": "string" },
-                    "id": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                    "updated_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                    "created_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
-                    "last_accessed_at": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+                    "Id": {
+                      "type": "string"
+                    },
+                    "Key": {
+                      "type": "string",
+                      "examples": [
+                        "folder/destination.png"
+                      ]
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "bucket_id": {
+                      "type": "string"
+                    },
+                    "owner": {
+                      "type": "string"
+                    },
+                    "owner_id": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "updated_at": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "created_at": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "last_accessed_at": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
                     "metadata": {
                       "anyOf": [
-                        { "type": "object", "additionalProperties": true },
-                        { "type": "null" }
+                        {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "user_metadata": {
                       "anyOf": [
-                        { "type": "object", "additionalProperties": true },
-                        { "type": "null" }
+                        {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        {
+                          "type": "null"
+                        }
                       ]
                     },
                     "buckets": {
                       "type": "object",
                       "properties": {
-                        "id": { "type": "string" },
-                        "name": { "type": "string" },
-                        "owner": { "type": "string" },
-                        "owner_id": { "type": "string" },
-                        "public": { "type": "boolean" },
-                        "type": { "type": "string", "enum": ["STANDARD", "ANALYTICS"] },
-                        "file_size_limit": { "type": ["null", "integer"] },
-                        "allowed_mime_types": {
-                          "type": ["null", "array"],
-                          "items": { "type": "string" }
+                        "id": {
+                          "type": "string"
                         },
-                        "created_at": { "type": "string" },
-                        "updated_at": { "type": "string" }
+                        "name": {
+                          "type": "string"
+                        },
+                        "owner": {
+                          "type": "string"
+                        },
+                        "owner_id": {
+                          "type": "string"
+                        },
+                        "public": {
+                          "type": "boolean"
+                        },
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "STANDARD",
+                            "ANALYTICS"
+                          ]
+                        },
+                        "file_size_limit": {
+                          "type": [
+                            "null",
+                            "integer"
+                          ]
+                        },
+                        "allowed_mime_types": {
+                          "type": [
+                            "null",
+                            "array"
+                          ],
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
                       },
-                      "required": ["id", "name"],
+                      "required": [
+                        "id",
+                        "name"
+                      ],
                       "additionalProperties": false,
                       "examples": [
                         {
@@ -1610,7 +2665,10 @@
                           "name": "bucket2",
                           "public": false,
                           "file_size_limit": 1000000,
-                          "allowed_mime_types": ["image/png", "image/jpeg"],
+                          "allowed_mime_types": [
+                            "image/png",
+                            "image/jpeg"
+                          ],
                           "owner": "4d56e902-f0a0-4662-8448-a4d9e643c142",
                           "created_at": "2021-02-17T04:43:32.770206+00:00",
                           "updated_at": "2021-02-17T04:43:32.770206+00:00"
@@ -1618,7 +2676,9 @@
                       ]
                     }
                   },
-                  "required": ["Key"]
+                  "required": [
+                    "Key"
+                  ]
                 }
               }
             }
@@ -1627,7 +2687,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1637,27 +2700,39 @@
     "/object/public/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Retrieve an object from a public bucket",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "examples": {
-              "filename.jpg": { "value": "filename.jpg" },
-              "example2": { "value": null }
+              "filename.jpg": {
+                "value": "filename.jpg"
+              },
+              "example2": {
+                "value": null
+              }
             },
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1669,7 +2744,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1679,18 +2757,24 @@
     "/object/info/public/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Get object info",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "description": "returns object info",
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1701,7 +2785,11 @@
           "4XX": {
             "description": "Default Response",
             "content": {
-              "application/json": { "schema": { "$ref": "#/components/schemas/def-1" } }
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/def-1"
+                }
+              }
             }
           }
         }
@@ -1710,56 +2798,87 @@
     "/render/image/authenticated/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Render an authenticated image with the given transformations",
-        "tags": ["transformation"],
+        "tags": [
+          "transformation"
+        ],
         "parameters": [
           {
-            "schema": { "type": "integer", "minimum": 0 },
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
             "example": 100,
             "in": "query",
             "name": "height",
             "required": false
           },
           {
-            "schema": { "type": "integer", "minimum": 0 },
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
             "example": 100,
             "in": "query",
             "name": "width",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["cover", "contain", "fill"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "cover",
+                "contain",
+                "fill"
+              ]
+            },
             "in": "query",
             "name": "resize",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["origin", "avif"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "origin",
+                "avif"
+              ]
+            },
             "in": "query",
             "name": "format",
             "required": false
           },
           {
-            "schema": { "type": "integer", "minimum": 20, "maximum": 100 },
+            "schema": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 100
+            },
             "in": "query",
             "name": "quality",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "filename.png",
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1771,7 +2890,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1781,31 +2903,41 @@
     "/render/image/sign/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Render an authenticated image with the given transformations",
-        "tags": ["transformation"],
+        "tags": [
+          "transformation"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJidWNrZXQyL3B1YmxpYy9zYWRjYXQtdXBsb2FkMjMucG5nIiwiaWF0IjoxNjE3NzI2MjczLCJleHAiOjE2MTc3MjcyNzN9.uBQcXzuvXxfw-9WgzWMBfE_nR3VOgpvfZe032sfLSSk",
             "in": "query",
             "name": "token",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "filename.png",
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1817,7 +2949,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1827,56 +2962,87 @@
     "/render/image/public/{bucketName}/{wildcard}": {
       "get": {
         "summary": "Render a public image with the given transformations",
-        "tags": ["transformation"],
+        "tags": [
+          "transformation"
+        ],
         "parameters": [
           {
-            "schema": { "type": "integer", "minimum": 0 },
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
             "example": 100,
             "in": "query",
             "name": "height",
             "required": false
           },
           {
-            "schema": { "type": "integer", "minimum": 0 },
+            "schema": {
+              "type": "integer",
+              "minimum": 0
+            },
             "example": 100,
             "in": "query",
             "name": "width",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["cover", "contain", "fill"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "cover",
+                "contain",
+                "fill"
+              ]
+            },
             "in": "query",
             "name": "resize",
             "required": false
           },
           {
-            "schema": { "type": "string", "enum": ["origin", "avif"] },
+            "schema": {
+              "type": "string",
+              "enum": [
+                "origin",
+                "avif"
+              ]
+            },
             "in": "query",
             "name": "format",
             "required": false
           },
           {
-            "schema": { "type": "integer", "minimum": 20, "maximum": 100 },
+            "schema": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 100
+            },
             "in": "query",
             "name": "quality",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "filename.png",
             "in": "query",
             "name": "download",
             "required": false
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
@@ -1888,7 +3054,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/def-1", "description": "Error response" }
+                "schema": {
+                  "$ref": "#/components/schemas/def-1",
+                  "description": "Error response"
+                }
               }
             }
           }
@@ -1896,47 +3065,172 @@
       }
     },
     "/s3/{Bucket}/{wildcard}": {
-      "put": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "post": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "delete": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "get": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } }
+      "put": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
     },
     "/s3/{Bucket}": {
-      "delete": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "put": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "post": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "get": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } }
+      "delete": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
     },
     "/s3/{Bucket}/": {
-      "delete": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "put": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "post": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } },
-      "get": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } }
+      "delete": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
     },
     "/s3/": {
-      "get": { "tags": ["s3"], "responses": { "200": { "description": "Default Response" } } }
+      "get": {
+        "tags": [
+          "s3"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
+      }
     },
     "/cdn/{bucketName}/{wildcard}": {
       "delete": {
         "summary": "Purge cache for an object",
-        "tags": ["object"],
+        "tags": [
+          "object"
+        ],
         "parameters": [
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "avatars",
             "in": "path",
             "name": "bucketName",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "folder/cat.png",
             "in": "path",
             "name": "*",
             "required": true
           },
           {
-            "schema": { "type": "string" },
+            "schema": {
+              "type": "string"
+            },
             "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs",
             "in": "header",
             "name": "authorization",
@@ -1951,7 +3245,14 @@
                 "schema": {
                   "description": "Successful response",
                   "type": "object",
-                  "properties": { "message": { "type": "string", "examples": ["success"] } }
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "examples": [
+                        "success"
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -1960,7 +3261,10 @@
             "description": "Error response",
             "content": {
               "application/json": {
-                "schema": { "description": "Error response", "$ref": "#/components/schemas/def-1" }
+                "schema": {
+                  "description": "Error response",
+                  "$ref": "#/components/schemas/def-1"
+                }
               }
             }
           }
@@ -1970,15 +3274,34 @@
     "/health/": {
       "get": {
         "summary": "healthcheck",
-        "responses": { "200": { "description": "Default Response" } }
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        }
       }
     }
   },
   "tags": [
-    { "name": "object", "description": "Object end-points" },
-    { "name": "bucket", "description": "Bucket end-points" },
-    { "name": "s3", "description": "S3 end-points" },
-    { "name": "transformation", "description": "Image transformation" },
-    { "name": "resumable", "description": "Resumable Upload end-points" }
+    {
+      "name": "object",
+      "description": "Object end-points"
+    },
+    {
+      "name": "bucket",
+      "description": "Bucket end-points"
+    },
+    {
+      "name": "s3",
+      "description": "S3 end-points"
+    },
+    {
+      "name": "transformation",
+      "description": "Image transformation"
+    },
+    {
+      "name": "resumable",
+      "description": "Resumable Upload end-points"
+    }
   ]
 }

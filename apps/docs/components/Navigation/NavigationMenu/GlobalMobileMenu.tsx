@@ -136,7 +136,7 @@ const GlobalMobileMenu = ({ open, setOpen }: Props) => {
                   priority
                   width={96}
                   height={24}
-                  alt="Supabase Logo"
+                  alt="BA Logo"
                 />
                 <Image
                   className="cursor-pointer block dark:hidden"
@@ -144,7 +144,7 @@ const GlobalMobileMenu = ({ open, setOpen }: Props) => {
                   priority
                   width={96}
                   height={24}
-                  alt="Supabase Logo"
+                  alt="BA Logo"
                 />
                 <span className="font-mono text-sm font-medium text-brand-link mb-px">DOCS</span>
               </Link>

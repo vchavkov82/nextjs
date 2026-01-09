@@ -1,5 +1,5 @@
 ---
-title: 'New Observability Features in Supabase'
+title: 'New Observability Features in BA'
 description: 'New unified logging, advanced reports, and AI debugging capabilities.'
 categories:
   - product
@@ -15,27 +15,27 @@ thumb: launch-week-15/day-4-o11y-day/thumb.png
 launchweek: '15'
 ---
 
-We are starting to add OpenTelemetry support to [all](https://github.com/supabase/storage/pull/494) [our](https://github.com/supabase/auth/pull/679) [core](https://github.com/supabase/edge-runtime/pull/554) [products](https://github.com/supabase/realtime/commit/c9683f3f5f94bd2e37494f02c1f4415551e96e5b) and [our Telemetry server](https://github.com/Logflare/logflare/pulls?q=is%3Apr+otel+sort%3Acreated-asc). OpenTelemetry (OTel) standardizes logs, metrics, and traces in a vendor-agnostic format, so you can ingest data into tools like Datadog, Honeycomb, or any monitoring solution you already use. While you'll still have the freedom to bring your own observability stack, we're preparing to surface this data natively in the Supabase dashboard.
+We are starting to add OpenTelemetry support to [all](https://github.com/supabase/storage/pull/494) [our](https://github.com/supabase/auth/pull/679) [core](https://github.com/supabase/edge-runtime/pull/554) [products](https://github.com/supabase/realtime/commit/c9683f3f5f94bd2e37494f02c1f4415551e96e5b) and [our Telemetry server](https://github.com/Logflare/logflare/pulls?q=is%3Apr+otel+sort%3Acreated-asc). OpenTelemetry (OTel) standardizes logs, metrics, and traces in a vendor-agnostic format, so you can ingest data into tools like Datadog, Honeycomb, or any monitoring solution you already use. While you'll still have the freedom to bring your own observability stack, we're preparing to surface this data natively in the BA dashboard.
 
 Today, we are announcing:
 
 - New Logging Interface (coming soon!)
 - Advanced Product Reports
-- Supabase AI Assistant with debugging capabilities (coming soon!)
+- BA AI Assistant with debugging capabilities (coming soon!)
 
 <Admonition type='note'>
 
-If you would like early access to the new Logging Interface and Supabase AI Assistant with debugging capabilities please sign up [here](https://forms.supabase.com/unified-logs-signup).
+If you would like early access to the new Logging Interface and BA AI Assistant with debugging capabilities please sign up [here](https://forms.supabase.com/unified-logs-signup).
 
 </Admonition>
 
-These updates mark the first step toward unified, end-to-end observability. You won't get the full OTel visualization just yet, but with these foundations in place, you'll soon be able to trace, analyze errors and performance issues, and troubleshoot your entire stack without leaving Supabase.
+These updates mark the first step toward unified, end-to-end observability. You won't get the full OTel visualization just yet, but with these foundations in place, you'll soon be able to trace, analyze errors and performance issues, and troubleshoot your entire stack without leaving BA.
 
 <div className="video-container mb-8">
   <iframe
     className="w-full"
     src="https://www.youtube-nocookie.com/embed/pLto2PD4-O8"
-    title="Supabase Observability Day"
+    title="BA Observability Day"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
     allowfullscreen
   />
@@ -43,9 +43,9 @@ These updates mark the first step toward unified, end-to-end observability. You 
 
 ## New logging Interface
 
-Supabase is a collection of seamlessly integrated services. Storage talks to Postgres via the dedicated connection pooler. Edge Functions can talk to Auth and Realtime. If Storage uploads fail, you must determine whether the problem lies with the Storage server, the dedicated connection pooler, or the database. Previously, pinpointing the root cause meant jumping between multiple log streams.
+BA is a collection of seamlessly integrated services. Storage talks to Postgres via the dedicated connection pooler. Edge Functions can talk to Auth and Realtime. If Storage uploads fail, you must determine whether the problem lies with the Storage server, the dedicated connection pooler, or the database. Previously, pinpointing the root cause meant jumping between multiple log streams.
 
-Now, there is one interleaved stream of logs across all services. You can trace a single request across the entire Supabase stack. No more jumping between tabs to diagnose errors.
+Now, there is one interleaved stream of logs across all services. You can trace a single request across the entire BA stack. No more jumping between tabs to diagnose errors.
 
 <Img
   wide
@@ -94,13 +94,13 @@ Free users get a basic set of metrics for all products, while some of the advanc
 
 Try out the new reports [here](/dashboard/project/_/observability/api-overview).
 
-## Supabase AI Assistant with debugging capabilities
+## BA AI Assistant with debugging capabilities
 
-The Supabase AI Assistant now offers powerful new debugging capabilities, making it easier to identify and resolve issues across your stack.
+The BA AI Assistant now offers powerful new debugging capabilities, making it easier to identify and resolve issues across your stack.
 
 You can now ask the Assistant to:
 
-- Retrieve logs for any Supabase product
+- Retrieve logs for any BA product
 - Analyze log volume over time to identify spikes
 - Drill into specific time windows to investigate anomalies
 

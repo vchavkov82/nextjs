@@ -121,7 +121,7 @@ const LW15TicketPage = ({
       <div className="flex flex-col h-full justify-between gap-6 lg:gap-20">
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-full w-full hidden lg:flex items-center justify-between h-[60px] md:h-[90px] lg:h-[120px] gap-4">
-            <h1 className="sr-only">Supabase Launch Week 15</h1>
+            <h1 className="sr-only">BA Launch Week 15</h1>
             <LWSVG className="h-full w-auto" />
             <FifteenSVG className="h-full w-auto" />
           </div>

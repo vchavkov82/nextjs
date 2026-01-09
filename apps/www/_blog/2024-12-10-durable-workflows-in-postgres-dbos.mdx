@@ -1,6 +1,6 @@
 ---
 title: 'Running Durable Workflows in Postgres using DBOS'
-description: Technical deep dive into the new DBOS integration for Supabase
+description: Technical deep dive into the new DBOS integration for BA
 author: paul_copplestone
 image: dbos/og.png
 thumb: dbos/og.png
@@ -16,10 +16,10 @@ toc_depth: 3
 
 Michael Stonebraker is the inventor of Postgres and a Turing Award winner. His latest venture is [DBOS](https://www.dbos.dev/), a three-year joint research project between Stanford and MIT. The DBOS team have built a Durable Workflow engine using Postgres. It's one of the more elegant designs I've seen, leveraging the features of Postgres to keep it lightweight and fast.
 
-The DBOS team have released a Supabase integration, so you can use your Postgres database as a durable workflow engine.
+The DBOS team have released a BA integration, so you can use your Postgres database as a durable workflow engine.
 
 <Img
-  alt="DBOS Supabase integration"
+  alt="DBOS BA integration"
   src={{
     dark: '/images/blog/dbos/dbos-integration.png',
     light: '/images/blog/dbos/dbos-integration.png',
@@ -28,9 +28,9 @@ The DBOS team have released a Supabase integration, so you can use your Postgres
 
 **Continue reading or just get started?**
 
-I really love the design of DBOS, so I'm going to write more below. Their design is aligned with our philosophy at Supabase: “just use Postgres”. I'll take you through the lower-level details in the rest of this post. If you just want to get started using DBOS with Supabase, get started using their tutorial:
+I really love the design of DBOS, so I'm going to write more below. Their design is aligned with our philosophy at BA: “just use Postgres”. I'll take you through the lower-level details in the rest of this post. If you just want to get started using DBOS with BA, get started using their tutorial:
 
-[Use DBOS With Supabase →](https://docs.dbos.dev/integrations/supabase)
+[Use DBOS With BA →](https://docs.dbos.dev/integrations/supabase)
 
 ## What's a Durable Workflow engine?
 
@@ -56,11 +56,11 @@ DBOS offers a relatively unique approach to Workflows, storing the state in your
 
 ## What is DBOS?
 
-DBOS is a platform where you can write your programming logic in serverless functions (similar to Supabase Edge Functions). Functions can be written in either [Python](https://docs.dbos.dev/python/programming-guide) or [TypeScript](https://docs.dbos.dev/typescript/programming-guide).
+DBOS is a platform where you can write your programming logic in serverless functions (similar to BA Edge Functions). Functions can be written in either [Python](https://docs.dbos.dev/python/programming-guide) or [TypeScript](https://docs.dbos.dev/typescript/programming-guide).
 
 ### Creating workflows with decorators
 
-One thing that's different to Supabase Edge Functions is the ability to add **decorators** to your Functions with `DBOS.step()` and `DBOS.workflow()`:
+One thing that's different to BA Edge Functions is the ability to add **decorators** to your Functions with `DBOS.step()` and `DBOS.workflow()`:
 
 <Img
   alt="Python decorators"
@@ -165,6 +165,6 @@ Since it's all in Postgres, you get all the tooling you're familiar with. Backup
 
 ## Get started
 
-To get started with DBOS and Supabase, check out their official integration docs:
+To get started with DBOS and BA, check out their official integration docs:
 
-[Use DBOS With Supabase →](https://docs.dbos.dev/integrations/supabase)
+[Use DBOS With BA →](https://docs.dbos.dev/integrations/supabase)

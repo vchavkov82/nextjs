@@ -22,7 +22,7 @@ const EnterpriseSecurity: FC<Testimonials> = (props) => {
             <iframe
               className="w-full"
               src="https://www.youtube-nocookie.com/embed/9GQtXXERnqU"
-              title="Supabase + Lovable"
+              title="BA + Lovable"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
@@ -33,7 +33,7 @@ const EnterpriseSecurity: FC<Testimonials> = (props) => {
             <iframe
               className="w-full"
               src="https://www.youtube-nocookie.com/embed/LfAV5fmRybg"
-              title="Supabase + Bolt"
+              title="BA + Bolt"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />

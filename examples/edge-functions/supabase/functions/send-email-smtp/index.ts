@@ -22,13 +22,13 @@ Deno.serve(async (_req) => {
       transport.sendMail({
         from: Deno.env.get('SMTP_FROM')!,
         to: 'testr@test.de',
-        subject: `Hello from Supabase Edge Functions`,
+        subject: `Hello from BA Edge Functions`,
         text: `Hello Functions \\o/`,
       }, error => {
         if (error) {
           return reject(error)
         }
-  
+
         resolve()
       })
     })

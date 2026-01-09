@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatedGridBackground } from '../AnimatedGridBackground'
 
-// All available images from Supabase Select event
+// All available images from BA Select event
 const allImages = [
   '/images/wrapped/select-2025-021.jpg',
   '/images/wrapped/select-2025-091.jpg',
@@ -54,7 +54,7 @@ function RotatingImage({
         >
           <Image
             src={currentImage}
-            alt="Supabase Select event photo"
+            alt="BA Select event photo"
             fill
             className="object-cover"
             priority={priority}
@@ -86,7 +86,7 @@ export const SupabaseSelect = () => {
         {/* Content */}
         <div className="flex flex-col justify-end h-full px-4 lg:px-8 py-0 relative">
           <h2 className="font-medium tracking-tighter text-6xl md:text-7xl lg:text-[5.6rem] translate-y-2 lg:translate-y-[10px]">
-            Supabase Select
+            BA Select
           </h2>
         </div>
       </section>

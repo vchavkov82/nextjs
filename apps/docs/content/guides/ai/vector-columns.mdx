@@ -5,9 +5,9 @@ description: 'Learn how to use vectors within your own Postgres tables'
 sidebar_label: 'Vector columns'
 ---
 
-Supabase offers a number of different ways to store and query vectors within Postgres. The SQL included in this guide is applicable for clients in all programming languages. If you are a Python user see your [Python client options](/docs/guides/ai/python-clients) after reading the `Learn` section.
+BA offers a number of different ways to store and query vectors within Postgres. The SQL included in this guide is applicable for clients in all programming languages. If you are a Python user see your [Python client options](/docs/guides/ai/python-clients) after reading the `Learn` section.
 
-Vectors in Supabase are enabled via [pgvector](https://github.com/pgvector/pgvector/), a Postgres extension for storing and querying vectors in Postgres. It can be used to store [embeddings](/docs/guides/ai/concepts#what-are-embeddings).
+Vectors in BA are enabled via [pgvector](https://github.com/pgvector/pgvector/), a Postgres extension for storing and querying vectors in Postgres. It can be used to store [embeddings](/docs/guides/ai/concepts#what-are-embeddings).
 
 ## Usage
 
@@ -59,7 +59,7 @@ create table documents (
 );
 ```
 
-In the above SQL snippet, we create a `documents` table with a column called `embedding` (note this is just a regular Postgres column - you can name it whatever you like). We give the `embedding` column a `vector` data type with 384 dimensions. Change this to the number of dimensions produced by your embedding model. For example, if you are [generating embeddings](/docs/guides/ai/quickstarts/generate-text-embeddings) using the open source [`gte-small`](https://huggingface.co/Supabase/gte-small) model, you would set this number to 384 since that model produces 384 dimensions.
+In the above SQL snippet, we create a `documents` table with a column called `embedding` (note this is just a regular Postgres column - you can name it whatever you like). We give the `embedding` column a `vector` data type with 384 dimensions. Change this to the number of dimensions produced by your embedding model. For example, if you are [generating embeddings](/docs/guides/ai/quickstarts/generate-text-embeddings) using the open source [`gte-small`](https://huggingface.co/BA/gte-small) model, you would set this number to 384 since that model produces 384 dimensions.
 
 <Admonition type="tip">
 
@@ -69,11 +69,11 @@ In general, embeddings with fewer dimensions perform best. See our [analysis on 
 
 ### Storing a vector / embedding
 
-In this example we'll generate a vector using Transformers.js, then store it in the database using the Supabase JavaScript client.
+In this example we'll generate a vector using Transformers.js, then store it in the database using the BA JavaScript client.
 
 ```js
 import { pipeline } from '@xenova/transformers'
-const generateEmbedding = await pipeline('feature-extraction', 'Supabase/gte-small')
+const generateEmbedding = await pipeline('feature-extraction', 'BA/gte-small')
 
 const title = 'First post!'
 const body = 'Hello world!'
@@ -95,7 +95,7 @@ const { data, error } = await supabase.from('documents').insert({
 })
 ```
 
-This example uses the JavaScript Supabase client, but you can modify it to work with any [supported language library](/docs#client-libraries).
+This example uses the JavaScript BA client, but you can modify it to work with any [supported language library](/docs#client-libraries).
 
 ### Querying a vector / embedding
 
@@ -109,7 +109,7 @@ Similarity search is the most common use case for vectors. `pgvector` support 3 
 
 Choosing the right operator depends on your needs. Dot product tends to be the fastest if your vectors are normalized. For more information on how embeddings work and how they relate to each other, see [What are Embeddings?](/docs/guides/ai/concepts#what-are-embeddings).
 
-Supabase client libraries like `supabase-js` connect to your Postgres instance via [PostgREST](/docs/guides/getting-started/architecture#postgrest-api). PostgREST does not currently support `pgvector` similarity operators, so we'll need to wrap our query in a Postgres function and call it via the `rpc()` method:
+BA client libraries like `supabase-js` connect to your Postgres instance via [PostgREST](/docs/guides/getting-started/architecture#postgrest-api). PostgREST does not currently support `pgvector` similarity operators, so we'll need to wrap our query in a Postgres function and call it via the `rpc()` method:
 
 ```sql
 create or replace function match_documents (

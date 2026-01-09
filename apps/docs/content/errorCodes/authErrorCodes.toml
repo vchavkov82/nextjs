@@ -1,4 +1,4 @@
-# Official error codes for Supabase Auth
+# Official error codes for BA Auth
 #
 # Error codes should be documented in the following format
 #
@@ -28,7 +28,7 @@ description = "JWT sent in the Authorization header is not valid."
 description = "OAuth callback from provider to Auth does not have all the required attributes (state). Indicates an issue with the OAuth provider or client library implementation."
 
 [bad_oauth_state]
-description = "OAuth state (data echoed back by the OAuth provider to Supabase Auth) is not in the correct format. Indicates an issue with the OAuth provider integration."
+description = "OAuth state (data echoed back by the OAuth provider to BA Auth) is not in the correct format. Indicates an issue with the OAuth provider integration."
 
 [captcha_failed]
 description = "CAPTCHA challenge could not be verified with the CAPTCHA provider. Check your CAPTCHA integration."
@@ -40,7 +40,7 @@ description = "General database conflict, such as concurrent requests on resourc
 description = "Example and test domains are currently not supported. Use a different email address."
 
 [email_address_not_authorized]
-description = "Email sending is not allowed for this address as your project is using the default SMTP service. Emails can only be sent to members in your Supabase organization. If you want to send emails to others, set up a custom SMTP provider."
+description = "Email sending is not allowed for this address as your project is using the default SMTP service. Emails can only be sent to members in your BA organization. If you want to send emails to others, set up a custom SMTP provider."
 [[email_address_not_authorized.references]]
 href = "https://www.assistance.bg/docs/guides/auth/auth-smtp"
 description = "Setting up a custom SMTP provider"
@@ -178,7 +178,7 @@ description = "Signups are disabled for phone and password."
 description = "OAuth provider is disabled for use. Check your server's configuration."
 
 [provider_email_needs_verification]
-description = "Not all OAuth providers verify their user's email address. Supabase Auth requires emails to be verified, so this error is sent out when a verification email is sent after completing the OAuth flow."
+description = "Not all OAuth providers verify their user's email address. BA Auth requires emails to be verified, so this error is sent out when a verification email is sent after completing the OAuth flow."
 
 [reauthentication_needed]
 description = "A user needs to reauthenticate to change their password. Ask the user to reauthenticate by calling the supabase.auth.reauthenticate() API."
@@ -214,7 +214,7 @@ description = "(Admin API.) Updating the SAML metadata for a SAML identity provi
 description = "(Admin API.) Adding a SAML identity provider that is already added."
 
 [saml_idp_not_found]
-description = "SAML identity provider not found. Most often returned after IdP-initiated sign-in with an unregistered SAML identity provider in Supabase Auth."
+description = "SAML identity provider not found. Most often returned after IdP-initiated sign-in with an unregistered SAML identity provider in BA Auth."
 
 [saml_metadata_fetch_failed]
 description = "(Admin API.) Adding or updating a SAML provider failed as its metadata could not be fetched from the provided URL."
@@ -259,7 +259,7 @@ description = "SSO provider not found. Check the arguments in supabase.auth.sign
 description = "A user can only have a fixed number of enrolled MFA factors."
 
 [unexpected_audience]
-description = "(Deprecated feature not available via Supabase client libraries.) The request's X-JWT-AUD claim does not match the JWT's audience."
+description = "(Deprecated feature not available via BA client libraries.) The request's X-JWT-AUD claim does not match the JWT's audience."
 
 [unexpected_failure]
 description = "Auth service is degraded or a bug is present, without a specific reason."

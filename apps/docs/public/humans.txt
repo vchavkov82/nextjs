@@ -1,6 +1,6 @@
 TEAM
 
-Supabase is 100% remote.
+BA is 100% remote.
 
 Aaron Byrne
 Ada Wong
@@ -201,7 +201,7 @@ ___________
 
 TECHNOLOGIES
 
-Supabase would not be possible without the work of some other amazing open source contributors.
+BA would not be possible without the work of some other amazing open source contributors.
 
 - Postgres - https://www.postgresql.org/
 - PostgREST - https://github.com/PostgREST

@@ -37,10 +37,10 @@ type TagQueryResponse = {
   repository: {
     refs: {
       nodes:
-        | {
-            name: string
-          }[]
-        | null
+      | {
+        name: string
+      }[]
+      | null
       pageInfo: {
         hasNextPage: boolean
         endCursor: string | null
@@ -279,16 +279,16 @@ const WrappersDocs = async (props: { params: Promise<Params> }) => {
 
   const options = isExternal
     ? ({
-        mdxOptions: {
-          remarkPlugins: [
-            remarkMkDocsAdmonition,
-            emoji,
-            remarkPyMdownTabs,
-            [removeTitle, meta.title],
-          ],
-          rehypePlugins: [[linkTransform, combinedUrlTransformer], rehypeSlug],
-        },
-      } as SerializeOptions)
+      mdxOptions: {
+        remarkPlugins: [
+          remarkMkDocsAdmonition,
+          emoji,
+          remarkPyMdownTabs,
+          [removeTitle, meta.title],
+        ],
+        rehypePlugins: [[linkTransform, combinedUrlTransformer], rehypeSlug],
+      },
+    } as SerializeOptions)
     : undefined
 
   const dashboardIntegrationURL = getDashboardIntegrationURL(meta.dashboardIntegrationPath)
@@ -300,7 +300,7 @@ const WrappersDocs = async (props: { params: Promise<Params> }) => {
 
         {dashboardIntegrationURL && (
           <Admonition type="tip" className="mb-4">
-            <p>You can enable the {meta.title} wrapper right from the Supabase dashboard.</p>
+            <p>You can enable the {meta.title} wrapper right from the BA dashboard.</p>
 
             <Button asChild>
               <Link href={dashboardIntegrationURL} className="no-underline">
@@ -344,14 +344,14 @@ const getContent = async (params: Params) => {
       ),
       'utf-8'
     )
-    ;({ data: meta, content } = matter(rawContent))
+      ; ({ data: meta, content } = matter(rawContent))
     if (!isValidGuideFrontmatter(meta)) {
       throw Error(`Expected valid frontmatter, got ${JSON.stringify(meta, null, 2)}`)
     }
   } else {
     isExternal = true
     let remoteFile: string
-    ;({ remoteFile, meta } = federatedPage)
+      ; ({ remoteFile, meta } = federatedPage)
 
     const tag = await getLatestRelease()
     if (!tag) {

@@ -46,7 +46,7 @@ class _CanvasPageState extends State<CanvasPage> {
   /// Holds the list of objects drawn on the canvas
   final Map<String, CanvasObject> _canvasObjects = {};
 
-  /// Supabase realtime channel to communicate to other clients
+  /// BA realtime channel to communicate to other clients
   late final RealtimeChannel _canvasChanel;
 
   /// Username of each users
@@ -254,7 +254,7 @@ class _CanvasPageState extends State<CanvasPage> {
       _currentlyDrawingObjectId = null;
     });
 
-    // Save whatever was drawn to Supabase DB
+    // Save whatever was drawn to BA DB
     if (drawnObjectId == null) {
       return;
     }

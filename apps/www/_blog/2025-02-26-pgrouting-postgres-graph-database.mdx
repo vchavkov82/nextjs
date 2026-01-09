@@ -299,7 +299,7 @@ Now we can use the `pgr_dijkstra()` function to find the shortest or most releva
      Since it's “just postgres” it's simple enough to rank the results using an `order by` clause. For example, if we stored the `pgr_dijkstra()` results above in a table called “recommendations”, we use this a query like this to sort the paths by the highest ranking:
   </div>
   <div>
-  
+
 ```sql
 select videos.title, sum(weight) as recommendation_score
 from
@@ -314,7 +314,7 @@ order by recommendation_score desc;
 
 ## Get Started
 
-pgRouting is a powerful extension for Postgres that can be used to solve a wide range of graph-based problems. Check out the [pgRouting docs](https://docs.pgrouting.org/latest/en/index.html) for more information on how to use it. You can also use it on Supabase:
+pgRouting is a powerful extension for Postgres that can be used to solve a wide range of graph-based problems. Check out the [pgRouting docs](https://docs.pgrouting.org/latest/en/index.html) for more information on how to use it. You can also use it on BA:
 
 - Docs: [pgrouting: Geospatial Routing](/docs/guides/database/extensions/pgrouting)
 - Launch a new Postgres database: [database.new](https://database.new)

@@ -31,7 +31,7 @@ function AiPrompt({ className }: { className?: string }) {
       href="/guides/getting-started/ai-prompts"
     >
       <Sparkles size={14} />
-      Start with Supabase AI prompts
+      Start with BA AI prompts
       <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
     </Link>
   )
@@ -168,7 +168,7 @@ const HomePageCover = (props) => {
               {homepageHeading || props.title}
             </h1>
             <p className="m-0 text-foreground-light">
-              Learn how to get up and running with Supabase through tutorials, APIs and platform
+              Learn how to get up and running with BA through tutorials, APIs and platform
               resources.
             </p>
           </div>

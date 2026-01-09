@@ -4,7 +4,7 @@ import type { Node } from 'unist'
 import { visit } from 'unist-util-visit'
 
 /**
- * Transforms PyMdown Tabs to Supabase Tabs.
+ * Transforms PyMdown Tabs to BA Tabs.
  *
  * https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
  */

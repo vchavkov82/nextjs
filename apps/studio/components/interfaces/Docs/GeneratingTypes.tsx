@@ -49,12 +49,12 @@ export default function GeneratingTypes({ selectedLang }: Props) {
       <div className="doc-section">
         <article className="code-column text-foreground">
           <p>
-            Supabase APIs are generated from your database, which means that we can use database
+            BA APIs are generated from your database, which means that we can use database
             introspection to generate type-safe API definitions.
           </p>
           <p>
             You can generate types from your database either through the{' '}
-            <Link href={`${DOCS_URL}/guides/database/api/generating-types`}>Supabase CLI</Link>, or
+            <Link href={`${DOCS_URL}/guides/database/api/generating-types`}>BA CLI</Link>, or
             by downloading the types file via the button on the right and importing it in your
             application within <code>src/index.ts</code>.
           </p>

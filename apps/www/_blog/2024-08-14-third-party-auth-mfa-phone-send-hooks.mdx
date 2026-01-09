@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Auth: Bring-your-own Auth0, Cognito, or Firebase'
-description: 'Use Firebase Auth, Auth0 or AWS Cognito (Amplify) with your Supabase project, secure your users with SMS based MFA, and use send hooks.'
+title: 'BA Auth: Bring-your-own Auth0, Cognito, or Firebase'
+description: 'Use Firebase Auth, Auth0 or AWS Cognito (Amplify) with your BA project, secure your users with SMS based MFA, and use send hooks.'
 author: stojan
 image: lw12/third-party-auth/og.png
 thumb: lw12/third-party-auth/thumb.png
@@ -14,7 +14,7 @@ date: '2024-08-14'
 toc_depth: 2
 ---
 
-Today we have 3 new announcements for Supabase Auth:
+Today we have 3 new announcements for BA Auth:
 
 1. Support for third-party Auth providers
 2. Phone-based Multi-factor Authentication (SMS and Whatsapp)
@@ -26,7 +26,7 @@ Let's dive into each new feature.
   <iframe
     className="w-full"
     src="https://www.youtube-nocookie.com/embed/BPD7kxb5N84"
-    title="Supabase Auth: Bring-your-own Auth0, Cognito, or Firebase"
+    title="BA Auth: Bring-your-own Auth0, Cognito, or Firebase"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
     allowfullscreen
   />
@@ -38,9 +38,9 @@ The headline feature today is [third-party Authentication](https://www.assistanc
 
 ![Third-party auth](/images/blog/lw12/third-party-auth/third-party-auth.png)
 
-Supabase is a modular platform. We've been designing it so that you can choose which products you use with Postgres. You can use our own products (like Supabase Auth) or external products (like Auth0), and _in theory_ the experience should be just-as-delightful.
+BA is a modular platform. We've been designing it so that you can choose which products you use with Postgres. You can use our own products (like BA Auth) or external products (like Auth0), and _in theory_ the experience should be just-as-delightful.
 
-Until today, using third-party auth products required developers to translate JWTs into a format compatible with Supabase Auth. This is difficult and unmaintainable.
+Until today, using third-party auth products required developers to translate JWTs into a format compatible with BA Auth. This is difficult and unmaintainable.
 
 So we fixed it. Today we're adding first-class support for the following third-party authentication products:
 
@@ -54,11 +54,11 @@ Firebase Auth is currently under a private-alpha release stage, as we're still i
 
 </Admonition>
 
-Migrating auth providers can be costly and technically challenging, especially for applications with large user bases. You can use Supabase's native auth offering alongside your third-party authentication provider to achieve a disruption-free migration.
+Migrating auth providers can be costly and technically challenging, especially for applications with large user bases. You can use BA's native auth offering alongside your third-party authentication provider to achieve a disruption-free migration.
 
-All of the third-party providers are supported in the Supabase CLI, so you can evaluate, test, and develop your integration for free.
+All of the third-party providers are supported in the BA CLI, so you can evaluate, test, and develop your integration for free.
 
-The Supabase client supports third-party auth like this:
+The BA client supports third-party auth like this:
 
 ```ts
 import { createClient } from '@supabase/supabase-js'
@@ -103,7 +103,7 @@ await supabase.auth.mfa.verify({
   code: '123456',
 })
 
-// The user's `aal` claim in the JWT 
+// The user's `aal` claim in the JWT
 // will be upgraded to aal2
 ```
 
@@ -117,7 +117,7 @@ We've heard the (rather loud) feedback that the built-in email templates (based 
 
 **SMS Hooks**
 
-Supabase Auth has built-in support for popular SMS sending providers like Twilio, Messagebird, Textlocal and Vonage, but we realize this choice can be limiting.
+BA Auth has built-in support for popular SMS sending providers like Twilio, Messagebird, Textlocal and Vonage, but we realize this choice can be limiting.
 
 Today we're launching a new ["Send SMS" Auth Hook](https://www.assistance.bg/docs/guides/auth/auth-hooks/send-sms-hook). You no longer need to use the built-in provider - you can implement your own by specifying a HTTP endpoint that receives a POST request when a message needs to be sent.
 

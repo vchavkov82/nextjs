@@ -19,22 +19,22 @@ export const DATABASE_CONNECTION_TYPES: {
   lang: CodeBlockLang
   fileTitle: string | undefined
 }[] = [
-  { id: 'uri', label: 'URI', contentType: 'input', lang: 'bash', fileTitle: undefined },
-  { id: 'psql', label: 'PSQL', contentType: 'code', lang: 'bash', fileTitle: undefined },
-  { id: 'golang', label: 'Golang', contentType: 'code', lang: 'go', fileTitle: '.env' },
-  { id: 'jdbc', label: 'JDBC', contentType: 'input', lang: 'bash', fileTitle: undefined },
-  {
-    id: 'dotnet',
-    label: '.NET',
-    contentType: 'code',
-    lang: 'csharp',
-    fileTitle: 'appsettings.json',
-  },
-  { id: 'nodejs', label: 'Node.js', contentType: 'code', lang: 'js', fileTitle: '.env' },
-  { id: 'php', label: 'PHP', contentType: 'code', lang: 'php', fileTitle: '.env' },
-  { id: 'python', label: 'Python', contentType: 'code', lang: 'python', fileTitle: '.env' },
-  { id: 'sqlalchemy', label: 'SQLAlchemy', contentType: 'code', lang: 'python', fileTitle: '.env' },
-]
+    { id: 'uri', label: 'URI', contentType: 'input', lang: 'bash', fileTitle: undefined },
+    { id: 'psql', label: 'PSQL', contentType: 'code', lang: 'bash', fileTitle: undefined },
+    { id: 'golang', label: 'Golang', contentType: 'code', lang: 'go', fileTitle: '.env' },
+    { id: 'jdbc', label: 'JDBC', contentType: 'input', lang: 'bash', fileTitle: undefined },
+    {
+      id: 'dotnet',
+      label: '.NET',
+      contentType: 'code',
+      lang: 'csharp',
+      fileTitle: 'appsettings.json',
+    },
+    { id: 'nodejs', label: 'Node.js', contentType: 'code', lang: 'js', fileTitle: '.env' },
+    { id: 'php', label: 'PHP', contentType: 'code', lang: 'php', fileTitle: '.env' },
+    { id: 'python', label: 'Python', contentType: 'code', lang: 'python', fileTitle: '.env' },
+    { id: 'sqlalchemy', label: 'SQLAlchemy', contentType: 'code', lang: 'python', fileTitle: '.env' },
+  ]
 
 export const CONNECTION_PARAMETERS = {
   host: {
@@ -98,7 +98,7 @@ export const FRAMEWORKS: ConnectionType[] = [
         children: [
           {
             key: 'supabasejs',
-            label: 'Supabase-js',
+            label: 'BA-js',
             children: [],
             icon: 'supabase',
           },
@@ -114,7 +114,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -146,7 +146,7 @@ export const FRAMEWORKS: ConnectionType[] = [
         children: [
           {
             key: 'supabasejs',
-            label: 'Supabase-js',
+            label: 'BA-js',
             children: [],
             icon: 'supabase',
           },
@@ -162,7 +162,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -176,7 +176,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -191,7 +191,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -205,7 +205,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -219,7 +219,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -233,7 +233,7 @@ export const FRAMEWORKS: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -250,7 +250,7 @@ export const MOBILES: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -278,7 +278,7 @@ export const MOBILES: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },
@@ -320,7 +320,7 @@ export const MOBILES: ConnectionType[] = [
     children: [
       {
         key: 'supabasejs',
-        label: 'Supabase-js',
+        label: 'BA-js',
         children: [],
         icon: 'supabase',
       },

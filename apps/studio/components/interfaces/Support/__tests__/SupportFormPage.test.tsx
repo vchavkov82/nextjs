@@ -1005,7 +1005,7 @@ describe('SupportFormPage', () => {
     })
     expect(payload.message).toBe(
       'Connections time out after 30 seconds\n\nError: Connection timeout detected' +
-        supportVersionInfo
+      supportVersionInfo
     )
 
     await waitFor(() => {
@@ -1036,7 +1036,7 @@ describe('SupportFormPage', () => {
     renderSupportFormPage()
 
     await waitFor(() => {
-      expect(screen.getByText('Try Supabase Assistant')).toBeInTheDocument()
+      expect(screen.getByText('Try BA Assistant')).toBeInTheDocument()
     })
   })
 
@@ -1664,7 +1664,7 @@ describe('SupportFormPage', () => {
     expect(dashboardLogToggle).not.toBeChecked()
 
     await userEvent.type(getSummaryField(screen), 'Cannot access my account')
-    await userEvent.type(getMessageField(screen), 'I need help accessing my Supabase account')
+    await userEvent.type(getMessageField(screen), 'I need help accessing my BA account')
 
     await userEvent.click(getSubmitButton(screen))
 
@@ -1685,7 +1685,7 @@ describe('SupportFormPage', () => {
       tags: ['dashboard-support-form'],
       browserInformation: 'Chrome',
     })
-    const expectedMessage = 'I need help accessing my Supabase account' + supportVersionInfo
+    const expectedMessage = 'I need help accessing my BA account' + supportVersionInfo
     expect(payload.message).toBe(expectedMessage)
 
     await waitFor(() => {

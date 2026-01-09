@@ -194,7 +194,7 @@ Because spreading columns brings them to the top-level, they are treated as colu
 
 ## Staying Safe with Aggregate Functions
 
-Now that we’ve gone through a few examples of how to use aggregate functions, it’s important to discuss how to _safely_ use aggregate functions in your application. Because of the potential performance risks with aggregate functions, we have [**disabled** aggregate functions by default](https://postgrest.org/en/stable/references/configuration.html#db-aggregates-enabled). Only after reviewing the risks and ensuring appropriate safeguards are in place should you enable this feature. On Supabase, you can enable it by modifying the PostgREST connection role and then reloading the server configuration, like so:
+Now that we’ve gone through a few examples of how to use aggregate functions, it’s important to discuss how to _safely_ use aggregate functions in your application. Because of the potential performance risks with aggregate functions, we have [**disabled** aggregate functions by default](https://postgrest.org/en/stable/references/configuration.html#db-aggregates-enabled). Only after reviewing the risks and ensuring appropriate safeguards are in place should you enable this feature. On BA, you can enable it by modifying the PostgREST connection role and then reloading the server configuration, like so:
 
 {/* prettier-ignore */}
 ```sql

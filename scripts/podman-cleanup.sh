@@ -70,8 +70,8 @@ else
   echo "    ⚠️  Compose file not found at $COMPOSE_FILE, skipping podman-compose down"
 fi
 
-# Step 2: Remove any remaining Supabase containers
-echo "  🗑️  Removing any remaining Supabase containers..."
+# Step 2: Remove any remaining BA containers
+echo "  🗑️  Removing any remaining BA containers..."
 CONTAINERS=$(filter_podman_warnings podman ps -a --filter "name=supabase" --format "{{.Names}}" || true)
 if [ ! -z "$CONTAINERS" ]; then
   echo "$CONTAINERS" | while read -r container; do
@@ -82,7 +82,7 @@ if [ ! -z "$CONTAINERS" ]; then
   done
   echo "    ✅ Remaining containers removed"
 else
-  echo "    ℹ️  No Supabase containers found"
+  echo "    ℹ️  No BA containers found"
 fi
 
 # Step 3: Remove Podman pods
@@ -97,7 +97,7 @@ if [ ! -z "$PODS" ]; then
   done
   echo "    ✅ Pods removed"
 else
-  echo "    ℹ️  No Supabase pods found"
+  echo "    ℹ️  No BA pods found"
 fi
 
 # Step 4: Remove Podman networks
@@ -112,7 +112,7 @@ if [ ! -z "$NETWORKS" ]; then
   done
   echo "    ✅ Networks removed"
 else
-  echo "    ℹ️  No Supabase networks found"
+  echo "    ℹ️  No BA networks found"
 fi
 
 # Step 5: Remove images (if requested)
@@ -128,7 +128,7 @@ if [ "$REMOVE_IMAGES" = true ]; then
     done
     echo "    ✅ Images removed"
   else
-    echo "    ℹ️  No Supabase-related images found"
+    echo "    ℹ️  No BA-related images found"
   fi
 fi
 
@@ -145,9 +145,9 @@ if [ "$REMOVE_VOLUMES" = true ]; then
     done
     echo "    ✅ Volumes removed"
   else
-    echo "    ℹ️  No Supabase volumes found"
+    echo "    ℹ️  No BA volumes found"
   fi
-  
+
   # Also remove local volume directories if they exist
   VOLUME_DIRS=(
     "$PROJECT_ROOT/docker/volumes/db/data"

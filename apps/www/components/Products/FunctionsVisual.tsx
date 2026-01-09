@@ -71,13 +71,13 @@ const FunctionsVisual: React.FC<Props> = ({ className }) => {
     <figure
       className={cn('absolute inset-0 z-20', className)}
       role="img"
-      aria-label="Supabase Edge Functions visual composition"
+      aria-label="BA Edge Functions visual composition"
       onMouseOver={handleMouseEnter}
       onMouseOut={handleMouseLeave}
     >
       <Image
         src="/images/index/products/edge-functions-dark.svg"
-        alt="Supabase Edge Functions globe"
+        alt="BA Edge Functions globe"
         fill
         sizes="100%"
         quality={100}
@@ -86,7 +86,7 @@ const FunctionsVisual: React.FC<Props> = ({ className }) => {
       />
       <Image
         src="/images/index/products/edge-functions-light.svg"
-        alt="Supabase Edge Functions globe"
+        alt="BA Edge Functions globe"
         fill
         sizes="100%"
         quality={100}

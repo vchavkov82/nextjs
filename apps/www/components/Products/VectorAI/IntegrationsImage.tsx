@@ -21,7 +21,7 @@ const IntegrationsImage = () => {
   const ResolvedImage = () => (
     <Image
       src={image}
-      alt="Diagram of Machine Learning tools that integrate with Supabase Vector"
+      alt="Diagram of Machine Learning tools that integrate with BA Vector"
       layout="fill"
       objectFit="contain"
       quality={100}

@@ -11,11 +11,11 @@ interface FileWithPreview extends File {
 
 type UseSupabaseUploadOptions = {
   /**
-   * Name of bucket to upload files to in your Supabase project
+   * Name of bucket to upload files to in your BA project
    */
   bucketName: string
   /**
-   * Folder to upload files to in the specified bucket within your Supabase project.
+   * Folder to upload files to in the specified bucket within your BA project.
    *
    * Defaults to uploading files to the root of the bucket
    *
@@ -37,7 +37,7 @@ type UseSupabaseUploadOptions = {
    */
   maxFiles?: number
   /**
-   * The number of seconds the asset is cached in the browser and in the Supabase CDN.
+   * The number of seconds the asset is cached in the browser and in the BA CDN.
    *
    * This is set in the Cache-Control: max-age=<seconds> header. Defaults to 3600 seconds.
    */
@@ -83,14 +83,14 @@ const useSupabaseUpload = (options: UseSupabaseUploadOptions) => {
       const validFiles = acceptedFiles
         .filter((file) => !files.find((x) => x.name === file.name))
         .map((file) => {
-          ;(file as FileWithPreview).preview = URL.createObjectURL(file)
-          ;(file as FileWithPreview).errors = []
+          ; (file as FileWithPreview).preview = URL.createObjectURL(file)
+            ; (file as FileWithPreview).errors = []
           return file as FileWithPreview
         })
 
       const invalidFiles = fileRejections.map(({ file, errors }) => {
-        ;(file as FileWithPreview).preview = URL.createObjectURL(file)
-        ;(file as FileWithPreview).errors = errors
+        ; (file as FileWithPreview).preview = URL.createObjectURL(file)
+          ; (file as FileWithPreview).errors = errors
         return file as FileWithPreview
       })
 
@@ -119,9 +119,9 @@ const useSupabaseUpload = (options: UseSupabaseUploadOptions) => {
     const filesToUpload =
       filesWithErrors.length > 0
         ? [
-            ...files.filter((f) => filesWithErrors.includes(f.name)),
-            ...files.filter((f) => !successes.includes(f.name)),
-          ]
+          ...files.filter((f) => filesWithErrors.includes(f.name)),
+          ...files.filter((f) => !successes.includes(f.name)),
+        ]
         : files
 
     const responses = await Promise.all(

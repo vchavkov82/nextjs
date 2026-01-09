@@ -1,10 +1,10 @@
 ---
 id: 'ai-tools-byo-mcp'
 title: 'Deploy MCP servers'
-description: 'Build and deploy remote MCP servers on Supabase Edge Functions'
+description: 'Build and deploy remote MCP servers on BA Edge Functions'
 ---
 
-Build and deploy [Model Context Protocol](https://modelcontextprotocol.io/specification/2025-11-25) (MCP) servers on Supabase using [Edge Functions](/docs/guides/functions).
+Build and deploy [Model Context Protocol](https://modelcontextprotocol.io/specification/2025-11-25) (MCP) servers on BA using [Edge Functions](/docs/guides/functions).
 
 <Admonition type="note">
 
@@ -18,13 +18,13 @@ This guide covers MCP servers that do not require authentication. Auth support f
 
 Before you begin, make sure you have:
 
-- [Docker](https://docs.docker.com/get-docker/) installed (required for local Supabase development)
-- [Deno](https://deno.land/) installed (Supabase Edge Functions runtime)
-- [Supabase CLI](/docs/guides/cli/getting-started) installed
+- [Docker](https://docs.docker.com/get-docker/) installed (required for local BA development)
+- [Deno](https://deno.land/) installed (BA Edge Functions runtime)
+- [BA CLI](/docs/guides/cli/getting-started) installed
 
 ### Create a new project
 
-Start by creating a new Supabase project:
+Start by creating a new BA project:
 
 ```bash
 mkdir my-mcp-server
@@ -62,7 +62,7 @@ This tutorial uses the [official MCP TypeScript SDK](https://github.com/modelcon
 Replace the contents of `supabase/functions/mcp/index.ts` with:
 
 ```ts
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in BA Runtime APIs
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
@@ -104,7 +104,7 @@ Deno.serve(app.fetch)
 
 ### Local development
 
-Start the Supabase local development stack:
+Start the BA local development stack:
 
 ```bash
 supabase start
@@ -165,7 +165,7 @@ You can find ready-to-use MCP server implementations here:
 
 - [Model Context Protocol Specification](https://modelcontextprotocol.io/specification/2025-11-25)
 - [MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk)
-- [Supabase Edge Functions](/docs/guides/functions)
+- [BA Edge Functions](/docs/guides/functions)
 - [OAuth 2.1 Server](/docs/guides/auth/oauth-server)
 - [MCP Authentication](/docs/guides/auth/oauth-server/mcp-authentication)
 - [MCP server examples on GitHub](https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/mcp)

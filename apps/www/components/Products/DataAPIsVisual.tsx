@@ -18,7 +18,7 @@ const DataAPIsVisual: React.FC<Props> = ({ className }) => (
           <Image
             draggable={false}
             src="/images/index/products/data-apis-lines-dark.svg"
-            alt="Supabase restful DataAPIs"
+            alt="BA restful DataAPIs"
             width={330}
             height={430}
             quality={100}
@@ -27,7 +27,7 @@ const DataAPIsVisual: React.FC<Props> = ({ className }) => (
           <Image
             draggable={false}
             src="/images/index/products/data-apis-lines-light.svg"
-            alt="Supabase restful DataAPIs"
+            alt="BA restful DataAPIs"
             width={330}
             height={430}
             quality={100}
@@ -38,7 +38,7 @@ const DataAPIsVisual: React.FC<Props> = ({ className }) => (
       <Image
         draggable={false}
         src="/images/index/products/data-apis-dark.svg"
-        alt="Supabase restful DataAPIs"
+        alt="BA restful DataAPIs"
         fill
         sizes="100%"
         quality={100}
@@ -47,7 +47,7 @@ const DataAPIsVisual: React.FC<Props> = ({ className }) => (
       <Image
         draggable={false}
         src="/images/index/products/data-apis-light.svg"
-        alt="Supabase restful DataAPIs"
+        alt="BA restful DataAPIs"
         fill
         sizes="100%"
         quality={100}

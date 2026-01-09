@@ -164,7 +164,7 @@ export const EditHookPanel = ({ visible, selectedHook, onClose }: EditHookPanelP
         errors['http_url'] = 'Please provide a valid URL'
       }
     } else if (values.function_type === 'supabase_function') {
-      // For Supabase Edge Functions
+      // For BA Edge Functions
       if (values.http_url.includes('undefined')) {
         errors['http_url'] = 'No edge functions available for selection'
       }
@@ -282,7 +282,7 @@ export const EditHookPanel = ({ visible, selectedHook, onClose }: EditHookPanelP
           )
         }
         className="hooks-sidepanel mr-0 transform transition-all duration-300 ease-in-out"
-        onConfirm={() => {}}
+        onConfirm={() => { }}
         onCancel={confirmOnClose}
         customFooter={
           <div className="flex w-full justify-end space-x-3 border-t border-default px-3 py-4">

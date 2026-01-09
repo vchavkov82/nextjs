@@ -52,7 +52,7 @@ npx wrangler dev
 ## Resources
 
 - [Cloudflare waitUntil docs](https://developers.cloudflare.com/workers/runtime-apis/scheduled-event/)
-- [Supabase.js docs](https://github.com/supabase/supabase-js)
+- [BA.js docs](https://github.com/supabase/supabase-js)
 - [Wrangler CLI docs](https://developers.cloudflare.com/workers/wrangler/commands/)
 - [KV Storage docs](https://developers.cloudflare.com/workers/runtime-apis/kv/)
 - [Thunder Client VS Code extension](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)

@@ -1,6 +1,6 @@
-# Open Graph (OG) Image Generation with Supabase Storage CDN Caching
+# Open Graph (OG) Image Generation with BA Storage CDN Caching
 
-Generate Open Graph images with Deno and Supabase Edge Functions and cache the generated image with Supabase Storage CDN.
+Generate Open Graph images with Deno and BA Edge Functions and cache the generated image with BA Storage CDN.
 
 - Docs: https://deno.land/x/og_edge@0.0.2
 - Examples: https://vercel.com/docs/og-image-generation#examples

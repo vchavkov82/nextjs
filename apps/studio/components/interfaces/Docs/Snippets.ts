@@ -48,7 +48,7 @@ supabase: Client = create_client(url, key)
 const supabaseUrl = '${endpoint}';
 const supabaseKey = String.fromEnvironment('SUPABASE_KEY');
 Future<void> main() async {
-  await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
+  await BA.initialize(url: supabaseUrl, anonKey: supabaseKey);
   runApp(MyApp());
 }`,
     },
@@ -74,12 +74,11 @@ Future<void> main() async {
       language: 'bash',
       code: `
 curl '${endpoint}/rest/v1/' \\
--H "apikey: ${defaultApiKey}" ${
-        showBearer
+-H "apikey: ${defaultApiKey}" ${showBearer
           ? `\\
 -H "Authorization: Bearer ${defaultApiKey}"`
           : ''
-      }
+        }
 `,
     },
     js: {
@@ -108,14 +107,13 @@ const supabase = createClient(SUPABASE_URL, process.env.${keyName || 'SUPABASE_K
     let bashParams = noParams ? '' : `\n-d '{ ${rpcList} }' \\`
     let jsParams = noParams
       ? ''
-      : `, {${
-          rpcParams.length
-            ? rpcParams
-                .map((x) => `\n    ${x.name}`)
-                .join(`, `)
-                .concat('\n  ')
-            : ''
-        }}`
+      : `, {${rpcParams.length
+        ? rpcParams
+          .map((x) => `\n    ${x.name}`)
+          .join(`, `)
+          .concat('\n  ')
+        : ''
+      }}`
     return {
       title: 'Invoke function ',
       bash: {
@@ -123,12 +121,11 @@ const supabase = createClient(SUPABASE_URL, process.env.${keyName || 'SUPABASE_K
         code: `
 curl -X POST '${endpoint}/rest/v1/rpc/${rpcName}' \\${bashParams}
 -H "Content-Type: application/json" \\
--H "apikey: ${apiKey}" ${
-          showBearer
+-H "apikey: ${apiKey}" ${showBearer
             ? `\\
 -H "Authorization: Bearer ${apiKey}"`
             : ''
-        }
+          }
 `,
       },
       js: {

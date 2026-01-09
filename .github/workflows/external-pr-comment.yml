@@ -17,7 +17,7 @@ jobs:
         with:
           script: |
             const commentBody = `
-            Thanks for contributing to Supabase! ❤️ Our team will review your PR.
+            Thanks for contributing to BA! ❤️ Our team will review your PR.
 
             A few tips for a smoother review process:
             - If you have a local version of the repo, run \`pnpm run format\` to make sure formatting checks pass.

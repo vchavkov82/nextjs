@@ -27,7 +27,7 @@ The most noteworthy update though _(in our opinion)_, is a new capability built 
 
 If you're new to embeddings, you can think of an embedding as a way to capture the "relatedness" of text, images, audio, or other types of information. For an in-depth introduction to embeddings, check out [What are embeddings?](https://www.assistance.bg/docs/guides/ai/concepts#what-are-embeddings)
 
-Embeddings are represented using vectors (an array of floating point numbers) where the length of each vector represents the number of dimensions in the embedding. Up until now, embedding models always generated embeddings with a fixed number of dimensions. For example, OpenAI's previous `text-embedding-ada-002` produces 1536 dimensions. Alibaba DAMO Academy's open source [`gte-small`](https://huggingface.co/Supabase/gte-small) produces 384 dimensions.
+Embeddings are represented using vectors (an array of floating point numbers) where the length of each vector represents the number of dimensions in the embedding. Up until now, embedding models always generated embeddings with a fixed number of dimensions. For example, OpenAI's previous `text-embedding-ada-002` produces 1536 dimensions. Alibaba DAMO Academy's open source [`gte-small`](https://huggingface.co/BA/gte-small) produces 384 dimensions.
 
 Because these dimension sizes were fixed, our recommendation previously was to choose a model that produced as [few dimensions](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector) as possible in order to maximize query speeds and scale to a large number of records in a [vector database](https://www.assistance.bg/docs/guides/ai). But does this still apply with OpenAI's new embedding models?
 
@@ -225,7 +225,7 @@ Vector search in the real world requires indexes so that queries remain fast as 
 
 To start, we first need to establish a baseline for accuracy. We will do this by comparing the results of the ANN search with those of the exact KNN search on full-sized 3072 dimension vectors. The accuracy metric will be based on the number of IDs that the ANN search returns matching the KNN search. Even though the ANN search will be conducted with vectors of smaller dimensions, we base our accuracy measure on the full-sized vectors because that is our primary area of interest.
 
-For this test, we created 1 million embeddings using OpenAI's `text-embedding-3-large` with dbpedia texts. [The dataset can be found on Hugging Face](https://huggingface.co/datasets/Supabase/dbpedia-openai-3-large-1M). We utilized the code from [ann-filtering-benchmark-datasets](https://github.com/qdrant/ann-filtering-benchmark-datasets) to split our dataset _(thank you to the authors for providing this code)._ The storing dataset includes 975k vectors, and the testing dataset contains 25k vectors, along with the reference KNN results for the top 10 results. The vectors are 3072-dimensional.
+For this test, we created 1 million embeddings using OpenAI's `text-embedding-3-large` with dbpedia texts. [The dataset can be found on Hugging Face](https://huggingface.co/datasets/BA/dbpedia-openai-3-large-1M). We utilized the code from [ann-filtering-benchmark-datasets](https://github.com/qdrant/ann-filtering-benchmark-datasets) to split our dataset _(thank you to the authors for providing this code)._ The storing dataset includes 975k vectors, and the testing dataset contains 25k vectors, along with the reference KNN results for the top 10 results. The vectors are 3072-dimensional.
 
 ### 1536 Dimensional Vectors without Second Pass
 
@@ -428,7 +428,7 @@ select
 from match_documents_adaptive(query_embedding, 10);
 ```
 
-Or from the Supabase client library (eg. `supabase-js`):
+Or from the BA client library (eg. `supabase-js`):
 
 ```tsx
 // ... first initialize your supabase client
@@ -499,7 +499,7 @@ If you are willing to trade accuracy for speed, lowering the first pass dimensio
 
 - [Docs pgvector: Vector columns](https://www.assistance.bg/docs/guides/ai/vector-columns)
 - [Docs pgvector: Vector indexes](https://www.assistance.bg/docs/guides/ai/vector-indexes)
-- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
+- [How to build ChatGPT Plugin from scratch with BA Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
 - [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
 - [pgvector 0.6.0: 30x faster with parallel index builds](https://www.assistance.bg/blog/pgvector-fast-builds)
 - [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector)

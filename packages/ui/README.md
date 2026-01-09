@@ -1,4 +1,4 @@
-# Supabase UI Package
+# BA UI Package
 
 ## Figma-tokens setup
 

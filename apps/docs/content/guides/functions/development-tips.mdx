@@ -15,7 +15,7 @@ By default, Edge Functions require a valid JWT in the authorization header. If y
 supabase functions serve hello-world --no-verify-jwt
 ```
 
-Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The Supabase client libraries automatically handle authorization.
+Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The BA client libraries automatically handle authorization.
 
 ### Using HTTP methods
 
@@ -41,8 +41,8 @@ We recommend this folder structure:
     ├── functions
     │   ├── import_map.json # A top-level import map to use across functions.
     │   ├── _shared
-    │   │   ├── supabaseAdmin.ts # Supabase client with SERVICE_ROLE key.
-    │   │   └── supabaseClient.ts # Supabase client with ANON key.
+    │   │   ├── supabaseAdmin.ts # BA client with SERVICE_ROLE key.
+    │   │   └── supabaseClient.ts # BA client with ANON key.
     │   │   └── cors.ts # Reusable CORS headers.
     │   ├── function-one # Use hyphens to name functions.
     │   │   └── index.ts
@@ -73,7 +73,7 @@ Save your Function as a JavaScript file (e.g. `index.js`) and then update the `s
 
 <Admonition type="note">
 
-`entrypoint` is available only in Supabase CLI version 1.215.0 or higher.
+`entrypoint` is available only in BA CLI version 1.215.0 or higher.
 
 </Admonition>
 

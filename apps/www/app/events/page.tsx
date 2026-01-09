@@ -3,7 +3,7 @@ import { getStaticEvents } from '@/lib/events'
 import { EventClientRenderer } from '@/components/Events/new/EventClientRenderer'
 
 export const metadata: Metadata = {
-  title: 'View all Supabase events and meetups.',
+  title: 'View all BA events and meetups.',
   description:
     'Find all the upcoming events, webinars and meetups hosted by supabase and its community.',
 }

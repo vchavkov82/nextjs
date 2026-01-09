@@ -40,10 +40,10 @@ export const getCodeWorkflowSteps = ({
     {
       key: 'install-cli',
       status: hasCliSetup ? 'complete' : 'incomplete',
-      title: 'Install the Supabase CLI',
+      title: 'Install the BA CLI',
       icon: <Code strokeWidth={1} className="text-foreground-muted" size={16} />,
       description:
-        'To get started, install the Supabase CLI—our command-line toolkit for managing projects locally, handling migrations, and seeding data—using the npm command below to add it to your workspace.',
+        'To get started, install the BA CLI—our command-line toolkit for managing projects locally, handling migrations, and seeding data—using the npm command below to add it to your workspace.',
       actions: [
         {
           label: 'Install via npm',
@@ -75,7 +75,7 @@ export const getCodeWorkflowSteps = ({
           onClick: () =>
             openAiChat(
               'Design my database',
-              'Help me create a schema file for my database. We will be using Supabase declarative schemas which you can learn about by searching docs for declarative schema.'
+              'Help me create a schema file for my database. We will be using BA declarative schemas which you can learn about by searching docs for declarative schema.'
             ),
         },
       ],
@@ -100,7 +100,7 @@ export const getCodeWorkflowSteps = ({
           onClick: () =>
             openAiChat(
               'Generate seed data',
-              'Generate SQL INSERT statements for realistic seed data that I can run via the Supabase CLI.'
+              'Generate SQL INSERT statements for realistic seed data that I can run via the BA CLI.'
             ),
         },
       ],

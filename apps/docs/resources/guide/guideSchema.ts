@@ -6,7 +6,7 @@ import { GuideModel, SubsectionModel } from './guideModel'
 export const GraphQLObjectTypeSubsection = new GraphQLObjectType({
   name: 'Subsection',
   isTypeOf: (value: unknown) => value instanceof SubsectionModel,
-  description: 'A content chunk taken from a larger document in the Supabase docs',
+  description: 'A content chunk taken from a larger document in the BA docs',
   fields: {
     title: {
       type: GraphQLString,
@@ -28,7 +28,7 @@ export const GraphQLObjectTypeGuide = new GraphQLObjectType({
   interfaces: [GraphQLInterfaceTypeSearchResult],
   isTypeOf: (value: unknown) => value instanceof GuideModel,
   description:
-    'A document containing content from the Supabase docs. This is a guide, which might describe a concept, or explain the steps for using or implementing a feature.',
+    'A document containing content from the BA docs. This is a guide, which might describe a concept, or explain the steps for using or implementing a feature.',
   fields: {
     title: {
       type: GraphQLString,
@@ -46,7 +46,7 @@ export const GraphQLObjectTypeGuide = new GraphQLObjectType({
     subsections: {
       type: createCollectionType(GraphQLObjectTypeSubsection, {
         skipPageInfo: true,
-        description: 'A collection of content chunks from a larger document in the Supabase docs.',
+        description: 'A collection of content chunks from a larger document in the BA docs.',
       }),
       description:
         'The subsections of the document. If the document is returned from a search match, only matching content chunks are returned. For the full content of the original document, use the content field in the parent Guide.',

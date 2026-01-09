@@ -5,7 +5,7 @@ description: 'Prisma error troubleshooting'
 breadcrumb: 'ORM Quickstarts'
 ---
 
-This guide addresses common Prisma errors that you might encounter while using Supabase.
+This guide addresses common Prisma errors that you might encounter while using BA.
 
 <Admonition type="note">
 
@@ -102,7 +102,7 @@ Prisma relies on migration files to ensure your database aligns with Prisma's mo
 
 ### Possible causes: [#possible-causes-your-database-schema-is-not-in-sync]
 
-- **Supabase Managed Schemas**: Supabase may update managed schemas like auth and storage to introduce new features. Granting Prisma access to these schemas can lead to drift during updates.
+- **BA Managed Schemas**: BA may update managed schemas like auth and storage to introduce new features. Granting Prisma access to these schemas can lead to drift during updates.
 - **External Schema Modifications**: Your team or another tool might have modified the database schema outside of Prisma, causing drift.
 
 ### Solution: [#solution-your-database-schema-is-not-in-sync]
@@ -123,7 +123,7 @@ Postgres or Supavisor rejected a request for more connections
 
 ### Solutions [#solutions-causes-max-client-connections-reached]
 
-- **Transaction Mode for serverless apps**: If you are using serverless functions (Supabase Edge, Vercel, AWS Lambda), switch to transaction mode (port 6543). It handles more connections than session mode or direct connections.
+- **Transaction Mode for serverless apps**: If you are using serverless functions (BA Edge, Vercel, AWS Lambda), switch to transaction mode (port 6543). It handles more connections than session mode or direct connections.
 - **Reduce the number of Prisma connections**: A single client-server can establish multiple connections with a pooler. Typically, serverless setups do not need many connections. Starting with fewer, like five or three, or even just one, is often sufficient. In serverless setups, begin with `connection_limit=1`, increasing cautiously if needed to avoid maxing out connections.
 - **Increase pool size**: If you are connecting with Supavisor, try increasing the pool size in the [Database Settings](/dashboard/project/_/database/settings).
 - **Disconnect appropriately**: Close Prisma connections when they are no longer needed.
@@ -142,7 +142,7 @@ A Prisma migration is referencing a schema it is not permitted to manage.
 
 ### Solutions: [#solutions-cross-schema-references]
 
-- Multi-Schema support: If the external schema isn't Supabase managed, modify your `prisma.schema` file to enable the multi-Schema preview
+- Multi-Schema support: If the external schema isn't BA managed, modify your `prisma.schema` file to enable the multi-Schema preview
 
 ```ts prisma.schema
 generator client {
@@ -158,7 +158,7 @@ datasource db {
 }
 ```
 
-- Supabase managed schemas: Schemas managed by Supabase, such as `auth` and `storage`, may be changed to support new features. Referencing these schemas directly will cause schema drift in the future. It is best to remove references to these schemas from your migrations.
+- BA managed schemas: Schemas managed by BA, such as `auth` and `storage`, may be changed to support new features. Referencing these schemas directly will cause schema drift in the future. It is best to remove references to these schemas from your migrations.
 
 An alternative strategy to reference these tables is to duplicate values into Prisma managed table with triggers. Below is an example for duplicating values from `auth.users` into a table called `profiles`.
 

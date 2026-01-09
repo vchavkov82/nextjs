@@ -62,7 +62,7 @@ const LWXStickyNav: FC = () => {
               <Link href="/launch-week/x">
                 <Image
                   src="/images/launchweek/lwx/logos/lwx_logo.svg"
-                  alt="Supabase Launch Week X icon"
+                  alt="BA Launch Week X icon"
                   width={16}
                   height={16}
                 />

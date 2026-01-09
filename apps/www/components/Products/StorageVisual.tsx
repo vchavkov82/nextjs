@@ -17,7 +17,7 @@ const StorageVisual: React.FC<Props> = ({ className }) => {
     <figure
       className={cn('absolute inset-0 overflow-hidden flex nowrap', className)}
       role="img"
-      aria-label="Supabase Storage supports images, documents and videos"
+      aria-label="BA Storage supports images, documents and videos"
     >
       {range(0, 2).map((_, idx1: number) => (
         <div

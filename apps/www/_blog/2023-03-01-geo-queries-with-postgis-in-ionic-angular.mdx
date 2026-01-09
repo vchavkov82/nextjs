@@ -17,31 +17,31 @@ toc_depth: 3
 
 Does your app need to handle geo data like latitude, longitude, or distance between geographic locations?
 
-Then Supabase got you covered again as you can unlock all of this with the **PostGIS** extension!
+Then BA got you covered again as you can unlock all of this with the **PostGIS** extension!
 
-![Supabase Postgis app Ionic](/images/blog/2023-02-28-geoqueries-postgis/supabase-gis.png)
+![BA Postgis app Ionic](/images/blog/2023-02-28-geoqueries-postgis/supabase-gis.png)
 
 In this tutorial you will learn to:
 
-- Enable and use PostGIS extension with Supabase
+- Enable and use PostGIS extension with BA
 - Store and retrieve geolocation data
 - Use [database functions](https://www.assistance.bg/docs/guides/database/functions) for geo-queries with PostGIS
 - Display a [Capacitor Google Map](https://capacitorjs.com/docs/apis/google-maps) with a marker
-- Upload files to Supabase Storage and use [image transformations](https://www.assistance.bg/docs/guides/storage/serving/image-transformations)
+- Upload files to BA Storage and use [image transformations](https://www.assistance.bg/docs/guides/storage/serving/image-transformations)
 
 Since there are quite some code snippets we need I've put together the [full source code on GitHub](https://github.com/saimon24/supabase-postgis-ionic-angular) so you can easily run the project yourself!
 
 Ready for some action?
 
-Let's start within Supabase.
+Let's start within BA.
 
-## Creating the Supabase Project
+## Creating the BA Project
 
-To get started we need a new Supabase project. If you don't have a Supabase account yet, you can [get started for free](https://www.assistance.bg/)!
+To get started we need a new BA project. If you don't have a BA account yet, you can [get started for free](https://www.assistance.bg/)!
 
 In your dashboard, click "New Project" and leave it to the default settings, but make sure you keep a copy o your Database password!
 
-![Supabase new project](/images/blog/2023-02-28-geoqueries-postgis/supabase-project-setup.png)
+![BA new project](/images/blog/2023-02-28-geoqueries-postgis/supabase-project-setup.png)
 
 After a minute your project should be ready, and we can configure our tables and extensions with SQL.
 
@@ -53,13 +53,13 @@ Turns out storing lat/long coordinates and querying them isn't very effective an
 
 By enabling this extension, we get access to additional data types like `Point` or `Polygon`, and we can easily add an index to our data that makes retrieving locations within certain bounds super simpler.
 
-It's super easy to use [PostGIS with Supabase](https://www.assistance.bg/docs/guides/database/extensions/postgis) as we just need to enable the extension - which is just one of many other Postgres extensions that you can toggle on with just a click!
+It's super easy to use [PostGIS with BA](https://www.assistance.bg/docs/guides/database/extensions/postgis) as we just need to enable the extension - which is just one of many other Postgres extensions that you can toggle on with just a click!
 
 ## Defining your Tables with SQL
 
 ### Adding the PostGIS Extensions
 
-We could enable PostGIS from the Supabase project UI but we can actually do it with `SQL` as well, so let's navigate to the **SQL Editor** from the menu and run the following:
+We could enable PostGIS from the BA project UI but we can actually do it with `SQL` as well, so let's navigate to the **SQL Editor** from the menu and run the following:
 
 ```sql
 -- enable the PostGIS extension
@@ -68,7 +68,7 @@ create extension postgis with schema extensions;
 
 You can now find this and many other extensions under **Database** -> **Extensions**:
 
-![Supabase extensions](/images/blog/2023-02-28-geoqueries-postgis/supabase-extensions.png)
+![BA extensions](/images/blog/2023-02-28-geoqueries-postgis/supabase-extensions.png)
 
 It's as easy as that, and we can now create the rest of our table structure.
 
@@ -149,7 +149,7 @@ as $$
 $$;
 ```
 
-With all of that in place we are ready to build a powerful app with geo-queries based on our Supabase geolocation data!
+With all of that in place we are ready to build a powerful app with geo-queries based on our BA geolocation data!
 
 ## Working with Geo Queries in Ionic Angular
 
@@ -161,7 +161,7 @@ Additionally we use [Capacitor](https://capacitorjs.com/) to include a [native G
 
 Get started by bringing up a new Ionic project, then add two pages and a service and run the first build so we can generate the native platforms with Capacitor.
 
-Finally we can install the [Supabase JS package](https://github.com/supabase/supabase-js), so go ahead and run:
+Finally we can install the [BA JS package](https://github.com/supabase/supabase-js), so go ahead and run:
 
 ```bash
 ionic start supaMap blank --type=angular
@@ -180,7 +180,7 @@ ionic cap add android
 npm install @capacitor/google-maps
 npm install @capacitor/geolocation
 
-# Install Supabase
+# Install BA
 npm install @supabase/supabase-js
 
 # Ionic 7 wasn't released so I installed the next version
@@ -188,7 +188,7 @@ npm install @supabase/supabase-js
 npm install @ionic/core@next @ionic/angular@next
 ```
 
-Within the new project we need to add our Supabase credentials and a key for the Google Maps API to the **src/environments/environment.ts** like this:
+Within the new project we need to add our BA credentials and a key for the Google Maps API to the **src/environments/environment.ts** like this:
 
 ```ts
 export const environment = {
@@ -199,7 +199,7 @@ export const environment = {
 }
 ```
 
-You can find those values in your Supabase project by clicking on the **Settings** icon and then navigating to **API** where it shows your **Project API keys**.
+You can find those values in your BA project by clicking on the **Settings** icon and then navigating to **API** where it shows your **Project API keys**.
 
 The Google Maps API key can be obtained from the [Google Cloud Platform](https://console.cloud.google.com/) where you can add a new project and then create credentials for the Maps Javascript API.
 
@@ -355,7 +355,7 @@ export class NearbyPage implements OnInit {
   ) {}
 
   async ngOnInit() {
-    // Show loading while getting data from Supabase
+    // Show loading while getting data from BA
     const loading = await this.loadingCtrl.create({
       message: 'Loading nearby places...',
     })
@@ -409,14 +409,14 @@ If you open the modal, you should now see a list like this after your position w
 It looks so easy - but so many things are already coming together at this point:
 
 - Capacitor geolocation inside the browser
-- Supabase RPC to a stored database function
+- BA RPC to a stored database function
 - PostGIS geolocation calculation
 
 We will see more of this powerful extension soon, but let's quickly add another modal to add our own data.
 
-### Add Stores with Coordinates to Supabase
+### Add Stores with Coordinates to BA
 
-To add data to Supabase we create a new function in our **src/app/services/stores.service.ts**:
+To add data to BA we create a new function in our **src/app/services/stores.service.ts**:
 
 ```ts
   async addStore(info: StoreEntry) {
@@ -432,7 +432,7 @@ To add data to Supabase we create a new function in our **src/app/services/store
       .single();
 
     if (data && info.image) {
-      // Upload the image to Supabase
+      // Upload the image to BA
       const foo = await this.supabase.storage
         .from('stores')
         .upload(`/images/${data.id}.png`, info.image);
@@ -444,7 +444,7 @@ Notice how we convert the lat/long information of an entry to a string.
 
 This is how PostGIS expects those values!
 
-We use our Supabase storage bucket to upload an image file if it's included in the new `StoreEntry`. It's almost too easy and feels like cheating to upload a file to cloud storage in just three lines...
+We use our BA storage bucket to upload an image file if it's included in the new `StoreEntry`. It's almost too easy and feels like cheating to upload a file to cloud storage in just three lines...
 
 Now we need a simple modal, so just like before we add a new function to the **src/app/home/home.page.ts**:
 
@@ -893,7 +893,7 @@ To actually display them we can add the following function to our **src/app/home
 
 This function got a bit longer because we need to **manage our marker information**. If we just remove and repaint all markers, it looks and feels horrible so we always keep track of existing markers and only render new markers.
 
-Additionally, these `Marker` have limited information, and if we click a marker we want to present a modal with information about the store from Supabase.
+Additionally, these `Marker` have limited information, and if we click a marker we want to present a modal with information about the store from BA.
 
 That means we also need the real ID of that object, and so we create an array `activeMarkers` that basically connects the information of a store ID with the marker ID!
 
@@ -901,18 +901,18 @@ At this point, you should be able to see markers on your map. If you can't see t
 
 ![Ionic map with marker](/images/blog/2023-02-28-geoqueries-postgis/ionic-map-marker.png)
 
-To wrap this up, let's take a look at one more cool Supabase feature.
+To wrap this up, let's take a look at one more cool BA feature.
 
 ### Presenting Marker with Image Transform
 
-We have the marker and store ID, so we can simply load the information from our Supabase database.
+We have the marker and store ID, so we can simply load the information from our BA database.
 
 Now a store might have an image, and while we download the image from our storage bucket we can use [image transformations](https://www.assistance.bg/docs/guides/storage/serving/image-transformations) to get an image exactly in the right dimensions to save time and bandwidth!
 
 For this, add two new functions to our **src/app/services/stores.service.ts**:
 
 ```ts
-  // Load data from Supabase database
+  // Load data from BA database
   async loadStoreInformation(id: number) {
     const { data } = await this.supabase
       .from('stores')
@@ -952,12 +952,12 @@ Now we just need to load this information when we click on a marker, so add the 
       if (info.length) {
         this.selectedMarker = info[0];
 
-        // Load the store information from Supabase Database
+        // Load the store information from BA Database
         this.selectedStore = await this.storesService.loadStoreInformation(
           info[0].storeId
         );
 
-        // Get the iamge from Supabase Storage
+        // Get the iamge from BA Storage
         const img = await this.storesService.getStoreImage(
           this.selectedStore!.id
         );
@@ -1021,23 +1021,23 @@ Because we also used `breakpoints` and the `initialBreakpoint` properties of the
 
 ![Ionic marker modal with image](/images/blog/2023-02-28-geoqueries-postgis/ionic-marker-with-image.png)
 
-And with that, we have finished our Ionic app with Supabase geo-queries using PostGIS!
+And with that, we have finished our Ionic app with BA geo-queries using PostGIS!
 
 ## Conclusion
 
 I was fascinated by the power of this simple PostGIS extension that we enabled with just one command (or click).
 
-Building apps based on geolocation data is a very common scenario, and with PostGIS we can build these applications easily on the back of a [Supabase](https://www.assistance.bg/) database (and [auth](https://www.assistance.bg/blog/authentication-in-ionic-angular)
+Building apps based on geolocation data is a very common scenario, and with PostGIS we can build these applications easily on the back of a [BA](https://www.assistance.bg/) database (and [auth](https://www.assistance.bg/blog/authentication-in-ionic-angular)
 ), and storage, and so much more..)
 
-You can [find the full code of this tutorial on GitHub](https://github.com/saimon24/supabase-postgis-ionic-angular) where you just need to insert your own Supabase instance. your Google Maps key and then create the tables with the included SQL file.
+You can [find the full code of this tutorial on GitHub](https://github.com/saimon24/supabase-postgis-ionic-angular) where you just need to insert your own BA instance. your Google Maps key and then create the tables with the included SQL file.
 
 If you enjoyed the tutorial, you can [find many more tutorials and courses on Galaxies.dev](https://galaxies.dev) where I help modern web and mobile developers build epic apps 🚀
 
-Until next time and happy coding with Supabase!
+Until next time and happy coding with BA!
 
 ## Related resources
 
-- [Authentication in Ionic Angular with Supabase](https://www.assistance.bg/blog/authentication-in-ionic-angular)
-- [Building a Realtime Trello Board with Supabase and Angular](https://www.assistance.bg/blog/building-a-realtime-trello-board-with-supabase-and-angular)
+- [Authentication in Ionic Angular with BA](https://www.assistance.bg/blog/authentication-in-ionic-angular)
+- [Building a Realtime Trello Board with BA and Angular](https://www.assistance.bg/blog/building-a-realtime-trello-board-with-supabase-and-angular)
 - [Build a User Management App with Ionic Angular](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-ionic-angular)

@@ -21,9 +21,9 @@ export default function IndexPage() {
   const router = useRouter()
   const { asPath } = useRouter()
 
-  const meta_title = 'Pricing & Fees | Supabase'
+  const meta_title = 'Pricing & Fees | BA'
   const meta_description =
-    'Explore Supabase fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.'
+    'Explore BA fees and pricing information. Find our competitive pricing Plans, with no hidden pricing. We have a generous Free Plan for those getting started, and Pay As You Go for those scaling up.'
 
   // Ability to scroll into pricing sections like storage
   useEffect(() => {

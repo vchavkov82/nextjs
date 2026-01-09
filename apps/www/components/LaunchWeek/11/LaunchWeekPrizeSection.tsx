@@ -25,7 +25,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
                 <div className="relative w-full pl-4 xl:px-4 lg:w-2/3 border-b lg:border-none border-muted aspect-[3/1] top-0 md:-bottom-8 overflow-hidden">
                   <Image
                     src="/images/launchweek/11/airpods-max-alpha.png"
-                    alt="Supabase AirPod Max prize"
+                    alt="BA AirPod Max prize"
                     draggable={false}
                     width={300}
                     height={300}
@@ -33,7 +33,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
                   />
                   <Image
                     src="/images/launchweek/11/airpods-max-alpha-crop.png"
-                    alt="Supabase AirPod Max prize"
+                    alt="BA AirPod Max prize"
                     draggable={false}
                     width={300}
                     height={300}
@@ -61,7 +61,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
               content={
                 <div className="p-4 md:p-6 flex flex-col gap-2 text-sm items-start justify-between h-full">
                   <LabelBadge text="30 t-shirts" />
-                  <p>Supabase T-shirts</p>
+                  <p>BA T-shirts</p>
                 </div>
               }
             />
@@ -70,7 +70,7 @@ export default function LaunchWeekPrizeSection({ className }: { className?: stri
               content={
                 <div className="p-4 md:p-6 flex flex-col gap-2 text-sm items-start justify-between h-full">
                   <LabelBadge text="25 pins" />
-                  <p>Supabase Pins</p>
+                  <p>BA Pins</p>
                 </div>
               }
             />

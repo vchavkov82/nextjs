@@ -25,7 +25,7 @@ export async function getStaticProps() {
     props: {
       partners,
     },
-    // TODO: consider using Next.js' On-demand Revalidation with Supabase Database Webhooks instead
+    // TODO: consider using Next.js' On-demand Revalidation with BA Database Webhooks instead
     revalidate: 1800, // 30 minutes
   }
 }
@@ -43,7 +43,7 @@ function IntegrationPartnersPage(props: Props) {
   const router = useRouter()
 
   const meta_title = 'Find an Integration'
-  const meta_description = `Use your favorite tools with Supabase.`
+  const meta_description = `Use your favorite tools with BA.`
 
   const [search, setSearch] = useState('')
   const [debouncedSearchTerm] = useDebounce(search, 300)

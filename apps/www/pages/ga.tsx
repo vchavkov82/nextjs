@@ -23,8 +23,8 @@ export default function IndexPage() {
   const isDark = resolvedTheme?.includes('dark') ?? false
   const data = pageData(isDark)
 
-  const meta_title = 'General Availability | Supabase'
-  const meta_description = 'Supabase is officially launching into General Availability.'
+  const meta_title = 'General Availability | BA'
+  const meta_description = 'BA is officially launching into General Availability.'
   const meta_image = '/images/ga/ga-og-alt.png'
 
   return (

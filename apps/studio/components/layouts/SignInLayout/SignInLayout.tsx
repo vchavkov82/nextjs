@@ -75,7 +75,7 @@ const SignInLayout = ({
           router.push(getReturnToPath())
         }
       })
-      .catch(() => {}) // catch all errors thrown by auth methods
+      .catch(() => { }) // catch all errors thrown by auth methods
   }, [])
 
   const [quote, setQuote] = useState<{
@@ -110,9 +110,8 @@ const SignInLayout = ({
     <>
       <div className="relative flex flex-col bg-alternative min-h-screen">
         <div
-          className={`absolute top-0 w-full px-8 mx-auto sm:px-6 lg:px-8 ${
-            ongoingIncident ? 'mt-14' : 'mt-6'
-          }`}
+          className={`absolute top-0 w-full px-8 mx-auto sm:px-6 lg:px-8 ${ongoingIncident ? 'mt-14' : 'mt-6'
+            }`}
         >
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -124,7 +123,7 @@ const SignInLayout = ({
                         ? `${BASE_PATH}/img/supabase-dark.svg`
                         : `${BASE_PATH}/img/supabase-light.svg`
                     }
-                    alt="Supabase Logo"
+                    alt="BA Logo"
                     className={largeLogo ? 'h-[48px]' : 'h-[24px]'}
                   />
                 </Link>
@@ -151,7 +150,7 @@ const SignInLayout = ({
             {showDisclaimer && showTos && (
               <div className="text-center text-balance">
                 <p className="text-xs text-foreground-lighter sm:mx-auto sm:max-w-sm">
-                  By continuing, you agree to Supabase’s{' '}
+                  By continuing, you agree to BA’s{' '}
                   <Link
                     href="https://www.assistance.bg/terms"
                     className="underline hover:text-foreground-light"

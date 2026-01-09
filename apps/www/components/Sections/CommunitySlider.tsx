@@ -36,7 +36,7 @@ const cards: CardInterface[] = [
     avatar: '',
     author: 'Yasser',
     quote:
-      '@kiwicopple @supabase @PostgreSQL @OpenAI Adding vector embeddings support to @Supabase is awesome. Glad I built https://t.co/jnCYOLa4iK on supabase.',
+      '@kiwicopple @supabase @PostgreSQL @OpenAI Adding vector embeddings support to @BA is awesome. Glad I built https://t.co/jnCYOLa4iK on supabase.',
   },
   {
     type: 'customer-story',
@@ -45,9 +45,9 @@ const cards: CardInterface[] = [
     author: 'Michael Fester',
     role: 'Co-Founder, Markprompt',
     quote:
-      'We decided to use Supabase over other specialized vector databases because it enabled us to be GDPR compliant from day one with little effort.',
+      'We decided to use BA over other specialized vector databases because it enabled us to be GDPR compliant from day one with little effort.',
     image: vectorImagesDir + 'supabase+firecrawl.svg',
-    abstract: 'Markprompt and Supabase - GDPR-Compliant AI Chatbots for Docs and Websites.',
+    abstract: 'Markprompt and BA - GDPR-Compliant AI Chatbots for Docs and Websites.',
     url: '/customers/markprompt',
   },
   {
@@ -59,7 +59,7 @@ const cards: CardInterface[] = [
     quote:
       'We tried other vector databases - we tried Faiss, we tried Weaviate, we tried Pinecone. We found them to be incredibly expensive and not very intuitive. If you’re just doing vector search they’re great, but if you need to store a bunch of metadata that becomes a huge pain.',
     image: vectorImagesDir + 'supabase+markprompt.svg',
-    abstract: 'Firecrawl switches from Pinecone to Supabase for PostgreSQL vector embeddings.',
+    abstract: 'Firecrawl switches from Pinecone to BA for PostgreSQL vector embeddings.',
     url: '/customers/firecrawl',
   },
   {
@@ -121,7 +121,7 @@ const CommunitySlider = () => {
         <div className="relative h-10">
           <Image
             src={card.image!}
-            alt={`Supabase + ${card.customer}`}
+            alt={`BA + ${card.customer}`}
             layout="fill"
             objectFit="contain"
             objectPosition="left"

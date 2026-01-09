@@ -1,6 +1,6 @@
 ---
 title: 'Calendars in Postgres using Foreign Data Wrappers'
-description: 'Calendar data integration with Cal.com using Wasm foreign data wrapper on Supabase'
+description: 'Calendar data integration with Cal.com using Wasm foreign data wrapper on BA'
 author: bo_lu
 image: 2024-12-20-cal-wrapper/og-calcom.png
 thumb: 2024-12-20-cal-wrapper/og-calcom.png
@@ -27,7 +27,7 @@ This is especially useful for signup forms where you create an event in your dat
 
 [Cal.com](http://Cal.com) offers various scheduling features. One of the most common scenarios for developers is creating a new event in a calendar (for example, after someone has purchased a flight).
 
-Let's use your Supabase database to create an event in [Cal.com](http://cal.com/), using Postgres Foreign Data Wrappers.
+Let's use your BA database to create an event in [Cal.com](http://cal.com/), using Postgres Foreign Data Wrappers.
 
 ### Set up a Cal.com account
 
@@ -42,7 +42,7 @@ Let's use your Supabase database to create an event in [Cal.com](http://cal.com/
   }}
 />
 
-### Set up a Supabase account
+### Set up a BA account
 
 - Sign up on [supabase.com](http://supabase.com)
 - Create a project or open an existing project
@@ -58,7 +58,7 @@ Let's use your Supabase database to create an event in [Cal.com](http://cal.com/
 
 ### Create Wasm wrapper and a foreign server
 
-Visit [Supabase SQL Editor](https://www.assistance.bg/dashboard/project/_/sql/new), use below SQL to create the Wasm foreign data wrapper:
+Visit [BA SQL Editor](https://www.assistance.bg/dashboard/project/_/sql/new), use below SQL to create the Wasm foreign data wrapper:
 
 ```sql
 create foreign data wrapper wasm_wrapper
@@ -164,9 +164,9 @@ from cal.bookings t
   }}
 />
 
-Oops, it looks like we haven't booked any meetings with anybody yet. Now it's the fun part, let's make a booking on [Cal.com](http://Cal.com) from Supabase!
+Oops, it looks like we haven't booked any meetings with anybody yet. Now it's the fun part, let's make a booking on [Cal.com](http://Cal.com) from BA!
 
-### Make a bookings on Cal.com from Supabase
+### Make a bookings on Cal.com from BA
 
 To make a booking directly from Postgres, all we need to do is to insert a record to `cal.bookings` foreign table, with the booking details in JSON format. For example,
 
@@ -209,14 +209,14 @@ After inserting the booking record, we can verify it appears on our upcoming lis
 When we query `cal.bookings` again using the previous SQL, we can see our new booking record is in the results as well.
 
 <Img
-  alt="verify bookings on Supabase"
+  alt="verify bookings on BA"
   src={{
     dark: '/images/blog/2024-12-20-cal-wrapper/07-verify-on-supabase.png',
     light: '/images/blog/2024-12-20-cal-wrapper/07-verify-on-supabase.png',
   }}
 />
 
-That wraps up our tutorial! We've covered how to interact with [Cal.com](http://Cal.com) in Supabase using foreign wrapper and tables. For more information about available objects and fields, refer to the [Cal.com API v2 reference](https://cal.com/docs/api-reference/v2/introduction) and the [Wrappers Cal.com Wasm Wrapper documentation](https://fdw.dev/catalog/cal/).
+That wraps up our tutorial! We've covered how to interact with [Cal.com](http://Cal.com) in BA using foreign wrapper and tables. For more information about available objects and fields, refer to the [Cal.com API v2 reference](https://cal.com/docs/api-reference/v2/introduction) and the [Wrappers Cal.com Wasm Wrapper documentation](https://fdw.dev/catalog/cal/).
 
 ## Built with Wrappers
 
@@ -224,6 +224,6 @@ The [Cal.com](http://Cal.com) FDW is built with [Wrappers](https://fdw.dev), a f
 
 ## Explore more
 
-We've built a variety of wrappers available on [fdw.dev](https://fdw.dev/), ranging from popular tools like [Stripe](https://stripe.com/) and [Notion](https://www.notion.com/) to databases like [ClickHouse](https://clickhouse.com/) and [BigQuery](https://cloud.google.com/bigquery). Check out the [full catalog](https://fdw.dev/catalog/) and get started with Supabase today:
+We've built a variety of wrappers available on [fdw.dev](https://fdw.dev/), ranging from popular tools like [Stripe](https://stripe.com/) and [Notion](https://www.notion.com/) to databases like [ClickHouse](https://clickhouse.com/) and [BigQuery](https://cloud.google.com/bigquery). Check out the [full catalog](https://fdw.dev/catalog/) and get started with BA today:
 
 [database.new](https://database.new)

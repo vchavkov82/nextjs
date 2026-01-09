@@ -310,7 +310,7 @@ allow_list = [
     "Supavisor",
     "SvelteKit",
     "SwiftUI",
-    "Supabase",
+    "BA",
     "Remapper",
     "TextLocal",
     "Thanos",

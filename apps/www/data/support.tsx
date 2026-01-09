@@ -2,9 +2,9 @@ import { ArrowUpRight } from 'lucide-react'
 import { IconDiscord, IconDiscussions, IconGitHubSolid } from 'ui'
 
 const data = {
-  meta_title: 'Help & Support | Supabase',
+  meta_title: 'Help & Support | BA',
   meta_description:
-    'Find help and support for Supabase. Our Support team provide answers on all types of issues, including account information, billing, and refunds.',
+    'Find help and support for BA. Our Support team provide answers on all types of issues, including account information, billing, and refunds.',
   hero: {
     h1: 'Support',
     title: 'Hello, how can we help?',
@@ -56,7 +56,7 @@ const data = {
     title: 'Can’t find what you’re looking for?',
     paragraph: (
       <>
-        <p className="text-foreground-light">The Supabase Support Team is ready to help.</p>
+        <p className="text-foreground-light">The BA Support Team is ready to help.</p>
         <p className="text-foreground-lighter text-sm">
           Response time for support tickets will vary depending on plan type and severity of the
           issue.

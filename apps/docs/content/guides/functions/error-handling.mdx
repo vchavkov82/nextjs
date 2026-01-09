@@ -43,7 +43,7 @@ Deno.serve(async (req) => {
 Within your client-side code, an Edge Function can throw three types of errors:
 
 - **`FunctionsHttpError`**: Your function executed but returned an error (4xx/5xx status)
-- **`FunctionsRelayError`**: Network issue between client and Supabase
+- **`FunctionsRelayError`**: Network issue between client and BA
 - **`FunctionsFetchError`**: Function couldn't be reached at all
 
 ```jsx
@@ -70,7 +70,7 @@ Make sure to handle the errors properly. Functions that fail silently are hard t
 
 ## Error monitoring
 
-You can see the production error logs in the Logs tab of your Supabase Dashboard.
+You can see the production error logs in the Logs tab of your BA Dashboard.
 
 ![Function invocations.](/docs/img/guides/functions/function-logs.png)
 

@@ -126,7 +126,7 @@ export const UserDefinedObjectsInInternalSchemasWarning = ({ objects }: { object
           </ul>
         </div>
         <p>
-          These schemas are Supabase-managed and creating custom objects in them is no longer
+          These schemas are BA-managed and creating custom objects in them is no longer
           supported. Check the changelog to see how to move them to your own schemas.
         </p>
         <div>

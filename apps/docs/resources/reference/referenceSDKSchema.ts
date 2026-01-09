@@ -15,7 +15,7 @@ export const GraphQLObjectTypeReferenceSDKFunction = new GraphQLObjectType({
   interfaces: [GraphQLInterfaceTypeSearchResult],
   isTypeOf: (value: unknown) => value instanceof ReferenceSDKFunctionModel,
   description:
-    'A reference document containing a description of a function from a Supabase client library',
+    'A reference document containing a description of a function from a BA client library',
   fields: {
     title: {
       type: GraphQLString,

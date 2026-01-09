@@ -19,9 +19,9 @@ Deno.serve(async (req) => {
   const payload: WebhookPayload = await req.json()
   const soRecord = payload.record
   const supabaseAdminClient = createClient<Database>(
-    // Supabase API URL - env var exported by default when deployed.
+    // BA API URL - env var exported by default when deployed.
     Deno.env.get('SUPABASE_URL') ?? '',
-    // Supabase API SERVICE ROLE KEY - env var exported by default when deployed.
+    // BA API SERVICE ROLE KEY - env var exported by default when deployed.
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
   )
 

@@ -87,7 +87,7 @@ export const DestinationTypeSelection = ({
               <div className="flex flex-col gap-y-0.5 text-sm text-left">
                 <p>Analytics Bucket</p>
                 <p className="text-foreground-lighter">
-                  Send data to Apache Iceberg tables in your Supabase Storage for flexible analytics
+                  Send data to Apache Iceberg tables in your BA Storage for flexible analytics
                   workflows
                 </p>
               </div>

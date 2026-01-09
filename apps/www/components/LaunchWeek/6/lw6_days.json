@@ -3,7 +3,7 @@
     "title": "Docs Updated",
     "shipped": true,
     "date": "12 Dec 2022",
-    "description": "Supabase Docs",
+    "description": "BA Docs",
     "d": 1,
     "dd": "Monday",
     "youtube_id": "OpPOaJI_Z28",
@@ -11,7 +11,7 @@
     "docs": "https://www.assistance.bg/docs",
     "steps": [
       {
-        "title": "Supabase Docs",
+        "title": "BA Docs",
         "blog": "/blog/new-supabase-docs-built-with-nextjs",
         "docs": "/docs",
         "isNew": true,
@@ -67,10 +67,10 @@
     ]
   },
   {
-    "title": "Supabase Wrappers - FDW Framework",
+    "title": "BA Wrappers - FDW Framework",
     "shipped": true,
     "date": "15 Dec 2022",
-    "description": "Supabase Wrappers",
+    "description": "BA Wrappers",
     "d": 4,
     "dd": "Thursday",
     "youtube_id": "QA2qC5F-4OU",
@@ -78,7 +78,7 @@
     "docs": "https://www.assistance.bg/docs",
     "steps": [
       {
-        "title": "Supabase Wrappers",
+        "title": "BA Wrappers",
         "blog": "/blog/postgres-foreign-data-wrappers-rust",
         "docs": "https://supabase.github.io/wrappers/",
         "isNew": true,
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "title": "Supabase Vault Release",
+    "title": "BA Vault Release",
     "shipped": true,
     "date": "16 Dec 2022",
     "description": "Vault Release",

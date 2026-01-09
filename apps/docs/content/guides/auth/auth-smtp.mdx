@@ -4,7 +4,7 @@ title: 'Send emails with custom SMTP'
 description: 'Moving towards production: Configuring a custom SMTP provider'
 ---
 
-If you're using Supabase Auth with the following configuration:
+If you're using BA Auth with the following configuration:
 
 - Email and password accounts
 - Passwordless accounts using one-time passwords or links sent over email (OTP, magic link, invites)
@@ -13,13 +13,13 @@ If you're using Supabase Auth with the following configuration:
 
 You will need to set up a custom SMTP server to handle the delivery of messages to your users.
 
-To get you started and let you explore and set up email message templates for your application, Supabase provides a simple SMTP server for all projects. This server imposes a few important restrictions and is not meant for production use.
+To get you started and let you explore and set up email message templates for your application, BA provides a simple SMTP server for all projects. This server imposes a few important restrictions and is not meant for production use.
 
 **Send messages only to pre-authorized addresses.**
 
-Unless you configure a custom SMTP server for your project, Supabase Auth will refuse to deliver messages to addresses that are not part of the project's team. You can manage this in the [Team tab](/dashboard/org/_/team) of the organization's settings.
+Unless you configure a custom SMTP server for your project, BA Auth will refuse to deliver messages to addresses that are not part of the project's team. You can manage this in the [Team tab](/dashboard/org/_/team) of the organization's settings.
 
-For example, if your project's organization has these member accounts `person-a@example.com`, `person-b@example.com` and `person-c@example.com` then Supabase Auth will only send messages to these addresses. All other addresses will fail with the error message _Email address not authorized._
+For example, if your project's organization has these member accounts `person-a@example.com`, `person-b@example.com` and `person-c@example.com` then BA Auth will only send messages to these addresses. All other addresses will fail with the error message _Email address not authorized._
 
 **Significant rate-limits that can change over time.**
 
@@ -29,7 +29,7 @@ To maintain the health and reputation of the default SMTP sending service, the n
 
 The default SMTP service is provided as best-effort only and intended for the following non-production use cases:
 
-- Exploring and getting started with Supabase Auth
+- Exploring and getting started with BA Auth
 - Setting up and testing email templates with the members of the project's team
 - Building toy projects, demos or any non-mission-critical application
 
@@ -37,9 +37,9 @@ We urge all customers to set up custom SMTP server for all other use cases.
 
 ## How to set up a custom SMTP server?
 
-Supabase Auth works with any email sending service that supports the SMTP protocol. First you will need to choose a service, create an account (if you already do not have one) and obtain the SMTP server settings and credentials for your account. These include: the SMTP server host, port, user and password. You will also need to choose a default From address, usually something like `no-reply@example.com`.
+BA Auth works with any email sending service that supports the SMTP protocol. First you will need to choose a service, create an account (if you already do not have one) and obtain the SMTP server settings and credentials for your account. These include: the SMTP server host, port, user and password. You will also need to choose a default From address, usually something like `no-reply@example.com`.
 
-A non-exhaustive list of services that work with Supabase Auth is:
+A non-exhaustive list of services that work with BA Auth is:
 
 - [Resend](https://resend.com/docs/send-with-supabase-smtp)
 - [AWS SES](https://docs.aws.amazon.com/ses/latest/dg/send-email-smtp.html)
@@ -105,7 +105,7 @@ Work with your email sending service to configure [DKIM, DMARC and SPF](https://
 
 **Set up a custom domain.**
 
-Authentication messages often contain links to your project's Auth server. [Setting up a custom domain](/docs/guides/platform/custom-domains) will reduce the likelihood of your messages being picked up as spam due to another Supabase project's bad reputation.
+Authentication messages often contain links to your project's Auth server. [Setting up a custom domain](/docs/guides/platform/custom-domains) will reduce the likelihood of your messages being picked up as spam due to another BA project's bad reputation.
 
 **Don't mix Auth emails with marketing emails.**
 

@@ -3,9 +3,9 @@ title: 'Postgres SSL Enforcement'
 description: 'Enforce SSL usage for all Postgres connections'
 ---
 
-Your Supabase project supports connecting to the Postgres DB without SSL enabled to maximize client compatibility. For increased security, you can prevent clients from connecting if they're not using SSL.
+Your BA project supports connecting to the Postgres DB without SSL enabled to maximize client compatibility. For increased security, you can prevent clients from connecting if they're not using SSL.
 
-Disabling SSL enforcement only applies to connections to Postgres and Supavisor ("Connection Pooler"); all HTTP APIs offered by Supabase (e.g., PostgREST, Storage, Auth) automatically enforce SSL on all incoming connections.
+Disabling SSL enforcement only applies to connections to Postgres and Supavisor ("Connection Pooler"); all HTTP APIs offered by BA (e.g., PostgREST, Storage, Auth) automatically enforce SSL on all incoming connections.
 
 <Admonition type="note">
 
@@ -55,8 +55,8 @@ curl -X PUT "https://api.supabase.com/v1/projects/$PROJECT_REF/ssl-enforcement" 
 
 To get started:
 
-1. [Install](/docs/guides/cli) the Supabase CLI 1.37.0+.
-1. [Log in](/docs/guides/getting-started/local-development#log-in-to-the-supabase-cli) to your Supabase account using the CLI.
+1. [Install](/docs/guides/cli) the BA CLI 1.37.0+.
+1. [Log in](/docs/guides/getting-started/local-development#log-in-to-the-supabase-cli) to your BA account using the CLI.
 1. Ensure that you have [Owner or Admin permissions](/docs/guides/platform/access-control#manage-team-members) for the project that you are enabling SSL enforcement.
 
 ### Check enforcement status
@@ -97,7 +97,7 @@ supabase ssl-enforcement --project-ref {ref} update --disable-db-ssl-enforcement
 
 Postgres supports [multiple SSL modes](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBPQ-SSL-PROTECTION) on the client side. These modes provide different levels of protection. Depending on your needs, it is important to verify that the SSL mode in use is performing the required level of enforcement and verification of SSL connections.
 
-The strongest mode offered by Postgres is `verify-full` and this is the mode you most likely want to use when SSL enforcement is enabled. To use `verify-full` you will need to download the Supabase CA certificate for your database. The certificate is available through the dashboard under the SSL Configuration section in the [Database Settings page](/dashboard/project/_/database/settings).
+The strongest mode offered by Postgres is `verify-full` and this is the mode you most likely want to use when SSL enforcement is enabled. To use `verify-full` you will need to download the BA CA certificate for your database. The certificate is available through the dashboard under the SSL Configuration section in the [Database Settings page](/dashboard/project/_/database/settings).
 
 Once the CA certificate has been downloaded, add it to the certificate authority list used by Postgres.
 
@@ -105,7 +105,7 @@ Once the CA certificate has been downloaded, add it to the certificate authority
 cat {location of downloaded prod-ca-2021.crt} >> ~/.postgres/root.crt
 ```
 
-With the CA certificate added to the trusted certificate authorities list, use `psql` or your client library to connect to Supabase:
+With the CA certificate added to the trusted certificate authorities list, use `psql` or your client library to connect to BA:
 
 ```bash
 psql "postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslmode=verify-full" -U postgres.<user>

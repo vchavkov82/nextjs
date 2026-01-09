@@ -97,7 +97,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
             <div className="flex flex-col gap-1 !leading-3">
               <span>Features</span>
               <span className="text-foreground-lighter text-xs leading-4">
-                Explore everything you can do with Supabase.
+                Explore everything you can do with BA.
               </span>
             </div>
             <ChevronRight
@@ -224,7 +224,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   src={supabaseLogoWordmarkLight}
                   width={124}
                   height={24}
-                  alt="Supabase Logo"
+                  alt="BA Logo"
                   className="dark:hidden"
                   priority
                 />
@@ -232,7 +232,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   src={supabaseLogoWordmarkDark}
                   width={124}
                   height={24}
-                  alt="Supabase Logo"
+                  alt="BA Logo"
                   className="hidden dark:block"
                   priority
                 />

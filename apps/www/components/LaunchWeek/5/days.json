@@ -3,13 +3,13 @@
     "title": "CLI and Management API",
     "shipped": true,
     "date": "15th Aug 2022",
-    "description": "We are moving Supabase CLI v1 out of beta, and releasing Management API beta.",
+    "description": "We are moving BA CLI v1 out of beta, and releasing Management API beta.",
     "d": 1,
     "dd": "Monday",
     "youtube_id": "OpPOaJI_Z28",
     "articles": [
       {
-        "title": "Supabase CLI v1 and Management API Beta",
+        "title": "BA CLI v1 and Management API Beta",
         "url": "/blog/supabase-cli-v1-and-admin-api-beta",
         "description": "Read our blog post outlining the new CLI and Management API.",
         "products": [
@@ -42,7 +42,7 @@
         "description": "First peek of supabase-js v2, which focuses on quality-of-life improvements for developers.",
         "products": [
           {
-            "title": "Supabase.js v2 Docs",
+            "title": "BA.js v2 Docs",
             "url": "/docs/reference/javascript/installing",
             "description": "Updated documentation for supabase-js"
           },
@@ -59,13 +59,13 @@
     "title": "Security",
     "shipped": true,
     "date": "17th Aug 2022",
-    "description": "An update on the ongoing security improvements of Supabase.",
+    "description": "An update on the ongoing security improvements of BA.",
     "d": 3,
     "dd": "Wednesday",
     "youtube_id": "6bGQotxisoY",
     "announcements": [
       {
-        "title": "Supabase is now SOC2 compliant",
+        "title": "BA is now SOC2 compliant",
         "url": "Something",
         "description": "Outline of the community changes",
         "type": "soc2"
@@ -73,14 +73,14 @@
     ],
     "articles": [
       {
-        "title": "Supabase is SOC2 compliant",
+        "title": "BA is SOC2 compliant",
         "url": "/blog/supabase-soc2",
-        "description": "Supabase is now SOC2 Type 1 compliant. Let’s dig into what that means, and explain the process we went through to get there. If you’re building a SaaS product, this blog post should provide a rough guide to getting your SOC2 certification.",
+        "description": "BA is now SOC2 Type 1 compliant. Let’s dig into what that means, and explain the process we went through to get there. If you’re building a SaaS product, this blog post should provide a rough guide to getting your SOC2 certification.",
         "products": [
           {
             "title": "Security portal",
             "url": "https://security.supabase.com/",
-            "description": "Monitor security at Supabase."
+            "description": "Monitor security at BA."
           },
           {
             "title": "SOC 2 Document",
@@ -161,7 +161,7 @@
           {
             "title": "Egghead course",
             "url": "/blog/launch-week-5-community-day#free-egghead-course-cache-supabase-data-at-the-edge-with-cloudflare-workers-and-kv-storage",
-            "description": "Cache Supabase data at the Edge with Cloudflare Workers and KV Storage."
+            "description": "Cache BA data at the Edge with Cloudflare Workers and KV Storage."
           }
         ]
       },
@@ -171,24 +171,24 @@
         "description": "It's never just one more thing...",
         "products": [
           {
-            "title": "Supabase Vault",
+            "title": "BA Vault",
             "url": "/blog/supabase-vault",
             "description": "Postgres extension for managing secrets and encryption inside your database."
           },
           {
             "title": "Auth UI",
             "url": "/blog/launch-week-5-one-more-thing#auth-ui",
-            "description": "Customizable React UI component for Supabase Auth."
+            "description": "Customizable React UI component for BA Auth."
           },
           {
             "title": "Dashboard permissions",
             "url": "/blog/launch-week-5-one-more-thing#dashboard-permissions",
-            "description": "We've released granular permissions on our Supabase dashboard."
+            "description": "We've released granular permissions on our BA dashboard."
           },
           {
             "title": "JSON schema validation",
             "url": "/blog/launch-week-5-one-more-thing#json-schema-validation",
-            "description": "We've released a new Postgres extension on the Supabase platform today, pg_jsonschema."
+            "description": "We've released a new Postgres extension on the BA platform today, pg_jsonschema."
           },
           {
             "title": "pg_graphql v0.4.0",

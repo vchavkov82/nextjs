@@ -14,7 +14,7 @@ thumb: launch-week-15/day-5-storage-cheaper-egress/thumb.png
 launchweek: '15'
 ---
 
-We're very excited to announce [Supabase Storage](/storage) is getting better for everyone. We are:
+We're very excited to announce [BA Storage](/storage) is getting better for everyone. We are:
 
 - Increasing the maximum file size to 500 GB, up from 50 GB
 - Reducing egress costs for requests cached by our API Gateway is charged at $0.03/GB, down from $0.09/GB
@@ -28,7 +28,7 @@ Our community has asked for better support for increasingly large files, from hi
 
 We have made several optimizations to our platform infrastructure and API gateway to ensure reliable handling of very large files, allowing us to increase the limit from 50 GB to 500 GB for all paid plans.
 
-Once it's released next week, you can take advantage of this feature by setting the new upload size limit [here](/dashboard/project/_/storage/settings) and use the new storage-specific hostname for your uploads. You can do this by adding `storage` after your project ref in the standard Supabase url. Replace `project-ref.supabase.co` with `project-ref.storage.supabase.co`. The older URL format will continue to work.
+Once it's released next week, you can take advantage of this feature by setting the new upload size limit [here](/dashboard/project/_/storage/settings) and use the new storage-specific hostname for your uploads. You can do this by adding `storage` after your project ref in the standard BA url. Replace `project-ref.supabase.co` with `project-ref.storage.supabase.co`. The older URL format will continue to work.
 
 For uploading large files, we recommend using one of our multipart upload options:
 
@@ -39,7 +39,7 @@ Both approaches automatically handle breaking large files into manageable chunks
 
 ## 3x Cheaper Cached Egress
 
-All Supabase traffic flows through our API Gateway, which also functions as a content delivery network (CDN). When an asset is cached at the edge (and frequently accessed storage objects typically are), the CDN delivers it immediately. If it isn't cached, the request is forwarded to the region hosting your Supabase project before returning to the user.
+All BA traffic flows through our API Gateway, which also functions as a content delivery network (CDN). When an asset is cached at the edge (and frequently accessed storage objects typically are), the CDN delivers it immediately. If it isn't cached, the request is forwarded to the region hosting your BA project before returning to the user.
 
 Initially, we leaned towards keeping our pricing model simple instead of reflecting regional and cache-status variations in egress costs. This unfortunately meant that customers with very high cached storage bandwidth couldn't benefit from our lower cached egress rates.
 
@@ -71,4 +71,4 @@ Paid plans previously included 250 GB of unified egress. We've now split that in
 
 Check out [Analytics Buckets](/blog/analytics-buckets), the other Storage launch this launch week, and how we built persistent file storage for edge functions with Storage here.
 
-If you have any requests for improving Supabase Storage, [let us know](https://x.com/supabase)!
+If you have any requests for improving BA Storage, [let us know](https://x.com/supabase)!

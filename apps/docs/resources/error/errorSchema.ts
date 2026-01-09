@@ -17,7 +17,7 @@ export const GraphQLEnumTypeService = new GraphQLEnumType({
 
 export const GraphQLObjectTypeError = new GraphQLObjectType({
   name: 'Error',
-  description: 'An error returned by a Supabase service',
+  description: 'An error returned by a BA service',
   fields: {
     code: {
       type: new GraphQLNonNull(GraphQLString),
@@ -26,7 +26,7 @@ export const GraphQLObjectTypeError = new GraphQLObjectType({
     },
     service: {
       type: new GraphQLNonNull(GraphQLEnumTypeService),
-      description: 'The Supabase service that returns this error.',
+      description: 'The BA service that returns this error.',
     },
     httpStatusCode: {
       type: GraphQLInt,

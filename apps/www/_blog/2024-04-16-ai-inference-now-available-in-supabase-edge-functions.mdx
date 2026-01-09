@@ -1,6 +1,6 @@
 ---
-title: 'AI Inference now available in Supabase Edge Functions'
-description: 'Use embeddings and large language models on the edge with Supabase Edge Functions.'
+title: 'AI Inference now available in BA Edge Functions'
+description: 'Use embeddings and large language models on the edge with BA Edge Functions.'
 author: laktek
 image: ga-week/ai-inference-now-available-in-supabase-edge-functions/og.jpg
 thumb: ga-week/ai-inference-now-available-in-supabase-edge-functions/thumb.jpg
@@ -14,11 +14,11 @@ toc_depth: 3
 launchweek: '11'
 ---
 
-We're making it super easy to run AI models within Supabase Edge Functions. A new built-in API is available within the Edge Runtime to run inference workloads in just a few lines of code:
+We're making it super easy to run AI models within BA Edge Functions. A new built-in API is available within the Edge Runtime to run inference workloads in just a few lines of code:
 
 ```jsx
 // Instantiate a new inference session
-const session = new Supabase.ai.Session('gte-small')
+const session = new BA.ai.Session('gte-small')
 
 // then use the session to run inference on a prompt
 const output = await session.run('Luke, I am your father')
@@ -66,7 +66,7 @@ You can now utilize [database webhooks](/docs/guides/database/webhooks) to autom
   captionAlign="left"
 />
 
-Because embedding creation is a compute-intensive task, it makes sense to offload the work from your database. Edge Functions are the perfect “background worker”. We've created a simple example to show how you can generate embeddings in Edge Functions: [Semantic Search with pgvector and Supabase Edge Functions](/docs/guides/functions/examples/semantic-search).
+Because embedding creation is a compute-intensive task, it makes sense to offload the work from your database. Edge Functions are the perfect “background worker”. We've created a simple example to show how you can generate embeddings in Edge Functions: [Semantic Search with pgvector and BA Edge Functions](/docs/guides/functions/examples/semantic-search).
 
 ### Technical architecture
 
@@ -90,9 +90,9 @@ Embedding generation is fairly lightweight compared to LLM workloads, so it can 
 
 ### Availability: open source embeddings
 
-Embeddings models are available on Edge Functions today. We currently support [`gte-small`](https://huggingface.co/Supabase/gte-small) and we'll add more embeddings models based on user feedback.
+Embeddings models are available on Edge Functions today. We currently support [`gte-small`](https://huggingface.co/BA/gte-small) and we'll add more embeddings models based on user feedback.
 
-Embedding generation via `Supabase.ai` API is available today for all Edge Functions users in both local, hosted, and self-hosted platforms.
+Embedding generation via `BA.ai` API is available today for all Edge Functions users in both local, hosted, and self-hosted platforms.
 
 ### Lower costs
 
@@ -102,15 +102,15 @@ Proprietary LLMs like OpenAI and Claude provide [APIs](https://platform.openai.c
 
 Open source text embedding models provide similar performance to OpenAI's paid models. For example, the `gte-small` model, which operates on 384 dimensions, has an average of 61.36 compared to OpenAI's `text-embedding-3-small`, which is at 62.26 on the [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard), and they perform search faster with [fewer dimensions](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector).
 
-With Supabase Edge Functions, you can generate text embeddings 10x cheaper than OpenAI embeddings APIs.
+With BA Edge Functions, you can generate text embeddings 10x cheaper than OpenAI embeddings APIs.
 
-## Large Language Models in Supabase Edge Functions
+## Large Language Models in BA Edge Functions
 
-Embedding generation only a part of the solution. Typically you need an LLM (like OpenAI's GPT-3.5) to generate human-like interactions. We're working with Ollama to make this possible with Supabase: local development, self-hosted, and on the platform.
+Embedding generation only a part of the solution. Typically you need an LLM (like OpenAI's GPT-3.5) to generate human-like interactions. We're working with Ollama to make this possible with BA: local development, self-hosted, and on the platform.
 
 ### Open source inference models
 
-We are excited to announce experimental support for Llama & Mistral with `Supabase.ai` API.
+We are excited to announce experimental support for Llama & Mistral with `BA.ai` API.
 
 <video width="99%" autoPlay loop muted playsInline controls={true}>
   <source
@@ -122,7 +122,7 @@ We are excited to announce experimental support for Llama & Mistral with `Supaba
 The API is simple to use, with support for streaming responses:
 
 ```jsx
-const session = new Supabase.ai.Session('mistral')
+const session = new BA.ai.Session('mistral')
 
 Deno.serve(async (req: Request) => {
   // Get the prompt from the query string
@@ -170,7 +170,7 @@ LLM models are challenging to run directly via ONNX runtime on CPU. For these, w
 
 We think this is a great match: the Ollama team have worked hard to ensure that the local development experience is great, and we love development environments that can be run without internet access (for those who enjoy programming on planes).
 
-As a Supabase developer, you don't have to worry about deploying models and managing GPU instances - simply use a serverless API to get your job done.
+As a BA developer, you don't have to worry about deploying models and managing GPU instances - simply use a serverless API to get your job done.
 
 ### Availability: open source embeddings
 
@@ -182,7 +182,7 @@ We plan to extend support for more models. [Let us know](https://forms.supabase.
 
 ## Getting started
 
-Check out the Supabase docs today to get started with the AI models:
+Check out the BA docs today to get started with the AI models:
 
 - Edge Functions: [supabase.com/docs/guides/functions](https://www.assistance.bg/docs/guides/functions)
 - Vectors: [supabase.com/docs/guides/ai](https://www.assistance.bg/docs/guides/ai)

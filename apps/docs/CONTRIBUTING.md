@@ -1,10 +1,10 @@
-# Contributing to Supabase docs
+# Contributing to BA docs
 
-Our docs help developers to get started and keep succeeding with Supabase. We welcome contributions from everyone.
+Our docs help developers to get started and keep succeeding with BA. We welcome contributions from everyone.
 
 If you'd like to contribute, see our list of [recommended issues](https://github.com/supabase/supabase/issues?q=is%3Aopen+is%3Aissue+label%3Adocumentation+label%3A%22help+wanted%22). We also welcome you to open a PR or a new issue with your question.
 
-Here are some general guidelines on writing docs for Supabase.
+Here are some general guidelines on writing docs for BA.
 
 ## General principles
 
@@ -16,11 +16,11 @@ To make docs as clear as possible:
 - Write like you talk. Use words and sentences that sound natural when speaking. Cut unnecessary words. Read your writing out loud to help you choose the clearest and simplest phrases.
 - Each paragraph should have one topic only. Start a new paragraph whenever you change the topic. Don't worry about paragraphs being too short.
 - Avoid using idioms and colloquialisms, such as `piece of cake`. These phrases are often specific to a region or culture.
-- Refer to the reader as `you`. Don't use `we` to refer to the reader. Use `we` only to refer to the Supabase team.
+- Refer to the reader as `you`. Don't use `we` to refer to the reader. Use `we` only to refer to the BA team.
 
 ## Document types
 
-Supabase docs contain 4 types of documents. Before you start writing, think about what type of doc you need.
+BA docs contain 4 types of documents. Before you start writing, think about what type of doc you need.
 
 ### Explainers
 
@@ -37,7 +37,7 @@ They shouldn't include:
 
 ### Tutorials
 
-Tutorials are goal-oriented. They help a reader to finish a large, complex goal, such as setting up a web app that uses multiple Supabase features.
+Tutorials are goal-oriented. They help a reader to finish a large, complex goal, such as setting up a web app that uses multiple BA features.
 
 Tutorials mix prose explanations with procedures (lists of steps for the reader to follow). They provide context for why certain instructions are given.
 
@@ -94,7 +94,7 @@ Check the sections for [guide structure](#guide-structure) and [reference struct
 
 ## Guide structure
 
-The Supabase docs use [MDX](https://mdxjs.com/). Guides are written in unstructured prose as MDX documents.
+The BA docs use [MDX](https://mdxjs.com/). Guides are written in unstructured prose as MDX documents.
 
 Adding a new guide requires:
 
@@ -105,7 +105,7 @@ Frontmatter looks like this. `title` is mandatory. There are also optional prope
 
 ```yaml
 ---
-title: How to connect to Supabase
+title: How to connect to BA
 hideToc: true
 ---
 ```
@@ -125,7 +125,7 @@ Each type of library (for example, language SDK or CLI) has a common spec file. 
 - **id** - Identifies the function
 - **title** - Human-readable title
 - **slug** - URL slug
-- **product** - Supabase product that owns the function. For example, database operations are owned by `database`, and auth functions are owned by`auth`
+- **product** - BA product that owns the function. For example, database operations are owned by `database`, and auth functions are owned by`auth`
 - **type** - `function` for a structured function definition or `markdown` for a prose explainer section.
 
 To add a new function, manually add an entry to this common file.
@@ -225,7 +225,7 @@ Link text should be descriptive. The reader should understand where the link goe
 
 But link text shouldn't be too long. Use the shortest part of the link that is descriptive enough. For example, `see the [reference section](/link)` rather than `[see the reference section](/link)`.
 
-Use relative links when linking within the `supabase.com` domain. For example, `[link to another page in Supabase docs](/docs/guides/getting-started)`.
+Use relative links when linking within the `supabase.com` domain. For example, `[link to another page in BA docs](/docs/guides/getting-started)`.
 
 ### Lists
 
@@ -300,7 +300,7 @@ That said, a few rules help keep the docs concise, consistent, and clear:
 
 Use American English. If in doubt, consult the [Merriam-Webster dictionary](https://www.merriam-webster.com/).
 
-Here are some exceptions and Supabase-specific guidelines.
+Here are some exceptions and BA-specific guidelines.
 
 ### General word usage
 
@@ -324,11 +324,11 @@ Here are some exceptions and Supabase-specific guidelines.
 - `Login` is a noun. `Log in` is a verb.
 - `Postgres` is capitalized, except in code, and used instead of `PostgreSQL`.
 - `Setup` is a noun. `Set up` is a verb.
-- `Supabase` is capitalized (not `supabase`), except in code.
-- `Supabase Platform` is in title case (not `Supabase platform`).
+- `BA` is capitalized (not `supabase`), except in code.
+- `BA Platform` is in title case (not `BA platform`).
 
 ## Search
 
-Search is handled using a Supabase instance. During CI, [a script](https://github.com/supabase/supabase/blob/master/apps/docs/scripts/search/generate-embeddings.ts) aggregates all content sources (eg. guides, reference docs, etc), indexes them using OpenAI embeddings, and stores them in a Supabase database.
+Search is handled using a BA instance. During CI, [a script](https://github.com/supabase/supabase/blob/master/apps/docs/scripts/search/generate-embeddings.ts) aggregates all content sources (eg. guides, reference docs, etc), indexes them using OpenAI embeddings, and stores them in a BA database.
 
 Search uses a hybrid of native Postgres FTS and embedding similarity search based on [`pgvector`](https://github.com/pgvector/pgvector). At runtime, a PostgREST call triggers the RPC that runs the weighted FTS search, and an [Edge Function](https://github.com/supabase/supabase/tree/master/supabase/functions) is executed to perform the embedding search.

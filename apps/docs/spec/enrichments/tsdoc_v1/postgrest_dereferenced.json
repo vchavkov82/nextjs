@@ -13,7 +13,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/PostgrestClient.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/PostgrestClient.ts",
       "children": [
         {
           "id": 503,
@@ -245,7 +245,12 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [522, 517, 521, 523]
+                              "children": [
+                                522,
+                                517,
+                                521,
+                                523
+                              ]
                             }
                           ],
                           "sources": [
@@ -736,7 +741,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [539, 538]
+                              "children": [
+                                539,
+                                538
+                              ]
                             }
                           ],
                           "sources": [
@@ -781,17 +789,29 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [512]
+              "children": [
+                512
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [510, 505, 509, 511, 504]
+              "children": [
+                510,
+                505,
+                509,
+                511,
+                504
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [524, 527, 531]
+              "children": [
+                524,
+                527,
+                531
+              ]
             }
           ],
           "sources": [
@@ -807,7 +827,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [503]
+          "children": [
+            503
+          ]
         }
       ],
       "sources": [
@@ -826,7 +848,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/index.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/index.ts",
       "sources": [
         {
           "fileName": "index.ts",
@@ -843,7 +865,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestFilterBuilder.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/PostgrestFilterBuilder.ts",
       "children": [
         {
           "id": 150,
@@ -1629,17 +1651,32 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [41]
+                              "children": [
+                                41
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [40, 36, 39, 31, 29, 35, 37, 38, 30]
+                              "children": [
+                                40,
+                                36,
+                                39,
+                                31,
+                                29,
+                                35,
+                                37,
+                                38,
+                                30
+                              ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
-                              "children": [47, 44]
+                              "children": [
+                                47,
+                                44
+                              ]
                             }
                           ],
                           "sources": [
@@ -2854,7 +2891,13 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [326, 329, 328, 327, 330]
+                              "children": [
+                                326,
+                                329,
+                                328,
+                                327,
+                                330
+                              ]
                             }
                           ],
                           "sources": [
@@ -3323,7 +3366,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [257]
+                              "children": [
+                                257
+                              ]
                             }
                           ],
                           "sources": [
@@ -3990,7 +4035,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [303]
+                              "children": [
+                                303
+                              ]
                             }
                           ],
                           "sources": [
@@ -4778,7 +4825,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [162]
+                              "children": [
+                                162
+                              ]
                             }
                           ],
                           "sources": [
@@ -4953,7 +5002,11 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [295, 297, 296]
+                              "children": [
+                                295,
+                                297,
+                                296
+                              ]
                             }
                           ],
                           "sources": [
@@ -5207,7 +5260,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [271]
+                              "children": [
+                                271
+                              ]
                             }
                           ],
                           "sources": [
@@ -5356,7 +5411,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [264]
+                              "children": [
+                                264
+                              ]
                             }
                           ],
                           "sources": [
@@ -5495,7 +5552,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [310]
+                              "children": [
+                                310
+                              ]
                             }
                           ],
                           "sources": [
@@ -6169,7 +6228,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [249, 250]
+                              "children": [
+                                249,
+                                250
+                              ]
                             }
                           ],
                           "sources": [
@@ -6693,7 +6755,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [278]
+                              "children": [
+                                278
+                              ]
                             }
                           ],
                           "sources": [
@@ -6727,22 +6791,76 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [343]
+              "children": [
+                343
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
               "children": [
-                237, 342, 338, 212, 207, 341, 333, 331, 227, 232, 242, 337, 339, 340, 217, 222, 332
+                237,
+                342,
+                338,
+                212,
+                207,
+                341,
+                333,
+                331,
+                227,
+                232,
+                242,
+                337,
+                339,
+                340,
+                217,
+                222,
+                332
               ]
             },
             {
               "title": "Methods",
               "kind": 2048,
               "children": [
-                311, 208, 203, 318, 163, 322, 279, 251, 320, 171, 175, 191, 199, 195, 187, 298, 179,
-                183, 284, 316, 167, 152, 157, 290, 238, 265, 258, 304, 233, 218, 223, 213, 228, 287,
-                314, 243, 349, 346, 272
+                311,
+                208,
+                203,
+                318,
+                163,
+                322,
+                279,
+                251,
+                320,
+                171,
+                175,
+                191,
+                199,
+                195,
+                187,
+                298,
+                179,
+                183,
+                284,
+                316,
+                167,
+                152,
+                157,
+                290,
+                238,
+                265,
+                258,
+                304,
+                233,
+                218,
+                223,
+                213,
+                228,
+                287,
+                314,
+                243,
+                349,
+                346,
+                272
               ]
             }
           ],
@@ -6989,12 +7107,16 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [150]
+          "children": [
+            150
+          ]
         },
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [361]
+          "children": [
+            361
+          ]
         }
       ],
       "sources": [
@@ -7013,7 +7135,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestQueryBuilder.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/PostgrestQueryBuilder.ts",
       "children": [
         {
           "id": 363,
@@ -7241,7 +7363,12 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [375, 370, 374, 376]
+                              "children": [
+                                375,
+                                370,
+                                374,
+                                376
+                              ]
                             }
                           ],
                           "sources": [
@@ -7738,7 +7865,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [420, 419]
+                              "children": [
+                                420,
+                                419
+                              ]
                             }
                           ],
                           "sources": [
@@ -7935,7 +8065,10 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [390, 389]
+                                  "children": [
+                                    390,
+                                    389
+                                  ]
                                 }
                               ]
                             }
@@ -8174,7 +8307,12 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [398, 396, 397, 395]
+                                  "children": [
+                                    398,
+                                    396,
+                                    397,
+                                    395
+                                  ]
                                 }
                               ]
                             }
@@ -8342,7 +8480,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [383, 382]
+                              "children": [
+                                383,
+                                382
+                              ]
                             }
                           ],
                           "sources": [
@@ -8895,7 +9036,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [414, 413]
+                              "children": [
+                                414,
+                                413
+                              ]
                             }
                           ],
                           "sources": [
@@ -9147,7 +9291,12 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [406, 407, 404, 405]
+                              "children": [
+                                406,
+                                407,
+                                404,
+                                405
+                              ]
                             }
                           ],
                           "sources": [
@@ -9188,17 +9337,37 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [365]
+              "children": [
+                365
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [432, 428, 431, 423, 421, 427, 429, 430, 422]
+              "children": [
+                432,
+                428,
+                431,
+                423,
+                421,
+                427,
+                429,
+                430,
+                422
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [415, 384, 377, 436, 433, 408, 399]
+              "children": [
+                415,
+                384,
+                377,
+                436,
+                433,
+                408,
+                399
+              ]
             }
           ],
           "sources": [
@@ -9246,7 +9415,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [363]
+          "children": [
+            363
+          ]
         }
       ],
       "sources": [
@@ -9265,7 +9436,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestRpcBuilder.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/PostgrestRpcBuilder.ts",
       "children": [
         {
           "id": 449,
@@ -9493,7 +9664,12 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [461, 456, 460, 462]
+                              "children": [
+                                461,
+                                456,
+                                460,
+                                462
+                              ]
                             }
                           ],
                           "sources": [
@@ -9998,7 +10174,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [469, 468]
+                              "children": [
+                                469,
+                                468
+                              ]
                             }
                           ],
                           "sources": [
@@ -10414,17 +10593,33 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [451]
+              "children": [
+                451
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [481, 477, 480, 472, 470, 476, 478, 479, 471]
+              "children": [
+                481,
+                477,
+                480,
+                472,
+                470,
+                476,
+                478,
+                479,
+                471
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [463, 485, 482]
+              "children": [
+                463,
+                485,
+                482
+              ]
             }
           ],
           "sources": [
@@ -10472,7 +10667,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [449]
+          "children": [
+            449
+          ]
         }
       ],
       "sources": [
@@ -10491,7 +10688,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/PostgrestTransformBuilder.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/PostgrestTransformBuilder.ts",
       "children": [
         {
           "id": 73,
@@ -11280,17 +11477,32 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [41]
+                              "children": [
+                                41
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [40, 36, 39, 31, 29, 35, 37, 38, 30]
+                              "children": [
+                                40,
+                                36,
+                                39,
+                                31,
+                                29,
+                                35,
+                                37,
+                                38,
+                                30
+                              ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
-                              "children": [47, 44]
+                              "children": [
+                                47,
+                                44
+                              ]
                             }
                           ],
                           "sources": [
@@ -11964,7 +12176,13 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [114, 117, 116, 115, 118]
+                              "children": [
+                                114,
+                                117,
+                                116,
+                                115,
+                                118
+                              ]
                             }
                           ],
                           "sources": [
@@ -12167,7 +12385,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [91]
+                              "children": [
+                                91
+                              ]
                             }
                           ],
                           "sources": [
@@ -12389,7 +12609,11 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [83, 85, 84]
+                              "children": [
+                                83,
+                                85,
+                                84
+                              ]
                             }
                           ],
                           "sources": [
@@ -12528,7 +12752,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [98]
+                              "children": [
+                                98
+                              ]
                             }
                           ],
                           "sources": [
@@ -13037,17 +13263,42 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [131]
+              "children": [
+                131
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [130, 126, 129, 121, 119, 125, 127, 128, 120]
+              "children": [
+                130,
+                126,
+                129,
+                121,
+                119,
+                125,
+                127,
+                128,
+                120
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [99, 106, 110, 108, 86, 104, 78, 92, 75, 102, 137, 134]
+              "children": [
+                99,
+                106,
+                110,
+                108,
+                86,
+                104,
+                78,
+                92,
+                75,
+                102,
+                137,
+                134
+              ]
             }
           ],
           "sources": [
@@ -13102,7 +13353,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [73]
+          "children": [
+            73
+          ]
         }
       ],
       "sources": [
@@ -13121,7 +13374,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/constants.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/constants.ts",
       "children": [
         {
           "id": 500,
@@ -13159,7 +13412,9 @@
             {
               "title": "Variables",
               "kind": 32,
-              "children": [501]
+              "children": [
+                501
+              ]
             }
           ],
           "sources": [
@@ -13179,7 +13434,9 @@
         {
           "title": "Object literals",
           "kind": 2097152,
-          "children": [500]
+          "children": [
+            500
+          ]
         }
       ],
       "sources": [
@@ -13198,7 +13455,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/types.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/types.ts",
       "children": [
         {
           "id": 27,
@@ -13282,17 +13539,32 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [41]
+                              "children": [
+                                41
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [40, 36, 39, 31, 29, 35, 37, 38, 30]
+                              "children": [
+                                40,
+                                36,
+                                39,
+                                31,
+                                29,
+                                35,
+                                37,
+                                38,
+                                30
+                              ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
-                              "children": [47, 44]
+                              "children": [
+                                47,
+                                44
+                              ]
                             }
                           ],
                           "sources": [
@@ -14009,17 +14281,32 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [41]
+              "children": [
+                41
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [40, 36, 39, 31, 29, 35, 37, 38, 30]
+              "children": [
+                40,
+                36,
+                39,
+                31,
+                29,
+                35,
+                37,
+                38,
+                30
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [47, 44]
+              "children": [
+                47,
+                44
+              ]
             }
           ],
           "sources": [
@@ -14118,7 +14405,10 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [3, 4]
+              "children": [
+                3,
+                4
+              ]
             }
           ],
           "sources": [
@@ -14277,7 +14567,14 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [16, 17, 15, 14, 18, 19]
+              "children": [
+                16,
+                17,
+                15,
+                14,
+                18,
+                19
+              ]
             }
           ],
           "sources": [
@@ -14449,7 +14746,14 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [9, 10, 8, 7, 11, 12]
+              "children": [
+                9,
+                10,
+                8,
+                7,
+                11,
+                12
+              ]
             }
           ],
           "sources": [
@@ -14588,7 +14892,13 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [24, 23, 22, 25, 26]
+              "children": [
+                24,
+                23,
+                22,
+                25,
+                26
+              ]
             }
           ],
           "sources": [
@@ -14745,7 +15055,12 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [65, 63, 64, 62]
+                  "children": [
+                    65,
+                    63,
+                    64,
+                    62
+                  ]
                 }
               ],
               "sources": [
@@ -14906,17 +15221,30 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [27]
+          "children": [
+            27
+          ]
         },
         {
           "title": "Interfaces",
           "kind": 256,
-          "children": [2, 13, 5, 20]
+          "children": [
+            2,
+            13,
+            5,
+            20
+          ]
         },
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [59, 60, 70, 66, 68]
+          "children": [
+            59,
+            60,
+            70,
+            66,
+            68
+          ]
         }
       ],
       "sources": [
@@ -14935,7 +15263,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/postgrest-js/src/lib/version.ts",
+      "originalName": "/Users/copple/Projects/BA/postgrest-js/src/lib/version.ts",
       "children": [
         {
           "id": 498,
@@ -14964,7 +15292,9 @@
         {
           "title": "Variables",
           "kind": 32,
-          "children": [498]
+          "children": [
+            498
+          ]
         }
       ],
       "sources": [
@@ -14980,7 +15310,17 @@
     {
       "title": "Modules",
       "kind": 1,
-      "children": [502, 540, 149, 362, 448, 72, 499, 1, 497]
+      "children": [
+        502,
+        540,
+        149,
+        362,
+        448,
+        72,
+        499,
+        1,
+        497
+      ]
     }
   ]
 }

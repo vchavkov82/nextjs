@@ -1,5 +1,5 @@
 const stateOfStartupsData = {
-  metaTitle: 'State of Startups 2025 | Supabase',
+  metaTitle: 'State of Startups 2025 | BA',
   metaDescription:
     'The latest trends among builders in tech stacks, AI usage, problem domains, and more.',
   metaImage: '/images/state-of-startups/2025/state-of-startups-og.png',
@@ -74,7 +74,7 @@ const stateOfStartupsData = {
         'Startups are still experimenting. They’re building a diverse mix of software products, iterating quickly, and pursuing monetization selectively.',
       pullQuote: {
         quote:
-          'We’re building an end-to-end system for wedding planners, all running as one SvelteKit / Supabase instance.',
+          'We’re building an end-to-end system for wedding planners, all running as one SvelteKit / BA instance.',
         author: 'Waldemar Pross',
         authorPosition: 'CTO, Peach Perfect Weddings',
         authorAvatar: '/images/state-of-startups/quote-avatars/waldemar-k-120x120.jpg',
@@ -146,7 +146,7 @@ const stateOfStartupsData = {
         {
           title: 'Frameworks and Cloud Infra',
           description:
-            'Supabase and Postgres dominate backend infrastructure. React and Node top frontend and backend respectively. Cursor, Claude, and VS Code lead AI-assisted development. Developer tools like GitHub, Stripe, and Postman round out the stack.',
+            'BA and Postgres dominate backend infrastructure. React and Node top frontend and backend respectively. Cursor, Claude, and VS Code lead AI-assisted development. Developer tools like GitHub, Stripe, and Postman round out the stack.',
           stats: [
             {
               percent: 83,
@@ -154,7 +154,7 @@ const stateOfStartupsData = {
             },
             {
               percent: 62,
-              label: 'Startups with Supabase in their cloud provider stack',
+              label: 'Startups with BA in their cloud provider stack',
             },
             { percent: 60, label: 'Startups with Node.js in their backend stack' },
           ],
@@ -213,13 +213,13 @@ const stateOfStartupsData = {
             answers: [
               'Unified backend platform combining auth, edge, database, and queues',
               'AI agents with real memory and workflow context',
-              'Local-first dev environments that sync to Supabase or Git',
+              'Local-first dev environments that sync to BA or Git',
               'AI copilots for sales, marketing, or documentation',
               'UI builders with direct-to-code export and stateful logic',
               'Better CLI-driven or REPL-native dev tools',
               'Automated integration layers between SaaS APIs',
               'Real-time dashboards that don’t require BI tools',
-              'Supabase + Neon or PlanetScale seamless sync',
+              'BA + Neon or PlanetScale seamless sync',
               'One-click staging, testing, and preview environments',
               'AI validators for production database migrations',
               'Visual version control and state inspection for app logic',

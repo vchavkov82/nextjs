@@ -3,7 +3,7 @@ import { afterAll, beforeAll, vi } from 'vitest'
 let oldEnv: NodeJS.ProcessEnv
 
 beforeAll(() => {
-  // Use local Supabase to run e2e tests
+  // Use local BA to run e2e tests
   oldEnv = { ...process.env }
   process.env = {
     ...process.env,

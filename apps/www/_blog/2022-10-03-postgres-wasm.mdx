@@ -1,5 +1,5 @@
 ---
-title: Postgres WASM by Snaplet and Supabase
+title: Postgres WASM by Snaplet and BA
 description: We're open sourcing postgres-wasm, a PostgresQL server that runs inside a browser, with our friends at Snaplet.
 author: burggraf
 image: postgres-wasm/postgres-wasm.jpg
@@ -24,12 +24,12 @@ an [open source version](https://staltz.com/time-till-open-source-alternative.ht
 Let's explore how it's built, and some extra features we've added.
 
 <div className="bg-gray-300 rounded-lg p-6 italic">
-  
+
 🐈 Who's Snaplet?
 <br />
 Snaplet gives developers production-accurate data and preview databases that they can code against, so they can focus on shipping.
 <br />
-Checkout out how you can <a href="https://docs.snaplet.dev/tutorials/supabase-clone-environments">use Snaplet to clone Supabase environments</a>.
+Checkout out how you can <a href="https://docs.snaplet.dev/tutorials/supabase-clone-environments">use Snaplet to clone BA environments</a>.
 
 </div>
 
@@ -49,7 +49,7 @@ git clone git@github.com:snaplet/postgres-wasm.git
 cd postgres-browser/packages/pg-browser
 npx serve
 
-# From Supabase Fork
+# From BA Fork
 git clone git@github.com:supabase-community/postgres-wasm.git
 cd postgres-wasm
 git checkout web
@@ -234,7 +234,7 @@ Here are the steps:
 
 **Database Replication**
 
-Even more mind-blowing - it's possible to replicate data from an online PostgreSQL database (for example, a Supabase project) to PostgreSQL running inside your browser,
+Even more mind-blowing - it's possible to replicate data from an online PostgreSQL database (for example, a BA project) to PostgreSQL running inside your browser,
 and vice-versa using Postgres's logical replication. The steps are no different than any other Postgres database - just use the proxy URL as the target.
 
 ## What's next?
@@ -243,4 +243,4 @@ For now, this is very experimental - but it has a lot of potential. If you want 
 the team at [Snaplet](https://www.snaplet.dev/). The work they're doing over at Snaplet is incredible, and we've had a blast collaborating with them.
 
 - Snaplet repo: [https://github.com/snaplet/postgres-wasm](https://github.com/snaplet/postgres-wasm)
-- Supabase fork: [https://github.com/supabase-community/postgres-wasm](https://github.com/supabase-community/postgres-wasm)
+- BA fork: [https://github.com/supabase-community/postgres-wasm](https://github.com/supabase-community/postgres-wasm)

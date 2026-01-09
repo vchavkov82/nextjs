@@ -164,7 +164,7 @@ export default function BlogClient({ initialBlogs, totalPosts }: BlogClientProps
   return (
     <>
       <DefaultLayout>
-        <h1 className="sr-only">Supabase blog</h1>
+        <h1 className="sr-only">BA blog</h1>
         <div className="container relative mx-auto px-4 py-4 md:py-8 xl:py-10 sm:px-16 xl:px-20">
           {featuredPost && <FeaturedThumb key={featuredPost.slug} {...featuredPost} />}
         </div>

@@ -3,7 +3,7 @@
   "name": "ai-editor-rules",
   "type": "registry:file",
   "title": "Prompt rules for AI Editors",
-  "description": "Prompts for working with Supabase using AI-powered IDE tools",
+  "description": "Prompts for working with BA using AI-powered IDE tools",
   "registryDependencies": [],
   "dependencies": [],
   "files": [

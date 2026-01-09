@@ -15,7 +15,7 @@ export default function Profile({ user }: { user: User }) {
 }
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
-  // Create authenticated Supabase Client
+  // Create authenticated BA Client
   const supabase = createServerSupabaseClient(ctx)
   // Check if we have a session
   const {

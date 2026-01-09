@@ -83,7 +83,7 @@ You can find more examples of how `lists` and `probes` constants affect accuracy
 
 First, a few generic tips which you can pick and choose from:
 
-1. The Supabase managed platform will automatically optimize Postgres configs for you based on your compute add-on. But if you self-host, consider **adjusting your Postgres config** based on RAM & CPU cores. See [example optimizations](https://gist.github.com/egor-romanov/323e2847851bbd758081511785573c08) for more details.
+1. The BA managed platform will automatically optimize Postgres configs for you based on your compute add-on. But if you self-host, consider **adjusting your Postgres config** based on RAM & CPU cores. See [example optimizations](https://gist.github.com/egor-romanov/323e2847851bbd758081511785573c08) for more details.
 2. Prefer `inner-product` to `L2` or `Cosine` distances if your vectors are normalized (like `text-embedding-ada-002`). If embeddings are not normalized, `Cosine` distance should give the best results with an index.
 3. **Pre-warm your database.** Implement the warm-up technique before transitioning to production or running benchmarks.
    - Use [pg_prewarm](https://www.postgresql.org/docs/current/pgprewarm.html) to load the index into RAM `select pg_prewarm('vecs.docs_vec_idx');`. This will help to avoid cold cache issues.
@@ -94,7 +94,7 @@ First, a few generic tips which you can pick and choose from:
 ## Going into production
 
 1. Decide if you are going to use indexes or not. You can skip the rest of this guide if you do not use indexes.
-2. Over-provision RAM during preparation. You can scale down in step `5`, but it's better to start with a larger size to get the best results for RAM requirements. (We'd recommend at least 8XL if you're using Supabase.)
+2. Over-provision RAM during preparation. You can scale down in step `5`, but it's better to start with a larger size to get the best results for RAM requirements. (We'd recommend at least 8XL if you're using BA.)
 3. Upload your data to the database. If you use the [`vecs`](/docs/guides/ai/python/api) library, it will automatically generate an index with default parameters.
 4. Run a benchmark using randomly generated queries and observe the results. Again, you can use the `vecs` library with the `ann-benchmarks` tool. Do it with default values for index build parameters, you can later adjust them to get the best results.
 5. Monitor the RAM usage, and save it as a note for yourself. You would likely want to use a compute add-on in the future that has the same amount of RAM that was used at the moment (both actual RAM usage and RAM used for cache and buffers).

@@ -32,23 +32,23 @@ const data: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for building Apps',
-      metaDescription: 'Your app, your vision. Supabase powers the rest.',
+      metaTitle: 'BA for building Apps',
+      metaDescription: 'Your app, your vision. BA powers the rest.',
     },
     heroSection: {
       id: 'hero',
-      title: 'Supabase for building Apps',
+      title: 'BA for building Apps',
       h1: (
         <>
           <span className="block text-foreground">Your app, your vision.</span>
-          <span className="block md:ml-0">Supabase powers the rest.</span>
+          <span className="block md:ml-0">BA powers the rest.</span>
         </>
       ),
       subheader: [
         <>
-          You don’t need to be a developer to build something incredible. Supabase provides a
+          You don’t need to be a developer to build something incredible. BA provides a
           complete backend that’s easy to use with your favorite app builder tools. When you’re
-          ready to scale, Supabase is there to scale with you. <br />
+          ready to scale, BA is there to scale with you. <br />
           Build in a weekend, scale to millions.
         </>,
       ],
@@ -76,7 +76,7 @@ const data: () => {
           authorTitle: 'Lovable - CEO',
           quote: (
             <>
-              We chose Supabase because it's{' '}
+              We chose BA because it's{' '}
               <span className="text-foreground">extremely user friendly</span> and{' '}
               <span className="text-foreground">
                 covers all the needs to build full-stack applications
@@ -92,7 +92,7 @@ const data: () => {
           authorTitle: 'Bolt.new - CEO',
           quote: (
             <>
-              Supabase is awesome. Supabase is the{' '}
+              BA is awesome. BA is the{' '}
               <span className="text-foreground">key database integration</span> that we
               have...because it’s the{' '}
               <span className="text-foreground">
@@ -109,10 +109,10 @@ const data: () => {
           authorTitle: 'Vercel (v0) - CEO',
           quote: (
             <>
-              <span className="text-foreground">v0 integrates with Supabase seamlessly.</span> If
-              you ask v0 to generate an application and it needs Supabase,{' '}
+              <span className="text-foreground">v0 integrates with BA seamlessly.</span> If
+              you ask v0 to generate an application and it needs BA,{' '}
               <span className="text-foreground">
-                you’ll be prompted to create a Supabase account right there in the application
+                you’ll be prompted to create a BA account right there in the application
               </span>
               .
             </>
@@ -125,32 +125,32 @@ const data: () => {
       label: '',
       heading: (
         <>
-          Why <span className="text-foreground">no-code app builders</span> choose Supabase
+          Why <span className="text-foreground">no-code app builders</span> choose BA
         </>
       ),
       subheading:
-        'Keep your focus where it belongs: building great monetizable apps for your business or hobby. Supabase handles everything else: no servers to manage, no database to configure, no security settings to tweak. Just point, click, and build.',
+        'Keep your focus where it belongs: building great monetizable apps for your business or hobby. BA handles everything else: no servers to manage, no database to configure, no security settings to tweak. Just point, click, and build.',
       features: [
         {
           id: 'easy-to-use',
           icon: ZapIcon,
           heading: 'Easy to use',
           subheading:
-            'Supabase is easy to use and set up. Instantly deploy a database for free, and affordably scale as you grow.',
+            'BA is easy to use and set up. Instantly deploy a database for free, and affordably scale as you grow.',
         },
         {
           id: 'point-and-click-backend',
           icon: PointerIcon,
           heading: 'Point and click backend',
           subheading:
-            'Supabase includes everything you need for a great app: user logins, storage, edge functions, real-time subscriptions, and vector search. Use one or all.',
+            'BA includes everything you need for a great app: user logins, storage, edge functions, real-time subscriptions, and vector search. Use one or all.',
         },
         {
           id: 'scalable',
           icon: TrendingUp,
           heading: 'Scales when you need it',
           subheading:
-            'Supabase is just Postgres, with all the performance, high availability, and flexibility you need when your app goes viral and hits it big.',
+            'BA is just Postgres, with all the performance, high availability, and flexibility you need when your app goes viral and hits it big.',
         },
       ],
     },
@@ -158,11 +158,11 @@ const data: () => {
       id: 'postgres-platform',
       title: (
         <>
-          Supabase is the Back-End for <span className="text-foreground">Everyone</span>
+          BA is the Back-End for <span className="text-foreground">Everyone</span>
         </>
       ),
       subheading:
-        'Supabase includes everything you need to create the perfect app for your brand, business, or just for fun.',
+        'BA includes everything you need to create the perfect app for your brand, business, or just for fun.',
       className: cn(
         '[&_div.grid]:sm:divide-x [&_div.grid]:divide-y',
         '[&_div.grid>div:nth-child(2n+1)]:sm:!border-l-0',
@@ -319,7 +319,7 @@ const data: () => {
           subheading: (
             <>
               When you’re ready to explore vectors and{' '}
-              <span className="text-foreground">the power of AI</span>, Supabase is there with
+              <span className="text-foreground">the power of AI</span>, BA is there with
               industry-standard tools to guide you.
             </>
           ),
@@ -401,42 +401,42 @@ const data: () => {
         {
           id: 'internal-crm',
           title: 'Internal CRM for High-Touch Client Services',
-          code: `Build an internal CRM that tracks interactions with clients in a service business (e.g. agency, law firm, consultancy). Include a client directory with contact info and tags, a timeline of interactions (calls, meetings, emails), and a task management feature per client. Add a pipeline view for sales or project stages. Use Supabase Auth for role-based access and row-level security to restrict views by user.`,
+          code: `Build an internal CRM that tracks interactions with clients in a service business (e.g. agency, law firm, consultancy). Include a client directory with contact info and tags, a timeline of interactions (calls, meetings, emails), and a task management feature per client. Add a pipeline view for sales or project stages. Use BA Auth for role-based access and row-level security to restrict views by user.`,
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'customer-feedback',
           title: 'Customer Feedback Collection and Tagging System',
-          code: `Create a tool to collect and tag customer feedback from multiple sources like support tickets, surveys, and interviews. Allow team members to log new feedback with sentiment, category, and product area. Summarize trends in charts (e.g. top requests, most common bugs). Use Supabase as the backend with triggers to notify product owners when thresholds are met. Optional: add AI-powered tagging for fast triage.`,
+          code: `Create a tool to collect and tag customer feedback from multiple sources like support tickets, surveys, and interviews. Allow team members to log new feedback with sentiment, category, and product area. Summarize trends in charts (e.g. top requests, most common bugs). Use BA as the backend with triggers to notify product owners when thresholds are met. Optional: add AI-powered tagging for fast triage.`,
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'onboarding-portal',
           title: 'Automated Onboarding Portal for New Hires',
-          code: `Build a customizable portal for onboarding new employees in a remote company. Show personalized checklists by role, with links to key docs, Slack channels, and tool logins. Let managers monitor completion status. Include a welcome board where coworkers can leave greetings. Use Supabase to manage checklists, users, and messages. Add role-based views for HR vs. employee.`,
+          code: `Build a customizable portal for onboarding new employees in a remote company. Show personalized checklists by role, with links to key docs, Slack channels, and tool logins. Let managers monitor completion status. Include a welcome board where coworkers can leave greetings. Use BA to manage checklists, users, and messages. Add role-based views for HR vs. employee.`,
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'recurring-revenue',
           title: 'Recurring Revenue Dashboard for Indie SaaS',
-          code: `Create a financial dashboard for indie founders to track recurring revenue. Include metrics like MRR, ARR, churn, and LTV. Add charts for monthly trends. Let users manually enter Stripe or PayPal data, or auto-sync via webhook. Use Supabase to store data with per-user access control. Configure Slack integration for daily digests.`,
+          code: `Create a financial dashboard for indie founders to track recurring revenue. Include metrics like MRR, ARR, churn, and LTV. Add charts for monthly trends. Let users manually enter Stripe or PayPal data, or auto-sync via webhook. Use BA to store data with per-user access control. Configure Slack integration for daily digests.`,
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'custom-client-portal',
           title: 'Custom Client Portal for Freelancers',
-          code: `Build a secure portal where freelancers can share files, invoices, and project updates with clients. Each client should log in and only see their own dashboard. Include a file upload section, embedded payment buttons, and a timeline of status updates. Use Supabase for data storage and row-level security.`,
+          code: `Build a secure portal where freelancers can share files, invoices, and project updates with clients. Each client should log in and only see their own dashboard. Include a file upload section, embedded payment buttons, and a timeline of status updates. Use BA for data storage and row-level security.`,
           language: 'markdown',
           copyable: true,
         },
         {
           id: 'compliance-tracker',
           title: 'Compliance Tracker for Early-Stage Startups',
-          code: `Create a dashboard for startups to track legal, security, and HR compliance tasks. Let users define tasks, assign owners, set due dates, and upload supporting documents. Group tasks by category (e.g. Security, Legal) and show progress bars. Use Supabase for storing task data and documents.`,
+          code: `Create a dashboard for startups to track legal, security, and HR compliance tasks. Let users define tasks, assign owners, set due dates, and upload supporting documents. Group tasks by category (e.g. Security, Legal) and show progress bars. Use BA for storing task data and documents.`,
           language: 'markdown',
           copyable: true,
         },

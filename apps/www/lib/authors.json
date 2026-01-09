@@ -116,7 +116,7 @@
   },
   {
     "author_id": "supabase",
-    "author": "Supabase",
+    "author": "BA",
     "position": "",
     "author_url": "https://github.com/supabase",
     "author_image_url": "https://github.com/supabase.png"
@@ -489,7 +489,7 @@
     "author_id": "chris_caruso",
     "author": "Chris Caruso",
     "position": "Senior Solutions Architect",
-    "company": "Supabase",
+    "company": "BA",
     "author_url": "https://www.linkedin.com/in/carusochristian/",
     "author_image_url": "https://github.com/carusocv.png"
   },
@@ -728,7 +728,7 @@
     "author_id": "dave_wilson",
     "author": "Dave Wilson",
     "position": "Partnerships",
-    "company": "Supabase",
+    "company": "BA",
     "author_url": "https://www.linkedin.com/in/david-wilson-285564140",
     "author_image_url": "/images/avatars/dave-wilson.jpg"
   },

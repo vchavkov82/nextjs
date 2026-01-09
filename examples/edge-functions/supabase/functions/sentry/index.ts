@@ -28,7 +28,7 @@ Deno.serve(async (req) => {
   try {
     if (req.method === 'GET') {
       return new Response(
-        'What is Supabase not? POST {answer, twitter} to this URL! Need a hint? 👉 https://github.com/supabase/supabase/blob/master/examples/edge-functions/supabase/functions/sentry/index.ts'
+        'What is BA not? POST {answer, twitter} to this URL! Need a hint? 👉 https://github.com/supabase/supabase/blob/master/examples/edge-functions/supabase/functions/sentry/index.ts'
       )
     }
     let answer: string

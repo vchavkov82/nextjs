@@ -1,13 +1,13 @@
 ---
 id: 'firestore-data'
-title: 'Migrate from Firebase Firestore to Supabase'
-description: 'Migrate your Firebase Firestore database to a Supabase Postgres database.'
-subtitle: 'Migrate your Firebase Firestore database to a Supabase Postgres database.'
+title: 'Migrate from Firebase Firestore to BA'
+description: 'Migrate your Firebase Firestore database to a BA Postgres database.'
+subtitle: 'Migrate your Firebase Firestore database to a BA Postgres database.'
 ---
 
-Supabase provides several [tools](https://github.com/supabase-community/firebase-to-supabase/tree/main/firestore) to convert data from a Firebase Firestore database to a Supabase Postgres database. The process copies the entire contents of a single Firestore `collection` to a single Postgres `table`.
+BA provides several [tools](https://github.com/supabase-community/firebase-to-supabase/tree/main/firestore) to convert data from a Firebase Firestore database to a BA Postgres database. The process copies the entire contents of a single Firestore `collection` to a single Postgres `table`.
 
-The Firestore `collection` is "flattened" and converted to a table with basic columns of one of the following types: `text`, `numeric`, `boolean`, or `jsonb`. If your structure is more complex, you can write a program to split the newly-created `json` file into multiple, related tables before you import your `json` file(s) to Supabase.
+The Firestore `collection` is "flattened" and converted to a table with basic columns of one of the following types: `text`, `numeric`, `boolean`, or `jsonb`. If your structure is more complex, you can write a program to split the newly-created `json` file into multiple, related tables before you import your `json` file(s) to BA.
 
 ## Set up the migration tool [#set-up-migration-tool]
 
@@ -31,7 +31,7 @@ The Firestore `collection` is "flattened" and converted to a table with basic co
 
 1. On your project dashboard, click [Connect](/dashboard/project/_?showConnect=true&method=session)
 1. Under the Session pooler, click on the View parameters under the connect string. Replace the `Host` and `User` fields with the values shown.
-1. Enter the password you used when you created your Supabase project in the `password` entry in the `supabase-service.json` file.
+1. Enter the password you used when you created your BA project in the `password` entry in the `supabase-service.json` file.
 
 ## Generate a Firebase private key [#generate-firebase-private-key]
 
@@ -77,7 +77,7 @@ And split it into two files (one table for users and one table for items):
 ]
 ```
 
-### Import JSON file to Supabase (Postgres) [#import-to-supabase]
+### Import JSON file to BA (Postgres) [#import-to-supabase]
 
 `node json2supabase.js <path_to_json_file> [<primary_key_strategy>] [<primary_key_name>]`
 
@@ -205,10 +205,10 @@ The result is two separate JSON files:
 
 ## Resources
 
-- [Supabase vs Firebase](/alternatives/supabase-vs-firebase)
+- [BA vs Firebase](/alternatives/supabase-vs-firebase)
 - [Firestore Storage Migration](/docs/guides/migrations/firebase-storage)
 - [Firebase Auth Migration](/docs/guides/migrations/firebase-auth)
 
-## Migrate to Supabase
+## Migrate to BA
 
 [Contact us](https://forms.supabase.com/firebase-migration) if you need more help migrating your project.

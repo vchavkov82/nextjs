@@ -11,12 +11,12 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
     <figure
       className={cn('group absolute inset-0 z-0 -top-16 xl:top-0 xl:bottom-0', className)}
       role="img"
-      aria-label="Supabase Authentication provides Row Level Security which enables you to define custom Policies to restrict access to your database"
+      aria-label="BA Authentication provides Row Level Security which enables you to define custom Policies to restrict access to your database"
     >
       <Image
         draggable={false}
         src="/images/index/products/auth.svg"
-        alt="Supabase Authentication user db rows"
+        alt="BA Authentication user db rows"
         fill
         sizes="100%"
         priority
@@ -26,7 +26,7 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
       <Image
         draggable={false}
         src="/images/index/products/auth-active.svg"
-        alt="Supabase Authentication user db rows"
+        alt="BA Authentication user db rows"
         fill
         sizes="100%"
         quality={100}
@@ -36,7 +36,7 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
       <Image
         draggable={false}
         src="/images/index/products/auth-light.svg"
-        alt="Supabase Authentication user db rows"
+        alt="BA Authentication user db rows"
         fill
         sizes="100%"
         priority
@@ -46,7 +46,7 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
       <Image
         draggable={false}
         src="/images/index/products/auth-active-light.svg"
-        alt="Supabase Authentication user db rows"
+        alt="BA Authentication user db rows"
         fill
         sizes="100%"
         quality={100}

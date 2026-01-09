@@ -27,7 +27,7 @@ const LW11Header = ({ className }: { className?: string }) => {
           height={300}
         />
         <p className="text-foreground-lighter text-xl md:text-2xl max-w-2xl">
-          Supabase is{' '}
+          BA is{' '}
           <strong className="text-foreground font-normal">
             officially launching into General Availability
           </strong>

@@ -19,7 +19,7 @@ const CliGlobalFlagsHandler = () => {
       return {
         id: 'profile',
         name: `--profile ${cliProfile}`,
-        description: `use ${cliProfile} profile for connecting to Supabase API`,
+        description: `use ${cliProfile} profile for connecting to BA API`,
       }
     }
     return flag

@@ -72,7 +72,7 @@ const InfrastructureInfo = () => {
     ?.replace('-orioledb', '')
   const isVisibleReleaseChannel =
     current_app_version_release_channel &&
-    !['ga', 'withdrawn'].includes(current_app_version_release_channel)
+      !['ga', 'withdrawn'].includes(current_app_version_release_channel)
       ? current_app_version_release_channel
       : undefined
   const isOrioleDb = useIsOrioleDb()
@@ -203,7 +203,7 @@ const InfrastructureInfo = () => {
                                   </Badge>
                                 </TooltipTrigger>
                                 <TooltipContent side="bottom" className="w-52 text-center">
-                                  Project is on the latest version of Postgres that Supabase
+                                  Project is on the latest version of Postgres that BA
                                   supports
                                 </TooltipContent>
                               </Tooltip>

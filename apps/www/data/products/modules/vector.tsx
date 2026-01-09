@@ -6,7 +6,7 @@ import IntegrationsImage from '@/components/Products/VectorAI/IntegrationsImage'
 import { PRODUCT_MODULES } from 'shared-data/products'
 
 export default (isMobile?: boolean) => ({
-  metaTitle: 'Supabase Vector | The Postgres Vector database and AI Toolkit',
+  metaTitle: 'BA Vector | The Postgres Vector database and AI Toolkit',
   metaDescription:
     'An open source Vector database for developing AI applications. Use pgvector to store, index, and access embeddings, and our AI toolkit to build AI applications with Hugging Face and OpenAI.',
   metaImage: '/images/modules/vector/og.png',
@@ -19,7 +19,7 @@ export default (isMobile?: boolean) => ({
       target: '_blank',
       hasArrow: !isMobile,
     },
-    title: 'Supabase Vector',
+    title: 'BA Vector',
     h1: (
       <>
         The Postgres Vector database <br className="hidden md:block" />
@@ -62,7 +62,7 @@ export default (isMobile?: boolean) => ({
       {
         title: 'Secure and Scalable',
         paragraph:
-          'Supabase is SOC2 Type 2 compliant, and comes with an advanced permissions system.',
+          'BA is SOC2 Type 2 compliant, and comes with an advanced permissions system.',
         image: SecureAndScalableImg,
       },
       {
@@ -82,7 +82,7 @@ export default (isMobile?: boolean) => ({
       <>
         <span className="heading-gradient">What you can build</span>
         <br />
-        <span className="heading-gradient">with Supabase Vector?</span>
+        <span className="heading-gradient">with BA Vector?</span>
       </>
     ),
     paragraph: 'Scale effortlessly from experimentation to production-ready AI applications.',
@@ -268,7 +268,7 @@ docs.query(
       {
         icon: 'M7.25609 19.7285C8.68148 20.6762 10.3925 21.2283 12.2324 21.2283C17.203 21.2283 21.2324 17.1989 21.2324 12.2283C21.2324 12.052 21.2273 11.8768 21.2173 11.703M4.80668 17.3149C3.81356 15.8679 3.23242 14.116 3.23242 12.2283C3.23242 7.25774 7.26186 3.2283 12.2324 3.2283C12.4726 3.2283 12.7106 3.23771 12.946 3.25618M14.0838 12.7647L6.39903 20.4491C5.73878 21.1093 4.66359 21.0936 4.02285 20.4144C3.40796 19.7626 3.42286 18.74 4.05648 18.1064L4.68813 17.4748C4.91734 17.2456 5.2282 17.1169 5.55234 17.1169C6.13125 17.1169 6.63075 16.7107 6.74883 16.144L6.77758 16.006C6.8757 15.535 7.25708 15.1752 7.73294 15.1046L7.89876 15.08C8.42784 15.0015 8.79572 14.5126 8.72453 13.9825C8.68395 13.6803 8.78666 13.3764 9.00228 13.1608L11.8094 10.3538M21.2325 12.221C21.232 11.8884 21.2131 11.5563 21.1761 11.2264M21.1761 11.2264C21.9939 10.2552 22.4867 9.00121 22.4867 7.63214C22.4867 4.5487 19.9871 2.04907 16.9037 2.04907C13.8202 2.04907 11.3206 4.5487 11.3206 7.63214C11.3206 10.7156 13.8202 13.2152 16.9037 13.2152C17.32 13.2152 17.7257 13.1696 18.1161 13.0832M21.1761 11.2264C20.9596 9.29629 20.1226 7.43832 18.7084 5.97684M19.512 6.52365C19.512 7.35157 18.8408 8.02274 18.0129 8.02274C17.185 8.02274 16.5138 7.35157 16.5138 6.52365C16.5138 5.69573 17.185 5.02457 18.0129 5.02457C18.8408 5.02457 19.512 5.69573 19.512 6.52365Z',
         title: 'No Vendor Lock-In',
-        text: 'Supabase uses open source tools to increase portability and avoid lock-in, making it easy to migrate in and out.',
+        text: 'BA uses open source tools to increase portability and avoid lock-in, making it easy to migrate in and out.',
       },
       {
         icon: 'M3.51324 13.0353C3.28563 10.2785 4.22645 7.44323 6.3357 5.33398C10.1433 1.52637 16.3167 1.52637 20.1243 5.33398C23.9319 9.14159 23.9319 15.315 20.1243 19.1226C16.3167 22.9302 10.1433 22.9302 6.3357 19.1226C5.43661 18.2235 4.74982 17.1925 4.27533 16.0919M0.948642 11.2135L2.45991 12.7248C3.0457 13.3106 3.99544 13.3106 4.58123 12.7248L6.0925 11.2135M10.6005 17.0718H15.7255C16.554 17.0718 17.2255 16.4002 17.2255 15.5718L17.2255 15.3318C17.2255 14.5033 16.554 13.8318 15.7255 13.8318L10.6005 13.8318C9.77212 13.8318 9.10055 14.5033 9.10055 15.3318L9.10055 15.5718C9.10055 16.4002 9.77212 17.0718 10.6005 17.0718ZM10.9882 13.8326L15.2976 13.8326C16.126 13.8326 16.7976 13.161 16.7976 12.3326L16.7976 12.0925C16.7976 11.2641 16.126 10.5925 15.2976 10.5925H10.9882C10.1598 10.5925 9.48823 11.2641 9.48823 12.0925L9.48823 12.3326C9.48823 13.161 10.1598 13.8326 10.9882 13.8326ZM10.6001 10.5927H15.7251C16.5536 10.5927 17.2251 9.92115 17.2251 9.09272L17.2251 8.85267C17.2251 8.02424 16.5536 7.35267 15.7251 7.35267L10.6001 7.35267C9.77172 7.35267 9.10015 8.02424 9.10015 8.85267L9.10015 9.09272C9.10015 9.92115 9.77172 10.5927 10.6001 10.5927Z',
@@ -286,7 +286,7 @@ docs.query(
     title: (
       <>
         Customers building on <br className="hidden md:block" />
-        Supabase Vector
+        BA Vector
       </>
     ),
     customers: [
@@ -298,10 +298,10 @@ docs.query(
         role: 'Director at MDN, Mozilla',
         target: '_blank',
         quote:
-          'We store embeddings in a PostgreSQL database, hosted by Supabase, to perform a similarity search to identify the most relevant sections within the MDN.',
+          'We store embeddings in a PostgreSQL database, hosted by BA, to perform a similarity search to identify the most relevant sections within the MDN.',
         image: '/images/customers/logos/mozilla.png',
         abstract:
-          'MDN introduces an AI assistant powered by Supabase Vector to answer all web development questions in real time.',
+          'MDN introduces an AI assistant powered by BA Vector to answer all web development questions in real time.',
         url: 'https://developer.mozilla.org/en-US/blog/introducing-ai-help/',
       },
       {
@@ -311,9 +311,9 @@ docs.query(
         author: 'Stan Girard',
         role: 'Founder of Quivr',
         quote:
-          'Supabase Vector powered by pgvector allowed us to create a simple and efficient product. We are storing over 1.6 million embeddings and the performance and results are great. Open source develop can easily contribute thanks to the SQL syntax known by millions of developers.',
+          'BA Vector powered by pgvector allowed us to create a simple and efficient product. We are storing over 1.6 million embeddings and the performance and results are great. Open source develop can easily contribute thanks to the SQL syntax known by millions of developers.',
         image: '/images/customers/logos/quivr.png',
-        abstract: 'Quivr launch 5,000 Vector databases on Supabase.',
+        abstract: 'Quivr launch 5,000 Vector databases on BA.',
         url: '/customers/quivr',
       },
       {
@@ -325,7 +325,7 @@ docs.query(
         quote:
           'We tried other vector databases - we tried Faiss, we tried Weaviate, we tried Pinecone. If you’re just doing vector search they’re great, but if you need to store a bunch of metadata that becomes a huge pain.',
         image: '/images/customers/logos/firecrawl.png',
-        abstract: 'Firecrawl switches from Pinecone to Supabase for PostgreSQL vector embeddings.',
+        abstract: 'Firecrawl switches from Pinecone to BA for PostgreSQL vector embeddings.',
         url: '/customers/firecrawl',
       },
     ],

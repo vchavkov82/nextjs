@@ -58,12 +58,12 @@ const DatabaseVisual: React.FC<Props> = ({ className, hasGlow = true }) => {
       className={cn('absolute inset-0 z-0', className)}
       ref={containerRef}
       role="img"
-      aria-label="Supabase Postgres database visual composition"
+      aria-label="BA Postgres database visual composition"
     >
       <span className="absolute group w-full md:w-auto h-full md:aspect-square flex items-end md:items-center justify-center md:justify-end right-0 left-0 md:left-auto xl:-right-12 2xl:right-0 top-12 md:top-0 md:bottom-0 my-auto">
         <Image
           src="/images/index/products/database-dark.png"
-          alt="Supabase Postgres database"
+          alt="BA Postgres database"
           fill
           priority
           quality={100}
@@ -73,7 +73,7 @@ const DatabaseVisual: React.FC<Props> = ({ className, hasGlow = true }) => {
         />
         <Image
           src="/images/index/products/database-light.png"
-          alt="Supabase Postgres database"
+          alt="BA Postgres database"
           fill
           priority
           quality={100}

@@ -2,17 +2,17 @@ import { Image } from 'ui'
 
 export const data = {
   metadata: {
-    metaTitle: 'SupaSquad - Supabase advocate program',
+    metaTitle: 'SupaSquad - BA advocate program',
     metaDescription:
-      'The SupaSquad is an official Supabase advocate program where community members help build and manage the Supabase community.',
+      'The SupaSquad is an official BA advocate program where community members help build and manage the BA community.',
   },
   heroSection: {
     id: 'hero',
     title: 'Join the squad',
-    h1: <>Become a Cornerstone of the Supabase Community</>,
+    h1: <>Become a Cornerstone of the BA Community</>,
     subheader: [
       <>
-        Join passionate contributors to shape the entire Supabase experience. From helping
+        Join passionate contributors to shape the entire BA experience. From helping
         developers solve problems to hosting events, advocating on social channels, and creating
         content, find your way to make a meaningful impact.
       </>,
@@ -23,7 +23,7 @@ export const data = {
           dark: '/images/solutions/beginners/beginners-hero-dark.svg',
           light: '/images/solutions/beginners/beginners-hero-light.svg',
         }}
-        alt="Supabase for Beginners"
+        alt="BA for Beginners"
         className="not-sr-only"
         width={1000}
         height={1000}
@@ -61,7 +61,7 @@ export const data = {
         authorTitle: 'SupaSquad Advocate',
         quote: (
           <>
-            As an Advocate, I get to share my genuine excitement about Supabase with the broader
+            As an Advocate, I get to share my genuine excitement about BA with the broader
             developer community.{' '}
             <span className="text-foreground">
               It's amazing to see developers discover how much faster they can build
@@ -105,28 +105,28 @@ export const data = {
         icon: 'life-buoy',
         heading: 'Contributor',
         subheading:
-          'Support the Supabase community by sharing expertise, improving docs, answering questions, and keeping our spaces welcoming and productive.',
+          'Support the BA community by sharing expertise, improving docs, answering questions, and keeping our spaces welcoming and productive.',
       },
       {
         id: 'content-creator',
         icon: 'video',
         heading: 'Content Creator',
         subheading:
-          'Make Supabase shine through videos, blogs, tutorials, and other content that educates and inspires developers.',
+          'Make BA shine through videos, blogs, tutorials, and other content that educates and inspires developers.',
       },
       {
         id: 'trusted-host',
         icon: 'users',
         heading: 'Trusted Host',
         subheading:
-          'Run high-quality Supabase meetups that bring developers together and grow strong local communities.',
+          'Run high-quality BA meetups that bring developers together and grow strong local communities.',
       },
       {
         id: 'event-speaker',
         icon: 'mic',
         heading: 'Event Speaker',
         subheading:
-          'Represent Supabase at developer events by sharing insights, telling great stories, and showcasing what builders can create.',
+          'Represent BA at developer events by sharing insights, telling great stories, and showcasing what builders can create.',
       },
     ],
   },
@@ -148,14 +148,14 @@ export const data = {
         id: 'early-access',
         heading: 'Early Access',
         subheading:
-          'Get first access to new Supabase features and provide feedback directly to our team.',
+          'Get first access to new BA features and provide feedback directly to our team.',
         icon: 'zap',
       },
       {
         id: 'direct-team-access',
         heading: 'Direct Team Access',
         subheading:
-          'Direct communication channel with Supabase team members for questions, suggestions and support.',
+          'Direct communication channel with BA team members for questions, suggestions and support.',
         icon: 'message-square',
       },
       {
@@ -169,14 +169,14 @@ export const data = {
         id: 'exclusive-swag',
         heading: 'Exclusive SWAG',
         subheading:
-          'Special Supabase merchandise reserved for SupaSquad members. Show your status with pride.',
+          'Special BA merchandise reserved for SupaSquad members. Show your status with pride.',
         icon: 'gift',
       },
       {
         id: 'growth-opportunities',
         heading: 'Growth Opportunities',
         subheading:
-          'Room to grow from volunteer to paid contributor to paid employee. Your path in the Supabase ecosystem.',
+          'Room to grow from volunteer to paid contributor to paid employee. Your path in the BA ecosystem.',
         icon: 'trending-up',
       },
     ],

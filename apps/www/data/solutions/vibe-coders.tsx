@@ -39,9 +39,9 @@ const useVibeCodersContent: () => {
 
   return {
     metadata: {
-      metaTitle: 'Supabase for Vibe Coders',
+      metaTitle: 'BA for Vibe Coders',
       metaDescription:
-        'Your weekend prototype deserves production. Stop letting backend complexity kill your momentum. Supabase is the production-ready backend that works with your AI tools from day one.',
+        'Your weekend prototype deserves production. Stop letting backend complexity kill your momentum. BA is the production-ready backend that works with your AI tools from day one.',
     },
     heroSection: {
       id: 'hero',
@@ -77,7 +77,7 @@ const useVibeCodersContent: () => {
           authorTitle: 'Lovable - CEO',
           quote: (
             <>
-              We chose Supabase because it&apos;s{' '}
+              We chose BA because it&apos;s{' '}
               <span className="text-foreground">extremely user friendly</span> and{' '}
               <span className="text-foreground">
                 covers all the needs to build full-stack applications
@@ -93,7 +93,7 @@ const useVibeCodersContent: () => {
           authorTitle: 'Bolt.new - CEO',
           quote: (
             <>
-              Supabase is awesome. Supabase is the{' '}
+              BA is awesome. BA is the{' '}
               <span className="text-foreground">key database integration</span> that we
               have...because it’s the{' '}
               <span className="text-foreground">
@@ -110,10 +110,10 @@ const useVibeCodersContent: () => {
           authorTitle: 'Vercel (v0) - CEO',
           quote: (
             <>
-              <span className="text-foreground">v0 integrates with Supabase seamlessly.</span> If
-              you ask v0 to generate an application and it needs Supabase,{' '}
+              <span className="text-foreground">v0 integrates with BA seamlessly.</span> If
+              you ask v0 to generate an application and it needs BA,{' '}
               <span className="text-foreground">
-                you’ll be prompted to create a Supabase account right there in the application
+                you’ll be prompted to create a BA account right there in the application
               </span>
               .
             </>
@@ -137,14 +137,14 @@ const useVibeCodersContent: () => {
           icon: Zap,
           heading: 'Built for how you build',
           subheading:
-            'Supabase is a complete production-ready back-end that includes everything you need to ship full-featured apps.',
+            'BA is a complete production-ready back-end that includes everything you need to ship full-featured apps.',
         },
         {
           id: 'prototype-to-production',
           icon: Timer,
           heading: 'From prototype to production',
           subheading:
-            'Start with a weekend project and scale to millions of users. Supabase handles the complexity so you can focus on what matters - building great products.',
+            'Start with a weekend project and scale to millions of users. BA handles the complexity so you can focus on what matters - building great products.',
         },
         {
           id: 'vibe-coding-toolkit',
@@ -163,7 +163,7 @@ const useVibeCodersContent: () => {
         </>
       ),
       subheading:
-        'Supabase is a production-ready backend that works with your AI tools from day one. No DevOps degree required. No months of setup. No "learning the hard way." Just ship.',
+        'BA is a production-ready backend that works with your AI tools from day one. No DevOps degree required. No months of setup. No "learning the hard way." Just ship.',
       className: '',
       features: [
         {
@@ -312,7 +312,7 @@ const useVibeCodersContent: () => {
           subheading: (
             <>
               When you’re ready to explore vectors and{' '}
-              <span className="text-foreground">the power of AI</span>, Supabase is there with
+              <span className="text-foreground">the power of AI</span>, BA is there with
               industry-standard tools to guide you.
             </>
           ),
@@ -391,7 +391,7 @@ const useVibeCodersContent: () => {
       ),
       headingRight: (
         <>
-          Or, start with <span className="text-foreground">Supabase AI Prompts</span>{' '}
+          Or, start with <span className="text-foreground">BA AI Prompts</span>{' '}
           <Sparkles size={24} className="inline text-foreground" />
         </>
       ),
@@ -406,10 +406,10 @@ const useVibeCodersContent: () => {
       aiPrompts: [
         {
           id: 'auth-setup',
-          title: 'Bootstrap Next.js app with Supabase Auth',
+          title: 'Bootstrap Next.js app with BA Auth',
           code: `1. Install @supabase/supabase-js and @supabase/ssr packages.
 2. Set up environment variables.
-3. Write two utility functions with \u0060createClient\u0060 functions to create a browser client and a server client. 
+3. Write two utility functions with \u0060createClient\u0060 functions to create a browser client and a server client.
 4. Hook up middleware to refresh auth tokens
 `,
           language: 'markdown',
@@ -418,7 +418,7 @@ const useVibeCodersContent: () => {
         },
         {
           id: 'edge-functions',
-          title: 'Writing Supabase Edge Functions',
+          title: 'Writing BA Edge Functions',
           code: `1. Try to use Web APIs and Deno's core APIs instead of external dependencies (eg: use fetch instead of Axios, use WebSockets API instead of node-ws)
 2. If you are reusing utility methods between Edge Functions, add them to 'supabase/functions/_shared' and import using a relative path. Do NOT have cross dependencies between Edge Functions.
 3. Do NOT use bare specifiers when importing dependecnies. If you need to use an external dependency, make sure it's prefixed with either 'npm:' or 'jsr:'. For example, '@supabase/supabase-js' should be written as 'npm:@supabase/supabase-js'.
@@ -431,7 +431,7 @@ const useVibeCodersContent: () => {
         {
           id: 'declarative-db-schema',
           title: 'Declarative Database Schema',
-          code: `Mandatory Instructions for Supabase Declarative Schema Management
+          code: `Mandatory Instructions for BA Declarative Schema Management
 ## 1. **Exclusive Use of Declarative Schema**
 -**All database schema modifications must be defined within '.sql' files located in the 'supabase/schemas/' directory.`,
           language: 'markdown',
@@ -441,7 +441,7 @@ const useVibeCodersContent: () => {
         {
           id: 'rls-policies',
           title: 'Create RLS policies',
-          code: `You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
+          code: `You're a BA Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
 The output should use the following instructions:
 
 - The generated SQL must be valid SQL.`,
@@ -455,7 +455,7 @@ The output should use the following instructions:
       id: 'mcp',
       heading: (
         <div className="text-foreground-lighter">
-          Supabase MCP server works seamlessly with{' '}
+          BA MCP server works seamlessly with{' '}
           <span className="text-foreground">your favorite AI code editor</span>
         </div>
       ),
@@ -552,7 +552,7 @@ The output should use the following instructions:
       header: <>The Vibe Coding Toolkit</>,
       subheader: (
         <>
-          Supabase gives you the tools to easily manage databases, authentication, and backend
+          BA gives you the tools to easily manage databases, authentication, and backend
           infrastructure so you can build faster and ship with confidence.
         </>
       ),

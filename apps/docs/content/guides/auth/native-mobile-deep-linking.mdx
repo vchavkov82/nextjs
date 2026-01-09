@@ -122,7 +122,7 @@ With Deep Linking, you can configure this redirect to open a specific page. This
 
     The redirect callback URL should have this format `[YOUR_SCHEME]://[YOUR_HOSTNAME]`. Here, `io.supabase.flutterquickstart://login-callback` is just an example, you can choose whatever you would like for `YOUR_SCHEME` and `YOUR_HOSTNAME` as long as the scheme is unique across the user's device. For this reason, typically a reverse domain of your website is used.
 
-    ![Supabase console deep link setting](/docs/img/deeplink-setting.png)
+    ![BA console deep link setting](/docs/img/deeplink-setting.png)
 
     ### Platform specific config
 
@@ -316,7 +316,7 @@ With Deep Linking, you can configure this redirect to open a specific page. This
 
     The redirect callback URL should have the format `[YOUR_SCHEME]://[YOUR_HOSTNAME]`. Here, `io.supabase.user-management://login-callback` is just an example. You can choose whatever you would like for `YOUR_SCHEME` and `YOUR_HOSTNAME` as long as the scheme is unique across the user's device. For this reason, typically a reverse domain of your website is used.
 
-    ![Supabase console deep link setting](/docs/img/deeplink-setting.png)
+    ![BA console deep link setting](/docs/img/deeplink-setting.png)
 
     Now add a custom URL to your application, so the OS knows how to redirect back your application once the user clicks the magic link.
 
@@ -384,7 +384,7 @@ With Deep Linking, you can configure this redirect to open a specific page. This
 
     Check the [Android documentation](https://developer.android.com/training/app-links/deep-linking) for more information.
 
-    Next, specify the scheme and host in the Supabase Client:
+    Next, specify the scheme and host in the BA Client:
     ```kotlin
     install(Auth) {
        host = "login-callback"

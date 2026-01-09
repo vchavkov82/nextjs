@@ -94,7 +94,7 @@ export const ProjectLayout = forwardRef<HTMLDivElement, PropsWithChildren<Projec
     const combinedRef = mergeRefs(ref, setMainScrollContainer)
 
     const { appTitle } = useCustomContent(['app:title'])
-    const titleSuffix = appTitle || 'Supabase'
+    const titleSuffix = appTitle || 'BA'
 
     const editor = useEditorType()
     const forceShowProductMenu = editor === undefined
@@ -106,9 +106,9 @@ export const ProjectLayout = forwardRef<HTMLDivElement, PropsWithChildren<Projec
     const isPaused = selectedProject?.status === PROJECT_STATUS.INACTIVE
     const showProductMenu = selectedProject
       ? selectedProject.status === PROJECT_STATUS.ACTIVE_HEALTHY ||
-        (selectedProject.status === PROJECT_STATUS.COMING_UP &&
-          router.pathname.includes('/project/[ref]/settings')) ||
-        router.pathname.includes('/project/[ref]/branches')
+      (selectedProject.status === PROJECT_STATUS.COMING_UP &&
+        router.pathname.includes('/project/[ref]/settings')) ||
+      router.pathname.includes('/project/[ref]/branches')
       : true
 
     const ignorePausedState =
@@ -133,7 +133,7 @@ export const ProjectLayout = forwardRef<HTMLDivElement, PropsWithChildren<Projec
                     ? `${organizationName} | ${titleSuffix}`
                     : titleSuffix}
           </title>
-          <meta name="description" content="Supabase Studio" />
+          <meta name="description" content="BA Studio" />
         </Head>
         <div className="flex flex-row h-full w-full">
           {/*  autoSaveId="project-layout" */}

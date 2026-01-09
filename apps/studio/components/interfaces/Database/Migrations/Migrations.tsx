@@ -48,8 +48,8 @@ const Migrations = () => {
     search.length === 0
       ? data
       : data.filter(
-          (migration) => migration.version.includes(search) || migration.name?.includes(search)
-        ) ?? []
+        (migration) => migration.version.includes(search) || migration.name?.includes(search)
+      ) ?? []
 
   return (
     <>
@@ -142,7 +142,7 @@ const Migrations = () => {
                                       <InlineLink
                                         href={`${DOCS_URL}/guides/deployment/database-migrations`}
                                       >
-                                        Supabase CLI
+                                        BA CLI
                                       </InlineLink>{' '}
                                       and hence we're unable to parse when this migration was
                                       inserted at.

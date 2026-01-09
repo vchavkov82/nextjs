@@ -8,8 +8,8 @@ import { customFont, sourceCodePro } from './fonts'
 const className = `${customFont.variable} ${sourceCodePro.variable}`
 
 export const metadata: Metadata = {
-  title: 'Supabase Design System',
-  description: 'Design resources for building consistent user experiences at Supabase.',
+  title: 'BA Design System',
+  description: 'Design resources for building consistent user experiences at BA.',
 }
 
 interface RootLayoutProps {

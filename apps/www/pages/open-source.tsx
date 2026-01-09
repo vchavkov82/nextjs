@@ -16,10 +16,10 @@ import pageData from '@/data/open-source'
 const OpenSource = () => {
   const router = useRouter()
 
-  const meta_title = pageData.metaTitle || 'Open Source | Supabase'
+  const meta_title = pageData.metaTitle || 'Open Source | BA'
   const meta_description =
     pageData.metaDescription ||
-    'Supabase is an open source company, supporting existing open source tools and communities wherever possible.'
+    'BA is an open source company, supporting existing open source tools and communities wherever possible.'
 
   return (
     <>

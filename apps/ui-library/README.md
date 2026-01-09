@@ -35,9 +35,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Supabase types
+## BA types
 
-To regenerate the Supabase database types, run
+To regenerate the BA database types, run
 
 ```
 supabase gen types --local > registry/default/fixtures/database.types.ts

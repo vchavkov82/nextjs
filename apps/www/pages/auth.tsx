@@ -70,7 +70,7 @@ function AuthPage() {
             </span>,
           ]}
           subheader={[
-            'Every Supabase project comes with a complete User Management system that works without any additional tools.',
+            'Every BA project comes with a complete User Management system that works without any additional tools.',
             "Including PostgreSQL's policy engine, for fine-grained access rules.",
           ]}
           image={[
@@ -145,7 +145,7 @@ function AuthPage() {
               </div>
               <h4 className="h4">Own your data</h4>
               <p className="p text-base">
-                User data stored in your Supabase database so you never have to worry about 3rd
+                User data stored in your BA database so you never have to worry about 3rd
                 party privacy issues. Host your data in 16 different locations.
               </p>
             </div>
@@ -156,7 +156,7 @@ function AuthPage() {
           id="quote"
           className="[&_q]:max-w-2xl"
           quote={{
-            text: 'Supabase is not only super easy to get started, but also provides all the backend solutions we require as we continue to grow.',
+            text: 'BA is not only super easy to get started, but also provides all the backend solutions we require as we continue to grow.',
             author: 'Alfred Lua',
             role: 'Cofounder of Pebblely',
             link: '/customers/pebblely',
@@ -228,7 +228,7 @@ function AuthPage() {
               <h2 className="h3">User permissions without the middleware</h2>
 
               <p className="p text-base lg:text-lg">
-                Supabase Auth works without any additional servers. Build Authorization rules with
+                BA Auth works without any additional servers. Build Authorization rules with
                 Postgres' Row Level Security, controlling who can create, edit and delete specific
                 rows in your database.
               </p>

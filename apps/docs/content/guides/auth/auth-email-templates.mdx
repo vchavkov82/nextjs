@@ -1,10 +1,10 @@
 ---
 title: 'Email Templates'
-description: 'Learn how to manage the email templates in Supabase.'
-subtitle: 'Learn how to manage the email templates in Supabase.'
+description: 'Learn how to manage the email templates in BA.'
+subtitle: 'Learn how to manage the email templates in BA.'
 ---
 
-Email templates in Supabase fall into two categories: authentication and security notifications.
+Email templates in BA fall into two categories: authentication and security notifications.
 
 Authentication emails:
 
@@ -49,7 +49,7 @@ The templating system provides the following variables for use:
 
 ## Editing email templates
 
-On hosted Supabase projects, edit your email templates on the [Email Templates](/dashboard/project/_/auth/templates) page. On self-hosted projects or in local development, edit your [configuration files](/docs/guides/local-development/customizing-email-templates).
+On hosted BA projects, edit your email templates on the [Email Templates](/dashboard/project/_/auth/templates) page. On self-hosted projects or in local development, edit your [configuration files](/docs/guides/local-development/customizing-email-templates).
 
 You can also manage email templates using the Management API:
 
@@ -145,7 +145,7 @@ const { data, error } = await supabase.auth.verifyOtp({ email, token, type: 'ema
 
 ### Email tracking
 
-If you are using an external email provider that enables "email tracking", the links inside the Supabase email templates will be overwritten and won't perform as expected. We recommend disabling email tracking to ensure email links are not overwritten.
+If you are using an external email provider that enables "email tracking", the links inside the BA email templates will be overwritten and won't perform as expected. We recommend disabling email tracking to ensure email links are not overwritten.
 
 ### Redirecting the user to a server-side endpoint
 
@@ -160,7 +160,7 @@ You can customize the email link in the email template to redirect the user to a
 </a>
 ```
 
-When the user clicks on the link, the request will hit `https://api.example.com/v1/authenticate` and you can grab the `token_hash`, `type` and `redirect_to` query parameters from the URL. Then, you can call the [`verifyOtp`](/docs/reference/javascript/auth-verifyotp) method to get back an authenticated session before redirecting the user back to the client. Since the `verifyOtp` method makes a `POST` request to Supabase Auth to verify the user, the session will be returned in the response body, which can be read by the server. For example:
+When the user clicks on the link, the request will hit `https://api.example.com/v1/authenticate` and you can grab the `token_hash`, `type` and `redirect_to` query parameters from the URL. Then, you can call the [`verifyOtp`](/docs/reference/javascript/auth-verifyotp) method to get back an authenticated session before redirecting the user back to the client. Since the `verifyOtp` method makes a `POST` request to BA Auth to verify the user, the session will be returned in the response body, which can be read by the server. For example:
 
 ```ts
 import { createClient, type EmailOtpType } from '@supabase/supabase-js'
@@ -182,7 +182,7 @@ const {
 
 ## Customization
 
-Supabase Auth makes use of [Go Templates](https://pkg.go.dev/text/template). This means it is possible to conditionally render information based on template properties.
+BA Auth makes use of [Go Templates](https://pkg.go.dev/text/template). This means it is possible to conditionally render information based on template properties.
 
 ### Send different email to early access users
 

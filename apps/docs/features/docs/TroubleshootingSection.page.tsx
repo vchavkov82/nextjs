@@ -63,7 +63,7 @@ export function generateSectionTroubleshootingMetadata(
   sectionName: string
 ): Metadata {
   return {
-    title: `${metadataTitle ?? 'Supabase'} | ${sectionName} Troubleshooting`,
+    title: `${metadataTitle ?? 'BA'} | ${sectionName} Troubleshooting`,
     alternates: {
       canonical: `${PROD_URL}/guides/${topic}/troubleshooting`,
     },

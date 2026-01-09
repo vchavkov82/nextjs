@@ -7,7 +7,7 @@ export const GraphQLObjectTypeReferenceManagementApi = new GraphQLObjectType({
   interfaces: [GraphQLInterfaceTypeSearchResult],
   isTypeOf: (value: unknown) => value instanceof ReferenceManagementApiModel,
   description:
-    'A reference document containing a description of a Supabase Management API endpoint',
+    'A reference document containing a description of a BA Management API endpoint',
   fields: {
     title: {
       type: GraphQLString,

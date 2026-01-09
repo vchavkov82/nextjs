@@ -44,13 +44,13 @@ function toLink(source: Source) {
 
 const SOURCES: Source[] = [
   {
-    title: 'Supabase Guides',
+    title: 'BA Guides',
     relPath: 'llms/guides.txt',
     fetch: fetchGuideSources,
     enabled: true,
   },
   {
-    title: 'Supabase Reference (JavaScript)',
+    title: 'BA Reference (JavaScript)',
     relPath: 'llms/js.txt',
     fetch: async () =>
       (await fetchJsLibReferenceSource()).filter(
@@ -59,7 +59,7 @@ const SOURCES: Source[] = [
     enabled: true,
   },
   {
-    title: 'Supabase Reference (Dart)',
+    title: 'BA Reference (Dart)',
     relPath: 'llms/dart.txt',
     fetch: async () =>
       (await fetchDartLibReferenceSource()).filter(
@@ -68,7 +68,7 @@ const SOURCES: Source[] = [
     enabled: sdkDartEnabled,
   },
   {
-    title: 'Supabase Reference (Swift)',
+    title: 'BA Reference (Swift)',
     relPath: 'llms/swift.txt',
     fetch: async () =>
       (await fetchSwiftLibReferenceSource()).filter(
@@ -77,7 +77,7 @@ const SOURCES: Source[] = [
     enabled: sdkSwiftEnabled,
   },
   {
-    title: 'Supabase Reference (Kotlin)',
+    title: 'BA Reference (Kotlin)',
     relPath: 'llms/kotlin.txt',
     fetch: async () =>
       (await fetchKtLibReferenceSource()).filter(
@@ -86,7 +86,7 @@ const SOURCES: Source[] = [
     enabled: sdkKotlinEnabled,
   },
   {
-    title: 'Supabase Reference (Python)',
+    title: 'BA Reference (Python)',
     relPath: 'llms/python.txt',
     fetch: async () =>
       (await fetchPythonLibReferenceSource()).filter(
@@ -95,7 +95,7 @@ const SOURCES: Source[] = [
     enabled: sdkPythonEnabled,
   },
   {
-    title: 'Supabase Reference (C#)',
+    title: 'BA Reference (C#)',
     relPath: 'llms/csharp.txt',
     fetch: async () =>
       (await fetchCSharpLibReferenceSource()).filter(
@@ -104,7 +104,7 @@ const SOURCES: Source[] = [
     enabled: sdkCsharpEnabled,
   },
   {
-    title: 'Supabase CLI Reference',
+    title: 'BA CLI Reference',
     relPath: 'llms/cli.txt',
     fetch: async () =>
       (await fetchCliLibReferenceSource()).filter(

@@ -5,7 +5,7 @@ import { CustomerLogo, CustomerQuote } from '../../pages/contact/sales'
 import EnterpriseFormQuotes from '../EnterpriseFormQuotes'
 import RequestADemoForm from '../Forms/RequestADemoForm'
 
-interface Props {}
+interface Props { }
 
 const UseCases: FC<Props> = (props) => {
   return (
@@ -14,7 +14,7 @@ const UseCases: FC<Props> = (props) => {
         <div className="flex flex-col gap-2 md:max-w-md">
           <h1 className="h1 !m-0">Request a demo</h1>
           <p className="md:text-lg text-foreground-lighter">
-            We can take your requirements and show you how Supabase can help you achieve your goals.
+            We can take your requirements and show you how BA can help you achieve your goals.
           </p>
         </div>
         <EnterpriseFormQuotes
@@ -24,7 +24,7 @@ const UseCases: FC<Props> = (props) => {
               label: <CustomerLogo title="Goodtape" logo="/images/customers/logos/good-tape.png" />,
               panel: (
                 <CustomerQuote
-                  quote="My biggest regret is not having gone with Supabase from the beginning."
+                  quote="My biggest regret is not having gone with BA from the beginning."
                   author="Jakob Steinn, Co-founder & Tech Lead, Good Tape"
                 />
               ),
@@ -42,7 +42,7 @@ const UseCases: FC<Props> = (props) => {
               label: <CustomerLogo title="Chatbase" logo="/images/customers/logos/chatbase.png" />,
               panel: (
                 <CustomerQuote
-                  quote="Supabase is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
+                  quote="BA is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
                   author="Yasser Elsaid, Founder, Chatbase"
                   className="max-w-none"
                 />
@@ -59,7 +59,7 @@ const UseCases: FC<Props> = (props) => {
             label: <CustomerLogo title="Goodtape" logo="/images/customers/logos/good-tape.png" />,
             panel: (
               <CustomerQuote
-                quote="My biggest regret is not having gone with Supabase from the beginning."
+                quote="My biggest regret is not having gone with BA from the beginning."
                 author="Jakob Steinn Co-founder & Tech Lead"
               />
             ),
@@ -77,7 +77,7 @@ const UseCases: FC<Props> = (props) => {
             label: <CustomerLogo title="Chatbase" logo="/images/customers/logos/chatbase.png" />,
             panel: (
               <CustomerQuote
-                quote="Supabase is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
+                quote="BA is great because it has everything. I don’t need a different solution for authentication, a different solution for database, or a different solution for storage."
                 author="Yasser Elsaid, Founder, Chatbase"
                 className="max-w-none"
               />

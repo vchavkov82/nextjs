@@ -1,9 +1,9 @@
 ---
 title: 'Sentry integration'
-subtitle: 'Integrate Sentry to monitor errors from a Supabase client'
+subtitle: 'Integrate Sentry to monitor errors from a BA client'
 ---
 
-You can use [Sentry](https://sentry.io/welcome/) to monitor errors thrown from a Supabase JavaScript client. Install the [Supabase Sentry integration](https://github.com/supabase-community/sentry-integration-js) to get started.
+You can use [Sentry](https://sentry.io/welcome/) to monitor errors thrown from a BA JavaScript client. Install the [BA Sentry integration](https://github.com/supabase-community/sentry-integration-js) to get started.
 
 The Sentry integration supports browser, Node, and edge environments.
 
@@ -47,9 +47,9 @@ If you are using Sentry JavaScript SDK v7, reference [`supabase-community/sentry
 
 </Admonition>
 
-To use the Supabase Sentry integration, add it to your `integrations` list when initializing your Sentry client.
+To use the BA Sentry integration, add it to your `integrations` list when initializing your Sentry client.
 
-You can supply either the Supabase Client constructor or an already-initiated instance of a Supabase Client.
+You can supply either the BA Client constructor or an already-initiated instance of a BA Client.
 
 <Tabs scrollable defaultActiveId="constructor" type="underlined" size="small">
 
@@ -103,7 +103,7 @@ All available configuration options are available in our [`supabase-community/se
 
 ## Deduplicating spans
 
-If you're already monitoring HTTP errors in Sentry, for example with the HTTP, Fetch, or Undici integrations, you will get duplicate spans for Supabase calls. You can deduplicate the spans by skipping them in your other integration:
+If you're already monitoring HTTP errors in Sentry, for example with the HTTP, Fetch, or Undici integrations, you will get duplicate spans for BA calls. You can deduplicate the spans by skipping them in your other integration:
 
 ```ts
 import * as Sentry from '@sentry/browser'
@@ -155,7 +155,7 @@ Sentry.init({
 
 ## Example Next.js configuration
 
-See this example for a setup with Next.js to cover browser, server, and edge environments. First, run through the [Sentry Next.js wizard](https://docs.sentry.io/platforms/javascript/guides/nextjs/#install) to generate the base Next.js configuration. Then add the Supabase Sentry Integration to all your `Sentry.init` calls with the appropriate filters.
+See this example for a setup with Next.js to cover browser, server, and edge environments. First, run through the [Sentry Next.js wizard](https://docs.sentry.io/platforms/javascript/guides/nextjs/#install) to generate the base Next.js configuration. Then add the BA Sentry Integration to all your `Sentry.init` calls with the appropriate filters.
 
 <Tabs scrollable defaultActiveId="browser" type="underlined" size="small">
 

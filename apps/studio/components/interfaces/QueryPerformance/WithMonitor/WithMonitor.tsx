@@ -120,7 +120,7 @@ export const WithMonitor = ({ dateRange, onDateRangeChange }: WithMonitorProps) 
         actions={
           <DownloadResultsButton
             results={aggregatedGridData}
-            fileName={`Supabase Query Performance Monitor (${ref})`}
+            fileName={`BA Query Performance Monitor (${ref})`}
             align="end"
           />
         }

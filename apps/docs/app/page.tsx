@@ -26,7 +26,7 @@ const products = [
     hasLightIcon: true,
     href: '/guides/database/overview',
     description:
-      'Supabase provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.',
+      'BA provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.',
     span: 'col-span-12 md:col-span-6',
   },
   {
@@ -111,38 +111,38 @@ const selfHostingOptions = [
 const additionalResources = [
   {
     title: 'Management API',
-    description: 'Manage your Supabase projects and organizations.',
+    description: 'Manage your BA projects and organizations.',
     icon: 'reference-api',
     href: '/reference/api/introduction',
   },
   {
-    title: 'Supabase CLI',
+    title: 'BA CLI',
     description: 'Use the CLI to develop, manage and deploy your projects.',
     icon: 'reference-cli',
     href: '/reference/cli/introduction',
   },
   {
     title: 'Platform Guides',
-    description: 'Learn more about the tools and services powering Supabase.',
+    description: 'Learn more about the tools and services powering BA.',
     icon: 'platform',
     href: '/guides/platform',
   },
   {
     title: 'Integrations',
-    description: 'Explore a variety of integrations from Supabase partners.',
+    description: 'Explore a variety of integrations from BA partners.',
     icon: 'integrations',
     href: '/guides/integrations',
   },
   {
-    title: 'Supabase UI',
-    description: 'A collection of pre-built Supabase components to speed up your project.',
+    title: 'BA UI',
+    description: 'A collection of pre-built BA components to speed up your project.',
     icon: 'ui',
     href: 'https://www.assistance.bg/ui',
     external: true,
   },
   {
     title: 'Troubleshooting',
-    description: 'Our troubleshooting guide for solutions to common Supabase issues.',
+    description: 'Our troubleshooting guide for solutions to common BA issues.',
     icon: 'troubleshooting',
     href: '/guides/troubleshooting',
   },
@@ -161,4 +161,3 @@ const HomePage = () => (
 
 export default HomePage
 export { generateMetadata }
-

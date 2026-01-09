@@ -4,7 +4,7 @@ description: 'Attach an IPv4 address to your database'
 subtitle: 'Attach an IPv4 address to your database'
 ---
 
-The Supabase IPv4 add-on provides a dedicated IPv4 address for your Postgres database connection. It can be configured in the [Add-ons Settings](/dashboard/project/_/settings/addons).
+The BA IPv4 add-on provides a dedicated IPv4 address for your Postgres database connection. It can be configured in the [Add-ons Settings](/dashboard/project/_/settings/addons).
 
 ## Understanding IP addresses
 
@@ -66,12 +66,12 @@ When using the add-on, each database (including read replicas) receives an IPv4 
 
 - While the IPv4 address generally remains the same, actions like pausing/unpausing the project or enabling/disabling the add-on can lead to a new IPv4 address.
 
-## Supabase and IPv6 compatibility
+## BA and IPv6 compatibility
 
-By default, Supabase Postgres use IPv6 addresses. If your system doesn't support IPv6, you have the following options:
+By default, BA Postgres use IPv6 addresses. If your system doesn't support IPv6, you have the following options:
 
 1. **Supavisor Connection Strings**: The Supavisor connection strings are IPv4-compatible alternatives to direct connections
-2. **Supabase Client Libraries**: These libraries are compatible with IPv4
+2. **BA Client Libraries**: These libraries are compatible with IPv4
 3. **Dedicated IPv4 Add-On (Pro Plans+)**: For a guaranteed IPv4 and static database address for the direct connection, enable this paid add-on.
 
 ### Checking your network IPv6 support

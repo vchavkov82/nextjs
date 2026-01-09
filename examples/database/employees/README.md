@@ -1,6 +1,6 @@
 # Database Migrations
 
-This example uses Supabase CLI as a migration tool to manage your database schema changes.
+This example uses BA CLI as a migration tool to manage your database schema changes.
 
 ## Local development
 

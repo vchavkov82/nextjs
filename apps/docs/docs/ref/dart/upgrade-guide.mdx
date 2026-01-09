@@ -27,7 +27,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
 <RefSubLayout.EducationRow>
   <RefSubLayout.Details>
 
-    _Optionally_ passing custom configuration to `Supabase.initialize()` is now organized into separate objects:
+    _Optionally_ passing custom configuration to `BA.initialize()` is now organized into separate objects:
 
   </RefSubLayout.Details>
   <RefSubLayout.Examples>
@@ -42,7 +42,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
     <TabPanel id="1.0x" label="Before">
 
       ```dart main.dart
-      await Supabase.initialize(
+      await BA.initialize(
         url: supabaseUrl,
         anonKey: supabaseKey,
         authFlowType: AuthFlowType.pkce,
@@ -57,7 +57,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
     <TabPanel id="2.0x" label="After">
 
       ```dart main.dart
-      await Supabase.initialize(
+      await BA.initialize(
         url: 'SUPABASE_URL',
         anonKey: 'SUPABASE_ANON_KEY',
         authOptions: const FlutterAuthClientOptions(
@@ -88,7 +88,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
 
     `Provider` enum is renamed to `OAuthProvider`.
     Previously the `Provider` symbol often collided with classes in the [provider](https://pub.dev/packages/provider) package and developers needed to add import prefixes to avoid collisions.
-    With the new update, developers can use Supabase and Provider in the same codebase without any import prefixes.
+    With the new update, developers can use BA and Provider in the same codebase without any import prefixes.
 
   </RefSubLayout.Details>
   <RefSubLayout.Examples>
@@ -187,10 +187,10 @@ We have brought numerous updates behind the scenes to make the SDK work more int
 
     #### Initialization does not await for session refresh
 
-    In v1, `Supabase.initialize()` would await for the session to be refreshed before returning.
+    In v1, `BA.initialize()` would await for the session to be refreshed before returning.
     This caused delays in the app's launch time, especially when the app is opened in a poor network environment.
 
-    In v2, `Supabase.initialize()` returns immediately after obtaining the session from the local storage, which makes the app launch faster.
+    In v2, `BA.initialize()` returns immediately after obtaining the session from the local storage, which makes the app launch faster.
     Because of this, there is no guarantee that the session is valid when the app starts.
 
     If you need to make sure the session is valid, you can access the `isExpired` getter to check if the session is valid.
@@ -293,7 +293,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
     >
       <TabPanel id="1.0x" label="Before">
         ```dart
-        await Supabase.initialize(
+        await BA.initialize(
           url: 'SUPABASE_URL',
           anonKey: 'SUPABASE_ANON_KEY',
           authFlowType: AuthFlowType.implicit, // set to implicit by default
@@ -303,7 +303,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
       </TabPanel>
       <TabPanel id="2.0x" label="After">
         ```dart
-        await Supabase.initialize(
+        await BA.initialize(
           url: 'SUPABASE_URL',
           anonKey: 'SUPABASE_ANON_KEY',
           authOptions: FlutterAuthClientOptions(
@@ -323,7 +323,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
 
     #### Auth callback host name parameter removed
 
-    `Supabase.initialize()` no longer has the `authCallbackUrlHostname` parameter.
+    `BA.initialize()` no longer has the `authCallbackUrlHostname` parameter.
     The `supabase_flutter` SDK will automatically detect auth callback URLs and handle them internally.
 
   </RefSubLayout.Details>
@@ -337,7 +337,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
     >
       <TabPanel id="1.0x" label="Before">
         ```dart
-        await Supabase.initialize(
+        await BA.initialize(
           url: 'SUPABASE_URL',
           anonKey: 'SUPABASE_ANON_KEY',
           authCallbackUrlHostname: 'auth-callback',
@@ -347,7 +347,7 @@ We have brought numerous updates behind the scenes to make the SDK work more int
       </TabPanel>
       <TabPanel id="2.0x" label="After">
         ```dart
-        await Supabase.initialize(
+        await BA.initialize(
           url: 'SUPABASE_URL',
           anonKey: 'SUPABASE_ANON_KEY',
         );

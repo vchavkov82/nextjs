@@ -117,7 +117,7 @@ export default function OptOutPage() {
   function OptOutLayout({ children }: { children: React.ReactNode }) {
     return (
       <>
-        <NextSeo title="Supabase | Opt Out" description="Opt out of receiving emails." />
+        <NextSeo title="BA | Opt Out" description="Opt out of receiving emails." />
         <Layout className="overflow-visible mx-auto max-w-xl mt-24 flex flex-col gap-8">
           {children}
         </Layout>
@@ -134,7 +134,7 @@ export default function OptOutPage() {
       <OptOutLayout>
         <div>
           <span className="label">Opt out</span>
-          <h2 className="h4 !m-0">Receive an unexpected email from Supabase?</h2>
+          <h2 className="h4 !m-0">Receive an unexpected email from BA?</h2>
           <p className="text-foreground-light">Please report it here so we can investigate.</p>
         </div>
 

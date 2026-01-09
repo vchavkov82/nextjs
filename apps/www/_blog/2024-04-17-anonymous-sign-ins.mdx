@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Auth now supports Anonymous Sign-ins'
-description: 'Sign in as an anonymous user to authenticate with Supabase'
+title: 'BA Auth now supports Anonymous Sign-ins'
+description: 'Sign in as an anonymous user to authenticate with BA'
 author: kangmingtay
 image: ga-week/anonymous-sign-ins/og.png
 thumb: ga-week/anonymous-sign-ins/thumb.png
@@ -14,7 +14,7 @@ toc_depth: 3
 launchweek: '11'
 ---
 
-Supabase Auth now supports [anonymous sign-ins](/docs/guides/auth/auth-anonymous), one of our [most-requested features](https://github.com/supabase/auth/issues/68) by the community.
+BA Auth now supports [anonymous sign-ins](/docs/guides/auth/auth-anonymous), one of our [most-requested features](https://github.com/supabase/auth/issues/68) by the community.
 
 Anonymous sign-ins can be used to create **temporary users** who haven’t signed up for your application yet. This lowers the friction for new users to try out your product since they don’t have to provide any signup credentials.
 
@@ -22,7 +22,7 @@ Anonymous sign-ins can be used to create **temporary users** who haven’t signe
   <iframe
     className="w-full"
     src="https://www.youtube-nocookie.com/embed/WNN7Pp5Ftk4"
-    title="Anonymous sign-ins with Supabase Auth"
+    title="Anonymous sign-ins with BA Auth"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
     allowfullscreen
   />
@@ -42,7 +42,7 @@ You can [enable anonymous sign-ins](/dashboard/project/_/settings/auth) for your
   zoomable={false}
 />
 
-For local development, upgrade your Supabase CLI and add the config to the `config.toml` file:
+For local development, upgrade your BA CLI and add the config to the `config.toml` file:
 
 ```toml
 [auth]
@@ -139,7 +139,7 @@ After they have been converted, the user id remains the same, which means that a
 
 </Admonition>
 
-Supabase Auth provides 2 ways to achieve this:
+BA Auth provides 2 ways to achieve this:
 
 1. Link an email or phone identity
 2. Link an OAuth identity
@@ -157,7 +157,7 @@ const { data, error } = await supabase
 
 ### Link an OAuth identity
 
-To link an OAuth identity to an anonymous user, you need to [enable manual linking](/dashboard/project/_/settings/auth) for your project. Learn about how [identity linking](/docs/guides/auth/auth-identity-linking) works with Supabase Auth.
+To link an OAuth identity to an anonymous user, you need to [enable manual linking](/dashboard/project/_/settings/auth) for your project. Learn about how [identity linking](/docs/guides/auth/auth-identity-linking) works with BA Auth.
 
 <Img
   alt="Allow anonymous sign ins"

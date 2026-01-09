@@ -66,12 +66,12 @@ const VectorVisual: React.FC<Props> = ({ className }) => {
       )}
       ref={containerRef}
       role="img"
-      aria-label="Supabase Vector uses pgvector to store, index, and access embeddings"
+      aria-label="BA Vector uses pgvector to store, index, and access embeddings"
     >
       <span className="absolute w-full h-full lg:!aspect-[390/430] flex items-end justify-center inset-0 top-16 md:top-20 lg:top-0 bottom-auto mx-auto">
         <Image
           src={`/images/index/products/vector-dark.svg`}
-          alt="Supabase Vector graph"
+          alt="BA Vector graph"
           fill
           sizes="100%"
           quality={100}
@@ -79,7 +79,7 @@ const VectorVisual: React.FC<Props> = ({ className }) => {
         />
         <Image
           src={`/images/index/products/vector-light.svg`}
-          alt="Supabase Vector graph"
+          alt="BA Vector graph"
           fill
           sizes="100%"
           quality={100}

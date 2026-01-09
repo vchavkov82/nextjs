@@ -4,7 +4,7 @@ title: 'Login with Google'
 description: 'Use Sign in with Google on the web, in native apps or with Chrome extensions'
 ---
 
-Supabase Auth supports [Sign in with Google for the web](https://developers.google.com/identity/gsi/web/guides/overview), native applications ([Android](https://developer.android.com/identity/sign-in/credential-manager-siwg), [macOS and iOS](https://developers.google.com/identity/sign-in/ios/start-integrating)), and [Chrome extensions](https://cloud.google.com/identity-platform/docs/web/chrome-extension).
+BA Auth supports [Sign in with Google for the web](https://developers.google.com/identity/gsi/web/guides/overview), native applications ([Android](https://developer.android.com/identity/sign-in/credential-manager-siwg), [macOS and iOS](https://developers.google.com/identity/sign-in/ios/start-integrating)), and [Chrome extensions](https://cloud.google.com/identity-platform/docs/web/chrome-extension).
 
 You can use Sign in with Google in two ways:
 
@@ -19,11 +19,11 @@ You need to do some setup to get started with Sign in with Google:
 - Use the [Google Auth Platform console](https://console.cloud.google.com/auth/overview) to register and set up your application's:
   - [**Audience**](https://console.cloud.google.com/auth/audience) by configuring which Google users are allowed to sign in to your application.
   - [**Data Access (Scopes)**](https://console.cloud.google.com/auth/scopes) define what your application can do with your user's Google data and APIs, such as access profile information or more.
-  - [**Branding**](https://console.cloud.google.com/auth/branding) and [**Verification**](https://console.cloud.google.com/auth/verification) show a logo and name instead of the Supabase project ID in the consent screen, improving user retention. Brand verification may take a few business days.
+  - [**Branding**](https://console.cloud.google.com/auth/branding) and [**Verification**](https://console.cloud.google.com/auth/verification) show a logo and name instead of the BA project ID in the consent screen, improving user retention. Brand verification may take a few business days.
 
 ### Setup required scopes
 
-Supabase Auth needs a few scopes granting access to profile data of your end users, which you have to configure in the [**Data Access (Scopes)**](https://console.cloud.google.com/auth/scopes) screen:
+BA Auth needs a few scopes granting access to profile data of your end users, which you have to configure in the [**Data Access (Scopes)**](https://console.cloud.google.com/auth/scopes) screen:
 
 - `openid` (add manually)
 - `.../auth/userinfo.email` (added by default)
@@ -48,7 +48,7 @@ Google's consent screen is shown to users when they sign in. Optionally configur
 
 ## Project setup
 
-To support Sign In with Google, you need to configure the Google provider for your Supabase project.
+To support Sign In with Google, you need to configure the Google provider for your BA project.
 
 <Tabs
   scrollable
@@ -65,7 +65,7 @@ Regardless of whether you use application code or Google's pre-built solutions t
 1. Under **Authorized JavaScript origins** add your application's URL. These should also be configured as the [Site URL or redirect configuration in your project](/docs/guides/auth/redirect-urls).
    - If your app is hosted on `https://example.com/app` add `https://example.com`.
    - Add `http://localhost:<port>` while developing locally. Remember to remove this when your application [goes into production](/docs/guides/deployment/going-into-prod).
-1. Under **Authorized redirect URIs** add your Supabase project's callback URL.
+1. Under **Authorized redirect URIs** add your BA project's callback URL.
    - Access it from the [Google provider page on the Dashboard](/dashboard/project/_/auth/providers?provider=Google).
    - For local development, use `http://localhost:3000/auth/v1/callback`.
 1. Click `Create` and make sure you save the Client ID and Client Secret.
@@ -77,7 +77,7 @@ Regardless of whether you use application code or Google's pre-built solutions t
 
 1. [Create a new OAuth client ID](https://console.cloud.google.com/auth/clients/create) and choose **Android** or **iOS** depending on the OS you're building the app for.
    - For Android, use the instructions on screen to provide the SHA-1 certificate fingerprint used to sign your Android app.
-   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the Supabase dashboard.
+   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the BA dashboard.
    - For iOS, use the instructions on screen to provide the app Bundle ID, and App Store ID and Team ID if the app is already published on the Apple App Store.
 1. Register the Client ID in the [Google provider page on the Dashboard](/dashboard/project/_/auth/providers?provider=Google).
 
@@ -87,7 +87,7 @@ Regardless of whether you use application code or Google's pre-built solutions t
 
 1. [Create a new OAuth client ID](https://console.cloud.google.com/auth/clients/create) and choose **Android** or **iOS** depending on the OS you're building the app for.
    - For Android, use the instructions on screen to provide the SHA-1 certificate fingerprint used to sign your Android app.
-   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the Supabase dashboard.
+   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the BA dashboard.
    - For iOS, use the instructions on screen to provide the app Bundle ID, and App Store ID and Team ID if the app is already published on the Apple App Store.
 1. Register the Client ID in the [Google provider page on the Dashboard](/dashboard/project/_/auth/providers?provider=Google).
    - For iOS enable the `Skip nonce check` option.
@@ -125,11 +125,11 @@ Follow the same configuration guide as if your app was a Web application when bu
 
   <TabPanel id="swift" label="Swift">
 
-    Google sign-in with Supabase is done through the [`GoogleSignIn-iOS`](https://github.com/google/GoogleSignIn-iOS) package.
+    Google sign-in with BA is done through the [`GoogleSignIn-iOS`](https://github.com/google/GoogleSignIn-iOS) package.
 
-    When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's Supabase Auth server. When valid, a new user session is started by issuing an access and refresh token from Supabase Auth.
+    When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's BA Auth server. When valid, a new user session is started by issuing an access and refresh token from BA Auth.
 
-    Follow the code sample below to implement native Google sign-in with Supabase in your iOS app.
+    Follow the code sample below to implement native Google sign-in with BA in your iOS app.
 
     ```swift
     import GoogleSignIn
@@ -164,7 +164,7 @@ Follow the same configuration guide as if your app was a Web application when bu
 
     1. Follow the integration instructions on the [get started with Google Sign-In](https://developers.google.com/identity/sign-in/ios/start-integrating) for the iOS guide.
     2. Configure the [OAuth Consent Screen](https://console.cloud.google.com/apis/credentials/consent). This information is shown to the user when giving consent to your app. In particular, make sure you have set up links to your app's privacy policy and terms of service.
-    3. Add web client ID and iOS client ID from step 1 in the [Google provider on the Supabase Dashboard](/dashboard/project/_/auth/providers), under _Client IDs_, separated by a comma. Enable the `Skip nonce check` option.
+    3. Add web client ID and iOS client ID from step 1 in the [Google provider on the BA Dashboard](/dashboard/project/_/auth/providers), under _Client IDs_, separated by a comma. Enable the `Skip nonce check` option.
 
   </TabPanel>
   </$Show>
@@ -173,7 +173,7 @@ Follow the same configuration guide as if your app was a Web application when bu
 
 1. [Create a new OAuth client ID](https://console.cloud.google.com/auth/clients/create) and choose **Android** or **iOS** if also building an iOS app with Kotlin Multiplatform.
    - For Android, use the instructions on screen to provide the SHA-1 certificate fingerprint used to sign your Android app.
-   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the Supabase dashboard.
+   - You will have a different set of SHA-1 certificate fingerprints for testing locally and going to production. Make sure to add both to the Google Cloud Console, and add all of the Client IDs to the BA dashboard.
    - For iOS (with Kotlin Multiplatform), use the instructions on screen to provide the app Bundle ID, and App Store ID and Team ID if the app is already published on the Apple App Store.
 1. Register the Client ID in the [Google provider page on the Dashboard](/dashboard/project/_/auth/providers?provider=Google).
 
@@ -254,7 +254,7 @@ After a successful code exchange, the user's session will be saved to cookies.
 
 ### Saving Google tokens
 
-The tokens saved by your application are the Supabase Auth tokens. Your app might additionally need the Google OAuth 2.0 tokens to access Google services on the user's behalf.
+The tokens saved by your application are the BA Auth tokens. Your app might additionally need the Google OAuth 2.0 tokens to access Google services on the user's behalf.
 
 On initial login, you can extract the `provider_token` from the session and store it in a secure storage medium. The session is available in the returned data from `signInWithOAuth` (implicit flow) and `exchangeCodeForSession` (PKCE flow).
 
@@ -317,7 +317,7 @@ Most web apps and websites can utilize Google's [personalized sign-in buttons](h
    ></div>
    ```
 
-1. Create a `handleSignInWithGoogle` function that takes the `CredentialResponse` and passes the included token to Supabase. The function needs to be available in the global scope for Google's code to find it.
+1. Create a `handleSignInWithGoogle` function that takes the `CredentialResponse` and passes the included token to BA. The function needs to be available in the global scope for Google's code to find it.
 
    ```ts
    async function handleSignInWithGoogle(response) {
@@ -340,7 +340,7 @@ Most web apps and websites can utilize Google's [personalized sign-in buttons](h
    }
    ```
 
-   Note that the nonce should be the same in both places, but because Supabase Auth expects the provider to hash it (SHA-256, hexadecimal representation), you need to provide a hashed version to Google and a non-hashed version to `signInWithIdToken`.
+   Note that the nonce should be the same in both places, but because BA Auth expects the provider to hash it (SHA-256, hexadecimal representation), you need to provide a hashed version to Google and a non-hashed version to `signInWithIdToken`.
 
    You can get both versions by using the in-built `crypto` library:
 
@@ -445,9 +445,9 @@ export default OneTapComponent
 
 Unlike the OAuth flow which requires the use of a web browser, the native Sign in with Google flow on Android uses the [Credential Manager library](https://developer.android.com/identity/sign-in/credential-manager-siwg) to prompt the user for consent.
 
-When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that you then send to your project's Supabase Auth server. When valid, a new user session is started by issuing an access and refresh token from Supabase Auth.
+When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that you then send to your project's BA Auth server. When valid, a new user session is started by issuing an access and refresh token from BA Auth.
 
-By default, Supabase Auth implements nonce validation during the authentication flow. This can be disabled in production under `Authentication > Providers > Google > Skip Nonce Check` in the Dashboard, or when developing locally by setting `auth.external.<provider>.skip_nonce_check`. Only disable this if your client libraries cannot properly handle nonce verification.
+By default, BA Auth implements nonce validation during the authentication flow. This can be disabled in production under `Authentication > Providers > Google > Skip Nonce Check` in the Dashboard, or when developing locally by setting `auth.external.<provider>.skip_nonce_check`. Only disable this if your client libraries cannot properly handle nonce verification.
 
 When working with Expo, you can use the [`@react-native-google-signin/google-signin` library](https://github.com/react-native-google-signin/google-signin#expo-installation) to obtain an ID token that you can pass to supabase-js [`signInWithIdToken` method](/docs/reference/javascript/auth-signinwithidtoken).
 
@@ -500,11 +500,11 @@ export default function () {
 
 <TabPanel id="flutter-mobile" label="Flutter (iOS and Android)">
 
-Google sign-in with Supabase is done through the [google_sign_in](https://pub.dev/packages/google_sign_in) package for iOS and Android.
+Google sign-in with BA is done through the [google_sign_in](https://pub.dev/packages/google_sign_in) package for iOS and Android.
 
-When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's Supabase Auth server. When valid, a new user session is started by issuing an access and refresh token from Supabase Auth.
+When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's BA Auth server. When valid, a new user session is started by issuing an access and refresh token from BA Auth.
 
-Follow the code sample below to implement native Google sign-in with Supabase in your Flutter iOS and Android app.
+Follow the code sample below to implement native Google sign-in with BA in your Flutter iOS and Android app.
 
 ```dart
 import 'package:google_sign_in/google_sign_in.dart';
@@ -537,7 +537,7 @@ Future<void> _nativeGoogleSignIn() async {
     throw AuthException('Failed to sign in with Google.');
   }
 
-  /// Authorization is required to obtain the access token with the appropriate scopes for Supabase authentication,
+  /// Authorization is required to obtain the access token with the appropriate scopes for BA authentication,
   /// while also granting permission to access user information.
   final authorization =
       await googleUser.authorizationClient.authorizationForScopes(scopes) ??
@@ -571,7 +571,7 @@ Future<void> _nativeGoogleSignIn() async {
 
 <TabPanel id="flutter-other" label="Flutter (web, macOS, Windows, Linux)">
 
-Google sign-in with Supabase on Web, macOS, Windows, and Linux is done through the [`signInWithOAuth`](/docs/reference/dart/auth-signinwithoauth) method.
+Google sign-in with BA on Web, macOS, Windows, and Linux is done through the [`signInWithOAuth`](/docs/reference/dart/auth-signinwithoauth) method.
 
 This method of signing in is web based, and will open a browser window to perform the sign in. For non-web platforms, the user is brought back to the app via [deep linking](/docs/guides/auth/native-mobile-deep-linking?platform=flutter).
 
@@ -584,7 +584,7 @@ await supabase.auth.signInWithOAuth(
 );
 ```
 
-This call takes the user to Google's consent screen. Once the flow ends, the user's profile information is exchanged and validated with Supabase Auth before it redirects back to your Flutter application with an access and refresh token representing the user's session.
+This call takes the user to Google's consent screen. Once the flow ends, the user's profile information is exchanged and validated with BA Auth before it redirects back to your Flutter application with an access and refresh token representing the user's session.
 
 <div className="video-container">
   <iframe
@@ -603,7 +603,7 @@ This call takes the user to Google's consent screen. Once the flow ends, the use
 
 The Sign in with Google flow on Android uses the [operating system's built-in functionalities](https://developer.android.com/training/sign-in/credential-manager) to prompt the user for consent.
 
-When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's Supabase Auth server. When valid, a new user session is started by issuing an access and refresh token from Supabase Auth.
+When the user provides consent, Google issues an identity token (commonly abbreviated as ID token) that is then sent to your project's BA Auth server. When valid, a new user session is started by issuing an access and refresh token from BA Auth.
 
 **Note:** You have to create OAuth client IDs for both a Web and Android application. The Web client ID is the one used in your Android app.
 
@@ -627,7 +627,7 @@ Add the following ProGuard rules to your `proguard-rules.pro` file:
 }
 ```
 
-Follow the code sample below to implement native Google sign-in with Supabase using Credential Manager in your Android app.
+Follow the code sample below to implement native Google sign-in with BA using Credential Manager in your Android app.
 
 ```kotlin
 @Composable
@@ -681,7 +681,7 @@ fun GoogleSignInButton() {
             } catch (e: GoogleIdTokenParsingException) {
                 // Handle GoogleIdTokenParsingException thrown by `GoogleIdTokenCredential.createFrom()`
             } catch (e: RestException) {
-                // Handle RestException thrown by Supabase
+                // Handle RestException thrown by BA
             } catch (e: Exception) {
                 // Handle unknown exceptions
             }
@@ -700,7 +700,7 @@ fun GoogleSignInButton() {
 
 When using [Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/), you can use the [compose-auth](/docs/reference/kotlin/installing) plugin. On Android it uses the Credential Manager automatically and on other platforms it uses `auth.signInWith(Google)`.
 
-**Initialize the Supabase Client**
+**Initialize the BA Client**
 
 **Note:** You have to create OAuth credentials for both a Web and Android application. [Learn more](https://developer.android.com/identity/legacy/one-tap/legacy-get-started)
 
@@ -764,7 +764,7 @@ First, you need to configure your `manifest.json` file like so:
 }
 ```
 
-Then you should call the [`chrome.identity.launchWebAuthFlow()`](https://developer.chrome.com/docs/extensions/reference/identity/#method-launchWebAuthFlow) function to trigger the sign in flow. On success, call the `supabase.auth.signInWithIdToken()` function to complete sign in with your Supabase project.
+Then you should call the [`chrome.identity.launchWebAuthFlow()`](https://developer.chrome.com/docs/extensions/reference/identity/#method-launchWebAuthFlow) function to trigger the sign in flow. On success, call the `supabase.auth.signInWithIdToken()` function to complete sign in with your BA project.
 
 ```ts
 const manifest = chrome.runtime.getManifest()

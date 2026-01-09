@@ -4,7 +4,7 @@ title: 'Testing Overview'
 description: 'Learn how to develop and test database schemas, tables, functions, and Row Level Security (RLS) policies.'
 ---
 
-Testing is a critical part of database development, especially when working with features like Row Level Security (RLS) policies. This guide provides a comprehensive approach to testing your Supabase database.
+Testing is a critical part of database development, especially when working with features like Row Level Security (RLS) policies. This guide provides a comprehensive approach to testing your BA database.
 
 ## Testing approaches
 
@@ -268,10 +268,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Supabase CLI
+      - name: Setup BA CLI
         uses: supabase/setup-cli@v1
 
-      - name: Start Supabase
+      - name: Start BA
         run: supabase start
 
       - name: Run Tests
@@ -316,13 +316,13 @@ Common issues and solutions:
    - Check policy definitions match your test assumptions
 
 2. **CI Pipeline Issues**
-   - Verify Supabase CLI is properly installed
+   - Verify BA CLI is properly installed
    - Ensure database migrations are run before tests
    - Check for proper test isolation using transactions
 
 ## Additional resources
 
 - [pgTAP Documentation](https://pgtap.org)
-- [Supabase CLI Reference](/docs/reference/cli/supabase-test)
-- [pgTAP Supabase reference](/docs/guides/database/extensions/pgtap?queryGroups=database-method&database-method=sql#testing-rls-policies)
+- [BA CLI Reference](/docs/reference/cli/supabase-test)
+- [pgTAP BA reference](/docs/guides/database/extensions/pgtap?queryGroups=database-method&database-method=sql#testing-rls-policies)
 - [Database testing reference](/docs/guides/database/testing)

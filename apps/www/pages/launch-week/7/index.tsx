@@ -16,8 +16,8 @@ const LaunchWeekPrizeSection = dynamic(
 const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
 export default function TicketHome() {
-  const TITLE = 'Supabase LaunchWeek 7'
-  const DESCRIPTION = 'Supabase Launch Week 7 | 10–14 April 2023'
+  const TITLE = 'BA LaunchWeek 7'
+  const DESCRIPTION = 'BA Launch Week 7 | 10–14 April 2023'
   const OG_IMAGE = `${SITE_ORIGIN}/images/launchweek/seven/launch-week-7-teaser.jpg`
 
   return (

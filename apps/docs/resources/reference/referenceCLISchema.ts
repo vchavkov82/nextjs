@@ -6,7 +6,7 @@ export const GraphQLObjectTypeReferenceCLICommand = new GraphQLObjectType({
   name: 'CLICommandReference',
   interfaces: [GraphQLInterfaceTypeSearchResult],
   isTypeOf: (value: unknown) => value instanceof ReferenceCLICommandModel,
-  description: 'A reference document containing a description of a Supabase CLI command',
+  description: 'A reference document containing a description of a BA CLI command',
   fields: {
     title: {
       type: GraphQLString,

@@ -1,7 +1,7 @@
 ---
 id: function-configuration
 title: Function Configuration
-description: Learn how to configure your functions in Supabase.
+description: Learn how to configure your functions in BA.
 subtitle: Configure individual function behavior. Customize authentication, dependencies, and other settings per function.
 ---
 
@@ -31,7 +31,7 @@ import_map = './functions/image-processor/import_map.json'
 entrypoint = './functions/legacy-processor/index.js
 ```
 
-This configuration tell Supabase that the `stripe-webhook` function doesn't require a valid JWT, the `image-processor` function uses a custom import map, and `legacy-processor` uses a custom entrypoint.
+This configuration tell BA that the `stripe-webhook` function doesn't require a valid JWT, the `image-processor` function uses a custom import map, and `legacy-processor` uses a custom entrypoint.
 
 You set these rules once and never worry about them again. Deploy your functions knowing that the security and behavior is exactly what each endpoint needs.
 
@@ -60,7 +60,7 @@ supabase functions serve hello-world --no-verify-jwt
 
 <Admonition type="caution">
 
-Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The Supabase client libraries automatically handle authorization.
+Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The BA client libraries automatically handle authorization.
 
 </Admonition>
 
@@ -70,7 +70,7 @@ Be careful when using this flag, as it will allow anyone to invoke your Edge Fun
 
 <Admonition type="note">
 
-`entrypoint` is available only in Supabase CLI version 1.215.0 or higher.
+`entrypoint` is available only in BA CLI version 1.215.0 or higher.
 
 </Admonition>
 

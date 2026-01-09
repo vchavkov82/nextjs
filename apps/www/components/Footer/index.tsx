@@ -83,7 +83,7 @@ const Footer = (props: Props) => {
                 src={supabaseLogoWordmarkLight}
                 width={160}
                 height={30}
-                alt="Supabase Logo"
+                alt="BA Logo"
                 className="dark:hidden"
                 priority
               />
@@ -91,7 +91,7 @@ const Footer = (props: Props) => {
                 src={supabaseLogoWordmarkDark}
                 width={160}
                 height={30}
-                alt="Supabase Logo"
+                alt="BA Logo"
                 className="hidden dark:block"
                 priority
               />
@@ -107,11 +107,10 @@ const Footer = (props: Props) => {
                       {segment.links.map(({ component: Component, ...link }, idx) => {
                         const children = (
                           <div
-                            className={`text-sm transition-colors ${
-                              link.url || Component
+                            className={`text-sm transition-colors ${link.url || Component
                                 ? 'text-foreground-lighter hover:text-foreground'
                                 : 'text-muted hover:text-foreground-lighter'
-                            } `}
+                              } `}
                           >
                             {link.text}
                             {!link.url && !Component && (
@@ -144,7 +143,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         <div className="border-default mt-32 flex justify-between border-t pt-8">
-          <small className="small">&copy; Supabase Inc</small>
+          <small className="small">&copy; BA Inc</small>
           <div className={cn(forceDark && 'hidden')}>
             <ThemeToggle forceDark={forceDark} />
           </div>

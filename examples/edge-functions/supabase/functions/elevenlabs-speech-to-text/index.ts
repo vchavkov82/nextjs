@@ -2,7 +2,7 @@
 // https://deno.land/manual/getting_started/setup_your_environment
 // This enables autocomplete, go to definition, etc.
 
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in BA Runtime APIs
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:supabase-js@2";
 
@@ -68,7 +68,7 @@ async function scribe(
       },
     );
   }
-  // Write log to Supabase.
+  // Write log to BA.
   const logLine = {
     file_type: fileType,
     duration,

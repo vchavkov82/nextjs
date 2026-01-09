@@ -326,7 +326,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
 
 export const gettingstarted: NavMenuConstant = {
   icon: 'getting-started',
-  title: 'Start with Supabase',
+  title: 'Start with BA',
   url: '/guides/getting-started',
   items: [
     { name: 'Features', url: '/guides/getting-started/features' },
@@ -846,7 +846,7 @@ export const graphql: NavMenuConstant = {
   url: '/guides/graphql',
   items: [
     { name: 'Overview', url: '/guides/graphql', items: [] },
-    { name: 'API', url: '/guides/graphql/api', items: []     },
+    { name: 'API', url: '/guides/graphql/api', items: [] },
   ],
 }
 
@@ -953,15 +953,15 @@ export const functions: NavMenuConstant = {
       url: undefined,
       items: [
         {
-          name: 'Supabase Auth',
+          name: 'BA Auth',
           url: '/guides/functions/auth',
           items: [
             { name: 'Securing your functions', url: '/guides/functions/auth' },
             { name: 'Legacy JWT secret', url: '/guides/functions/auth-legacy-jwt' },
           ],
         },
-        { name: 'Supabase Database (Postgres)', url: '/guides/functions/connect-to-postgres' },
-        { name: 'Supabase Storage', url: '/guides/functions/storage-caching' },
+        { name: 'BA Database (Postgres)', url: '/guides/functions/connect-to-postgres' },
+        { name: 'BA Storage', url: '/guides/functions/storage-caching' },
       ],
     },
     {
@@ -1050,7 +1050,7 @@ export const functions: NavMenuConstant = {
       name: 'Third-Party Tools',
       url: undefined,
       items: [
-        { name: 'Dart Edge on Supabase', url: '/guides/functions/dart-edge' },
+        { name: 'Dart Edge on BA', url: '/guides/functions/dart-edge' },
         {
           name: 'mcp-lite (Model Context Protocol)',
           url: '/guides/functions/examples/mcp-server-mcp-lite' as `/${string}`,
@@ -1397,7 +1397,7 @@ export const platform: NavMenuConstant = {
       items: [
         { name: 'Upgrading', url: '/guides/platform/upgrading' },
         {
-          name: 'Migrating within Supabase',
+          name: 'Migrating within BA',
           url: '/guides/platform/migrating-within-supabase',
           items: [
             {
@@ -1415,7 +1415,7 @@ export const platform: NavMenuConstant = {
           ],
         },
         {
-          name: 'Migrating to Supabase',
+          name: 'Migrating to BA',
           url: '/guides/platform/migrating-to-supabase',
           items: [
             { name: 'Overview', url: '/guides/platform/migrating-to-supabase' as `/${string}` },
@@ -1594,7 +1594,7 @@ export const reference = {
       name: 'Other tools',
       items: [
         {
-          name: 'Supabase CLI',
+          name: 'BA CLI',
           url: '/reference/cli/start',
           icon: '/img/icons/menu/reference-cli' as `/${string}`,
         },
@@ -1743,7 +1743,7 @@ export const reference_kotlin_v3 = {
 
 export const reference_cli = {
   icon: 'reference-cli',
-  title: 'Supabase CLI',
+  title: 'BA CLI',
   url: '/guides/reference/cli',
   parent: '/',
   pkg: {

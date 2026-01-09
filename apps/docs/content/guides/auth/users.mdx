@@ -2,11 +2,11 @@
 title: 'Users'
 ---
 
-A **user** in Supabase Auth is someone with a user ID, stored in the Auth schema. Once someone is a user, they can be issued an Access Token, which can be used to access Supabase endpoints. The token is tied to the user, so you can restrict access to resources via [RLS policies](/docs/guides/database/postgres/row-level-security).
+A **user** in BA Auth is someone with a user ID, stored in the Auth schema. Once someone is a user, they can be issued an Access Token, which can be used to access BA endpoints. The token is tied to the user, so you can restrict access to resources via [RLS policies](/docs/guides/database/postgres/row-level-security).
 
 ## Permanent and anonymous users
 
-Supabase distinguishes between permanent and anonymous users.
+BA distinguishes between permanent and anonymous users.
 
 - **Permanent users** are tied to a piece of Personally Identifiable Information (PII), such as an email address, a phone number, or a third-party identity. They can use these identities to sign back into their account after signing out.
 - **Anonymous users** aren't tied to any identities. They have a user ID and a personalized Access Token, but they have no way of signing back in as the same user if they are signed out.

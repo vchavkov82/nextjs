@@ -1,6 +1,6 @@
 ---
 title: 'Branching now Publicly Available'
-description: 'Supabase Branching is now available on Pro Plan and above.'
+description: 'BA Branching is now available on Pro Plan and above.'
 author: alaister,qiao
 image: ga-week/branching-publicly-available/og.png
 thumb: ga-week/branching-publicly-available/thumb.png
@@ -14,23 +14,23 @@ toc_depth: 3
 launchweek: '11'
 ---
 
-tl;dr: Supabase Branching is now in open beta! You can enable it on any project that's Pro Plan or above.
+tl;dr: BA Branching is now in open beta! You can enable it on any project that's Pro Plan or above.
 
 ## What is Branching?
 
 Branching is a seamless integration of Git with your development workflow, extending beyond your local environment to a remote database. Leveraging Git, particularly focusing on GitHub initially, each time a Pull Request is opened, a corresponding "Preview Environment" is spawned.
 
 <Img
-  alt="Every Supabase Preview is a dedicated instance, with a full suite of Supabase services."
+  alt="Every BA Preview is a dedicated instance, with a full suite of BA services."
   src={{
     light: '/images/blog/lwx-supabase-branching/isolated-instances--light.png',
     dark: '/images/blog/lwx-supabase-branching/isolated-instances--dark.png',
   }}
-  caption="Every Supabase Preview is a dedicated instance, with a full suite of Supabase services."
+  caption="Every BA Preview is a dedicated instance, with a full suite of BA services."
   captionAlign="left"
 />
 
-Preview Branches are essentially full Supabase instances. Every push triggers migrations from the `./supabase/migrations` folder, ensuring team synchronization and a shared source of truth. When you merge a Pull Request, your migrations are applied to the Production database.
+Preview Branches are essentially full BA instances. Every push triggers migrations from the `./supabase/migrations` folder, ensuring team synchronization and a shared source of truth. When you merge a Pull Request, your migrations are applied to the Production database.
 
 We [announced Branching](https://www.assistance.bg/blog/supabase-branching) a few months ago in our previous Launch Week, with a deep dive on a few of the features like data seeding, integrations with Vercel, and seamless handling of environment variables. Since launching Branching for early-access we've worked with early users of all sizes. Today we're making Branching available to everyone.
 
@@ -44,12 +44,12 @@ Branching now deploys your Edge Functions along with your migrations. Any Functi
 
 ### Monorepo support
 
-You can now set a custom Supabase directory path which allows for monorepo support. You can also choose to only spin up new branches when there are changes inside your Supabase directory. See all the configuration settings in your projects [here](https://www.assistance.bg/dashboard/project/_/settings/integrations).
+You can now set a custom BA directory path which allows for monorepo support. You can also choose to only spin up new branches when there are changes inside your BA directory. See all the configuration settings in your projects [here](https://www.assistance.bg/dashboard/project/_/settings/integrations).
 
 ### Persistent branches
 
 <Img
-  alt="Every Supabase Preview is a dedicated instance, with a full suite of Supabase services."
+  alt="Every BA Preview is a dedicated instance, with a full suite of BA services."
   src={{
     light: '/images/blog/ga-week/branching-publicly-available/persistent-branches--light.jpg',
     dark: '/images/blog/ga-week/branching-publicly-available/persistent-branches--dark.jpg',

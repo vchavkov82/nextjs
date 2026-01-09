@@ -124,7 +124,7 @@ const LW15Heading = () => {
         </div>
         <div className="flex flex-col gap-4 xl:mt-24">
           <div className="w-full flex items-center justify-center h-[42px] md:h-[60px] lg:h-[92px] gap-4">
-            <h1 className="sr-only">Supabase Launch Week 15</h1>
+            <h1 className="sr-only">BA Launch Week 15</h1>
             <LWSVG className="opacity-0 lw15-logo lw15-logo-left h-full w-auto" />
             <div className="lw15-galaxy opacity-0 relative h-full w-0 flex-0 dark:mix-blend-screen overflow-hidden">
               <video

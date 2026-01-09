@@ -180,7 +180,7 @@ function DialogView({ projectRef, isMobile }: { projectRef: string; isMobile?: b
                 className="flex items-center px-4 w-full rounded-none text-sm py-4 h-auto justify-start gap-3 text-sm text-left hover:bg-accent"
               >
                 <LogoSupabase size={16} />
-                <span className="flex-1">Open in Supabase</span>
+                <span className="flex-1">Open in BA</span>
                 <ExternalLink className="ml-2 h-4 w-4 text-muted-foreground/50" />
               </Link>
             </HoverCardTrigger>
@@ -190,10 +190,10 @@ function DialogView({ projectRef, isMobile }: { projectRef: string; isMobile?: b
               side="top"
               className="text-sm bg-muted/50 w-[216px]"
             >
-              <h4 className="font-semibold mb-1">About Supabase</h4>
+              <h4 className="font-semibold mb-1">About BA</h4>
               <p className="text-muted-foreground">
                 Access powerful back-end tools for database, auth, storage, and logs directly in
-                Supabase.
+                BA.
               </p>
             </HoverCardContent>
           </HoverCard>
@@ -261,7 +261,7 @@ export default function SupabaseManagerDialog({
 }) {
   const content = (
     <SheetNavigationProvider
-      onStackEmpty={() => {}}
+      onStackEmpty={() => { }}
       initialStack={[
         {
           title: 'Database',

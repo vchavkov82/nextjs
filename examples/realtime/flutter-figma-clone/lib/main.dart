@@ -9,14 +9,14 @@ import 'package:supabase_auth_ui/supabase_auth_ui.dart';
 void main() async {
   usePathUrlStrategy();
 
-  await Supabase.initialize(
+  await BA.initialize(
     url: 'YOUR_SUPABASE_URL',
     anonKey: 'YOUR_SUPABASE_ANON_KEY',
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 
 final _router = GoRouter(
   initialLocation: '/signin',

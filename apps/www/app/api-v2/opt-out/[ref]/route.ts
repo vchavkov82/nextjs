@@ -79,7 +79,7 @@ export async function POST(req: NextRequest, props: { params: Promise<{ ref: str
       .insert([{ project_ref: ref, reason, email }])
 
     if (supabaseError) {
-      throw new Error(`Supabase error: ${supabaseError.message}`)
+      throw new Error(`BA error: ${supabaseError.message}`)
     }
 
     const response = await fetch(process.env.EMAIL_REPORT_SLACK_WEBHOOK as string, {

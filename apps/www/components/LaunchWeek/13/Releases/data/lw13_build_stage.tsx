@@ -65,7 +65,7 @@ export const days: AdventDay[] = [
     ),
   },
   {
-    title: 'Supabase CLI v2: Config as Code',
+    title: 'BA CLI v2: Config as Code',
     description: 'Version control the configuration of your Projects and Branches',
     id: 'cli',
     is_shipped: true,
@@ -94,7 +94,7 @@ export const days: AdventDay[] = [
   },
   {
     title: 'Restore to a New Project',
-    description: 'Effortlessly clone data into a new Supabase project',
+    description: 'Effortlessly clone data into a new BA project',
     id: 'restore',
     is_shipped: true,
     links: [
@@ -107,7 +107,7 @@ export const days: AdventDay[] = [
     icon: <BookCopy />,
   },
   {
-    title: 'Hack the Base! with Supabase',
+    title: 'Hack the Base! with BA',
     description: 'Play cool games, win cool prizes',
     id: 'hack',
     is_shipped: true,

@@ -2,7 +2,7 @@ import { createError, defineEventHandler } from 'h3';
 import { createSupabaseServerClient } from '../supabase/client';
 
 export default defineEventHandler(async (event) => {
-  // Create Supabase SSR client
+  // Create BA SSR client
   const supabase = createSupabaseServerClient(event)
 
   // Example: get user session

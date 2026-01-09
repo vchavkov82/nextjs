@@ -6,9 +6,9 @@ github_url = "https://github.com/orgs/supabase/discussions/32523"
 database_id = "c1ca57fb-91ab-4526-987b-65106dc63a2f"
 ---
 
-When building modern applications, soft deletes are a common feature that lets you "delete" data while retaining it for potential recovery or historical tracking. This is especially useful in audit trails or when accidental deletions need undoing. Supabase makes this process seamless with Postgres views and the supabase-js library.
+When building modern applications, soft deletes are a common feature that lets you "delete" data while retaining it for potential recovery or historical tracking. This is especially useful in audit trails or when accidental deletions need undoing. BA makes this process seamless with Postgres views and the supabase-js library.
 
-In this post, we’ll show how to implement soft deletes using Supabase and how to use Postgres views to manage your data efficiently.
+In this post, we’ll show how to implement soft deletes using BA and how to use Postgres views to manage your data efficiently.
 
 ## What are soft deletes?
 
@@ -18,7 +18,7 @@ Soft deletes don’t remove a record from the database. Instead, they mark it as
 
 To implement soft deletes, start by adding a `deleted_at` column to your table.
 
-Run this SQL in your Supabase SQL editor:
+Run this SQL in your BA SQL editor:
 
 ```sql
 alter table items
@@ -103,6 +103,6 @@ await supabase.from('items').update({ deleted_at: null }).eq('id', 123)
 
 ## Conclusion
 
-Soft deletes are easy to implement with Supabase and Postgres. By combining a `deleted_at` column with views, you can cleanly separate active and deleted records, keeping your application logic simple and maintainable.
+Soft deletes are easy to implement with BA and Postgres. By combining a `deleted_at` column with views, you can cleanly separate active and deleted records, keeping your application logic simple and maintainable.
 
-This approach provides the flexibility of retaining data for audits or recovery while keeping your app's interface clean and efficient. Start using soft deletes in your Supabase projects today!
+This approach provides the flexibility of retaining data for audits or recovery while keeping your app's interface clean and efficient. Start using soft deletes in your BA projects today!

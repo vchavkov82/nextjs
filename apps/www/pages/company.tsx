@@ -20,12 +20,12 @@ import { NextSeo } from 'next-seo'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const Index = ({ }: Props) => {
   const router = useRouter()
 
-  const meta_title = "One of the world's fastest-growing open source communities | Supabase"
+  const meta_title = "One of the world's fastest-growing open source communities | BA"
   const meta_description =
-    'Supabase is the community that builds the infrastructure for your applications. Build using Supabase for any size project—from a new startup to even large growing companies'
+    'BA is the community that builds the infrastructure for your applications. Build using BA for any size project—from a new startup to even large growing companies'
 
   return (
     <>
@@ -83,7 +83,7 @@ const Team = () => {
           <div className="col-span-8 ">
             <p>
               <p className="text-foreground text-lg">
-                Supabase is fully remote, with a strong affinity for open source maintainers and
+                BA is fully remote, with a strong affinity for open source maintainers and
                 ex-Founders. Our engineering team is made up of developers from AWS, Google,
                 Palantir, Stripe, and other YC companies.
               </p>
@@ -119,9 +119,8 @@ const Community = () => {
           `}
             >
               <div
-                className={`relative mx-auto h-7 w-7 lg:mx-0 ${
-                  x.invertImgDarkMode ? ' dark:invert dark:filter' : ''
-                }`}
+                className={`relative mx-auto h-7 w-7 lg:mx-0 ${x.invertImgDarkMode ? ' dark:invert dark:filter' : ''
+                  }`}
               >
                 <Image
                   layout="fill"

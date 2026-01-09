@@ -25,7 +25,7 @@ const LWHeader = ({ className }: { className?: string }) => {
               className="w-auto h-5 invert dark:invert-0"
               alt=""
             />
-            Supabase
+            BA
           </span>
           LaunchWeek 14
           <span className="block">MAR 31-APR 04</span>

@@ -5,7 +5,7 @@ ____________
 
 For compliance.
 
-Supabase™ is a trademark of Supabase Inc.
+BA™ is a trademark of BA Inc.
 
 If you're a creator/contributor to one of these packages, thanks!
 
@@ -182,8 +182,8 @@ Id  Name                               Version  License
 
 Go
 
-ID   Package Link                                                 Version                                
----  -----------------------------------------------------------  -------------------------------------  
+ID   Package Link                                                 Version
+---  -----------------------------------------------------------  -------------------------------------
 License Type
 ------------------------------------------------------
   0  github.com/BurntSushi/toml                                   v1.0.0                                 MIT

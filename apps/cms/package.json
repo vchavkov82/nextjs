@@ -1,7 +1,7 @@
 {
   "name": "cms",
   "version": "1.0.0",
-  "description": "Payload CMS for Supabase",
+  "description": "Payload CMS for BA",
   "license": "MIT",
   "scripts": {
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8192\" next build --turbopack",

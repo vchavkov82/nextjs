@@ -21,7 +21,7 @@ The public flag (the last argument in `realtime.send(payload, event, topic, is_p
 - Public (false) → Anyone can subscribe to that topic without authentication
 - Private (true) → Only authenticated clients can subscribe to that topic
 
-However, regardless of whether it's public or private, the Realtime service connects to your database as the authenticated Supabase Admin role.
+However, regardless of whether it's public or private, the Realtime service connects to your database as the authenticated BA Admin role.
 
 </Admonition>
 
@@ -29,7 +29,7 @@ For Authorization we do insert a message and try to read it and then we it back 
 
 ## Subscribe to messages
 
-You can use the Supabase client libraries to receive Broadcast messages.
+You can use the BA client libraries to receive Broadcast messages.
 
 ### Initialize the client
 
@@ -39,7 +39,7 @@ Get the Project URL and key from [the project's **Connect** dialog](/dashboard/p
 
 <Admonition type="note" title="Changes to API keys">
 
-Supabase is changing the way keys work to improve project security and developer experience. You can [read the full announcement](https://github.com/orgs/supabase/discussions/29260), but in the transition period, you can use both the current `anon` and `service_role` keys and the new publishable key with the form `sb_publishable_xxx` which will replace the older keys.
+BA is changing the way keys work to improve project security and developer experience. You can [read the full announcement](https://github.com/orgs/supabase/discussions/29260), but in the transition period, you can use both the current `anon` and `service_role` keys and the new publishable key with the form `sb_publishable_xxx` which will replace the older keys.
 
 In most cases, you can get the correct key from [the Project's **Connect** dialog](/dashboard/project/_?showConnect=true), but if you want a specific key, you can find all keys in [the API Keys section of a Project's Settings page](/dashboard/project/_/settings/api-keys/):
 
@@ -74,14 +74,14 @@ In most cases, you can get the correct key from [the Project's **Connect** dialo
     import 'package:supabase_flutter/supabase_flutter.dart';
 
     void main() async {
-      Supabase.initialize(
+      BA.initialize(
         url: 'https://<project>.supabase.co',
         anonKey: '<sb_publishable_... or anon key>',
       );
       runApp(MyApp());
     }
 
-    final supabase = Supabase.instance.client;
+    final supabase = BA.instance.client;
     ```
 
   </TabPanel>
@@ -90,7 +90,7 @@ In most cases, you can get the correct key from [the Project's **Connect** dialo
   <TabPanel id="swift" label="Swift">
 
     ```swift
-    import Supabase
+    import BA
 
     let SUPABASE_URL = "https://<project>.supabase.co"
     let SUPABASE_KEY = "<sb_publishable_... or anon key>"
@@ -261,7 +261,7 @@ You can provide a callback for the `broadcast` channel to receive messages. This
 
 ### Broadcast using the client libraries
 
-You can use the Supabase client libraries to send Broadcast messages.
+You can use the BA client libraries to send Broadcast messages.
 
 <Tabs
   scrollable
@@ -513,7 +513,7 @@ You can send a Broadcast message by making an HTTP request to Realtime servers.
 
 ## Broadcast options
 
-You can pass configuration options while initializing the Supabase Client.
+You can pass configuration options while initializing the BA Client.
 
 ### Self-send messages
 
@@ -797,7 +797,7 @@ You can also send a Broadcast message by making an HTTP request to Realtime serv
   <TabPanel id="js" label="JavaScript">
     <Admonition type="note">
 
-    This is currently available only in the Supabase JavaScript client version 2.37.0 and later.
+    This is currently available only in the BA JavaScript client version 2.37.0 and later.
 
     </Admonition>
 
@@ -1013,7 +1013,7 @@ You can configure replay with the following options:
   <TabPanel id="js" label="JavaScript">
     <Admonition type="note">
 
-      This is currently available only in the Supabase JavaScript client version 2.74.0 and later.
+      This is currently available only in the BA JavaScript client version 2.74.0 and later.
 
     </Admonition>
 
@@ -1048,7 +1048,7 @@ You can configure replay with the following options:
   <TabPanel id="dart" label="Dart">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Dart client version 2.10.0 and later.
+      This is currently available only in the BA Dart client version 2.10.0 and later.
 
     </Admonition>
     ```dart
@@ -1086,7 +1086,7 @@ You can configure replay with the following options:
   <TabPanel id="swift" label="Swift">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Swift client version 2.34.0 and later.
+      This is currently available only in the BA Swift client version 2.34.0 and later.
 
     </Admonition>
     ```swift
@@ -1136,7 +1136,7 @@ You can configure replay with the following options:
   <TabPanel id="python" label="Python">
     <Admonition type="note">
 
-      This is currently available only in the Supabase Python client version 2.22.0 and later.
+      This is currently available only in the BA Python client version 2.22.0 and later.
 
     </Admonition>
     ```python

@@ -1,12 +1,12 @@
 ---
 # Specify the following for Cursor rules
-description: Coding rules for Supabase Edge Functions
+description: Coding rules for BA Edge Functions
 alwaysApply: false
 ---
 
-# Writing Supabase Edge Functions
+# Writing BA Edge Functions
 
-You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **high-quality Supabase Edge Functions** that adhere to the following best practices:
+You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **high-quality BA Edge Functions** that adhere to the following best practices:
 
 ## Guidelines
 
@@ -17,7 +17,7 @@ You're an expert in writing TypeScript and Deno JavaScript runtime. Generate **h
 5. For external dependencies, importing via `npm:` and `jsr:` is preferred. Minimize the use of imports from @`deno.land/x` , `esm.sh` and @`unpkg.com` . If you have a package from one of those CDNs, you can replace the CDN hostname with `npm:` specifier.
 6. You can also use Node built-in APIs. You will need to import them using `node:` specifier. For example, to import Node process: `import process from "node:process". Use Node APIs when you find gaps in Deno APIs.
 7. Do NOT use `import { serve } from "https://deno.land/std@0.168.0/http/server.ts"`. Instead use the built-in `Deno.serve`.
-8. Following environment variables (ie. secrets) are pre-populated in both local and hosted Supabase environments. Users don't need to manually set them:
+8. Following environment variables (ie. secrets) are pre-populated in both local and hosted BA environments. Users don't need to manually set them:
 	* SUPABASE_URL
 	* SUPABASE_ANON_KEY
 	* SUPABASE_SERVICE_ROLE_KEY
@@ -83,17 +83,17 @@ import express from "npm:express@4.18.2";
 const app = express();
 
 app.get(/(.*)/, (req, res) => {
-    res.send("Welcome to Supabase");
+    res.send("Welcome to BA");
 });
 
 app.listen(8000);
 
 ```
 
-### Generate embeddings using built-in @Supabase.ai API
+### Generate embeddings using built-in @BA.ai API
 
 ```tsx
-const model = new Supabase.ai.Session('gte-small');
+const model = new BA.ai.Session('gte-small');
 
 Deno.serve(async (req: Request) => {
 	const params = new URL(req.url).searchParams;

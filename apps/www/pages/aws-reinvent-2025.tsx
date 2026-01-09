@@ -26,7 +26,7 @@ const AWSReInvent2025: NextPage = () => {
               url: data.metadata.ogImage,
               width: 1280,
               height: 685,
-              alt: 'Supabase AWS Re:Invent 2025',
+              alt: 'BA AWS Re:Invent 2025',
             },
           ],
         }}
@@ -165,11 +165,11 @@ const AWSReInvent2025: NextPage = () => {
           <SectionContainer>
             <div className="text-center max-w-3xl mx-auto">
               <h3 className="text-2xl md:text-4xl font-medium mb-4">
-                Talk to our team and see how Supabase can help you build faster.
+                Talk to our team and see how BA can help you build faster.
               </h3>
 
               <p className="text-foreground-light text-lg mb-8">
-                Accelerate your business growth and app development using Supabase scale.
+                Accelerate your business growth and app development using BA scale.
               </p>
               <Button type="default" size="large" asChild>
                 <Link href={data.consultationSection.cta.href} target="_blank">

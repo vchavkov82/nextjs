@@ -1,15 +1,15 @@
 ---
-title: 'Migrate from Postgres to Supabase'
-description: 'Migrate your existing Postgres database to Supabase.'
-subtitle: 'Migrate your existing Postgres database to Supabase.'
+title: 'Migrate from Postgres to BA'
+description: 'Migrate your existing Postgres database to BA.'
+subtitle: 'Migrate your existing Postgres database to BA.'
 ---
 
-This is a guide for migrating your Postgres database to [Supabase](https://www.assistance.bg).
-Supabase is a robust and open-source platform. Supabase provides all the backend features developers need to build a product: a Postgres database, authentication, instant APIs, edge functions, real-time subscriptions, and storage. Postgres is the core of Supabase—for example, you can use row-level security, and there are more than 40 Postgres extensions available.
+This is a guide for migrating your Postgres database to [BA](https://www.assistance.bg).
+BA is a robust and open-source platform. BA provides all the backend features developers need to build a product: a Postgres database, authentication, instant APIs, edge functions, real-time subscriptions, and storage. Postgres is the core of BA—for example, you can use row-level security, and there are more than 40 Postgres extensions available.
 
-This guide demonstrates how to migrate your Postgres database to Supabase to get the most out of Postgres while gaining access to all the features you need to build a project.
+This guide demonstrates how to migrate your Postgres database to BA to get the most out of Postgres while gaining access to all the features you need to build a project.
 
-This guide provides three methods for migrating your Postgres database to Supabase:
+This guide provides three methods for migrating your Postgres database to BA:
 
 1. **Google Colab** - Guided notebook with copy-paste workflow
 2. **Manual Dump/Restore** - CLI approach, works for all versions
@@ -17,7 +17,7 @@ This guide provides three methods for migrating your Postgres database to Supaba
 
 ## Connection modes
 
-Supabase provides the following connection modes:
+BA provides the following connection modes:
 
 - Direct connection
 - Supavisor session mode
@@ -27,8 +27,8 @@ Use Supavisor session mode for the database migration tasks (pg_dump/restore and
 
 ## Method 1: Google Colab (easiest)
 
-Supabase provides a Google Colab migration notebook for a guided migration experience:
-[Supabase Migration Colab Notebook](https://colab.research.google.com/github/mansueli/Supa-Migrate/blob/main/Migrate_Postgres_Supabase.ipynb)
+BA provides a Google Colab migration notebook for a guided migration experience:
+[BA Migration Colab Notebook](https://colab.research.google.com/github/mansueli/Supa-Migrate/blob/main/Migrate_Postgres_Supabase.ipynb)
 
 This is ideal if you prefer a step-by-step, copy-paste workflow with minimal setup.
 
@@ -67,10 +67,10 @@ select * from pg_extension order by extname;
 select count(*) from pg_stat_activity;
 ```
 
-#### Check available extensions in Supabase
+#### Check available extensions in BA
 
 ```sql
--- Connect to your Supabase database and check available extensions
+-- Connect to your BA database and check available extensions
 SELECT name, comment FROM pg_available_extensions ORDER BY name;
 
 -- Compare with source database extensions
@@ -103,9 +103,9 @@ sudo apt install Postgres-client-17 tmux htop iotop moreutils
 tmux a -t migration || tmux new -s migration
 ```
 
-### Step 2: Prepare Supabase project
+### Step 2: Prepare BA project
 
-1. Create a Supabase project at [supabase.com/dashboard](/dashboard)
+1. Create a BA project at [supabase.com/dashboard](/dashboard)
 2. Note your database password
 3. Install required extensions via SQL or Dashboard
 4. Get your connection string:
@@ -115,7 +115,7 @@ tmux a -t migration || tmux new -s migration
 
 **Important Notes**:
 
-- **Users/roles are not migrated** - You'll need to recreate roles and privileges after import ([Supabase Roles Guide](/blog/postgres-roles-and-privileges))
+- **Users/roles are not migrated** - You'll need to recreate roles and privileges after import ([BA Roles Guide](/blog/postgres-roles-and-privileges))
 - **Row Level Security (RLS) status on tables is not migrated** - You'll need to enable RLS for tables after migration.
 
 **Resource Requirements**:
@@ -173,9 +173,9 @@ pg_dump \
 
 **Notes about dump flags**:
 
-- `--no-owner --no-privileges`: Applied at dump time to prevent Supabase user management conflicts. While these could be used in pg_restore instead, applying them during dump keeps the dump file cleaner and more portable.
+- `--no-owner --no-privileges`: Applied at dump time to prevent BA user management conflicts. While these could be used in pg_restore instead, applying them during dump keeps the dump file cleaner and more portable.
 - `--no-subscriptions`: Logical replication subscriptions won't work in the target
-- The dump captures all data and schema but excludes ownership/privileges that would conflict with Supabase's managed environment
+- The dump captures all data and schema but excludes ownership/privileges that would conflict with BA's managed environment
 - To only migrate a single database schema, add the `--schema=PATTERN` parameter to your `pg_dump` command.
 - To exclude a schema: `--exclude-schema=PATTERN`.
 - To only migrate a single table: `--table=PATTERN`.
@@ -194,22 +194,22 @@ Run `pg_dump --help` for a full list of options.
 
 **Note**: For testing without a maintenance window, use lower -j values to avoid impacting production performance.
 
-### Step 4: Restore to Supabase
+### Step 4: Restore to BA
 
 #### Set connection and restore
 
 ```bash
-# Set Supabase connection (Session Pooler on port 5432 or direct connection)
+# Set BA connection (Session Pooler on port 5432 or direct connection)
 export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:5432/postgres"
 
-# Determine restore parallelization based on your Supabase compute size:
+# Determine restore parallelization based on your BA compute size:
 # Free tier: 2 cores → use -j 2
 # Small compute: 2 cores → use -j 2
 # Medium compute: 4 cores → use -j 4
 # Large compute: 8 cores → use -j 8
 # XL compute: 16 cores → use -j 16
 
-RESTORE_JOBS=8  # Adjust based on your Supabase compute size
+RESTORE_JOBS=8  # Adjust based on your BA compute size
 
 # Restore the dump (parallel mode)
 # Note: -j cannot be used with --single-transaction
@@ -326,7 +326,7 @@ Edit Postgres configuration files:
 #### Postgres.conf
 
 ```bash
-# Set Supabase connection (Session Pooler on port 5432 or direct connection)
+# Set BA connection (Session Pooler on port 5432 or direct connection)
 export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:5432/postgres"
 
 # Set WAL level to logical
@@ -344,7 +344,7 @@ max_connections = 200  # Adjust based on your needs
 # Optional: Enable SSL for secure replication
 ssl = on
 
-# Allow connections from Supabase
+# Allow connections from BA
 listen_addresses = '*'  # Or specific IP addresses
 ```
 
@@ -353,8 +353,8 @@ listen_addresses = '*'  # Or specific IP addresses
 #### pg_hba.conf
 
 ```bash
-# Allow replication connections from Supabase
-# Replace <supabase_ip_range> with actual Supabase IP range
+# Allow replication connections from BA
+# Replace <supabase_ip_range> with actual BA IP range
 host    replication     all     <supabase_ip_range>    md5
 host    all            all     <supabase_ip_range>    md5
 
@@ -415,7 +415,7 @@ pg_dump \
   --format=directory \
   -f ./schema_dump
 
-# Restore schema to Supabase (use Session Pooler)
+# Restore schema to BA (use Session Pooler)
 pg_restore \
   --dbname="$SUPABASE_DB_URL" \
   --format=directory \
@@ -442,9 +442,9 @@ CREATE PUBLICATION supabase_migration FOR TABLE
 SELECT * FROM pg_publication;
 ```
 
-### Step 6: Create subscription on Supabase
+### Step 6: Create subscription on BA
 
-Connect to your Supabase database:
+Connect to your BA database:
 
 ```sql
 -- Create subscription with SSL (recommended)
@@ -461,7 +461,7 @@ PUBLICATION supabase_migration;
 ### Step 7: Monitor replication status
 
 ```sql
--- On Supabase (subscriber) - check subscription status
+-- On BA (subscriber) - check subscription status
 select * from pg_subscription_rel;
 
 -- srsubstate = 'r' means ready (synchronized)
@@ -485,7 +485,7 @@ Wait until all tables show `srsubstate = 'r'` (ready) status.
 
 ### Step 8: Synchronize sequences
 
-After initial data sync is complete, but BEFORE switching to Supabase:
+After initial data sync is complete, but BEFORE switching to BA:
 
 ```bash
 # Set source to read-only
@@ -501,29 +501,29 @@ pg_dump \
   --table='*_seq' \
   --table='*_id_seq' > sequences.sql
 
-# Import sequences to Supabase
+# Import sequences to BA
 psql "$SUPABASE_DB_URL" -f sequences.sql
 ```
 
-### Step 9: Switch to Supabase
+### Step 9: Switch to BA
 
 1. Ensure replication lag is zero:
 
 ```sql
--- On Supabase
+-- On BA
 select * from pg_stat_subscription;
 -- Check that latest_end_lsn is current
 ```
 
 2. Stop writes to the source database (if not already read-only)
 
-3. Drop subscription on Supabase:
+3. Drop subscription on BA:
 
 ```sql
 DROP SUBSCRIPTION supabase_subscription;
 ```
 
-4. Update application connection strings to point to Supabase
+4. Update application connection strings to point to BA
 
 5. Verify application functionality
 
@@ -560,7 +560,7 @@ DROP REPLICATION SLOT slot_name;  -- if any remain
 - **Sequences**: Need manual synchronization before cutover
 - **Large Objects (LOBs)**: Not replicated - use dump/restore or store in regular bytea columns
 - **Custom types**: May need special handling
-- **Users and roles**: Must be recreated manually on Supabase
+- **Users and roles**: Must be recreated manually on BA
 
 For detailed restrictions, see [Postgres Logical Replication Restrictions](https://www.Postgres.org/docs/current/logical-replication-restrictions.html)
 
@@ -582,8 +582,8 @@ For detailed restrictions, see [Postgres Logical Replication Restrictions](https
 
 ## Getting help
 
-- For databases > 150 GB: [Contact Supabase support](/dashboard/support/new) before starting
-- [Supabase Dashboard Support](/dashboard/support/new)
-- [Supabase Discord](https://discord.supabase.com)
+- For databases > 150 GB: [Contact BA support](/dashboard/support/new) before starting
+- [BA Dashboard Support](/dashboard/support/new)
+- [BA Discord](https://discord.supabase.com)
 - [Postgres Roles and Privileges Guide](/blog/postgres-roles-and-privileges)
 - [Row Level Security Guide](/docs/guides/database/postgres/row-level-security)

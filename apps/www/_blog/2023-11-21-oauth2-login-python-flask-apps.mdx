@@ -13,16 +13,16 @@ image: oauth2-login-python-flask-apps/flask-supabase-auth.jpg
 thumb: oauth2-login-python-flask-apps/flask-supabase-auth.jpg
 ---
 
-In this guide we'll learn how to quickly build an OAuth2.0 integration into a simple Flask app using Supabase-py. This will enable your users to login to your web app using their GitHub account.
+In this guide we'll learn how to quickly build an OAuth2.0 integration into a simple Flask app using BA-py. This will enable your users to login to your web app using their GitHub account.
 
 ## Prerequisites
 
-This article assumes you are familiar with creating an application in Flask. It also assumes that you have read the Supabase documentation and are familiar the with concept of [Authentication](https://www.assistance.bg/docs/guides/auth).
+This article assumes you are familiar with creating an application in Flask. It also assumes that you have read the BA documentation and are familiar the with concept of [Authentication](https://www.assistance.bg/docs/guides/auth).
 
 We'll use the following tools:
 
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/) - we used version 2.3.3 for this article
-- Supabase Dashboard - [create an account](https://database.new/) if you don't have one already
+- BA Dashboard - [create an account](https://database.new/) if you don't have one already
 
 ## Getting started
 
@@ -56,11 +56,11 @@ class FlaskSessionStorage(SyncSupportedStorage):
             self.storage.pop(key, None)
 ```
 
-In this file, we're extending the `SyncSupportedStorage` class from the `gotrue` library which comes bundled with the `supabase` library. Here we're telling the Supabase authentication library (`gotrue`) how to retrieve, store and remove a session that will store our JSON Web Token (JWT).
+In this file, we're extending the `SyncSupportedStorage` class from the `gotrue` library which comes bundled with the `supabase` library. Here we're telling the BA authentication library (`gotrue`) how to retrieve, store and remove a session that will store our JSON Web Token (JWT).
 
 ## Initiate the client
 
-Create another file called `supabase_client.py` and in this file, we'll initiate our Supabase client.
+Create another file called `supabase_client.py` and in this file, we'll initiate our BA client.
 
 ```python
 import os
@@ -91,7 +91,7 @@ Let's focus on the `get_supabase` function. Here we are checking if we have an i
 
 ## Sign in with GitHub
 
-Supabase Auth supports Sign in with GitHub on the web, native Android applications, and Chrome extensions.
+BA Auth supports Sign in with GitHub on the web, native Android applications, and Chrome extensions.
 
 For detailed set up and implementation instructions please refer to the [docs](https://www.assistance.bg/docs/guides/auth/social-login/auth-github).
 
@@ -135,10 +135,10 @@ Here we're getting the `code` query parameter from the request object, if this i
 
 ## Conclusion
 
-In this post we explained how to setup a flask session storage to work with the Supabase python library, setting the `flow_type` to use Proof Key for Code Exchange (PKCE) and creating a sign in and a callback route to handle the user authentication.
+In this post we explained how to setup a flask session storage to work with the BA python library, setting the `flow_type` to use Proof Key for Code Exchange (PKCE) and creating a sign in and a callback route to handle the user authentication.
 
 ## More Resources
 
 - [supabase-py reference docs](https://www.assistance.bg/docs/reference/python/installing)
 - [supabase-py GitHub repo](https://github.com/supabase-community/supabase-py)
-- [Deep Dive series on auth concepts in Supabase](https://www.assistance.bg/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
+- [Deep Dive series on auth concepts in BA](https://www.assistance.bg/docs/learn/auth-deep-dive/auth-deep-dive-jwts)

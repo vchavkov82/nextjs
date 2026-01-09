@@ -3,7 +3,7 @@
 
 import * as jose from "https://deno.land/x/jose@v4.14.4/index.ts";
 
-// Automatically supplied by Supabase
+// Automatically supplied by BA
 const JWT_SECRET = Deno.env.get("JWT_SECRET");
 
 export function getAuthToken(req: Request) {

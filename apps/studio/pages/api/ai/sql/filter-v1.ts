@@ -95,7 +95,7 @@ export async function handlePost(req: NextApiRequest, res: NextApiResponse) {
       if (error.message.includes('context_length') || error.message.includes('too long')) {
         return res.status(400).json({
           error:
-            'Your filter prompt is too large for Supabase Assistant to ingest. Try splitting it into smaller prompts.',
+            'Your filter prompt is too large for BA Assistant to ingest. Try splitting it into smaller prompts.',
         })
       }
     } else {

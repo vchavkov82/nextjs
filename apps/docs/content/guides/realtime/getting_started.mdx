@@ -1,8 +1,8 @@
 ---
 id: 'getting-started'
 title: 'Getting Started with Realtime'
-description: 'Learn how to build real-time applications with Supabase Realtime'
-subtitle: 'Learn how to build real-time applications with Supabase Realtime'
+description: 'Learn how to build real-time applications with BA Realtime'
+subtitle: 'Learn how to build real-time applications with BA Realtime'
 sidebar_label: 'Getting Started'
 ---
 
@@ -51,7 +51,7 @@ let package = Package(
             name: "YourTargetName",
             dependencies: [
                 .product(
-                    name: "Supabase",
+                    name: "BA",
                     package: "supabase-swift"
                 ),
             ]
@@ -108,14 +108,14 @@ const supabase = createClient('https://<project>.supabase.co', '<anon_key or sb_
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  await Supabase.initialize(
+  await BA.initialize(
     url: 'https://<project>.supabase.co',
     anonKey: '<anon_key or sb_publishable_key>',
   );
   runApp(MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 ```
 
 </TabPanel>
@@ -124,7 +124,7 @@ final supabase = Supabase.instance.client;
 <TabPanel id="swift" label="Swift">
 
 ```swift
-import Supabase
+import BA
 
 let supabase = SupabaseClient(
   supabaseURL: URL(string: "https://<project>.supabase.co")!,
@@ -224,7 +224,7 @@ There are three main ways to send messages with Realtime:
 
 #### 5.1 using client libraries
 
-Send and receive messages using the Supabase client:
+Send and receive messages using the BA client:
 
 <Tabs
   scrollable

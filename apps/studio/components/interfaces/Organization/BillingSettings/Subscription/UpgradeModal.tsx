@@ -73,7 +73,7 @@ const UpgradeSurveyModal = ({
       >
         <Modal.Content className="space-y-4">
           <p className="text-sm text-foreground-light">
-            What reasons motivated your decision to upgrade? Your feedback helps us improve Supabase
+            What reasons motivated your decision to upgrade? Your feedback helps us improve BA
             as much as we can.
           </p>
           <div className="space-y-8 mt-6">
@@ -84,13 +84,12 @@ const UpgradeSurveyModal = ({
                   <label
                     key={option}
                     className={`
-                      flex cursor-pointer items-center space-x-2 rounded-md py-1 
+                      flex cursor-pointer items-center space-x-2 rounded-md py-1
                       pl-2 pr-3 text-center text-sm
                       shadow-sm transition-all duration-100
-                      ${
-                        active
-                          ? ` bg-foreground text-background opacity-100 hover:bg-opacity-75`
-                          : ` bg-border-strong text-foreground opacity-25 hover:opacity-50`
+                      ${active
+                        ? ` bg-foreground text-background opacity-100 hover:bg-opacity-75`
+                        : ` bg-border-strong text-foreground opacity-25 hover:opacity-50`
                       }
                   `}
                   >

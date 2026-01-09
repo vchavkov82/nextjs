@@ -67,8 +67,8 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     hasCountdown: false,
     date: '2 December',
     published_at: '2024-12-02T08:00:00.000-07:00',
-    title: 'Supabase AI Assistant v2',
-    description: 'Supabase AI Assistant v2',
+    title: 'BA AI Assistant v2',
+    description: 'BA AI Assistant v2',
     links: [
       {
         type: 'video',
@@ -105,10 +105,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/edge-functions-background-tasks-websockets',
     date: '3 December',
     published_at: '2024-12-03T08:00:00.000-07:00',
-    title: 'Supabase Functions: Background Tasks and WebSockets',
+    title: 'BA Functions: Background Tasks and WebSockets',
     description: (
       <>
-        Supabase Functions:
+        BA Functions:
         <br className="hidden sm:block" /> Background Tasks and WebSockets
       </>
     ),
@@ -148,10 +148,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/supabase-cron',
     date: '4 December',
     published_at: '2024-12-04T08:00:00.000-07:00',
-    title: 'Supabase Cron: Schedule Recurring Jobs in Postgres',
+    title: 'BA Cron: Schedule Recurring Jobs in Postgres',
     description: (
       <>
-        Supabase Cron:
+        BA Cron:
         <br className="hidden sm:block" /> Schedule Recurring Jobs in Postgres
       </>
     ),
@@ -189,10 +189,10 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/supabase-queues',
     date: '5 December',
     published_at: '2024-12-05T08:00:00.000-07:00',
-    title: 'Supabase Queues',
+    title: 'BA Queues',
     description: (
       <>
-        Supabase Queues:
+        BA Queues:
         <br className="hidden sm:block" /> Durable Message Queues with Guaranteed Delivery
       </>
     ),

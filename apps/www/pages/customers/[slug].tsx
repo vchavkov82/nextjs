@@ -83,7 +83,7 @@ function CaseStudyPage(props: any) {
   )
 
   const meta = {
-    title: meta_title ?? `${name} | Supabase Customer Stories`,
+    title: meta_title ?? `${name} | BA Customer Stories`,
     description: meta_description ?? description,
     image: ogImageUrl ?? `${SITE_ORIGIN}/images/customers/og/customer-stories.jpg`,
     url: `${SITE_ORIGIN}/customers/${slug}`,

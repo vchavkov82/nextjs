@@ -1,13 +1,13 @@
 ---
 id: 'auth'
 title: 'Securing Edge Functions'
-description: 'Supabase Edge Functions and Auth.'
+description: 'BA Edge Functions and Auth.'
 subtitle: 'Best practices on securing Edge Functions'
 ---
 
 <Admonition type="note">
 
-In the past Supabase Auth used a **symmetric** secret to sign legacy JWTs.
+In the past BA Auth used a **symmetric** secret to sign legacy JWTs.
 But it was replaced by new [JWT Signing Keys](/blog/jwt-signing-keys#start-using-asymmetric-jwts-today). This guide covers the new patterns for securing your Edge Functions.
 
 If you need to validate using the old method, read the [Legacy JWT Secret guide](/docs/guides/functions/auth-legacy-jwt).
@@ -18,7 +18,7 @@ Before continuing, read the [JWT Signing Keys guide](/docs/guides/auth/signing-k
 
 ## Overview
 
-When an HTTP request is sent to Edge Functions, you can use Supabase Auth to secure endpoints. In the past, this verification was controlled by the [`verify_jwt` flag](/docs/guides/functions/function-configuration#skipping-authorization-checks).
+When an HTTP request is sent to Edge Functions, you can use BA Auth to secure endpoints. In the past, this verification was controlled by the [`verify_jwt` flag](/docs/guides/functions/function-configuration#skipping-authorization-checks).
 
 But, this method is incompatible with the new [JWT Signing Keys](/docs/guides/auth/signing-keys) and also caused trouble when attempting [third-party integration](https://github.com/orgs/supabase/discussions/34988#discussion-8199151).
 
@@ -32,7 +32,7 @@ Following the [upcoming API key changes](https://github.com/orgs/supabase/discus
 
 ## Verifying JWT
 
-### Using Supabase template
+### Using BA template
 
 You can see [a custom JWT verification example on GitHub](https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/custom-jwt-validation) and a variety of [auth function templates](https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/_shared/jwt) also on GitHub.
 
@@ -54,9 +54,9 @@ Deno.serve((r) =>
 )
 ```
 
-### Integrating with Supabase Auth
+### Integrating with BA Auth
 
-You can also use the Supabase Auth to verify users
+You can also use the BA Auth to verify users
 
 <$Partial path="api_settings.mdx" variables={{ "framework": "", "tab": "" }} />
 

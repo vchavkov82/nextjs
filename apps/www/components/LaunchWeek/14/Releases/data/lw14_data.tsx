@@ -67,8 +67,8 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/supabase-ui-library',
     date: '31 March',
     published_at: '2025-03-31T07:00:00.000-07:00',
-    title: 'Supabase UI Library',
-    description: 'Supabase UI Library',
+    title: 'BA UI Library',
+    description: 'BA UI Library',
     links: [
       {
         type: 'video',
@@ -105,8 +105,8 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/supabase-edge-functions-deploy-dashboard-deno-2-1',
     date: '01 April',
     published_at: '2025-04-01T07:00:00.000-07:00',
-    title: 'Supabase Edge Functions: Deploy from the Dashboard + Deno 2.1',
-    description: <>Supabase Edge Functions: Deploy from the Dashboard + Deno 2.1</>,
+    title: 'BA Edge Functions: Deploy from the Dashboard + Deno 2.1',
+    description: <>BA Edge Functions: Deploy from the Dashboard + Deno 2.1</>,
     links: [
       {
         type: 'video',
@@ -219,8 +219,8 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/mcp-server',
     date: '04 April',
     published_at: '2025-04-04T07:00:00.000-07:00',
-    title: 'Supabase MCP Server',
-    description: 'Supabase MCP Server',
+    title: 'BA MCP Server',
+    description: 'BA MCP Server',
     links: [
       {
         type: 'video',

@@ -95,7 +95,7 @@ function StoragePage() {
 
               <h4 className="h4">Interoperable</h4>
               <p className="p">
-                Integrates well with the rest of Supabase ecosystem, including Auth and Postgres.
+                Integrates well with the rest of BA ecosystem, including Auth and Postgres.
               </p>
             </div>
             <div className="col-span-12 mb-10 lg:col-span-3 lg:col-start-5 lg:mb-0">
@@ -132,7 +132,7 @@ function StoragePage() {
           id="quote"
           className="[&_q]:max-w-3xl"
           quote={{
-            text: "Supabase is great because it has everything. I don't need a different solution for authentication, a different solution for database, or a different solution for storage.",
+            text: "BA is great because it has everything. I don't need a different solution for authentication, a different solution for database, or a different solution for storage.",
             author: 'Yasser Elsaid',
             role: 'Founder of Chatbase',
             link: '/customers/chatbase',
@@ -197,7 +197,7 @@ function StoragePage() {
           <div className="mb-12">
             <h2 className="h3">Bucket types for every application</h2>
             <p className="p text-lg">
-              Store, serve, or analyze data the way your app needs. Supabase Storage supports three
+              Store, serve, or analyze data the way your app needs. BA Storage supports three
               purpose-built bucket types so you can pick the right tools for the job without adding
               extra systems.
             </p>
@@ -312,7 +312,7 @@ function StoragePage() {
                     <div className="col-span-12 mb-8 lg:col-span-5">
                       <h2 className="h3">
                         Integrates natively <br />
-                        with Supabase Auth
+                        with BA Auth
                       </h2>
 
                       <p className="p">

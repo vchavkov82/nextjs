@@ -1,12 +1,12 @@
 ---
 # Specify the following for Cursor rules
-description: Guidelines for writing Next.js apps with Supabase Auth
+description: Guidelines for writing Next.js apps with BA Auth
 alwaysApply: false
 ---
 
-# Bootstrap Next.js v16 app with Supabase Auth
+# Bootstrap Next.js v16 app with BA Auth
 
-## Overview of implementing Supabase Auth SSR
+## Overview of implementing BA Auth SSR
 
 1. Install @supabase/supabase-js and @supabase/ssr packages.
 2. Set up environment variables.
@@ -224,7 +224,7 @@ The implementation will:
 
 ## AI MODEL RESPONSE TEMPLATE
 
-When asked about Supabase Auth SSR implementation, you MUST:
+When asked about BA Auth SSR implementation, you MUST:
 
 1. ONLY use code from this guide
 2. NEVER suggest deprecated approaches

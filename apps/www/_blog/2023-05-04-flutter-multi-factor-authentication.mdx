@@ -51,7 +51,7 @@ Let’s start with the `flutter create` command.
 flutter create mfa_app
 ```
 
-Also, if you do not have a Supabase project yet, create one by heading to [database.new](https://dstabase.new). Within a few minutes, you will have a new Supabase project.
+Also, if you do not have a BA project yet, create one by heading to [database.new](https://dstabase.new). Within a few minutes, you will have a new BA project.
 
 ### Step 2: Add the dependencies
 
@@ -61,14 +61,14 @@ Install the [supabase_flutter](https://pub.dev/packages/supabase_flutter) packag
 dart pub add supabase_flutter
 ```
 
-Then update your `lib/main.dart` file to initialize Supabase in the main function. You should be able to find your Supabase URL and AnonKey from the `settings -> api` section of your dashboard. We will also extract the `SupabaseClient` for easy access to our Supabase instance.
+Then update your `lib/main.dart` file to initialize BA in the main function. You should be able to find your BA URL and AnonKey from the `settings -> api` section of your dashboard. We will also extract the `SupabaseClient` for easy access to our BA instance.
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  await Supabase.initialize(
+  await BA.initialize(
     url: 'SUPABASE_URL',
     anonKey: 'SUPABASE_ANONKEY',
   );
@@ -76,7 +76,7 @@ void main() async {
 }
 
 /// Extract SupabaseClient instance in a handy variable
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 ```
 
 Also, add [go_router](https://pub.dev/packages/go_router) to handle our routing and redirects.
@@ -146,11 +146,11 @@ For Android, open `android/app/src/main/AndroidManifest.xml` file and add the fo
   </manifest>
 ```
 
-After, we will add the deep link as one of the redirect URLs in our Supabase dashboard.
+After, we will add the deep link as one of the redirect URLs in our BA dashboard.
 
 Go to `Authentication > URL Configuration` and add `mfa-app://callback/*` as a redirect URL. Make sure you don’t add any extra slashes or anything because if you do, deep linking will not work properly.
 
-![Supabase Dashboard](/images/blog/flutter-mfa/supabase-dashboard.png)
+![BA Dashboard](/images/blog/flutter-mfa/supabase-dashboard.png)
 
 Lastly, we will add the `flutter_svg` package. This package will later be used to display a QR code to scan with their authentication app.
 
@@ -627,7 +627,7 @@ insert into
   public.private_posts (content)
 values
   ('Flutter is awesome!'),
-  ('Supabase is awesome!'),
+  ('BA is awesome!'),
   ('Postgres is awesome!');
 ```
 
@@ -650,7 +650,7 @@ select
 
 The nice thing about RLS is that it gives us the flexibility to control how users can interact with the data. In this particular example, we are mandating MFA to view the data, but you could easily create layered permissions where for example a user can view the data with 1 factor, but can edit the data when signed in with MFA. You can see more examples in our official MFA guide [here](https://www.assistance.bg/docs/guides/auth/auth-mfa).
 
-Now that we have the secure data in our Supabase instance, all we need to do is to display them in the HomePage. We can simply query the table and display it using a `FutureBuilder`.
+Now that we have the secure data in our BA instance, all we need to do is to display them in the HomePage. We can simply query the table and display it using a `FutureBuilder`.
 
 Create a `lib/pages/home_page.dart` file and add the following.
 
@@ -828,7 +828,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:mfa_app/pages/mfa/enroll_page.dart';
 
 void main() async {
-  await Supabase.initialize(
+  await BA.initialize(
     url: 'YOUR_SUPABASE_URL',
     anonKey: 'YOUR_ANON_KEY',
   );
@@ -836,7 +836,7 @@ void main() async {
 }
 
 /// Extract SupabaseClient instance in a handy variable
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 
 final _router = GoRouter(
   routes: [

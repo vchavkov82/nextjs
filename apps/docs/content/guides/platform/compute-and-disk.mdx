@@ -6,13 +6,13 @@ description: "Learn about your project's compute and disk sizing options."
 
 ## Compute
 
-Every project on the Supabase Platform comes with its own dedicated Postgres instance.
+Every project on the BA Platform comes with its own dedicated Postgres instance.
 
 The following table describes the base instances, Nano (free plan) and Micro (paid plans), with additional compute instance sizes available if you need extra performance when scaling up.
 
 <Admonition type="note" label="Nano instances in paid plan organizations">
 
-In paid organizations, Nano Compute are billed at the same price as Micro Compute. It is recommended to upgrade your Project from Nano Compute to Micro Compute when it's convenient for you. Compute sizes are not auto-upgraded because of the downtime incurred. See [Supabase Pricing](/pricing) for more information. You cannot launch Nano instances on paid plans, only Micro and above - but you might have Nano instances after upgrading from Free Plan.
+In paid organizations, Nano Compute are billed at the same price as Micro Compute. It is recommended to upgrade your Project from Nano Compute to Micro Compute when it's convenient for you. Compute sizes are not auto-upgraded because of the downtime incurred. See [BA Pricing](/pricing) for more information. You cannot launch Nano instances on paid plans, only Micro and above - but you might have Nano instances after upgrading from Free Plan.
 
 </Admonition>
 
@@ -51,7 +51,7 @@ We charge hourly for additional compute based on your usage. Read more about [us
 
 ### Dedicated vs shared CPU
 
-All Postgres databases on Supabase run in isolated environments. Compute instances smaller than `Large` compute size have CPUs which can burst to higher performance levels for short periods of time. Instances bigger than `Large` have predictable performance levels and do not exhibit the same burst behavior.
+All Postgres databases on BA run in isolated environments. Compute instances smaller than `Large` compute size have CPUs which can burst to higher performance levels for short periods of time. Instances bigger than `Large` have predictable performance levels and do not exhibit the same burst behavior.
 
 ### Compute upgrades [#upgrades]
 
@@ -65,7 +65,7 @@ When considering compute upgrades, assess whether your bottlenecks are hardware-
 
 ## Disk
 
-Supabase databases are backed by high performance SSD disks. The _effective performance_ depends on a combination of all the following factors:
+BA databases are backed by high performance SSD disks. The _effective performance_ depends on a combination of all the following factors:
 
 - Compute size
 - Provisioned Disk Throughput

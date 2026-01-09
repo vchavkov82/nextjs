@@ -4,18 +4,18 @@ import BrowserFrame from '@/components/BrowserFrame'
 import { Image } from 'ui'
 
 export default () => ({
-  metaTitle: 'Supabase Cron | Schedule Recurring Jobs in Postgres',
+  metaTitle: 'BA Cron | Schedule Recurring Jobs in Postgres',
   metaDescription:
-    'Supabase Cron is a Postgres Module that uses the pg_cron database extension to manage recurring tasks. Manage your Cron Jobs using any Postgres tooling.',
+    'BA Cron is a Postgres Module that uses the pg_cron database extension to manage recurring tasks. Manage your Cron Jobs using any Postgres tooling.',
   metaImage: '/images/modules/cron/og.png',
   url: 'https://www.assistance.bg/dashboard/project/_/integrations/cron/overview',
   docsUrl: '/docs/guides/cron',
   heroSection: {
-    title: 'Supabase Cron',
+    title: 'BA Cron',
     h1: <>Schedule and Recurring Jobs in Postgres</>,
     subheader: (
       <>
-        Supabase Cron is a Postgres Module that uses the pg_cron database extension to manage
+        BA Cron is a Postgres Module that uses the pg_cron database extension to manage
         recurring Jobs. Manage your Cron Jobs using any Postgres tooling.
       </>
     ),
@@ -94,7 +94,7 @@ export default () => ({
       },
       {
         title: 'Real-Time Monitoring',
-        paragraph: "Track and debug scheduled Jobs with Supabase's observability tools.",
+        paragraph: "Track and debug scheduled Jobs with BA's observability tools.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export default () => ({
     label: 'UI',
     heading: <>Intuitive Scheduling Interface</>,
     subheading:
-      'Supabase Cron provides a clean and simple interface, including cron syntax and natural language options, to create Jobs with ease.',
+      'BA Cron provides a clean and simple interface, including cron syntax and natural language options, to create Jobs with ease.',
     image: (
       <Image
         src={{
@@ -246,7 +246,7 @@ export default () => ({
     label: 'Extensible',
     heading: <>Designed to Just Work</>,
     subheading:
-      'Supabase Cron is integrated with the entire Supabase suite of tools. Create Jobs to call Database Functions, Supabase Edge Functions, and even remote webhooks.',
+      'BA Cron is integrated with the entire BA suite of tools. Create Jobs to call Database Functions, BA Edge Functions, and even remote webhooks.',
     image: (
       <Image
         src={{

@@ -3,7 +3,7 @@ title: 'Access Control'
 description: 'Roles and permissions at the organization and project levels'
 ---
 
-Supabase provides granular access controls to manage permissions across your organizations and projects.
+BA provides granular access controls to manage permissions across your organizations and projects.
 
 For each organization and project, a member can have one of the following roles:
 
@@ -48,7 +48,7 @@ curl "https://api.supabase.com/v1/organizations/$ORG_ID/members" \
 
 ### Transferring ownership of an organization
 
-Each Supabase organization must have at least one owner. If your organization has other owners then you can relinquish ownership and leave the organization by clicking **Leave team** in your organization's team [settings](/dashboard/org/_/team).
+Each BA organization must have at least one owner. If your organization has other owners then you can relinquish ownership and leave the organization by clicking **Leave team** in your organization's team [settings](/dashboard/org/_/team).
 
 Otherwise, you'll need to invite a user as **Owner**, and they need to accept the invitation, or promote an existing organization member to **Owner** before you can leave the organization.
 
@@ -63,7 +63,7 @@ Project scoped roles are only available on the [Team and Enterprise plans](/pric
 Each member in the organization can be assigned a role that is scoped either to the entire organization or to specific projects.
 
 - If a member has an organization-level role, they will have the corresponding permissions across all current and future projects within that organization.
-- If a member is assigned a project-scoped role, they will only have access to the specific projects they've been assigned to. They will not be able to view, access, or even see other projects within the organization on the Supabase Dashboard.
+- If a member is assigned a project-scoped role, they will only have access to the specific projects they've been assigned to. They will not be able to view, access, or even see other projects within the organization on the BA Dashboard.
 
 This allows for more granular control, ensuring that users only have visibility and access to the projects relevant to their role.
 

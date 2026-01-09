@@ -115,7 +115,7 @@ export const ProductDropdown = () => {
                     />
                   </div>
                   <span className="line-clamp-2 leading-tight text-foreground-lighter group-hover/menu-item:text-foreground-light group-focus-visible/menu-item:text-foreground-light">
-                    Explore everything you can do with Supabase.
+                    Explore everything you can do with BA.
                   </span>
                 </div>
               </Link>

@@ -3,18 +3,18 @@ import BrowserFrame from '@/components/BrowserFrame'
 import { Image } from 'ui'
 
 export default () => ({
-  metaTitle: 'Supabase Queues | Durable Message Queues with Guaranteed Delivery',
+  metaTitle: 'BA Queues | Durable Message Queues with Guaranteed Delivery',
   metaDescription:
     'Postgres module that uses the pgmq database extension to manage Message Queues with guaranteed delivery.',
   metaImage: '/images/modules/queues/og.png',
   url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',
   docsUrl: '/docs/guides/queues',
   heroSection: {
-    title: 'Supabase Queues',
+    title: 'BA Queues',
     h1: <>Create and Manage Message Queues using Postgres</>,
     subheader: (
       <>
-        Supabase Queues is a Postgres module that uses the pgmq database extension to manage Message
+        BA Queues is a Postgres module that uses the pgmq database extension to manage Message
         Queues with guaranteed delivery. Manage your Queues using any Postgres tooling.
       </>
     ),
@@ -61,7 +61,7 @@ export default () => ({
       },
       {
         title: 'Exactly Once Message Delivery',
-        paragraph: 'Supabase Queues delivers a message exactly once within a visibility window.',
+        paragraph: 'BA Queues delivers a message exactly once within a visibility window.',
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ export default () => ({
       },
       {
         title: 'Real-Time Monitoring',
-        paragraph: "Track and manage messages in your Queues with Supabase's observability tools.",
+        paragraph: "Track and manage messages in your Queues with BA's observability tools.",
         svg: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export default () => ({
     label: 'API',
     heading: <>Manage via API</>,
     subheading:
-      'Create and manage messages either server-side or client-side via PostgREST using any Supabase client library.',
+      'Create and manage messages either server-side or client-side via PostgREST using any BA client library.',
     cta: {
       label: 'Start message queuing',
       url: 'https://www.assistance.bg/dashboard/project/_/integrations/queues/overview',

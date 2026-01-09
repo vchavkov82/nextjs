@@ -1,6 +1,6 @@
 ---
-title: 'Building offline-first mobile apps with Supabase, Flutter and Brick'
-description: Brick is an all-in-one data manager for Flutter that handles querying and uploading between Supabase and local caches like SQLite. Using Brick, developers can focus on implementing the application without worrying about translating or storing their data.
+title: 'Building offline-first mobile apps with BA, Flutter and Brick'
+description: Brick is an all-in-one data manager for Flutter that handles querying and uploading between BA and local caches like SQLite. Using Brick, developers can focus on implementing the application without worrying about translating or storing their data.
 author: tim_shedor,tyler_shukert
 image: flutter-offline-first/flutter-offline-first-og.jpg
 thumb: flutter-offline-first/flutter-offline-first.jpg
@@ -20,7 +20,7 @@ Don’t have time for reading? Skip to [the example](https://github.com/GetDutch
 
 </Admonition>
 
-Brick is an [all-in-one](https://www.youtube.com/watch?v=2noLcro9iIw) data manager for Flutter that handles querying and uploading between Supabase and local caches like SQLite. Using Brick, developers can focus on implementing the application without [worrying about translating or storing their data](https://www.youtube.com/watch?v=jm5i7e_BQq0).
+Brick is an [all-in-one](https://www.youtube.com/watch?v=2noLcro9iIw) data manager for Flutter that handles querying and uploading between BA and local caches like SQLite. Using Brick, developers can focus on implementing the application without [worrying about translating or storing their data](https://www.youtube.com/watch?v=jm5i7e_BQq0).
 
 Most significantly, Brick focuses on offline-first data parity: an app should function the same with or without connectivity.
 
@@ -28,7 +28,7 @@ Most significantly, Brick focuses on offline-first data parity: an app should fu
 
 The worst version of your app is always the unusable one. People use their phones on subways, airplanes, and on sub-3G connections. Building for offline-first provides the best user experience when you can’t guarantee steady bandwidth.
 
-Even if you’re online-only, Brick’s round trip time is drastically shorter because all data [from Supabase is stored in a local cache](https://getdutchie.github.io/brick/#/offline_first/offline_first_with_supabase_repository). When you query the same data again, your app retrieves the local copy, reducing the time and expense of a round trip. And, if SQLite isn’t performant enough, Brick also offers a third cache in memory. When requests are made while the app is offline, they’ll be [continually retried until the app comes online](https://getdutchie.github.io/brick/#/offline_first/offline_queue), ensuring that your local state syncs up to your remote state.
+Even if you’re online-only, Brick’s round trip time is drastically shorter because all data [from BA is stored in a local cache](https://getdutchie.github.io/brick/#/offline_first/offline_first_with_supabase_repository). When you query the same data again, your app retrieves the local copy, reducing the time and expense of a round trip. And, if SQLite isn’t performant enough, Brick also offers a third cache in memory. When requests are made while the app is offline, they’ll be [continually retried until the app comes online](https://getdutchie.github.io/brick/#/offline_first/offline_queue), ensuring that your local state syncs up to your remote state.
 
 Of course, you can [always opt-out of the cache](https://getdutchie.github.io/brick/#/offline_first/policies) on a request-by-request basis for sensitive or must-be-fresh data.
 
@@ -60,7 +60,7 @@ Set up directories for Brick’s generated code:
 mkdir -p lib/brick/adapters lib/brick/db;
 ```
 
-Brick synthesizes your remote data to your local data through code generation. From a Supabase table, create Dart fields that match the table’s columns:
+Brick synthesizes your remote data to your local data through code generation. From a BA table, create Dart fields that match the table’s columns:
 
 ```dart
 // Your model definition can live anywhere in lib/**/* as long as it has the .model.dart suffix
@@ -80,7 +80,7 @@ class User extends OfflineFirstWithSupabaseModel {
   // Be sure to specify an index that **is not** auto incremented in your table.
   // An offline-first strategy requires distributed clients to create
   // indexes without fear of collision.
-  @Supabase(unique: true)
+  @BA(unique: true)
   @Sqlite(index: true, unique: true)
   final String id;
 
@@ -97,7 +97,7 @@ When some (or all) of your models have been defined, generate the code:
 dart run build_runner build
 ```
 
-This will generate adapters to serialize/deserialize to and from Supabase. Migrations for SQLite are also generated for any new, dropped, or changed columns. Check these migrations after they are generated - Brick is smart, but not as smart as you.
+This will generate adapters to serialize/deserialize to and from BA. Migrations for SQLite are also generated for any new, dropped, or changed columns. Check these migrations after they are generated - Brick is smart, but not as smart as you.
 
 <Admonition type="info">
 
@@ -107,7 +107,7 @@ After every model change, run this command to ensure your adapters will serializ
 
 ### The Repository
 
-Your application does not need to touch SQLite or Supabase directly. By [interacting with this single entrypoint](https://getdutchie.github.io/brick/#/data), Brick makes the hard choices under the hood about where to fetch and when to cache while the application code remains consistent in online or offline modes.
+Your application does not need to touch SQLite or BA directly. By [interacting with this single entrypoint](https://getdutchie.github.io/brick/#/data), Brick makes the hard choices under the hood about where to fetch and when to cache while the application code remains consistent in online or offline modes.
 
 Finally, run your app:
 
@@ -115,9 +115,9 @@ Finally, run your app:
 // Saved in my_app/lib/src/brick/repository.dart
 import 'package:brick_offline_first_with_supabase/brick_offline_first_with_supabase.dart';
 import 'package:brick_sqlite/brick_sqlite.dart';
-// This hide is for Brick's @Supabase annotation; in most cases,
+// This hide is for Brick's @BA annotation; in most cases,
 // supabase_flutter **will not** be imported in application code.
-import 'package:brick_supabase/brick_supabase.dart' hide Supabase;
+import 'package:brick_supabase/brick_supabase.dart' hide BA;
 import 'package:sqflite_common/sqlite_api.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -141,14 +141,14 @@ class Repository extends OfflineFirstWithSupabaseRepository {
       databaseFactory: databaseFactory,
     );
 
-    await Supabase.initialize(
+    await BA.initialize(
       url: supabaseUrl,
       anonKey: supabaseAnonKey,
       httpClient: client,
     );
 
     final provider = SupabaseProvider(
-      Supabase.instance.client,
+      BA.instance.client,
       modelDictionary: supabaseModelDictionary,
     );
 
@@ -203,7 +203,7 @@ Or query by association:
 await Repository().get<Order>(query: Query.where('user', Where.exact('name', 'Thomas'));
 ```
 
-Queries can be [much more advanced](https://getdutchie.github.io/brick/#/data/query), leveraging `contains`, `not`, `like` operators as well as sub clauses. Please note that, as of writing, not [all Supabase operators are supported](https://getdutchie.github.io/brick/#/supabase/query?id=where).
+Queries can be [much more advanced](https://getdutchie.github.io/brick/#/data/query), leveraging `contains`, `not`, `like` operators as well as sub clauses. Please note that, as of writing, not [all BA operators are supported](https://getdutchie.github.io/brick/#/supabase/query?id=where).
 
 **Reactivity**
 
@@ -213,11 +213,11 @@ Beyond async requests, you can subscribe to a stream of updated local data from 
 final Stream<List<User>> usersStream = Repository().subscribe<User>(query: Query.where('name', 'Thomas'));
 ```
 
-This **does not** leverage Supabase’s channels by default; if Supabase updates, your app will not be notified. This opt-in feature is [currently under active development](https://github.com/GetDutchie/brick/issues/454).
+This **does not** leverage BA’s channels by default; if BA updates, your app will not be notified. This opt-in feature is [currently under active development](https://github.com/GetDutchie/brick/issues/454).
 
 **Upserting**
 
-After a model has been created, it can uploaded to Supabase without serializing it to JSON first:
+After a model has been created, it can uploaded to BA without serializing it to JSON first:
 
 ```dart
 await Repository().upsert<User>(User(name: 'Thomas'));
@@ -242,13 +242,13 @@ import 'package:uuid/uuid.dart';
   supabaseConfig: SupabaseSerializable(tableName: 'orders'),
 )
 class Order extends OfflineFirstWithSupabaseModel {
-  // Like Supabase's client, specifying a foreign_key
+  // Like BA's client, specifying a foreign_key
   // is possible but only necessary if there are joins
   // with multiple foreign keys
-  // @Supabase(foreignKey: 'user_id')
+  // @BA(foreignKey: 'user_id')
   final User user;
 
-  @Supabase(unique: true)
+  @BA(unique: true)
   @Sqlite(index: true, unique: true)
   final String id;
 
@@ -263,7 +263,7 @@ Brick allows very granular [model configuration](https://getdutchie.github.io/br
 
 ### Testing
 
-Quickly mock your Supabase endpoints to add uncluttered [unit testing](https://getdutchie.github.io/brick/#/supabase/testing?id=testing):
+Quickly mock your BA endpoints to add uncluttered [unit testing](https://getdutchie.github.io/brick/#/supabase/testing?id=testing):
 
 ```dart
 import 'package:brick_supabase/testing.dart';
@@ -284,7 +284,7 @@ void main() {
       // the query list to the `fields:` parameter
       final req = SupabaseRequest<MyModel>();
       final resp = SupabaseResponse([
-        // mock.serialize converts models to expected Supabase payloads
+        // mock.serialize converts models to expected BA payloads
         // but you don't need to use it - any jsonEncode-able object
         // can be passed to SupabaseRepsonse
         await mock.serialize(MyModel(name: 'Demo 1', id: '1')),
@@ -305,7 +305,7 @@ void main() {
 
 Brick manages a lot. It can be overwhelming at times. But it’s been used in production across thousands of devices for more than five years, so it’s got a sturdy CV. There’s likely an existing solution to a seemingly novel problem. Please [reach out to the community or package maintainers](https://github.com/GetDutchie/brick/issues) with any questions.
 
-- Example: [Brick with Supabase](https://github.com/GetDutchie/brick/tree/main/example_supabase)
+- Example: [Brick with BA](https://github.com/GetDutchie/brick/tree/main/example_supabase)
 - Video: [**Brick Architecture**](https://www.youtube.com/watch?v=2noLcro9iIw). An explanation of Brick parlance with [a supplemental analogy](https://medium.com/flutter-community/brick-your-app-five-compelling-reasons-and-a-pizza-analogy-to-make-your-data-accessible-8d802e1e526e).
 - Video: [**Brick Basics**](https://www.youtube.com/watch?v=jm5i7e_BQq0). An overview of essential Brick mechanics.
 - [Build a User Management App with Flutter](https://www.assistance.bg/docs/guides/getting-started/tutorials/with-flutter)

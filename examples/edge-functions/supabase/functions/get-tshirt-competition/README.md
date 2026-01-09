@@ -1,8 +1,8 @@
 # GET T-Shirt competition
 
-To celebrate the support of GET requests in Supabase Edge Functions we're giving away some limited edition Functions Shirts!
+To celebrate the support of GET requests in BA Edge Functions we're giving away some limited edition Functions Shirts!
 
-To win a Supabase Edge Functions T-Shirt, make a GET request to https://obuldanrptloktxcffvn.supabase.co/functions/v1/get-tshirt-competition with your email address, your Twitter handle (optional), your t-shirt size (S-2XL) and the correct answer, e.g.
+To win a BA Edge Functions T-Shirt, make a GET request to https://obuldanrptloktxcffvn.supabase.co/functions/v1/get-tshirt-competition with your email address, your Twitter handle (optional), your t-shirt size (S-2XL) and the correct answer, e.g.
 
 ```text
 https://obuldanrptloktxcffvn.supabase.co/functions/v1/get-tshirt-competition?email=testr@test.de&twitter=thorwebdev&size=2XL&answer=20

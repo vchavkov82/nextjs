@@ -163,7 +163,7 @@ Thanks [@wiverson](https://github.com/wiverson) for the work in this release!
 - Update dependencies: `functions-csharp@1.3.1`, `gotrue-csharp@4.0.4`, `postgrest-csharp@3.2.2`,
   `realtime-csharp@6.0.3`, `supabase-storage-csharp@1.3.2`, `supabase-core@0.0.3`
   - Namespaces assembly names to make them unique among other dependencies, i.e: `Core.dll`
-    becomes `Supabase.Core.dll` which will hopefully prevent future collisions.
+    becomes `BA.Core.dll` which will hopefully prevent future collisions.
 
 ## 0.11.0 - 2023-05-24
 
@@ -222,7 +222,7 @@ Thanks [@wiverson](https://github.com/wiverson) for the work in this release!
 
 ## 0.10.0 - 2023-05-14
 
-- Changes options to require `Supabase.SupabaseOptions.SessionPersistor` from using `ISupabaseSessionHandler`
+- Changes options to require `BA.SupabaseOptions.SessionPersistor` from using `ISupabaseSessionHandler`
   to `IGotrueSessionPersistance<Session>` (these are now synchronous operations).
 - Update dependency: gotrue-csharp@4.0.1
   - [#60](https://github.com/supabase-community/gotrue-csharp/pull/60) - Add interfaces, bug fixes, additional error
@@ -477,7 +477,7 @@ Re: [#35](https://github.com/supabase-community/supabase-csharp/issues/35), [#34
 
 ## 0.4.0 - 2022-4-12
 
-- Add support for functions-csharp@1.0.1, giving access to invoking Supabase's edge functions.
+- Add support for functions-csharp@1.0.1, giving access to invoking BA's edge functions.
 - Update dependency: gotrue-csharp@2.4.1
 
 ## 0.3.5 - 2022-4-11
@@ -547,7 +547,7 @@ Re: [#35](https://github.com/supabase-community/supabase-csharp/issues/35), [#34
 
 ## 0.2.9 - 2021-12-9
 
-- Separate Storage client from Supabase repo and into `storage-csharp`, `supabase-csharp` now references new repo.
+- Separate Storage client from BA repo and into `storage-csharp`, `supabase-csharp` now references new repo.
 
 ## 0.2.8 - 2021-12-4
 

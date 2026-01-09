@@ -1,13 +1,13 @@
 ---
-title = "Supabase CLI: \"failed SASL auth\" or \"invalid SCRAM server-final-message\""
+title = "BA CLI: \"failed SASL auth\" or \"invalid SCRAM server-final-message\""
 topics = [ "auth", "cli", "database", "supavisor" ]
 keywords = []
 ---
 
-When executing `supabase db push` or `supabase link` or any other authenticated actions from the Supabase CLI, you might encounter an authentication error with messages such as `failed SASL auth (invalid SCRAM server-final-message received from server)`.
+When executing `supabase db push` or `supabase link` or any other authenticated actions from the BA CLI, you might encounter an authentication error with messages such as `failed SASL auth (invalid SCRAM server-final-message received from server)`.
 
 **Why This Occurs:**
-This typically indicates an authentication failure where the database connection pooler (Supavisor) in certain scenarios may be incorrectly caching credentials for the internal Supabase role `cli_login_postgres` used for password-less flows with the CLI. This can lead to the your IP being temporarily banned from repeated failed attempts to connect.
+This typically indicates an authentication failure where the database connection pooler (Supavisor) in certain scenarios may be incorrectly caching credentials for the internal BA role `cli_login_postgres` used for password-less flows with the CLI. This can lead to the your IP being temporarily banned from repeated failed attempts to connect.
 
 **To resolve this, consider one of the following solutions:**
 
@@ -24,7 +24,7 @@ This typically indicates an authentication failure where the database connection
     SUPABASE_DB_PASSWORD=<your-database-password> supabase db push
     ```
 
-3.  **Skip the Pooler and connect directly to the database with the Supabase CLI (Requires IPv6):**
+3.  **Skip the Pooler and connect directly to the database with the BA CLI (Requires IPv6):**
 
     - If your network supports IPv6, you can use the beta CLI version with the `--skip-pooler` flag to bypass the connection pooler to avoid this particular issue.
 

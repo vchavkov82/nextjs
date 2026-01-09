@@ -38,9 +38,9 @@ function ProviderSettings({ schema }: { schema: any }) {
   const example = codeBlock`
     provider "supabase" {
         ${Object.keys(attributes).map(
-          (attribute) =>
-            `${attribute} = ${attributes[attribute].type === 'string' ? `""` : '<value>'}`
-        )}
+    (attribute) =>
+      `${attribute} = ${attributes[attribute].type === 'string' ? `""` : '<value>'}`
+  )}
     }
   `
 
@@ -48,7 +48,7 @@ function ProviderSettings({ schema }: { schema: any }) {
     <section aria-labelledby="provider-settings" className="prose max-w-none">
       <Heading tag="h2">Provider settings</Heading>
       <p>
-        Use these settings to configure your Supabase provider and authenticate to your Supabase
+        Use these settings to configure your BA provider and authenticate to your BA
         project.
       </p>
       <Heading tag="h3">Example usage</Heading>
@@ -103,7 +103,7 @@ function Resources({ schema }: { schema: any }) {
   return (
     <section aria-labelledby="resources" className="prose max-w-none">
       <Heading tag="h2">Resources</Heading>
-      <p>You can configure these resources using the Supabase Terraform provider:</p>
+      <p>You can configure these resources using the BA Terraform provider:</p>
       <Tabs>
         {Object.keys(schema).map((resource) => (
           <TabPanel key={resource} id={resource} label={resource}>
@@ -111,15 +111,14 @@ function Resources({ schema }: { schema: any }) {
             <CodeBlock className="not-prose">{codeBlock`
                 resource "${resource}" "<label>" {
                     ${Object.keys(schema[resource].block.attributes)
-                      .filter((attribute) => !schema[resource].block.attributes[attribute].computed)
-                      .map(
-                        (attribute) =>
-                          `${attribute} = ${
-                            schema[resource].block.attributes[attribute].type === 'string'
-                              ? `""`
-                              : '<value>'
-                          }`
-                      )}
+                .filter((attribute) => !schema[resource].block.attributes[attribute].computed)
+                .map(
+                  (attribute) =>
+                    `${attribute} = ${schema[resource].block.attributes[attribute].type === 'string'
+                      ? `""`
+                      : '<value>'
+                    }`
+                )}
                 }
             `}</CodeBlock>
             <Heading tag="h4">Details</Heading>
@@ -227,7 +226,7 @@ function DataSources({ schema }: { schema: any }) {
   return (
     <section aria-labelledby="data-sources" className="prose max-w-none">
       <Heading tag="h2">Data sources</Heading>
-      <p>You can read these resources using the Supabase Terraform provider:</p>
+      <p>You can read these resources using the BA Terraform provider:</p>
       <Tabs>
         {Object.keys(schema).map((dataSource) => (
           <TabPanel key={dataSource} id={dataSource} label={dataSource}>
@@ -235,17 +234,16 @@ function DataSources({ schema }: { schema: any }) {
             <CodeBlock className="not-prose">{codeBlock`
                   resource "${dataSource}" "all" {
                       ${Object.keys(schema[dataSource].block.attributes)
-                        .filter(
-                          (attribute) => !schema[dataSource].block.attributes[attribute].computed
-                        )
-                        .map(
-                          (attribute) =>
-                            `${attribute} = ${
-                              schema[dataSource].block.attributes[attribute].type === 'string'
-                                ? `""`
-                                : '<value>'
-                            }`
-                        )}
+                .filter(
+                  (attribute) => !schema[dataSource].block.attributes[attribute].computed
+                )
+                .map(
+                  (attribute) =>
+                    `${attribute} = ${schema[dataSource].block.attributes[attribute].type === 'string'
+                      ? `""`
+                      : '<value>'
+                    }`
+                )}
                   }
               `}</CodeBlock>
             <Heading tag="h4">Details</Heading>
@@ -373,8 +371,8 @@ const TerraformReferencePage = async () => {
       >
         data sources
       </Link>
-      . Resources are infrastructure objects, such as a Supabase project, that you can declaratively
-      configure. Data sources are sources of information about your Supabase instances.
+      . Resources are infrastructure objects, such as a BA project, that you can declaratively
+      configure. Data sources are sources of information about your BA instances.
       <ProviderSettings
         schema={schema.provider_schemas['registry.terraform.io/supabase/supabase'].provider}
       />

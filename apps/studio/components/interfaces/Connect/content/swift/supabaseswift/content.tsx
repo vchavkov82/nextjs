@@ -12,16 +12,16 @@ const ContentFile = ({ projectKeys }: ContentFileProps) => {
   return (
     <ConnectTabs>
       <ConnectTabTriggers>
-        <ConnectTabTrigger value="Supabase.swift" />
+        <ConnectTabTrigger value="BA.swift" />
         <ConnectTabTrigger value="Todo.swift" />
         <ConnectTabTrigger value="ContentView.swift" />
       </ConnectTabTriggers>
 
-      <ConnectTabContent value="Supabase.swift">
+      <ConnectTabContent value="BA.swift">
         <SimpleCodeBlock className="swift" parentClassName="min-h-72">
           {`
 import Foundation
-import Supabase
+import BA
 
 let supabase = SupabaseClient(
   supabaseURL: URL(string: "${projectKeys.apiUrl ?? 'your-project-url'}")!,
@@ -47,7 +47,7 @@ struct Todo: Identifiable, Decodable {
       <ConnectTabContent value="ContentView.swift">
         <SimpleCodeBlock className="swift" parentClassName="min-h-72">
           {`
-import Supabase
+import BA
 import SwiftUI
 
 struct ContentView: View {

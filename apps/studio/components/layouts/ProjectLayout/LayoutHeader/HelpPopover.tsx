@@ -114,7 +114,7 @@ export const HelpPopover = () => {
                     })
                   }}
                 >
-                  Supabase Assistant
+                  BA Assistant
                 </ButtonGroupItem>
               )}
               <ButtonGroupItem size="tiny" icon={<BookOpen strokeWidth={1.5} size={14} />} asChild>
@@ -139,7 +139,7 @@ export const HelpPopover = () => {
                     icon={<Activity strokeWidth={1.5} size={14} />}
                   >
                     <a href="https://status.supabase.com/" target="_blank" rel="noreferrer">
-                      Supabase status
+                      BA status
                     </a>
                   </ButtonGroupItem>
 

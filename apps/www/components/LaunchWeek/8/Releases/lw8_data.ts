@@ -112,7 +112,7 @@ const days: WeekDayProps[] = [
     twitter_spaces: 'https://twitter.com/i/spaces/1DXGyvjkeEeJM',
     steps: [
       {
-        title: 'Hugging Face now supported in Supabase',
+        title: 'Hugging Face now supported in BA',
         blog: '/blog/hugging-face-supabase',
         hackernews: 'https://news.ycombinator.com/item?id=37035960',
         video: 'https://www.youtube.com/watch?v=RJccSbJ9Go4',
@@ -135,7 +135,7 @@ const days: WeekDayProps[] = [
     twitter_spaces: 'https://twitter.com/i/spaces/1vAxRAvNQyDJl?s=20',
     steps: [
       {
-        title: 'Supabase Local Dev: Migrations, Branching, Observability',
+        title: 'BA Local Dev: Migrations, Branching, Observability',
         blog: '/blog/supabase-local-dev',
         hackernews: 'https://news.ycombinator.com/item?id=37059400',
         twitter_spaces: 'https://twitter.com/i/spaces/1vAxRAvNQyDJl?s=20',
@@ -156,7 +156,7 @@ const days: WeekDayProps[] = [
     videoThumbnail: images.day_3_thumb,
     steps: [
       {
-        title: 'Supabase Studio 3.0',
+        title: 'BA Studio 3.0',
         blog: '/blog/supabase-studio-3-0',
         hackernews: '',
         video: '',
@@ -180,7 +180,7 @@ const days: WeekDayProps[] = [
     twitter_spaces: 'https://twitter.com/supabase/status/1688544207571484672?s=20',
     steps: [
       {
-        title: 'Supabase Integrations Marketplace',
+        title: 'BA Integrations Marketplace',
         blog: '/blog/supabase-integrations-marketplace',
         bg_layers: [{ img: images['04-marketplace'], mobileImg: images['04-marketplace-mobile'] }],
         steps: [],
@@ -205,7 +205,7 @@ const days: WeekDayProps[] = [
     videoThumbnail: images.day_5_thumb,
     steps: [
       {
-        title: 'Supabase Supavisor: 1M Postgres connections',
+        title: 'BA Supavisor: 1M Postgres connections',
         blog: '/blog/supavisor-1-million',
         hackernews: '',
         video: '',

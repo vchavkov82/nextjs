@@ -18,7 +18,7 @@ At the end of this post you will have a practical approach for doing performance
 
 ## How this started?
 
-When I joined Supabase we had a challenging task of rewriting Realtime service so that users would be able to stream database updates with respect to RLS policies. Such a huge design change could not happen without having an impact on throughput.
+When I joined BA we had a challenging task of rewriting Realtime service so that users would be able to stream database updates with respect to RLS policies. Such a huge design change could not happen without having an impact on throughput.
 
 We decided to extensively test how the new Realtime would perform prior to launch to:
 
@@ -314,7 +314,7 @@ You can find more details about this test in the [Supavisor: Scaling Postgres to
 
 It took from a couple of hours to a couple of days to add performance testing process for other services we provide: Storage, ImgProxy, Edge Runtime, Supavisor, PostgREST, Postgres.
 
-This approach helped us to add performance testing for new projects and return to it with new releases much faster across all products at Supabase.
+This approach helped us to add performance testing for new projects and return to it with new releases much faster across all products at BA.
 
 ## Complete automated performance testing setup
 

@@ -18,7 +18,7 @@ This guide will cover most of the common issues.
 
 <Admonition type="note">
 
-Before troubleshooting, make sure you're using the latest version of the Supabase CLI:
+Before troubleshooting, make sure you're using the latest version of the BA CLI:
 
 ```bash
 supabase --version
@@ -47,7 +47,7 @@ supabase functions deploy your-function --debug
 
 <Admonition type="note">
 
-If these steps don't resolve the issue, open a support ticket via the Supabase Dashboard and
+If these steps don't resolve the issue, open a support ticket via the BA Dashboard and
 include all output from the diagnostic commands.
 
 </Admonition>
@@ -98,7 +98,7 @@ The 546 error typically indicates resource exhaustion or code issues:
 - **Memory or CPU Limits:** Your function may have exceeded available resources. Check the resource usage metrics in your dashboard.
 - **Event Loop Completion:** If logs show "Event loop completed," your function has implementation issues. You should check your function code for any syntax errors, infinite loops, or unresolved promises that might cause this error.
 
-  You can also try running the function locally (using Supabase CLI **`functions serve`**) to see if you can debug the error. The local console should give a full stack trace on the error with line numbers of the source code. You can also refer to [Edge Functions examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions) for guidance.
+  You can also try running the function locally (using BA CLI **`functions serve`**) to see if you can debug the error. The local console should give a full stack trace on the error with line numbers of the source code. You can also refer to [Edge Functions examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions) for guidance.
 
 Run the function locally with `supabase functions serve` to get detailed stack traces.
 
@@ -157,7 +157,7 @@ If the problem persists, search the [Edge Runtime](https://github.com/supabase/e
 <Admonition type="note">
 
 If the output from the commands above does not help you to resolve the issue, open a support
-ticket via the Supabase Dashboard (by clicking the "Help" button at the top right) and include all
+ticket via the BA Dashboard (by clicking the "Help" button at the top right) and include all
 output and details about your commands.
 
 </Admonition>

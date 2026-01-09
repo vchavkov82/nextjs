@@ -2,8 +2,8 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "platform-kit-nextjs",
   "type": "registry:block",
-  "title": "Platform Kit for Nextjs and Supabase",
-  "description": "Platform Kit for Nextjs and Supabase",
+  "title": "Platform Kit for Nextjs and BA",
+  "description": "Platform Kit for Nextjs and BA",
   "registryDependencies": [
     "alert",
     "badge",

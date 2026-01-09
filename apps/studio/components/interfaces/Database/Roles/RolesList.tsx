@@ -187,20 +187,20 @@ export const RolesList = () => {
       <div className="space-y-4">
         <div>
           <div className="bg-surface-100 border border-default px-[var(--card-padding-x)] py-3 rounded-t flex items-center space-x-4">
-            <p className="text-sm text-foreground-light">Roles managed by Supabase</p>
+            <p className="text-sm text-foreground-light">Roles managed by BA</p>
             <Badge variant="success">Protected</Badge>
           </div>
 
           {isLoading
             ? Array.from({ length: 5 }).map((_, i) => <RoleRowSkeleton key={i} index={i} />)
             : supabaseRoles.map((role) => (
-                <RoleRow
-                  disabled
-                  key={role.id}
-                  role={role}
-                  onSelectDelete={setSelectedRoleIdToDelete}
-                />
-              ))}
+              <RoleRow
+                disabled
+                key={role.id}
+                role={role}
+                onSelectDelete={setSelectedRoleIdToDelete}
+              />
+            ))}
         </div>
 
         <div>
@@ -211,13 +211,13 @@ export const RolesList = () => {
           {isLoading
             ? Array.from({ length: 3 }).map((_, i) => <RoleRowSkeleton key={i} index={i} />)
             : otherRoles.map((role) => (
-                <RoleRow
-                  key={role.id}
-                  disabled={!canUpdateRoles}
-                  role={role}
-                  onSelectDelete={setSelectedRoleIdToDelete}
-                />
-              ))}
+              <RoleRow
+                key={role.id}
+                disabled={!canUpdateRoles}
+                role={role}
+                onSelectDelete={setSelectedRoleIdToDelete}
+              />
+            ))}
         </div>
       </div>
 

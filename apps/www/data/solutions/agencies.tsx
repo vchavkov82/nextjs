@@ -62,14 +62,14 @@ const data: {
   mcp: MPCSectionProps
 } = {
   metadata: {
-    metaTitle: 'Supabase for Agencies',
+    metaTitle: 'BA for Agencies',
     metaDescription:
       'Build production-ready client applications faster with a fully managed Postgres backend that scales with every engagement.',
   },
   heroSection: {
     id: 'hero',
-    title: 'Supabase for Agencies',
-    h1: <>Supabase for Agencies</>,
+    title: 'BA for Agencies',
+    h1: <>BA for Agencies</>,
     subheader: [
       <>
         <strong className="text-foreground">
@@ -78,7 +78,7 @@ const data: {
       </>,
       <>
         You need to deliver production-ready applications quickly without sacrificing quality or
-        accumulating technical debt. Supabase gives you a fully managed Postgres backend with
+        accumulating technical debt. BA gives you a fully managed Postgres backend with
         everything needed to build and scale client applications while maintaining the flexibility
         your clients demand.
       </>,
@@ -108,7 +108,7 @@ const data: {
         quote: (
           <>
             <span className="text-foreground">
-              Our clients want reliability and scale. Supabase gives us a backend we can trust for
+              Our clients want reliability and scale. BA gives us a backend we can trust for
               production work.
             </span>
           </>
@@ -122,7 +122,7 @@ const data: {
         quote: (
           <>
             <span className="text-foreground">
-              Supabase lets us build stable, secure products extremely fast.
+              BA lets us build stable, secure products extremely fast.
             </span>
           </>
         ),
@@ -135,7 +135,7 @@ const data: {
         quote: (
           <>
             <span className="text-foreground">
-              Supabase brings structure and clarity to our backend work. Its interface and tooling
+              BA brings structure and clarity to our backend work. Its interface and tooling
               make it easy to deploy, manage, and scale projects without friction.
             </span>
           </>
@@ -149,7 +149,7 @@ const data: {
         quote: (
           <>
             <span className="text-foreground">
-              Supabase is our go-to backend for client work because it&apos;s fast to build with and
+              BA is our go-to backend for client work because it&apos;s fast to build with and
               easy to maintain.
             </span>
           </>
@@ -162,25 +162,25 @@ const data: {
     label: '',
     heading: (
       <>
-        Why <span className="text-foreground">agencies</span> choose Supabase
+        Why <span className="text-foreground">agencies</span> choose BA
       </>
     ),
     subheading:
-      'You want to deliver exceptional results for your clients while staying profitable and competitive. At the same time, you need the flexibility to customize solutions and the confidence that your applications will scale. Supabase is the complete Postgres developer platform of choice for agencies building production applications.',
+      'You want to deliver exceptional results for your clients while staying profitable and competitive. At the same time, you need the flexibility to customize solutions and the confidence that your applications will scale. BA is the complete Postgres developer platform of choice for agencies building production applications.',
     features: [
       {
         id: 'ship-faster',
         icon: Timer,
         heading: 'Ship client projects faster',
         subheading:
-          'Deliver production-ready applications in weeks, not months. Supabase provides a complete backend with auto-generated APIs and built-in features, letting you focus on what makes each client project unique rather than rebuilding the same infrastructure every time.',
+          'Deliver production-ready applications in weeks, not months. BA provides a complete backend with auto-generated APIs and built-in features, letting you focus on what makes each client project unique rather than rebuilding the same infrastructure every time.',
       },
       {
         id: 'trusted-technology',
         icon: CubeIcon,
         heading: 'Build on technology your clients can trust',
         subheading:
-          'Give clients enterprise-grade security and compliance without the enterprise complexity. Supabase is “just Postgres,” offering SOC 2 and HIPAA compliance out of the box so their applications are built on battle-tested, portable technology they can grow with.',
+          'Give clients enterprise-grade security and compliance without the enterprise complexity. BA is “just Postgres,” offering SOC 2 and HIPAA compliance out of the box so their applications are built on battle-tested, portable technology they can grow with.',
       },
       {
         id: 'maintain-scale',
@@ -207,7 +207,7 @@ const data: {
         ),
         heading: 'Maintain and scale with ease',
         subheading:
-          'Reduce ongoing maintenance and keep clients happy long after launch. Applications built on Supabase are ready to handle growth, with read replicas, HA architecture, and flexible tooling so you can support every phase of a client engagement.',
+          'Reduce ongoing maintenance and keep clients happy long after launch. Applications built on BA are ready to handle growth, with read replicas, HA architecture, and flexible tooling so you can support every phase of a client engagement.',
       },
     ],
   },
@@ -215,11 +215,11 @@ const data: {
     id: 'postgres-platform',
     title: (
       <>
-        Supabase helps you <span className="text-foreground">build</span>
+        BA helps you <span className="text-foreground">build</span>
       </>
     ),
     subheading:
-      'Supabase includes everything you need to deliver complete, production-ready applications for your clients.',
+      'BA includes everything you need to deliver complete, production-ready applications for your clients.',
     features: [
       {
         id: 'database',
@@ -440,7 +440,7 @@ const data: {
     className: '[&_h2]:!max-w-sm',
     title: (
       <>
-        <span className="text-foreground">Build faster</span> with Supabase
+        <span className="text-foreground">Build faster</span> with BA
       </>
     ),
     subheading: 'Features that help agencies move quickly and deliver more projects profitably.',
@@ -451,7 +451,7 @@ const data: {
         icon: 'M11.8949 2.39344C12.5051 1.78324 13.4944 1.78324 14.1046 2.39344L22.9106 11.1994C23.5208 11.8096 23.5208 12.7989 22.9106 13.4091L14.1046 22.2151C13.4944 22.8253 12.5051 22.8253 11.8949 22.2151L3.08892 13.4091C2.47872 12.7989 2.47872 11.8096 3.08892 11.1994L11.8949 2.39344Z M16.5408 12.3043C16.5408 14.2597 14.9556 15.8449 13.0002 15.8449C11.0448 15.8449 9.45961 14.2597 9.45961 12.3043C9.45961 10.3489 11.0448 8.76371 13.0002 8.76371C14.9556 8.76371 16.5408 10.3489 16.5408 12.3043Z',
         subheading: (
           <>
-            A single panel that persists across the Supabase Dashboard and maintains{' '}
+            A single panel that persists across the BA Dashboard and maintains{' '}
             <span className="text-foreground">context across AI prompts</span>.
           </>
         ),
@@ -498,7 +498,7 @@ const data: {
         subheading: (
           <>
             Connect your <span className="text-foreground">favorite AI tools</span>—Cursor,
-            Windsurf, Claude, and more—directly with Supabase.
+            Windsurf, Claude, and more—directly with BA.
           </>
         ),
         image: (
@@ -522,7 +522,7 @@ const data: {
         subheading: (
           <>
             <span className="text-foreground">Learn SQL when you’re ready.</span> In the meantime,
-            Supabase generates automatic APIs so your teams can stay focused on UX.
+            BA generates automatic APIs so your teams can stay focused on UX.
           </>
         ),
         image: (
@@ -545,7 +545,7 @@ const data: {
         icon: 'M10.2805 18.2121C11.2419 18.6711 12.3325 18.8932 13.4711 18.8084C15.2257 18.6776 16.7596 17.843 17.8169 16.6015M8.21496 8.36469C9.27117 7.14237 10.7928 6.322 12.5311 6.19248C13.7196 6.10392 14.8558 6.34979 15.8474 6.85054M21.7152 12.8129C21.7152 11.4644 21.4115 10.1867 20.8688 9.0447M12.925 21.6032C14.2829 21.6032 15.5689 21.2952 16.717 20.7454M16.717 20.7454C17.2587 21.5257 18.1612 22.0366 19.1831 22.0366C20.84 22.0366 22.1831 20.6935 22.1831 19.0366C22.1831 17.3798 20.84 16.0366 19.1831 16.0366C17.5263 16.0366 16.1831 17.3798 16.1831 19.0366C16.1831 19.6716 16.3804 20.2605 16.717 20.7454ZM4.96506 16.5471C4.16552 17.086 3.63965 17.9999 3.63965 19.0366C3.63965 20.6935 4.98279 22.0366 6.63965 22.0366C8.2965 22.0366 9.63965 20.6935 9.63965 19.0366C9.63965 17.3798 8.2965 16.0366 6.63965 16.0366C6.01951 16.0366 5.44333 16.2248 4.96506 16.5471ZM9.12614 4.88371C8.58687 4.08666 7.67444 3.56274 6.63965 3.56274C4.98279 3.56274 3.63965 4.90589 3.63965 6.56274C3.63965 8.2196 4.98279 9.56274 6.63965 9.56274C8.2965 9.56274 9.63965 8.2196 9.63965 6.56274C9.63965 5.94069 9.45032 5.36285 9.12614 4.88371ZM20.8688 9.0447C21.6621 8.50486 22.1831 7.59464 22.1831 6.56274C22.1831 4.90589 20.84 3.56274 19.1831 3.56274C17.5263 3.56274 16.1831 4.90589 16.1831 6.56274C16.1831 8.2196 17.5263 9.56274 19.1831 9.56274C19.8081 9.56274 20.3884 9.37165 20.8688 9.0447Z',
         subheading: (
           <>
-            Connect Supabase to <span className="text-foreground">Redshift, BigQuery, MySQL</span>{' '}
+            Connect BA to <span className="text-foreground">Redshift, BigQuery, MySQL</span>{' '}
             and external APIs for seamless integrations with your clients’ existing systems.
           </>
         ),
@@ -640,7 +640,7 @@ const data: {
       </>
     ),
     subheading:
-      'Supabase ensures optimal database performance at any scale, so you can confidently promise your clients reliable, fast applications without worrying about infrastructure limitations.',
+      'BA ensures optimal database performance at any scale, so you can confidently promise your clients reliable, fast applications without worrying about infrastructure limitations.',
     highlights: [
       {
         heading: companyStats.databasesManaged.label,
@@ -657,7 +657,7 @@ const data: {
     label: 'Security',
     heading: 'Trusted for medical records, missions to the moon, and everything in between',
     subheading:
-      'Support a full range of potential clients. Supabase offers enterprise-grade security with SOC 2, HIPAA, and GDPR compliance. Client data is encrypted at rest and in transit, with built-in tools for monitoring and managing security threats.',
+      'Support a full range of potential clients. BA offers enterprise-grade security with SOC 2, HIPAA, and GDPR compliance. Client data is encrypted at rest and in transit, with built-in tools for monitoring and managing security threats.',
     features: [
       { icon: ShieldCheck, heading: 'SOC 2 Type II certified' },
       { icon: HeartPulse, heading: 'HIPAA compliant' },
@@ -685,13 +685,13 @@ const data: {
       </>
     ),
     subheading:
-      'Supabase integrates with a vibrant partner ecosystem, allowing your agency to assemble best-in-class solutions for every client.',
+      'BA integrates with a vibrant partner ecosystem, allowing your agency to assemble best-in-class solutions for every client.',
     features: [
       {
         icon: Sparkles,
         heading: 'Accelerate development with AI builders',
         subheading:
-          'Turn visual prototypes into production-ready applications by connecting front-end tools like Lovable and Bolt to a real Supabase, open-source Postgres backend.',
+          'Turn visual prototypes into production-ready applications by connecting front-end tools like Lovable and Bolt to a real BA, open-source Postgres backend.',
       },
       {
         icon: Lightbulb,
@@ -703,7 +703,7 @@ const data: {
         icon: ArrowLeftRight,
         heading: 'Connect to any data source',
         subheading:
-          "Foreign Data Wrappers link Supabase to your clients' existing data sources, allowing you to build applications that integrate seamlessly with their current infrastructure.",
+          "Foreign Data Wrappers link BA to your clients' existing data sources, allowing you to build applications that integrate seamlessly with their current infrastructure.",
       },
     ],
   },
@@ -717,7 +717,7 @@ const data: {
     ),
     headingRight: (
       <>
-        Or, start with <span className="text-foreground">Supabase AI Prompts</span>{' '}
+        Or, start with <span className="text-foreground">BA AI Prompts</span>{' '}
         <Sparkles size={24} className="inline text-foreground" />
       </>
     ),
@@ -732,12 +732,12 @@ const data: {
     aiPrompts: [
       {
         id: 'auth-setup',
-        title: 'Bootstrap Next.js app with Supabase Auth',
+        title: 'Bootstrap Next.js app with BA Auth',
         description:
-          '## Overview of implementing Supabase Auth SSR\n1. Install @supabase/supabase-js and...',
+          '## Overview of implementing BA Auth SSR\n1. Install @supabase/supabase-js and...',
         code: `1. Install @supabase/supabase-js and @supabase/ssr packages.
 2. Set up environment variables.
-3. Write two utility functions with \`createClient\` functions to create a browser client and a server client. 
+3. Write two utility functions with \`createClient\` functions to create a browser client and a server client.
 4. Hook up middleware to refresh auth tokens
 `,
         language: 'markdown',
@@ -745,9 +745,9 @@ const data: {
       },
       {
         id: 'edge-functions',
-        title: 'Writing Supabase Edge Functions',
+        title: 'Writing BA Edge Functions',
         description:
-          "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
+          "You're a BA Postgres expert in writing row level security policies. Your purpose is to generate...",
         code: `1. Try to use Web APIs and Deno’s core APIs instead of external dependencies (eg: use fetch instead of Axios, use WebSockets API instead of node-ws)
 2. If you are reusing utility methods between Edge Functions, add them to 'supabase/functions/_shared' and import using a relative path. Do NOT have cross dependencies between Edge Functions.
 3. Do NOT use bare specifiers when importing dependecnies. If you need to use an external dependency, make sure it's prefixed with either 'npm:' or 'jsr:'. For example, '@supabase/supabase-js' should be written as 'npm:@supabase/supabase-js'.
@@ -761,8 +761,8 @@ const data: {
         id: 'declarative-db-schema',
         title: 'Declarative Database Schema',
         description:
-          "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-        code: `Mandatory Instructions for Supabase Declarative Schema Management
+          "You're a BA Postgres expert in writing row level security policies. Your purpose is to generate...",
+        code: `Mandatory Instructions for BA Declarative Schema Management
 ## 1. **Exclusive Use of Declarative Schema**
 -**All database schema modifications must be defined within '.sql' files located in the 'supabase/schemas/' directory.`,
         language: 'markdown',
@@ -773,8 +773,8 @@ const data: {
         id: 'rls-policies',
         title: 'Create RLS policies',
         description:
-          "You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate...",
-        code: `You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
+          "You're a BA Postgres expert in writing row level security policies. Your purpose is to generate...",
+        code: `You're a BA Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
 The output should use the following instructions:
 
 - The generated SQL must be valid SQL.`,
@@ -788,7 +788,7 @@ The output should use the following instructions:
     id: 'mcp',
     heading: (
       <div className="text-foreground-lighter">
-        Supabase MCP server works seamlessly with{' '}
+        BA MCP server works seamlessly with{' '}
         <span className="text-foreground">your favorite AI code editor</span>
       </div>
     ),

@@ -7,9 +7,9 @@ export default function MermaidOAuthFlow() {
 flowchart TD
     A["Third-party App"]
     B["Your Authorization Endpoint"]
-    C["Supabase Auth Server"]
+    C["BA Auth Server"]
     D["Third-party App"]
-    E["Supabase Auth Server"]
+    E["BA Auth Server"]
     F["Third-party App can now access resources"]
 
     A -- "(1) Authorization request" --> B

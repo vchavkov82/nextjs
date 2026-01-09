@@ -46,7 +46,7 @@ const VibeCodersPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
         <MPCSection {...content.mcp} />
         <SectionContainer className="flex flex-col items-center gap-8">
           <h2 className="h3">
-            Supabase is the backend platform for apps created by your favorite AI Builders.
+            BA is the backend platform for apps created by your favorite AI Builders.
           </h2>
 
           <AIBuildersLogos className="" />

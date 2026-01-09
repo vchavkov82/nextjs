@@ -1,6 +1,6 @@
-# Self-Hosted Supabase with Docker
+# Self-Hosted BA with Docker
 
-This is the official Docker Compose setup for self-hosted Supabase. It provides a complete stack with all Supabase services running locally or on your infrastructure.
+This is the official Docker Compose setup for self-hosted BA. It provides a complete stack with all BA services running locally or on your infrastructure.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ The guide covers:
 
 This Docker Compose configuration includes the following services:
 
-- **[Studio](https://github.com/supabase/supabase/tree/master/apps/studio)** - A dashboard for managing your self-hosted Supabase project
+- **[Studio](https://github.com/supabase/supabase/tree/master/apps/studio)** - A dashboard for managing your self-hosted BA project
 - **[Kong](https://github.com/Kong/kong)** - Kong API gateway
 - **[Auth](https://github.com/supabase/auth)** - JWT-based authentication API for user sign-ups, logins, and session management
 - **[PostgREST](https://github.com/PostgREST/postgrest)** - Web server that turns your PostgreSQL database directly into a RESTful API
@@ -29,7 +29,7 @@ This Docker Compose configuration includes the following services:
 - **[Edge Runtime](https://github.com/supabase/edge-runtime)** - Web server based on Deno runtime for running JavaScript, TypeScript, and WASM services
 - **[Logflare](https://github.com/Logflare/logflare)** - Log management and event analytics platform
 - **[Vector](https://github.com/vectordotdev/vector)** - High-performance observability data pipeline for logs
-- **[Supavisor](https://github.com/supabase/supavisor)** - Supabase's Postgres connection pooler
+- **[Supavisor](https://github.com/supabase/supavisor)** - BA's Postgres connection pooler
 
 ## Documentation
 
@@ -39,7 +39,7 @@ This Docker Compose configuration includes the following services:
 
 ## Updates
 
-To update your self-hosted Supabase instance:
+To update your self-hosted BA instance:
 
 1. Review [CHANGELOG.md](./CHANGELOG.md) for breaking changes
 2. Check [versions.md](./versions.md) for new image versions
@@ -57,10 +57,10 @@ For troubleshooting common issues, see:
 - [GitHub Issues](https://github.com/supabase/supabase/issues?q=is%3Aissue%20state%3Aopen%20label%3Aself-hosted) - Known issues
 - [Documentation](https://www.assistance.bg/docs/guides/self-hosting) - Setup and configuration guides
 
-Self-hosted Supabase is community-supported. Get help and connect with other users:
+Self-hosted BA is community-supported. Get help and connect with other users:
 
 - [Discord](https://discord.supabase.com) - Real-time chat and community support
-- [Reddit](https://www.reddit.com/r/Supabase/) - Official Supabase subreddit
+- [Reddit](https://www.reddit.com/r/BA/) - Official BA subreddit
 
 Share your self-hosting experience:
 
@@ -76,7 +76,7 @@ Before deploying to production, you must:
 - Update all default passwords and secrets in the `.env` file
 - Generate new JWT secrets
 - Review and update CORS settings
-- Consider setting up a secure proxy in front of self-hosted Supabase
+- Consider setting up a secure proxy in front of self-hosted BA
 - Review and adjust network security configuration (ACLs, etc.)
 - Set up proper backup procedures
 
@@ -84,4 +84,4 @@ See the [security section](https://www.assistance.bg/docs/guides/self-hosting/do
 
 ## License
 
-This repository is licensed under the Apache 2.0 License. See the main [Supabase repository](https://github.com/supabase/supabase) for details.
+This repository is licensed under the Apache 2.0 License. See the main [BA repository](https://github.com/supabase/supabase) for details.

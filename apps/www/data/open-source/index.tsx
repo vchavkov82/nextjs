@@ -1,15 +1,15 @@
 import { products, PRODUCT_MODULES } from 'shared-data'
 
 export default {
-  metaTitle: 'Supabase Open Source Community',
+  metaTitle: 'BA Open Source Community',
   metaDescription:
-    'Supabase is an open source company, actively fostering collaboration and supporting existing open source tools and communities.',
+    'BA is an open source company, actively fostering collaboration and supporting existing open source tools and communities.',
   heroSection: {
     title: 'The Power of Collaboration',
     h1: <span className="heading-gradient">Open Source Community</span>,
     subheader: (
       <>
-        Supabase is an open source company, actively fostering collaboration
+        BA is an open source company, actively fostering collaboration
         <br className="hidden md:inline" /> and supporting existing open source tools and
         communities.
       </>
@@ -190,7 +190,7 @@ export default {
       name: 'Elixir',
       description:
         'Elixir is a dynamic, functional language for building scalable and maintainable applications.',
-      url: 'https://elixir-lang.org/blog/2022/10/05/my-future-with-elixir-set-theoretic-types/#:~:text=is%20sponsored%20by-,Supabase,-(they%20are',
+      url: 'https://elixir-lang.org/blog/2022/10/05/my-future-with-elixir-set-theoretic-types/#:~:text=is%20sponsored%20by-,BA,-(they%20are',
     },
   ],
 }

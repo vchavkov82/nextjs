@@ -546,7 +546,17 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [743, 746, 741, 754, 739, 742, 744, 745, 740]
+                          "children": [
+                            743,
+                            746,
+                            741,
+                            754,
+                            739,
+                            742,
+                            744,
+                            745,
+                            740
+                          ]
                         }
                       ],
                       "sources": [
@@ -1163,7 +1173,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [797]
+                          "children": [
+                            797
+                          ]
                         }
                       ],
                       "sources": [
@@ -1208,7 +1220,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [799]
+                          "children": [
+                            799
+                          ]
                         }
                       ],
                       "sources": [
@@ -2153,15 +2167,33 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [732]
+          "children": [
+            732
+          ]
         },
         {
           "title": "Properties",
-          "children": [759, 762, 757, 770, 755, 758, 760, 761, 756]
+          "children": [
+            759,
+            762,
+            757,
+            770,
+            755,
+            758,
+            760,
+            761,
+            756
+          ]
         },
         {
           "title": "Methods",
-          "children": [792, 789, 773, 777, 771]
+          "children": [
+            792,
+            789,
+            773,
+            777,
+            771
+          ]
         }
       ],
       "sources": [
@@ -2412,7 +2444,9 @@
                         "groups": [
                           {
                             "title": "Properties",
-                            "children": [15]
+                            "children": [
+                              15
+                            ]
                           }
                         ],
                         "sources": [
@@ -2962,7 +2996,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [24, 22, 23]
+                          "children": [
+                            24,
+                            22,
+                            23
+                          ]
                         }
                       ],
                       "sources": [
@@ -3946,7 +3984,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [67, 66, 65]
+                          "children": [
+                            67,
+                            66,
+                            65
+                          ]
                         }
                       ],
                       "sources": [
@@ -4075,7 +4117,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside Supabase."
+                    "text": "Select a schema to query or perform an function (rpc) call.\n\nThe schema needs to be on the list of exposed schemas inside BA."
                   }
                 ]
               },
@@ -4208,15 +4250,26 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [10]
+          "children": [
+            10
+          ]
         },
         {
           "title": "Properties",
-          "children": [35, 33, 34, 32]
+          "children": [
+            35,
+            33,
+            34,
+            32
+          ]
         },
         {
           "title": "Methods",
-          "children": [43, 56, 52]
+          "children": [
+            43,
+            56,
+            52
+          ]
         }
       ],
       "sources": [
@@ -4307,7 +4360,9 @@
                 "groups": [
                   {
                     "title": "Properties",
-                    "children": [71]
+                    "children": [
+                      71
+                    ]
                   }
                 ],
                 "sources": [
@@ -4745,7 +4800,12 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [811, 809, 810, 808]
+                          "children": [
+                            811,
+                            809,
+                            810,
+                            808
+                          ]
                         }
                       ],
                       "sources": [
@@ -4841,11 +4901,17 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [804]
+          "children": [
+            804
+          ]
         },
         {
           "title": "Properties",
-          "children": [814, 812, 813]
+          "children": [
+            814,
+            812,
+            813
+          ]
         }
       ],
       "sources": [
@@ -5467,7 +5533,17 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [186, 189, 184, 197, 182, 185, 187, 188, 183]
+                          "children": [
+                            186,
+                            189,
+                            184,
+                            197,
+                            182,
+                            185,
+                            187,
+                            188,
+                            183
+                          ]
                         }
                       ],
                       "sources": [
@@ -7317,7 +7393,14 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [509, 512, 514, 511, 510, 513]
+                          "children": [
+                            509,
+                            512,
+                            514,
+                            511,
+                            510,
+                            513
+                          ]
                         }
                       ],
                       "sources": [
@@ -10248,7 +10331,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [482, 483]
+                          "children": [
+                            482,
+                            483
+                          ]
                         }
                       ],
                       "sources": [
@@ -12071,7 +12157,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [429, 430]
+                          "children": [
+                            429,
+                            430
+                          ]
                         }
                       ],
                       "sources": [
@@ -12397,7 +12486,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [452, 453, 454]
+                          "children": [
+                            452,
+                            453,
+                            454
+                          ]
                         }
                       ],
                       "sources": [
@@ -12534,7 +12627,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [459, 460, 461]
+                          "children": [
+                            459,
+                            460,
+                            461
+                          ]
                         }
                       ],
                       "sources": [
@@ -12713,7 +12810,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [467, 469, 468]
+                          "children": [
+                            467,
+                            469,
+                            468
+                          ]
                         }
                       ],
                       "sources": [
@@ -12876,7 +12977,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [474, 476, 475]
+                          "children": [
+                            474,
+                            476,
+                            475
+                          ]
                         }
                       ],
                       "sources": [
@@ -13264,7 +13369,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [562]
+                          "children": [
+                            562
+                          ]
                         }
                       ],
                       "sources": [
@@ -13309,7 +13416,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [564]
+                          "children": [
+                            564
+                          ]
                         }
                       ],
                       "sources": [
@@ -13751,7 +13860,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [490, 491]
+                          "children": [
+                            490,
+                            491
+                          ]
                         }
                       ],
                       "sources": [
@@ -16073,7 +16185,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [399, 400]
+                          "children": [
+                            399,
+                            400
+                          ]
                         }
                       ],
                       "sources": [
@@ -16206,7 +16321,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [406, 407]
+                          "children": [
+                            406,
+                            407
+                          ]
                         }
                       ],
                       "sources": [
@@ -16744,18 +16862,75 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [171]
+          "children": [
+            171
+          ]
         },
         {
           "title": "Properties",
-          "children": [527, 530, 525, 538, 523, 526, 528, 529, 524]
+          "children": [
+            527,
+            530,
+            525,
+            538,
+            523,
+            526,
+            528,
+            529,
+            524
+          ]
         },
         {
           "title": "Methods",
           "children": [
-            492, 336, 328, 501, 198, 505, 431, 503, 209, 217, 265, 273, 281, 318, 305, 313, 241,
-            249, 257, 477, 225, 233, 408, 520, 498, 204, 414, 323, 424, 446, 384, 557, 484, 376,
-            344, 352, 360, 368, 297, 289, 517, 515, 441, 541, 495, 392, 545, 539
+            492,
+            336,
+            328,
+            501,
+            198,
+            505,
+            431,
+            503,
+            209,
+            217,
+            265,
+            273,
+            281,
+            318,
+            305,
+            313,
+            241,
+            249,
+            257,
+            477,
+            225,
+            233,
+            408,
+            520,
+            498,
+            204,
+            414,
+            323,
+            424,
+            446,
+            384,
+            557,
+            484,
+            376,
+            344,
+            352,
+            360,
+            368,
+            297,
+            289,
+            517,
+            515,
+            441,
+            541,
+            495,
+            392,
+            545,
+            539
           ]
         }
       ],
@@ -17111,7 +17286,9 @@
                         "groups": [
                           {
                             "title": "Properties",
-                            "children": [84]
+                            "children": [
+                              84
+                            ]
                           }
                         ],
                         "sources": [
@@ -17454,7 +17631,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [90, 88, 89]
+                          "children": [
+                            90,
+                            88,
+                            89
+                          ]
                         }
                       ],
                       "sources": [
@@ -17992,7 +18173,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [162]
+                          "children": [
+                            162
+                          ]
                         }
                       ],
                       "sources": [
@@ -18312,7 +18495,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [125]
+                          "children": [
+                            125
+                          ]
                         }
                       ],
                       "sources": [
@@ -18528,7 +18713,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [131, 132]
+                          "children": [
+                            131,
+                            132
+                          ]
                         }
                       ],
                       "sources": [
@@ -18910,7 +19098,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [118, 117]
+                          "children": [
+                            118,
+                            117
+                          ]
                         }
                       ],
                       "sources": [
@@ -19195,7 +19386,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [157]
+                          "children": [
+                            157
+                          ]
                         }
                       ],
                       "sources": [
@@ -19669,7 +19862,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [141, 140, 139]
+                          "children": [
+                            141,
+                            140,
+                            139
+                          ]
                         }
                       ],
                       "sources": [
@@ -19927,7 +20124,12 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [149, 150, 148, 147]
+                          "children": [
+                            149,
+                            150,
+                            148,
+                            147
+                          ]
                         }
                       ],
                       "sources": [
@@ -20013,15 +20215,29 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [76]
+          "children": [
+            76
+          ]
         },
         {
           "title": "Properties",
-          "children": [102, 99, 100, 101, 98]
+          "children": [
+            102,
+            99,
+            100,
+            101,
+            98
+          ]
         },
         {
           "title": "Methods",
-          "children": [158, 119, 110, 151, 133]
+          "children": [
+            158,
+            119,
+            110,
+            151,
+            133
+          ]
         }
       ],
       "sources": [
@@ -20151,7 +20367,9 @@
                 "groups": [
                   {
                     "title": "Properties",
-                    "children": [169]
+                    "children": [
+                      169
+                    ]
                   }
                 ],
                 "sources": [
@@ -20781,7 +20999,17 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [588, 591, 586, 599, 584, 587, 589, 590, 585]
+                          "children": [
+                            588,
+                            591,
+                            586,
+                            599,
+                            584,
+                            587,
+                            589,
+                            590,
+                            585
+                          ]
                         }
                       ],
                       "sources": [
@@ -21826,7 +22054,14 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [668, 671, 673, 670, 669, 672]
+                          "children": [
+                            668,
+                            671,
+                            673,
+                            670,
+                            669,
+                            672
+                          ]
                         }
                       ],
                       "sources": [
@@ -22161,7 +22396,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [641, 642]
+                          "children": [
+                            641,
+                            642
+                          ]
                         }
                       ],
                       "sources": [
@@ -22836,7 +23074,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [611, 612, 613]
+                          "children": [
+                            611,
+                            612,
+                            613
+                          ]
                         }
                       ],
                       "sources": [
@@ -22966,7 +23208,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [618, 619, 620]
+                          "children": [
+                            618,
+                            619,
+                            620
+                          ]
                         }
                       ],
                       "sources": [
@@ -23138,7 +23384,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [626, 628, 627]
+                          "children": [
+                            626,
+                            628,
+                            627
+                          ]
                         }
                       ],
                       "sources": [
@@ -23294,7 +23544,11 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [633, 635, 634]
+                          "children": [
+                            633,
+                            635,
+                            634
+                          ]
                         }
                       ],
                       "sources": [
@@ -23449,7 +23703,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [721]
+                          "children": [
+                            721
+                          ]
                         }
                       ],
                       "sources": [
@@ -23494,7 +23750,9 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [723]
+                          "children": [
+                            723
+                          ]
                         }
                       ],
                       "sources": [
@@ -23932,7 +24190,10 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [649, 650]
+                          "children": [
+                            649,
+                            650
+                          ]
                         }
                       ],
                       "sources": [
@@ -25203,16 +25464,44 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [573]
+          "children": [
+            573
+          ]
         },
         {
           "title": "Properties",
-          "children": [686, 689, 684, 697, 682, 685, 687, 688, 683]
+          "children": [
+            686,
+            689,
+            684,
+            697,
+            682,
+            685,
+            687,
+            688,
+            683
+          ]
         },
         {
           "title": "Methods",
           "children": [
-            651, 660, 664, 662, 636, 679, 657, 605, 716, 643, 676, 674, 600, 700, 654, 704, 698
+            651,
+            660,
+            664,
+            662,
+            636,
+            679,
+            657,
+            605,
+            716,
+            643,
+            676,
+            674,
+            600,
+            700,
+            654,
+            704,
+            698
           ]
         }
       ],
@@ -25478,7 +25767,13 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [820, 819, 818, 821, 822]
+          "children": [
+            820,
+            819,
+            818,
+            821,
+            822
+          ]
         }
       ],
       "sources": [
@@ -25634,7 +25929,13 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [826, 825, 824, 827, 828]
+          "children": [
+            826,
+            825,
+            824,
+            827,
+            828
+          ]
         }
       ],
       "sources": [
@@ -25714,7 +26015,9 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [836]
+              "children": [
+                836
+              ]
             }
           ],
           "sources": [
@@ -26632,7 +26935,14 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [7, 3, 8, 5, 4, 6]
+              "children": [
+                7,
+                3,
+                8,
+                5,
+                4,
+                6
+              ]
             }
           ],
           "sources": [
@@ -26650,26 +26960,44 @@
   "groups": [
     {
       "title": "Classes",
-      "children": [731, 9, 803, 170, 75, 572]
+      "children": [
+        731,
+        9,
+        803,
+        170,
+        75,
+        572
+      ]
     },
     {
       "title": "Interfaces",
-      "children": [817, 823]
+      "children": [
+        817,
+        823
+      ]
     },
     {
       "title": "Type Aliases",
-      "children": [834, 832, 815, 830, 837]
+      "children": [
+        834,
+        832,
+        815,
+        830,
+        837
+      ]
     },
     {
       "title": "Variables",
-      "children": [1]
+      "children": [
+        1
+      ]
     }
   ],
   "packageName": "@supabase/postgrest-js",
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
     },
     {
       "kind": "code",
@@ -26733,7 +27061,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Development\n\nThis package is part of the [Supabase JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
+      "text": "\n\n## Development\n\nThis package is part of the [BA JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
     },
     {
       "kind": "code",
@@ -26845,7 +27173,7 @@
     },
     {
       "kind": "text",
-      "text": "\n- **Generated Types Test** - Ensures generated types match database schema\n- **Unit Tests** - Jest tests covering all client functionality\n- **Smoke Tests** - Basic import/require tests for CommonJS and ESM\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- **Port 3000** - PostgREST server (API)\n- **Port 8080** - Database schema endpoint (for type generation)\n\n**Note:** Unlike a full Supabase instance, this uses a minimal PostgREST setup specifically for testing the SDK.\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
+      "text": "\n- **Generated Types Test** - Ensures generated types match database schema\n- **Unit Tests** - Jest tests covering all client functionality\n- **Smoke Tests** - Basic import/require tests for CommonJS and ESM\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- **Port 3000** - PostgREST server (API)\n- **Port 8080** - Database schema endpoint (for type generation)\n\n**Note:** Unlike a full BA instance, this uses a minimal PostgREST setup specifically for testing the SDK.\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
     },
     {
       "kind": "relative-link",

@@ -26,7 +26,7 @@ const addons = [
     icon: 'custom-domain-upgrade',
     price: 'Flat fee $10/month',
     description:
-      'Use your own domain for your Supabase project to present a branded experience to your users.',
+      'Use your own domain for your BA project to present a branded experience to your users.',
     ctaText: 'Documentation',
     ctaLink: 'https://www.assistance.bg/docs/guides/platform/custom-domains',
     ctaTarget: '_blank',
@@ -50,7 +50,7 @@ const PricingAddons: FC = () => {
       <div className="text-center">
         <h2 className="text-foreground text-3xl">Fine-tune your project</h2>
         <p className="text-foreground-light mt-4 mb-8 lg:mb-16 text-lg">
-          Go beyond your Plan limits and level up your Supabase experience
+          Go beyond your Plan limits and level up your BA experience
         </p>
       </div>
       <div className="grid lg:grid-cols-2 gap-4 mb-16 mx-auto max-w-6xl">
@@ -72,7 +72,7 @@ const AddonCard = ({ addon }: any) => {
     'group relative bg-surface-100 border rounded-lg gap-4 transition-colors',
     isHighlightCard && 'flex flex-col lg:flex-row lg:h-[300px] col-span-2',
     !isHighlightCard &&
-      'flex flex-col lg:flex-row hover:border-stronger hover:bg-surface-200 col-span-2 sm:col-span-1'
+    'flex flex-col lg:flex-row hover:border-stronger hover:bg-surface-200 col-span-2 sm:col-span-1'
   )
 
   const HighlightCard = () => (
@@ -118,9 +118,8 @@ const AddonCard = ({ addon }: any) => {
         )}
       >
         <Image
-          src={`${basePath}/images/pricing/${addon.heroImg}${
-            resolvedTheme?.includes('dark') ? '' : '-light'
-          }.svg`}
+          src={`${basePath}/images/pricing/${addon.heroImg}${resolvedTheme?.includes('dark') ? '' : '-light'
+            }.svg`}
           alt={`${addon.name} illustration`}
           fill
           className={cn('object-contain', addon.id === 'addon-pitr' && 'object-bottom')}
@@ -133,9 +132,8 @@ const AddonCard = ({ addon }: any) => {
           </p>
           <div className="flex items-center gap-2">
             <Image
-              src={`${basePath}/images/pricing/${addon.icon}${
-                resolvedTheme?.includes('dark') ? '' : '-light'
-              }.svg`}
+              src={`${basePath}/images/pricing/${addon.icon}${resolvedTheme?.includes('dark') ? '' : '-light'
+                }.svg`}
               width={14}
               height={14}
               alt="Compute"

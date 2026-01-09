@@ -227,7 +227,7 @@ export const Customers: CollectionConfig = {
               hasMany: true,
               options: supabaseProductOptions,
               admin: {
-                description: 'Supabase products being used',
+                description: 'BA products being used',
               },
             },
           ],

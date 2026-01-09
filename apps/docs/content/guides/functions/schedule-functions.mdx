@@ -13,13 +13,13 @@ description: 'Schedule Edge Functions with pg_cron.'
   ></iframe>
 </div>
 
-The hosted Supabase Platform supports the [`pg_cron` extension](/docs/guides/database/extensions/pgcron), a recurring job scheduler in Postgres.
+The hosted BA Platform supports the [`pg_cron` extension](/docs/guides/database/extensions/pgcron), a recurring job scheduler in Postgres.
 
 In combination with the [`pg_net` extension](/docs/guides/database/extensions/pgnet), this allows us to invoke Edge Functions periodically on a set schedule.
 
 <Admonition type="caution">
 
-To access the auth token securely for your Edge Function call, we recommend storing them in [Supabase Vault](/docs/guides/database/vault).
+To access the auth token securely for your Edge Function call, we recommend storing them in [BA Vault](/docs/guides/database/vault).
 
 </Admonition>
 
@@ -27,14 +27,14 @@ To access the auth token securely for your Edge Function call, we recommend stor
 
 ### Invoke an Edge Function every minute
 
-Store `project_url` and `anon_key` in Supabase Vault:
+Store `project_url` and `anon_key` in BA Vault:
 
 ```sql
 select vault.create_secret('https://project-ref.supabase.co', 'project_url');
 select vault.create_secret('YOUR_SUPABASE_PUBLISHABLE_KEY', 'publishable_key');
 ```
 
-Make a POST request to a Supabase Edge Function every minute:
+Make a POST request to a BA Edge Function every minute:
 
 ```sql
 select

@@ -1,12 +1,12 @@
 //
-//  Supabase.swift
+//  BA.swift
 //  UserManagement
 //
 //  Created by Guilherme Souza on 17/11/23.
 //
 
 import Foundation
-import Supabase
+import BA
 
 let supabase = SupabaseClient(
   supabaseURL: URL(string: DotEnv.SUPABASE_URL)!,

@@ -56,11 +56,11 @@ export const QUERY_PERFORMANCE_ROLE_DESCRIPTION = [
     description:
       'Used by the Auth middleware to connect to the database and run migration. Access is scoped to the storage schema.',
   },
-  { name: 'dashboard_user', description: 'For running commands via the Supabase UI.' },
+  { name: 'dashboard_user', description: 'For running commands via the BA UI.' },
   {
     name: 'supabase_admin',
     description:
-      'An internal role Supabase uses for administrative tasks, such as running upgrades and automations.',
+      'An internal role BA uses for administrative tasks, such as running upgrades and automations.',
   },
   {
     name: 'pgbouncer',
@@ -105,7 +105,7 @@ export const QUERY_PERFORMANCE_TIME_RANGES = [
 
 export const getPgStatMonitorLogsQuery = (startTime: string, endTime: string) =>
   `
-select 
+select
   id,
   pgl.timestamp as timestamp,
   'postgres' as log_type,

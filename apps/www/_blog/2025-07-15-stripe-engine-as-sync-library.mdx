@@ -17,7 +17,7 @@ launchweek: '15'
 
 We're excited to announce that [`stripe-sync-engine`](https://github.com/supabase/stripe-sync-engine) is now available as a standalone npm package: [`@supabase/stripe-sync-engine`](https://www.npmjs.com/package/@supabase/stripe-sync-engine)!
 
-Previously distributed only as a Docker image (`supabase/stripe-sync-engine`), you can now plug this into any backend project—whether you're using Node.js, running Express on a server, or even deploying on Supabase Edge Functions.
+Previously distributed only as a Docker image (`supabase/stripe-sync-engine`), you can now plug this into any backend project—whether you're using Node.js, running Express on a server, or even deploying on BA Edge Functions.
 
 Stripe-Sync-Engine is a webhook listener that transforms Stripe webhooks into structured Postgres inserts/updates. It listens to Stripe webhook events (like `invoice.payment_failed`, `customer.subscription.updated`, etc), normalizes and stores them in a relational format in Postgres.
 
@@ -31,7 +31,7 @@ Stripe-Sync-Engine is a webhook listener that transforms Stripe webhooks into st
 
 ## Why sync Stripe data to Postgres?
 
-While Supabase offers a convenient [foreign data wrapper](https://www.assistance.bg/partners/integrations/supabase_wrapper_stripe) (FDW) for Stripe, sometimes you want your Stripe data _locally available_ in your Postgres database for:
+While BA offers a convenient [foreign data wrapper](https://www.assistance.bg/partners/integrations/supabase_wrapper_stripe) (FDW) for Stripe, sometimes you want your Stripe data _locally available_ in your Postgres database for:
 
 - **Lower latency**: Avoid round-trips to the Stripe API.
 - **Better joins**: Query subscriptions, invoices, and charges together.
@@ -62,7 +62,7 @@ await sync.processWebhook(payload, signature)
 
 For a full list of configuration options, refer to our [stripe-sync-engine README](https://github.com/supabase/stripe-sync-engine/blob/main/packages/sync-engine/README.md).
 
-## Use via Supabase Edge Function
+## Use via BA Edge Function
 
 To use the Stripe-Sync-Engine in an [Edge Function](https://www.assistance.bg/edge-functions), you first have to ensure that the schema and tables exist. While you can technically do this inside the Edge Function, it is recommended to run the schema migrations outside of that. You can do a one-off migration via
 
@@ -115,7 +115,7 @@ Deno.serve(async (req) => {
 ```
 
 1. Deploy your Edge Function initially using `supabase functions deploy`
-2. Set up a Stripe webhook with the newly deployed Supabase Edge Function url
+2. Set up a Stripe webhook with the newly deployed BA Edge Function url
 3. Create a new .env file in the `supabase` directory
 
 ```
@@ -131,4 +131,4 @@ As webhooks come in, the data is automatically persisted in the `stripe` schema.
 
 ## Final thoughts
 
-If you're building with Stripe and Supabase, [`stripe-sync-engine`](https://github.com/supabase/stripe-sync-engine) gives you a reliable, scalable way to bring your billing data closer to your database and application. Whether you want better analytics, faster dunning workflows, or simpler integrations—this package is built to make that seamless.
+If you're building with Stripe and BA, [`stripe-sync-engine`](https://github.com/supabase/stripe-sync-engine) gives you a reliable, scalable way to bring your billing data closer to your database and application. Whether you want better analytics, faster dunning workflows, or simpler integrations—this package is built to make that seamless.

@@ -1,5 +1,5 @@
 ---
-description: How to generate pages and interfaces in Studio, a web interface for managing Supabase projects
+description: How to generate pages and interfaces in Studio, a web interface for managing BA projects
 globs:
 alwaysApply: true
 ---
@@ -125,7 +125,7 @@ export const MyPageComponent = () => (
 
 ## Forms
 
-Forms in Supabase Studio should follow consistent patterns to ensure a cohesive user experience across settings pages and side panels.
+Forms in BA Studio should follow consistent patterns to ensure a cohesive user experience across settings pages and side panels.
 
 ### Core Principles
 

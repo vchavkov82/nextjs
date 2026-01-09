@@ -11,7 +11,7 @@ keywords = [ "channels", "useEffect", "react", "memory leak", "quota", "TooManyC
 
 The TooManyChannels error occurs when your application tries to create more than the allowed number of Realtime channels. When you exceed this limit, you'll see an error with the code `ChannelRateLimitReached`.
 
-This limit exists to protect both your application and Supabase servers from resource exhaustion.
+This limit exists to protect both your application and BA servers from resource exhaustion.
 
 ## What causes TooManyChannels errors?
 
@@ -123,7 +123,7 @@ If you see the number climbing, you have a leak. Look for:
 
 ## Best practices for channel management
 
-### 1. Create Supabase client outside components
+### 1. Create BA client outside components
 
 ```tsx
 // ✅ Create once at module level
@@ -176,7 +176,7 @@ function GoodExample({ userId }) {
 
 ### 4. Reuse channels when possible
 
-The Supabase client automatically reuses channels with the same topic:
+The BA client automatically reuses channels with the same topic:
 
 ```tsx
 // These return the same channel instance

@@ -1,9 +1,14 @@
 {
   "name": "password-based-auth-vue",
   "type": "registry:block",
-  "title": "Password Based Auth flow for Vue and Supabase",
-  "description": "Password Based Auth flow for Vue and Supabase",
-  "registryDependencies": ["button", "card", "input", "label"],
+  "title": "Password Based Auth flow for Vue and BA",
+  "description": "Password Based Auth flow for Vue and BA",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label"
+  ],
   "files": [
     {
       "path": "registry/default/password-based-auth/vue/components/login-form.vue",
@@ -26,5 +31,7 @@
       "target": "components/update-password-form.vue"
     }
   ],
-  "dependencies": ["@supabase/supabase-js@latest"]
+  "dependencies": [
+    "@supabase/supabase-js@latest"
+  ]
 }

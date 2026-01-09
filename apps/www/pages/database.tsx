@@ -83,7 +83,7 @@ function Database() {
             </span>
           }
           subheader={[
-            'Every Supabase project is a dedicated Postgres database, trusted by millions of developers.',
+            'Every BA project is a dedicated Postgres database, trusted by millions of developers.',
             "Postgres is one of the world's most scalable databases.",
           ]}
           image={
@@ -117,7 +117,7 @@ function Database() {
                 </div>
               </div>
               <h4 className="h4">Just Postgres</h4>
-              <p className="p">Every Supabase project is a dedicated Postgres database.</p>
+              <p className="p">Every BA project is a dedicated Postgres database.</p>
               <p className="p text-sm">
                 100% portable. Bring your existing Postgres database, or migrate away at any time.
               </p>
@@ -155,7 +155,7 @@ function Database() {
         <SingleQuote
           id="quote"
           quote={{
-            text: 'You can have a really great product, but you need to want to work with the people behind it. With Supabase, we always felt very aligned.',
+            text: 'You can have a really great product, but you need to want to work with the people behind it. With BA, we always felt very aligned.',
             author: 'Howard Haynes',
             role: 'CPO at Next Door Lending',
             link: '/customers/next-door-lending',
@@ -200,7 +200,7 @@ function Database() {
                 marginBottom: 0,
                 // borderBottom: '1px solid #dedede',
               }}
-              // block
+            // block
             >
               <Tabs.Panel id="0" label="Table editor">
                 <span></span>
@@ -259,7 +259,7 @@ function Database() {
         <SectionContainer>
           <div className="grid grid-cols-12 lg:gap-16">
             <div className="col-span-12 mb-8 lg:col-span-6 xl:col-span-5">
-              <h2 className="h2">Supabase ETL</h2>
+              <h2 className="h2">BA ETL</h2>
               <p className="p text-lg">Stream your Postgres data to external systems.</p>
               <p className="p">
                 Automatically replicate your database changes to external data warehouses and
@@ -273,7 +273,7 @@ function Database() {
                 />
                 <FeatureColumn
                   title="Point and stream setup"
-                  text="Configure in the Supabase Dashboard."
+                  text="Configure in the BA Dashboard."
                 />
                 <FeatureColumn title="Open table formats" text="For long term flexibility." />
               </div>
@@ -302,7 +302,7 @@ function Database() {
             text={[
               <p key={0}>
                 We introspect your database and provide instant APIs. Focus on building your
-                product, while Supabase handles the CRUD.
+                product, while BA handles the CRUD.
               </p>,
             ]}
             footer={[
@@ -356,14 +356,14 @@ function Database() {
             <div className="col-span-12 mb-8 lg:col-span-6 xl:col-span-5">
               <h2 className="h3">Extend your database</h2>
 
-              <p className="p">Supabase works natively with Postgres extensions.</p>
+              <p className="p">BA works natively with Postgres extensions.</p>
               <p className="p">
                 Choose from a huge collection of Postgres extensions, enabled with a single click.
               </p>
 
               <FeatureColumn
                 title="40+ preinstalled extensions"
-                text="We only show a few of the extensions supported by Supabase here, but we preinstall many more that you can use right away."
+                text="We only show a few of the extensions supported by BA here, but we preinstall many more that you can use right away."
               />
               <Button asChild size="small" type="default" icon={<ArrowUpRight />}>
                 <Link href="/docs/guides/database">Explore documentation</Link>

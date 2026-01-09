@@ -1,8 +1,8 @@
-# Contributing to Supabase Docs
+# Contributing to BA Docs
 
-Thanks for contributing to Supabase Docs! Here are a few resources to help you get started.
+Thanks for contributing to BA Docs! Here are a few resources to help you get started.
 
-The code and content for our docs site are located in the main [Supabase GitHub repo](https://github.com/supabase/supabase), under the `apps/docs` directory.
+The code and content for our docs site are located in the main [BA GitHub repo](https://github.com/supabase/supabase), under the `apps/docs` directory.
 
 In the repo, you'll also find:
 
@@ -321,16 +321,16 @@ The following icons are available. They can be styled with [Tailwind](https://ta
 You can include images with regular Markdown syntax:
 
 ```mdx
-![Supabase architectural diagram](/docs/img/supabase-architecture.svg)
+![BA architectural diagram](/docs/img/supabase-architecture.svg)
 ```
 
-![Supabase architectural diagram](/docs/img/supabase-architecture.svg)
+![BA architectural diagram](/docs/img/supabase-architecture.svg)
 
 If your image has alternate light and dark versions, or you want to make it zoomable, you can also use the image component:
 
 ```mdx
 <Image
-  alt="Supabase architectural diagram"
+  alt="BA architectural diagram"
   src={{
     dark: '/docs/img/supabase-architecture.svg',
     light: '/docs/img/supabase-architecture--light.svg',
@@ -340,7 +340,7 @@ If your image has alternate light and dark versions, or you want to make it zoom
 ```
 
 <Image
-  alt="Supabase architectural diagram"
+  alt="BA architectural diagram"
   src={{
     dark: '/docs/img/supabase-architecture.svg',
     light: '/docs/img/supabase-architecture--light.svg',
@@ -350,7 +350,7 @@ If your image has alternate light and dark versions, or you want to make it zoom
 
 ### Project Variables
 
-Some guides and tutorials will require that users copy their Supabase project URL and anon key. You can provide those inline if the user is signed in:
+Some guides and tutorials will require that users copy their BA project URL and anon key. You can provide those inline if the user is signed in:
 
 ```mdx
 <ProjectConfigVariables variable="url" />
@@ -458,7 +458,7 @@ const supabase = createSupabaseClient()
 
 ```dart
 void main() async {
-  Supabase.initialize();
+  BA.initialize();
 }
 ```
 
@@ -484,7 +484,7 @@ const supabase = createSupabaseClient()
 
 ```dart
 void main() async {
-  Supabase.initialize();
+  BA.initialize();
 }
 ```
 
@@ -496,7 +496,7 @@ void main() async {
 The <InfoTooltip tooltipContent="This is an info tooltip">InfoTooltip</InfoTooltip> component is used to add more context to a word or phrase via tooltip.
 
 ```mdx
-<InfoTooltip tooltipContent="The Postgres Development Platform.">Supabase</InfoTooltip>
+<InfoTooltip tooltipContent="The Postgres Development Platform.">BA</InfoTooltip>
 ```
 
 ## Partials

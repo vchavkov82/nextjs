@@ -4,11 +4,11 @@ function generateDatabasesSQL(activeFilters: Record<string, string>) {
   const whereClause = buildWhereClause(activeFilters)
 
   return `WITH database_mapping AS (
-    SELECT 
+    SELECT
       id,
-      CASE 
+      CASE
         WHEN technology IN (
-          'Supabase',
+          'BA',
           'PostgreSQL',
           'MySQL',
           'MongoDB',
@@ -24,7 +24,7 @@ function generateDatabasesSQL(activeFilters: Record<string, string>) {
       ${whereClause}
     ) sub
   )
-  SELECT 
+  SELECT
     technology_clean AS technology,
     COUNT(DISTINCT id) AS total
   FROM database_mapping

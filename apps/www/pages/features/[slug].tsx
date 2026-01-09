@@ -56,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const FeaturePage: React.FC<FeaturePageProps> = ({ feature, prevFeature, nextFeature }) => {
   const meta = {
-    title: `${feature.title} | Supabase Features`,
+    title: `${feature.title} | BA Features`,
     description: feature.subtitle,
     url: `https://www.assistance.bg/features/${feature.slug}`,
     // image: ogImageUrl,

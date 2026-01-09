@@ -19,7 +19,7 @@ export function EventClientRenderer({
       <DefaultLayout className="flex flex-col">
         <SectionContainer className="border-x border-b !py-8">
           <h1 className="h3 !p-0 !m-0">
-            <span className="sr-only">Supabase</span> Events
+            <span className="sr-only">BA</span> Events
           </h1>
           <p className="text-foreground-light">Join us at the following upcoming events</p>
         </SectionContainer>

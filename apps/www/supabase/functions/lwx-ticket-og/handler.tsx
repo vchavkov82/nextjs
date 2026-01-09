@@ -22,9 +22,8 @@ export async function handler(req: Request) {
     } = await req.json()
 
     const timestamp = encodeURI(new Date().toISOString())
-    const ticketImg = `${STORAGE_URL}/tickets/${
-      platinum ? 'platinum' : 'regular'
-    }/${BUCKET_FOLDER_VERSION}/${username}.png?t=${timestamp}`
+    const ticketImg = `${STORAGE_URL}/tickets/${platinum ? 'platinum' : 'regular'
+      }/${BUCKET_FOLDER_VERSION}/${username}.png?t=${timestamp}`
 
     const ticketWidth = 1100
     const ticketHeight = ticketWidth / 2
@@ -76,9 +75,9 @@ export async function handler(req: Request) {
 
     // Upload image to storage.
     const supabaseAdminClient = createClient(
-      // Supabase API URL - env var exported by default when deployed.
+      // BA API URL - env var exported by default when deployed.
       Deno.env.get('MISC_USE_URL') ?? '',
-      // Supabase API SERVICE ROLE KEY - env var exported by default when deployed.
+      // BA API SERVICE ROLE KEY - env var exported by default when deployed.
       Deno.env.get('MISC_USE_ANON_KEY') ?? ''
     )
 

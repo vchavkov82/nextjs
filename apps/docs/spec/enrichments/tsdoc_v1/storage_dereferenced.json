@@ -13,7 +13,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/StorageClient.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/StorageClient.ts",
       "children": [
         {
           "id": 313,
@@ -384,7 +384,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [347]
+                              "children": [
+                                347
+                              ]
                             }
                           ],
                           "sources": [
@@ -476,7 +478,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [349, 350]
+                              "children": [
+                                349,
+                                350
+                              ]
                             }
                           ],
                           "sources": [
@@ -617,7 +622,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [376]
+                                          "children": [
+                                            376
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -670,7 +677,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [374, 377]
+                              "children": [
+                                374,
+                                377
+                              ]
                             }
                           ],
                           "sources": [
@@ -811,7 +821,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [368]
+                                          "children": [
+                                            368
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -864,7 +876,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [366, 369]
+                              "children": [
+                                366,
+                                369
+                              ]
                             }
                           ],
                           "sources": [
@@ -1068,7 +1083,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [340, 341]
+                              "children": [
+                                340,
+                                341
+                              ]
                             }
                           ],
                           "sources": [
@@ -1204,7 +1222,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [334, 335]
+                              "children": [
+                                334,
+                                335
+                              ]
                             }
                           ],
                           "sources": [
@@ -1320,7 +1341,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [356]
+                              "children": [
+                                356
+                              ]
                             }
                           ],
                           "sources": [
@@ -1402,7 +1425,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [360]
+                                          "children": [
+                                            360
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -1455,7 +1480,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [358, 361]
+                              "children": [
+                                358,
+                                361
+                              ]
                             }
                           ],
                           "sources": [
@@ -1495,17 +1523,31 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [314]
+              "children": [
+                314
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [330, 326, 325]
+              "children": [
+                330,
+                326,
+                325
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [342, 370, 362, 322, 336, 331, 351]
+              "children": [
+                342,
+                370,
+                362,
+                322,
+                336,
+                331,
+                351
+              ]
             }
           ],
           "sources": [
@@ -1528,7 +1570,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [313]
+          "children": [
+            313
+          ]
         }
       ],
       "sources": [
@@ -1547,7 +1591,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/index.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/index.ts",
       "children": [
         {
           "id": 381,
@@ -1634,7 +1678,16 @@
         {
           "title": "References",
           "kind": 16777216,
-          "children": [381, 382, 384, 386, 385, 383, 379, 380]
+          "children": [
+            381,
+            382,
+            384,
+            386,
+            385,
+            383,
+            379,
+            380
+          ]
         }
       ],
       "sources": [
@@ -1653,7 +1706,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/StorageBucketApi.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/StorageBucketApi.ts",
       "children": [
         {
           "id": 107,
@@ -1999,7 +2052,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [138]
+                              "children": [
+                                138
+                              ]
                             }
                           ],
                           "sources": [
@@ -2091,7 +2146,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [140, 141]
+                              "children": [
+                                140,
+                                141
+                              ]
                             }
                           ],
                           "sources": [
@@ -2222,7 +2280,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [167]
+                                          "children": [
+                                            167
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -2275,7 +2335,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [165, 168]
+                              "children": [
+                                165,
+                                168
+                              ]
                             }
                           ],
                           "sources": [
@@ -2406,7 +2469,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [159]
+                                          "children": [
+                                            159
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -2459,7 +2524,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [157, 160]
+                              "children": [
+                                157,
+                                160
+                              ]
                             }
                           ],
                           "sources": [
@@ -2600,7 +2668,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [131, 132]
+                              "children": [
+                                131,
+                                132
+                              ]
                             }
                           ],
                           "sources": [
@@ -2726,7 +2797,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [125, 126]
+                              "children": [
+                                125,
+                                126
+                              ]
                             }
                           ],
                           "sources": [
@@ -2832,7 +2906,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [147]
+                              "children": [
+                                147
+                              ]
                             }
                           ],
                           "sources": [
@@ -2914,7 +2990,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [151]
+                                          "children": [
+                                            151
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -2967,7 +3045,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [149, 152]
+                              "children": [
+                                149,
+                                152
+                              ]
                             }
                           ],
                           "sources": [
@@ -2997,17 +3078,30 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [114]
+              "children": [
+                114
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [113, 109, 108]
+              "children": [
+                113,
+                109,
+                108
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [133, 161, 153, 127, 122, 142]
+              "children": [
+                133,
+                161,
+                153,
+                127,
+                122,
+                142
+              ]
             }
           ],
           "sources": [
@@ -3030,7 +3124,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [107]
+          "children": [
+            107
+          ]
         }
       ],
       "sources": [
@@ -3049,7 +3145,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/StorageFileApi.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/StorageFileApi.ts",
       "children": [
         {
           "id": 170,
@@ -3581,7 +3677,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [234]
+                                          "children": [
+                                            234
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -3634,7 +3732,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [232, 235]
+                              "children": [
+                                232,
+                                235
+                              ]
                             }
                           ],
                           "sources": [
@@ -3781,7 +3882,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [243]
+                                          "children": [
+                                            243
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -3863,7 +3966,11 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [241, 244, 245]
+                              "children": [
+                                241,
+                                244,
+                                245
+                              ]
                             }
                           ],
                           "sources": [
@@ -4073,7 +4180,11 @@
                                           {
                                             "title": "Variables",
                                             "kind": 32,
-                                            "children": [253, 254, 255]
+                                            "children": [
+                                              253,
+                                              254,
+                                              255
+                                            ]
                                           }
                                         ],
                                         "sources": [
@@ -4127,7 +4238,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [251, 256]
+                              "children": [
+                                251,
+                                256
+                              ]
                             }
                           ],
                           "sources": [
@@ -4267,7 +4381,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [261, 262]
+                              "children": [
+                                261,
+                                262
+                              ]
                             }
                           ],
                           "sources": [
@@ -4395,7 +4512,9 @@
                                     {
                                       "title": "Variables",
                                       "kind": 32,
-                                      "children": [269]
+                                      "children": [
+                                        269
+                                      ]
                                     }
                                   ],
                                   "sources": [
@@ -4477,7 +4596,11 @@
                         {
                           "title": "Variables",
                           "kind": 32,
-                          "children": [267, 270, 271]
+                          "children": [
+                            267,
+                            270,
+                            271
+                          ]
                         }
                       ],
                       "sources": [
@@ -4700,7 +4823,12 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [100, 101, 103, 102]
+                              "children": [
+                                100,
+                                101,
+                                103,
+                                102
+                              ]
                             }
                           ],
                           "sources": [
@@ -4764,7 +4892,9 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [14]
+                              "children": [
+                                14
+                              ]
                             }
                           ],
                           "sources": [
@@ -4859,7 +4989,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [284, 285]
+                              "children": [
+                                284,
+                                285
+                              ]
                             }
                           ],
                           "sources": [
@@ -5006,7 +5139,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [225]
+                                          "children": [
+                                            225
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -5059,7 +5194,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [223, 226]
+                              "children": [
+                                223,
+                                226
+                              ]
                             }
                           ],
                           "sources": [
@@ -5206,7 +5344,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [276, 277]
+                              "children": [
+                                276,
+                                277
+                              ]
                             }
                           ],
                           "sources": [
@@ -5455,7 +5596,11 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [96, 97, 98]
+                              "children": [
+                                96,
+                                97,
+                                98
+                              ]
                             }
                           ],
                           "sources": [
@@ -5537,7 +5682,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [216]
+                                          "children": [
+                                            216
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -5590,7 +5737,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [214, 217]
+                              "children": [
+                                214,
+                                217
+                              ]
                             }
                           ],
                           "sources": [
@@ -5839,7 +5989,11 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [96, 97, 98]
+                              "children": [
+                                96,
+                                97,
+                                98
+                              ]
                             }
                           ],
                           "sources": [
@@ -5921,7 +6075,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [206]
+                                          "children": [
+                                            206
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -5974,7 +6130,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [204, 207]
+                              "children": [
+                                204,
+                                207
+                              ]
                             }
                           ],
                           "sources": [
@@ -6249,7 +6408,11 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [96, 97, 98]
+                              "children": [
+                                96,
+                                97,
+                                98
+                              ]
                             }
                           ],
                           "sources": [
@@ -6331,7 +6494,9 @@
                                         {
                                           "title": "Variables",
                                           "kind": 32,
-                                          "children": [196]
+                                          "children": [
+                                            196
+                                          ]
                                         }
                                       ],
                                       "sources": [
@@ -6384,7 +6549,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [194, 197]
+                              "children": [
+                                194,
+                                197
+                              ]
                             }
                           ],
                           "sources": [
@@ -6414,17 +6582,38 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [178]
+              "children": [
+                178
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [176, 177, 172, 171]
+              "children": [
+                176,
+                177,
+                172,
+                171
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [286, 289, 227, 236, 246, 257, 263, 278, 218, 272, 208, 198, 187]
+              "children": [
+                286,
+                289,
+                227,
+                236,
+                246,
+                257,
+                263,
+                278,
+                218,
+                272,
+                208,
+                198,
+                187
+              ]
             }
           ],
           "sources": [
@@ -6506,7 +6695,11 @@
             {
               "title": "Variables",
               "kind": 32,
-              "children": [299, 300, 301]
+              "children": [
+                299,
+                300,
+                301
+              ]
             }
           ],
           "sources": [
@@ -6618,7 +6811,10 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [296, 297]
+                  "children": [
+                    296,
+                    297
+                  ]
                 }
               ],
               "sources": [
@@ -6638,12 +6834,17 @@
             {
               "title": "Variables",
               "kind": 32,
-              "children": [293, 294]
+              "children": [
+                293,
+                294
+              ]
             },
             {
               "title": "Object literals",
               "kind": 2097152,
-              "children": [295]
+              "children": [
+                295
+              ]
             }
           ],
           "sources": [
@@ -6663,12 +6864,17 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [170]
+          "children": [
+            170
+          ]
         },
         {
           "title": "Object literals",
           "kind": 2097152,
-          "children": [298, 292]
+          "children": [
+            298,
+            292
+          ]
         }
       ],
       "sources": [
@@ -6687,7 +6893,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/constants.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/constants.ts",
       "children": [
         {
           "id": 4,
@@ -6725,7 +6931,9 @@
             {
               "title": "Variables",
               "kind": 32,
-              "children": [5]
+              "children": [
+                5
+              ]
             }
           ],
           "sources": [
@@ -6745,7 +6953,9 @@
         {
           "title": "Object literals",
           "kind": 2097152,
-          "children": [4]
+          "children": [
+            4
+          ]
         }
       ],
       "sources": [
@@ -6764,7 +6974,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/fetch.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/fetch.ts",
       "children": [
         {
           "id": 7,
@@ -6882,7 +7092,10 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [8, 12]
+              "children": [
+                8,
+                12
+              ]
             }
           ],
           "sources": [
@@ -6928,7 +7141,9 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [14]
+              "children": [
+                14
+              ]
             }
           ],
           "sources": [
@@ -7234,7 +7449,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -7294,7 +7512,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -7613,7 +7833,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -7673,7 +7896,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -7926,7 +8151,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -7987,7 +8215,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -8284,7 +8514,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -8345,7 +8578,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -8589,7 +8824,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -8650,7 +8888,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -8894,7 +9134,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [8, 12]
+                          "children": [
+                            8,
+                            12
+                          ]
                         }
                       ],
                       "sources": [
@@ -8955,7 +9198,9 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [14]
+                          "children": [
+                            14
+                          ]
                         }
                       ],
                       "sources": [
@@ -8994,17 +9239,32 @@
         {
           "title": "Interfaces",
           "kind": 256,
-          "children": [7, 13]
+          "children": [
+            7,
+            13
+          ]
         },
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [15, 16]
+          "children": [
+            15,
+            16
+          ]
         },
         {
           "title": "Functions",
           "kind": 64,
-          "children": [17, 24, 33, 41, 20, 47, 54, 61]
+          "children": [
+            17,
+            24,
+            33,
+            41,
+            20,
+            47,
+            54,
+            61
+          ]
         }
       ],
       "sources": [
@@ -9023,7 +9283,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/helpers.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/helpers.ts",
       "children": [
         {
           "id": 69,
@@ -9122,12 +9382,16 @@
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [69]
+          "children": [
+            69
+          ]
         },
         {
           "title": "Functions",
           "kind": 64,
-          "children": [70]
+          "children": [
+            70
+          ]
         }
       ],
       "sources": [
@@ -9146,7 +9410,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/index.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/index.ts",
       "children": [
         {
           "id": 305,
@@ -9243,7 +9507,17 @@
         {
           "title": "References",
           "kind": 16777216,
-          "children": [305, 311, 306, 308, 310, 309, 307, 303, 304]
+          "children": [
+            305,
+            311,
+            306,
+            308,
+            310,
+            309,
+            307,
+            303,
+            304
+          ]
         }
       ],
       "sources": [
@@ -9262,7 +9536,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/types.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/types.ts",
       "children": [
         {
           "id": 74,
@@ -9398,7 +9672,14 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [78, 75, 76, 77, 80, 79]
+              "children": [
+                78,
+                75,
+                76,
+                77,
+                80,
+                79
+              ]
             }
           ],
           "sources": [
@@ -9619,7 +9900,17 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [83, 91, 87, 85, 88, 89, 82, 84, 86]
+              "children": [
+                83,
+                91,
+                87,
+                85,
+                88,
+                89,
+                82,
+                84,
+                86
+              ]
             }
           ],
           "sources": [
@@ -9738,7 +10029,11 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [96, 97, 98]
+              "children": [
+                96,
+                97,
+                98
+              ]
             }
           ],
           "sources": [
@@ -9783,7 +10078,9 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [105]
+              "children": [
+                105
+              ]
             }
           ],
           "sources": [
@@ -9932,7 +10229,12 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [100, 101, 103, 102]
+              "children": [
+                100,
+                101,
+                103,
+                102
+              ]
             }
           ],
           "sources": [
@@ -10017,7 +10319,10 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [93, 94]
+              "children": [
+                93,
+                94
+              ]
             }
           ],
           "sources": [
@@ -10033,7 +10338,14 @@
         {
           "title": "Interfaces",
           "kind": 256,
-          "children": [74, 81, 95, 104, 99, 92]
+          "children": [
+            74,
+            81,
+            95,
+            104,
+            99,
+            92
+          ]
         }
       ],
       "sources": [
@@ -10052,7 +10364,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/storage-js/src/lib/version.ts",
+      "originalName": "/Users/copple/Projects/BA/storage-js/src/lib/version.ts",
       "children": [
         {
           "id": 2,
@@ -10081,7 +10393,9 @@
         {
           "title": "Variables",
           "kind": 32,
-          "children": [2]
+          "children": [
+            2
+          ]
         }
       ],
       "sources": [
@@ -10097,7 +10411,18 @@
     {
       "title": "Modules",
       "kind": 1,
-      "children": [312, 378, 106, 169, 3, 6, 68, 302, 73, 1]
+      "children": [
+        312,
+        378,
+        106,
+        169,
+        3,
+        6,
+        68,
+        302,
+        73,
+        1
+      ]
     }
   ]
 }

@@ -6,7 +6,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/89h9ROOs_400x400.jpg',
   },
   {
-    text: 'I’ve always used Supabase just as a database.\n\nYesterday, I helped debug a founder’s vibe-coding project built with React + React Router — no backend server.\nThe “backend” was entirely Supabase Edge Functions as the API.\nFirst time using Supabase this way.\nImpressive.',
+    text: 'I’ve always used BA just as a database.\n\nYesterday, I helped debug a founder’s vibe-coding project built with React + React Router — no backend server.\nThe “backend” was entirely BA Edge Functions as the API.\nFirst time using BA this way.\nImpressive.',
     url: 'https://x.com/MinimEditor/status/1954422981708722372',
     handle: 'MinimEditor',
     img_url: '/images/twitter-profiles/5KvPPRZz_400x400.jpg',
@@ -18,7 +18,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/JwLEqyeo_400x400.jpg',
   },
   {
-    text: 'Loving #Supabase MCP. Claude Code would not only plan what data we should save but also figure out a migration script by checking what the schema looks like on Supabase via MCP.',
+    text: 'Loving #BA MCP. Claude Code would not only plan what data we should save but also figure out a migration script by checking what the schema looks like on BA via MCP.',
     url: 'https://x.com/sdusteric/status/1957703488470921550',
     handle: 'sdusteric',
     img_url: '/images/twitter-profiles/FQsUZJMC_400x400.jpg',
@@ -36,7 +36,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/ZmOmQeTl_400x400.jpg',
   },
   {
-    text: 'Love supabse edge functions. Cursor+Supabase+MCP+Docker desktop is all I need',
+    text: 'Love supabse edge functions. Cursor+BA+MCP+Docker desktop is all I need',
     url: 'https://x.com/adm_lawson/status/1958216298309066887',
     handle: 'adm_lawson',
     img_url: '/images/twitter-profiles/I5pY1PAA_400x400.jpg',
@@ -54,25 +54,25 @@ const tweets = [
     img_url: '/images/twitter-profiles/T42R9GFf_400x400.jpg',
   },
   {
-    text: "After a week of diving deep into Supabase for my new SaaS project, I'm really impressed with its Auth and RLS features. It makes security much simpler for solo founders. #buildinpublic #SaaS",
+    text: "After a week of diving deep into BA for my new SaaS project, I'm really impressed with its Auth and RLS features. It makes security much simpler for solo founders. #buildinpublic #SaaS",
     url: 'https://x.com/Rodrigo66799141/status/1959246083957100851',
     handle: 'Rodrigo66799141',
     img_url: '/images/twitter-profiles/ukFtCkww_400x400.jpg',
   },
   {
-    text: 'Lately been using Supabase over AWS/ GCP for products to save on costs and rapid builds(Vibe Code) that do not need all the Infra and the hefty costs that come with AWS/ GCP out the door. Great solution overall.',
+    text: 'Lately been using BA over AWS/ GCP for products to save on costs and rapid builds(Vibe Code) that do not need all the Infra and the hefty costs that come with AWS/ GCP out the door. Great solution overall.',
     url: 'https://x.com/xthemadgeniusx/status/1960049950110384250',
     handle: 'xthemadgeniusx',
     img_url: '/images/twitter-profiles/XE8Oyngj_400x400.jpg',
   },
   {
-    text: 'I love everything about Supabase.',
+    text: 'I love everything about BA.',
     url: 'https://x.com/pontusab/status/1958603243401183701',
     handle: 'pontusab',
     img_url: '/images/twitter-profiles/JwLEqyeo_400x400.jpg',
   },
   {
-    text: 'Love how Supabase makes full stack features this easy. Using it with Next.js and loving the experience!',
+    text: 'Love how BA makes full stack features this easy. Using it with Next.js and loving the experience!',
     url: 'https://x.com/viratt_mankali/status/1963290133421240591',
     handle: 'viratt_mankali',
     img_url: '/images/twitter-profiles/GtrVV2dD_400x400.jpg',
@@ -138,7 +138,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/rWX8Jzp5_400x400.jpg',
   },
   {
-    text: 'There are a lot of indie hackers building in public, but it’s rare to see a startup shipping as consistently and transparently as Supabase. Their upcoming March releases look to be 🔥 Def worth a follow!',
+    text: 'There are a lot of indie hackers building in public, but it’s rare to see a startup shipping as consistently and transparently as BA. Their upcoming March releases look to be 🔥 Def worth a follow!',
     url: 'https://twitter.com/swyx/status/1366685025047994373',
     handle: 'swyx',
     img_url: '/images/twitter-profiles/qhvO9V6x_400x400.jpg',
@@ -150,13 +150,13 @@ const tweets = [
     img_url: '/images/twitter-profiles/_ki30kYo_400x400.jpg',
   },
   {
-    text: 'Badass! Supabase is amazing. literally saves our small team a whole engineer’s worth of work constantly. The founders and everyone I’ve chatted with at supabase are just awesome people as well :)',
+    text: 'Badass! BA is amazing. literally saves our small team a whole engineer’s worth of work constantly. The founders and everyone I’ve chatted with at supabase are just awesome people as well :)',
     url: 'https://twitter.com/KennethCassel/status/1524359528619384834',
     handle: 'KennethCassel',
     img_url: '/images/twitter-profiles/pmQj3TX-_400x400.jpg',
   },
   {
-    text: 'Working with Supabase is just fun. It makes working with a DB so much easier.',
+    text: 'Working with BA is just fun. It makes working with a DB so much easier.',
     url: 'https://twitter.com/the_BrianB/status/1524716498442276864',
     handle: 'the_BrianB',
     img_url: '/images/twitter-profiles/7NITI8Z3_400x400.jpg',
@@ -192,7 +192,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/1PH2mt6v_400x400.jpg',
   },
   {
-    text: "I gave @supabase a try this weekend and I was able to create a quick dashboard to visualize the data from the PostgreSQL instance. It's super easy to use Supabase's API or the direct DB connection. Check out the tutorial 📖",
+    text: "I gave @supabase a try this weekend and I was able to create a quick dashboard to visualize the data from the PostgreSQL instance. It's super easy to use BA's API or the direct DB connection. Check out the tutorial 📖",
     url: 'https://twitter.com/razvanilin/status/1363770020581412867',
     handle: 'razvanilin',
     img_url: '/images/twitter-profiles/AiaH9vJ2_400x400.jpg',
@@ -222,7 +222,7 @@ const tweets = [
     img_url: '/images/twitter-profiles/v6citnk33y2wpeyzrq05_400x400.jpeg',
   },
   {
-    text: 'Honestly Supabase is such a killer Firebase alternative.',
+    text: 'Honestly BA is such a killer Firebase alternative.',
     url: 'https://twitter.com/XPCheese/status/1360229397735895043',
     handle: 'XPCheese',
     img_url: '/images/twitter-profiles/eYP6YXr7_400x400.jpg',
@@ -265,13 +265,13 @@ const tweets = [
     img_url: '/images/twitter-profiles/Os4nhKIr_400x400.jpg',
   },
   {
-    text: 'Supabase team is doing some awesome stuff #supabase #facts @supabase',
+    text: 'BA team is doing some awesome stuff #supabase #facts @supabase',
     url: 'https://twitter.com/_strawbird/status/1372607500499841025',
     handle: '_strawbird',
     img_url: '/images/twitter-profiles/iMBvvQdn_400x400.jpg',
   },
   {
-    text: 'I just learned about @supabase and im in love 😍 Supabase is an open source Firebase alternative! EarListen (& react) to database changes 💁 Manage users & permissions 🔧 Simple UI for database interaction',
+    text: 'I just learned about @supabase and im in love 😍 BA is an open source Firebase alternative! EarListen (& react) to database changes 💁 Manage users & permissions 🔧 Simple UI for database interaction',
     url: 'https://twitter.com/0xBanana/status/1373677301905362948',
     handle: '0xBanana',
     img_url: '/images/twitter-profiles/pgHIGqZ0_400x400.jpg',
@@ -284,14 +284,14 @@ const tweets = [
     weight: 10,
   },
   {
-    text: `Okay, I finally tried Supabase today and wow... why did I wait so long? 😅 Went from 'how do I even start' to having auth + database + real-time updates working in like 20 minutes. Sometimes the hype is actually justified! #Supabase`,
+    text: `Okay, I finally tried BA today and wow... why did I wait so long? 😅 Went from 'how do I even start' to having auth + database + real-time updates working in like 20 minutes. Sometimes the hype is actually justified! #BA`,
     url: 'https://x.com/Aliahsan_sfv/status/1967167095894098210',
     handle: 'Aliahsan_sfv',
     img_url: '/images/twitter-profiles/2SQwtv8c_400x400.jpg',
     weight: 9,
   },
   {
-    text: `Supabase is the best product experience I've had in years.\nNot just tech - taste.\nFrom docs to latency to the URL structure that makes you think "oh, that's obvious"\nFeels like every other platform should study how they built it\n@supabase I love you`,
+    text: `BA is the best product experience I've had in years.\nNot just tech - taste.\nFrom docs to latency to the URL structure that makes you think "oh, that's obvious"\nFeels like every other platform should study how they built it\n@supabase I love you`,
     url: 'https://x.com/yatsiv_yuriy/status/1979182362480071162',
     handle: 'yatsiv_yuriy',
     img_url: '/images/twitter-profiles/Y1swF6ef_400x400.jpg',

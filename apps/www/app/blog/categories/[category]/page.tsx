@@ -28,7 +28,7 @@ export async function generateMetadata({
   const capitalizedCategory = capitalize(params?.category.replaceAll('-', ' '))
   return {
     title: `Blog | ${capitalizedCategory}`,
-    description: 'Latest news from the Supabase team.',
+    description: 'Latest news from the BA team.',
   }
 }
 

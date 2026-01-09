@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from '../supabase/client'
 export default defineNuxtRouteMiddleware(async (to) => {
   const event = useRequestEvent()
 
-  // create Supabase SSR client directly here
+  // create BA SSR client directly here
   const supabase = createSupabaseServerClient(event);
 
   // check current user

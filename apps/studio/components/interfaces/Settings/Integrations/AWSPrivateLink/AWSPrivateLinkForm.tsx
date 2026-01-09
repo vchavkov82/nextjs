@@ -108,7 +108,7 @@ export const AWSPrivateLinkForm = ({ account, open, onOpenChange }: AWSPrivateLi
         <SheetHeader>
           <SheetTitle>{isNew ? 'Add AWS Account' : 'AWS Account Details'}</SheetTitle>
           <SheetDescription>
-            Connect to your Supabase project from your AWS VPC using AWS PrivateLink.{' '}
+            Connect to your BA project from your AWS VPC using AWS PrivateLink.{' '}
             <InlineLink href={`${DOCS_URL}/guides/platform/privatelink`}>Learn more</InlineLink>
           </SheetDescription>
         </SheetHeader>
@@ -134,7 +134,7 @@ export const AWSPrivateLinkForm = ({ account, open, onOpenChange }: AWSPrivateLi
                                 : account.status === 'CREATING'
                                   ? 'warning'
                                   : account.status === 'CREATION_FAILED' ||
-                                      account.status === 'ASSOCIATION_REQUEST_EXPIRED'
+                                    account.status === 'ASSOCIATION_REQUEST_EXPIRED'
                                     ? 'destructive'
                                     : 'warning'
                           }

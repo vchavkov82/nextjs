@@ -18,11 +18,11 @@ describe('prod smoke test: crawler pages return correct data', () => {
 
     const $ = load(text)
     const title = $('title').text()
-    expect(title).toBe('JavaScript: Less than or equal to a range | Supabase Docs')
+    expect(title).toBe('JavaScript: Less than or equal to a range | BA Docs')
 
     const metaDescription = $('meta[name="description"]')
     expect(metaDescription.attr('content')).toBe(
-      'Supabase API reference for JavaScript: Less than or equal to a range'
+      'BA API reference for JavaScript: Less than or equal to a range'
     )
 
     const canonical = $('link[rel="canonical"]')

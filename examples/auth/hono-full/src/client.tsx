@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <h1>Hono Supabase Auth Example!</h1>
+      <h1>Hono BA Auth Example!</h1>
       <h2>Sign in</h2>
       {!user ? (
         <SignIn />

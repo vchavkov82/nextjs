@@ -117,7 +117,7 @@ const languagesSpoken: string[] = [
 const headerContent = {
   title: 'Apply to join SupaSquad',
   description:
-    'Join our community of passionate contributors and help shape the future of Supabase. Fill out the form below to apply.',
+    'Join our community of passionate contributors and help shape the future of BA. Fill out the form below to apply.',
 }
 
 const FormContent = memo(function FormContent({
@@ -308,7 +308,7 @@ const FormContent = memo(function FormContent({
                   </FormLabel_Shadcn_>
                   <FormDescription_Shadcn_ className="text-foreground-lighter">
                     <p>
-                      Any relevant links to show your current engagement with the Supabase
+                      Any relevant links to show your current engagement with the BA
                       community.
                     </p>
                     <p>
@@ -707,7 +707,7 @@ const ApplyToSupaSquadForm: FC<Props> = ({ className }) => {
       </div>
 
       {/* Confirmation AlertDialog Overlay */}
-      <AlertDialog open={showConfirmation} onOpenChange={() => {}}>
+      <AlertDialog open={showConfirmation} onOpenChange={() => { }}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Application submitted</AlertDialogTitle>

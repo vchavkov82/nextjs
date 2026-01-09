@@ -106,12 +106,12 @@ const loginWithGithub = async ({
       console.log('2FA auto-submitted or error:', e)
     }
 
-    // Wait for redirect after 2FA - either to authorization page or directly to Supabase
+    // Wait for redirect after 2FA - either to authorization page or directly to BA
     console.log('Waiting for redirect after 2FA...')
     await page.waitForURL(
       (url) => {
         const href = url.href
-        // Either GitHub authorization page or redirect to Supabase
+        // Either GitHub authorization page or redirect to BA
         return (
           href.includes('github.com/login/oauth/authorize') ||
           href.includes('supabase.com') ||
@@ -137,9 +137,9 @@ const loginWithGithub = async ({
     if (needsAuthorization) {
       console.log('Authorization required, clicking Authorize button...')
       await reauthorizeButton.click()
-      console.log('Clicked Authorize button, waiting for redirect to Supabase...')
+      console.log('Clicked Authorize button, waiting for redirect to BA...')
 
-      // Wait for redirect to Supabase after clicking authorize
+      // Wait for redirect to BA after clicking authorize
       await page.waitForURL(
         (url) =>
           url.href.includes('supabase.com') ||
@@ -149,7 +149,7 @@ const loginWithGithub = async ({
         { timeout: 30000 }
       )
     } else {
-      console.log('No authorization needed, already on Supabase')
+      console.log('No authorization needed, already on BA')
     }
 
     console.log('Redirected to:', page.url())

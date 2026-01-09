@@ -3,22 +3,22 @@ import { DOCS_URL } from 'lib/constants'
 import { executeQuery } from './query'
 
 interface GetLintsOptions {
-  headers?: HeadersInit
-  exposedSchemas?: string
+    headers?: HeadersInit
+    exposedSchemas?: string
 }
 
 export async function getLints({ headers, exposedSchemas }: GetLintsOptions) {
-  return await executeQuery<ResponseData[number]>({
-    query: enrichLintsQuery(LINT_SQL, exposedSchemas),
-    headers,
-  })
+    return await executeQuery<ResponseData[number]>({
+        query: enrichLintsQuery(LINT_SQL, exposedSchemas),
+        headers,
+    })
 }
 
 export type ResponseData =
-  paths['/platform/projects/{ref}/run-lints']['get']['responses']['200']['content']['application/json']
+    paths['/platform/projects/{ref}/run-lints']['get']['responses']['200']['content']['application/json']
 
 export const enrichLintsQuery = (query: string, exposedSchemas?: string) => {
-  return `
+    return `
 set pg_stat_statements.track = none;
 ${!!exposedSchemas ? `set local pgrst.db_schemas = '${exposedSchemas}';` : ''}
 -- source: dashboard
@@ -806,9 +806,9 @@ select
     'ERROR' as level,
     'EXTERNAL' as facing,
     array['SECURITY'] as categories,
-    'Detects when Supabase Auth user_metadata is referenced insecurely in a row level security (RLS) policy.' as description,
+    'Detects when BA Auth user_metadata is referenced insecurely in a row level security (RLS) policy.' as description,
     format(
-        'Table \`%s.%s\` has a row level security policy \`%s\` that references Supabase Auth \`user_metadata\`. \`user_metadata\` is editable by end users and should never be used in a security context.',
+        'Table \`%s.%s\` has a row level security policy \`%s\` that references BA Auth \`user_metadata\`. \`user_metadata\` is editable by end users and should never be used in a security context.',
         schema_name,
         table_name,
         policy_name

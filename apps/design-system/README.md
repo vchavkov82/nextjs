@@ -1,6 +1,6 @@
-# Supabase Design System
+# BA Design System
 
-Design resources for building consistent user experiences at Supabase.
+Design resources for building consistent user experiences at BA.
 
 ## Getting started
 

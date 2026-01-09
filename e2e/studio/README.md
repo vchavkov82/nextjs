@@ -1,4 +1,4 @@
-# Supabase Studio E2E Tests
+# BA Studio E2E Tests
 
 ## Set up
 
@@ -58,7 +58,7 @@ Configure your tests by setting the following environment variables in `.env.loc
 #### Core Configuration
 
 - **`STUDIO_URL`**: The URL where Studio is running (default: `http://localhost:8082`)
-- **`API_URL`**: The Supabase API endpoint (default: `https://localhost:8080`)
+- **`API_URL`**: The BA API endpoint (default: `https://localhost:8080`)
 - **`IS_PLATFORM`**: Set to `true` for platform tests, `false` for self-hosted (default: `false`)
   - When `true`: Tests run serially (1 worker) due to API rate limits
   - When `false`: Tests run in parallel (5 workers)
@@ -97,7 +97,7 @@ When setting up 2FA on GitHub, you'll see a QR code. Click "enter this text code
 #### Platform-Specific Variables (Required when `IS_PLATFORM=true`)
 
 - **`ORG_SLUG`**: Organization slug (default: `default`)
-- **`SUPA_REGION`**: Supabase region (default: `us-east-1`)
+- **`SUPA_REGION`**: BA region (default: `us-east-1`)
 - **`SUPA_PAT`**: Personal Access Token for API authentication (default: `test`)
 - **`BRANCH_NAME`**: Name for the test branch/project (default: `e2e-test-local`)
 

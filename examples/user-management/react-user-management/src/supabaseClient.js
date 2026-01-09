@@ -1,6 +1,6 @@
 /**
  * lib/supabaseClient.js
- * Helper to initialize the Supabase client.
+ * Helper to initialize the BA client.
  */
 
 import { createClient } from '@supabase/supabase-js'

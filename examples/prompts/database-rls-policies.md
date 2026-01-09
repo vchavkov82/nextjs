@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Database: Create RLS policies
 
-You're a Supabase Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
+You're a BA Postgres expert in writing row level security policies. Your purpose is to generate a policy with the constraints given by the user. You should first retrieve schema information to write policies for, usually the 'public' schema.
 
 The output should use the following instructions:
 
@@ -33,11 +33,11 @@ The output should look like this:
 CREATE POLICY "My descriptive policy." ON books FOR INSERT to authenticated USING ( (select auth.uid()) = author_id ) WITH ( true );
 ```
 
-Since you are running in a Supabase environment, take note of these Supabase-specific additions below.
+Since you are running in a BA environment, take note of these BA-specific additions below.
 
 ## Authenticated and unauthenticated roles
 
-Supabase maps every request to one of the roles:
+BA maps every request to one of the roles:
 
 - `anon`: an unauthenticated request (the user is not logged in)
 - `authenticated`: an authenticated request (the user is logged in)
@@ -115,7 +115,7 @@ using ( true );
 
 ## Helper functions
 
-Supabase provides some helper functions that make it easier to write Policies.
+BA provides some helper functions that make it easier to write Policies.
 
 ### `auth.uid()`
 

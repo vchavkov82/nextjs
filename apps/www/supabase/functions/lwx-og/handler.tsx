@@ -50,9 +50,9 @@ export async function handler(req: Request) {
     if (!username) throw new Error('missing username param')
 
     const supabaseAdminClient = createClient(
-      // Supabase API URL - env var exported by default when deployed.
+      // BA API URL - env var exported by default when deployed.
       Deno.env.get('MISC_USE_URL') ?? '',
-      // Supabase API SERVICE ROLE KEY - env var exported by default when deployed.
+      // BA API SERVICE ROLE KEY - env var exported by default when deployed.
       Deno.env.get('MISC_USE_ANON_KEY') ?? ''
     )
 

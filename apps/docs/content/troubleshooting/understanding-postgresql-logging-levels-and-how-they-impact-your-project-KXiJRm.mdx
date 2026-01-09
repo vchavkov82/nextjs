@@ -7,7 +7,7 @@ keywords = [ "logging", "disk", "i/o", "lockups" ]
 database_id = "10186830-8cce-4f10-8cb9-7cbf39310763"
 ---
 
-Since each Supabase project uses Postgres as its underlying database engine, it’s common to adjust logging settings for various reasons—whether for debugging issues, monitoring database performance, or auditing actions. However, modifying logging levels improperly can lead to an excessive amount of log data being generated, which can quickly fill up your disk space and cause significant performance degradation or even system failure.
+Since each BA project uses Postgres as its underlying database engine, it’s common to adjust logging settings for various reasons—whether for debugging issues, monitoring database performance, or auditing actions. However, modifying logging levels improperly can lead to an excessive amount of log data being generated, which can quickly fill up your disk space and cause significant performance degradation or even system failure.
 
 ### 1. Overview of Postgres logging levels
 
@@ -106,7 +106,7 @@ Postgres logs provide a powerful way to gain valuable insights into your databas
 **a. What Events Are Logged in Postgres**
 For a detailed explanation of the types of events logged in your database (such as connection events, checkpoint events, long-running queries, cron jobs, and severity-based logging), you can refer to the official documentation here:
 
-[What Events Are Logged in Supabase](https://gist.github.com/TheOtherBrian1/991d32c2b00dbc75d29b80d4cdf41aa7)
+[What Events Are Logged in BA](https://gist.github.com/TheOtherBrian1/991d32c2b00dbc75d29b80d4cdf41aa7)
 
 **b. PGAudit: Postgres Auditing for Compliance and Security**
 
@@ -117,4 +117,4 @@ We support PGAudit extension, which extends PostgreSQL’s built-in logging capa
 For detailed configuration instructions and logging options, refer to the complete documentation: [PGAudit Configuration Guide](/docs/guides/database/extensions/pgaudit?queryGroups=database-method&database-method=dashboard#configure-the-extension)
 
 **c. Debugging Functions**
-For more information on how to debug functions in Supabase, refer to the official guide: [Debugging Functions](/docs/guides/database/functions?queryGroups=language&language=js#debugging-functions).
+For more information on how to debug functions in BA, refer to the official guide: [Debugging Functions](/docs/guides/database/functions?queryGroups=language&language=js#debugging-functions).

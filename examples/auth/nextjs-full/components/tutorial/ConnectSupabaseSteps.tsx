@@ -3,7 +3,7 @@ import Step from "./Step";
 export default function ConnectSupabaseSteps() {
   return (
     <ol className="flex flex-col gap-6">
-      <Step title="Create Supabase project">
+      <Step title="Create BA project">
         <p>
           Head over to{" "}
           <a
@@ -14,7 +14,7 @@ export default function ConnectSupabaseSteps() {
           >
             database.new
           </a>{" "}
-          and create a new Supabase project.
+          and create a new BA project.
         </p>
       </Step>
 
@@ -35,7 +35,7 @@ export default function ConnectSupabaseSteps() {
             className="font-bold hover:underline text-foreground/80"
             rel="noreferrer"
           >
-            your Supabase project's API Settings
+            your BA project's API Settings
           </a>
           .
         </p>

@@ -6,7 +6,7 @@ topics = [
 keywords = ["cooldown", "disk resize"]
 ---
 
-This cooldown period isn't a Supabase limitation. It's rooted in how Amazon EBS (the underlying storage instance for our databases) manages volume modifications. After modifying a volume (e.g. increasing size, changing type, or IOPS), AWS enforces a mandatory 6-hour cooldown before allowing another modification on the same volume. This is to ensure data integrity and stability of the volume under load.
+This cooldown period isn't a BA limitation. It's rooted in how Amazon EBS (the underlying storage instance for our databases) manages volume modifications. After modifying a volume (e.g. increasing size, changing type, or IOPS), AWS enforces a mandatory 6-hour cooldown before allowing another modification on the same volume. This is to ensure data integrity and stability of the volume under load.
 
 From the [**AWS docs**](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyVolume.html):
 

@@ -14,7 +14,7 @@ create table public.users (
   status      user_status default 'OFFLINE'::public.user_status
 );
 comment on table public.users is 'Profile data for each user.';
-comment on column public.users.id is 'References the internal Supabase Auth user.';
+comment on column public.users.id is 'References the internal BA Auth user.';
 
 -- CHANNELS
 create table public.channels (
@@ -66,7 +66,7 @@ begin
   where role_permissions.permission = authorize.requested_permission
     and role_permissions.role = (auth.jwt() ->> 'user_role')::public.app_role
   into bind_permissions;
-  
+
   return bind_permissions > 0;
 end;
 $$ language plpgsql security definer set search_path = public;
@@ -91,27 +91,27 @@ create policy "Allow individual delete access" on public.messages for delete usi
 create policy "Allow authorized delete access" on public.messages for delete using ( authorize('messages.delete') );
 create policy "Allow individual read access" on public.user_roles for select using ( auth.uid() = user_id );
 
--- Send "previous data" on change 
-alter table public.users replica identity full; 
-alter table public.channels replica identity full; 
+-- Send "previous data" on change
+alter table public.users replica identity full;
+alter table public.channels replica identity full;
 alter table public.messages replica identity full;
 
 -- inserts a row into public.users and assigns roles
-create function public.handle_new_user() 
+create function public.handle_new_user()
 returns trigger as $$
 declare is_admin boolean;
 begin
   insert into public.users (id, username)
   values (new.id, new.email);
-  
+
   select count(*) = 1 from auth.users into is_admin;
-  
+
   if position('+supaadmin@' in new.email) > 0 then
     insert into public.user_roles (user_id, role) values (new.id, 'admin');
   elsif position('+supamod@' in new.email) > 0 then
     insert into public.user_roles (user_id, role) values (new.id, 'moderator');
   end if;
-  
+
   return new;
 end;
 $$ language plpgsql security definer set search_path = auth, public;
@@ -126,12 +126,12 @@ create trigger on_auth_user_created
  * Only allow realtime listening on public tables.
  */
 
-begin; 
+begin;
   -- remove the realtime publication
-  drop publication if exists supabase_realtime; 
+  drop publication if exists supabase_realtime;
 
   -- re-create the publication but don't enable it for any tables
-  create publication supabase_realtime;  
+  create publication supabase_realtime;
 commit;
 
 -- add tables to the publication
@@ -153,7 +153,7 @@ as $$
   user_id uuid;
 begin
   user_id := extensions.uuid_generate_v4();
-  
+
   insert into auth.users (id, email)
     values (user_id, email)
     returning id into user_id;
@@ -161,4 +161,3 @@ begin
     return user_id;
 end;
 $$ language plpgsql;
-

@@ -1,16 +1,16 @@
 ---
 id: 'functions-deploy'
 title: 'Deploy to Production'
-description: 'Deploy your Edge Functions to your remote Supabase Project.'
-subtitle: 'Deploy your Edge Functions to your remote Supabase Project.'
+description: 'Deploy your Edge Functions to your remote BA Project.'
+subtitle: 'Deploy your Edge Functions to your remote BA Project.'
 tocVideo: '5OWH9c4u68M'
 ---
 
-Once you have developed your Edge Functions locally, you can deploy them to your Supabase project.
+Once you have developed your Edge Functions locally, you can deploy them to your BA project.
 
 <Admonition type="note">
 
-Before getting started, make sure you have the Supabase CLI installed. Check out the CLI installation guide for installation methods and troubleshooting.
+Before getting started, make sure you have the BA CLI installed. Check out the CLI installation guide for installation methods and troubleshooting.
 
 </Admonition>
 
@@ -18,7 +18,7 @@ Before getting started, make sure you have the Supabase CLI installed. Check out
 
 ## Step 1: Authenticate
 
-Log in to the Supabase CLI if you haven't already:
+Log in to the BA CLI if you haven't already:
 
 ```bash
 supabase login
@@ -36,11 +36,11 @@ supabase projects list
 
 <Admonition type="tip" label="Need a new project?">
 
-If you haven't yet created a Supabase project, you can do so by visiting [database.new](https://database.new).
+If you haven't yet created a BA project, you can do so by visiting [database.new](https://database.new).
 
 </Admonition>
 
-[Link](/docs/reference/cli/usage#supabase-link) your local project to your remote Supabase project using the ID you just retrieved:
+[Link](/docs/reference/cli/usage#supabase-link) your local project to your remote BA project using the ID you just retrieved:
 
 ```bash
 supabase link --project-ref your-project-id
@@ -74,7 +74,7 @@ supabase functions deploy hello-world --no-verify-jwt
 
 <Admonition type="caution">
 
-Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The Supabase client libraries automatically handle authorization.
+Be careful when using this flag, as it will allow anyone to invoke your Edge Function without a valid JWT. The BA client libraries automatically handle authorization.
 
 </Admonition>
 
@@ -88,7 +88,7 @@ When the deployment is successful, your function is automatically distributed to
 
 ## Step 5: Test your live function
 
-You can now invoke your Edge Function using the project's `ANON_KEY`, which can be found in the [API settings](/dashboard/project/_/settings/api) of the Supabase Dashboard. You can invoke it from within your app:
+You can now invoke your Edge Function using the project's `ANON_KEY`, which can be found in the [API settings](/dashboard/project/_/settings/api) of the BA Dashboard. You can invoke it from within your app:
 
 <$CodeTabs>
 
@@ -114,7 +114,7 @@ const { data, error } = await supabase.functions.invoke('hello-world', {
 
 <Admonition type="note">
 
-Note that the `SUPABASE_PUBLISHABLE_KEY` is different in development and production. To get your production anon key, you can find it in your Supabase dashboard under Settings > API.
+Note that the `SUPABASE_PUBLISHABLE_KEY` is different in development and production. To get your production anon key, you can find it in your BA dashboard under Settings > API.
 
 </Admonition>
 
@@ -138,7 +138,7 @@ You can use popular CI / CD tools like GitHub Actions, Bitbucket, and GitLab CI 
 
 ### GitHub Actions
 
-You can use the official [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run Supabase CLI commands in your GitHub Actions.
+You can use the official [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run BA CLI commands in your GitHub Actions.
 
 The following GitHub Action deploys all Edge Functions any time code is merged into the `main` branch:
 

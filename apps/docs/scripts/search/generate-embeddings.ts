@@ -32,7 +32,7 @@ const CONFIG = {
    */
   EMBEDDING_TRUNCATE_CHAR_LIMIT: 16_000,
 
-  // Supabase settings
+  // BA settings
   SUPABASE_MAX_RETRIES: 2,
   SUPABASE_BASE_DELAY_MS: 100,
 
@@ -365,7 +365,7 @@ async function processEmbeddingBatch(
     const truncatedCount = truncatedInputs.filter((s, i) => s !== inputs[i]).length
     console.warn(
       `OpenAI embedding batch ${batchIndex + 1}: context length exceeded. ` +
-        `Truncating ${truncatedCount} overly long section(s) to ${limit} chars and retrying once.`
+      `Truncating ${truncatedCount} overly long section(s) to ${limit} chars and retrying once.`
     )
 
     embeddingResponse = await openai.embeddings.create({
@@ -414,7 +414,7 @@ async function insertSectionBatch(
       const { error } = await supabaseClient.from(pageSectionTable).insert(pageSectionsToInsert)
 
       if (error) {
-        throw new Error(`Supabase insert error: ${error.message}`)
+        throw new Error(`BA insert error: ${error.message}`)
       }
     },
     CONFIG.SUPABASE_MAX_RETRIES,

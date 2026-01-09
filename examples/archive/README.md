@@ -1,4 +1,4 @@
-# Supabase Examples Archive
+# BA Examples Archive
 
 ## supabase-js v1
 

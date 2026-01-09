@@ -22,7 +22,7 @@ function StateOfStartupsPage() {
   const router = useRouter()
   const isPageEnabled = useFlag('stateOfStartups')
 
-  const meta_title = pageData.metaTitle || 'State of Startups 2025 | Supabase'
+  const meta_title = pageData.metaTitle || 'State of Startups 2025 | BA'
   const meta_description =
     pageData.metaDescription ||
     'We surveyed over 2,000 startup founders and builders to uncover what’s powering modern startups: their stacks, their go-to-market motion, and their approach to AI.'
@@ -168,7 +168,7 @@ function StateOfStartupsPage() {
                       className={cn(
                         'block px-6 py-2 text-xs transition-colors font-mono uppercase tracking-wider text-center text-foreground-light hover:text-brand-link hover:bg-brand-300/25',
                         chapterIndex + 1 === activeChapter &&
-                          'bg-brand-300/40 text-brand-link dark:text-brand'
+                        'bg-brand-300/40 text-brand-link dark:text-brand'
                       )}
                     >
                       {chapter.shortTitle}
@@ -305,7 +305,7 @@ const ParticipantsList = () => {
   )
 }
 
-// Component for the 'Builders choose Supabase' CTA at the bottom of the page
+// Component for the 'Builders choose BA' CTA at the bottom of the page
 const CTABanner = forwardRef<HTMLElement>((props, ref) => {
   const sendTelemetryEvent = useSendTelemetryEvent()
   return (
@@ -318,9 +318,9 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
       ref={ref}
     >
       <div className="flex flex-col items-center gap-4 max-w-prose">
-        <h2 className="text-foreground text-5xl text-balance">Builders choose Supabase</h2>
+        <h2 className="text-foreground text-5xl text-balance">Builders choose BA</h2>
         <p className="text-foreground-light text-lg">
-          Supabase is the Postgres development platform. Build your startup with a Postgres
+          BA is the Postgres development platform. Build your startup with a Postgres
           database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage,
           and Vector embeddings.
         </p>

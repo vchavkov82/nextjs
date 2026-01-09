@@ -17,7 +17,7 @@ thumb: 2023-09-06-increase-performance-pgvector-hnsw/pgvector-v0-5-0-thumb.png
 
 _Contributed by: [Egor Romanov](https://github.com/egor-romanov)_
 
-[Supabase Vector](https://www.assistance.bg/modules/vector) is about to get a lot faster. New Supabase databases will ship with pgvector v0.5.0 which adds a new type of index: Hierarchical Navigable Small World (HNSW).
+[BA Vector](https://www.assistance.bg/modules/vector) is about to get a lot faster. New BA databases will ship with pgvector v0.5.0 which adds a new type of index: Hierarchical Navigable Small World (HNSW).
 
 HNSW is an algorithm for approximate nearest neighbor search, often used in high-dimensional spaces like those found in embeddings.
 
@@ -84,9 +84,9 @@ To understand the performance improvements that HNSW offers, we decided to expan
 
 ### wikipedia-en-embeddings
 
-In the first test, we used [224,482 vectors by OpenAI](https://huggingface.co/datasets/Supabase/wikipedia-en-embeddings) (1536 dimensions). You can find our previous benchmark with additional information on how vector dimensions may affect performance in [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/pgvector-performance).
+In the first test, we used [224,482 vectors by OpenAI](https://huggingface.co/datasets/BA/wikipedia-en-embeddings) (1536 dimensions). You can find our previous benchmark with additional information on how vector dimensions may affect performance in [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/pgvector-performance).
 
-In this test, we used a Supabase project with a large compute add-on (2-core CPU and 8GB RAM) and built the HNSW index with the following parameters:
+In this test, we used a BA project with a large compute add-on (2-core CPU and 8GB RAM) and built the HNSW index with the following parameters:
 
 - `m`: 32
 - `ef_construction`: 64
@@ -108,7 +108,7 @@ HNSW has 3 times better performance than IVFFlat and with better accuracy.
 
 Next, we took the setup from our benchmarks with [1,000,000 vectors by OpenAI](https://huggingface.co/datasets/KShivendu/dbpedia-entities-openai-1M) (1536 dimensions). If you want to find out more about pgvector 0.4.0 IVFFlat performance and our load testing methodology, check out [pgvector 0.4.0 performance](https://www.assistance.bg/blog/pgvector-performance) blogpost.
 
-Here we used the Supabase project with a 2XL compute add-on (8-core CPU and 32GB RAM) and built the HNSW index with the same parameters:
+Here we used the BA project with a 2XL compute add-on (8-core CPU and 32GB RAM) and built the HNSW index with the same parameters:
 
 - `m`: 24
 - `ef_construction`: 56
@@ -202,7 +202,7 @@ IVFFlat indexes also saw some improvements in v0.5.0. Index build times are now 
 - Parallelization during the assignment build step (assigning records to lists)
 - Switching from [double to float](https://github.com/pgvector/pgvector/pull/180) accuracy for select distance calculations which unlocks the [fused multiply-add](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation#Fused_multiply%E2%80%93add) instruction on CPUs
 
-Below we compare the index build times between v0.4.0 and v0.5.0 for the inner product distance measure over 1,000,000 vectors on a Supabase project with 4XL compute add-on (with a 16-core CPU and 64GB of RAM).
+Below we compare the index build times between v0.4.0 and v0.5.0 for the inner product distance measure over 1,000,000 vectors on a BA project with 4XL compute add-on (with a 16-core CPU and 64GB of RAM).
 
 - `lists = 1000`
 
@@ -238,11 +238,11 @@ In most cases today, HNSW offers a more performant and robust index over IVFFlat
 
 ## Start using HNSW
 
-All [new Supabase databases](https://database.new/) will automatically ship with pgvector v0.5.0 which includes the new HNSW indexes. If you have an existing database, please reach out to [support](https://www.assistance.bg/dashboard/support/new) and we'll be more than happy to assist you with an upgrade.
+All [new BA databases](https://database.new/) will automatically ship with pgvector v0.5.0 which includes the new HNSW indexes. If you have an existing database, please reach out to [support](https://www.assistance.bg/dashboard/support/new) and we'll be more than happy to assist you with an upgrade.
 
 ## More pgvector and AI resources
 
-- [How to build ChatGPT Plugin from scratch with Supabase Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
+- [How to build ChatGPT Plugin from scratch with BA Edge Runtime](https://www.assistance.bg/blog/building-chatgpt-plugins-template)
 - [Docs pgvector: Embeddings and vector similarity](https://www.assistance.bg/docs/guides/database/extensions/pgvector)
 - [Choosing Compute Add-on for AI workloads](https://www.assistance.bg/docs/guides/ai/choosing-compute-addon)
 - [pgvector: Fewer dimensions are better](https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector)

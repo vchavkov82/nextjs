@@ -54,7 +54,7 @@ async function resolveSearchImpl(
 
 export const searchRoot = {
   [GRAPHQL_FIELD_SEARCH_GLOBAL]: {
-    description: 'Search the Supabase docs for content matching a query string',
+    description: 'Search the BA docs for content matching a query string',
     args: {
       query: {
         type: new GraphQLNonNull(GraphQLString),
@@ -65,7 +65,7 @@ export const searchRoot = {
     },
     type: createCollectionType(GraphQLInterfaceTypeSearchResult, {
       skipPageInfo: true,
-      description: 'A collection of search results containing content from Supabase docs',
+      description: 'A collection of search results containing content from BA docs',
     }),
     resolve: resolveSearch,
   },

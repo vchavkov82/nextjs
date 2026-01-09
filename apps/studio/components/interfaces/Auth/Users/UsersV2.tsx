@@ -332,9 +332,9 @@ export const UsersV2 = () => {
 
   const searchInvalid =
     !search ||
-    specificFilterColumn === 'freeform' ||
-    specificFilterColumn === 'email' ||
-    specificFilterColumn === 'name'
+      specificFilterColumn === 'freeform' ||
+      specificFilterColumn === 'email' ||
+      specificFilterColumn === 'name'
       ? false
       : specificFilterColumn === 'id'
         ? !search.match(UUIDV4_LEFT_PREFIX_REGEX)
@@ -957,7 +957,7 @@ export const UsersV2 = () => {
             >
               project logs
             </InlineLink>
-            . If you encounter any issues, please contact Supabase support for assistance.
+            . If you encounter any issues, please contact BA support for assistance.
           </li>
         </ul>
       </ConfirmationModal>

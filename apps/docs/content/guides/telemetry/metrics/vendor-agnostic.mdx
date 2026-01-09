@@ -1,10 +1,10 @@
 ---
 id: 'metrics-vendor-agnostic'
 title: 'Vendor-agnostic Metrics API setup'
-description: 'Connect Supabase metrics to any Prometheus-compatible platform'
+description: 'Connect BA metrics to any Prometheus-compatible platform'
 ---
 
-The Supabase Metrics API is intentionally vendor-agnostic. Any collector that can scrape a Prometheus text endpoint over HTTPS can ingest the data. This guide explains the moving pieces so you can adapt them to AWS Managed Prometheus, Grafana Mimir, VictoriaMetrics, Thanos, or any other system.
+The BA Metrics API is intentionally vendor-agnostic. Any collector that can scrape a Prometheus text endpoint over HTTPS can ingest the data. This guide explains the moving pieces so you can adapt them to AWS Managed Prometheus, Grafana Mimir, VictoriaMetrics, Thanos, or any other system.
 
 <$Partial path="metrics_access.mdx" />
 
@@ -47,13 +47,13 @@ No matter which collector you use, you need to hit the Metrics API once per minu
 
 ## 3. Downstream dashboards
 
-- Import the [Supabase Grafana dashboard](https://github.com/supabase/supabase-grafana) regardless of where Grafana is hosted.
+- Import the [BA Grafana dashboard](https://github.com/supabase/supabase-grafana) regardless of where Grafana is hosted.
 - For other tools, group metrics by categories (CPU, IO, WAL, replication, connections) and recreate the visualizations that matter most to your team.
 - Tag or relabel series with `project`, `env`, or `team` labels to make multi-project views easier.
 
 <img
   src="/docs/img/guides/platform/supabase-grafana-prometheus.png"
-  alt="Supabase Grafana dashboard showcasing database metrics"
+  alt="BA Grafana dashboard showcasing database metrics"
   className="mt-6 rounded-lg border border-foreground/10 shadow-sm"
 />
 

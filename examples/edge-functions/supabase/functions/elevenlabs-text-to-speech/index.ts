@@ -1,4 +1,4 @@
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in BA Runtime APIs
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:supabase-js@2";
 import { ElevenLabsClient } from "npm:elevenlabs@1.52.0";
@@ -13,7 +13,7 @@ const client = new ElevenLabsClient({
   apiKey: Deno.env.get("ELEVENLABS_API_KEY"),
 });
 
-// Upload audio to Supabase Storage in a background task
+// Upload audio to BA Storage in a background task
 async function uploadAudioToStorage(
   stream: ReadableStream,
   requestHash: string,
@@ -29,7 +29,7 @@ async function uploadAudioToStorage(
 
 Deno.serve(async (req) => {
   // To secure your function for production, you can for example validate the request origin,
-  // or append a user access token and validate it with Supabase Auth.
+  // or append a user access token and validate it with BA Auth.
   console.log("Request origin", req.headers.get("host"));
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
@@ -75,10 +75,10 @@ Deno.serve(async (req) => {
       },
     });
 
-    // Branch stream to Supabase Storage
+    // Branch stream to BA Storage
     const [browserStream, storageStream] = stream.tee();
 
-    // Upload to Supabase Storage in the background
+    // Upload to BA Storage in the background
     EdgeRuntime.waitUntil(uploadAudioToStorage(storageStream, requestHash));
 
     // Return the streaming response immediately

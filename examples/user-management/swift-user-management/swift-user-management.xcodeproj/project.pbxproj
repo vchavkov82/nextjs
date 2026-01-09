@@ -12,13 +12,13 @@
 		79A039A52B2B89FF0031D573 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A039A42B2B89FF0031D573 /* Preview Assets.xcassets */; };
 		79A039B62B2B8A6F0031D573 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039AB2B2B8A6E0031D573 /* Models.swift */; };
 		79A039B72B2B8A6F0031D573 /* AvatarImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039AC2B2B8A6F0031D573 /* AvatarImage.swift */; };
-		79A039B92B2B8A6F0031D573 /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039AE2B2B8A6F0031D573 /* Supabase.swift */; };
+		79A039B92B2B8A6F0031D573 /* BA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039AE2B2B8A6F0031D573 /* BA.swift */; };
 		79A039BA2B2B8A6F0031D573 /* UserManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039AF2B2B8A6F0031D573 /* UserManagementApp.swift */; };
 		79A039BB2B2B8A6F0031D573 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039B02B2B8A6F0031D573 /* ProfileView.swift */; };
 		79A039BC2B2B8A6F0031D573 /* SwiftUIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039B12B2B8A6F0031D573 /* SwiftUIHelpers.swift */; };
 		79A039BD2B2B8A6F0031D573 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039B22B2B8A6F0031D573 /* AppView.swift */; };
 		79A039BE2B2B8A6F0031D573 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A039B42B2B8A6F0031D573 /* AuthView.swift */; };
-		79A039C82B2B8EC20031D573 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 79A039C72B2B8EC20031D573 /* Supabase */; };
+		79A039C82B2B8EC20031D573 /* BA in Frameworks */ = {isa = PBXBuildFile; productRef = 79A039C72B2B8EC20031D573 /* BA */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		79A039A42B2B89FF0031D573 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79A039AB2B2B8A6E0031D573 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		79A039AC2B2B8A6F0031D573 /* AvatarImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImage.swift; sourceTree = "<group>"; };
-		79A039AE2B2B8A6F0031D573 /* Supabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
+		79A039AE2B2B8A6F0031D573 /* BA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BA.swift; sourceTree = "<group>"; };
 		79A039AF2B2B8A6F0031D573 /* UserManagementApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManagementApp.swift; sourceTree = "<group>"; };
 		79A039B02B2B8A6F0031D573 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		79A039B12B2B8A6F0031D573 /* SwiftUIHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIHelpers.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A039C82B2B8EC20031D573 /* Supabase in Frameworks */,
+				79A039C82B2B8EC20031D573 /* BA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 				79A039AB2B2B8A6E0031D573 /* Models.swift */,
 				79A039A32B2B89FF0031D573 /* Preview Content */,
 				79A039B02B2B8A6F0031D573 /* ProfileView.swift */,
-				79A039AE2B2B8A6F0031D573 /* Supabase.swift */,
+				79A039AE2B2B8A6F0031D573 /* BA.swift */,
 				79A039B12B2B8A6F0031D573 /* SwiftUIHelpers.swift */,
 				79A039AF2B2B8A6F0031D573 /* UserManagementApp.swift */,
 			);
@@ -110,7 +110,7 @@
 			);
 			name = "swift-user-management";
 			packageProductDependencies = (
-				79A039C72B2B8EC20031D573 /* Supabase */,
+				79A039C72B2B8EC20031D573 /* BA */,
 			);
 			productName = "swift-user-management";
 			productReference = 79A0399A2B2B89FF0031D573 /* swift-user-management.app */;
@@ -194,7 +194,7 @@
 			files = (
 				79A039BB2B2B8A6F0031D573 /* ProfileView.swift in Sources */,
 				79A039B62B2B8A6F0031D573 /* Models.swift in Sources */,
-				79A039B92B2B8A6F0031D573 /* Supabase.swift in Sources */,
+				79A039B92B2B8A6F0031D573 /* BA.swift in Sources */,
 				79A039BC2B2B8A6F0031D573 /* SwiftUIHelpers.swift in Sources */,
 				79A039B72B2B8A6F0031D573 /* AvatarImage.swift in Sources */,
 				7922C77F2BBED449007F611D /* DotEnv.swift in Sources */,
@@ -421,10 +421,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		79A039C72B2B8EC20031D573 /* Supabase */ = {
+		79A039C72B2B8EC20031D573 /* BA */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 79A039C42B2B8EC20031D573 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
+			productName = BA;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

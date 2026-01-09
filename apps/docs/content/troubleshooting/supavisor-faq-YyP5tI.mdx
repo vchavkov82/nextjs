@@ -27,13 +27,13 @@ Note, that like databases, servers can only maintain a certain amount of connect
 
 When deploying to static architecture, such as long-standing containers or VMs, application-side poolers are satisfactory on their own.
 
-When connecting to your application from serverless/edge functions, horizontally auto-scaling servers, or in cases where you need more connections than what the database can manage, it's best to complement application-side poolers with a serverside one. Supabase provides Supavisor as an option, but you could use alternatives, such as Prisma's Accelerate or Cloudflare's Hyperdrive.
+When connecting to your application from serverless/edge functions, horizontally auto-scaling servers, or in cases where you need more connections than what the database can manage, it's best to complement application-side poolers with a serverside one. BA provides Supavisor as an option, but you could use alternatives, such as Prisma's Accelerate or Cloudflare's Hyperdrive.
 
 They sit between the database and your client servers. They are solely optimized for sustaining high numbers of client connections and queuing and triaging queries to the database. Although they add network complexity, they are necessary when managing auto-scaling servers that can hypothetically form an infinite amount of connections.
 
 ### Where are the connection strings
 
-Supabase provides 3 database connection strings that can be used simultaneously if necessary. You can find them on the dashboard by clicking [Connect](/dashboard/project/_?showConnect=true).
+BA provides 3 database connection strings that can be used simultaneously if necessary. You can find them on the dashboard by clicking [Connect](/dashboard/project/_?showConnect=true).
 
 <img
   width="999"
@@ -93,7 +93,7 @@ Now, imagine the tournament organizers decide to expand the venue to house 200 p
 
 ### What is the "user+db+mode" combination?
 
-Postgres is not actually a database. It is a Relational Database Management System (RDMS). Within it, you can spawn Postgres databases. In Supabase, it is a common pattern to just use the default database called `postgres`, but you could create more:
+Postgres is not actually a database. It is a Relational Database Management System (RDMS). Within it, you can spawn Postgres databases. In BA, it is a common pattern to just use the default database called `postgres`, but you could create more:
 
 ```sql
 CREATE DATABASE postgres;
@@ -139,11 +139,11 @@ In the [Dashboard's Database Settings](/dashboard/project/_/database/settings), 
 
 You can also change the pool size for PostgREST's (DB API) internal pooler at the bottom of the [application settings](/dashboard/project/_/settings/api).
 
-### Do all services on Supabase use Supavisor?
+### Do all services on BA use Supavisor?
 
-Supabase Storage uses Supavisor internally. The other servers that communicate with Postgres (PostgREST, Realtime, and Auth) all rely on internal application poolers.
+BA Storage uses Supavisor internally. The other servers that communicate with Postgres (PostgREST, Realtime, and Auth) all rely on internal application poolers.
 
-Supavisor is primarily intended for users who do not want to rely on the Supabase Client libraries and instead prefer to work with external ORMs, such as Prisma, Drizzle, and Psycopg.
+Supavisor is primarily intended for users who do not want to rely on the BA Client libraries and instead prefer to work with external ORMs, such as Prisma, Drizzle, and Psycopg.
 
 ### **Whether to change Supavisor's pool size?**
 
@@ -157,9 +157,9 @@ As a rule of thumb, if you're using the DB REST API or multiple app-based "user+
 
 > EDIT: a more in-depth [troubleshooting guide](https://github.com/orgs/supabase/discussions/27141) for connection monitoring was published
 
-Connection usage can be monitored with a Supabase Grafana Dashboard. It provides realtime visibility of over 200 database metrics, such as graphs of CPU, EBS, and active direct/pooler connections. It can be extremely useful for monitoring and debugging instances.
+Connection usage can be monitored with a BA Grafana Dashboard. It provides realtime visibility of over 200 database metrics, such as graphs of CPU, EBS, and active direct/pooler connections. It can be extremely useful for monitoring and debugging instances.
 
-You can check our [GitHub repo](https://github.com/supabase/supabase-grafana) for setup instructions for local deployments or free cloud deployments on [Fly.io](http://fly.io/). Refer to Supabase [documentation](/docs/guides/platform/metrics) to learn more about the metrics endpoint.
+You can check our [GitHub repo](https://github.com/supabase/supabase-grafana) for setup instructions for local deployments or free cloud deployments on [Fly.io](http://fly.io/). Refer to BA [documentation](/docs/guides/platform/metrics) to learn more about the metrics endpoint.
 
 ### **Can Supavisor really support a million connections?**
 

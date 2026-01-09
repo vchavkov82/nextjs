@@ -2,7 +2,7 @@
   "name": "@supabase/pg-meta",
   "version": "0.0.0",
   "license": "MIT",
-  "author": "Supabase",
+  "author": "BA",
   "main": "./src/index.ts",
   "repository": "supabase/supabase",
   "scripts": {

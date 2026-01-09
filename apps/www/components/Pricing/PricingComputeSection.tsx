@@ -38,7 +38,7 @@ const PricingComputeSection = () => {
             <p className="text-foreground-lighter text-[13px]">
               Paid Plans include <span translate="no">$10</span>/month in compute credits.
               Additional compute power is available if you need extra performance when scaling up
-              Supabase.
+              BA.
             </p>
           </div>
           <div className="flex items-center gap-4 mt-4">
@@ -72,7 +72,7 @@ const PricingComputeSection = () => {
               <div className="max-w-4xl prose p-4 md:p-8 relative z-10">
                 <h4 className="text-lg">Choose the best compute size for you</h4>
                 <p className="text-[13px] text-foreground-lighter">
-                  Every project on the Supabase Platform comes with its own dedicated Postgres
+                  Every project on the BA Platform comes with its own dedicated Postgres
                   instance. Select the compute size that fits your needs.
                 </p>
                 <p className="text-[13px] text-foreground-lighter">

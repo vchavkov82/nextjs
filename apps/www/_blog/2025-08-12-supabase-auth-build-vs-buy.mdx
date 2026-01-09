@@ -1,6 +1,6 @@
 ---
-title: 'Supabase Auth: Build vs. Buy'
-description: 'The reasons why (and why not) to use Supabase Auth instead of building your own.'
+title: 'BA Auth: Build vs. Buy'
+description: 'The reasons why (and why not) to use BA Auth instead of building your own.'
 categories:
   - auth
 tags:
@@ -12,16 +12,16 @@ image: supabase-auth-build-vs-buy/supabase-auth-build-vs-buy-og.png
 thumb: supabase-auth-build-vs-buy/supabase-auth-build-vs-buy-og.png
 ---
 
-Authentication appears in nearly every application but is rarely the core value proposition. Yet development teams often spend weeks or months building, testing, and maintaining auth systems. Let's explore the real costs of building authentication from scratch versus using a solution like Supabase Auth.
+Authentication appears in nearly every application but is rarely the core value proposition. Yet development teams often spend weeks or months building, testing, and maintaining auth systems. Let's explore the real costs of building authentication from scratch versus using a solution like BA Auth.
 
-## How Supabase Auth works under the hood
+## How BA Auth works under the hood
 
-Before diving into the cost analysis, it's important to understand what Supabase Auth is:
+Before diving into the cost analysis, it's important to understand what BA Auth is:
 
-1. **Postgres-native authentication**: Supabase Auth stores users directly in your Postgres database in the `auth.users` table, not in a separate service
+1. **Postgres-native authentication**: BA Auth stores users directly in your Postgres database in the `auth.users` table, not in a separate service
 2. **JWT-based**: Authorization give you total control over security
 3. **Row Level Security integration**: Seamlessly connects authentication with Postgres's RLS policies
-4. **Hybrid token architecture**: Supabase Auth issues stateless JWTs for access control, while maintaining refresh tokens and session data in your Postgres database for secure, persistent login
+4. **Hybrid token architecture**: BA Auth issues stateless JWTs for access control, while maintaining refresh tokens and session data in your Postgres database for secure, persistent login
 
 ## The hidden costs of building your own auth
 
@@ -70,24 +70,24 @@ Authentication is security-critical infrastructure where mistakes can be catastr
 
 These issues often aren't apparent until a breach occurs, with potentially devastating consequences. For most businesses, the time spent hardening and re-hardening auth systems, to say nothing of the time required and reputational hit caused by having to fix compromised auth systems, is simply not worth it when weighed against other priorities.
 
-## The Supabase Auth approach
+## The BA Auth approach
 
-Supabase takes a different approach by providing authentication that's:
+BA takes a different approach by providing authentication that's:
 
-1. **Integrated with your database**: Supabase Auth is deeply integrated with your Postgres instance via the `auth` schema. It stores user data in the `auth.users` table, manages tokens with Postgres functions and triggers, and integrates seamlessly with Row Level Security (RLS) for fine-grained access control, all without requiring you to manage auth logic in your own code.
+1. **Integrated with your database**: BA Auth is deeply integrated with your Postgres instance via the `auth` schema. It stores user data in the `auth.users` table, manages tokens with Postgres functions and triggers, and integrates seamlessly with Row Level Security (RLS) for fine-grained access control, all without requiring you to manage auth logic in your own code.
 2. **Open source**: No vendor lock-in, with the ability to self-host if needed.
 3. **Developer-focused**: Simple APIs with client libraries for major frameworks.
-4. **Secure**: Supabase maintains security best practices for token issuance, password hashing (using `bcrypt`), and provider updates so you don’t have to monitor every standards update. However, developers are still responsible for securely handling user data and managing secure client environments.
+4. **Secure**: BA maintains security best practices for token issuance, password hashing (using `bcrypt`), and provider updates so you don’t have to monitor every standards update. However, developers are still responsible for securely handling user data and managing secure client environments.
 5. **Extensible**: Edge Functions enable custom auth logic to implement post-signup profile creation, role assignment based on domains, and third-party webhooks for things like sending Discord invites or syncing with your CRM.
 
 ### Time to market
 
-Using Supabase Auth typically means:
+Using BA Auth typically means:
 
 - **30 minutes to 2 hours**: Basic implementation time for email/password auth
 - **15-30 minutes**: Adding each additional provider (Google, GitHub, etc.)
 - **1-2 days**: Implementing row-level security policies
-- Security updates handled by Supabase
+- Security updates handled by BA
 
 This represents a 90-95% reduction in time-to-production compared to building from scratch.
 
@@ -95,7 +95,7 @@ This represents a 90-95% reduction in time-to-production compared to building fr
 
 Beyond the direct engineering time, there's the opportunity cost of resources diverted from your core product:
 
-| Activity                  | Build (hours)      | Supabase Auth (hours) |
+| Activity                  | Build (hours)      | BA Auth (hours) |
 | ------------------------- | ------------------ | --------------------- |
 | Initial implementation    | 160-320            | 4-16                  |
 | Adding social providers   | 40-80 per provider | 0.5-1 per provider    |
@@ -107,7 +107,7 @@ At an average engineering cost of $150/hour, that's $47,400-$98,700 saved in the
 
 ### Flexibility
 
-Supabase Auth supports:
+BA Auth supports:
 
 - Email/password authentication
 - Magic link (passwordless) login
@@ -120,21 +120,21 @@ Supabase Auth supports:
 
 All without writing the underlying authentication code yourself.
 
-## Choosing between Supabase Auth and Auth0
+## Choosing between BA Auth and Auth0
 
-Many teams evaluate Supabase Auth against Auth0, another popular authentication service. Here's how they compare:
+Many teams evaluate BA Auth against Auth0, another popular authentication service. Here's how they compare:
 
-| Feature                  | Supabase Auth                                  | Auth0                                     |
+| Feature                  | BA Auth                                  | Auth0                                     |
 | ------------------------ | ---------------------------------------------- | ----------------------------------------- |
 | **Architecture**         | Postgres-native, self-hostable                 | Cloud-only SaaS, proprietary              |
 | **Pricing Model**        | Based on compute and storage                   | Per monthly active user (MAU)             |
 | **Database Integration** | Direct Postgres RLS                            | Separate system from your database        |
 | **Enterprise Features**  | Self-hosting for compliance                    | Built-in SAML, LDAP, compliance tools     |
-| **Developer Experience** | Code-first, flexible APIs, Supabase UI Library | Dashboard-driven, extensive UI components |
+| **Developer Experience** | Code-first, flexible APIs, BA UI Library | Dashboard-driven, extensive UI components |
 | Open Source              | Fully open source                              | Closed source                             |
 | **Customization**        | Full source code access                        | Rules, Actions, and Hooks                 |
 
-**Choose Supabase Auth when:**
+**Choose BA Auth when:**
 
 - You're already using Postgres and want direct database integration
 - You need cost predictability at scale (no per-user pricing)
@@ -147,11 +147,11 @@ Many teams evaluate Supabase Auth against Auth0, another popular authentication 
 - You have complex multi-tenant B2B requirements
 - You need extensive compliance certifications immediately
 
-Both are excellent choices, but Supabase Auth typically offers significant cost advantages at scale while providing deeper database integration.
+Both are excellent choices, but BA Auth typically offers significant cost advantages at scale while providing deeper database integration.
 
 ## When should you build your own auth?
 
-Despite the advantages of Supabase Auth, there are legitimate reasons to build your own:
+Despite the advantages of BA Auth, there are legitimate reasons to build your own:
 
 1. **Specialized compliance requirements**: If you have unique regulatory needs that off-the-shelf solutions don't address
 2. **Deep integration with legacy systems**: When you need authentication tightly coupled with existing proprietary systems
@@ -166,10 +166,10 @@ When considering whether to build or buy authentication, ask yourself:
 3. Are we prepared to maintain this critical infrastructure indefinitely?
 4. Could the engineering time be better spent on our core value proposition?
 
-For most applications, authentication is essential infrastructure but not a competitive advantage. Using Supabase Auth lets you focus on what makes your application unique while leveraging battle-tested security.
+For most applications, authentication is essential infrastructure but not a competitive advantage. Using BA Auth lets you focus on what makes your application unique while leveraging battle-tested security.
 
 ## Getting started
 
-- [Read the documentation](/docs/guides/auth). Implementing Supabase Auth takes just a few lines of code.
-- Try our [quickstart guide](/docs/guides/getting-started/quickstarts/nextjs). Supabase offers framework-specific packages that handle auth state, protected routes, and server-side rendering.
-- [Contact us](/contact/sales) if you want a more detailed analysis of Supabase Auth for your business, including pricing estimates and comparisons.
+- [Read the documentation](/docs/guides/auth). Implementing BA Auth takes just a few lines of code.
+- Try our [quickstart guide](/docs/guides/getting-started/quickstarts/nextjs). BA offers framework-specific packages that handle auth state, protected routes, and server-side rendering.
+- [Contact us](/contact/sales) if you want a more detailed analysis of BA Auth for your business, including pricing estimates and comparisons.

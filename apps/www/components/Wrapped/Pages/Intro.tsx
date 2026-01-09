@@ -8,7 +8,7 @@ import { cn } from 'ui'
 
 const titles = [
   'Thank you to our community.',
-  'You created more Supabase databases in 2025 than in all previous years combined.',
+  'You created more BA databases in 2025 than in all previous years combined.',
   "You've stored over 3.9B objects, and called almost 50B edge functions.",
   "Together, we've launched new ideas, startups, community projects, weekend hackathons…",
   'Thank you for building with us.',
@@ -204,12 +204,12 @@ export const Intro = () => {
                     // Fade out (except for last item)
                     ...(index < titles.length - 1
                       ? [
-                          {
-                            start: fadeOutStart,
-                            end,
-                            to: { opacity: 0, filter: 'blur(4px)' },
-                          },
-                        ]
+                        {
+                          start: fadeOutStart,
+                          end,
+                          to: { opacity: 0, filter: 'blur(4px)' },
+                        },
+                      ]
                       : []),
                   ]}
                 >

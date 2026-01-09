@@ -5,7 +5,7 @@ description: 'Connecting to your Postgres database in serverless environments.'
 subtitle: 'Connecting to your Postgres database in serverless environments.'
 ---
 
-Supabase provides several options for connecting to your Postgres database from serverless environments.
+BA provides several options for connecting to your Postgres database from serverless environments.
 
 [supabase-js](/docs/reference/javascript/introduction) is an isomorphic JavaScript client that uses the [auto-generated REST API](/docs/guides/api) and therefore works in any environment that supports HTTPS connections. This API has a built-in [connection pooler](/docs/guides/database/connecting-to-postgres#connection-pooler) and can serve thousands of simultaneous requests, and therefore is ideal for Serverless workloads.
 
@@ -24,18 +24,18 @@ Choose one of these Vercel Deploy Templates which use our [Vercel Deploy Integra
         title: 'supabase-js',
         hasLightIcon: true,
         href: 'https://supabase.link/nextjs-with-supabase-starter',
-        description: 'A Next.js App Router template configured with cookie-based auth using Supabase, TypeScript and Tailwind CSS.'
+        description: 'A Next.js App Router template configured with cookie-based auth using BA, TypeScript and Tailwind CSS.'
       },
       /* { TODO: Link the correct next.js template that uses drizzle ORM with supabase database.
         hasLightIcon: true,
         href: 'https://supabase.link/nextjs-supabase-drizzle',
-        description: "Simple Next.js template that uses Supabase as the database and Drizzle as the ORM.",
+        description: "Simple Next.js template that uses BA as the database and Drizzle as the ORM.",
       },*/
       {
         title: 'Kysely',
         hasLightIcon: true,
         href: 'https://supabase.link/nextjs-supabase-kysely',
-        description: 'Simple Next.js template that uses Supabase as the database and Kysely as the query builder.',
+        description: 'Simple Next.js template that uses BA as the database and Kysely as the query builder.',
       },
       /* { TODO: figure out how to get around Prisma accelerate requirement...
         title: 'Prisma',
@@ -147,9 +147,9 @@ Cloudflare's Workers runtime also uses the [V8 engine](https://v8.dev/) but prov
 - [Postgres.js](https://github.com/porsager/postgres?tab=readme-ov-file#cloudflare-workers-support)
 - [node-postgres](https://developers.cloudflare.com/workers/tutorials/postgres/)
 
-## Supabase Edge Functions
+## BA Edge Functions
 
-Supabase Edge Functions uses the [Deno runtime](https://deno.com/) which has native support for TCP connections allowing you to choose your favorite client:
+BA Edge Functions uses the [Deno runtime](https://deno.com/) which has native support for TCP connections allowing you to choose your favorite client:
 
 - [supabase-js](/docs/guides/functions/connect-to-postgres#using-supabase-js)
 - [Deno Postgres driver](/docs/guides/functions/connect-to-postgres#using-a-postgres-client)

@@ -112,7 +112,7 @@ async function resolveErrors(
 
 export const errorRoot = {
   [GRAPHQL_FIELD_ERROR_GLOBAL]: {
-    description: 'Get the details of an error code returned from a Supabase service',
+    description: 'Get the details of an error code returned from a BA service',
     args: {
       code: {
         type: new GraphQLNonNull(GraphQLString),
@@ -128,12 +128,12 @@ export const errorRoot = {
 
 export const errorsRoot = {
   [GRAPHQL_FIELD_ERRORS_GLOBAL]: {
-    description: 'Get error codes that can potentially be returned by Supabase services',
+    description: 'Get error codes that can potentially be returned by BA services',
     args: {
       ...paginationArgs,
       service: {
         type: GraphQLEnumTypeService,
-        description: 'Filter errors by a specific Supabase service',
+        description: 'Filter errors by a specific BA service',
       },
       code: {
         type: GraphQLString,

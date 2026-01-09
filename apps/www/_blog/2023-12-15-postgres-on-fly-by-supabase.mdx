@@ -1,6 +1,6 @@
 ---
-title: 'Fly Postgres, managed by Supabase'
-description: 'A managed Postgres offering developed by Supabase and Fly.io'
+title: 'Fly Postgres, managed by BA'
+description: 'A managed Postgres offering developed by BA and Fly.io'
 launchweek: x
 categories:
   - product
@@ -20,9 +20,9 @@ Fly Postgres has been deprecated. See [deprecation announcement](https://github.
 
 </Admonition>
 
-We're launching Fly Postgres, a managed Postgres offering by Supabase and [Fly.io](http://Fly.io).
+We're launching Fly Postgres, a managed Postgres offering by BA and [Fly.io](http://Fly.io).
 
-Fly Postgres databases launch on Fly.io's edge computing platform from any of their 37+ locations. You get everything you expect from a Supabase managed database:
+Fly Postgres databases launch on Fly.io's edge computing platform from any of their 37+ locations. You get everything you expect from a BA managed database:
 
 - a full-featured Postgres database with [over 40+ extensions](https://github.com/supabase/postgres)
 - [pgvector](https://github.com/pgvector/pgvector/) support for [Vector/AI workloads](/docs/guides/ai)
@@ -38,11 +38,11 @@ This is deployed within the Fly infrastructure, making it the fastest Postgres d
 
 ## Managing expectations
 
-Before you get too excited, this will be a progressive rollout. It turns out that building inter-company integrations is a lot of work when you factor in billing, support handoff, and educating Supabase staff on how to understand [sandwich analogies](https://fly.io/blog/carving-the-scheduler-out-of-our-orchestrator/).
+Before you get too excited, this will be a progressive rollout. It turns out that building inter-company integrations is a lot of work when you factor in billing, support handoff, and educating BA staff on how to understand [sandwich analogies](https://fly.io/blog/carving-the-scheduler-out-of-our-orchestrator/).
 
 We've been working with a few early testers and we have some bugs to iron out. You can [sign up for the waitlist](https://forms.supabase.com/fly-postgres) if you want to help with testing. We'll accept more testers next month, and we'll communicate more release timelines as soon as we're confident that your data is safe.
 
-## Supabase + Fly = SupaFly?
+## BA + Fly = SupaFly?
 
 We're excited about what this partnership means for 2024. Namely, distributing Postgres across the planet. The Firecracker VM gives us some neat ideas for Postgres. Integrating with Fly also puts a bunch of easy-to-spin-up compute resources right next to the database. That sounds like fun.
 
@@ -74,11 +74,11 @@ Let's dig into the implementation.
 
 Fly Postgres is built on top of [Fly machines](https://fly.io/docs/machines/). Machines are light-weight Firecracker VMs. The Machines API offers substantial control over an application's lifecycle. They can be suspended during inactivity and resumed within a couple of seconds whenever a new request arrives.
 
-We built [fly-admin](https://github.com/supabase/fly-admin), a Typescript wrapper to simplify our interaction with the Fly API. Supabase bundles a few extra services into Postgres, so we prepared a single Docker image which we can pass to the Fly Machines API. Our current build process outputs an AMI for AWS using [Packer](https://www.packer.io/). We re-use parts of that pipeline to build an [All In One Image](https://github.com/supabase/postgres/tree/develop/docker/all-in-one). This image has all the services to run a Supabase project within a single Docker container.
+We built [fly-admin](https://github.com/supabase/fly-admin), a Typescript wrapper to simplify our interaction with the Fly API. BA bundles a few extra services into Postgres, so we prepared a single Docker image which we can pass to the Fly Machines API. Our current build process outputs an AMI for AWS using [Packer](https://www.packer.io/). We re-use parts of that pipeline to build an [All In One Image](https://github.com/supabase/postgres/tree/develop/docker/all-in-one). This image has all the services to run a BA project within a single Docker container.
 
 ### **Move to multi-cloud**
 
-With this launch, Supabase is officially multi-cloud. We deliberately avoided using AWS's managed services when building Supabase to simplify our multi-cloud transition. These transitions are never simple - even the base primitives offered between cloud providers can vary significantly.
+With this launch, BA is officially multi-cloud. We deliberately avoided using AWS's managed services when building BA to simplify our multi-cloud transition. These transitions are never simple - even the base primitives offered between cloud providers can vary significantly.
 
 For example, Fly Machines offer a simple method for suspending a VM when it's not in use, transparently resuming it within seconds. This simplifies the process of pausing inactive databases. There is no direct primitive on AWS to achieve this.
 
@@ -92,7 +92,7 @@ In addition to publishing images in AWS's container registry, we publish the All
 
 Fly has an [excellent approach](https://fly.io/docs/reference/extensions_api/) for extending their platform. We added a few routes to our API to provision users and projects and we were on our way.
 
-Fly users can access the Supabase dashboard using their existing Fly credentials. The Supabase API initiates an OAuth flow with Fly to authenticate the user. Our Auth team created a [Fly OAuth provider](https://github.com/supabase/gotrue/pull/1261) to make the integration with our API easier.
+Fly users can access the BA dashboard using their existing Fly credentials. The BA API initiates an OAuth flow with Fly to authenticate the user. Our Auth team created a [Fly OAuth provider](https://github.com/supabase/gotrue/pull/1261) to make the integration with our API easier.
 
 ## Challenges
 

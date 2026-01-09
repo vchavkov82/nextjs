@@ -1,4 +1,4 @@
-/** 
+/**
 * USERS
 * Note: This table contains user data. Users should only be able to view and update their own data.
 */
@@ -13,9 +13,9 @@ create policy "Can view own user data." on users for select using (auth.uid() = 
 create policy "Can update own user data." on users for update using (auth.uid() = id);
 
 /**
-* This trigger automatically creates a user entry when a new user signs up via Supabase Auth.
-*/ 
-create function public.handle_new_user() 
+* This trigger automatically creates a user entry when a new user signs up via BA Auth.
+*/
+create function public.handle_new_user()
 returns trigger as $$
 begin
   insert into public.users (id, full_name, avatar_url)

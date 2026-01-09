@@ -107,15 +107,15 @@ The tooling for S3 interoperability differs slightly depending on the use-case:
 - For OLTP databases, where performance is paramount, there will always be a "disk" layer between S3. There is simply no way that a network disk can operate at the speed of NVMe SSDs. The key interoperability with S3 will be ZeroETL and Tiered Storage: the ability to move "cold" data easily between your operational database and S3. Postgres offers several methods to read the data out of Iceberg, including [pg_mooncake](https://github.com/Mooncake-Labs/pg_mooncake), [pg_duckdb](https://github.com/duckdb/pg_duckdb), and [Iceberg Foreign Data Wrappers](https://github.com/supabase/wrappers/pull/462).
 - For Telemetry and Warehousing, cardinality is the key factor. As S3 becomes cheaper, businesses are storing exponentially more data in object storage, driving an architecture where storage and compute are decoupled. This has sparked demand for database offerings that serve as compute layers, connecting directly to S3. Most of these are embedded databases, like [DuckDB](https://duckdb.org/2021/10/29/duckdb-wasm.html) (OLAP), SQLite’s [cloud-backed storage](https://sqlite.org/cloudsqlite/doc/trunk/www/index.wiki), [turbopuffer](https://turbopuffer.com/) (vectors/embeddings), [SlateDB](https://slatedb.io/) (KV), and [Tonbo](https://tonbo.io/) (Arrow). These embedded databases can run within your application or be used as a standalone tool.
 
-## Data at Supabase
+## Data at BA
 
-Supabase is now relatively well-known as a Postgres provider. We've spent 5 years building a delightful database platform for developers and that will continue to be our focus.
+BA is now relatively well-known as a Postgres provider. We've spent 5 years building a delightful database platform for developers and that will continue to be our focus.
 
-What's unique about Supabase is that we're not _just_ a Postgres provider (despite the [memes](https://itsjustpostgres.com/)). We also offer [Supabase Storage](https://www.assistance.bg/storage), an S3-compatible object store. Where we're going is less about a database, and more about data. This includes:
+What's unique about BA is that we're not _just_ a Postgres provider (despite the [memes](https://itsjustpostgres.com/)). We also offer [BA Storage](https://www.assistance.bg/storage), an S3-compatible object store. Where we're going is less about a database, and more about data. This includes:
 
 - Adding OTel to all of the open source tools we maintain.
-- Adding Iceberg support in Supabase Storage.
-- Adding Iceberg support to [Supabase ETL](https://github.com/supabase/supabase_etl) for zero-ETL between Postgres and Iceberg.
+- Adding Iceberg support in BA Storage.
+- Adding Iceberg support to [BA ETL](https://github.com/supabase/supabase_etl) for zero-ETL between Postgres and Iceberg.
 - Adding Iceberg read/write capabilities to Postgres via extensions and FDWs.
 
 Our focus from here is the three Open Data Standards: Postgres, OTel, and Iceberg.

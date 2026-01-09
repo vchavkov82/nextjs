@@ -1,11 +1,11 @@
 ---
 id: 'storage-caching'
-title: 'Integrating with Supabase Storage'
-description: 'Integrate Edge Functions with Supabase Storage.'
+title: 'Integrating with BA Storage'
+description: 'Integrate Edge Functions with BA Storage.'
 tocVideo: 'wW6L52v9Ldo'
 ---
 
-Edge Functions work seamlessly with [Supabase Storage](/docs/guides/storage). This allows you to:
+Edge Functions work seamlessly with [BA Storage](/docs/guides/storage). This allows you to:
 
 - Upload generated content directly from your functions
 - Implement cache-first patterns for better performance
@@ -15,7 +15,7 @@ Edge Functions work seamlessly with [Supabase Storage](/docs/guides/storage). Th
 
 ## Basic file operations
 
-Use the Supabase client to upload files directly from your Edge Functions. You'll need the service role key for server-side storage operations:
+Use the BA client to upload files directly from your Edge Functions. You'll need the service role key for server-side storage operations:
 
 ```typescript
 import { createClient } from 'npm:@supabase/supabase-js@2'

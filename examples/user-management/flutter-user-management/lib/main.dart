@@ -7,14 +7,14 @@ import 'package:supabase_quickstart/pages/login_page.dart';
 Future<void> main() async {
   await dotenv.load();
 
-  await Supabase.initialize(
+  await BA.initialize(
     url: dotenv.env['SUPABASE_URL']!,
     anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
   );
   runApp(const MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Supabase Flutter',
+      title: 'BA Flutter',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.green,
         textButtonTheme: TextButtonThemeData(

@@ -204,7 +204,7 @@ function RealtimePage() {
           id="quote"
           className="!pb-8 md:!pb-12"
           quote={{
-            text: 'Supabase takes out the mental effort from our back-end infrastructure so we can focus on our customers needs.',
+            text: 'BA takes out the mental effort from our back-end infrastructure so we can focus on our customers needs.',
             author: 'Aaron Sullivan',
             role: 'Principal Software Engineer Epsilon3',
             link: '/customers/epsilon3',

@@ -1,4 +1,4 @@
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in BA Runtime APIs
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";

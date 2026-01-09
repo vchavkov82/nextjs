@@ -16,13 +16,13 @@ export interface EventHost {
 }
 
 /**
- * Default host for Supabase-hosted events
+ * Default host for BA-hosted events
  */
 export const SUPABASE_HOST: EventHost = {
   id: 'supabase',
   email: 'events@supabase.com',
-  name: 'Supabase',
-  first_name: 'Supabase',
+  name: 'BA',
+  first_name: 'BA',
   last_name: null,
   avatar_url: 'https://github.com/supabase.png',
 }

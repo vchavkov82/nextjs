@@ -263,13 +263,13 @@ export interface Category {
   name: string;
   parent?: (number | null) | Category;
   breadcrumbs?:
-    | {
-        doc?: (number | null) | Category;
-        url?: string | null;
-        label?: string | null;
-        id?: string | null;
-      }[]
-    | null;
+  | {
+    doc?: (number | null) | Category;
+    url?: string | null;
+    label?: string | null;
+    id?: string | null;
+  }[]
+  | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -311,41 +311,41 @@ export interface Customer {
    * Key statistics or metrics to highlight
    */
   stats?:
-    | {
-        stat: string;
-        label: string;
-        id?: string | null;
-      }[]
-    | null;
+  | {
+    stat: string;
+    label: string;
+    id?: string | null;
+  }[]
+  | null;
   /**
    * Miscellaneous information (e.g., Founded, Location)
    */
   misc?:
-    | {
-        label: string;
-        text: string;
-        id?: string | null;
-      }[]
-    | null;
+  | {
+    label: string;
+    text: string;
+    id?: string | null;
+  }[]
+  | null;
   /**
    * Industry categories
    */
   industry?:
-    | (
-        | 'healthcare'
-        | 'fintech'
-        | 'ecommerce'
-        | 'education'
-        | 'gaming'
-        | 'media'
-        | 'real-estate'
-        | 'saas'
-        | 'social'
-        | 'analytics'
-        | 'ai'
-        | 'developer-tools'
-      )[]
-    | null;
+  | (
+    | 'healthcare'
+    | 'fintech'
+    | 'ecommerce'
+    | 'education'
+    | 'gaming'
+    | 'media'
+    | 'real-estate'
+    | 'saas'
+    | 'social'
+    | 'analytics'
+    | 'ai'
+    | 'developer-tools'
+  )[]
+  | null;
   /**
    * Size of the company
    */
@@ -355,7 +355,7 @@ export interface Customer {
    */
   region?: ('Asia' | 'Europe' | 'North America' | 'South America' | 'Africa' | 'Oceania') | null;
   /**
-   * Supabase products being used
+   * BA products being used
    */
   supabase_products?: ('database' | 'auth' | 'storage' | 'realtime' | 'functions' | 'vector')[] | null;
   meta?: {
@@ -410,450 +410,450 @@ export interface Event {
    * Event type
    */
   type?:
-    | (
-        | 'conference'
-        | 'hackathon'
-        | 'launch-week'
-        | 'meetup'
-        | 'office-hours'
-        | 'talk'
-        | 'webinar'
-        | 'workshop'
-        | 'other'
-      )[]
-    | null;
+  | (
+    | 'conference'
+    | 'hackathon'
+    | 'launch-week'
+    | 'meetup'
+    | 'office-hours'
+    | 'talk'
+    | 'webinar'
+    | 'workshop'
+    | 'other'
+  )[]
+  | null;
   date?: string | null;
   timezone?:
-    | (
-        | 'Africa/Abidjan'
-        | 'Africa/Accra'
-        | 'Africa/Addis_Ababa'
-        | 'Africa/Algiers'
-        | 'Africa/Asmara'
-        | 'Africa/Bamako'
-        | 'Africa/Bangui'
-        | 'Africa/Banjul'
-        | 'Africa/Bissau'
-        | 'Africa/Blantyre'
-        | 'Africa/Brazzaville'
-        | 'Africa/Bujumbura'
-        | 'Africa/Cairo'
-        | 'Africa/Casablanca'
-        | 'Africa/Ceuta'
-        | 'Africa/Conakry'
-        | 'Africa/Dakar'
-        | 'Africa/Dar_es_Salaam'
-        | 'Africa/Djibouti'
-        | 'Africa/Douala'
-        | 'Africa/El_Aaiun'
-        | 'Africa/Freetown'
-        | 'Africa/Gaborone'
-        | 'Africa/Harare'
-        | 'Africa/Johannesburg'
-        | 'Africa/Juba'
-        | 'Africa/Kampala'
-        | 'Africa/Khartoum'
-        | 'Africa/Kigali'
-        | 'Africa/Kinshasa'
-        | 'Africa/Lagos'
-        | 'Africa/Libreville'
-        | 'Africa/Lome'
-        | 'Africa/Luanda'
-        | 'Africa/Lubumbashi'
-        | 'Africa/Lusaka'
-        | 'Africa/Malabo'
-        | 'Africa/Maputo'
-        | 'Africa/Maseru'
-        | 'Africa/Mbabane'
-        | 'Africa/Mogadishu'
-        | 'Africa/Monrovia'
-        | 'Africa/Nairobi'
-        | 'Africa/Ndjamena'
-        | 'Africa/Niamey'
-        | 'Africa/Nouakchott'
-        | 'Africa/Ouagadougou'
-        | 'Africa/Porto-Novo'
-        | 'Africa/Sao_Tome'
-        | 'Africa/Tripoli'
-        | 'Africa/Tunis'
-        | 'Africa/Windhoek'
-        | 'America/Adak'
-        | 'America/Anchorage'
-        | 'America/Anguilla'
-        | 'America/Antigua'
-        | 'America/Araguaina'
-        | 'America/Argentina/Buenos_Aires'
-        | 'America/Argentina/Catamarca'
-        | 'America/Argentina/Cordoba'
-        | 'America/Argentina/Jujuy'
-        | 'America/Argentina/La_Rioja'
-        | 'America/Argentina/Mendoza'
-        | 'America/Argentina/Rio_Gallegos'
-        | 'America/Argentina/Salta'
-        | 'America/Argentina/San_Juan'
-        | 'America/Argentina/San_Luis'
-        | 'America/Argentina/Tucuman'
-        | 'America/Argentina/Ushuaia'
-        | 'America/Aruba'
-        | 'America/Asuncion'
-        | 'America/Atikokan'
-        | 'America/Bahia'
-        | 'America/Bahia_Banderas'
-        | 'America/Barbados'
-        | 'America/Belem'
-        | 'America/Belize'
-        | 'America/Blanc-Sablon'
-        | 'America/Boa_Vista'
-        | 'America/Bogota'
-        | 'America/Boise'
-        | 'America/Cambridge_Bay'
-        | 'America/Campo_Grande'
-        | 'America/Cancun'
-        | 'America/Caracas'
-        | 'America/Cayenne'
-        | 'America/Cayman'
-        | 'America/Chicago'
-        | 'America/Chihuahua'
-        | 'America/Costa_Rica'
-        | 'America/Creston'
-        | 'America/Cuiaba'
-        | 'America/Curacao'
-        | 'America/Danmarkshavn'
-        | 'America/Dawson'
-        | 'America/Dawson_Creek'
-        | 'America/Denver'
-        | 'America/Detroit'
-        | 'America/Dominica'
-        | 'America/Edmonton'
-        | 'America/Eirunepe'
-        | 'America/El_Salvador'
-        | 'America/Fort_Nelson'
-        | 'America/Fortaleza'
-        | 'America/Glace_Bay'
-        | 'America/Godthab'
-        | 'America/Goose_Bay'
-        | 'America/Grand_Turk'
-        | 'America/Grenada'
-        | 'America/Guadeloupe'
-        | 'America/Guatemala'
-        | 'America/Guayaquil'
-        | 'America/Guyana'
-        | 'America/Halifax'
-        | 'America/Havana'
-        | 'America/Hermosillo'
-        | 'America/Indiana/Indianapolis'
-        | 'America/Indiana/Knox'
-        | 'America/Indiana/Marengo'
-        | 'America/Indiana/Petersburg'
-        | 'America/Indiana/Tell_City'
-        | 'America/Indiana/Vevay'
-        | 'America/Indiana/Vincennes'
-        | 'America/Indiana/Winamac'
-        | 'America/Inuvik'
-        | 'America/Iqaluit'
-        | 'America/Jamaica'
-        | 'America/Juneau'
-        | 'America/Kentucky/Louisville'
-        | 'America/Kentucky/Monticello'
-        | 'America/Kralendijk'
-        | 'America/La_Paz'
-        | 'America/Lima'
-        | 'America/Los_Angeles'
-        | 'America/Lower_Princes'
-        | 'America/Maceio'
-        | 'America/Managua'
-        | 'America/Manaus'
-        | 'America/Marigot'
-        | 'America/Martinique'
-        | 'America/Matamoros'
-        | 'America/Mazatlan'
-        | 'America/Menominee'
-        | 'America/Merida'
-        | 'America/Metlakatla'
-        | 'America/Mexico_City'
-        | 'America/Miquelon'
-        | 'America/Moncton'
-        | 'America/Monterrey'
-        | 'America/Montevideo'
-        | 'America/Montserrat'
-        | 'America/Nassau'
-        | 'America/New_York'
-        | 'America/Nipigon'
-        | 'America/Nome'
-        | 'America/Noronha'
-        | 'America/North_Dakota/Beulah'
-        | 'America/North_Dakota/Center'
-        | 'America/North_Dakota/New_Salem'
-        | 'America/Ojinaga'
-        | 'America/Panama'
-        | 'America/Pangnirtung'
-        | 'America/Paramaribo'
-        | 'America/Phoenix'
-        | 'America/Port-au-Prince'
-        | 'America/Port_of_Spain'
-        | 'America/Porto_Velho'
-        | 'America/Puerto_Rico'
-        | 'America/Punta_Arenas'
-        | 'America/Rainy_River'
-        | 'America/Rankin_Inlet'
-        | 'America/Recife'
-        | 'America/Regina'
-        | 'America/Resolute'
-        | 'America/Rio_Branco'
-        | 'America/Santarem'
-        | 'America/Santiago'
-        | 'America/Santo_Domingo'
-        | 'America/Sao_Paulo'
-        | 'America/Scoresbysund'
-        | 'America/Sitka'
-        | 'America/St_Barthelemy'
-        | 'America/St_Johns'
-        | 'America/St_Kitts'
-        | 'America/St_Lucia'
-        | 'America/St_Thomas'
-        | 'America/St_Vincent'
-        | 'America/Swift_Current'
-        | 'America/Tegucigalpa'
-        | 'America/Thule'
-        | 'America/Thunder_Bay'
-        | 'America/Tijuana'
-        | 'America/Toronto'
-        | 'America/Tortola'
-        | 'America/Vancouver'
-        | 'America/Whitehorse'
-        | 'America/Winnipeg'
-        | 'America/Yakutat'
-        | 'America/Yellowknife'
-        | 'Antarctica/Casey'
-        | 'Antarctica/Davis'
-        | 'Antarctica/DumontDUrville'
-        | 'Antarctica/Macquarie'
-        | 'Antarctica/Mawson'
-        | 'Antarctica/McMurdo'
-        | 'Antarctica/Palmer'
-        | 'Antarctica/Rothera'
-        | 'Antarctica/Syowa'
-        | 'Antarctica/Troll'
-        | 'Antarctica/Vostok'
-        | 'Arctic/Longyearbyen'
-        | 'Asia/Aden'
-        | 'Asia/Almaty'
-        | 'Asia/Amman'
-        | 'Asia/Anadyr'
-        | 'Asia/Aqtau'
-        | 'Asia/Aqtobe'
-        | 'Asia/Ashgabat'
-        | 'Asia/Atyrau'
-        | 'Asia/Baghdad'
-        | 'Asia/Bahrain'
-        | 'Asia/Baku'
-        | 'Asia/Bangkok'
-        | 'Asia/Barnaul'
-        | 'Asia/Beirut'
-        | 'Asia/Bishkek'
-        | 'Asia/Brunei'
-        | 'Asia/Chita'
-        | 'Asia/Choibalsan'
-        | 'Asia/Colombo'
-        | 'Asia/Damascus'
-        | 'Asia/Dhaka'
-        | 'Asia/Dili'
-        | 'Asia/Dubai'
-        | 'Asia/Dushanbe'
-        | 'Asia/Famagusta'
-        | 'Asia/Gaza'
-        | 'Asia/Hebron'
-        | 'Asia/Ho_Chi_Minh'
-        | 'Asia/Hong_Kong'
-        | 'Asia/Hovd'
-        | 'Asia/Irkutsk'
-        | 'Asia/Istanbul'
-        | 'Asia/Jakarta'
-        | 'Asia/Jayapura'
-        | 'Asia/Jerusalem'
-        | 'Asia/Kabul'
-        | 'Asia/Kamchatka'
-        | 'Asia/Karachi'
-        | 'Asia/Kathmandu'
-        | 'Asia/Khandyga'
-        | 'Asia/Kolkata'
-        | 'Asia/Krasnoyarsk'
-        | 'Asia/Kuala_Lumpur'
-        | 'Asia/Kuching'
-        | 'Asia/Kuwait'
-        | 'Asia/Macau'
-        | 'Asia/Magadan'
-        | 'Asia/Makassar'
-        | 'Asia/Manila'
-        | 'Asia/Muscat'
-        | 'Asia/Nicosia'
-        | 'Asia/Novokuznetsk'
-        | 'Asia/Novosibirsk'
-        | 'Asia/Omsk'
-        | 'Asia/Oral'
-        | 'Asia/Phnom_Penh'
-        | 'Asia/Pontianak'
-        | 'Asia/Pyongyang'
-        | 'Asia/Qatar'
-        | 'Asia/Qostanay'
-        | 'Asia/Qyzylorda'
-        | 'Asia/Riyadh'
-        | 'Asia/Sakhalin'
-        | 'Asia/Samarkand'
-        | 'Asia/Seoul'
-        | 'Asia/Shanghai'
-        | 'Asia/Singapore'
-        | 'Asia/Srednekolymsk'
-        | 'Asia/Taipei'
-        | 'Asia/Tashkent'
-        | 'Asia/Tbilisi'
-        | 'Asia/Tehran'
-        | 'Asia/Thimphu'
-        | 'Asia/Tokyo'
-        | 'Asia/Tomsk'
-        | 'Asia/Ulaanbaatar'
-        | 'Asia/Urumqi'
-        | 'Asia/Ust-Nera'
-        | 'Asia/Vientiane'
-        | 'Asia/Vladivostok'
-        | 'Asia/Yakutsk'
-        | 'Asia/Yangon'
-        | 'Asia/Yekaterinburg'
-        | 'Asia/Yerevan'
-        | 'Atlantic/Azores'
-        | 'Atlantic/Bermuda'
-        | 'Atlantic/Canary'
-        | 'Atlantic/Cape_Verde'
-        | 'Atlantic/Faroe'
-        | 'Atlantic/Madeira'
-        | 'Atlantic/Reykjavik'
-        | 'Atlantic/South_Georgia'
-        | 'Atlantic/St_Helena'
-        | 'Atlantic/Stanley'
-        | 'Australia/Adelaide'
-        | 'Australia/Brisbane'
-        | 'Australia/Broken_Hill'
-        | 'Australia/Currie'
-        | 'Australia/Darwin'
-        | 'Australia/Eucla'
-        | 'Australia/Hobart'
-        | 'Australia/Lindeman'
-        | 'Australia/Lord_Howe'
-        | 'Australia/Melbourne'
-        | 'Australia/Perth'
-        | 'Australia/Sydney'
-        | 'Europe/Amsterdam'
-        | 'Europe/Andorra'
-        | 'Europe/Astrakhan'
-        | 'Europe/Athens'
-        | 'Europe/Belgrade'
-        | 'Europe/Berlin'
-        | 'Europe/Bratislava'
-        | 'Europe/Brussels'
-        | 'Europe/Bucharest'
-        | 'Europe/Budapest'
-        | 'Europe/Busingen'
-        | 'Europe/Chisinau'
-        | 'Europe/Copenhagen'
-        | 'Europe/Dublin'
-        | 'Europe/Gibraltar'
-        | 'Europe/Guernsey'
-        | 'Europe/Helsinki'
-        | 'Europe/Isle_of_Man'
-        | 'Europe/Istanbul'
-        | 'Europe/Jersey'
-        | 'Europe/Kaliningrad'
-        | 'Europe/Kiev'
-        | 'Europe/Kirov'
-        | 'Europe/Lisbon'
-        | 'Europe/Ljubljana'
-        | 'Europe/London'
-        | 'Europe/Luxembourg'
-        | 'Europe/Madrid'
-        | 'Europe/Malta'
-        | 'Europe/Mariehamn'
-        | 'Europe/Minsk'
-        | 'Europe/Monaco'
-        | 'Europe/Moscow'
-        | 'Europe/Oslo'
-        | 'Europe/Paris'
-        | 'Europe/Podgorica'
-        | 'Europe/Prague'
-        | 'Europe/Riga'
-        | 'Europe/Rome'
-        | 'Europe/Samara'
-        | 'Europe/San_Marino'
-        | 'Europe/Sarajevo'
-        | 'Europe/Saratov'
-        | 'Europe/Simferopol'
-        | 'Europe/Skopje'
-        | 'Europe/Sofia'
-        | 'Europe/Stockholm'
-        | 'Europe/Tallinn'
-        | 'Europe/Tirane'
-        | 'Europe/Ulyanovsk'
-        | 'Europe/Uzhgorod'
-        | 'Europe/Vaduz'
-        | 'Europe/Vatican'
-        | 'Europe/Vienna'
-        | 'Europe/Vilnius'
-        | 'Europe/Volgograd'
-        | 'Europe/Warsaw'
-        | 'Europe/Zagreb'
-        | 'Europe/Zaporozhye'
-        | 'Europe/Zurich'
-        | 'Indian/Antananarivo'
-        | 'Indian/Chagos'
-        | 'Indian/Christmas'
-        | 'Indian/Cocos'
-        | 'Indian/Comoro'
-        | 'Indian/Kerguelen'
-        | 'Indian/Mahe'
-        | 'Indian/Maldives'
-        | 'Indian/Mauritius'
-        | 'Indian/Mayotte'
-        | 'Indian/Reunion'
-        | 'Pacific/Apia'
-        | 'Pacific/Auckland'
-        | 'Pacific/Bougainville'
-        | 'Pacific/Chatham'
-        | 'Pacific/Chuuk'
-        | 'Pacific/Easter'
-        | 'Pacific/Efate'
-        | 'Pacific/Enderbury'
-        | 'Pacific/Fakaofo'
-        | 'Pacific/Fiji'
-        | 'Pacific/Funafuti'
-        | 'Pacific/Galapagos'
-        | 'Pacific/Gambier'
-        | 'Pacific/Guadalcanal'
-        | 'Pacific/Guam'
-        | 'Pacific/Honolulu'
-        | 'Pacific/Kiritimati'
-        | 'Pacific/Kosrae'
-        | 'Pacific/Kwajalein'
-        | 'Pacific/Majuro'
-        | 'Pacific/Marquesas'
-        | 'Pacific/Midway'
-        | 'Pacific/Nauru'
-        | 'Pacific/Niue'
-        | 'Pacific/Norfolk'
-        | 'Pacific/Noumea'
-        | 'Pacific/Pago_Pago'
-        | 'Pacific/Palau'
-        | 'Pacific/Pitcairn'
-        | 'Pacific/Pohnpei'
-        | 'Pacific/Port_Moresby'
-        | 'Pacific/Rarotonga'
-        | 'Pacific/Saipan'
-        | 'Pacific/Tahiti'
-        | 'Pacific/Tarawa'
-        | 'Pacific/Tongatapu'
-        | 'Pacific/Wake'
-        | 'Pacific/Wallis'
-        | 'UTC'
-      )
-    | null;
+  | (
+    | 'Africa/Abidjan'
+    | 'Africa/Accra'
+    | 'Africa/Addis_Ababa'
+    | 'Africa/Algiers'
+    | 'Africa/Asmara'
+    | 'Africa/Bamako'
+    | 'Africa/Bangui'
+    | 'Africa/Banjul'
+    | 'Africa/Bissau'
+    | 'Africa/Blantyre'
+    | 'Africa/Brazzaville'
+    | 'Africa/Bujumbura'
+    | 'Africa/Cairo'
+    | 'Africa/Casablanca'
+    | 'Africa/Ceuta'
+    | 'Africa/Conakry'
+    | 'Africa/Dakar'
+    | 'Africa/Dar_es_Salaam'
+    | 'Africa/Djibouti'
+    | 'Africa/Douala'
+    | 'Africa/El_Aaiun'
+    | 'Africa/Freetown'
+    | 'Africa/Gaborone'
+    | 'Africa/Harare'
+    | 'Africa/Johannesburg'
+    | 'Africa/Juba'
+    | 'Africa/Kampala'
+    | 'Africa/Khartoum'
+    | 'Africa/Kigali'
+    | 'Africa/Kinshasa'
+    | 'Africa/Lagos'
+    | 'Africa/Libreville'
+    | 'Africa/Lome'
+    | 'Africa/Luanda'
+    | 'Africa/Lubumbashi'
+    | 'Africa/Lusaka'
+    | 'Africa/Malabo'
+    | 'Africa/Maputo'
+    | 'Africa/Maseru'
+    | 'Africa/Mbabane'
+    | 'Africa/Mogadishu'
+    | 'Africa/Monrovia'
+    | 'Africa/Nairobi'
+    | 'Africa/Ndjamena'
+    | 'Africa/Niamey'
+    | 'Africa/Nouakchott'
+    | 'Africa/Ouagadougou'
+    | 'Africa/Porto-Novo'
+    | 'Africa/Sao_Tome'
+    | 'Africa/Tripoli'
+    | 'Africa/Tunis'
+    | 'Africa/Windhoek'
+    | 'America/Adak'
+    | 'America/Anchorage'
+    | 'America/Anguilla'
+    | 'America/Antigua'
+    | 'America/Araguaina'
+    | 'America/Argentina/Buenos_Aires'
+    | 'America/Argentina/Catamarca'
+    | 'America/Argentina/Cordoba'
+    | 'America/Argentina/Jujuy'
+    | 'America/Argentina/La_Rioja'
+    | 'America/Argentina/Mendoza'
+    | 'America/Argentina/Rio_Gallegos'
+    | 'America/Argentina/Salta'
+    | 'America/Argentina/San_Juan'
+    | 'America/Argentina/San_Luis'
+    | 'America/Argentina/Tucuman'
+    | 'America/Argentina/Ushuaia'
+    | 'America/Aruba'
+    | 'America/Asuncion'
+    | 'America/Atikokan'
+    | 'America/Bahia'
+    | 'America/Bahia_Banderas'
+    | 'America/Barbados'
+    | 'America/Belem'
+    | 'America/Belize'
+    | 'America/Blanc-Sablon'
+    | 'America/Boa_Vista'
+    | 'America/Bogota'
+    | 'America/Boise'
+    | 'America/Cambridge_Bay'
+    | 'America/Campo_Grande'
+    | 'America/Cancun'
+    | 'America/Caracas'
+    | 'America/Cayenne'
+    | 'America/Cayman'
+    | 'America/Chicago'
+    | 'America/Chihuahua'
+    | 'America/Costa_Rica'
+    | 'America/Creston'
+    | 'America/Cuiaba'
+    | 'America/Curacao'
+    | 'America/Danmarkshavn'
+    | 'America/Dawson'
+    | 'America/Dawson_Creek'
+    | 'America/Denver'
+    | 'America/Detroit'
+    | 'America/Dominica'
+    | 'America/Edmonton'
+    | 'America/Eirunepe'
+    | 'America/El_Salvador'
+    | 'America/Fort_Nelson'
+    | 'America/Fortaleza'
+    | 'America/Glace_Bay'
+    | 'America/Godthab'
+    | 'America/Goose_Bay'
+    | 'America/Grand_Turk'
+    | 'America/Grenada'
+    | 'America/Guadeloupe'
+    | 'America/Guatemala'
+    | 'America/Guayaquil'
+    | 'America/Guyana'
+    | 'America/Halifax'
+    | 'America/Havana'
+    | 'America/Hermosillo'
+    | 'America/Indiana/Indianapolis'
+    | 'America/Indiana/Knox'
+    | 'America/Indiana/Marengo'
+    | 'America/Indiana/Petersburg'
+    | 'America/Indiana/Tell_City'
+    | 'America/Indiana/Vevay'
+    | 'America/Indiana/Vincennes'
+    | 'America/Indiana/Winamac'
+    | 'America/Inuvik'
+    | 'America/Iqaluit'
+    | 'America/Jamaica'
+    | 'America/Juneau'
+    | 'America/Kentucky/Louisville'
+    | 'America/Kentucky/Monticello'
+    | 'America/Kralendijk'
+    | 'America/La_Paz'
+    | 'America/Lima'
+    | 'America/Los_Angeles'
+    | 'America/Lower_Princes'
+    | 'America/Maceio'
+    | 'America/Managua'
+    | 'America/Manaus'
+    | 'America/Marigot'
+    | 'America/Martinique'
+    | 'America/Matamoros'
+    | 'America/Mazatlan'
+    | 'America/Menominee'
+    | 'America/Merida'
+    | 'America/Metlakatla'
+    | 'America/Mexico_City'
+    | 'America/Miquelon'
+    | 'America/Moncton'
+    | 'America/Monterrey'
+    | 'America/Montevideo'
+    | 'America/Montserrat'
+    | 'America/Nassau'
+    | 'America/New_York'
+    | 'America/Nipigon'
+    | 'America/Nome'
+    | 'America/Noronha'
+    | 'America/North_Dakota/Beulah'
+    | 'America/North_Dakota/Center'
+    | 'America/North_Dakota/New_Salem'
+    | 'America/Ojinaga'
+    | 'America/Panama'
+    | 'America/Pangnirtung'
+    | 'America/Paramaribo'
+    | 'America/Phoenix'
+    | 'America/Port-au-Prince'
+    | 'America/Port_of_Spain'
+    | 'America/Porto_Velho'
+    | 'America/Puerto_Rico'
+    | 'America/Punta_Arenas'
+    | 'America/Rainy_River'
+    | 'America/Rankin_Inlet'
+    | 'America/Recife'
+    | 'America/Regina'
+    | 'America/Resolute'
+    | 'America/Rio_Branco'
+    | 'America/Santarem'
+    | 'America/Santiago'
+    | 'America/Santo_Domingo'
+    | 'America/Sao_Paulo'
+    | 'America/Scoresbysund'
+    | 'America/Sitka'
+    | 'America/St_Barthelemy'
+    | 'America/St_Johns'
+    | 'America/St_Kitts'
+    | 'America/St_Lucia'
+    | 'America/St_Thomas'
+    | 'America/St_Vincent'
+    | 'America/Swift_Current'
+    | 'America/Tegucigalpa'
+    | 'America/Thule'
+    | 'America/Thunder_Bay'
+    | 'America/Tijuana'
+    | 'America/Toronto'
+    | 'America/Tortola'
+    | 'America/Vancouver'
+    | 'America/Whitehorse'
+    | 'America/Winnipeg'
+    | 'America/Yakutat'
+    | 'America/Yellowknife'
+    | 'Antarctica/Casey'
+    | 'Antarctica/Davis'
+    | 'Antarctica/DumontDUrville'
+    | 'Antarctica/Macquarie'
+    | 'Antarctica/Mawson'
+    | 'Antarctica/McMurdo'
+    | 'Antarctica/Palmer'
+    | 'Antarctica/Rothera'
+    | 'Antarctica/Syowa'
+    | 'Antarctica/Troll'
+    | 'Antarctica/Vostok'
+    | 'Arctic/Longyearbyen'
+    | 'Asia/Aden'
+    | 'Asia/Almaty'
+    | 'Asia/Amman'
+    | 'Asia/Anadyr'
+    | 'Asia/Aqtau'
+    | 'Asia/Aqtobe'
+    | 'Asia/Ashgabat'
+    | 'Asia/Atyrau'
+    | 'Asia/Baghdad'
+    | 'Asia/Bahrain'
+    | 'Asia/Baku'
+    | 'Asia/Bangkok'
+    | 'Asia/Barnaul'
+    | 'Asia/Beirut'
+    | 'Asia/Bishkek'
+    | 'Asia/Brunei'
+    | 'Asia/Chita'
+    | 'Asia/Choibalsan'
+    | 'Asia/Colombo'
+    | 'Asia/Damascus'
+    | 'Asia/Dhaka'
+    | 'Asia/Dili'
+    | 'Asia/Dubai'
+    | 'Asia/Dushanbe'
+    | 'Asia/Famagusta'
+    | 'Asia/Gaza'
+    | 'Asia/Hebron'
+    | 'Asia/Ho_Chi_Minh'
+    | 'Asia/Hong_Kong'
+    | 'Asia/Hovd'
+    | 'Asia/Irkutsk'
+    | 'Asia/Istanbul'
+    | 'Asia/Jakarta'
+    | 'Asia/Jayapura'
+    | 'Asia/Jerusalem'
+    | 'Asia/Kabul'
+    | 'Asia/Kamchatka'
+    | 'Asia/Karachi'
+    | 'Asia/Kathmandu'
+    | 'Asia/Khandyga'
+    | 'Asia/Kolkata'
+    | 'Asia/Krasnoyarsk'
+    | 'Asia/Kuala_Lumpur'
+    | 'Asia/Kuching'
+    | 'Asia/Kuwait'
+    | 'Asia/Macau'
+    | 'Asia/Magadan'
+    | 'Asia/Makassar'
+    | 'Asia/Manila'
+    | 'Asia/Muscat'
+    | 'Asia/Nicosia'
+    | 'Asia/Novokuznetsk'
+    | 'Asia/Novosibirsk'
+    | 'Asia/Omsk'
+    | 'Asia/Oral'
+    | 'Asia/Phnom_Penh'
+    | 'Asia/Pontianak'
+    | 'Asia/Pyongyang'
+    | 'Asia/Qatar'
+    | 'Asia/Qostanay'
+    | 'Asia/Qyzylorda'
+    | 'Asia/Riyadh'
+    | 'Asia/Sakhalin'
+    | 'Asia/Samarkand'
+    | 'Asia/Seoul'
+    | 'Asia/Shanghai'
+    | 'Asia/Singapore'
+    | 'Asia/Srednekolymsk'
+    | 'Asia/Taipei'
+    | 'Asia/Tashkent'
+    | 'Asia/Tbilisi'
+    | 'Asia/Tehran'
+    | 'Asia/Thimphu'
+    | 'Asia/Tokyo'
+    | 'Asia/Tomsk'
+    | 'Asia/Ulaanbaatar'
+    | 'Asia/Urumqi'
+    | 'Asia/Ust-Nera'
+    | 'Asia/Vientiane'
+    | 'Asia/Vladivostok'
+    | 'Asia/Yakutsk'
+    | 'Asia/Yangon'
+    | 'Asia/Yekaterinburg'
+    | 'Asia/Yerevan'
+    | 'Atlantic/Azores'
+    | 'Atlantic/Bermuda'
+    | 'Atlantic/Canary'
+    | 'Atlantic/Cape_Verde'
+    | 'Atlantic/Faroe'
+    | 'Atlantic/Madeira'
+    | 'Atlantic/Reykjavik'
+    | 'Atlantic/South_Georgia'
+    | 'Atlantic/St_Helena'
+    | 'Atlantic/Stanley'
+    | 'Australia/Adelaide'
+    | 'Australia/Brisbane'
+    | 'Australia/Broken_Hill'
+    | 'Australia/Currie'
+    | 'Australia/Darwin'
+    | 'Australia/Eucla'
+    | 'Australia/Hobart'
+    | 'Australia/Lindeman'
+    | 'Australia/Lord_Howe'
+    | 'Australia/Melbourne'
+    | 'Australia/Perth'
+    | 'Australia/Sydney'
+    | 'Europe/Amsterdam'
+    | 'Europe/Andorra'
+    | 'Europe/Astrakhan'
+    | 'Europe/Athens'
+    | 'Europe/Belgrade'
+    | 'Europe/Berlin'
+    | 'Europe/Bratislava'
+    | 'Europe/Brussels'
+    | 'Europe/Bucharest'
+    | 'Europe/Budapest'
+    | 'Europe/Busingen'
+    | 'Europe/Chisinau'
+    | 'Europe/Copenhagen'
+    | 'Europe/Dublin'
+    | 'Europe/Gibraltar'
+    | 'Europe/Guernsey'
+    | 'Europe/Helsinki'
+    | 'Europe/Isle_of_Man'
+    | 'Europe/Istanbul'
+    | 'Europe/Jersey'
+    | 'Europe/Kaliningrad'
+    | 'Europe/Kiev'
+    | 'Europe/Kirov'
+    | 'Europe/Lisbon'
+    | 'Europe/Ljubljana'
+    | 'Europe/London'
+    | 'Europe/Luxembourg'
+    | 'Europe/Madrid'
+    | 'Europe/Malta'
+    | 'Europe/Mariehamn'
+    | 'Europe/Minsk'
+    | 'Europe/Monaco'
+    | 'Europe/Moscow'
+    | 'Europe/Oslo'
+    | 'Europe/Paris'
+    | 'Europe/Podgorica'
+    | 'Europe/Prague'
+    | 'Europe/Riga'
+    | 'Europe/Rome'
+    | 'Europe/Samara'
+    | 'Europe/San_Marino'
+    | 'Europe/Sarajevo'
+    | 'Europe/Saratov'
+    | 'Europe/Simferopol'
+    | 'Europe/Skopje'
+    | 'Europe/Sofia'
+    | 'Europe/Stockholm'
+    | 'Europe/Tallinn'
+    | 'Europe/Tirane'
+    | 'Europe/Ulyanovsk'
+    | 'Europe/Uzhgorod'
+    | 'Europe/Vaduz'
+    | 'Europe/Vatican'
+    | 'Europe/Vienna'
+    | 'Europe/Vilnius'
+    | 'Europe/Volgograd'
+    | 'Europe/Warsaw'
+    | 'Europe/Zagreb'
+    | 'Europe/Zaporozhye'
+    | 'Europe/Zurich'
+    | 'Indian/Antananarivo'
+    | 'Indian/Chagos'
+    | 'Indian/Christmas'
+    | 'Indian/Cocos'
+    | 'Indian/Comoro'
+    | 'Indian/Kerguelen'
+    | 'Indian/Mahe'
+    | 'Indian/Maldives'
+    | 'Indian/Mauritius'
+    | 'Indian/Mayotte'
+    | 'Indian/Reunion'
+    | 'Pacific/Apia'
+    | 'Pacific/Auckland'
+    | 'Pacific/Bougainville'
+    | 'Pacific/Chatham'
+    | 'Pacific/Chuuk'
+    | 'Pacific/Easter'
+    | 'Pacific/Efate'
+    | 'Pacific/Enderbury'
+    | 'Pacific/Fakaofo'
+    | 'Pacific/Fiji'
+    | 'Pacific/Funafuti'
+    | 'Pacific/Galapagos'
+    | 'Pacific/Gambier'
+    | 'Pacific/Guadalcanal'
+    | 'Pacific/Guam'
+    | 'Pacific/Honolulu'
+    | 'Pacific/Kiritimati'
+    | 'Pacific/Kosrae'
+    | 'Pacific/Kwajalein'
+    | 'Pacific/Majuro'
+    | 'Pacific/Marquesas'
+    | 'Pacific/Midway'
+    | 'Pacific/Nauru'
+    | 'Pacific/Niue'
+    | 'Pacific/Norfolk'
+    | 'Pacific/Noumea'
+    | 'Pacific/Pago_Pago'
+    | 'Pacific/Palau'
+    | 'Pacific/Pitcairn'
+    | 'Pacific/Pohnpei'
+    | 'Pacific/Port_Moresby'
+    | 'Pacific/Rarotonga'
+    | 'Pacific/Saipan'
+    | 'Pacific/Tahiti'
+    | 'Pacific/Tarawa'
+    | 'Pacific/Tongatapu'
+    | 'Pacific/Wake'
+    | 'Pacific/Wallis'
+    | 'UTC'
+  )
+  | null;
   showEndDate?: boolean | null;
   /**
    * If "showEndDate" is true, this will define when the event terminates.
@@ -1024,12 +1024,12 @@ export interface User {
   loginAttempts?: number | null;
   lockUntil?: string | null;
   sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
+  | {
+    id: string;
+    createdAt?: string | null;
+    expiresAt: string;
+  }[]
+  | null;
   password?: string | null;
 }
 /**
@@ -1042,23 +1042,23 @@ export interface PayloadJob {
    * Input data provided to the job
    */
   input?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
+  | {
+    [k: string]: unknown;
+  }
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
   taskStatus?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
+  | {
+    [k: string]: unknown;
+  }
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
   completedAt?: string | null;
   totalTried?: number | null;
   /**
@@ -1069,54 +1069,54 @@ export interface PayloadJob {
    * If hasError is true, this is the error that caused it
    */
   error?:
+  | {
+    [k: string]: unknown;
+  }
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
+  /**
+   * Task execution log
+   */
+  log?:
+  | {
+    executedAt: string;
+    completedAt: string;
+    taskSlug: 'inline' | 'schedulePublish';
+    taskID: string;
+    input?:
     | {
-        [k: string]: unknown;
-      }
+      [k: string]: unknown;
+    }
     | unknown[]
     | string
     | number
     | boolean
     | null;
-  /**
-   * Task execution log
-   */
-  log?:
+    output?:
     | {
-        executedAt: string;
-        completedAt: string;
-        taskSlug: 'inline' | 'schedulePublish';
-        taskID: string;
-        input?:
-          | {
-              [k: string]: unknown;
-            }
-          | unknown[]
-          | string
-          | number
-          | boolean
-          | null;
-        output?:
-          | {
-              [k: string]: unknown;
-            }
-          | unknown[]
-          | string
-          | number
-          | boolean
-          | null;
-        state: 'failed' | 'succeeded';
-        error?:
-          | {
-              [k: string]: unknown;
-            }
-          | unknown[]
-          | string
-          | number
-          | boolean
-          | null;
-        id?: string | null;
-      }[]
+      [k: string]: unknown;
+    }
+    | unknown[]
+    | string
+    | number
+    | boolean
     | null;
+    state: 'failed' | 'succeeded';
+    error?:
+    | {
+      [k: string]: unknown;
+    }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+    id?: string | null;
+  }[]
+  | null;
   taskSlug?: ('inline' | 'schedulePublish') | null;
   queue?: string | null;
   waitUntil?: string | null;
@@ -1131,42 +1131,42 @@ export interface PayloadJob {
 export interface PayloadLockedDocument {
   id: number;
   document?:
-    | ({
-        relationTo: 'authors';
-        value: number | Author;
-      } | null)
-    | ({
-        relationTo: 'categories';
-        value: number | Category;
-      } | null)
-    | ({
-        relationTo: 'customers';
-        value: number | Customer;
-      } | null)
-    | ({
-        relationTo: 'events';
-        value: number | Event;
-      } | null)
-    | ({
-        relationTo: 'media';
-        value: number | Media;
-      } | null)
-    | ({
-        relationTo: 'posts';
-        value: number | Post;
-      } | null)
-    | ({
-        relationTo: 'tags';
-        value: number | Tag;
-      } | null)
-    | ({
-        relationTo: 'users';
-        value: number | User;
-      } | null)
-    | ({
-        relationTo: 'payload-jobs';
-        value: number | PayloadJob;
-      } | null);
+  | ({
+    relationTo: 'authors';
+    value: number | Author;
+  } | null)
+  | ({
+    relationTo: 'categories';
+    value: number | Category;
+  } | null)
+  | ({
+    relationTo: 'customers';
+    value: number | Customer;
+  } | null)
+  | ({
+    relationTo: 'events';
+    value: number | Event;
+  } | null)
+  | ({
+    relationTo: 'media';
+    value: number | Media;
+  } | null)
+  | ({
+    relationTo: 'posts';
+    value: number | Post;
+  } | null)
+  | ({
+    relationTo: 'tags';
+    value: number | Tag;
+  } | null)
+  | ({
+    relationTo: 'users';
+    value: number | User;
+  } | null)
+  | ({
+    relationTo: 'payload-jobs';
+    value: number | PayloadJob;
+  } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
@@ -1187,14 +1187,14 @@ export interface PayloadPreference {
   };
   key?: string | null;
   value?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
+  | {
+    [k: string]: unknown;
+  }
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -1232,13 +1232,13 @@ export interface CategoriesSelect<T extends boolean = true> {
   name?: T;
   parent?: T;
   breadcrumbs?:
-    | T
-    | {
-        doc?: T;
-        url?: T;
-        label?: T;
-        id?: T;
-      };
+  | T
+  | {
+    doc?: T;
+    url?: T;
+    label?: T;
+    id?: T;
+  };
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1256,30 +1256,30 @@ export interface CustomersSelect<T extends boolean = true> {
   about?: T;
   company_url?: T;
   stats?:
-    | T
-    | {
-        stat?: T;
-        label?: T;
-        id?: T;
-      };
+  | T
+  | {
+    stat?: T;
+    label?: T;
+    id?: T;
+  };
   misc?:
-    | T
-    | {
-        label?: T;
-        text?: T;
-        id?: T;
-      };
+  | T
+  | {
+    label?: T;
+    text?: T;
+    id?: T;
+  };
   industry?: T;
   company_size?: T;
   region?: T;
   supabase_products?: T;
   meta?:
-    | T
-    | {
-        title?: T;
-        image?: T;
-        description?: T;
-      };
+  | T
+  | {
+    title?: T;
+    image?: T;
+    description?: T;
+  };
   publishedAt?: T;
   logo?: T;
   logo_inverse?: T;
@@ -1308,42 +1308,42 @@ export interface EventsSelect<T extends boolean = true> {
   onDemand?: T;
   disablePageBuild?: T;
   link?:
-    | T
-    | {
-        href?: T;
-        target?: T;
-      };
+  | T
+  | {
+    href?: T;
+    target?: T;
+  };
   mainCta?:
-    | T
-    | {
-        href?: T;
-        target?: T;
-        label?: T;
-        disabled?: T;
-        disabled_label?: T;
-      };
+  | T
+  | {
+    href?: T;
+    target?: T;
+    label?: T;
+    disabled?: T;
+    disabled_label?: T;
+  };
   company?:
-    | T
-    | {
-        showCompany?: T;
-        name?: T;
-        websiteUrl?: T;
-        logo?: T;
-        logo_light?: T;
-      };
+  | T
+  | {
+    showCompany?: T;
+    name?: T;
+    websiteUrl?: T;
+    logo?: T;
+    logo_light?: T;
+  };
   participants?:
-    | T
-    | {
-        showParticipants?: T;
-        participants?: T;
-      };
+  | T
+  | {
+    showParticipants?: T;
+    participants?: T;
+  };
   meta?:
-    | T
-    | {
-        title?: T;
-        image?: T;
-        description?: T;
-      };
+  | T
+  | {
+    title?: T;
+    image?: T;
+    description?: T;
+  };
   publishedAt?: T;
   updatedAt?: T;
   createdAt?: T;
@@ -1369,79 +1369,79 @@ export interface MediaSelect<T extends boolean = true> {
   focalX?: T;
   focalY?: T;
   sizes?:
+  | T
+  | {
+    thumbnail?:
     | T
     | {
-        thumbnail?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        square?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        small?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        medium?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        large?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        xlarge?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-        og?:
-          | T
-          | {
-              url?: T;
-              width?: T;
-              height?: T;
-              mimeType?: T;
-              filesize?: T;
-              filename?: T;
-            };
-      };
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    square?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    small?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    medium?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    large?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    xlarge?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+    og?:
+    | T
+    | {
+      url?: T;
+      width?: T;
+      height?: T;
+      mimeType?: T;
+      filesize?: T;
+      filename?: T;
+    };
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1461,12 +1461,12 @@ export interface PostsSelect<T extends boolean = true> {
   toc_depth?: T;
   launchweek?: T;
   meta?:
-    | T
-    | {
-        title?: T;
-        image?: T;
-        description?: T;
-      };
+  | T
+  | {
+    title?: T;
+    image?: T;
+    description?: T;
+  };
   publishedAt?: T;
   date?: T;
   updatedAt?: T;
@@ -1498,12 +1498,12 @@ export interface UsersSelect<T extends boolean = true> {
   loginAttempts?: T;
   lockUntil?: T;
   sessions?:
-    | T
-    | {
-        id?: T;
-        createdAt?: T;
-        expiresAt?: T;
-      };
+  | T
+  | {
+    id?: T;
+    createdAt?: T;
+    expiresAt?: T;
+  };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1517,18 +1517,18 @@ export interface PayloadJobsSelect<T extends boolean = true> {
   hasError?: T;
   error?: T;
   log?:
-    | T
-    | {
-        executedAt?: T;
-        completedAt?: T;
-        taskSlug?: T;
-        taskID?: T;
-        input?: T;
-        output?: T;
-        state?: T;
-        error?: T;
-        id?: T;
-      };
+  | T
+  | {
+    executedAt?: T;
+    completedAt?: T;
+    taskSlug?: T;
+    taskID?: T;
+    input?: T;
+    output?: T;
+    state?: T;
+    error?: T;
+    id?: T;
+  };
   taskSlug?: T;
   queue?: T;
   waitUntil?: T;
@@ -1577,14 +1577,14 @@ export interface TaskSchedulePublish {
     type?: ('publish' | 'unpublish') | null;
     locale?: string | null;
     doc?:
-      | ({
-          relationTo: 'customers';
-          value: number | Customer;
-        } | null)
-      | ({
-          relationTo: 'events';
-          value: number | Event;
-        } | null);
+    | ({
+      relationTo: 'customers';
+      value: number | Customer;
+    } | null)
+    | ({
+      relationTo: 'events';
+      value: number | Event;
+    } | null);
     global?: string | null;
     user?: (number | null) | User;
   };
@@ -1671,5 +1671,5 @@ export interface Auth {
 
 
 declare module 'payload' {
-  export interface GeneratedTypes extends Config {}
+  export interface GeneratedTypes extends Config { }
 }

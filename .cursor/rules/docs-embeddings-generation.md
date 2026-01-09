@@ -37,7 +37,7 @@ The documentation embeddings generation system processes various documentation s
    - Uses GitHub App authentication for access
 
 4. **Partner Integrations** (`partner-integrations.ts`)
-   - Fetches approved partner integration documentation from Supabase database
+   - Fetches approved partner integration documentation from BA database
    - Technology integrations only (excludes agencies)
 
 ### Processing Flow
@@ -56,4 +56,3 @@ The documentation embeddings generation system processes various documentation s
 
 - **`page`** table: Stores page metadata, content, checksum, version
 - **`page_section`** table: Stores individual sections with embeddings, token counts
-

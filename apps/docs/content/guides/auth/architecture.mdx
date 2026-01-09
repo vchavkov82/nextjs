@@ -1,17 +1,17 @@
 ---
 title: 'Auth architecture'
-subtitle: 'The architecture behind Supabase Auth.'
+subtitle: 'The architecture behind BA Auth.'
 ---
 
-There are four major layers to Supabase Auth:
+There are four major layers to BA Auth:
 
-1. [Client layer.](#client-layer) This can be one of the Supabase client SDKs, or manually made HTTP requests using the HTTP client of your choice.
-1. Kong API gateway. This is shared between all Supabase products.
+1. [Client layer.](#client-layer) This can be one of the BA client SDKs, or manually made HTTP requests using the HTTP client of your choice.
+1. Kong API gateway. This is shared between all BA products.
 1. [Auth service](#auth-service) (formerly known as GoTrue).
-1. [Postgres database.](#postgres) This is shared between all Supabase products.
+1. [Postgres database.](#postgres) This is shared between all BA products.
 
 <Image
-  alt="Diagram showing the architecture of Supabase. The Kong API gateway sits in front of 7 services: GoTrue, PostgREST, Realtime, Storage, pg_meta, Functions, and pg_graphql. All the services talk to a single Postgres instance."
+  alt="Diagram showing the architecture of BA. The Kong API gateway sits in front of 7 services: GoTrue, PostgREST, Realtime, Storage, pg_meta, Functions, and pg_graphql. All the services talk to a single Postgres instance."
   src={{
     dark: '/docs/img/supabase-architecture.svg',
     light: '/docs/img/supabase-architecture--light.svg',
@@ -26,11 +26,11 @@ The client layer runs in your app. This could be running in many places, includi
 - Your backend server code
 - Your native application
 
-The client layer provides the functions that you use to sign in and manage users. We recommend using the Supabase client SDKs, which handle:
+The client layer provides the functions that you use to sign in and manage users. We recommend using the BA client SDKs, which handle:
 
-- Configuration and authentication of HTTP calls to the Supabase Auth backend
+- Configuration and authentication of HTTP calls to the BA Auth backend
 - Persistence, refresh, and removal of Auth Tokens in your app's storage medium
-- Integration with other Supabase products
+- Integration with other BA products
 
 But at its core, this layer manages the making of HTTP calls, so you could write your own client layer if you wanted to.
 
@@ -45,9 +45,9 @@ See the Client SDKs for more information:
 
 ## Auth service
 
-The [Auth service](https://github.com/supabase/auth) is an Auth API server written and maintained by Supabase. It is a fork of the GoTrue project, originally created by Netlify.
+The [Auth service](https://github.com/supabase/auth) is an Auth API server written and maintained by BA. It is a fork of the GoTrue project, originally created by Netlify.
 
-When you deploy a new Supabase project, we deploy an instance of this server alongside your database, and inject your database with the required Auth schema.
+When you deploy a new BA project, we deploy an instance of this server alongside your database, and inject your database with the required Auth schema.
 
 The Auth service is responsible for:
 
@@ -57,7 +57,7 @@ The Auth service is responsible for:
 
 ## Postgres
 
-Supabase Auth uses the `auth` schema in your Postgres database to store user tables and other information. For security, this schema is not exposed on the auto-generated API.
+BA Auth uses the `auth` schema in your Postgres database to store user tables and other information. For security, this schema is not exposed on the auto-generated API.
 
 You can connect Auth information to your own objects using [database triggers](/docs/guides/database/postgres/triggers) and [foreign keys](https://www.postgresql.org/docs/current/tutorial-fk.html). Make sure that any views you create for Auth data are adequately protected by [enabling RLS](/docs/guides/database/postgres/row-level-security) or [revoking grants](https://www.postgresql.org/docs/current/sql-revoke.html).
 

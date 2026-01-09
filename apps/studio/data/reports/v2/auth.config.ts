@@ -43,7 +43,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --active-users
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(f.event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(distinct json_value(f.event_message, "$.auth_event.actor_id")) as count
@@ -96,7 +96,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --password-reset-requests
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(f.event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count
@@ -113,7 +113,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --total-signups
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count
@@ -130,7 +130,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --signin-processing-time-basic
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count,
@@ -150,7 +150,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --signin-processing-time-percentiles
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count,
@@ -170,7 +170,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --signup-processing-time-basic
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count,
@@ -190,7 +190,7 @@ const AUTH_REPORT_SQL: Record<
     const groupByProvider = Boolean(filters?.provider && filters.provider.length > 0)
     return `
         --signup-processing-time-percentiles
-        select 
+        select
           timestamp_trunc(timestamp, ${granularity}) as timestamp,
           ${groupByProvider ? 'COALESCE(JSON_VALUE(event_message, "$.provider"), \'unknown\') as provider,' : ''}
           count(*) as count,
@@ -209,7 +209,7 @@ const AUTH_REPORT_SQL: Record<
     const whereClause = edgeLogsFilterToWhereClause(filters)
     return `
         --auth-errors-by-status
-  select 
+  select
     timestamp_trunc(timestamp, ${granularity}) as timestamp,
     count(*) as count,
     response.status_code
@@ -230,7 +230,7 @@ const AUTH_REPORT_SQL: Record<
     const whereClause = edgeLogsFilterToWhereClause(filters)
     return `
         --auth-errors-by-code
-  select 
+  select
     timestamp_trunc(timestamp, ${granularity}) as timestamp,
     count(*) as count,
     h.x_sb_error_code as error_code
@@ -679,72 +679,72 @@ export const createErrorsReportConfig = ({
   interval: AnalyticsInterval
   filters: AuthReportFilters
 }): ReportConfig<AuthReportFilters>[] => [
-  {
-    id: 'auth-errors',
-    label: 'API Gateway Auth Errors',
-    valuePrecision: 0,
-    hide: false,
-    showTooltip: true,
-    showLegend: true,
-    showMaxValue: false,
-    hideChartType: false,
-    defaultChartStyle: 'line',
-    titleTooltip: 'The total number of auth errors by status code from the API Gateway.',
-    availableIn: ['free', 'pro', 'team', 'enterprise', 'platform'],
-    dataProvider: async () => {
-      const sql = AUTH_REPORT_SQL.ErrorsByStatus(interval, filters)
-      const rawData = await fetchLogs(projectRef, sql, startDate, endDate)
+    {
+      id: 'auth-errors',
+      label: 'API Gateway Auth Errors',
+      valuePrecision: 0,
+      hide: false,
+      showTooltip: true,
+      showLegend: true,
+      showMaxValue: false,
+      hideChartType: false,
+      defaultChartStyle: 'line',
+      titleTooltip: 'The total number of auth errors by status code from the API Gateway.',
+      availableIn: ['free', 'pro', 'team', 'enterprise', 'platform'],
+      dataProvider: async () => {
+        const sql = AUTH_REPORT_SQL.ErrorsByStatus(interval, filters)
+        const rawData = await fetchLogs(projectRef, sql, startDate, endDate)
 
-      if (!rawData?.result) return { data: [] }
+        if (!rawData?.result) return { data: [] }
 
-      const statusCodes = extractStatusCodesFromData(rawData.result)
-      const attributes = generateStatusCodeAttributes(statusCodes)
-      const data = transformStatusCodeData(rawData.result, statusCodes)
+        const statusCodes = extractStatusCodesFromData(rawData.result)
+        const attributes = generateStatusCodeAttributes(statusCodes)
+        const data = transformStatusCodeData(rawData.result, statusCodes)
 
-      return { data, attributes, query: sql }
+        return { data, attributes, query: sql }
+      },
     },
-  },
-  {
-    id: 'auth-errors-by-code',
-    label: 'Auth Errors by Code',
-    valuePrecision: 0,
-    hide: false,
-    showTooltip: true,
-    showLegend: true,
-    showMaxValue: false,
-    hideChartType: false,
-    defaultChartStyle: 'line',
-    titleTooltip:
-      'The total number of auth errors by Supabase Auth error code from the API Gateway.',
-    availableIn: ['free', 'pro', 'team', 'enterprise', 'platform'],
-    dataProvider: async () => {
-      const sql = AUTH_REPORT_SQL.ErrorsByAuthCode(interval, filters)
-      const rawData = await fetchLogs(projectRef, sql, startDate, endDate)
+    {
+      id: 'auth-errors-by-code',
+      label: 'Auth Errors by Code',
+      valuePrecision: 0,
+      hide: false,
+      showTooltip: true,
+      showLegend: true,
+      showMaxValue: false,
+      hideChartType: false,
+      defaultChartStyle: 'line',
+      titleTooltip:
+        'The total number of auth errors by BA Auth error code from the API Gateway.',
+      availableIn: ['free', 'pro', 'team', 'enterprise', 'platform'],
+      dataProvider: async () => {
+        const sql = AUTH_REPORT_SQL.ErrorsByAuthCode(interval, filters)
+        const rawData = await fetchLogs(projectRef, sql, startDate, endDate)
 
-      if (!rawData?.result) return { data: [] }
+        if (!rawData?.result) return { data: [] }
 
-      const categories = rawData.result
-        .map((r: any) => r.error_code)
-        .filter((v: any) => v !== null && v !== undefined)
-      const distinct = Array.from(new Set(categories)).sort()
+        const categories = rawData.result
+          .map((r: any) => r.error_code)
+          .filter((v: any) => v !== null && v !== undefined)
+        const distinct = Array.from(new Set(categories)).sort()
 
-      const attributes = distinct.map((c: string) => ({
-        attribute: c,
-        label: c,
-        tooltip: AUTH_ERROR_CODE_LIST.find((e) => e.key === c)?.description,
-      }))
+        const attributes = distinct.map((c: string) => ({
+          attribute: c,
+          label: c,
+          tooltip: AUTH_ERROR_CODE_LIST.find((e) => e.key === c)?.description,
+        }))
 
-      const data = rawData.result.map((point: any) => ({
-        ...point,
-        timestamp: point.timestamp,
-      }))
+        const data = rawData.result.map((point: any) => ({
+          ...point,
+          timestamp: point.timestamp,
+        }))
 
-      const pivoted = transformCategoricalCountData(rawData.result, 'error_code', distinct)
+        const pivoted = transformCategoricalCountData(rawData.result, 'error_code', distinct)
 
-      return { data: pivoted, attributes, query: sql }
+        return { data: pivoted, attributes, query: sql }
+      },
     },
-  },
-]
+  ]
 
 export const createLatencyReportConfig = ({
   projectRef,
@@ -942,7 +942,7 @@ export const createAuthReportConfig = ({
   interval: AnalyticsInterval
   filters: AuthReportFilters
 }): ReportConfig<AuthReportFilters>[] => [
-  ...createUsageReportConfig({ projectRef, startDate, endDate, interval, filters }),
-  ...createErrorsReportConfig({ projectRef, startDate, endDate, interval, filters }),
-  ...createLatencyReportConfig({ projectRef, startDate, endDate, interval, filters }),
-]
+    ...createUsageReportConfig({ projectRef, startDate, endDate, interval, filters }),
+    ...createErrorsReportConfig({ projectRef, startDate, endDate, interval, filters }),
+    ...createLatencyReportConfig({ projectRef, startDate, endDate, interval, filters }),
+  ]

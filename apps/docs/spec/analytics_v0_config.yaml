@@ -43,7 +43,7 @@ parameters:
     default: 'false'
     type: 'boolean'
     description: |
-      This is a special mode for Logflare which will seed additional resources for usage with Supabase self-hosted.
+      This is a special mode for Logflare which will seed additional resources for usage with BA self-hosted.
   - id: 'PHX_HTTP_PORT' # {string} A unique identifier for this param.
     title: 'PHX_HTTP_PORT' # {string} Any name.
     tags: ['general'] # {string[]} These tags are useful for grouping parameters

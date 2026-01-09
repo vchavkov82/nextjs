@@ -13,7 +13,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/RealtimeClient.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/RealtimeClient.ts",
       "children": [
         {
           "id": 228,
@@ -439,7 +439,18 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [348, 347, 350, 344, 346, 345, 354, 349, 343, 342]
+                                  "children": [
+                                    348,
+                                    347,
+                                    350,
+                                    344,
+                                    346,
+                                    345,
+                                    354,
+                                    349,
+                                    343,
+                                    342
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -1491,7 +1502,9 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [366]
+                                  "children": [
+                                    366
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -1734,7 +1747,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [272, 271]
+                              "children": [
+                                272,
+                                271
+                              ]
                             }
                           ],
                           "sources": [
@@ -2107,7 +2123,9 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [308]
+                              "children": [
+                                308
+                              ]
                             }
                           ],
                           "sources": [
@@ -2442,7 +2460,12 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [361, 362, 363, 360]
+                                  "children": [
+                                    361,
+                                    362,
+                                    363,
+                                    360
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -2632,29 +2655,72 @@
                                             {
                                               "title": "Constructors",
                                               "kind": 512,
-                                              "children": [260]
+                                              "children": [
+                                                260
+                                              ]
                                             },
                                             {
                                               "title": "Properties",
                                               "kind": 1024,
                                               "children": [
-                                                229, 230, 252, 250, 249, 231, 232, 242, 244, 248,
-                                                243, 236, 245, 251, 247, 246, 253, 254, 240, 241
+                                                229,
+                                                230,
+                                                252,
+                                                250,
+                                                249,
+                                                231,
+                                                232,
+                                                242,
+                                                244,
+                                                248,
+                                                243,
+                                                236,
+                                                245,
+                                                251,
+                                                247,
+                                                246,
+                                                253,
+                                                254,
+                                                240,
+                                                241
                                               ]
                                             },
                                             {
                                               "title": "Methods",
                                               "kind": 2048,
                                               "children": [
-                                                329, 336, 321, 324, 319, 338, 327, 297, 264, 290,
-                                                266, 309, 292, 316, 273, 311, 281, 304, 284, 287,
-                                                278, 301, 294, 313
+                                                329,
+                                                336,
+                                                321,
+                                                324,
+                                                319,
+                                                338,
+                                                327,
+                                                297,
+                                                264,
+                                                290,
+                                                266,
+                                                309,
+                                                292,
+                                                316,
+                                                273,
+                                                311,
+                                                281,
+                                                304,
+                                                284,
+                                                287,
+                                                278,
+                                                301,
+                                                294,
+                                                313
                                               ]
                                             },
                                             {
                                               "title": "Object literals",
                                               "kind": 2097152,
-                                              "children": [255]
+                                              "children": [
+                                                255
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -3641,7 +3707,14 @@
                                             {
                                               "title": "Enumeration members",
                                               "kind": 16,
-                                              "children": [21, 16, 17, 18, 20, 19]
+                                              "children": [
+                                                21,
+                                                16,
+                                                17,
+                                                18,
+                                                20,
+                                                19
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -4100,19 +4173,51 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [148]
+                              "children": [
+                                148
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [141, 145, 144, 150, 147, 146, 154, 143, 142, 149]
+                              "children": [
+                                141,
+                                145,
+                                144,
+                                150,
+                                147,
+                                146,
+                                154,
+                                143,
+                                142,
+                                149
+                              ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
                               "children": [
-                                180, 217, 219, 221, 223, 225, 201, 204, 177, 173, 167, 170, 196,
-                                182, 206, 162, 214, 164, 209, 193, 187
+                                180,
+                                217,
+                                219,
+                                221,
+                                223,
+                                225,
+                                201,
+                                204,
+                                177,
+                                173,
+                                167,
+                                170,
+                                196,
+                                182,
+                                206,
+                                162,
+                                214,
+                                164,
+                                209,
+                                193,
+                                187
                               ]
                             }
                           ],
@@ -4312,7 +4417,12 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [257, 258, 259, 256]
+                  "children": [
+                    257,
+                    258,
+                    259,
+                    256
+                  ]
                 }
               ],
               "sources": [
@@ -4332,28 +4442,72 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [260]
+              "children": [
+                260
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
               "children": [
-                229, 230, 252, 250, 249, 231, 232, 242, 244, 248, 243, 236, 245, 251, 247, 246, 253,
-                254, 240, 241
+                229,
+                230,
+                252,
+                250,
+                249,
+                231,
+                232,
+                242,
+                244,
+                248,
+                243,
+                236,
+                245,
+                251,
+                247,
+                246,
+                253,
+                254,
+                240,
+                241
               ]
             },
             {
               "title": "Methods",
               "kind": 2048,
               "children": [
-                329, 336, 321, 324, 319, 338, 327, 297, 264, 290, 266, 309, 292, 316, 273, 311, 281,
-                304, 284, 287, 278, 301, 294, 313
+                329,
+                336,
+                321,
+                324,
+                319,
+                338,
+                327,
+                297,
+                264,
+                290,
+                266,
+                309,
+                292,
+                316,
+                273,
+                311,
+                281,
+                304,
+                284,
+                287,
+                278,
+                301,
+                294,
+                313
               ]
             },
             {
               "title": "Object literals",
               "kind": 2097152,
-              "children": [255]
+              "children": [
+                255
+              ]
             }
           ],
           "sources": [
@@ -4450,7 +4604,9 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [366]
+                  "children": [
+                    366
+                  ]
                 }
               ],
               "sources": [
@@ -4562,7 +4718,12 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [361, 362, 363, 360]
+                  "children": [
+                    361,
+                    362,
+                    363,
+                    360
+                  ]
                 }
               ],
               "sources": [
@@ -4937,7 +5098,18 @@
                 {
                   "title": "Variables",
                   "kind": 32,
-                  "children": [348, 347, 350, 344, 346, 345, 354, 349, 343, 342]
+                  "children": [
+                    348,
+                    347,
+                    350,
+                    344,
+                    346,
+                    345,
+                    354,
+                    349,
+                    343,
+                    342
+                  ]
                 }
               ],
               "sources": [
@@ -4984,17 +5156,25 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [228]
+          "children": [
+            228
+          ]
         },
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [364, 358, 340]
+          "children": [
+            364,
+            358,
+            340
+          ]
         },
         {
           "title": "Functions",
           "kind": 64,
-          "children": [369]
+          "children": [
+            369
+          ]
         }
       ],
       "sources": [
@@ -5013,7 +5193,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/RealtimeSubscription.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/RealtimeSubscription.ts",
       "children": [
         {
           "id": 140,
@@ -5551,7 +5731,16 @@
                                                   "title": "Variables",
                                                   "kind": 32,
                                                   "children": [
-                                                    348, 347, 350, 344, 346, 345, 354, 349, 343, 342
+                                                    348,
+                                                    347,
+                                                    350,
+                                                    344,
+                                                    346,
+                                                    345,
+                                                    354,
+                                                    349,
+                                                    343,
+                                                    342
                                                   ]
                                                 }
                                               ],
@@ -6604,7 +6793,9 @@
                                                 {
                                                   "title": "Variables",
                                                   "kind": 32,
-                                                  "children": [366]
+                                                  "children": [
+                                                    366
+                                                  ]
                                                 }
                                               ],
                                               "sources": [
@@ -6847,7 +7038,10 @@
                                             {
                                               "title": "Variables",
                                               "kind": 32,
-                                              "children": [272, 271]
+                                              "children": [
+                                                272,
+                                                271
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -7220,7 +7414,9 @@
                                             {
                                               "title": "Variables",
                                               "kind": 32,
-                                              "children": [308]
+                                              "children": [
+                                                308
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -7555,7 +7751,12 @@
                                                 {
                                                   "title": "Variables",
                                                   "kind": 32,
-                                                  "children": [361, 362, 363, 360]
+                                                  "children": [
+                                                    361,
+                                                    362,
+                                                    363,
+                                                    360
+                                                  ]
                                                 }
                                               ],
                                               "sources": [
@@ -7634,21 +7835,50 @@
                                             {
                                               "title": "Constructors",
                                               "kind": 512,
-                                              "children": [148]
+                                              "children": [
+                                                148
+                                              ]
                                             },
                                             {
                                               "title": "Properties",
                                               "kind": 1024,
                                               "children": [
-                                                141, 145, 144, 150, 147, 146, 154, 143, 142, 149
+                                                141,
+                                                145,
+                                                144,
+                                                150,
+                                                147,
+                                                146,
+                                                154,
+                                                143,
+                                                142,
+                                                149
                                               ]
                                             },
                                             {
                                               "title": "Methods",
                                               "kind": 2048,
                                               "children": [
-                                                180, 217, 219, 221, 223, 225, 201, 204, 177, 173,
-                                                167, 170, 196, 182, 206, 162, 214, 164, 209, 193,
+                                                180,
+                                                217,
+                                                219,
+                                                221,
+                                                223,
+                                                225,
+                                                201,
+                                                204,
+                                                177,
+                                                173,
+                                                167,
+                                                170,
+                                                196,
+                                                182,
+                                                206,
+                                                162,
+                                                214,
+                                                164,
+                                                209,
+                                                193,
                                                 187
                                               ]
                                             }
@@ -7849,7 +8079,12 @@
                                 {
                                   "title": "Variables",
                                   "kind": 32,
-                                  "children": [257, 258, 259, 256]
+                                  "children": [
+                                    257,
+                                    258,
+                                    259,
+                                    256
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -7869,28 +8104,72 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [260]
+                              "children": [
+                                260
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
                               "children": [
-                                229, 230, 252, 250, 249, 231, 232, 242, 244, 248, 243, 236, 245,
-                                251, 247, 246, 253, 254, 240, 241
+                                229,
+                                230,
+                                252,
+                                250,
+                                249,
+                                231,
+                                232,
+                                242,
+                                244,
+                                248,
+                                243,
+                                236,
+                                245,
+                                251,
+                                247,
+                                246,
+                                253,
+                                254,
+                                240,
+                                241
                               ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
                               "children": [
-                                329, 336, 321, 324, 319, 338, 327, 297, 264, 290, 266, 309, 292,
-                                316, 273, 311, 281, 304, 284, 287, 278, 301, 294, 313
+                                329,
+                                336,
+                                321,
+                                324,
+                                319,
+                                338,
+                                327,
+                                297,
+                                264,
+                                290,
+                                266,
+                                309,
+                                292,
+                                316,
+                                273,
+                                311,
+                                281,
+                                304,
+                                284,
+                                287,
+                                278,
+                                301,
+                                294,
+                                313
                               ]
                             },
                             {
                               "title": "Object literals",
                               "kind": 2097152,
-                              "children": [255]
+                              "children": [
+                                255
+                              ]
                             }
                           ],
                           "sources": [
@@ -8877,7 +9156,14 @@
                             {
                               "title": "Enumeration members",
                               "kind": 16,
-                              "children": [21, 16, 17, 18, 20, 19]
+                              "children": [
+                                21,
+                                16,
+                                17,
+                                18,
+                                20,
+                                19
+                              ]
                             }
                           ],
                           "sources": [
@@ -9336,19 +9622,51 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [148]
+              "children": [
+                148
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [141, 145, 144, 150, 147, 146, 154, 143, 142, 149]
+              "children": [
+                141,
+                145,
+                144,
+                150,
+                147,
+                146,
+                154,
+                143,
+                142,
+                149
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
               "children": [
-                180, 217, 219, 221, 223, 225, 201, 204, 177, 173, 167, 170, 196, 182, 206, 162, 214,
-                164, 209, 193, 187
+                180,
+                217,
+                219,
+                221,
+                223,
+                225,
+                201,
+                204,
+                177,
+                173,
+                167,
+                170,
+                196,
+                182,
+                206,
+                162,
+                214,
+                164,
+                209,
+                193,
+                187
               ]
             }
           ],
@@ -9365,7 +9683,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [140]
+          "children": [
+            140
+          ]
         }
       ],
       "sources": [
@@ -9384,7 +9704,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/index.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/index.ts",
       "sources": [
         {
           "fileName": "index.ts",
@@ -9401,7 +9721,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/constants.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/constants.ts",
       "children": [
         {
           "id": 15,
@@ -9519,7 +9839,14 @@
             {
               "title": "Enumeration members",
               "kind": 16,
-              "children": [21, 16, 17, 18, 20, 19]
+              "children": [
+                21,
+                16,
+                17,
+                18,
+                20,
+                19
+              ]
             }
           ],
           "sources": [
@@ -9629,7 +9956,13 @@
             {
               "title": "Enumeration members",
               "kind": 16,
-              "children": [10, 11, 12, 13, 14]
+              "children": [
+                10,
+                11,
+                12,
+                13,
+                14
+              ]
             }
           ],
           "sources": [
@@ -9722,7 +10055,12 @@
             {
               "title": "Enumeration members",
               "kind": 16,
-              "children": [28, 27, 25, 26]
+              "children": [
+                28,
+                27,
+                25,
+                26
+              ]
             }
           ],
           "sources": [
@@ -9815,7 +10153,12 @@
             {
               "title": "Enumeration members",
               "kind": 16,
-              "children": [8, 7, 5, 6]
+              "children": [
+                8,
+                7,
+                5,
+                6
+              ]
             }
           ],
           "sources": [
@@ -9857,7 +10200,9 @@
             {
               "title": "Enumeration members",
               "kind": 16,
-              "children": [23]
+              "children": [
+                23
+              ]
             }
           ],
           "sources": [
@@ -9970,7 +10315,9 @@
             {
               "title": "Variables",
               "kind": 32,
-              "children": [30]
+              "children": [
+                30
+              ]
             }
           ],
           "sources": [
@@ -9990,17 +10337,29 @@
         {
           "title": "Enumerations",
           "kind": 4,
-          "children": [15, 9, 24, 4, 22]
+          "children": [
+            15,
+            9,
+            24,
+            4,
+            22
+          ]
         },
         {
           "title": "Variables",
           "kind": 32,
-          "children": [32, 31, 33]
+          "children": [
+            32,
+            31,
+            33
+          ]
         },
         {
           "title": "Object literals",
           "kind": 2097152,
-          "children": [29]
+          "children": [
+            29
+          ]
         }
       ],
       "sources": [
@@ -10019,7 +10378,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/push.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/push.ts",
       "children": [
         {
           "id": 74,
@@ -10605,8 +10964,16 @@
                                                                   "title": "Variables",
                                                                   "kind": 32,
                                                                   "children": [
-                                                                    348, 347, 350, 344, 346, 345,
-                                                                    354, 349, 343, 342
+                                                                    348,
+                                                                    347,
+                                                                    350,
+                                                                    344,
+                                                                    346,
+                                                                    345,
+                                                                    354,
+                                                                    349,
+                                                                    343,
+                                                                    342
                                                                   ]
                                                                 }
                                                               ],
@@ -11659,7 +12026,9 @@
                                                                 {
                                                                   "title": "Variables",
                                                                   "kind": 32,
-                                                                  "children": [366]
+                                                                  "children": [
+                                                                    366
+                                                                  ]
                                                                 }
                                                               ],
                                                               "sources": [
@@ -11902,7 +12271,10 @@
                                                             {
                                                               "title": "Variables",
                                                               "kind": 32,
-                                                              "children": [272, 271]
+                                                              "children": [
+                                                                272,
+                                                                271
+                                                              ]
                                                             }
                                                           ],
                                                           "sources": [
@@ -12275,7 +12647,9 @@
                                                             {
                                                               "title": "Variables",
                                                               "kind": 32,
-                                                              "children": [308]
+                                                              "children": [
+                                                                308
+                                                              ]
                                                             }
                                                           ],
                                                           "sources": [
@@ -12610,7 +12984,12 @@
                                                                 {
                                                                   "title": "Variables",
                                                                   "kind": 32,
-                                                                  "children": [361, 362, 363, 360]
+                                                                  "children": [
+                                                                    361,
+                                                                    362,
+                                                                    363,
+                                                                    360
+                                                                  ]
                                                                 }
                                                               ],
                                                               "sources": [
@@ -12865,7 +13244,12 @@
                                                 {
                                                   "title": "Variables",
                                                   "kind": 32,
-                                                  "children": [257, 258, 259, 256]
+                                                  "children": [
+                                                    257,
+                                                    258,
+                                                    259,
+                                                    256
+                                                  ]
                                                 }
                                               ],
                                               "sources": [
@@ -12885,29 +13269,72 @@
                                             {
                                               "title": "Constructors",
                                               "kind": 512,
-                                              "children": [260]
+                                              "children": [
+                                                260
+                                              ]
                                             },
                                             {
                                               "title": "Properties",
                                               "kind": 1024,
                                               "children": [
-                                                229, 230, 252, 250, 249, 231, 232, 242, 244, 248,
-                                                243, 236, 245, 251, 247, 246, 253, 254, 240, 241
+                                                229,
+                                                230,
+                                                252,
+                                                250,
+                                                249,
+                                                231,
+                                                232,
+                                                242,
+                                                244,
+                                                248,
+                                                243,
+                                                236,
+                                                245,
+                                                251,
+                                                247,
+                                                246,
+                                                253,
+                                                254,
+                                                240,
+                                                241
                                               ]
                                             },
                                             {
                                               "title": "Methods",
                                               "kind": 2048,
                                               "children": [
-                                                329, 336, 321, 324, 319, 338, 327, 297, 264, 290,
-                                                266, 309, 292, 316, 273, 311, 281, 304, 284, 287,
-                                                278, 301, 294, 313
+                                                329,
+                                                336,
+                                                321,
+                                                324,
+                                                319,
+                                                338,
+                                                327,
+                                                297,
+                                                264,
+                                                290,
+                                                266,
+                                                309,
+                                                292,
+                                                316,
+                                                273,
+                                                311,
+                                                281,
+                                                304,
+                                                284,
+                                                287,
+                                                278,
+                                                301,
+                                                294,
+                                                313
                                               ]
                                             },
                                             {
                                               "title": "Object literals",
                                               "kind": 2097152,
-                                              "children": [255]
+                                              "children": [
+                                                255
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -13894,7 +14321,14 @@
                                             {
                                               "title": "Enumeration members",
                                               "kind": 16,
-                                              "children": [21, 16, 17, 18, 20, 19]
+                                              "children": [
+                                                21,
+                                                16,
+                                                17,
+                                                18,
+                                                20,
+                                                19
+                                              ]
                                             }
                                           ],
                                           "sources": [
@@ -14353,19 +14787,51 @@
                             {
                               "title": "Constructors",
                               "kind": 512,
-                              "children": [148]
+                              "children": [
+                                148
+                              ]
                             },
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [141, 145, 144, 150, 147, 146, 154, 143, 142, 149]
+                              "children": [
+                                141,
+                                145,
+                                144,
+                                150,
+                                147,
+                                146,
+                                154,
+                                143,
+                                142,
+                                149
+                              ]
                             },
                             {
                               "title": "Methods",
                               "kind": 2048,
                               "children": [
-                                180, 217, 219, 221, 223, 225, 201, 204, 177, 173, 167, 170, 196,
-                                182, 206, 162, 214, 164, 209, 193, 187
+                                180,
+                                217,
+                                219,
+                                221,
+                                223,
+                                225,
+                                201,
+                                204,
+                                177,
+                                173,
+                                167,
+                                170,
+                                196,
+                                182,
+                                206,
+                                162,
+                                214,
+                                164,
+                                209,
+                                193,
+                                187
                               ]
                             }
                           ],
@@ -14684,7 +15150,10 @@
                       {
                         "title": "Variables",
                         "kind": 32,
-                        "children": [85, 84]
+                        "children": [
+                          85,
+                          84
+                        ]
                       }
                     ],
                     "sources": [
@@ -14773,7 +15242,10 @@
                         {
                           "title": "Variables",
                           "kind": 32,
-                          "children": [81, 80]
+                          "children": [
+                            81,
+                            80
+                          ]
                         }
                       ],
                       "sources": [
@@ -15128,7 +15600,10 @@
                             {
                               "title": "Variables",
                               "kind": 32,
-                              "children": [135, 134]
+                              "children": [
+                                135,
+                                134
+                              ]
                             }
                           ],
                           "sources": [
@@ -15509,17 +15984,42 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [87]
+              "children": [
+                87
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [88, 89, 90, 82, 78, 77, 86, 75, 94, 76]
+              "children": [
+                88,
+                89,
+                90,
+                82,
+                78,
+                77,
+                86,
+                75,
+                94,
+                76
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [126, 128, 136, 130, 124, 114, 103, 106, 118, 120, 108]
+              "children": [
+                126,
+                128,
+                136,
+                130,
+                124,
+                114,
+                103,
+                106,
+                118,
+                120,
+                108
+              ]
             }
           ],
           "sources": [
@@ -15535,7 +16035,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [74]
+          "children": [
+            74
+          ]
         }
       ],
       "sources": [
@@ -15554,7 +16056,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/serializer.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/serializer.ts",
       "children": [
         {
           "id": 49,
@@ -15715,7 +16217,12 @@
                         {
                           "title": "Variables",
                           "kind": 32,
-                          "children": [61, 62, 59, 60]
+                          "children": [
+                            61,
+                            62,
+                            59,
+                            60
+                          ]
                         }
                       ]
                     }
@@ -15885,7 +16392,12 @@
                         {
                           "title": "Variables",
                           "kind": 32,
-                          "children": [71, 72, 69, 70]
+                          "children": [
+                            71,
+                            72,
+                            69,
+                            70
+                          ]
                         }
                       ],
                       "sources": [
@@ -15980,12 +16492,18 @@
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [50]
+              "children": [
+                50
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [55, 63, 51]
+              "children": [
+                55,
+                63,
+                51
+              ]
             }
           ],
           "sources": [
@@ -16001,7 +16519,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [49]
+          "children": [
+            49
+          ]
         }
       ],
       "sources": [
@@ -16020,7 +16540,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/timer.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/timer.ts",
       "children": [
         {
           "id": 35,
@@ -16262,17 +16782,27 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [38]
+              "children": [
+                38
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [39, 36, 40, 37]
+              "children": [
+                39,
+                36,
+                40,
+                37
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [44, 46]
+              "children": [
+                44,
+                46
+              ]
             }
           ],
           "sources": [
@@ -16288,7 +16818,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [35]
+          "children": [
+            35
+          ]
         }
       ],
       "sources": [
@@ -16307,7 +16839,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/transformers.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/transformers.ts",
       "children": [
         {
           "id": 372,
@@ -16735,8 +17267,30 @@
               "title": "Enumeration members",
               "kind": 16,
               "children": [
-                373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389,
-                390, 391, 392, 393, 394, 395, 396
+                373,
+                374,
+                375,
+                376,
+                377,
+                378,
+                379,
+                380,
+                381,
+                382,
+                383,
+                384,
+                385,
+                386,
+                387,
+                388,
+                389,
+                390,
+                391,
+                392,
+                393,
+                394,
+                395,
+                396
               ]
             }
           ],
@@ -16900,7 +17454,12 @@
                   {
                     "title": "Variables",
                     "kind": 32,
-                    "children": [401, 399, 400, 402]
+                    "children": [
+                      401,
+                      399,
+                      400,
+                      402
+                    ]
                   }
                 ],
                 "sources": [
@@ -17301,7 +17860,12 @@
                               {
                                 "title": "Variables",
                                 "kind": 32,
-                                "children": [401, 399, 400, 402]
+                                "children": [
+                                  401,
+                                  399,
+                                  400,
+                                  402
+                                ]
                               }
                             ],
                             "sources": [
@@ -17441,7 +18005,9 @@
                         {
                           "title": "Variables",
                           "kind": 32,
-                          "children": [415]
+                          "children": [
+                            415
+                          ]
                         }
                       ],
                       "sources": [
@@ -17663,7 +18229,12 @@
                               {
                                 "title": "Variables",
                                 "kind": 32,
-                                "children": [401, 399, 400, 402]
+                                "children": [
+                                  401,
+                                  399,
+                                  400,
+                                  402
+                                ]
                               }
                             ],
                             "sources": [
@@ -18340,17 +18911,34 @@
         {
           "title": "Enumerations",
           "kind": 4,
-          "children": [372]
+          "children": [
+            372
+          ]
         },
         {
           "title": "Type aliases",
           "kind": 4194304,
-          "children": [403, 397, 405, 404]
+          "children": [
+            403,
+            397,
+            405,
+            404
+          ]
         },
         {
           "title": "Functions",
           "kind": 64,
-          "children": [422, 409, 416, 426, 438, 429, 435, 432, 442]
+          "children": [
+            422,
+            409,
+            416,
+            426,
+            438,
+            429,
+            435,
+            432,
+            442
+          ]
         }
       ],
       "sources": [
@@ -18369,7 +18957,7 @@
       "flags": {
         "isExported": true
       },
-      "originalName": "/Users/copple/Projects/Supabase/realtime-js/src/lib/version.ts",
+      "originalName": "/Users/copple/Projects/BA/realtime-js/src/lib/version.ts",
       "children": [
         {
           "id": 2,
@@ -18398,7 +18986,9 @@
         {
           "title": "Variables",
           "kind": 32,
-          "children": [2]
+          "children": [
+            2
+          ]
         }
       ],
       "sources": [
@@ -18414,7 +19004,17 @@
     {
       "title": "Modules",
       "kind": 1,
-      "children": [227, 139, 445, 3, 73, 48, 34, 371, 1]
+      "children": [
+        227,
+        139,
+        445,
+        3,
+        73,
+        48,
+        34,
+        371,
+        1
+      ]
     }
   ]
 }

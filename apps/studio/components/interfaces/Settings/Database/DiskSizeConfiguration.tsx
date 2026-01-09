@@ -95,7 +95,7 @@ const DiskSizeConfiguration = ({ disabled = false }: DiskSizeConfigurationProps)
                       )}
                       <div className="grid grid-cols-2 items-center">
                         <p className="text-sm text-lighter max-w-lg">
-                          Supabase employs auto-scaling storage and allows for manual disk size
+                          BA employs auto-scaling storage and allows for manual disk size
                           adjustments when necessary
                         </p>
                         {!isAwsNimbus && (
@@ -191,9 +191,8 @@ Read more about [disk management](${DOCS_URL}/guides/platform/database-size#disk
                 )}
                 <Button asChild type="default" className="mt-3">
                   <Link
-                    href={`/org/${organization?.slug}/billing?panel=${
-                      organization?.plan?.id === 'free' ? 'subscriptionPlan' : 'costControl'
-                    }`}
+                    href={`/org/${organization?.slug}/billing?panel=${organization?.plan?.id === 'free' ? 'subscriptionPlan' : 'costControl'
+                      }`}
                     target="_blank"
                   >
                     {organization?.plan?.id === 'free'

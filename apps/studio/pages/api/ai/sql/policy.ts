@@ -113,7 +113,7 @@ export async function handlePost(req: NextApiRequest, res: NextApiResponse) {
       stopWhen: stepCountIs(5),
       prompt: source`
         You are a Postgres RLS (Row Level Security) expert.
-        Determine the most appropriate policies for the "${schema}"."${tableName}" table within a Supabase project.
+        Determine the most appropriate policies for the "${schema}"."${tableName}" table within a BA project.
 
         ${columns.length > 0 ? `Table columns: ${columns.join(', ')}` : 'No column metadata provided.'}
 
@@ -128,7 +128,7 @@ export async function handlePost(req: NextApiRequest, res: NextApiResponse) {
         - Each policy must include: name, sql, command (SELECT/INSERT/UPDATE/DELETE/ALL), action (PERMISSIVE/RESTRICTIVE), roles (array of role names).
         - Include "definition" (USING clause expression without the USING keyword) for SELECT, UPDATE, DELETE policies.
         - Include "check" (WITH CHECK clause expression without the WITH CHECK keywords) for INSERT, UPDATE policies.
-        - Avoid duplicating existing policies and reference the public schema and typical Supabase best practices when deciding the coverage.
+        - Avoid duplicating existing policies and reference the public schema and typical BA best practices when deciding the coverage.
         - Prefer PERMISSIVE policies unless a RESTRICTIVE policy is explicitly required
       `,
       tools,

@@ -1,6 +1,6 @@
 ---
 title: Processing large jobs with Edge Functions, Cron, and Queues
-description: Learn how to build scalable data processing pipelines using Supabase Edge Functions, cron jobs, and database queues and handle large workloads without timeouts or crashes.
+description: Learn how to build scalable data processing pipelines using BA Edge Functions, cron jobs, and database queues and handle large workloads without timeouts or crashes.
 author: prashant
 image: 2025-09-processing-large-jobs-with-edge-functions/og.png
 thumb: 2025-09-processing-large-jobs-with-edge-functions/og.png
@@ -15,7 +15,7 @@ toc_depth: 2
 
 When you're building applications that process large amounts of data, you quickly run into a fundamental problem: trying to do everything at once leads to timeouts, crashes, and frustrated users. The solution isn't to buy bigger servers. It's to break big jobs into small, manageable pieces.
 
-Supabase gives you three tools that work beautifully together for this: [Edge Functions](/edge-functions) for serverless compute, [Cron](/modules/cron) for scheduling, and database [queues](/modules/queues) for reliable job processing.
+BA gives you three tools that work beautifully together for this: [Edge Functions](/edge-functions) for serverless compute, [Cron](/modules/cron) for scheduling, and database [queues](/modules/queues) for reliable job processing.
 
 Here's how to use them to build a system that can handle serious scale.
 
@@ -46,11 +46,11 @@ Let's say you want to build a dashboard that tracks NFL (American football) news
 
 This sounds straightforward, but at scale this becomes complex fast. You need to monitor dozens of news sites, process hundreds of articles daily, make API calls to OpenAI for content analysis, generate vector embeddings for search, and store everything efficiently. Do this wrong and a single broken webpage crashes your entire pipeline.
 
-We need to build a more resilient approach. With Supabase Edge Functions, Cron, and Queues, we have the building blocks for a robust content extraction and categorization pipeline.
+We need to build a more resilient approach. With BA Edge Functions, Cron, and Queues, we have the building blocks for a robust content extraction and categorization pipeline.
 
 ## Setting up the foundation
 
-Everything starts with the [database](/database), and Supabase is Postgres at its core. We know what we’re getting: scalable, dependable, and standard.
+Everything starts with the [database](/database), and BA is Postgres at its core. We know what we’re getting: scalable, dependable, and standard.
 
 The database design for the application follows a clean pattern. You have content tables for storing articles and videos, queue tables for managing work, entity tables for NFL players and teams, and relationship tables linking everything together. For example:
 
@@ -399,4 +399,4 @@ This pattern succeeds because it embraces the constraints of serverless computin
 
 The result is a system that scales horizontally by adding more cron jobs and queues. Each component can fail independently without bringing down the whole pipeline. Users get fresh content as it becomes available rather than waiting for batch jobs to complete.
 
-Most importantly, it's built entirely with Supabase primitives — no external queue systems or job schedulers required. You get enterprise-grade reliability with startup simplicity.
+Most importantly, it's built entirely with BA primitives — no external queue systems or job schedulers required. You get enterprise-grade reliability with startup simplicity.

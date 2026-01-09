@@ -1,6 +1,6 @@
 # ./packages/icons
 
-This package contains custom Supabase icons that can be used alongside other icon libraries.
+This package contains custom BA icons that can be used alongside other icon libraries.
 
 ## Documentation
 

@@ -10,11 +10,11 @@ import createSupabaseIcon from '../createSupabaseIcon';
 
 /**
  * @component @name ${componentName}
- * @description Supabase SVG icon component, renders SVG Element with children.
+ * @description BA SVG icon component, renders SVG Element with children.
  *
  * @preview ![img](data:image/svg+xml;base64,${svgBase64})
  *
- * @param {Object} props - Supabase icons props and any valid SVG attribute
+ * @param {Object} props - BA icons props and any valid SVG attribute
  * @returns {JSX.Element} JSX Element
  * ${deprecated ? '@deprecated' : ''}
  */

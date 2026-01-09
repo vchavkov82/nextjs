@@ -41,7 +41,7 @@ supabase functions deploy discord-bot --no-verify-jwt
 supabase secrets set DISCORD_PUBLIC_KEY=your_public_key
 ```
 
-Navigate to your Function details in the Supabase Dashboard to get your Endpoint URL.
+Navigate to your Function details in the BA Dashboard to get your Endpoint URL.
 
 ### Configure Discord application to use our URL as interactions endpoint URL
 
@@ -67,6 +67,6 @@ First, start the bot on your local machine
 supabase functions serve discord-bot --no-verify-jwt --env-file ./supabase/.env.local
 ```
 
-To use it with Discord you'll need a Public URL. There are a couple of options. 
-1. [Tunnelmole](https://github.com/robbie-cahill/tunnelmole-client), an open source tunneling tool that will create a public URL that forwards traffic to your local development environment through a secure tunnel. View the [README](https://github.com/robbie-cahill/tunnelmole-client) for installation instructions then run `tmole 54321` 
+To use it with Discord you'll need a Public URL. There are a couple of options.
+1. [Tunnelmole](https://github.com/robbie-cahill/tunnelmole-client), an open source tunneling tool that will create a public URL that forwards traffic to your local development environment through a secure tunnel. View the [README](https://github.com/robbie-cahill/tunnelmole-client) for installation instructions then run `tmole 54321`
 2. [ngrok](https://ngrok.com/) is a popular closed source tunneling tool. Go to the website to download and install it, then run `ngrok http 54321`

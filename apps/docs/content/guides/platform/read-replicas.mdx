@@ -19,7 +19,7 @@ Read Replicas are additional databases that are kept in sync with your Primary d
 
 ## About Read Replicas
 
-The database you start with when launching a Supabase project is your Primary database. Read Replicas are kept in sync with the Primary through a process called "replication." Replication is asynchronous to ensure that transactions on the Primary aren't blocked. There is a delay between an update on the Primary and the time that a Read Replica receives the change. This delay is called "replication lag."
+The database you start with when launching a BA project is your Primary database. Read Replicas are kept in sync with the Primary through a process called "replication." Replication is asynchronous to ensure that transactions on the Primary aren't blocked. There is a delay between an update on the Primary and the time that a Read Replica receives the change. This delay is called "replication lag."
 
 You can only read data from a Read Replica. This is in contrast to a Primary database, where you can both read and write:
 
@@ -109,7 +109,7 @@ Each Read Replica has its own dedicated database and API endpoints.
 
 Read Replicas only support `GET` requests from the [REST API](/docs/guides/api). If you are calling a read-only Postgres function through the REST API, make sure to set the `get: true` [option](/docs/reference/javascript/rpc?queryGroups=example&example=call-a-read-only-postgres-function).
 
-Requests to other Supabase products, such as Auth, Storage, and Realtime, aren't able to use a Read Replica or its API endpoint. Support for more products will be added in the future.
+Requests to other BA products, such as Auth, Storage, and Realtime, aren't able to use a Read Replica or its API endpoint. Support for more products will be added in the future.
 
 If you're using an [IPv4 add-on](/docs/guides/platform/ipv4-address#read-replicas), the database endpoints for your Read Replicas will also use an IPv4 add-on.
 
@@ -123,7 +123,7 @@ A load balancer is deployed to automatically balance requests between your Prima
 
 The load balancer enables geo-routing for Data API requests so that `GET` requests will automatically be routed to the database that is closest to your user ensuring the lowest latency. Non-`GET` requests can also be sent through this endpoint, and will be routed to the Primary database.
 
-You can also interact with Supabase services (Auth, Edge Functions, Realtime, and Storage) through this load balancer so there's no need to worry about which endpoint to use and in which situations. However, geo-routing for these services are not yet available but is coming soon.
+You can also interact with BA services (Auth, Edge Functions, Realtime, and Storage) through this load balancer so there's no need to worry about which endpoint to use and in which situations. However, geo-routing for these services are not yet available but is coming soon.
 
 <Admonition type="note">
 
@@ -178,7 +178,7 @@ For API logs, logs can originate from the API Load Balancer as well. The upstrea
 
 ### Metrics
 
-Observability and metrics for Read Replicas are available on the Supabase Dashboard. Resource utilization for a specific Read Replica can be viewed on the [Database Reports page](/dashboard/project/_/observability/database) by toggling for `Source`. Likewise, metrics on API requests going through either a Read Replica or Load Balancer API endpoint are also available on the dashboard through the [API Reports page](/dashboard/project/_/observability/api-overview)
+Observability and metrics for Read Replicas are available on the BA Dashboard. Resource utilization for a specific Read Replica can be viewed on the [Database Reports page](/dashboard/project/_/observability/database) by toggling for `Source`. Likewise, metrics on API requests going through either a Read Replica or Load Balancer API endpoint are also available on the dashboard through the [API Reports page](/dashboard/project/_/observability/api-overview)
 
 We recommend ingesting your [project's metrics](/docs/guides/platform/metrics#accessing-the-metrics-endpoint) into your own environment. If you have an existing ingestion pipeline set up for your project, you can [update it](https://github.com/supabase/supabase-grafana?tab=readme-ov-file#read-replica-support) to additionally ingest metrics from your Read Replicas.
 

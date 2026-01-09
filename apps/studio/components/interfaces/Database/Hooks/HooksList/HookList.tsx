@@ -78,7 +78,7 @@ export const HookList = ({
                     layout="fixed"
                     width="20"
                     height="20"
-                    title={isEdgeFunction(url) ? 'Supabase Edge Function' : 'HTTP Request'}
+                    title={isEdgeFunction(url) ? 'BA Edge Function' : 'HTTP Request'}
                   />
                 </div>
                 <p title={x.name} className="truncate">

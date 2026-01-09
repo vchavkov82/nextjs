@@ -49,7 +49,7 @@
           "kindString": "Class",
           "flags": {},
           "comment": {
-            "shortText": "Supabase Client.",
+            "shortText": "BA Client.",
             "text": "An isomorphic Javascript client for interacting with Postgres.\n"
           },
           "children": [
@@ -84,7 +84,7 @@
                       "kindString": "Parameter",
                       "flags": {},
                       "comment": {
-                        "shortText": "The unique Supabase URL which is supplied when you create a new project in your project dashboard."
+                        "shortText": "The unique BA URL which is supplied when you create a new project in your project dashboard."
                       },
                       "type": {
                         "type": "intrinsic",
@@ -98,7 +98,7 @@
                       "kindString": "Parameter",
                       "flags": {},
                       "comment": {
-                        "shortText": "The unique Supabase Key which is supplied when you create a new project in your project dashboard."
+                        "shortText": "The unique BA Key which is supplied when you create a new project in your project dashboard."
                       },
                       "type": {
                         "type": "intrinsic",
@@ -375,7 +375,7 @@
                                     "isOptional": true
                                   },
                                   "comment": {
-                                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to 'public'."
+                                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to 'public'."
                                   },
                                   "sources": [
                                     {
@@ -417,7 +417,19 @@
                                 {
                                   "title": "Properties",
                                   "kind": 1024,
-                                  "children": [83, 91, 86, 89, 82, 87, 84, 85, 88, 81, 90]
+                                  "children": [
+                                    83,
+                                    91,
+                                    86,
+                                    89,
+                                    82,
+                                    87,
+                                    84,
+                                    85,
+                                    88,
+                                    81,
+                                    90
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -448,7 +460,7 @@
               "kindString": "Property",
               "flags": {},
               "comment": {
-                "shortText": "Supabase Auth allows you to create and manage user sessions for access to data that is secured by access policies."
+                "shortText": "BA Auth allows you to create and manage user sessions for access to data that is secured by access policies."
               },
               "sources": [
                 {
@@ -860,7 +872,7 @@
                   "kindString": "Get signature",
                   "flags": {},
                   "comment": {
-                    "shortText": "Supabase Functions allows you to deploy and invoke edge functions."
+                    "shortText": "BA Functions allows you to deploy and invoke edge functions."
                   },
                   "type": {
                     "type": "reference",
@@ -892,7 +904,7 @@
                   "kindString": "Get signature",
                   "flags": {},
                   "comment": {
-                    "shortText": "Supabase Storage allows you to manage user-generated content, such as photos or videos."
+                    "shortText": "BA Storage allows you to manage user-generated content, such as photos or videos."
                   },
                   "type": {
                     "type": "reference",
@@ -986,7 +998,9 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [175]
+                              "children": [
+                                175
+                              ]
                             }
                           ]
                         }
@@ -1483,7 +1497,7 @@
                                     "isOptional": true
                                   },
                                   "comment": {
-                                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to 'public'."
+                                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to 'public'."
                                   },
                                   "sources": [
                                     {
@@ -1525,7 +1539,19 @@
                                 {
                                   "title": "Properties",
                                   "kind": 1024,
-                                  "children": [83, 91, 86, 89, 82, 87, 84, 85, 88, 81, 90]
+                                  "children": [
+                                    83,
+                                    91,
+                                    86,
+                                    89,
+                                    82,
+                                    87,
+                                    84,
+                                    85,
+                                    88,
+                                    81,
+                                    90
+                                  ]
                                 }
                               ],
                               "sources": [
@@ -1709,7 +1735,9 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [180]
+                              "children": [
+                                180
+                              ]
                             }
                           ]
                         }
@@ -1908,7 +1936,9 @@
                                       {
                                         "title": "Properties",
                                         "kind": 1024,
-                                        "children": [161]
+                                        "children": [
+                                          161
+                                        ]
                                       }
                                     ]
                                   }
@@ -1948,7 +1978,10 @@
                               {
                                 "title": "Properties",
                                 "kind": 1024,
-                                "children": [159, 162]
+                                "children": [
+                                  159,
+                                  162
+                                ]
                               }
                             ]
                           }
@@ -2060,7 +2093,9 @@
                                     {
                                       "title": "Properties",
                                       "kind": 1024,
-                                      "children": [169]
+                                      "children": [
+                                        169
+                                      ]
                                     }
                                   ]
                                 }
@@ -2100,7 +2135,10 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [167, 170]
+                              "children": [
+                                167,
+                                170
+                              ]
                             }
                           ]
                         }
@@ -2257,7 +2295,10 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [155, 154]
+                              "children": [
+                                155,
+                                154
+                              ]
                             }
                           ]
                         }
@@ -2286,24 +2327,58 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [112]
+              "children": [
+                112
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
               "children": [
-                117, 121, 131, 126, 123, 133, 125, 124, 120, 119, 118, 132, 122, 138, 137
+                117,
+                121,
+                131,
+                126,
+                123,
+                133,
+                125,
+                124,
+                120,
+                119,
+                118,
+                132,
+                122,
+                138,
+                137
               ]
             },
             {
               "title": "Accessors",
               "kind": 262144,
-              "children": [139, 141]
+              "children": [
+                139,
+                141
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [171, 191, 197, 189, 186, 183, 195, 193, 176, 143, 181, 156, 163, 147]
+              "children": [
+                171,
+                191,
+                197,
+                189,
+                186,
+                183,
+                195,
+                193,
+                176,
+                143,
+                181,
+                156,
+                163,
+                147
+              ]
             }
           ],
           "sources": [
@@ -2335,7 +2410,7 @@
               "kindString": "Call signature",
               "flags": {},
               "comment": {
-                "shortText": "Creates a new Supabase Client."
+                "shortText": "Creates a new BA Client."
               },
               "parameters": [
                 {
@@ -2630,7 +2705,7 @@
                                 "isOptional": true
                               },
                               "comment": {
-                                "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to 'public'."
+                                "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to 'public'."
                               },
                               "sources": [
                                 {
@@ -2672,7 +2747,19 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [83, 91, 86, 89, 82, 87, 84, 85, 88, 81, 90]
+                              "children": [
+                                83,
+                                91,
+                                86,
+                                89,
+                                82,
+                                87,
+                                84,
+                                85,
+                                88,
+                                81,
+                                90
+                              ]
                             }
                           ],
                           "sources": [
@@ -2701,17 +2788,24 @@
         {
           "title": "References",
           "kind": 16777216,
-          "children": [202, 203]
+          "children": [
+            202,
+            203
+          ]
         },
         {
           "title": "Classes",
           "kind": 128,
-          "children": [111]
+          "children": [
+            111
+          ]
         },
         {
           "title": "Functions",
           "kind": 64,
-          "children": [106]
+          "children": [
+            106
+          ]
         }
       ],
       "sources": [
@@ -2984,7 +3078,14 @@
                             {
                               "title": "Properties",
                               "kind": 1024,
-                              "children": [13, 9, 11, 10, 18, 12]
+                              "children": [
+                                13,
+                                9,
+                                11,
+                                10,
+                                18,
+                                12
+                              ]
                             }
                           ]
                         }
@@ -3270,17 +3371,27 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [3]
+              "children": [
+                3
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [21, 20, 22, 19, 23]
+              "children": [
+                21,
+                20,
+                22,
+                19,
+                23
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [24]
+              "children": [
+                24
+              ]
             }
           ],
           "sources": [
@@ -3320,7 +3431,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [2]
+          "children": [
+            2
+          ]
         }
       ],
       "sources": [
@@ -3595,7 +3708,10 @@
                         {
                           "title": "Properties",
                           "kind": 1024,
-                          "children": [45, 47]
+                          "children": [
+                            45,
+                            47
+                          ]
                         }
                       ]
                     }
@@ -3792,17 +3908,25 @@
             {
               "title": "Constructors",
               "kind": 512,
-              "children": [34]
+              "children": [
+                34
+              ]
             },
             {
               "title": "Properties",
               "kind": 1024,
-              "children": [40]
+              "children": [
+                40
+              ]
             },
             {
               "title": "Methods",
               "kind": 2048,
-              "children": [41, 49, 56]
+              "children": [
+                41,
+                49,
+                56
+              ]
             }
           ],
           "sources": [
@@ -3818,7 +3942,9 @@
         {
           "title": "Classes",
           "kind": 128,
-          "children": [33]
+          "children": [
+            33
+          ]
         }
       ],
       "sources": [
@@ -3884,7 +4010,9 @@
                 {
                   "title": "Properties",
                   "kind": 1024,
-                  "children": [62]
+                  "children": [
+                    62
+                  ]
                 }
               ]
             }
@@ -3917,7 +4045,10 @@
         {
           "title": "Variables",
           "kind": 32,
-          "children": [60, 63]
+          "children": [
+            60,
+            63
+          ]
         }
       ],
       "sources": [
@@ -4034,7 +4165,11 @@
         {
           "title": "Functions",
           "kind": 64,
-          "children": [70, 67, 65]
+          "children": [
+            70,
+            67,
+            65
+          ]
         }
       ],
       "sources": [
@@ -4408,7 +4543,7 @@
                     "isOptional": true
                   },
                   "comment": {
-                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in Supabase. Defaults to 'public'."
+                    "shortText": "The Postgres schema which your tables belong to. Must be on the list of exposed schemas in BA. Defaults to 'public'."
                   },
                   "sources": [
                     {
@@ -4450,7 +4585,19 @@
                 {
                   "title": "Properties",
                   "kind": 1024,
-                  "children": [83, 91, 86, 89, 82, 87, 84, 85, 88, 81, 90]
+                  "children": [
+                    83,
+                    91,
+                    86,
+                    89,
+                    82,
+                    87,
+                    84,
+                    85,
+                    88,
+                    81,
+                    90
+                  ]
                 }
               ],
               "sources": [
@@ -4693,7 +4840,15 @@
                 {
                   "title": "Properties",
                   "kind": 1024,
-                  "children": [94, 100, 95, 98, 99, 96, 97]
+                  "children": [
+                    94,
+                    100,
+                    95,
+                    98,
+                    99,
+                    96,
+                    97
+                  ]
                 }
               ],
               "sources": [
@@ -4711,12 +4866,20 @@
         {
           "title": "Interfaces",
           "kind": 256,
-          "children": [73]
+          "children": [
+            73
+          ]
         },
         {
           "title": "Type Aliases",
           "kind": 4194304,
-          "children": [78, 74, 79, 102, 92]
+          "children": [
+            78,
+            74,
+            79,
+            102,
+            92
+          ]
         }
       ],
       "sources": [
@@ -4760,7 +4923,9 @@
         {
           "title": "Variables",
           "kind": 32,
-          "children": [104]
+          "children": [
+            104
+          ]
         }
       ],
       "sources": [
@@ -4776,7 +4941,15 @@
     {
       "title": "Modules",
       "kind": 2,
-      "children": [105, 1, 32, 59, 64, 72, 103]
+      "children": [
+        105,
+        1,
+        32,
+        59,
+        64,
+        72,
+        103
+      ]
     }
   ]
 }

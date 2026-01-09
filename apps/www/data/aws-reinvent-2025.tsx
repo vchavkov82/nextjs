@@ -34,31 +34,31 @@ export type HeroSectionProps = {
     label: string
     href: string
     type?:
-      | 'primary'
-      | 'secondary'
-      | 'default'
-      | 'alternative'
-      | 'outline'
-      | 'text'
-      | 'link'
-      | 'warning'
-      | 'danger'
-      | 'dashed'
-      | null
-      | undefined
+    | 'primary'
+    | 'secondary'
+    | 'default'
+    | 'alternative'
+    | 'outline'
+    | 'text'
+    | 'link'
+    | 'warning'
+    | 'danger'
+    | 'dashed'
+    | null
+    | undefined
   }>
 }
 
 const data = {
   metadata: {
-    metaTitle: 'Supabase at AWS re:Invent 2025 | December 1-4, Las Vegas',
+    metaTitle: 'BA at AWS re:Invent 2025 | December 1-4, Las Vegas',
     metaDescription:
-      'Meet Supabase at AWS re:Invent 2025. Visit us at Booth #1857, join our exclusive events, and learn how to build in a weekend and scale to millions.',
+      'Meet BA at AWS re:Invent 2025. Visit us at Booth #1857, join our exclusive events, and learn how to build in a weekend and scale to millions.',
     ogImage: `${SITE_ORIGIN}/images/og/re_invent.png`,
   },
   heroSection: {
     id: 'hero',
-    title: 'Supabase at AWS re:Invent 2025',
+    title: 'BA at AWS re:Invent 2025',
     h1: (
       <>
         <span className="block text-foreground lg:text-3xl lg:leading-[1.5]">
@@ -73,7 +73,7 @@ const data = {
         <span className="text-foreground font-medium">Booth #1857</span>
       </>,
       <>
-        Supabase is the open-source Postgres development platform built to run on AWS
+        BA is the open-source Postgres development platform built to run on AWS
         infrastructure. Get a complete backend with Database, Auth, Storage, Edge Functions, and
         Real-Time in minutes. Deploy globally across AWS regions with enterprise-grade security,
         compliance, and the performance AWS customers expect. Use Foreign Data Wrappers to connect
@@ -97,7 +97,7 @@ const data = {
     id: 'consultation',
     title: 'Free enterprise innovation assessment',
     description:
-      'Get expert guidance from a Supabase Engineer on how to prototype faster, integrate securely, and scale with confidence.',
+      'Get expert guidance from a BA Engineer on how to prototype faster, integrate securely, and scale with confidence.',
     features: [
       'Review of innovation workflow and infrastructure',
       'Guidance on adding AI-native tools to your stack',
@@ -140,7 +140,7 @@ const data = {
         time: '1:00 PM - 2:00 PM',
         title: 'AWS Keynote Feature',
         description:
-          "Supabase CEO and Founder Paul Copplestone will be a featured guest in Mai-Lan Tomsen Bukovec's keynote.",
+          "BA CEO and Founder Paul Copplestone will be a featured guest in Mai-Lan Tomsen Bukovec's keynote.",
         location: 'Venetian, Palazzo Ballroom B',
         type: 'keynote',
       },
@@ -148,7 +148,7 @@ const data = {
         date: 'December 02',
         time: '5:30 PM - 8:30 PM',
         title: 'Exclusive Cocktail Reception',
-        description: 'Exclusive cocktail reception brought to you by Supabase and Felicis.',
+        description: 'Exclusive cocktail reception brought to you by BA and Felicis.',
         location: 'Private Venue',
         type: 'networking',
         cta: {
@@ -170,7 +170,7 @@ const data = {
         date: 'December 03',
         time: '6:30 PM - 9:30 PM',
         title: 'AI After Dark',
-        description: 'AI After Dark. Brought to you by Supabase, Vercel, Slack, and Baseten.',
+        description: 'AI After Dark. Brought to you by BA, Vercel, Slack, and Baseten.',
         location: 'Private Venue',
         type: 'networking',
         cta: {
@@ -194,10 +194,10 @@ const data = {
     id: 'postgres-platform',
     title: (
       <>
-        Supabase helps you <span className="text-foreground">build</span>
+        BA helps you <span className="text-foreground">build</span>
       </>
     ),
-    subheading: 'Supabase includes everything you need to create the winning app.',
+    subheading: 'BA includes everything you need to create the winning app.',
     features: [
       {
         id: 'database',
@@ -416,9 +416,9 @@ const data = {
   },
   ctaSection: {
     id: 'cta',
-    title: 'Take Supabase for a spin at Booth #1857',
+    title: 'Take BA for a spin at Booth #1857',
     subtitle:
-      'See how the fastest teams build and scale on Supabase. Get a demo, meet our team, and enter our daily giveaway.',
+      'See how the fastest teams build and scale on BA. Get a demo, meet our team, and enter our daily giveaway.',
     cta: {
       label: 'Book a meeting',
       href: 'https://forms.supabase.com/reinvent',

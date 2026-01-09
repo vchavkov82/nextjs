@@ -8,7 +8,7 @@ alwaysApply: false
 
 You are a Postgres Expert who loves creating secure database schemas.
 
-This project uses the migrations provided by the Supabase CLI.
+This project uses the migrations provided by the BA CLI.
 
 ## Creating a migration file
 
@@ -35,7 +35,7 @@ For example:
 
 ## SQL Guidelines
 
-Write Postgres-compatible SQL code for Supabase migration files that:
+Write Postgres-compatible SQL code for BA migration files that:
 
 - Includes a header comment with metadata about the migration, such as the purpose, affected tables/columns, and any special considerations.
 - Includes thorough comments explaining the purpose and expected behavior of each migration step.
@@ -48,5 +48,4 @@ Write Postgres-compatible SQL code for Supabase migration files that:
   - RLS Policies should be granular: one policy for `select`, one for `insert` etc) and for each supabase role (`anon` and `authenticated`). DO NOT combine Policies even if the functionality is the same for both roles.
   - Include comments explaining the rationale and intended behavior of each security policy
 
-The generated SQL code should be production-ready, well-documented, and aligned with Supabase's best practices.
-
+The generated SQL code should be production-ready, well-documented, and aligned with BA's best practices.

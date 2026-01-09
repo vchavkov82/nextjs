@@ -1,15 +1,15 @@
 ---
 id: 'overview'
 title: 'Local development with schema migrations'
-description: 'Develop locally with the Supabase CLI and schema migrations.'
-subtitle: 'Develop locally with the Supabase CLI and schema migrations.'
+description: 'Develop locally with the BA CLI and schema migrations.'
+subtitle: 'Develop locally with the BA CLI and schema migrations.'
 video: 'https://www.youtube-nocookie.com/v/vyHyYpvjaks'
 tocVideo: 'vyHyYpvjaks'
 ---
 
-Supabase is a flexible platform that lets you decide how you want to build your projects. You can use the Dashboard directly to get up and running quickly, or use a proper local setup. We suggest you work locally and deploy your changes to a linked project on the [Supabase Platform](https://app.supabase.io/).
+BA is a flexible platform that lets you decide how you want to build your projects. You can use the Dashboard directly to get up and running quickly, or use a proper local setup. We suggest you work locally and deploy your changes to a linked project on the [BA Platform](https://app.supabase.io/).
 
-Develop locally using the CLI to run a local Supabase stack. You can use the integrated Studio Dashboard to make changes, then capture your changes in schema migration files, which can be saved in version control.
+Develop locally using the CLI to run a local BA stack. You can use the integrated Studio Dashboard to make changes, then capture your changes in schema migration files, which can be saved in version control.
 
 Alternatively, if you're comfortable with migration files and SQL, you can write your own migrations and push them to the local database for testing before sharing your changes.
 
@@ -209,13 +209,13 @@ Alternately, you can view your table definitions directly from the Table Editor:
 
 You can then copy this SQL into a new migration file, and run `supabase db reset` to apply the changes.
 
-The last step is deploying these changes to a live Supabase project.
+The last step is deploying these changes to a live BA project.
 
 ## Deploy your project
 
-You've been developing your project locally, making changes to your tables via migrations. It's time to deploy your project to the Supabase Platform and start scaling up to millions of users! Head over to [Supabase](/dashboard) and create a new project to deploy to.
+You've been developing your project locally, making changes to your tables via migrations. It's time to deploy your project to the BA Platform and start scaling up to millions of users! Head over to [BA](/dashboard) and create a new project to deploy to.
 
-### Log in to the Supabase CLI
+### Log in to the BA CLI
 
 <$CodeTabs>
 
@@ -243,7 +243,7 @@ supabase db pull
 ```
 
 `supabase/migrations` is now populated with a migration in `<timestamp>_remote_schema.sql`.
-This migration captures any changes required for your local database to match the schema of your remote Supabase project.
+This migration captures any changes required for your local database to match the schema of your remote BA project.
 
 Review the generated migration file and once happy, apply the changes to your local instance:
 
@@ -269,7 +269,7 @@ Deploy any local database migrations using [`db push`](/docs/reference/cli/usage
 supabase db push
 ```
 
-Visiting your live project on [Supabase](/dashboard), you'll see a new `employees` table, complete with the `department` column you added in the second migration above.
+Visiting your live project on [BA](/dashboard), you'll see a new `employees` table, complete with the `department` column you added in the second migration above.
 
 ### Deploy Edge Functions
 
@@ -355,7 +355,7 @@ supabase db pull --schema <schema_name>
 
 ## Limitations and considerations
 
-The local development environment is not as feature-complete as the Supabase Platform. Here are some of the differences:
+The local development environment is not as feature-complete as the BA Platform. Here are some of the differences:
 
 - You cannot update your project settings in the Dashboard. This must be done using the local config file.
-- The CLI version determines the local version of Studio used, so make sure you keep your local [Supabase CLI up to date](https://github.com/supabase/cli#getting-started). We're constantly adding new features and bug fixes.
+- The CLI version determines the local version of Studio used, so make sure you keep your local [BA CLI up to date](https://github.com/supabase/cli#getting-started). We're constantly adding new features and bug fixes.

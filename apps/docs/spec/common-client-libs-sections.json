@@ -10,7 +10,11 @@
     "id": "installing",
     "slug": "installing",
     "type": "markdown",
-    "excludes": ["reference_javascript_v1", "reference_kotlin_v1", "reference_swift_v1"]
+    "excludes": [
+      "reference_javascript_v1",
+      "reference_kotlin_v1",
+      "reference_swift_v1"
+    ]
   },
   {
     "title": "Initializing",
@@ -857,7 +861,6 @@
             "product": "auth-admin",
             "type": "function"
           },
-
           {
             "id": "oauth-admin-api",
             "isFunc": false,
@@ -920,7 +923,7 @@
     "items": [
       {
         "id": "invoke",
-        "title": "Invokes a Supabase Edge Function.",
+        "title": "Invokes a BA Edge Function.",
         "slug": "functions-invoke",
         "product": "functions",
         "type": "function"

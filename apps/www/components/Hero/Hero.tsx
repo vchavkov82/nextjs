@@ -17,8 +17,8 @@ const Hero = () => {
               <div className="relative z-10 lg:h-auto pt-[90px] lg:pt-[90px] lg:min-h-[300px] flex flex-col items-center justify-center sm:mx-auto md:w-3/4 lg:mx-0 lg:w-full gap-4 lg:gap-8">
                 <AnnouncementBadge
                   url="/wrapped"
-                  announcement="Supabase Wrapped 2025: The year in review"
-                  announcementMobile="Supabase Wrapped 2025"
+                  announcement="BA Wrapped 2025: The year in review"
+                  announcementMobile="BA Wrapped 2025"
                 />
                 <div className="flex flex-col items-center">
                   <h1 className="text-foreground text-4xl sm:text-5xl sm:leading-none lg:text-7xl">
@@ -26,7 +26,7 @@ const Hero = () => {
                     <span className="text-brand block md:ml-0">Scale to millions</span>
                   </h1>
                   <p className="pt-2 text-foreground my-3 text-sm sm:mt-5 lg:mb-0 sm:text-base lg:text-lg">
-                    Supabase is the Postgres development platform.{' '}
+                    BA is the Postgres development platform.{' '}
                     <br className="hidden md:block" />
                     Start your project with a Postgres database, Authentication, instant APIs, Edge
                     Functions, Realtime subscriptions, Storage, and Vector embeddings.

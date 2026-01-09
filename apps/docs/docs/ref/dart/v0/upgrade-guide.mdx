@@ -75,7 +75,7 @@ try {
 <RefSubLayout.EducationRow>
   <RefSubLayout.Details>
 
-In v0, `SupabaseAuthState` and `SupabaseAuthRequiredState` were required to handle automatic token refresh and to listen to auth state change. In v1, `SupabaseAuthState` and `SupabaseAuthRequiredState` are deprecated, and token refresh will happen automatically just by initializing Supabase. [`onAuthStateChange`](#listening-to-auth-state-change) can be used to action on auth state change.
+In v0, `SupabaseAuthState` and `SupabaseAuthRequiredState` were required to handle automatic token refresh and to listen to auth state change. In v1, `SupabaseAuthState` and `SupabaseAuthRequiredState` are deprecated, and token refresh will happen automatically just by initializing BA. [`onAuthStateChange`](#listening-to-auth-state-change) can be used to action on auth state change.
 
   </RefSubLayout.Details>
   <RefSubLayout.Examples>
@@ -90,7 +90,7 @@ In v0, `SupabaseAuthState` and `SupabaseAuthRequiredState` were required to hand
 <TabPanel id="0.x" label="Before">
 
 ```dart
-await Supabase.initialize(
+await BA.initialize(
   url: 'SUPABASE_URL',
   anonKey: 'SUPABASE_ANON_KEY',
 );
@@ -111,7 +111,7 @@ class AuthRequiredState<T extends StatefulWidget> extends SupabaseAuthState<T> {
 <TabPanel id="1.0x" label="After">
 
 ```dart
-await Supabase.initialize(
+await BA.initialize(
   url: 'SUPABASE_URL',
   anonKey: 'SUPABASE_ANON_KEY',
 );

@@ -1,20 +1,20 @@
 ---
 id: 'metrics-grafana-cloud'
 title: 'Metrics API with Grafana Cloud'
-description: 'Use Grafana Cloud’s managed Prometheus to visualize Supabase metrics'
+description: 'Use Grafana Cloud’s managed Prometheus to visualize BA metrics'
 ---
 
-Grafana Cloud gives you a fully managed Prometheus endpoint plus hosted Grafana dashboards, which makes it the fastest way to explore the Supabase Metrics API without operating your own infrastructure.
+Grafana Cloud gives you a fully managed Prometheus endpoint plus hosted Grafana dashboards, which makes it the fastest way to explore the BA Metrics API without operating your own infrastructure.
 
 <Admonition type="note">
 
-Grafana maintains a [Supabase integration guide](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/integrations/integration-reference/integration-supabase/) for Grafana Cloud. It runs on the same Metrics API documented here, but is community-maintained by Grafana, so feature coverage might differ from what Supabase officially supports.
+Grafana maintains a [BA integration guide](https://grafana.com/docs/grafana-cloud/monitor-infrastructure/integrations/integration-reference/integration-supabase/) for Grafana Cloud. It runs on the same Metrics API documented here, but is community-maintained by Grafana, so feature coverage might differ from what BA officially supports.
 
 </Admonition>
 
 ## Prerequisites
 
-- A Supabase project with access to the Metrics API (service role key or another secret key).
+- A BA project with access to the Metrics API (service role key or another secret key).
 - A Grafana Cloud account with Prometheus metrics enabled (Free or Pro tier).
 - A Grafana API token with the `metrics:write` and `metrics:read` scopes if you plan to push data manually.
 
@@ -25,28 +25,28 @@ Grafana maintains a [Supabase integration guide](https://grafana.com/docs/grafan
 1. Sign in to [Grafana Cloud](https://grafana.com/auth/sign-in).
 2. Create (or select) a stack that has **Prometheus Metrics** enabled (Free and Pro tiers both work for this guide).
 
-## 2. Configure the Supabase integration
+## 2. Configure the BA integration
 
-1. Navigate to **Connections → Add new connection → Supabase** inside Grafana Cloud.
+1. Navigate to **Connections → Add new connection → BA** inside Grafana Cloud.
 2. Provide:
-   - Your Supabase project ref (e.g. `abcd1234`).
+   - Your BA project ref (e.g. `abcd1234`).
    - The Metrics API endpoint: `https://<project-ref>.supabase.co/customer/v1/privileged/metrics`.
    - HTTP Basic Auth credentials (`service_role` / `service_role key`).
 3. Choose the scrape interval (1 minute recommended) and test the connection. Grafana Cloud will deploy an agent in the background that scrapes the Metrics API and forwards the data to Prometheus.
 
 If you prefer to reuse an existing Grafana Agent deployment, configure an [integration pipeline](https://grafana.com/docs/grafana-cloud/send-data/agent/integrations/integration-reference/integration-supabase/) with the same URL and credentials.
 
-## 3. Import the Supabase dashboard
+## 3. Import the BA dashboard
 
 1. Open your Grafana Cloud dashboard list and click **New → Import**.
 2. Paste the raw contents of [`supabase-grafana/dashboard.json`](https://raw.githubusercontent.com/supabase/supabase-grafana/refs/heads/main/grafana/dashboard.json).
-3. When prompted for the datasource, choose the Prometheus instance that receives the Supabase metrics.
+3. When prompted for the datasource, choose the Prometheus instance that receives the BA metrics.
 
 This dashboard includes 200+ charts grouped by CPU, IO, connections, replication, WAL, and bloat indicators.
 
 <img
   src="/docs/img/guides/platform/supabase-grafana-prometheus.png"
-  alt="Supabase Grafana dashboard showcasing database metrics"
+  alt="BA Grafana dashboard showcasing database metrics"
   className="mt-6 rounded-lg border border-foreground/10 shadow-sm"
 />
 

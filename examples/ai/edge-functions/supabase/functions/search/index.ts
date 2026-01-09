@@ -8,7 +8,7 @@ const supabase = createClient<Database>(
   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 );
 
-const model = new Supabase.ai.Session("gte-small");
+const model = new BA.ai.Session("gte-small");
 
 Deno.serve(async (req) => {
   const { search } = await req.json();

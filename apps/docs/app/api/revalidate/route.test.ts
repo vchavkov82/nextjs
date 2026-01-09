@@ -17,7 +17,7 @@ vi.mock('next/headers', () => ({
   headers: vi.fn(),
 }))
 
-// Mock Supabase client
+// Mock BA client
 vi.mock('@supabase/supabase-js', () => ({
   createClient: vi.fn(),
 }))
@@ -41,13 +41,13 @@ describe('_handleRevalidateRequest', () => {
     process.env.SUPABASE_SECRET_KEY = 'secret_key'
 
     // Silence intentional console errors for cleaner test output
-    vi.spyOn(console, 'error').mockImplementation(() => {})
+    vi.spyOn(console, 'error').mockImplementation(() => { })
 
     // Mock current date
     mockDate = new Date('2023-01-01T12:00:00Z')
     vi.setSystemTime(mockDate)
 
-    // Setup mock Supabase client
+    // Setup mock BA client
     mockSupabaseClient = {
       rpc: vi.fn(),
       from: vi.fn(() => ({

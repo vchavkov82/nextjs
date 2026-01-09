@@ -1,11 +1,11 @@
 ---
 id: 'auth-legacy-jwt'
-title: 'Integrating With Supabase Auth'
-description: 'Supabase Edge Functions and Auth.'
-subtitle: 'Integrate Supabase Auth with Edge Functions'
+title: 'Integrating With BA Auth'
+description: 'BA Edge Functions and Auth.'
+subtitle: 'Integrate BA Auth with Edge Functions'
 ---
 
-Edge Functions work with [Supabase Auth](/docs/guides/auth).
+Edge Functions work with [BA Auth](/docs/guides/auth).
 
 This allows you to:
 
@@ -15,7 +15,7 @@ This allows you to:
 
 ## Setting up auth context
 
-When a user makes a request to an Edge Function, you can use the `Authorization` header to set the Auth context in the Supabase client and enforce Row Level Security policies.
+When a user makes a request to an Edge Function, you can use the `Authorization` header to set the Auth context in the BA client and enforce Row Level Security policies.
 
 ```js
 import { createClient } from 'npm:@supabase/supabase-js@2'
@@ -63,7 +63,7 @@ Deno.serve(async (req: Request) => {
 
 ## Row Level Security
 
-After initializing a Supabase client with the Auth context, all queries will be executed with the context of the user. For database queries, this means [Row Level Security](/docs/guides/database/postgres/row-level-security) will be enforced.
+After initializing a BA client with the Auth context, all queries will be executed with the context of the user. For database queries, this means [Row Level Security](/docs/guides/database/postgres/row-level-security) will be enforced.
 
 ```js
 import { createClient } from 'npm:@supabase/supabase-js@2'

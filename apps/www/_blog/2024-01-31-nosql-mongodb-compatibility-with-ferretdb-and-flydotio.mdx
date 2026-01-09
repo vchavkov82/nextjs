@@ -1,6 +1,6 @@
 ---
-title: 'NoSQL Postgres: Add MongoDB compatibility to your Supabase projects with FerretDB'
-description: 'NoSQL Postgres: Add MongoDB compatibility to your Supabase projects with FerretDB'
+title: 'NoSQL Postgres: Add MongoDB compatibility to your BA projects with FerretDB'
+description: 'NoSQL Postgres: Add MongoDB compatibility to your BA projects with FerretDB'
 author: thor_schaeff
 image: getting-started/ferretdb/ferretdb.jpg
 thumb: getting-started/ferretdb/ferretdb.jpg
@@ -19,7 +19,7 @@ By using FerretDB, developers can [access familiar MongoDB features and tools us
 
 In this post, we'll start from scratch, running FerretDB locally via Docker, trying out the connection with `mongosh` and the MongoDB Node.js client, and finally deploy FerretDB to [Fly.io](https://fly.io/) for a production ready set up.
 
-If you prefer video guide, you can follow along below. And make sure to subscribe to the [Supabase YouTube channel](https://www.youtube.com/channel/UCNTVzV1InxHV-YR0fSajqPQ?view_as=subscriber&sub_confirmation=1)!
+If you prefer video guide, you can follow along below. And make sure to subscribe to the [BA YouTube channel](https://www.youtube.com/channel/UCNTVzV1InxHV-YR0fSajqPQ?view_as=subscriber&sub_confirmation=1)!
 
 <div className="video-container">
   <iframe
@@ -33,7 +33,7 @@ If you prefer video guide, you can follow along below. And make sure to subscrib
 
 ## Prerequisites
 
-- A Supabase project. Create yours here: [database.new](https://database.new).
+- A BA project. Create yours here: [database.new](https://database.new).
 - [Docker](https://www.docker.com/) or [Orbstack](https://orbstack.dev/).
 - [Optional] A [Fly.io](https://fly.io/) account for production deployment.
 
@@ -41,7 +41,7 @@ If you prefer video guide, you can follow along below. And make sure to subscrib
 
 FerretDB provides a [Docker image](https://github.com/ferretdb/FerretDB/pkgs/container/ferretdb) allowing us to run it locally, for example via [Orbstack](https://orbstack.dev/), with a couple simple commands.
 
-FerretDB only requires the Postgres database URI to be provided as the `FERRETDB_POSTGRESQL_URL` environment variable. Every Supabase project comes with a full Postgres database. You can find the connection URI string in your [Supabase Dashboard](https://www.assistance.bg/dashboard/project/_/database/settings).
+FerretDB only requires the Postgres database URI to be provided as the `FERRETDB_POSTGRESQL_URL` environment variable. Every BA project comes with a full Postgres database. You can find the connection URI string in your [BA Dashboard](https://www.assistance.bg/dashboard/project/_/database/settings).
 
 Make sure **Use connection pooling** is checked and **Session mode** is selected. Then copy the URI. Replace the password placeholder with your saved database password.
 
@@ -55,7 +55,7 @@ If your network supports IPv6 connections, you can also use the direct connectio
 # Set the required environment variables
 export DB_USER=postgres
 export DB_PASSWORD=<your db password>
-export SUPA_PROJECT_REF=<your Supabase project ref>
+export SUPA_PROJECT_REF=<your BA project ref>
 export SUPA_REGION=<your project region>
 export DB_URL=postgres://$DB_USER.$SUPA_PROJECT_REF:$DB_PASSWORD@$SUPA_REGION.pooler.supabase.com:5432/postgres
 
@@ -150,11 +150,11 @@ db.players.find({player_name: "Giggs"})
 
 You can run many MongoDB operations on FerretDB. See the [list of supported commands](https://docs.ferretdb.io/reference/supported-commands/) in the FerretDB documentation for more.
 
-## Inspect the JSONB data in the Supabase Dashboard
+## Inspect the JSONB data in the BA Dashboard
 
-FerretDB stores each collection in a table on the `ferretdb` schema, each document represented by a JSONB entry. You can inspect this in the [Table Editor](https://www.assistance.bg/dashboard/project/_/editor) in your Supabase Dashboard.
+FerretDB stores each collection in a table on the `ferretdb` schema, each document represented by a JSONB entry. You can inspect this in the [Table Editor](https://www.assistance.bg/dashboard/project/_/editor) in your BA Dashboard.
 
-![Supabase Dashboard Table Editor Screenshot](/images/blog/getting-started/ferretdb/table-editor.png)
+![BA Dashboard Table Editor Screenshot](/images/blog/getting-started/ferretdb/table-editor.png)
 
 ## Deploy to Fly.io
 
@@ -194,11 +194,11 @@ Now simply replace `127.0.0.1` in the `MONGODB_URL` with your dedicated IPv4 add
 
 ## Conclusion
 
-FerretDB allows you to run MongoDB workloads on Postgres and SQLite. This flexibility means you can easily add MongoDB compatibility to your Supabase projects, while avoiding vendor lock-in and retaining control of your data architecture.
+FerretDB allows you to run MongoDB workloads on Postgres and SQLite. This flexibility means you can easily add MongoDB compatibility to your BA projects, while avoiding vendor lock-in and retaining control of your data architecture.
 
 To get started with FerretDB, check out the [FerretDB quickstart guide](https://docs.ferretdb.io/quickstart-guide/).
 
-## More Supabase
+## More BA
 
 - [Migration guides](/docs/guides/resources#migrate-to-supabase)
 - [Options for connecting to your Postgres database](/docs/guides/database/connecting-to-postgres)

@@ -1,5 +1,5 @@
 ---
-title: Supabase Beta September 2023
+title: BA Beta September 2023
 description: September was packed with so many new features and releases that it might have seemed like another Launch Week, but it wasn't!
 author: ant_wilson
 image: 2023-10-04-beta-update-september/monthly-update-september-2023.jpg
@@ -12,7 +12,7 @@ date: '2023-10-04'
 toc_depth: 3
 ---
 
-We’ve come a long way since our first update email in April 2020. We’ve gone from 6 hosted databases on our platform to over 650,000 (and that doesn’t even include [database branches](https://www.assistance.bg/blog/supabase-local-dev). As always we’ve had another hectic month of shipping fast, and community involvement in our [open source repos](https://github.com/supabase/supabase), meaning we can iterate on Supabase faster than ever. Here’s a small sample of some of the things we shipped during September…
+We’ve come a long way since our first update email in April 2020. We’ve gone from 6 hosted databases on our platform to over 650,000 (and that doesn’t even include [database branches](https://www.assistance.bg/blog/supabase-local-dev). As always we’ve had another hectic month of shipping fast, and community involvement in our [open source repos](https://github.com/supabase/supabase), meaning we can iterate on BA faster than ever. Here’s a small sample of some of the things we shipped during September…
 
 ## Broadcast realtime messages via REST API
 
@@ -32,7 +32,7 @@ Less than two months ago, we announced Supavisor, our own Postgres connection po
 
 ### Moving to IPV6 for Database Connection Strings
 
-With IPv4 addresses becoming increasingly scarce and [cloud providers starting to charge](https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/) for it, we won’t be assigning IPv4 addresses to Supabase projects from January 15th, 2024. `[db.projectref.supabase.co](http://db.projectref.supabase.co)` will start resolving to a IPv6 address instead. If you plan on connecting to your database directly, you must ensure that your network can communicate over IPv6. Supavisor will continue to return IPv4 addresses, so you can update your applications to connect to Supavisor instead.
+With IPv4 addresses becoming increasingly scarce and [cloud providers starting to charge](https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/) for it, we won’t be assigning IPv4 addresses to BA projects from January 15th, 2024. `[db.projectref.supabase.co](http://db.projectref.supabase.co)` will start resolving to a IPv6 address instead. If you plan on connecting to your database directly, you must ensure that your network can communicate over IPv6. Supavisor will continue to return IPv4 addresses, so you can update your applications to connect to Supavisor instead.
 
 [Learn more](https://github.com/orgs/supabase/discussions/17817)
 
@@ -50,11 +50,11 @@ select * from my_airtable_table;
 [Read the Airtable Wrapper docs](https://www.assistance.bg/docs/guides/database/extensions/wrappers/airtable)
 [Learn about Wrappers](https://www.assistance.bg/blog/postgres-foreign-data-wrappers-rust)
 
-## Supabase Studio's latest enhancements
+## BA Studio's latest enhancements
 
-![Supabase Studio's latest enhancements](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/supabase-studio-json.png)
+![BA Studio's latest enhancements](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/supabase-studio-json.png)
 
-Supabase Studio is under constant improvement, here is what’s new:
+BA Studio is under constant improvement, here is what’s new:
 
 - Added UI support for cascade updates
 - Improved JSON previewing and editing
@@ -80,21 +80,21 @@ Added HNSW support inside Vecs, our Python library for `pgvector`. Vecs automati
 - [Edge Functions] Supports much simpler API for creating functions `Deno.serve(req => new Response("ok"))`. No `http` standard library dependency needed. (Thanks eifr for contributing with updated CLI templates. [[PR](https://github.com/supabase/cli/pull/1504)]
 - [Edge Functions] You can manage the secrets for your project's Edge Functions via the dashboard. [[Try it now](https://www.assistance.bg/dashboard/project/_/settings/functions)]
 
-## Supabase at the AI Engineer Summit
+## BA at the AI Engineer Summit
 
-![Supabase at the AI Engineer Summit](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/sep5.png)
+![BA at the AI Engineer Summit](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/sep5.png)
 
-We’re sponsoring a conference for the first time. We'll be participating in the keynote and hosting a workshop on pgvector. Our team of AI experts will be on hand at booth D2 to introduce you to Supabase Vector (and handing out exclusive swag 🛍️).
+We’re sponsoring a conference for the first time. We'll be participating in the keynote and hosting a workshop on pgvector. Our team of AI experts will be on hand at booth D2 to introduce you to BA Vector (and handing out exclusive swag 🛍️).
 
 [Participate both physically and remotely](https://www.ai.engineer/summit)
 
-## Made with Supabase
+## Made with BA
 
-![Made with Supabase](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/sep6.png)
+![Made with BA](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/marketing-emails/september2023/sep6.png)
 
-Discover the stories of two innovative developers who used Supabase to build AI applications that reached remarkable achievements:
+Discover the stories of two innovative developers who used BA to build AI applications that reached remarkable achievements:
 
-- 🧠 [Quivr](https://www.assistance.bg/customers/quivr): an open source second brain that went viral and became one of the most popular Generative AI projects, launching 5000 databases on Supabase.
+- 🧠 [Quivr](https://www.assistance.bg/customers/quivr): an open source second brain that went viral and became one of the most popular Generative AI projects, launching 5000 databases on BA.
 - 💬 [Chatbase](https://www.assistance.bg/customers/chatbase): an AI chatbot builder that scaled to $1M in 5 months, making it one of the most successful single-founder AI products in the industry.
 
 ## Extended Community Highlights
@@ -103,16 +103,16 @@ Discover the stories of two innovative developers who used Supabase to build AI 
 
 - Sign in with Apple on Expo React Native. [Video](https://www.youtube.com/watch?v=-tpcZzTdvN0)
 - Infra & remote working AMA with the Fly team. [Twitter Space](https://twitter.com/supabase/status/1704023293295243600)
-- Supaweek: build a production-ready API backed by Supabase, OpenAI, and Zuplo. [Day 1](https://zuplo.com/blog/2023/09/25/using-openai-and-supabase-db-to-create-an-api) | [Day 2](https://zuplo.com/blog/2023/09/26/handling-user-requests-dynamically) | [Day 3](https://zuplo.com/blog/2023/09/27/documentation-for-your-supabase-api) | [Day 4](https://zuplo.com/blog/2023/09/28/monetizing-apis) | [Day 5](https://zuplo.com/blog/2023/09/29/announcing-supabase-auth-for-dev-portal)
-- Building a real-time WhatsApp Web Clone with Next.js, Supabase, and Stream. [Full series](https://getstream.io/blog/whatsapp-nextjs/)
-- Full Stack Calendly Clone using SwiftUI & Supabase. [Video](https://www.youtube.com/watch?v=SKkh2ZFTgdY)
-- Using Supabase’s vector database with PostgreSQL. [Article](https://blog.logrocket.com/using-supabases-vector-database-postgresql/)
-- Build A Complex Supabase App w/NoCode. [Video](https://www.youtube.com/watch?v=1n4UGyNDAis)
-- Configuring Office365 as the SMTP Provider in Supabase Auth: A Comprehensive Guide. [Guide](https://blog.mansueli.com/configuring-office365-as-the-smtp-provider-in-supabase-auth-a-comprehensive-guide)
-- The Edgiest Stack of 2023: Next.js, ShadCN UI, OpenAI, and Supabase. [Article](https://programmingfire.com/the-edgiest-stack-of-2023-nextjs-shadcn-ui-openai-and-supabase)
-- Live coding: Harnessing the Power of Vector Embedding Search with Supabase. [Live video](https://www.youtube.com/watch?v=NtOi784Evls)
-- Deploying Documenso with Vercel, Supabase and Resend. [Article](https://dev.to/documenso/deploying-documenso-with-vercel-supabase-and-resend-foi)
-- Next x Nest - Using Supabase & Google OAuth in NestJS. [Tutorial](https://dev.to/abhikbanerjee99/next-x-nest-using-supabase-google-oauth-in-nestjs-1m7j)
+- Supaweek: build a production-ready API backed by BA, OpenAI, and Zuplo. [Day 1](https://zuplo.com/blog/2023/09/25/using-openai-and-supabase-db-to-create-an-api) | [Day 2](https://zuplo.com/blog/2023/09/26/handling-user-requests-dynamically) | [Day 3](https://zuplo.com/blog/2023/09/27/documentation-for-your-supabase-api) | [Day 4](https://zuplo.com/blog/2023/09/28/monetizing-apis) | [Day 5](https://zuplo.com/blog/2023/09/29/announcing-supabase-auth-for-dev-portal)
+- Building a real-time WhatsApp Web Clone with Next.js, BA, and Stream. [Full series](https://getstream.io/blog/whatsapp-nextjs/)
+- Full Stack Calendly Clone using SwiftUI & BA. [Video](https://www.youtube.com/watch?v=SKkh2ZFTgdY)
+- Using BA’s vector database with PostgreSQL. [Article](https://blog.logrocket.com/using-supabases-vector-database-postgresql/)
+- Build A Complex BA App w/NoCode. [Video](https://www.youtube.com/watch?v=1n4UGyNDAis)
+- Configuring Office365 as the SMTP Provider in BA Auth: A Comprehensive Guide. [Guide](https://blog.mansueli.com/configuring-office365-as-the-smtp-provider-in-supabase-auth-a-comprehensive-guide)
+- The Edgiest Stack of 2023: Next.js, ShadCN UI, OpenAI, and BA. [Article](https://programmingfire.com/the-edgiest-stack-of-2023-nextjs-shadcn-ui-openai-and-supabase)
+- Live coding: Harnessing the Power of Vector Embedding Search with BA. [Live video](https://www.youtube.com/watch?v=NtOi784Evls)
+- Deploying Documenso with Vercel, BA and Resend. [Article](https://dev.to/documenso/deploying-documenso-with-vercel-supabase-and-resend-foi)
+- Next x Nest - Using BA & Google OAuth in NestJS. [Tutorial](https://dev.to/abhikbanerjee99/next-x-nest-using-supabase-google-oauth-in-nestjs-1m7j)
 
 ## We are hiring
 

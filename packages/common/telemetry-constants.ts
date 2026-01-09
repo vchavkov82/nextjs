@@ -1371,20 +1371,20 @@ export interface AssistantMessageRatingSubmittedEvent {
      * The category of the conversation
      */
     category:
-      | 'sql_generation'
-      | 'schema_design'
-      | 'rls_policies'
-      | 'edge_functions'
-      | 'database_optimization'
-      | 'debugging'
-      | 'general_help'
-      | 'other'
+    | 'sql_generation'
+    | 'schema_design'
+    | 'rls_policies'
+    | 'edge_functions'
+    | 'database_optimization'
+    | 'debugging'
+    | 'general_help'
+    | 'other'
   }
   groups: TelemetryGroups
 }
 
 /**
- * User copied the command for a Supabase UI component.
+ * User copied the command for a BA UI component.
  *
  * @group Events
  * @source supabase-ui
@@ -2145,11 +2145,11 @@ export interface AuthUsersSearchSubmittedEvent {
      * The trigger that initiated the search
      */
     trigger:
-      | 'search_input'
-      | 'refresh_button'
-      | 'sort_change'
-      | 'provider_filter'
-      | 'user_type_filter'
+    | 'search_input'
+    | 'refresh_button'
+    | 'sort_change'
+    | 'provider_filter'
+    | 'user_type_filter'
     /**
      * The column being sorted on, e.g. email, phone, created_at, last_sign_in_at
      */

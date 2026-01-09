@@ -1,11 +1,11 @@
 import { Compass, Globe, DollarSign, TrendingUp } from 'lucide-react'
 
 export default {
-  metaTitle: 'Partner with Supabase',
-  metaDescription: 'Become a Supabase Partner and enable new business opportunities.',
+  metaTitle: 'Partner with BA',
+  metaDescription: 'Become a BA Partner and enable new business opportunities.',
   heroSection: {
     title: 'Partners',
-    h1: <span className="heading-gradient">Partner with Supabase</span>,
+    h1: <span className="heading-gradient">Partner with BA</span>,
     subheader: (
       <>
         Apply to the Partners program to list your integration <br className="hidden md:block" /> in
@@ -47,7 +47,7 @@ export default {
     steps: [
       {
         title: 'Register App',
-        text: 'An OAuth app first needs to be registered with Supabase',
+        text: 'An OAuth app first needs to be registered with BA',
       },
       {
         title: 'Add OAuth2 Support',
@@ -59,7 +59,7 @@ export default {
       },
       {
         title: 'Control Projects',
-        text: 'Use Supabase REST API to control projects and other settings',
+        text: 'Use BA REST API to control projects and other settings',
       },
     ],
   },
@@ -71,7 +71,7 @@ export default {
     },
     {
       title: 'Expand your ecosystem',
-      description: 'Offer your own products and services to Supabase customers.',
+      description: 'Offer your own products and services to BA customers.',
       icon: <Globe strokeWidth={1.5} />,
     },
     {

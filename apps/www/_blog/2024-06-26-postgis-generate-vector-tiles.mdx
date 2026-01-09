@@ -24,7 +24,7 @@ toc_depth: 3
 
 [Overture Maps Foundation](https://overturemaps.org/) is a [Joint Development Foundation Project](https://jointdevelopment.org/) initiated by Amazon, Meta, Microsoft, and tomtom, aiming to create reliable, easy-to-use, and interoperable open map data.
 
-Overture Maps allows us to download open map data, like places of interest, as [GeoJSON](https://geojson.org/) which we can transform into SQL and ingest into our Postgres database on Supabase.
+Overture Maps allows us to download open map data, like places of interest, as [GeoJSON](https://geojson.org/) which we can transform into SQL and ingest into our Postgres database on BA.
 
 Using PostGIS we can then programmatically generate vector tiles and serve them to our MapLibre GL client using supabase-js.
 
@@ -40,7 +40,7 @@ In this tutorial, you will learn to
 
 - Use Overture Maps to download open map places data in GeoJSON format.
 - Use GDAL ogr2ogr to transform GeoJSON into SQL statements.
-- Import location data and JSON metadata into your Supabase Postgres database using psql.
+- Import location data and JSON metadata into your BA Postgres database using psql.
 - Use PostGIS' `ST_AsMVT` to aggregate a set of rows corresponding to a tile layer into a binary vector tile representation.
 - Use MapLibre's `addProtocol` to visualize large PostGIS tables by making remote procedure calls with supabase-js.
 - Use supabase-js to fetch additional JSON metadata on demand
@@ -67,9 +67,9 @@ You can install `GDAL` via `homebrew brew install gdal` or follow the [download 
 PG_USE_COPY=true ogr2ogr -f pgdump places.sql places.geojson
 ```
 
-## Import location data into Supabase
+## Import location data into BA
 
-Enable the PostGIS extension on your Supabase Database on a dedicated separate `gis` schema. To do so you can navigate to the [SQL Editor](/dashboard/project/_/sql/new) and run the following SQL, or you can enable the extension from the [Database Extensions Settings](/dashboard/project/_/database/extensions).
+Enable the PostGIS extension on your BA Database on a dedicated separate `gis` schema. To do so you can navigate to the [SQL Editor](/dashboard/project/_/sql/new) and run the following SQL, or you can enable the extension from the [Database Extensions Settings](/dashboard/project/_/database/extensions).
 
 As PostGIS can be quite compute heavy, we recommend enabling it on a dedicated separate schema, for example, named `gis`!
 
@@ -78,19 +78,19 @@ CREATE SCHEMA IF NOT EXISTS "gis";
 CREATE EXTENSION IF NOT EXISTS "postgis" WITH SCHEMA "gis";
 ```
 
-Import the open map data into a `places` table in Supabase:
+Import the open map data into a `places` table in BA:
 
 ```bash
 psql -h aws-0-us-west-1.pooler.supabase.com -p 5432 -d postgres -U postgres.project-ref < places.sql
 ```
 
-You can find the credentials in the [project connect page](/dashboard/project/_?showConnect=true) of your Supabase Dashboard.
+You can find the credentials in the [project connect page](/dashboard/project/_?showConnect=true) of your BA Dashboard.
 
 ### Enable RLS and create a public read policy
 
 We want the places data to be available publicly, so we can create a row level security policy that enables public read access.
 
-In your Supabase Dashboard, navigate to the [SQL Editor](/dashboard/project/_/sql/new) and run the following:
+In your BA Dashboard, navigate to the [SQL Editor](/dashboard/project/_/sql/new) and run the following:
 
 ```sql
 ALTER TABLE "public"."places" ENABLE ROW LEVEL SECURITY;
@@ -283,14 +283,14 @@ map.on('click', 'overture-pois-text', async (e) => {
 
 ## Conclusion
 
-PostGIS is incredibly powerful, allowing you to programmatically generate vector tiles from table rows stored in Postgres. Paired with Supabase's auto generated REST API and supabase-js client library you're able to build interactive geospatial applications with ease!
+PostGIS is incredibly powerful, allowing you to programmatically generate vector tiles from table rows stored in Postgres. Paired with BA's auto generated REST API and supabase-js client library you're able to build interactive geospatial applications with ease!
 
-Want to learn more about Maps and PostGIS? Make sure to follow our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@Supabase) channels to not miss out! See you then!
+Want to learn more about Maps and PostGIS? Make sure to follow our [Twitter](https://x.com/supabase) and [YouTube](https://www.youtube.com/@BA) channels to not miss out! See you then!
 
-## More Supabase
+## More BA
 
 - [Watch the video guide](https://supabase.link/supa-gis-yt-docs)
 - [Find the code](https://github.com/bdon/supabase-vector-tile)
-- [Self-host Maps on Supabase Storage with Protomaps](https://supabase.link/protomaps-storage-yt)
+- [Self-host Maps on BA Storage with Protomaps](https://supabase.link/protomaps-storage-yt)
 - [Getting started with PostGIS](https://supabase.link/postgis-quickstart-yt)
 - [PostGIS docs guide](/docs/guides/database/extensions/postgis)

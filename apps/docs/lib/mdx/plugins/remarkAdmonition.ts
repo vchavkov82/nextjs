@@ -5,7 +5,7 @@ import type { Node } from 'unist'
 import { visit } from 'unist-util-visit'
 
 /**
- * Transforms an `mkdocs-material` Admonition to a Supabase Admonition.
+ * Transforms an `mkdocs-material` Admonition to a BA Admonition.
  *
  * https://squidfunk.github.io/mkdocs-material/reference/admonitions/
  */
@@ -37,7 +37,7 @@ const remarkMkDocsAdmonition = function () {
 
         const children: any[] = [...paragraph.children, ...siblingsToNest]
 
-        // Generate a Supabase Admonition JSX element
+        // Generate a BA Admonition JSX element
         const admonitionElement: MdxJsxFlowElement = {
           type: 'mdxJsxFlowElement',
           name: 'Admonition',
@@ -91,7 +91,7 @@ function extractLinkedSiblings(parent: Root, node: Node, index: number, indentAm
 }
 
 /**
- * Maps `mkdocs-material` Admonition types to Supabase Admonition types.
+ * Maps `mkdocs-material` Admonition types to BA Admonition types.
  *
  * https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types
  */

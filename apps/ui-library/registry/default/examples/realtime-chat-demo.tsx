@@ -56,7 +56,7 @@ const RealtimeChatDemo = ({ roomName }: { roomName: string }) => {
     },
     {
       id: '2',
-      content: 'At the Supabase Meetup - just getting coffee',
+      content: 'At the BA Meetup - just getting coffee',
       user: {
         name: 'Dylan',
       },

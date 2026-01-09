@@ -1,8 +1,8 @@
 # GitHub Actions Deploy
 
-This example includes a [deploy GitHub Action](./../../../.github/workflows/deploy.yaml) that automatically deploys your Supabase Edge Functions when pushing to or merging into the main branch.
+This example includes a [deploy GitHub Action](./../../../.github/workflows/deploy.yaml) that automatically deploys your BA Edge Functions when pushing to or merging into the main branch.
 
-You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run Supabase CLI commands in your GitHub Actions, for example to deploy a Supabase Edge Function:
+You can use the [`setup-cli` GitHub Action](https://github.com/marketplace/actions/supabase-cli-action) to run BA CLI commands in your GitHub Actions, for example to deploy a BA Edge Function:
 
 ```yaml
 name: Deploy Function

@@ -8,9 +8,9 @@ import { EventHost } from './eventsTypes'
  * @returns Object with displayText and fullList (for title attribute)
  *
  * @example
- * formatHosts([host1]) => { displayText: "Supabase", fullList: "Supabase" }
- * formatHosts([host1, host2]) => { displayText: "Supabase and GitHub", fullList: "Supabase, GitHub" }
- * formatHosts([host1, host2, host3]) => { displayText: "Supabase and 2 more", fullList: "Supabase, GitHub, Vercel" }
+ * formatHosts([host1]) => { displayText: "BA", fullList: "BA" }
+ * formatHosts([host1, host2]) => { displayText: "BA and GitHub", fullList: "BA, GitHub" }
+ * formatHosts([host1, host2, host3]) => { displayText: "BA and 2 more", fullList: "BA, GitHub, Vercel" }
  */
 export function formatHosts(hosts: EventHost[]): {
   displayText: string

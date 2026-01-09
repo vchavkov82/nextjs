@@ -29,7 +29,7 @@ const LW15Hackathon: FC = () => {
         <div className="flex flex-col justify-between items-start gap-4">
           <div className="text-2xl max-w-[350px] text-foreground-lighter">
             <p>
-              Build something amazing <br /> in 10 days using Supabase.
+              Build something amazing <br /> in 10 days using BA.
             </p>
             <p>Compete solo or in a team, submit a quick demo and win.</p>
           </div>

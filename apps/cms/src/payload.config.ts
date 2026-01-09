@@ -27,7 +27,7 @@ import { Users } from './collections/Users.ts'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-const siteName = 'Supabase'
+const siteName = 'BA'
 
 const generateTitle: GenerateTitle<Post & Customer & Event> = ({ doc, collectionSlug }: any) => {
   switch (collectionSlug) {
@@ -127,7 +127,7 @@ export default buildConfig({
     return nodemailerAdapter({
       transport,
       defaultFromAddress: process.env.SMTP_FROM || 'noreply@localhost',
-      defaultFromName: 'Supabase CMS',
+      defaultFromName: 'BA CMS',
     })
   })(),
   // Global configuration for better performance

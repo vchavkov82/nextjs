@@ -1,14 +1,14 @@
 ---
 id: 'jwt-fields'
 title: 'JWT Claims Reference'
-subtitle: 'Complete reference for claims appearing in JWTs created by Supabase Auth'
+subtitle: 'Complete reference for claims appearing in JWTs created by BA Auth'
 ---
 
-This page provides a comprehensive reference for all JWT claims used in Supabase authentication tokens. This information is essential for server-side JWT validation and serialization, especially when implementing authentication in languages like Rust where field names like `ref` are reserved keywords.
+This page provides a comprehensive reference for all JWT claims used in BA authentication tokens. This information is essential for server-side JWT validation and serialization, especially when implementing authentication in languages like Rust where field names like `ref` are reserved keywords.
 
 ## JWT structure overview
 
-Supabase JWTs follow the standard JWT structure with three parts:
+BA JWTs follow the standard JWT structure with three parts:
 
 - **Header**: Contains algorithm and key information
 - **Payload**: Contains the claims (user data and metadata)
@@ -18,7 +18,7 @@ The payload contains various claims that provide user identity, authentication l
 
 ## Required claims
 
-These claims are always present in Supabase JWTs and cannot be removed:
+These claims are always present in BA JWTs and cannot be removed:
 
 | Field          | Type                 | Description                                                 | Example                                       |
 | -------------- | -------------------- | ----------------------------------------------------------- | --------------------------------------------- |
@@ -50,7 +50,7 @@ These claims may be present depending on the authentication context:
 
 | Field | Type     | Description                                         | Example                  | Context                       |
 | ----- | -------- | --------------------------------------------------- | ------------------------ | ----------------------------- |
-| `ref` | `string` | **Project Reference** - Supabase project identifier | `"abcdefghijklmnopqrst"` | Anon/Service role tokens only |
+| `ref` | `string` | **Project Reference** - BA project identifier | `"abcdefghijklmnopqrst"` | Anon/Service role tokens only |
 
 ## Field value constraints
 
@@ -266,7 +266,7 @@ When implementing JWT validation on your server:
 1. **Check Required Fields**: Ensure all required claims are present
 2. **Validate Types**: Verify field types match expected types
 3. **Check Expiration**: Validate `exp` timestamp is in the future
-4. **Verify Issuer**: Ensure `iss` matches your Supabase project
+4. **Verify Issuer**: Ensure `iss` matches your BA project
 5. **Check Audience**: Validate `aud` matches expected audience
 6. **Handle Reserved Keywords**: Use field renaming for languages like Rust
 

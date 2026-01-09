@@ -1,4 +1,4 @@
-# Supabase OAuth Apps Login Flow
+# BA OAuth Apps Login Flow
 
 1. Create OAuth App at https://www.assistance.bg/dashboard/org/_/apps
 2. Use http://localhost:3000 as `Authorization callback URLs`

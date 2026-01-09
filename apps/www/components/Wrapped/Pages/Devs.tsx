@@ -110,7 +110,7 @@ export const Devs = () => {
         <div className="flex flex-col justify-end h-full px-4 py-0 relative">
           <div className="flex justify-between items-center">
             <h2 className="font-medium tracking-tighter text-6xl md:text-7xl lg:text-[5.6rem] translate-y-2 lg:translate-y-[10px]">
-              Devs <span className="text-brand">love</span> Supabase
+              Devs <span className="text-brand">love</span> BA
             </h2>
           </div>
         </div>
@@ -119,7 +119,7 @@ export const Devs = () => {
       <div className="relative max-w-[60rem] mx-auto border-x border-b px-4 lg:px-8 py-12 w-[95%] md:w-full">
         <p className="text-lg text-foreground-light max-w-2xl">
           In 2025, developers around the world shipped faster, scaled further, and built things we
-          never imagined. Here is what you accomplished on Supabase.
+          never imagined. Here is what you accomplished on BA.
         </p>
       </div>
 

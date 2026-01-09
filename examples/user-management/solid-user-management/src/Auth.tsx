@@ -25,7 +25,7 @@ const Auth: Component = () => {
 	return (
 		<div class="row flex-center flex">
 			<div class="col-6 form-widget" aria-live="polite">
-				<h1 class="header">Supabase + SolidJS</h1>
+				<h1 class="header">BA + SolidJS</h1>
 				<p class="description">Sign in via magic link with your email below</p>
 				<form class="form-widget" onSubmit={handleLogin}>
 					<div>

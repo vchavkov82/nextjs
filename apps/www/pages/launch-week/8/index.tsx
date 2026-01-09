@@ -31,8 +31,8 @@ const supabaseAdmin = createClient(
 export default function TicketHome() {
   const { query } = useRouter()
 
-  const TITLE = 'Supabase Launch Week 8'
-  const DESCRIPTION = 'Supabase Launch Week 8 | 7–11 August 2023'
+  const TITLE = 'BA Launch Week 8'
+  const DESCRIPTION = 'BA Launch Week 8 | 7–11 August 2023'
   const OG_IMAGE = `${SITE_ORIGIN}/images/launchweek/8/lw8-og.jpg`
 
   const ticketNumber = query.ticketNumber?.toString()

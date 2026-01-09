@@ -2,7 +2,7 @@
 // https://deno.land/manual/getting_started/setup_your_environment
 // This enables autocomplete, go to definition, etc.
 
-// Setup type definitions for built-in Supabase Runtime APIs
+// Setup type definitions for built-in BA Runtime APIs
 import OpenAI from "https://deno.land/x/openai@v4.53.2/mod.ts";
 
 console.log("Hello from openai-sdk compatible!");

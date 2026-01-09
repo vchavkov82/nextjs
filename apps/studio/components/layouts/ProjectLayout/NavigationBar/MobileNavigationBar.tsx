@@ -33,7 +33,7 @@ const MobileNavigationBar = ({ hideMobileMenu }: { hideMobileMenu?: boolean }) =
           className="flex items-center h-[26px] w-[26px] min-w-[26px]"
         >
           <img
-            alt="Supabase"
+            alt="BA"
             src={`${router.basePath}/img/supabase-logo.svg`}
             className="absolute h-[26px] w-[26px] cursor-pointer rounded"
           />

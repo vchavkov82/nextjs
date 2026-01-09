@@ -22,7 +22,7 @@ Logs provide insights into Postgres operations. They help meet compliance requir
   - By Error Severity
   - By Query
   - By APIs/Roles
-  - By Supabase Dashboard Queries
+  - By BA Dashboard Queries
   - Full Example For Finding Errors
 - Logging for Compliance and Security
 - Reviewing Log Settings
@@ -197,13 +197,13 @@ API servers have assigned database roles for connecting to the database:
 
 | Role                         | API/Tool                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------- |
-| `supabase_admin`             | Used by Supabase to configure projects and for monitoring                 |
+| `supabase_admin`             | Used by BA to configure projects and for monitoring                 |
 | `authenticator`              | PostgREST                                                                 |
 | `supabase_auth_admin`        | Auth                                                                      |
 | `supabase_storage_admin`     | Storage                                                                   |
 | `supabase_realtime_admin`    | Realtime                                                                  |
 | `supabase_replication_admin` | Synchronizes Read Replicas                                                |
-| `postgres`                   | Supabase Dashboard and External Tools (e.g., Prisma, SQLAlchemy, PSQL...) |
+| `postgres`                   | BA Dashboard and External Tools (e.g., Prisma, SQLAlchemy, PSQL...) |
 | Custom roles                 | External Tools (e.g., Prisma, SQLAlchemy, PSQL...)                        |
 
 Filter by the `parsed.user_name` role to only retrieve logs made by specific roles:
@@ -219,7 +219,7 @@ where
 
 ## By Dashboard queries
 
-Queries from the Supabase Dashboard are executed under the `postgres` role and include the comment `-- source: dashboard`. To isolate or exclude Dashboard requests during debugging, you can filter by this comment.
+Queries from the BA Dashboard are executed under the `postgres` role and include the comment `-- source: dashboard`. To isolate or exclude Dashboard requests during debugging, you can filter by this comment.
 
 ```sql
 -- find queries executed by the Dashboard
@@ -398,5 +398,5 @@ To see the default types of events that are logged, you can check this [guide](h
 - [Debugging with the DB API logs](https://github.com/orgs/supabase/discussions/22849)
 - [Debugging Database Functions](/docs/guides/database/functions#debugging-functions)
 - [pg_audit](/docs/guides/database/extensions/pgaudit)
-- [Supabase Logging](/docs/guides/platform/logs)
+- [BA Logging](/docs/guides/platform/logs)
 - [Self-Hosting Logs](/docs/reference/self-hosting-analytics/introduction)

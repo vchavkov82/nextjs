@@ -155,8 +155,8 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
   const ogImageUrl = event.og_image
     ? event.og_image
     : encodeURI(
-        `${process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:54321' : 'https://obuldanrptloktxcffvn.supabase.co'}/functions/v1/og-images?site=events&eventType=${event.type}&title=${event.meta_title ?? event.title}&description=${event.meta_description ?? event.description}&date=${dayjs(event.date).tz(event.timezone).format(`DD MMM YYYY`)}&duration=${event.duration}`
-      )
+      `${process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:54321' : 'https://obuldanrptloktxcffvn.supabase.co'}/functions/v1/og-images?site=events&eventType=${event.type}&title=${event.meta_title ?? event.title}&description=${event.meta_description ?? event.description}&date=${dayjs(event.date).tz(event.timezone).format(`DD MMM YYYY`)}&duration=${event.duration}`
+    )
 
   const meta = {
     title: `${event.meta_title ?? event.title} | ${dayjs(event.date)
@@ -202,14 +202,14 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
           ],
           videos: event.video
             ? [
-                {
-                  // youtube based video meta
-                  url: event.video,
-                  type: 'application/x-shockwave-flash',
-                  width: 640,
-                  height: 385,
-                },
-              ]
+              {
+                // youtube based video meta
+                url: event.video,
+                type: 'application/x-shockwave-flash',
+                width: 640,
+                height: 385,
+              },
+            ]
             : undefined,
           article: {
             publishedTime: event.date,
@@ -334,7 +334,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                 <figure className="h-6 [&_.next-image--dynamic-fill_img]:!h-full">
                   <Image
                     src={{ dark: supabaseLogoWordmarkDark, light: supabaseLogoWordmarkLight }}
-                    alt="Supabase Logo"
+                    alt="BA Logo"
                     width={160}
                     height={30}
                     sizes="100%"
@@ -419,7 +419,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                             <p>{speaker?.author}</p>
                             <span className="text-xs text-foreground-light">
                               {speaker?.position}
-                              {speaker?.company ? `, ${speaker?.company}` : ', Supabase'}
+                              {speaker?.company ? `, ${speaker?.company}` : ', BA'}
                             </span>
                           </div>
                         </Link>

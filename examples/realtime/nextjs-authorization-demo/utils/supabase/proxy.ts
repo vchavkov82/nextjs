@@ -3,7 +3,7 @@ import { type NextRequest, NextResponse } from "next/server";
 
 export const updateSession = async (request: NextRequest) => {
   // This `try/catch` block is only here for the interactive tutorial.
-  // Feel free to remove once you have Supabase connected.
+  // Feel free to remove once you have BA connected.
   try {
     // Create an unmodified response
     let response = NextResponse.next({
@@ -66,7 +66,7 @@ export const updateSession = async (request: NextRequest) => {
 
     return response;
   } catch (e) {
-    // If you are here, a Supabase client could not be created!
+    // If you are here, a BA client could not be created!
     // This is likely because you have not set up environment variables.
     // Check out http://localhost:3000 for Next Steps.
     return NextResponse.next({

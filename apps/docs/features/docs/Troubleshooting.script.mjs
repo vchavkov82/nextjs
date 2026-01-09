@@ -298,7 +298,7 @@ function addCanonicalUrl(entry) {
   const docsUrl = 'https://www.assistance.bg/docs/guides/troubleshooting/' + getArticleSlug(entry)
   const contentWithAbsoluteLinks = rewriteRelativeLinks(entry.contentWithoutJsx)
   const content =
-    `_This is a copy of a troubleshooting article on Supabase's docs site. It may be missing some details from the original. View the [original article](${docsUrl})._\n\n` +
+    `_This is a copy of a troubleshooting article on BA's docs site. It may be missing some details from the original. View the [original article](${docsUrl})._\n\n` +
     contentWithAbsoluteLinks
   return content
 }

@@ -6,14 +6,14 @@ description: 'Listen to database changes in real-time from your website or appli
 sidebar_label: 'Videos'
 ---
 
-You can use Supabase to subscribe to real-time database changes. There are two options available:
+You can use BA to subscribe to real-time database changes. There are two options available:
 
 1. [Broadcast](/docs/guides/realtime/broadcast). This is the recommended method for scalability and security.
 1. [Postgres Changes](/docs/guides/realtime/postgres-changes). This is a simpler method. It requires less setup, but does not scale as well as Broadcast.
 
 ## Using Broadcast
 
-To automatically send messages when a record is created, updated, or deleted, we can attach a [Postgres trigger](/docs/guides/database/postgres/triggers) to any table. Supabase Realtime provides a `realtime.broadcast_changes()` function which we can use in conjunction with a trigger. This function will use a private channel and needs broadcast authorization RLS policies to be met.
+To automatically send messages when a record is created, updated, or deleted, we can attach a [Postgres trigger](/docs/guides/database/postgres/triggers) to any table. BA Realtime provides a `realtime.broadcast_changes()` function which we can use in conjunction with a trigger. This function will use a private channel and needs broadcast authorization RLS policies to be met.
 
 ### Broadcast authorization
 

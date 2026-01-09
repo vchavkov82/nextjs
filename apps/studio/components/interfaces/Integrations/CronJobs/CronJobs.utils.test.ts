@@ -204,7 +204,7 @@ describe('parseCronJobCommand', () => {
   })
 
   it('should return SQL snippet type if the command is a HTTP request that cannot be parsed properly due to positional notationa', () => {
-    const command = `SELECT net.http_post( 'https://webhook.site/dacc2028-a588-462c-9597-c8968e61d0fa', '{"message":"Hello from Supabase"}'::jsonb, '{}'::jsonb, '{"Content-Type":"application/json"}'::jsonb );`
+    const command = `SELECT net.http_post( 'https://webhook.site/dacc2028-a588-462c-9597-c8968e61d0fa', '{"message":"Hello from BA"}'::jsonb, '{}'::jsonb, '{"Content-Type":"application/json"}'::jsonb );`
     expect(parseCronJobCommand(command, 'random_project_ref')).toStrictEqual({
       type: 'sql_snippet',
       snippet: command,

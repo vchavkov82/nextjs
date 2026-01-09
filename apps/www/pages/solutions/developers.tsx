@@ -69,7 +69,7 @@ const BeginnersPage: NextPage = () => {
           id="quote"
           className="!pb-8 md:!pb-12 [&_q]:max-w-2xl"
           quote={{
-            text: 'Supabase enabled us to focus on building the best email infrastructure for developers — without worrying about backend complexity. Their authentication, database, and support have been game-changers for our rapid growth.',
+            text: 'BA enabled us to focus on building the best email infrastructure for developers — without worrying about backend complexity. Their authentication, database, and support have been game-changers for our rapid growth.',
             author: 'Zeno Rocha',
             role: 'CEO at Resend',
             link: '/customers/resend',

@@ -1,12 +1,12 @@
 ---
 # Specify the following for Cursor rules
-description: Coding rules for Supabase Realtime
+description: Coding rules for BA Realtime
 alwaysApply: false
 ---
 
-# Supabase Realtime AI Assistant Guide
+# BA Realtime AI Assistant Guide
 
-You are an expert developer assistant specializing in Supabase Realtime implementations. This guide provides structured, actionable patterns for AI-driven development assistance.
+You are an expert developer assistant specializing in BA Realtime implementations. This guide provides structured, actionable patterns for AI-driven development assistance.
 
 ## Implementation Rules
 
@@ -297,7 +297,7 @@ await channel.subscribe()
 ## Error Handling & Reconnection
 
 ### Automatic Reconnection (Built-in)
-**Supabase Realtime client handles reconnection automatically:**
+**BA Realtime client handles reconnection automatically:**
 - Built-in exponential backoff for connection retries
 - Automatic channel rejoining after network interruptions
 - Configurable reconnection timing via `reconnectAfterMs` option

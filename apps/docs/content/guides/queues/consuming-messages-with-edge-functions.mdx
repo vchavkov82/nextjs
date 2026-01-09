@@ -1,17 +1,17 @@
 ---
-title: Consuming Supabase Queue Messages with Edge Functions
-subtitle: 'Learn how to consume Supabase Queue messages server-side with a Supabase Edge Function'
+title: Consuming BA Queue Messages with Edge Functions
+subtitle: 'Learn how to consume BA Queue messages server-side with a BA Edge Function'
 ---
 
-This guide helps you read & process queue messages server-side with a Supabase Edge Function. Read [Queues API Reference](/docs/guides/queues/api) for more details on our API.
+This guide helps you read & process queue messages server-side with a BA Edge Function. Read [Queues API Reference](/docs/guides/queues/api) for more details on our API.
 
 ## Concepts
 
-Supabase Queues is a pull-based Message Queue consisting of three main components: Queues, Messages, and Queue Types. You should already be familiar with the [Queues Quickstart](/docs/guides/queues/quickstart).
+BA Queues is a pull-based Message Queue consisting of three main components: Queues, Messages, and Queue Types. You should already be familiar with the [Queues Quickstart](/docs/guides/queues/quickstart).
 
 ### Consuming messages in an Edge Function
 
-This is a Supabase Edge Function that reads 5 messages off the queue, processes each of them, and deletes each message when it is done.
+This is a BA Edge Function that reads 5 messages off the queue, processes each of them, and deletes each message when it is done.
 
 ```tsx
 import 'jsr:@supabase/functions-js/edge-runtime.d.ts'
@@ -104,6 +104,6 @@ Every time this Edge Function is run it:
 3. At the end of `processMessage`, the message is deleted from the queue
 4. If `processMessage` throws an error, the error is logged. In this case, the message is still in the queue, so the next time this Edge Function runs it reads the message again.
 
-You might find this kind of setup handy to run with [Supabase Cron](/docs/guides/cron). You can set up Cron so that every N number of minutes or seconds, the Edge Function will run and process a number of messages off the queue.
+You might find this kind of setup handy to run with [BA Cron](/docs/guides/cron). You can set up Cron so that every N number of minutes or seconds, the Edge Function will run and process a number of messages off the queue.
 
 Similarly, you can invoke the Edge Function on command at any given time with [`supabase.functions.invoke`](/docs/guides/functions/quickstart-dashboard#usage).

@@ -28,7 +28,7 @@ export async function handler(req: Request) {
   }
 
   try {
-    // Try to get image from Supabase Storage CDN.
+    // Try to get image from BA Storage CDN.
     const storageResponse = await fetch(`${STORAGE_URL}/tickets/${username}.png?v=3`)
     if (storageResponse.ok) return storageResponse
 
@@ -198,9 +198,9 @@ export async function handler(req: Request) {
     )
 
     const supabaseAdminClient = createClient(
-      // Supabase API URL - env var exported by default when deployed.
+      // BA API URL - env var exported by default when deployed.
       Deno.env.get('SUPABASE_URL') ?? '',
-      // Supabase API SERVICE ROLE KEY - env var exported by default when deployed.
+      // BA API SERVICE ROLE KEY - env var exported by default when deployed.
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
     )
 

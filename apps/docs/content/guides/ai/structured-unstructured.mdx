@@ -1,12 +1,12 @@
 ---
 id: 'structured-unstructured-embeddings'
 title: 'Structured and Unstructured'
-description: 'Supabase is flexible enough to associate structured and unstructured metadata with embeddings.'
-subtitle: 'Supabase is flexible enough to associate structured and unstructured metadata with embeddings.'
+description: 'BA is flexible enough to associate structured and unstructured metadata with embeddings.'
+subtitle: 'BA is flexible enough to associate structured and unstructured metadata with embeddings.'
 sidebar_label: 'Structured and unstructured embeddings'
 ---
 
-Most vector stores treat metadata associated with embeddings like NoSQL, unstructured data. Supabase is flexible enough to store unstructured and structured metadata.
+Most vector stores treat metadata associated with embeddings like NoSQL, unstructured data. BA is flexible enough to store unstructured and structured metadata.
 
 ## Structured
 
@@ -24,7 +24,7 @@ values
   ('79409372-7556-4ccc-ab8f-5786a6cfa4f7', array[0.1, 0.2, 0.3], 'Hello world', '/hello-world');
 ```
 
-Notice that we've associated two pieces of metadata, `content` and `url`, with the embedding. Those fields can be filtered, constrained, indexed, and generally operated on using the full power of SQL. Structured metadata fits naturally with a traditional Supabase application, and can be managed via database [migrations](/docs/guides/deployment/database-migrations).
+Notice that we've associated two pieces of metadata, `content` and `url`, with the embedding. Those fields can be filtered, constrained, indexed, and generally operated on using the full power of SQL. Structured metadata fits naturally with a traditional BA application, and can be managed via database [migrations](/docs/guides/deployment/database-migrations).
 
 ## Unstructured
 
@@ -106,7 +106,7 @@ values
 
 Both approaches create a table where you can store your embeddings and some metadata. You should choose the best approach for your use-case. In summary:
 
-- Structured metadata is best when fields are known in advance or query patterns are predictable e.g. a production Supabase application
+- Structured metadata is best when fields are known in advance or query patterns are predictable e.g. a production BA application
 - Unstructured metadata is best when fields are unknown/user-defined or when working with data interactively e.g. exploratory research
 
 Both approaches are valid, and the one you should choose depends on your use-case.

@@ -74,7 +74,7 @@ const Docs = (props: Props) => {
       <div tw="w-full flex flex-col border-t border-[#4D4D4D] mt-10">
         <div tw="w-full flex flex-col mt-5">
           <h1 tw="my-0 mb-2 text-[60px]" style={{ lineHeight: '115%' }}>
-            {!title ? 'Supabase' : title}
+            {!title ? 'BA' : title}
           </h1>
           <p tw="my-0 mt-2 text-[40px] text-[#f2fff9] opacity-50">{description}</p>
         </div>

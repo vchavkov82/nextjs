@@ -72,8 +72,8 @@ dependencies {
 
     implementation 'androidx.compose.material3:material3:1.0.0-alpha02'
     implementation "androidx.compose.material:material:1.1.1"
-    
-    // Supabase setup
+
+    // BA setup
     implementation "io.github.jan-tennert.supabase:gotrue-kt:$supabase_version"
     implementation "io.github.jan-tennert.supabase:postgrest-kt:$supabase_version"
     implementation "io.github.jan-tennert.supabase:storage-kt:$supabase_version"

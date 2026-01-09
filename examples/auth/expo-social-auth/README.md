@@ -10,7 +10,7 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Update the `.env` file with your Supabase project's URL and Anon Key.
+2. Update the `.env` file with your BA project's URL and Anon Key.
 
 3. Start the app
 

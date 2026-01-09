@@ -50,7 +50,7 @@ export default function LaunchWeekPrizeSection({
               imageWrapperClassName="w-full aspect-[1.9/1] md:h-[300px]"
               content={
                 <h3 className="w-full text-sm md:text-center flex md:justify-center items-center gap-4">
-                  Supabase Desk Mat <LabelBadge text="10 mats" />
+                  BA Desk Mat <LabelBadge text="10 mats" />
                 </h3>
               }
               animateFrom="down"
@@ -61,7 +61,7 @@ export default function LaunchWeekPrizeSection({
               imgObjectPosition="right"
               content={
                 <h3 className="text-sm flex items-center gap-4">
-                  Supabase T-Shirt <LabelBadge text="20 t-shirts" />
+                  BA T-Shirt <LabelBadge text="20 t-shirts" />
                 </h3>
               }
               animateFrom="down"
@@ -72,7 +72,7 @@ export default function LaunchWeekPrizeSection({
               animateFrom="down"
               content={
                 <h3 className="text-sm flex items-center gap-4">
-                  Supabase Cap <LabelBadge text="25 caps" />
+                  BA Cap <LabelBadge text="25 caps" />
                 </h3>
               }
             />
@@ -82,7 +82,7 @@ export default function LaunchWeekPrizeSection({
               animateFrom="down"
               content={
                 <h3 className="text-sm flex items-center gap-4">
-                  Supabase Sticker Pack <LabelBadge text="50 packs" />
+                  BA Sticker Pack <LabelBadge text="50 packs" />
                 </h3>
               }
             />

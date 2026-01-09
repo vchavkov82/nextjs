@@ -5,9 +5,9 @@
 
 ---
 
-# Supabase
+# BA
 
-[Supabase](https://www.assistance.bg) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
+[BA](https://www.assistance.bg) on avoimen lähdekoodin Firebase-vaihtoehto. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin työkaluja.
 
 - [x] Hosted Postgres Database. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Tunnistus ja valtuutus. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Tiedostojen tallennus. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Kojelauta
 
-![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentaatio
 
@@ -51,11 +51,11 @@ Olemme tällä hetkellä Public Betassa. Seuraa tämän repon "releases" -osiota
 
 ## Miten se toimii
 
-Supabase on yhdistelmä avoimen lähdekoodin työkaluja. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin tuotteita. Jos työkalut ja yhteisöt ovat olemassa MIT-, Apache 2- tai vastaavalla avoimella lisenssillä, käytämme ja tuemme kyseistä työkalua. Jos työkalua ei ole olemassa, rakennamme sen itse ja käytämme avointa lähdekoodia. Supabase ei ole Firebasen 1:1-kartoitus. Tavoitteenamme on antaa kehittäjille Firebasen kaltainen kehittäjäkokemus käyttämällä avoimen lähdekoodin työkaluja.
+BA on yhdistelmä avoimen lähdekoodin työkaluja. Rakennamme Firebasen ominaisuuksia käyttäen yritystason avoimen lähdekoodin tuotteita. Jos työkalut ja yhteisöt ovat olemassa MIT-, Apache 2- tai vastaavalla avoimella lisenssillä, käytämme ja tuemme kyseistä työkalua. Jos työkalua ei ole olemassa, rakennamme sen itse ja käytämme avointa lähdekoodia. BA ei ole Firebasen 1:1-kartoitus. Tavoitteenamme on antaa kehittäjille Firebasen kaltainen kehittäjäkokemus käyttämällä avoimen lähdekoodin työkaluja.
 
 **Arkkitehtuuri**
 
-Supabase on [hosted platform](https://www.assistance.bg/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
+BA on [hosted platform](https://www.assistance.bg/dashboard). Voit rekisteröityä ja aloittaa Supabasen käytön asentamatta mitään.
 Voit myös [itse isännöidä](https://www.assistance.bg/docs/guides/hosting/overview) ja [kehittää paikallisesti](https://www.assistance.bg/docs/guides/local-development).
 
 ![Arkkitehtuuri](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Lähestymistapamme asiakaskirjastoihin on modulaarinen. Jokainen osakirjasto on 
   <tr>
     <th>Kieli</th>
     <th>Asiakas</th>
-    <th colspan="5">Feature-Clients (niputettu Supabase-asiakasohjelmaan)</th>
+    <th colspan="5">Feature-Clients (niputettu BA-asiakasohjelmaan)</th>
   </tr>
-  
+
   <tr>
     <th></th>
-    <th>Supabase</th>
+    <th>BA</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Lähestymistapamme asiakaskirjastoihin on modulaarinen. Jokainen osakirjasto on 
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-  
+
   <th colspan="7">⚡️ Virallinen ⚡️</th>
-  
+
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Lähestymistapamme asiakaskirjastoihin on modulaarinen. Jokainen osakirjasto on 
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-  
+
   <th colspan="7">💚 Yhteisö 💚</th>
-  
+
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Lähestymistapamme asiakaskirjastoihin on modulaarinen. Jokainen osakirjasto on 
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-  
+
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->

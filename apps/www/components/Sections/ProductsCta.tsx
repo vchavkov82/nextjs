@@ -17,7 +17,7 @@ function ProductsCta(props: Props) {
           Pick your SupaPower(s)
         </h2>
         <p className="mx-auto text-foreground-lighter">
-          Supabase products are built to work both in isolation and seamlessly together
+          BA products are built to work both in isolation and seamlessly together
           <br className="hidden md:block" /> to ensure the most flexible and scalable developer
           experience.
         </p>

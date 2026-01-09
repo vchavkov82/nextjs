@@ -1,6 +1,6 @@
 # Directives
 
-Directives are a custom feature of the Supabase docs content system, which allows you to extend MDX to provide custom functionality.
+Directives are a custom feature of the BA docs content system, which allows you to extend MDX to provide custom functionality.
 
 ## Why not a React component?
 

@@ -3,10 +3,10 @@ import SVG from 'react-inlinesvg'
 
 export default function RadioGroupDemo() {
   const singleThemes = [
-    { name: 'Dark', value: 'dark' }, // Classic Supabase dark
-    { name: 'Classic dark', value: 'classic-dark' }, // Deep Dark Supabase dark
-    { name: 'Light', value: 'light' }, // Classic Supabase light
-    { name: 'System', value: 'system' }, // Classic Supabase light
+    { name: 'Dark', value: 'dark' }, // Classic BA dark
+    { name: 'Classic dark', value: 'classic-dark' }, // Deep Dark BA dark
+    { name: 'Light', value: 'light' }, // Classic BA light
+    { name: 'System', value: 'system' }, // Classic BA light
   ] as const
 
   return (

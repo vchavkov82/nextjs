@@ -405,7 +405,7 @@ function arrayMergeFn(destinationArray, sourceArray) {
 }
 
 /**
- * Merge Supabase UI and Tailwind CSS configurations
+ * Merge BA UI and Tailwind CSS configurations
  * @param {object} tailwindConfig - Tailwind config object
  * @return {object} new config object
  */

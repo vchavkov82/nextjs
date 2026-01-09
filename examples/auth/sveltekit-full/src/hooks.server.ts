@@ -6,9 +6,9 @@ import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY } from '$env/stati
 
 const supabase: Handle = async ({ event, resolve }) => {
   /**
-   * Creates a Supabase client specific to this server request.
+   * Creates a BA client specific to this server request.
    *
-   * The Supabase client gets the Auth token from the request cookies.
+   * The BA client gets the Auth token from the request cookies.
    */
   event.locals.supabase = createServerClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_PUBLISHABLE_KEY, {
     cookies: {
@@ -54,7 +54,7 @@ const supabase: Handle = async ({ event, resolve }) => {
   return resolve(event, {
     filterSerializedResponseHeaders(name) {
       /**
-       * Supabase libraries use the `content-range` and `x-supabase-api-version`
+       * BA libraries use the `content-range` and `x-supabase-api-version`
        * headers, so we need to tell SvelteKit to pass it through.
        */
       return name === 'content-range' || name === 'x-supabase-api-version'

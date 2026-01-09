@@ -98,7 +98,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/analytics-buckets',
     date: 'Tuesday',
     published_at: '2025-07-15T07:00:00.000-07:00',
-    title: 'Introducing Supabase Analytics Buckets with Iceberg Support',
+    title: 'Introducing BA Analytics Buckets with Iceberg Support',
     description: '',
     links: [
       {
@@ -160,7 +160,7 @@ const days: (isDark?: boolean) => WeekDayProps[] = (isDark = true) => [
     blog: '/blog/new-observability-features-in-supabase',
     date: 'Thursday',
     published_at: '2025-07-17T07:00:00.000-07:00',
-    title: 'Introducing New Observability Features in Supabase',
+    title: 'Introducing New Observability Features in BA',
     description: '',
     links: [
       {

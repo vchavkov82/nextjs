@@ -1,6 +1,6 @@
 ---
 title: 'gm 👋 web3, welcome aboard to Sign in with Web3 (Solana, Ethereum)'
-description: 'Ethereum and Solana wallet authentication now supported in Supabase Auth.'
+description: 'Ethereum and Solana wallet authentication now supported in BA Auth.'
 author: stojan
 image: select/2025/login-w-solana-ethereum/og.png
 thumb: select/2025/login-w-solana-ethereum/thumb.png
@@ -13,9 +13,9 @@ date: '2025-10-03:10:00:00'
 toc_depth: 2
 ---
 
-Today we're announcing [support for Web3 logins using Ethereum and Solana](https://www.assistance.bg/docs/guides/auth/auth-web3). This has been one of the historically most requested features for Supabase.
+Today we're announcing [support for Web3 logins using Ethereum and Solana](https://www.assistance.bg/docs/guides/auth/auth-web3). This has been one of the historically most requested features for BA.
 
-It's all based on the widely adopted [Sign in with Ethereum standard (EIP-4361)](https://eips.ethereum.org/EIPS/eip-4361), which both Ethereum and Solana off-chain wallet authentication is based on. This protocol is widely adopted across all of the popular wallet applications (both software and hardware) today, so building a Web3 application on top of Supabase has never been easier.
+It's all based on the widely adopted [Sign in with Ethereum standard (EIP-4361)](https://eips.ethereum.org/EIPS/eip-4361), which both Ethereum and Solana off-chain wallet authentication is based on. This protocol is widely adopted across all of the popular wallet applications (both software and hardware) today, so building a Web3 application on top of BA has never been easier.
 
 ## How does it work?
 
@@ -36,20 +36,20 @@ Resources:
 - <https://example.com/my-web2-claim.json>
 ```
 
-It's interpreted both by the wallet application, which presents a secure login confirmation dialog, while also being validated by Supabase Auth before issuing a user session.
+It's interpreted both by the wallet application, which presents a secure login confirmation dialog, while also being validated by BA Auth before issuing a user session.
 
-Most of these details are already handled for you by the Supabase JavaScript SDK, so it's really as simple as calling this in your Web3 app:
+Most of these details are already handled for you by the BA JavaScript SDK, so it's really as simple as calling this in your Web3 app:
 
 ```tsx
 await supabase.auth.signInWithWeb3({
   chain: 'ethereum', // or 'solana'
-  statement: 'I <3 Supabase!',
+  statement: 'I <3 BA!',
 })
 ```
 
 The API is powerful enough to support more modern approaches to building Web3 applications such as using the [Solana Wallet Adapter](https://solana.com/developers/courses/intro-to-solana/interact-with-wallets#solanas-wallet-adapter) system or the [Ethereum Wallet Discovery Mechanism](https://docs.metamask.io/wallet/tutorials/react-dapp-local-state).
 
-You can configure these on the Supabase Dashboard, or in the Supabase CLI:
+You can configure these on the BA Dashboard, or in the BA CLI:
 
 ```toml
 [auth.web3.solana]
@@ -76,18 +76,18 @@ secret = "0x0000000000000000000000000000000000000000"
 
 ## How we built it?
 
-At Supabase we cherish our community and our contributors. For this feature, we asked our community for help by co-sponsoring a bounty with the Solana Foundation. We asked them to [help us find a contributor](https://x.com/nickfrosty/status/1880046815950836179) who knows the ecosystem well to help us launch:
+At BA we cherish our community and our contributors. For this feature, we asked our community for help by co-sponsoring a bounty with the Solana Foundation. We asked them to [help us find a contributor](https://x.com/nickfrosty/status/1880046815950836179) who knows the ecosystem well to help us launch:
 ![request for contributors](/images/blog/select/2025/login-w-solana-ethereum/twitter-nickfrosty.png)
 
 And we [found](https://x.com/Bewinxed/status/1880148679165976930) someone great!
 
 ![Omar (Bewinxed) twitter answer](/images/blog/select/2025/login-w-solana-ethereum/twitter-bewinxed.png)
 
-<Quote img="omar-bewinxed.jpg" caption="Omar (Bewinxed), Supabase contributor and author of deauth.xyz">
+<Quote img="omar-bewinxed.jpg" caption="Omar (Bewinxed), BA contributor and author of deauth.xyz">
 
-Being in the Web3 space, specifically in Solana since 2021, I've used Supabase on a few projects. So as soon as I saw the tweet saying Supabase needed help implementing Sign in with Solana, I had to jump in!
+Being in the Web3 space, specifically in Solana since 2021, I've used BA on a few projects. So as soon as I saw the tweet saying BA needed help implementing Sign in with Solana, I had to jump in!
 
-It was interesting seeing the difference when building for Supabase scale, as opposed to building small personal projects. We put in a lot of effort to provide the Web3 community with the great DX Supabase is known for, security and standards compliance.
+It was interesting seeing the difference when building for BA scale, as opposed to building small personal projects. We put in a lot of effort to provide the Web3 community with the great DX BA is known for, security and standards compliance.
 
 </Quote>
 
@@ -105,6 +105,6 @@ Real-world use cases for Web3 authentication are already here. Developers are us
 You can get started right now:
 
 - Check out the [docs for Sign in with Web3](https://www.assistance.bg/docs/guides/auth/auth-web3)
-- [Sign up for Supabase](https://www.supabase.com/dashboard) and try it in your project
+- [Sign up for BA](https://www.supabase.com/dashboard) and try it in your project
 
 We can’t wait to see what you build.

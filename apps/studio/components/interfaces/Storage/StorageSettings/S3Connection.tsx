@@ -166,7 +166,7 @@ export const S3Connection = () => {
                             layout="flex-row-reverse"
                             className="[&>*>label]:text-foreground"
                             label="S3 protocol connection"
-                            description="Allow clients to connect to Supabase Storage via the S3 protocol"
+                            description="Allow clients to connect to BA Storage via the S3 protocol"
                           >
                             <FormControl_Shadcn_>
                               <Switch

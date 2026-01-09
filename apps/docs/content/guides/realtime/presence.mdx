@@ -8,13 +8,13 @@ Let's explore how to implement Realtime Presence to track state between multiple
 
 ## Usage
 
-You can use the Supabase client libraries to track Presence state between users.
+You can use the BA client libraries to track Presence state between users.
 
 ### How Presence works
 
-Presence lets each connected client publish a small piece of state—called a “presence payload”—to a shared channel. Supabase stores each client’s payload under a unique presence key and keeps a merged view of all connected clients.
+Presence lets each connected client publish a small piece of state—called a “presence payload”—to a shared channel. BA stores each client’s payload under a unique presence key and keeps a merged view of all connected clients.
 
-When any client subscribes, disconnects, or updates their presence payload, Supabase triggers one of three events:
+When any client subscribes, disconnects, or updates their presence payload, BA triggers one of three events:
 
 - **`sync`** — the full presence state has been updated
 - **`join`** — a new client has started tracking presence
@@ -37,7 +37,7 @@ Get the Project URL and key from [the project's **Connect** dialog](/dashboard/p
 
 <Admonition type="note" title="Changes to API keys">
 
-Supabase is changing the way keys work to improve project security and developer experience. You can [read the full announcement](https://github.com/orgs/supabase/discussions/29260), but in the transition period, you can use both the current `anon` and `service_role` keys and the new publishable key with the form `sb_publishable_xxx` which will replace the older keys.
+BA is changing the way keys work to improve project security and developer experience. You can [read the full announcement](https://github.com/orgs/supabase/discussions/29260), but in the transition period, you can use both the current `anon` and `service_role` keys and the new publishable key with the form `sb_publishable_xxx` which will replace the older keys.
 
 In most cases, you can get the correct key from [the Project's **Connect** dialog](/dashboard/project/_?showConnect=true), but if you want a specific key, you can find all keys in [the API Keys section of a Project's Settings page](/dashboard/project/_/settings/api-keys/):
 
@@ -70,7 +70,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
 ```dart
 void main() {
-  Supabase.initialize(
+  BA.initialize(
     url: 'https://<project>.supabase.co',
     anonKey: '<sb_publishable_... or anon key>',
   );
@@ -78,7 +78,7 @@ void main() {
   runApp(MyApp());
 }
 
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 ```
 
 </TabPanel>
@@ -164,7 +164,7 @@ roomOne
 <TabPanel id="dart" label="Dart">
 
 ```dart
-final supabase = Supabase.instance.client;
+final supabase = BA.instance.client;
 
 final roomOne = supabase.channel('room_01');
 
@@ -444,7 +444,7 @@ room_one.untrack()
 
 ## Presence options
 
-You can pass configuration options while initializing the Supabase Client.
+You can pass configuration options while initializing the BA Client.
 
 ### Presence key
 

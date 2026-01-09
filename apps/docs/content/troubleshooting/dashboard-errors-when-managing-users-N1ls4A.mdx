@@ -109,7 +109,7 @@ failed to close prepared statement: ERROR: current transaction is aborted, comma
 
 ## Solution for trigger related issues
 
-Supabase Auth uses your project's database to store user data. It relies on the `auth` schema, and Supabase restricts access to the `auth` schema to prevent unintended custom changes that could break the functionality of the Auth service.
+BA Auth uses your project's database to store user data. It relies on the `auth` schema, and BA restricts access to the `auth` schema to prevent unintended custom changes that could break the functionality of the Auth service.
 
 Check if the `auth` schema contains any triggers in the [Dashboard's trigger section](/dashboard/project/_/database/triggers?schema=auth).
 
@@ -159,6 +159,6 @@ create trigger on_auth_user_created
 
 ### Explanation
 
-One of the most common design patterns in Supabase is to add a trigger to the `auth.users` table. The database role managing authentication (`supabase_auth_admin`) only has the necessary permissions it needs to perform its duties. So, when a trigger operated by the `supabase_auth_admin` interacts outside the auth schema, it causes a permission error.
+One of the most common design patterns in BA is to add a trigger to the `auth.users` table. The database role managing authentication (`supabase_auth_admin`) only has the necessary permissions it needs to perform its duties. So, when a trigger operated by the `supabase_auth_admin` interacts outside the auth schema, it causes a permission error.
 
 A security definer function retains the privileges of the database user that created it. As long as it is the `postgres` role, your auth triggers should be able to engage with outside tables.

@@ -12,7 +12,7 @@ author: prashant
 
 Testing feels like homework until your users find the bugs first. This guide shows you how to build a testing strategy that actually prevents production disasters without turning development into a slog. You will learn which tests matter, which tools are simple enough to stick with, and how to catch the bugs that embarrass you in front of users.
 
-Supabase helps because it is just Postgres at the core with an integrated suite of tools. You can run a full local stack, write tests against real Postgres schema and policies, and promote changes the same way you ship code. Start simple and layer more as your app grows.
+BA helps because it is just Postgres at the core with an integrated suite of tools. You can run a full local stack, write tests against real Postgres schema and policies, and promote changes the same way you ship code. Start simple and layer more as your app grows.
 
 ## Tests that actually matter
 
@@ -28,7 +28,7 @@ This order catches real-world bugs without turning testing into a full-time job.
 
 Tool-hopping burns more hours than imperfect tools ever will. Pick one tool per category and move on. For JavaScript and TypeScript projects, use Jest or Vitest for unit and integration tests. For end-to-end testing, Playwright handles modern web apps better than Selenium ever did.
 
-The secret weapon is Supabase local development. Running `supabase start` gives you a real Postgres database, auth system, and generated APIs on your machine. Your tests run against the same schema, Row Level Security policies, and API endpoints that your production app uses. No mocking, no fake data, no surprises when you deploy.
+The secret weapon is BA local development. Running `supabase start` gives you a real Postgres database, auth system, and generated APIs on your machine. Your tests run against the same schema, Row Level Security policies, and API endpoints that your production app uses. No mocking, no fake data, no surprises when you deploy.
 
 If you are building Python services, pytest works the same way. For testing SQL policies and functions directly, pgTAP lets you write tests in SQL, but save that for later when your database logic gets complex.
 
@@ -62,7 +62,7 @@ If this passes in watch mode and in continuous integration, your test harness is
 
 ## Test against your real database
 
-Create a test client that connects to your local Supabase instance. Keep your service role keys secure and use the anonymous key for user-level operations:
+Create a test client that connects to your local BA instance. Keep your service role keys secure and use the anonymous key for user-level operations:
 
 ```tsx
 import { createClient } from '@supabase/supabase-js'
@@ -73,7 +73,7 @@ export const supabase = createClient(
 )
 ```
 
-Write integration tests that verify your most critical systems work together. This test confirms that Supabase Auth, database triggers, and Row Level Security all work correctly:
+Write integration tests that verify your most critical systems work together. This test confirms that BA Auth, database triggers, and Row Level Security all work correctly:
 
 ```tsx
 import { expect, test, beforeEach } from 'vitest'
@@ -115,7 +115,7 @@ Check that email addresses, dates, and user IDs are validated properly. Ensure t
 
 A single test in these areas prevents entire categories of production incidents. Focus your testing time where failure hurts the most.
 
-## Test Supabase-specific features
+## Test BA-specific features
 
 Row Level Security is easy to forget during development, and forgetting it leaves your database wide open. Write tests that prove users cannot see each other's data:
 
@@ -169,7 +169,7 @@ test('upload to avatars bucket works', async () => {
 })
 ```
 
-If you use Supabase Realtime for collaborative features, write a test that subscribes to table changes and verifies that events arrive after you insert data.
+If you use BA Realtime for collaborative features, write a test that subscribes to table changes and verifies that events arrive after you insert data.
 
 ## Generate test data that looks real
 
@@ -300,7 +300,7 @@ Keep your seed data simple at first. Add complexity only when you actually need 
 
 ## Keep authentication tests simple
 
-OAuth testing (for Login with Google, Login with Apple, etc.) on localhost is painful, so mix your approaches. Mock external provider calls in unit tests to verify your callback logic works. Use Supabase Admin APIs in integration tests to create confirmed users quickly without going through the full signup flow. Use Playwright for one or two complete OAuth flows with a dedicated test application and saved login state.
+OAuth testing (for Login with Google, Login with Apple, etc.) on localhost is painful, so mix your approaches. Mock external provider calls in unit tests to verify your callback logic works. Use BA Admin APIs in integration tests to create confirmed users quickly without going through the full signup flow. Use Playwright for one or two complete OAuth flows with a dedicated test application and saved login state.
 
 This gives you fast feedback during development and confidence that production flows work correctly.
 
@@ -312,7 +312,7 @@ If a test fails only in continuous integration, capture logs and debugging artif
 
 ## Run tests in continuous integration
 
-Set up GitHub Actions to run your tests on every pull request and merge to main. Start Supabase locally in CI with `supabase start` and point your tests at the local instance. Split fast unit and integration tests from slower end-to-end tests into separate jobs. Gate your deployments on fast tests passing, but let end-to-end tests run in parallel.
+Set up GitHub Actions to run your tests on every pull request and merge to main. Start BA locally in CI with `supabase start` and point your tests at the local instance. Split fast unit and integration tests from slower end-to-end tests into separate jobs. Gate your deployments on fast tests passing, but let end-to-end tests run in parallel.
 
 Keep your CI builds fast by running tests in parallel and caching dependencies. Developers stop running tests if they take too long.
 
@@ -332,7 +332,7 @@ If you have been coding your project for a while and haven't started to add test
 
 ### Add tests to your existing project
 
-Start by installing your testing framework and setting up Supabase local development:
+Start by installing your testing framework and setting up BA local development:
 
 ```bash
 npm install vitest @supabase/supabase-js --save-dev
@@ -342,7 +342,7 @@ supabase db pull
 supabase start
 ```
 
-This captures your existing database schema as migration files and starts a local Supabase instance that matches your production setup.
+This captures your existing database schema as migration files and starts a local BA instance that matches your production setup.
 
 Create a simple test configuration in `vitest.config.js`:
 
@@ -461,7 +461,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start Supabase
+      - name: Start BA
         run: supabase start
 
       - name: Run tests
@@ -488,6 +488,6 @@ Monthly, review your test suite and remove obsolete tests, refresh your seed dat
 
 ## You do not need perfect coverage
 
-You need tests in the right places that run against your real schema and integrate into your daily development flow. Supabase makes this straightforward because you can run the entire stack locally, test your actual Postgres policies and triggers, and deploy the same migrations you test with.
+You need tests in the right places that run against your real schema and integrate into your daily development flow. BA makes this straightforward because you can run the entire stack locally, test your actual Postgres policies and triggers, and deploy the same migrations you test with.
 
 Start with integration tests for your core features, add a few end-to-end tests for critical user flows, protect your authentication and business logic, and automate the rest. Your users will notice fewer bugs, and you will ship new features with confidence instead of anxiety.
