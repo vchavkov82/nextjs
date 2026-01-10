@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
+import { createRequire } from 'module'
 import { withPayload } from '@payloadcms/next/withPayload'
 import { createRequire } from 'module'
 import path from 'path'
@@ -9,7 +10,25 @@ const webpack = require('webpack')
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
-const emptyModulePath = resolve(__dirname, 'empty-module.js')
+const requireModule = createRequire(import.meta.url)
+const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
+const payloadStubPath = resolve(__dirname, 'webpack-loaders/payload-stub.js')
+
+// Resolve problematic package paths at module load time (ESM compatible)
+let hoistNonReactStaticsPath
+let memoizeOnePath
+try {
+  hoistNonReactStaticsPath = requireModule.resolve('hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js')
+} catch (e) {
+  // Fallback if resolve fails
+  hoistNonReactStaticsPath = null
+}
+try {
+  memoizeOnePath = requireModule.resolve('memoize-one/dist/memoize-one.esm.js')
+} catch (e) {
+  // Fallback if resolve fails
+  memoizeOnePath = null
+}
 
 const redirects = async () => {
   const internetExplorerRedirect = {
@@ -59,6 +78,51 @@ const nextConfig = {
   // Also externalize thread-stream to avoid Turbopack trying to trace worker_threads
   serverExternalPackages: ['sharp', 'pino', 'thread-stream', '@esbuild/linux-x64', 'esbuild'],
   webpack: (config) => {
+    // Handle worker_threads (Node.js built-in module)
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      'worker_threads': false,
+    }
+    
+    // Configure webpack to properly resolve ESM exports from payload
+    // The functions exist but webpack might not be resolving them correctly
+    config.resolve.conditionNames = ['import', 'require', 'node', 'default']
+    
+    // Use 'exports' field but handle invalid exports gracefully
+    // This is needed for @payloadcms/next package exports like ./views, ./css, ./routes
+    config.resolve.exportsFields = ['exports', 'module', 'main']
+    
+    // Use NormalModuleReplacementPlugin to replace problematic imports
+    // These packages have invalid exports fields, so we bypass them by using direct file paths
+    if (hoistNonReactStaticsPath) {
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /^hoist-non-react-statics$/,
+          (resource) => {
+            // Check if this is from @emotion/react which has the export issue
+            if (resource.context && resource.context.includes('@emotion/react')) {
+              resource.request = hoistNonReactStaticsPath
+            }
+          }
+        )
+      )
+    }
+    
+    if (memoizeOnePath) {
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /^memoize-one$/,
+          (resource) => {
+            // Check if this is from react-select which has the export issue  
+            if (resource.context && resource.context.includes('react-select')) {
+              resource.request = memoizeOnePath
+            }
+          }
+        )
+      )
+    }
+    
+    
     // Replace test files with empty module to prevent bundling errors
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
