@@ -45,8 +45,11 @@ export async function ReferenceNavigation({
         <RefVersionDropdown library={libPath} currentVersion={version} />
       </div>
       <ul className="flex flex-col gap-2">
-        {displayedNavSections?.map((section) => (
-          <li key={section.id} className={cn(section.type !== 'category' && topLvlRefNavItemStyles)}>
+        {displayedNavSections?.map((section, index) => (
+          <li
+            key={section.id || `section-${index}`}
+            className={section.type !== 'category' ? topLvlRefNavItemStyles : undefined}
+          >
             {section.type === 'category' ? (
               <RefCategory basePath={basePath} section={section} />
             ) : (
@@ -69,7 +72,7 @@ function RefCategory({
   if (!('items' in section && section.items && section.items.length > 0)) return null
 
   return (
-    <>
+    <div className="flex flex-col">
       <Divider />
       {'title' in section && <SideMenuTitle className="py-2">{section.title}</SideMenuTitle>}
       <ul className="space-y-2">
@@ -79,7 +82,7 @@ function RefCategory({
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 

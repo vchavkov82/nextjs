@@ -447,6 +447,7 @@ async function FunctionSection({
   ]
     .filter(Boolean)
     .map(normalizeMarkdown)
+    .filter((text) => text && text.trim().length > 0)
     .join('\n\n')
 
   return (
@@ -463,9 +464,11 @@ async function FunctionSection({
       )}
 
       <div className="overflow-hidden flex flex-col gap-8">
-        <div className="prose break-words text-sm">
-          <MDXRemoteRefs source={fullDescription} />
-        </div>
+        {fullDescription && fullDescription.trim().length > 0 && (
+          <div className="prose break-words text-sm">
+            <MDXRemoteRefs source={fullDescription} />
+          </div>
+        )}
         <FnParameterDetails
           parameters={
             'overwriteParams' in fn
@@ -520,13 +523,14 @@ async function FunctionSection({
                   <div className="flex flex-col gap-2 mt-2">
                     {/* Only YAML examples have data/response/description fields */}
                     {'data' in example && !!example.data?.sql && (
-                      <CollapsibleDetails title="Data source" content={example.data.sql} />
+                      <CollapsibleDetails key="data-source" title="Data source" content={example.data.sql} />
                     )}
                     {'response' in example && !!example.response && (
-                      <CollapsibleDetails title="Response" content={example.response} />
+                      <CollapsibleDetails key="response" title="Response" content={example.response} />
                     )}
                     {'description' in example && !!example.description && (
                       <CollapsibleDetails
+                        key="notes"
                         title="Notes"
                         content={normalizeMarkdown(example.description)}
                       />

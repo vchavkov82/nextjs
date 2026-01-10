@@ -43,6 +43,11 @@ interface MDXRemoteRefsProps {
 }
 
 function MDXRemoteRefs({ source }: MDXRemoteRefsProps) {
+  // Validate source before passing to MDXRemoteBase
+  if (!source || typeof source !== 'string' || source.trim().length === 0) {
+    return null
+  }
+
   const refComponents = {
     ...components,
     // Override the CodeBlock used for normal guides to skip type generation

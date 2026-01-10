@@ -253,6 +253,16 @@ const ProjectLinks = () => {
   const { isEnabled: isUnifiedLogsEnabled } = useUnifiedLogsPreview()
 
   const activeRoute = router.pathname.split('/')[3]
+  // Track router readiness to avoid hydration mismatches with router.query
+  const [isRouterReady, setIsRouterReady] = useState(false)
+  const [hasQueryRef, setHasQueryRef] = useState(false)
+
+  useEffect(() => {
+    if (router.isReady) {
+      setIsRouterReady(true)
+      setHasQueryRef(!isUndefined(router.query.ref))
+    }
+  }, [router.isReady, router.query.ref])
 
   const {
     projectAuthAll: authEnabled,
@@ -287,7 +297,7 @@ const ProjectLinks = () => {
       <SidebarGroup className="gap-0.5">
         <SideBarNavLink
           key="home"
-          active={isUndefined(activeRoute) && !isUndefined(router.query.ref)}
+          active={isUndefined(activeRoute) && isRouterReady && hasQueryRef}
           route={{
             key: 'HOME',
             label: 'Project Overview',
@@ -397,8 +407,18 @@ const ProjectLinks = () => {
 const OrganizationLinks = () => {
   const router = useRouter()
   const { slug } = useParams()
+  // Track router readiness to avoid hydration mismatches with router.query
+  const [isRouterReady, setIsRouterReady] = useState(false)
+  const [queryOrgSlug, setQueryOrgSlug] = useState<string>('')
 
-  const organizationSlug: string = slug ?? (router.query.orgSlug as string) ?? ''
+  useEffect(() => {
+    if (router.isReady) {
+      setIsRouterReady(true)
+      setQueryOrgSlug((router.query.orgSlug as string) ?? '')
+    }
+  }, [router.isReady, router.query.orgSlug])
+
+  const organizationSlug: string = slug ?? (isRouterReady ? queryOrgSlug : '')
 
   const { data: org } = useSelectedOrganizationQuery()
   const isUserMFAEnabled = useIsMFAEnabled()

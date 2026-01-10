@@ -33,6 +33,26 @@ const withMDX = nextMdx({
   },
 })
 
+function getAssetPrefix() {
+  // If not force enabled, but not production env, disable CDN
+  if (process.env.FORCE_ASSET_CDN !== '1' && process.env.VERCEL_ENV !== 'production') {
+    return undefined
+  }
+
+  // Force disable CDN
+  if (process.env.FORCE_ASSET_CDN === '-1') {
+    return undefined
+  }
+
+  // @ts-ignore
+  const commitSha = process.env.VERCEL_GIT_COMMIT_SHA
+  if (!commitSha) {
+    return undefined
+  }
+
+  return `https://frontend-assets.www.assistance.bg/${process.env.SITE_NAME}/${commitSha.substring(0, 12)}`
+}
+
 /** @type {import('next').NextConfig} nextConfig */
 const nextConfig = {
   assetPrefix: getAssetPrefix(),
@@ -85,9 +105,24 @@ const nextConfig = {
       })
     )
 
+    // Helper function to check if a resource should be replaced (not the empty module itself)
+    // This prevents infinite loops where webpack tries to replace the empty module with itself
+    const shouldReplace = (request) => {
+      if (!request) return true
+      const normalizedRequest = request.replace(/\\/g, '/').toLowerCase()
+      const normalizedEmptyPath = emptyModulePath.replace(/\\/g, '/').toLowerCase()
+      // Don't replace if this is already the empty module path
+      return !normalizedRequest.includes('empty-module') && normalizedRequest !== normalizedEmptyPath
+    }
+
     // Replace any .node file requests with an empty module to prevent bundling errors
+    // Prevent replacing the empty module itself to avoid infinite loops
     config.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(/\.node$/, emptyModulePath)
+      new webpack.NormalModuleReplacementPlugin(/\.node$/, (resource) => {
+        if (shouldReplace(resource.request)) {
+          resource.request = emptyModulePath
+        }
+      })
     )
 
     // Exclude build scripts from bundling (they use Node.js-only modules like 'fs')
@@ -97,31 +132,40 @@ const nextConfig = {
     // Use NormalModuleReplacementPlugin to replace .cts files with empty module
     // This runs during module resolution and replaces .cts files before webpack tries to parse them
     // Updated regex to handle both forward and back slashes, and various path formats
+    // Prevent replacing the empty module itself to avoid infinite loops
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
         /\.cts(\.js)?$/,
         (resource) => {
-          resource.request = emptyModulePath
+          if (shouldReplace(resource.request)) {
+            resource.request = emptyModulePath
+          }
         }
       )
     )
     
     // More specific replacement for spec/sections directory
+    // Prevent replacing the empty module itself to avoid infinite loops
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
         /.*[\/\\]spec[\/\\]sections[\/\\].*\.cts(\.js)?$/,
         (resource) => {
-          resource.request = emptyModulePath
+          if (shouldReplace(resource.request)) {
+            resource.request = emptyModulePath
+          }
         }
       )
     )
     
     // Replace Makefile with empty module to prevent webpack from trying to parse it
+    // Prevent replacing the empty module itself to avoid infinite loops
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
         /.*[\/\\]spec[\/\\]Makefile$/,
         (resource) => {
-          resource.request = emptyModulePath
+          if (shouldReplace(resource.request)) {
+            resource.request = emptyModulePath
+          }
         }
       )
     )
@@ -436,18 +480,3 @@ const configExport = () => {
 }
 
 export default configExport()
-
-function getAssetPrefix() {
-  // If not force enabled, but not production env, disable CDN
-  if (process.env.FORCE_ASSET_CDN !== '1' && process.env.VERCEL_ENV !== 'production') {
-    return undefined
-  }
-
-  // Force disable CDN
-  if (process.env.FORCE_ASSET_CDN === '-1') {
-    return undefined
-  }
-
-  // @ts-ignore
-  return `https://frontend-assets.www.assistance.bg/${process.env.SITE_NAME}/${process.env.VERCEL_GIT_COMMIT_SHA.substring(0, 12)}`
-}

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 
 import { LOCAL_STORAGE_KEYS, useParams } from 'common'
 import { AppBannerWrapper } from 'components/interfaces/App/AppBannerWrapper'
@@ -38,7 +38,18 @@ export const DefaultLayout = ({
   const { ref } = useParams()
   const router = useRouter()
   const appSnap = useAppStateSnapshot()
-  const showProductMenu = !!ref && router.pathname !== '/project/[ref]'
+  // Track router readiness and pathname to avoid hydration mismatches
+  const [isRouterReady, setIsRouterReady] = useState(false)
+  const [pathname, setPathname] = useState('')
+
+  useEffect(() => {
+    if (router.isReady) {
+      setIsRouterReady(true)
+      setPathname(router.pathname)
+    }
+  }, [router.isReady, router.pathname])
+
+  const showProductMenu = !!ref && (isRouterReady ? pathname !== '/project/[ref]' : false)
 
   const [lastVisitedOrganization] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.LAST_VISITED_ORGANIZATION,
@@ -71,14 +82,14 @@ export const DefaultLayout = ({
                   showProductMenu={showProductMenu}
                   headerTitle={headerTitle}
                   backToDashboardURL={
-                    router.pathname.startsWith('/account') ? backToDashboardURL : undefined
+                    isRouterReady && pathname.startsWith('/account') ? backToDashboardURL : undefined
                   }
                 />
               </div>
               {/* Main Content Area */}
               <div className="flex flex-1 w-full overflow-y-hidden">
                 {/* Sidebar - Only show for project pages, not account pages */}
-                {!router.pathname.startsWith('/account') && <Sidebar />}
+                {(!isRouterReady || !pathname.startsWith('/account')) && <Sidebar />}
                 {/* Main Content with Layout Sidebar */}
                 <ResizablePanelGroup
                   direction="horizontal"

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 
 import { useParams } from 'common'
 import { Badge, Button, cn, NavMenu, NavMenuItem } from 'ui'
@@ -73,6 +73,16 @@ export const PageLayout = ({
 }: PageLayoutProps) => {
   const { ref } = useParams()
   const router = useRouter()
+  // Track router readiness to avoid hydration mismatches
+  const [isRouterReady, setIsRouterReady] = useState(false)
+  const [currentPath, setCurrentPath] = useState('')
+
+  useEffect(() => {
+    if (router.isReady) {
+      setIsRouterReady(true)
+      setCurrentPath(router.asPath.split('?')[0])
+    }
+  }, [router.isReady, router.asPath])
 
   return (
     <div className={cn('w-full min-h-full flex flex-col items-stretch', className)}>
@@ -104,7 +114,9 @@ export const PageLayout = ({
           <NavMenu className={cn(isCompact ? 'mt-2' : 'mt-4', size === 'full' && 'border-none')}>
             {navigationItems.map((item) => {
               const isActive =
-                item.active !== undefined ? item.active : router.asPath.split('?')[0] === item.href
+                item.active !== undefined
+                  ? item.active
+                  : isRouterReady && currentPath === item.href
               return (
                 <NavMenuItem key={item.label} active={isActive}>
                   {item.href ? (

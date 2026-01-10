@@ -1,11 +1,11 @@
-import { type ComponentPropsWithoutRef } from 'react'
+import { type ComponentProps } from 'react'
 import { Tabs as TabsClient, TabPanel as TabPanelClient } from './Tabs'
 
-const Tabs = (props: ComponentPropsWithoutRef<typeof TabsClient>) => {
+const Tabs = (props: ComponentProps<typeof TabsClient>) => {
   return <TabsClient {...props} />
 }
 
-const TabPanel = (props: ComponentPropsWithoutRef<typeof TabPanelClient>) => {
+const TabPanel = (props: ComponentProps<typeof TabPanelClient>) => {
   return <TabPanelClient {...props} />
 }
 

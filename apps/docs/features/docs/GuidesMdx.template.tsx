@@ -61,7 +61,11 @@ const GuideTemplate = async ({ meta, content, children, editLink, mdxOptions }: 
   const hideToc = meta?.hideToc || meta?.hide_table_of_contents
 
   // Await MDX content since MDXRemoteBase is an async Server Component
-  const mdxContent = content ? await MDXRemoteBase({ source: content }) : null
+  // Check if content exists and is not empty (not just truthy check)
+  const mdxContent =
+    content && typeof content === 'string' && content.trim().length > 0
+      ? await MDXRemoteBase({ source: content })
+      : null
 
   // Render MDX content as a Server Component before passing to Client Component wrapper
   const articleContent = (

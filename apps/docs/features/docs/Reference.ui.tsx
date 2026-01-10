@@ -231,7 +231,7 @@ function ParamOrTypeDetails({ paramOrType }: { paramOrType: object }) {
         )}
         <span className="text-xs text-foreground-muted">{getTypeName(paramOrType)}</span>
       </div>
-      {description && (
+      {description && typeof description === 'string' && description.trim().length > 0 && (
         <div className="prose text-sm">
           <MDXRemoteBase source={description} customPreprocess={normalizeMarkdown} />
         </div>

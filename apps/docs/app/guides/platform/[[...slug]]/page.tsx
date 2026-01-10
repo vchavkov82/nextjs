@@ -19,8 +19,8 @@ const PlatformGuidePage = async (props: { params: Promise<Params> }) => {
     notFound()
   }
 
-  const { pathname, ...guideProps } = data
-  return <GuideTemplate {...guideProps} />
+  const { pathname, meta, content, editLink } = data
+  return <GuideTemplate meta={meta} content={content} editLink={editLink} />
 }
 
 const generateStaticParams = IS_PROD ? genGuidesStaticParams('platform') : getEmptyArray

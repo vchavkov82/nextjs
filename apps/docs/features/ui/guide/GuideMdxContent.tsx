@@ -7,5 +7,9 @@ interface GuideArticleProps {
 }
 
 export function GuideMdxContent({ content, mdxOptions }: GuideArticleProps) {
-  return content ? <MDXRemoteBase source={content} /> : null
+  // Check if content exists and is not empty (not just truthy check)
+  if (!content || typeof content !== 'string' || content.trim().length === 0) {
+    return null
+  }
+  return <MDXRemoteBase source={content} />
 }

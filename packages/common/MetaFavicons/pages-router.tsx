@@ -2,6 +2,7 @@
 
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 export const DEFAULT_FAVICON_THEME_COLOR = '1E1E1E'
 export const DEFAULT_FAVICON_ROUTE = '/favicon'
@@ -26,7 +27,17 @@ const MetaFaviconsPagesRouter = ({
   // include browserconfig.xml
   includeMsApplicationConfig?: boolean
 }) => {
-  const { basePath } = useRouter()
+  const router = useRouter()
+  // Initialize with empty string to ensure server and client render match initially
+  // This prevents hydration mismatches if router.basePath differs between server and client
+  // We'll update it after mount to the correct value
+  const [basePath, setBasePath] = useState('')
+
+  // Update basePath after mount to ensure it's correct on client
+  // This runs after hydration, so it won't cause hydration mismatches
+  useEffect(() => {
+    setBasePath(router.basePath ?? '')
+  }, [router.basePath])
 
   return (
     <Head>
