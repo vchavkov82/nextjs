@@ -5,7 +5,8 @@ import {
   GraphQLString,
   printSchema,
 } from 'graphql'
-import { RootQueryTypeResolvers } from '~/__generated__/graphql'
+// import { RootQueryTypeResolvers } from '../__generated__/graphql'
+type RootQueryTypeResolvers = Record<string, any>
 import { errorRoot, errorsRoot } from './error/errorResolver'
 import { searchRoot } from './globalSearch/globalSearchResolver'
 import { GraphQLObjectTypeGuide } from './guide/guideSchema'

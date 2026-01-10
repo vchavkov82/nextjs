@@ -58,9 +58,14 @@ const nextConfig = {
   assetPrefix: getAssetPrefix(),
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  // reactStrictMode: true,
-  // swcMinify: true,
+  reactStrictMode: true,
+  // swcMinify is now default in Next.js 16+
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '/docs',
+  // Performance optimizations
+  productionBrowserSourceMaps: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
   images: {
     dangerouslyAllowSVG: false,
     // @ts-ignore
@@ -283,9 +288,29 @@ const nextConfig = {
   allowedDevOrigins: ['suse-10.lan.assistance.bg'],
   experimental: {
     // Optimize for high-core systems
-    optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-collapsible'],
+    optimizePackageImports: [
+      'ui',
+      'ui-patterns',
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-collapsible',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-tooltip',
+      'react-use',
+      'lodash',
+    ],
     // Enable faster refresh
     optimizeCss: true,
+    // Use worker threads for better performance
+    webpackBuildWorker: true,
+    // Enable parallel processing
+    parallelServerBuildTraces: true,
+    parallelServerCompiles: true,
+    // Use lighter CSS bundling
+    optimizeServerReact: true,
+    // optimizeFonts is not available in Next.js 16 - removed
   },
   // Turbopack configuration - handles file types that webpack config above handles
   // Note: @next/mdx handles .md/.mdx files for pages, but we need to handle non-page markdown imports

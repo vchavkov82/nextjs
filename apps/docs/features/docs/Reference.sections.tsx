@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, cache } from 'react'
 import ReactMarkdown from 'react-markdown'
 import {
   Badge,
@@ -20,6 +20,14 @@ import {
   getSelfHostedApiEndpointById,
   getTypeSpec,
 } from '~/features/docs/Reference.generated.singleton'
+
+// Cache expensive data fetching operations
+const cachedGetFlattenedSections = cache(getFlattenedSections)
+const cachedGetFunctionsList = cache(getFunctionsList)
+const cachedGetTypeSpec = cache(getTypeSpec)
+const cachedGetCliSpec = cache(getCliSpec)
+const cachedGetApiEndpointById = cache(getApiEndpointById)
+const cachedGetSelfHostedApiEndpointById = cache(getSelfHostedApiEndpointById)
 import { getRefMarkdown, MDXRemoteRefs } from '~/features/docs/Reference.mdx'
 import type { MethodTypes } from '~/features/docs/Reference.typeSpec'
 import { formatMethodSignature } from '~/features/docs/Reference.typeSpec'
@@ -45,7 +53,7 @@ type RefSectionsProps = {
 }
 
 async function RefSections({ libraryId, version }: RefSectionsProps) {
-  let flattenedSections = await getFlattenedSections(libraryId, version)
+  let flattenedSections = await cachedGetFlattenedSections(libraryId, version)
   if (flattenedSections) {
     flattenedSections = trimIntro(flattenedSections)
   }
@@ -137,6 +145,8 @@ interface MarkdownSectionProps {
   section: AbbrevApiReferenceSection
 }
 
+const cachedGetRefMarkdown = cache(getRefMarkdown)
+
 async function MarkdownSection({
   libPath,
   version,
@@ -144,7 +154,7 @@ async function MarkdownSection({
   link,
   section,
 }: MarkdownSectionProps) {
-  const content = await getRefMarkdown(
+  const content = await cachedGetRefMarkdown(
     section.meta?.shared
       ? `shared/${section.id}`
       : `${libPath}/${isLatestVersion ? '' : `${version}/`}${section.id}`
@@ -203,7 +213,7 @@ function CliExamples({ examples }: { examples: CliExampleType[] }) {
 }
 
 async function CliCommandSection({ link, section }: CliCommandSectionProps) {
-  const cliSpec = await getCliSpec()
+  const cliSpec = await cachedGetCliSpec()
   const command = ((cliSpec as any).commands ?? []).find((cmd) => cmd.id === section.id)
 
   if (!command) return null
@@ -294,8 +304,8 @@ interface ApiEndpointSectionProps {
 
 async function ApiEndpointSection({ link, section, servicePath }: ApiEndpointSectionProps) {
   const endpointDetails = servicePath
-    ? await getSelfHostedApiEndpointById(servicePath, section.id)
-    : await getApiEndpointById(section.id)
+    ? await cachedGetSelfHostedApiEndpointById(servicePath, section.id)
+    : await cachedGetApiEndpointById(section.id)
   if (!endpointDetails) return null
 
   const pathParameters = (endpointDetails.parameters ?? []).filter((param) => param.in === 'path')
@@ -444,14 +454,14 @@ async function FunctionSection({
   section,
   useTypeSpec,
 }: FunctionSectionProps) {
-  const fns = await getFunctionsList(sdkId, version)
+  const fns = await cachedGetFunctionsList(sdkId, version)
 
   const fn = fns?.find((fn) => fn.id === section.id)
   if (!fn) return null
 
   let types: MethodTypes | undefined
   if (useTypeSpec && '$ref' in fn) {
-    types = await getTypeSpec(fn['$ref'] as string)
+    types = await cachedGetTypeSpec(fn['$ref'] as string)
   }
 
   const fullDescription = [

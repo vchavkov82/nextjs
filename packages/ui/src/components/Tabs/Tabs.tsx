@@ -48,9 +48,9 @@ const TabsListWithRef = forwardRef<
   }
 >((props, ref) => {
   // Filter out 'class' prop to avoid React DOM warnings (should use 'className' instead)
-  const { className, class: _class, ...restProps } = props
+  const { className, class: classProp, ...restProps } = props
   return (
-    <TabsPrimitive.List ref={ref} className={className} {...restProps} />
+    <TabsPrimitive.List ref={ref} className={className || classProp} {...restProps} />
   )
 })
 TabsListWithRef.displayName = TabsPrimitive.List.displayName || 'TabsListWithRef'

@@ -22,7 +22,7 @@ import selfHostingStorageCommonSections from '~/spec/common-self-hosting-storage
 import storageSpec from '~/spec/storage_v0_openapi.json' with { type: 'json' }
 import analyticsSpec from '~/spec/transforms/analytics_v0_openapi_deparsed.json' with { type: 'json' }
 import openApiSpec from '~/spec/transforms/api_v1_openapi_deparsed.json' with { type: 'json' }
-import { IApiEndPoint } from './Reference.api.utils'
+import type { IApiEndPoint } from './Reference.api.utils.js'
 
 const DOCS_DIRECTORY = join(dirname(fileURLToPath(import.meta.url)), '../..')
 const SPEC_DIRECTORY = join(DOCS_DIRECTORY, 'spec')

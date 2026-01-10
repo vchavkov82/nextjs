@@ -5,7 +5,9 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": ["dist/**", ".next/**"],
+      "persistent": true,
+      "cache": true
     },
     "cms#build": {
       "dependsOn": ["^build"],
@@ -246,14 +248,20 @@
       "cache": false
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "test": {
       "cache": false
     },
     "typecheck": {
       "dependsOn": ["^typecheck"],
-      "outputs": []
+      "outputs": [],
+      "cache": true
     }
-  }
+  },
+  "remoteCache": {
+    "enabled": true
+  },
+  "cacheDir": ".turbo"
 }

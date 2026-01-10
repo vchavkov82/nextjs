@@ -6,6 +6,11 @@ const config: CodegenConfig = {
   generates: {
     '__generated__/graphql.ts': {
       plugins: ['typescript', 'typescript-resolvers'],
+      config: {
+        useTypeImports: true,
+        enumsAsTypes: true,
+        avoidOptionals: false,
+      },
     },
   },
 }
