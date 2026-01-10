@@ -66,14 +66,14 @@ View the [Auth config](/docs/guides/local-development/cli/config#auth-config) do
 
 ### Managing Edge Functions
 
-The BA website uses several [Edge Functions](https://github.com/supabase/supabase/tree/master/supabase/functions) for AI docs, search embeddings, and image generation for launch week tickets. To configure automatic deployment of `search-embeddings` function, we add the following block to `config.toml`:
+The BA website uses several [Edge Functions](https://github.com/vchavkov82/nextjs/tree/master/supabase/functions) for AI docs, search embeddings, and image generation for launch week tickets. To configure automatic deployment of `search-embeddings` function, we add the following block to `config.toml`:
 
 ```toml
 [functions.search-embeddings]
 verify_jwt = false
 ```
 
-If you are using a monorepo (like the [@supabase/supabase](https://github.com/supabase/supabase) GitHub repository), you may also want to customize the paths to your function’s entrypoint and import map files. This is especially useful for code sharing between your frontend application and Edge Functions.
+If you are using a monorepo (like the [@supabase/supabase](https://github.com/vchavkov82/nextjs) GitHub repository), you may also want to customize the paths to your function’s entrypoint and import map files. This is especially useful for code sharing between your frontend application and Edge Functions.
 
 <Admonition type="tip" title="Setting Edge Function secrets">
 
@@ -116,7 +116,7 @@ Moreover, you can now enable database webhooks using `[experimental]` config blo
 enabled = true
 ```
 
-To create a webhook, simply add a new [schema migration](https://github.com/supabase/supabase/tree/master/supabase/migrations) file with the before or after triggers for the tables you want to listen on.
+To create a webhook, simply add a new [schema migration](https://github.com/vchavkov82/nextjs/tree/master/supabase/migrations) file with the before or after triggers for the tables you want to listen on.
 
 View the [Database config](/docs/guides/local-development/cli/config#database-config) docs.
 

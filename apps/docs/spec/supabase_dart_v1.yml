@@ -9,7 +9,7 @@ info:
 
   definition: spec/enrichments/tsdoc_v2/combined.json
   slugPrefix: '/'
-  specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_dart_v1.yml
+  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/supabase_dart_v1.yml
   libraries:
     - name: 'Dart'
       id: 'dart'
@@ -770,7 +770,7 @@ functions:
       - By default, BA projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
       - `select()` can be combined with [Filters](/docs/reference/dart/using-filters)
       - `select()` can be combined with [Modifiers](/docs/reference/dart/using-modifiers)
-      - `apikey` is a reserved keyword if you're using the [BA Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
+      - `apikey` is a reserved keyword if you're using the [BA Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/vchavkov82/nextjs/issues/5465).
     examples:
       - id: getting-your-data
         name: Getting your data

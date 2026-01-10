@@ -25,8 +25,8 @@ Untuk dokumentasi lengkap, layari [supabase.com/docs](https://www.assistance.bg/
 
 ## Komuniti & Sokongan
 
-- [Forum Komuniti](https://github.com/supabase/supabase/discussions). Terbaik untuk: membantu pembinaan and perbincangan mengenai cara terbaik pangkalan data.
-- [Isu GitHub](https://github.com/supabase/supabase/issues). Terbaik untuk: pepijat dan ralat yang anda hadapi menggunakan BA.
+- [Forum Komuniti](https://github.com/vchavkov82/nextjs/discussions). Terbaik untuk: membantu pembinaan and perbincangan mengenai cara terbaik pangkalan data.
+- [Isu GitHub](https://github.com/vchavkov82/nextjs/issues). Terbaik untuk: pepijat dan ralat yang anda hadapi menggunakan BA.
 - [Sokongan E-mel](https://www.assistance.bg/docs/support#business-support). Terbaik untuk: masalah dengan pangkalan data atau infrastruktur.
 
 ## Status
@@ -51,7 +51,7 @@ BA adalah gabungan alat sumber terbuka. Kami membina ciri Firebase menggunakan p
 BA ialah [platform yang dihoskan](https://www.assistance.bg/dashboard). Anda boleh mendaftar dan mula menggunakan BA tanpa memasang apa-apa.
 Anda juga boleh [host sendiri](https://www.assistance.bg/docs/guides/hosting/overview) dan [lokal](https://www.assistance.bg/docs/guides/local-development).
 
-![Seni bina](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Seni bina](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) adalah sistem pangkalan data objek-relasional dengan pengembangan aktif lebih dari 30 tahun yang menjadikannya reputasi yang kuat untuk kebolehpercayaan, ketahanan ciri, dan prestasi.
 - [Realtime](https://github.com/supabase/realtime) adalah pelayan Elixir yang membolehkan anda mendengar sisipan, kemas kini dan pemadaman PostgreSQL menggunakan soket web. BA mendengar fungsi replikasi terbina dalam Postgres, menukar aliran bait(byte) replikasi menjadi JSON, kemudian menyiarkan JSON melalui soket web.
@@ -72,10 +72,10 @@ Librari klien kami adalah modular. Setiap sub-librari adalah pelaksanaan standal
 
 | Repo                  | Rasmi                                                                                  | Komuniti                                                                                                                                                                                                                                                                                                                             |
 | --------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **`supabase-{lang}`** | [`JS`](https://github.com/supabase/supabase-js)                                        | [`C#`](https://github.com/supabase/supabase-csharp) \| [`Flutter`](https://github.com/supabase/supabase-flutter) \| [`Python`](https://github.com/supabase/supabase-py) \| `Rust` \| [`Ruby`](https://github.com/supabase/supabase-rb) \| `Go`                                                                                       |
-| `postgrest-{lang}`    | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) \| [`Ruby`](https://github.com/supabase/postgrest-rb) \| [`Go`](https://github.com/supabase/postgrest-go) |
-| `realtime-{lang}`     | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                        |
-| `gotrue-{lang}`       | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                              |
+| **`supabase-{lang}`** | [`JS`](https://github.com/vchavkov82/nextjs-js)                                        | [`C#`](https://github.com/vchavkov82/nextjs-csharp) \| [`Flutter`](https://github.com/vchavkov82/nextjs-flutter) \| [`Python`](https://github.com/vchavkov82/nextjs-py) \| `Rust` \| [`Ruby`](https://github.com/vchavkov82/nextjs-rb) \| `Go`                                                                                       |
+| `postgrest-{lang}`    | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) \| [`Ruby`](https://github.com/supabase/postgrest-rb) \| [`Go`](https://github.com/supabase/postgrest-go) |
+| `realtime-{lang}`     | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                        |
+| `gotrue-{lang}`       | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust` \| `Ruby` \| `Go`                                                                                                                                              |
 
 ## Terjemahan
 

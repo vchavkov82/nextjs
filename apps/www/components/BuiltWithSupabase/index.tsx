@@ -26,7 +26,7 @@ const BuiltWithSupabase = () => {
               icon={<IconGitHubSolid size="tiny" className="!w-full !h-full" />}
               size="small"
             >
-              <Link href="https://github.com/supabase/supabase/tree/master/examples">
+              <Link href="https://github.com/vchavkov82/nextjs/tree/master/examples">
                 Official GitHub library
               </Link>
             </Button>

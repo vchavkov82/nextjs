@@ -8512,7 +8512,7 @@
             "isConst": true
           },
           "comment": {
-            "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/supabase/supabase/issues/18",
+            "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/vchavkov82/nextjs/issues/18",
             "tags": [
               {
                 "tag": "example",
@@ -8530,7 +8530,7 @@
                 "isExported": true
               },
               "comment": {
-                "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/supabase/supabase/issues/18",
+                "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/vchavkov82/nextjs/issues/18",
                 "tags": [
                   {
                     "tag": "example",

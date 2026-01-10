@@ -1687,7 +1687,7 @@ export const reference_javascript_v1 = {
   parent: '/reference',
   pkg: {
     name: '@supabase/supabase-js',
-    repo: 'https://github.com/supabase/supabase-js',
+    repo: 'https://github.com/vchavkov82/nextjs-js',
   },
 }
 
@@ -1698,7 +1698,7 @@ export const reference_javascript_v2 = {
   parent: '/reference',
   pkg: {
     name: '@supabase/supabase-js',
-    repo: 'https://github.com/supabase/supabase-js',
+    repo: 'https://github.com/vchavkov82/nextjs-js',
   },
 }
 
@@ -1710,7 +1710,7 @@ export const reference_dart_v1 = {
   parent: '/reference',
   pkg: {
     name: 'supabase_flutter',
-    repo: 'https://github.com/supabase/supabase-flutter',
+    repo: 'https://github.com/vchavkov82/nextjs-flutter',
   },
 }
 
@@ -1721,7 +1721,7 @@ export const reference_dart_v2 = {
   parent: '/reference',
   pkg: {
     name: 'supabase_flutter',
-    repo: 'https://github.com/supabase/supabase-flutter',
+    repo: 'https://github.com/vchavkov82/nextjs-flutter',
   },
 }
 
@@ -1754,7 +1754,7 @@ export const reference_python_v2 = {
   parent: '/reference',
   pkg: {
     name: 'supabase-py',
-    repo: 'https://github.com/supabase/supabase-py',
+    repo: 'https://github.com/vchavkov82/nextjs-py',
   },
 }
 
@@ -1765,7 +1765,7 @@ export const reference_swift_v1 = {
   parent: '/reference',
   pkg: {
     name: 'supabase-swift',
-    repo: 'https://github.com/supabase/supabase-swift',
+    repo: 'https://github.com/vchavkov82/nextjs-swift',
   },
 }
 
@@ -1776,7 +1776,7 @@ export const reference_swift_v2 = {
   parent: '/reference',
   pkg: {
     name: 'supabase-swift',
-    repo: 'https://github.com/supabase/supabase-swift',
+    repo: 'https://github.com/vchavkov82/nextjs-swift',
   },
 }
 

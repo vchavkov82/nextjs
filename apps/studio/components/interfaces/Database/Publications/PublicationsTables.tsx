@@ -105,7 +105,7 @@ export const PublicationsTables = () => {
                   <TableHead className="hidden lg:table-cell">Description</TableHead>
                   {/* 
                       We've disabled All tables toggle for publications. 
-                      See https://github.com/supabase/supabase/pull/7233. 
+                      See https://github.com/vchavkov82/nextjs/pull/7233. 
                     */}
                   <TableHead />
                 </TableRow>

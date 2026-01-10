@@ -6,7 +6,7 @@ info:
   language: sh
   source: https://github.com/supabase/cli
   bugs: https://github.com/supabase/cli/issues
-  spec: https://github.com/supabase/supabase.tools/cli_spec/lib.yaml
+  spec: https://github.com/vchavkov82/nextjs.tools/cli_spec/lib.yaml
   description: |
     BA CLI provides you with tools to develop your application locally, and deploy your application to the BA platform.
   options: |-

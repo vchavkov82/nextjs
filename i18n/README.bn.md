@@ -31,8 +31,8 @@
 
 ## কমিউনিটি ও সাপোর্ট
 
-- [কমিউনিটি ফোরাম](https://github.com/supabase/supabase/discussions)। সর্বোত্তম: তৈরি করতে সহায়তা, ডাটাবেস সেরা অনুশীলন সম্পর্কে আলোচনা।
-- [গিটহাব ইস্যু](https://github.com/supabase/supabase/issues)। সর্বোত্তম: সুপাবেস ব্যবহার করতে আপনি যে বাগ এবং ত্রুটির সম্মুখীন হন।
+- [কমিউনিটি ফোরাম](https://github.com/vchavkov82/nextjs/discussions)। সর্বোত্তম: তৈরি করতে সহায়তা, ডাটাবেস সেরা অনুশীলন সম্পর্কে আলোচনা।
+- [গিটহাব ইস্যু](https://github.com/vchavkov82/nextjs/issues)। সর্বোত্তম: সুপাবেস ব্যবহার করতে আপনি যে বাগ এবং ত্রুটির সম্মুখীন হন।
 - [ইমেইল সাপোর্ট](https://www.assistance.bg/docs/support#business-support)। সর্বোত্তম: আপনার ডাটাবেস বা অবকাঠামো নিয়ে সমস্যা।
 - [ডিসকোর্ড](https://discord.supabase.com)। সর্বোত্তম: আপনার অ্যাপ্লিকেশনগুলি শেয়ার করা এবং কমিউনিটির সাথে দেখা সাক্ষাৎ করা৷
 
@@ -58,7 +58,7 @@ BA হল ওপেন সোর্স টুলের সংমিশ্রণ�
 সুপাবেস হল একটি [হোস্ট করা প্ল্যাটফর্ম](https://www.assistance.bg/dashboard)। আপনি সাইন আপ করে এবং কিছু ইনস্টল না করে সুপাবেস ব্যবহার শুরু করতে পারেন।
 এছাড়াও আপনি [স্ব-হোস্ট](https://www.assistance.bg/docs/guides/hosting/overview) এবং [ডেভেলপ লোকালি](https://www.assistance.bg/docs/guides/local-development) করতে পারেন।
 
-![আর্কিটেকচার](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![আর্কিটেকচার](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) হল একটি অবজেক্ট-রিলেশনাল ডাটাবেস সিস্টেম যার 30 বছরের বেশি সক্রিয় বিকাশ রয়েছে যা এটিকে নির্ভরযোগ্যতা, বৈশিষ্ট্যের দৃঢ়তা এবং কর্মক্ষমতার জন্য একটি শক্তিশালী খ্যাতি অর্জন করেছে।
 - [রিয়েলটাইম](https://github.com/supabase/realtime) হল একটি Elixir সার্ভার যা আপনাকে ওয়েবসকেট ব্যবহার করে PostgreSQL সন্নিবেশ, আপডেট এবং মুছে ফেলা শুনতে দেয়। ডাটাবেস পরিবর্তনের জন্য রিয়েলটাইম পোল পোস্টগ্রেসের অন্তর্নির্মিত প্রতিলিপি কার্যকারিতা, পরিবর্তনগুলিকে JSON-এ রূপান্তরিত করে, তারপর অনুমোদিত ক্লায়েন্টদের কাছে ওয়েবসকেটের মাধ্যমে JSON সম্প্রচার করে।
@@ -100,11 +100,11 @@ BA হল ওপেন সোর্স টুলের সংমিশ্রণ�
   <th colspan="6">⚡️ অফিসিয়াল ⚡️</th>
   <tr>
     <td>জাভাস্ক্রিপ্ট (টাইপস্ক্রিপ্ট)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">সুপাবেস-জেএস</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">গোট্রু-জেএস</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">রিয়েলটাইম-জেএস</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">স্টোরেজ-জেএস</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">সুপাবেস-জেএস</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">গোট্রু-জেএস</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">রিয়েলটাইম-জেএস</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">স্টোরেজ-জেএস</a></td>
   </tr>
   <th colspan="6">💚 সম্প্রদায় 💚</th>
   <tr>
@@ -117,7 +117,7 @@ BA হল ওপেন সোর্স টুলের সংমিশ্রণ�
   </tr>
   <tr>
     <td>ডার্ট (ফ্লাটার)</td>
-    <td><a href="https://github.com/supabase/supabase-Flutter" target="_blank" rel="noopener noreferrer">সুপাবেস-ডার্ট</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-Flutter" target="_blank" rel="noopener noreferrer">সুপাবেস-ডার্ট</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-ডার্ট</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">গোট্রু-ডার্ট</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">রিয়েলটাইম-ডার্ট</a></td>

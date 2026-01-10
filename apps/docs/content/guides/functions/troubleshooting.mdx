@@ -98,7 +98,7 @@ The 546 error typically indicates resource exhaustion or code issues:
 - **Memory or CPU Limits:** Your function may have exceeded available resources. Check the resource usage metrics in your dashboard.
 - **Event Loop Completion:** If logs show "Event loop completed," your function has implementation issues. You should check your function code for any syntax errors, infinite loops, or unresolved promises that might cause this error.
 
-  You can also try running the function locally (using BA CLI **`functions serve`**) to see if you can debug the error. The local console should give a full stack trace on the error with line numbers of the source code. You can also refer to [Edge Functions examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions) for guidance.
+  You can also try running the function locally (using BA CLI **`functions serve`**) to see if you can debug the error. The local console should give a full stack trace on the error with line numbers of the source code. You can also refer to [Edge Functions examples](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions) for guidance.
 
 Run the function locally with `supabase functions serve` to get detailed stack traces.
 

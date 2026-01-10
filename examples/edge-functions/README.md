@@ -106,4 +106,4 @@ verify_jwt = false
 
 \o/ That's it, you can now invoke your BA Function via the [`supabase-js`](https://www.assistance.bg/docs/reference/javascript/invoke) and [`supabase-dart`](https://www.assistance.bg/docs/reference/dart/invoke) client libraries. (More client libraries coming soon. Check the [supabase-community](https://github.com/supabase-community#client-libraries) org for details).
 
-For more info on BA Functions, check out the [docs](https://www.assistance.bg/docs/guides/functions) and the [examples](https://github.com/supabase/supabase/tree/master/examples/edge-functions).
+For more info on BA Functions, check out the [docs](https://www.assistance.bg/docs/guides/functions) and the [examples](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions).

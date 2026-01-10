@@ -20,7 +20,7 @@ video: https://www.youtube.com/v/5OWH9c4u68M
 
 </div>
 
-Today we're launching one of our [most](https://twitter.com/lau_cazanove/status/1506530181946691592) [requested](https://twitter.com/edgarasben/status/1506653203458363393) and [highly-](https://twitter.com/runjep/status/1507462077216088069)[anticipated](https://twitter.com/marcopolotwo/status/1506431782362632195) [features](https://github.com/supabase/supabase/discussions/4269) — Edge Functions. Edge Functions let you execute Typescript code close to your users, no matter where they're located.
+Today we're launching one of our [most](https://twitter.com/lau_cazanove/status/1506530181946691592) [requested](https://twitter.com/edgarasben/status/1506653203458363393) and [highly-](https://twitter.com/runjep/status/1507462077216088069)[anticipated](https://twitter.com/marcopolotwo/status/1506431782362632195) [features](https://github.com/vchavkov82/nextjs/discussions/4269) — Edge Functions. Edge Functions let you execute Typescript code close to your users, no matter where they're located.
 
 Edge Functions are executed on the secure-by-default [Deno runtime](https://deno.land/), and deployed around the world in seconds using Deno's [hosted Deno Deploy offering](https://deno.com/deploy). However, as a user of BA Edge Functions, you don't need to know or worry about any of that; we handle all the gnarly details, delivering a seamless experience that allows you to focus on your business logic.
 
@@ -108,7 +108,7 @@ Our observability pipeline has been built [using Logflare](https://www.assistanc
 ![new —> deploy —> invoke —> logs](/images/blog/launch-week-4/thursday-functions/functions-new-deploy-invoke-logs.gif)
 new —> deploy —> invoke —> logs
 
-To round off the end-to-end experience, `supabase-js` now works in Deno, making it easy to interact with the rest of your BA project from within your Edge Functions. Your project's URLs, API keys, and database connection strings are made available as environment variables within your Function to make this even easier. And if you want to interact with third-party APIs which require a secret key, such as Stripe, you can easily and securely make these available to your Function as environment variables via the BA CLI. To get an idea for what is possible, check out our examples page [here](https://github.com/supabase/supabase/tree/master/examples/edge-functions).
+To round off the end-to-end experience, `supabase-js` now works in Deno, making it easy to interact with the rest of your BA project from within your Edge Functions. Your project's URLs, API keys, and database connection strings are made available as environment variables within your Function to make this even easier. And if you want to interact with third-party APIs which require a secret key, such as Stripe, you can easily and securely make these available to your Function as environment variables via the BA CLI. To get an idea for what is possible, check out our examples page [here](https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions).
 
 ## Quickstart
 
@@ -127,7 +127,7 @@ Check the [Edge Functions Docs](https://www.assistance.bg/docs/guides/functions)
 
 ## Example apps: Mobile payments with React Native and Flutter
 
-When researching use-cases with all of you, [processing payments](https://github.com/supabase/supabase/discussions/4269#discussioncomment-1748067) was being pointed out the most, so naturally, to support the launch, we've created example apps in collaboration with Stripe for [React Native](https://github.com/supabase-community/expo-stripe-payments-with-supabase-functions) and [Flutter](https://github.com/supabase-community/flutter-stripe-payments-with-supabase-functions), to allow you to get started and earn money even faster.
+When researching use-cases with all of you, [processing payments](https://github.com/vchavkov82/nextjs/discussions/4269#discussioncomment-1748067) was being pointed out the most, so naturally, to support the launch, we've created example apps in collaboration with Stripe for [React Native](https://github.com/supabase-community/expo-stripe-payments-with-supabase-functions) and [Flutter](https://github.com/supabase-community/flutter-stripe-payments-with-supabase-functions), to allow you to get started and earn money even faster.
 
 ![functions-payment-example](/images/blog/launch-week-4/thursday-functions/functions-payment.gif)
 
@@ -135,7 +135,7 @@ When researching use-cases with all of you, [processing payments](https://github
 
 Even though Deno supports [rendering `jsx` and `tsx` files](https://deno.land/manual/jsx_dom/jsx), we don't plan on becoming a website hosting provider with Edge Functions. For now, Edge Functions can only be invoked via the `POST` method. Offering secure and fast web hosting with a good developer experience is a hard problem to solve and there are [other](https://www.netlify.com/) [fantastic](https://vercel.com/) [providers](https://pages.cloudflare.com/) which do exactly that.
 
-From our experience launching BA Storage last year, becoming a hosting provider is not something you want to take lightly. Malicious folks will upload their phishing sites whenever they get a chance and this can quickly spiral out of control, causing you to land on the denylist in the [Safe Browsing dataset](https://safebrowsing.google.com/). Even though we removed the project within minutes after being notified, various ISPs had already cached the information from the Safe browsing dataset and were “helping” their users by restricting access to the BA domain. This isn't something we're planning to repeat. But as always, we'd love to hear your use cases and feature requests, we're just one [GitHub discussion](https://github.com/supabase/supabase/discussions) away!
+From our experience launching BA Storage last year, becoming a hosting provider is not something you want to take lightly. Malicious folks will upload their phishing sites whenever they get a chance and this can quickly spiral out of control, causing you to land on the denylist in the [Safe Browsing dataset](https://safebrowsing.google.com/). Even though we removed the project within minutes after being notified, various ISPs had already cached the information from the Safe browsing dataset and were “helping” their users by restricting access to the BA domain. This isn't something we're planning to repeat. But as always, we'd love to hear your use cases and feature requests, we're just one [GitHub discussion](https://github.com/vchavkov82/nextjs/discussions) away!
 
 ## Roadmap
 

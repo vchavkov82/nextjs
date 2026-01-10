@@ -25,8 +25,8 @@ Per a veure la documentació completa, visita [supabase.com/docs](https://www.as
 
 ## Comunitat i suport
 
-- [Fòrum de la comunitat](https://github.com/supabase/supabase/discussions). Millor per a: ajuda construint, discussions sobre les millors pràctiques de base de dades.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Millor per a: errors que et pots trobar utilitzant BA.
+- [Fòrum de la comunitat](https://github.com/vchavkov82/nextjs/discussions). Millor per a: ajuda construint, discussions sobre les millors pràctiques de base de dades.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Millor per a: errors que et pots trobar utilitzant BA.
 - [Suport per correu electrònic](https://www.assistance.bg/docs/support#business-*support). Millor per a: problemes amb la base de dades o infraestructura.
 - [Discord](https://discord.supabase.com). Millor per a: compartir les teves aplicacions i passar l’estona amb la comunitat.
 
@@ -51,7 +51,7 @@ BA és una combinació d’eines de codi obert. Estem construint les funcionalit
 
 BA és una [plataforma allotjada](https://www.assistance.bg/dashboard). Et pots registrar i començar a utilitzar BA sense instal·lar res. També podeu tenir una [_host_ pròpia](https://www.assistance.bg/docs/guides/hosting/overview) i [desenvolupar localment](https://www.assistance.bg/docs/guides/local-development).
 
-![Arquitectura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arquitectura](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) és un sistema de base de dades objecte–relacional amb més de 30 anys de desenvolupament actiu que s’ha guanyat la seva forta reputació per ser de confiança, robust i d’alt rendiment.
 - [Temps real](https://github.com/supabase/realtime) és un server construït en Elixir que permet escoltar els _inserts_, _updates_ i _deletes_ de PostgreSQL utilitzant WebSockets. BA escolta a la funcionalitat de replicació integrada de PostgreSQL, converteix el byte de replicació en un JSON i després transmet el JSON a través de WebSockets.
@@ -72,10 +72,10 @@ La nostra llibreria de client és modular. Cada subllibreria és una implementac
 
 | Repositori            | Oficial                                                                                | Comunitat                                                                                                                                                                                                                  |
 | --------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`supabase-{lang}`** | [`JS`](https://github.com/supabase/supabase-js)                                        | [`C#`](https://github.com/supabase/supabase-csharp) \| [`Flutter`](https://github.com/supabase/supabase-Flutter) \| [`Python`](https://github.com/supabase/supabase-py) \| `Rust`                                          |
-| `postgrest-{lang}`    | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) |
-| `realtime-{lang}`     | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust`                                                |
-| `gotrue-{lang}`       | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust`                                                      |
+| **`supabase-{lang}`** | [`JS`](https://github.com/vchavkov82/nextjs-js)                                        | [`C#`](https://github.com/vchavkov82/nextjs-csharp) \| [`Flutter`](https://github.com/vchavkov82/nextjs-Flutter) \| [`Python`](https://github.com/vchavkov82/nextjs-py) \| `Rust`                                          |
+| `postgrest-{lang}`    | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) |
+| `realtime-{lang}`     | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust`                                                |
+| `gotrue-{lang}`       | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust`                                                      |
 
 <!--- Remove this list if you're traslating to another language, it's hard to keep updated across multiple files-->
 <!--- Keep only the link to the list of translation files-->

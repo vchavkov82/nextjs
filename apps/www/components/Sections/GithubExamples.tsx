@@ -34,8 +34,8 @@ function GithubExamples() {
             </Button>
             <Button asChild size="small" type="default" icon={<Github size={12} />}>
               <Link
-                href="https://github.com/supabase/supabase/tree/master/examples"
-                as="https://github.com/supabase/supabase/tree/master/examples"
+                href="https://github.com/vchavkov82/nextjs/tree/master/examples"
+                as="https://github.com/vchavkov82/nextjs/tree/master/examples"
               >
                 Official GitHub library
               </Link>

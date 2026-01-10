@@ -11,7 +11,7 @@ info:
   title: 'CLI' # {string} A readable name.
   source: 'https://github.com/supabase/cli' # {string} Where developers can find the source code.
   bugs: 'https://github.com/supabase/cli/issues' # {string} Where developers can file bugs.
-  spec: 'https://github.com/supabase/supabase/spec/cli_v1_config.yaml' # {string} Where developers can find this spec (to link directly in the docs).
+  spec: 'https://github.com/vchavkov82/nextjs/spec/cli_v1_config.yaml' # {string} Where developers can find this spec (to link directly in the docs).
   description: |
     A `supabase/config.toml` file is generated after running `supabase init`.
 

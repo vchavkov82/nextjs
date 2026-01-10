@@ -15,7 +15,7 @@ import { toast } from 'sonner'
  *   - setValue: Function to set/clear the selected ID in the URL
  *
  * @deprecated Avoid using this hook, and use nuqs directly
- * Refer to this PR for more information: https://github.com/supabase/supabase/pull/41380
+ * Refer to this PR for more information: https://github.com/vchavkov82/nextjs/pull/41380
  * as well as context on how to refactor to remove usage of this hook
  */
 export function useQueryStateWithSelect<T>({

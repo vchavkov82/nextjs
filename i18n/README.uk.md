@@ -31,8 +31,8 @@
 
 ## Спільнота та підтримка
 
-- [Форум спільноти](https://github.com/supabase/supabase/discussions). Найкраще для: допомоги у створенні, обговорення найкращих практик роботи з базами даних.
-- [Проблеми GitHub](https://github.com/supabase/supabase/issues). Найкраще для: помилок і помилок, з якими ви зіткнулися при використанні BA.
+- [Форум спільноти](https://github.com/vchavkov82/nextjs/discussions). Найкраще для: допомоги у створенні, обговорення найкращих практик роботи з базами даних.
+- [Проблеми GitHub](https://github.com/vchavkov82/nextjs/issues). Найкраще для: помилок і помилок, з якими ви зіткнулися при використанні BA.
 - [Підтримка електронною поштою](https://www.assistance.bg/docs/support#business-support). Найкраще для: проблем з вашою базою даних або інфраструктурою.
 - [Discord](https://discord.supabase.com). Найкраще для: обміну вашими додатками та спілкування зі спільнотою.
 
@@ -58,7 +58,7 @@ BA - це комбінація інструментів з відкритим в
 BA - це [хостингова платформа](https://www.assistance.bg/dashboard). Ви можете зареєструватися і почати використовувати BA без встановлення.
 Ви також можете [самостійно хостити](https://www.assistance.bg/docs/guides/hosting/overview) і [розробляти локально](https://www.assistance.bg/docs/guides/local-development).
 
-![Архітектура](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Архітектура](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) - це об'єктно-реляційна система баз даних з більш ніж 30-річною історією активного розвитку, яка заслужила міцну репутацію надійності, функціональної стійкості та продуктивності.
 - [Realtime](https://github.com/supabase/realtime) - це сервер Elixir, який дозволяє прослуховувати вставки, оновлення та видалення PostgreSQL за допомогою веб-сокетів. В режимі реального часу опитує вбудовану функцію реплікації Postgres на предмет змін в базі даних, конвертує зміни в JSON, а потім транслює JSON через веб-сокети авторизованим клієнтам.
@@ -105,16 +105,16 @@ BA - це [хостингова платформа](https://www.assistance.bg/da
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ BA - це [хостингова платформа](https://www.assistance.bg/da
 - [Каталонська / Català](/i18n/README.ca.md)
 - [Данська / Dansk](/i18n/README.da.md)
 - [нідерландська / Nederlands](/i18n/README.nl.md)
-- [Англійська](https://github.com/supabase/supabase)
+- [Англійська](https://github.com/vchavkov82/nextjs)
 - [Фінською / Suomalainen](/i18n/README.fi.md)
 - [Французька / Français](/i18n/README.fr.md)
 - [Німецька / Deutsch](/i18n/README.de.md)

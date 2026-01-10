@@ -33,7 +33,7 @@ export const faqs: Faq[] = [
     condition: (result) => result.language === 'js',
     question: 'What library is this?',
     answer: stripIndent`
-      This snippet uses [\`supabase-js\`](https://github.com/supabase/supabase-js), a JavaScript/TypeScript client that provides a convenient SDK wrapper around your project's API.
+      This snippet uses [\`supabase-js\`](https://github.com/vchavkov82/nextjs-js), a JavaScript/TypeScript client that provides a convenient SDK wrapper around your project's API.
 
       See [Installing](/docs/reference/javascript/installing) to get started.
     `,
@@ -219,7 +219,7 @@ export const faqs: Faq[] = [
       result.statement.limit.offset !== undefined,
     question: 'Why `range()` instead of `limit()` and `offset()`?',
     answer: stripIndent`
-      [\`supabase-js\`](https://github.com/supabase/supabase-js) supports \`limit()\` but not \`offset()\`.
+      [\`supabase-js\`](https://github.com/vchavkov82/nextjs-js) supports \`limit()\` but not \`offset()\`.
 
       \`range()\` allows us to accomplish the equivalent logic.
     `,

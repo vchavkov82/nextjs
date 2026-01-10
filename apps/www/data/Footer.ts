@@ -122,7 +122,7 @@ const footerData = [
       },
       {
         text: 'Contributing',
-        url: 'https://github.com/supabase/supabase/blob/master/CONTRIBUTING.md',
+        url: 'https://github.com/vchavkov82/nextjs/blob/master/CONTRIBUTING.md',
       },
       {
         text: 'Open Source',

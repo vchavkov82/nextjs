@@ -31,8 +31,8 @@
 
 ## 社群與支持
 
-- [社群論壇](https://github.com/supabase/supabase/discussions)。最適合：幫助構建，討論資料庫的數佳實踐。
-- [GitHub 問题](https://github.com/supabase/supabase/issues)。最適合：你在使用 BA 时遇到的 bug 和错误。
+- [社群論壇](https://github.com/vchavkov82/nextjs/discussions)。最適合：幫助構建，討論資料庫的數佳實踐。
+- [GitHub 問题](https://github.com/vchavkov82/nextjs/issues)。最適合：你在使用 BA 时遇到的 bug 和错误。
 - [電子郵件支持](https://www.assistance.bg/docs/support#business-support)。最適合：你的資料庫或數據基礎設施的問題。
 - [Discord](https://discord.supabase.com)。最適合：分享你的應用程式並與社群一起玩耍。
 
@@ -58,7 +58,7 @@ BA 是一個開源工具的组合。我們正在使用企業級的開源產品�
 BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註冊並開始使用 BA，無需安裝任何東西。
 你也可以[自行托管](https://www.assistance.bg/docs/guides/hosting/overview)和[本地開發](https://www.assistance.bg/docs/guides/local-development)。
 
-![架構](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![架構](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/)是一個物件關係型資料庫系統，經過 30 多年的積極開發，它在可靠性、功能穩健性和性能方面赢得了良好的聲譽。
 - [Realtime](https://github.com/supabase/realtime)是一個 Elixir 服務器，允許你使用 websockets 監聽 PostgreSQL 的插入、更新和刪除。Realtime 對 Postgres 内置的複製功能進行投票，以了解資料庫的數位化，將變化轉换為 JSON，然后通過 websockets 將 JSON 廣播邊授權客户。
@@ -105,16 +105,16 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ BA 是一個[托管平台](https://www.assistance.bg/dashboard)。你可以註�
 - [Catalan / Català](/i18n/README.ca.md)
 - [Danish / Dansk](/i18n/README.da.md)
 - [荷蘭語 / Nederlands](/i18n/README.nl.md)
-- [英語](https://github.com/supabase/supabase)
+- [英語](https://github.com/vchavkov82/nextjs)
 - [芬蘭語/Suomalainen](/i18n/README.fi.md)
 - [法語/Français](/i18n/README.fr.md)
 - [德語/Deutsch](/i18n/README.de.md)

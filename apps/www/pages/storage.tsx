@@ -181,7 +181,7 @@ function StoragePage() {
                   author_img={'https://avatars.githubusercontent.com/u/54469796'}
                   repo_name={'nextjs-user-management'}
                   repo_url={
-                    'https://github.com/supabase/supabase/tree/master/examples/user-management/nextjs-user-management'
+                    'https://github.com/vchavkov82/nextjs/tree/master/examples/user-management/nextjs-user-management'
                   }
                   vercel_deploy_url={
                     'https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsupabase%2Fsupabase%2Ftree%2Fmaster%2Fexamples%2Fuser-management%2Fnextjs-user-management&project-name=supabase-nextjs-user-management&repository-name=supabase-nextjs-user-management&integration-ids=oac_VqOgBHqhEoFTPzGkPd7L0iH6&external-id=https%3A%2F%2Fgithub.com%2Fsupabase%2Fsupabase%2Ftree%2Fmaster%2Fexamples%2Fuser-management%2Fnextjs-user-management'

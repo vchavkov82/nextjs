@@ -46,7 +46,7 @@ const useDropdownMenu = (user: User | null) => {
       {
         label: 'GitHub',
         icon: IconGitHub as any,
-        href: 'https://github.com/supabase/supabase',
+        href: 'https://github.com/vchavkov82/nextjs',
         otherProps: {
           target: '_blank',
           rel: 'noreferrer noopener',

@@ -87,7 +87,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   \`\`\`javascript
   const A = 'A'
   const B = 3
@@ -131,7 +131,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   \`\`\`javascript
   const A = 'A'
   const B = 3
@@ -171,7 +171,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   \`\`\`javascript
   const A = 'A'
   const B = 3
@@ -215,7 +215,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/python.py">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/python.py">
   \`\`\`python
   PI = 3.14159
   E = 2.71828
@@ -265,7 +265,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/68d5s42hvs7p342kl65ldk90dsafdsa/path/to/file.ts">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/68d5s42hvs7p342kl65ldk90dsafdsa/path/to/file.ts">
   \`\`\`typescript
   ok
   \`\`\`
@@ -308,7 +308,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   \`\`\`javascript utils/client.ts
   const A = 'A'
   const B = 3
@@ -356,7 +356,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   <CH.Code>
     \`\`\`javascript utils/client.ts
     const A = 'A'
@@ -416,7 +416,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source={['https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js', 'https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/python.py']}>
+<CodeSampleWrapper source={['https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js', 'https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/python.py']}>
   <CH.Code>
     \`\`\`javascript utils/client.ts
     const A = 'A'
@@ -504,7 +504,7 @@ Some more text.
     const expected = `
 # Embed code sample
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   <CH.Code>
     \`\`\`javascript utils/client1.ts
     const A = 'A'
@@ -544,7 +544,7 @@ Some more text.
 
 Another one:
 
-<CodeSampleWrapper source="https://github.com/supabase/supabase/blob/1234567890/examples/_internal/fixtures/javascript.js">
+<CodeSampleWrapper source="https://github.com/vchavkov82/nextjs/blob/1234567890/examples/_internal/fixtures/javascript.js">
   <CH.Code>
     \`\`\`javascript utils/client3.ts
     const A = 'A'

@@ -23,7 +23,7 @@ const months: Month[] = [
       },
       {
         title: 'Easier to see errors in log charts',
-        url: 'https://github.com/supabase/supabase/pull/32742',
+        url: 'https://github.com/vchavkov82/nextjs/pull/32742',
       },
       {
         title: 'Enhanced type inference for JSON fields',

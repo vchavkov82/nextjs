@@ -18,17 +18,17 @@ Check updates for each service to learn more.
 ## [2025-12-18]
 
 ### Documentation
-- Updated self-hosting installation and configuration guide - PR [#40901](https://github.com/supabase/supabase/pull/40901), PR [#41438](https://github.com/supabase/supabase/pull/41438)
+- Updated self-hosting installation and configuration guide - PR [#40901](https://github.com/vchavkov82/nextjs/pull/40901), PR [#41438](https://github.com/vchavkov82/nextjs/pull/41438)
 
 ### Utils
-- Added `generate-keys.sh` - PR [#41363](https://github.com/supabase/supabase/pull/41363)
-- Added `db-passwd.sh` - PR [#41432](https://github.com/supabase/supabase/pull/41432)
-- Changed `reset.sh` to POSIX and added more checks - PR [#41361](https://github.com/supabase/supabase/pull/41361)
+- Added `generate-keys.sh` - PR [#41363](https://github.com/vchavkov82/nextjs/pull/41363)
+- Added `db-passwd.sh` - PR [#41432](https://github.com/vchavkov82/nextjs/pull/41432)
+- Changed `reset.sh` to POSIX and added more checks - PR [#41361](https://github.com/vchavkov82/nextjs/pull/41361)
 
 ### Studio
 - Updated to `2025.12.17-sha-43f4f7f`
 - ⚠️ Fixed additional potential issues related to [React2Shell](https://vercel.com/kb/bulletin/react2shell)
-- Fixed an issue with the Users page not being updated on changes - PR [#41254](https://github.com/supabase/supabase/pull/41254)
+- Fixed an issue with the Users page not being updated on changes - PR [#41254](https://github.com/vchavkov82/nextjs/pull/41254)
 
 ### MCP Server
 - Updated to `v0.5.10` - [Release](https://github.com/supabase-community/supabase-mcp/releases/tag/v0.5.10)
@@ -84,8 +84,8 @@ Check updates for each service to learn more.
 
 ### Realtime
 - No image update
-- Changed boolean values to strings in Docker Compose for better compatibility with Podman - PR [#40994](https://github.com/supabase/supabase/pull/40994), also PR [realtime#1614](https://github.com/supabase/realtime/pull/1614)
-- Changed healthcheck in Docker Compose for better compatibility with Podman - PR [#41159](https://github.com/supabase/supabase/pull/41159)
+- Changed boolean values to strings in Docker Compose for better compatibility with Podman - PR [#40994](https://github.com/vchavkov82/nextjs/pull/40994), also PR [realtime#1614](https://github.com/supabase/realtime/pull/1614)
+- Changed healthcheck in Docker Compose for better compatibility with Podman - PR [#41159](https://github.com/vchavkov82/nextjs/pull/41159)
 
 ---
 
@@ -93,9 +93,9 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.11.26-sha-8f096b5`
-- Fixed MCP `get_advisors` tool - PR [#40783](https://github.com/supabase/supabase/pull/40783)
-- Fixed AI Assistant request schema - PR [#40830](https://github.com/supabase/supabase/pull/40830)
-- Fixed log drains page - PR [#40835](https://github.com/supabase/supabase/pull/40835)
+- Fixed MCP `get_advisors` tool - PR [#40783](https://github.com/vchavkov82/nextjs/pull/40783)
+- Fixed AI Assistant request schema - PR [#40830](https://github.com/vchavkov82/nextjs/pull/40830)
+- Fixed log drains page - PR [#40835](https://github.com/vchavkov82/nextjs/pull/40835)
 
 ### Realtime
 - Updated to `v2.65.3` - [Release](https://github.com/supabase/realtime/releases/tag/v2.65.3)
@@ -110,10 +110,10 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.11.24-sha-d990ae8` - [Dashboard updates](https://github.com/orgs/supabase/discussions/40734)
-- Fixed Queues configuration UI and added [documentation for exposed queue schema](https://www.assistance.bg/docs/guides/queues/expose-self-hosted-queues) - PR [#40078](https://github.com/supabase/supabase/pull/40078)
-- Fixed parameterized SQL queries in MCP tools - PR [#40499](https://github.com/supabase/supabase/pull/40499)
-- Fixed Studio showing paid options for log drains - PR [#40510](https://github.com/supabase/supabase/pull/40510)
-- Fixed AI Assistant authentication - PR [#40654](https://github.com/supabase/supabase/pull/40654)
+- Fixed Queues configuration UI and added [documentation for exposed queue schema](https://www.assistance.bg/docs/guides/queues/expose-self-hosted-queues) - PR [#40078](https://github.com/vchavkov82/nextjs/pull/40078)
+- Fixed parameterized SQL queries in MCP tools - PR [#40499](https://github.com/vchavkov82/nextjs/pull/40499)
+- Fixed Studio showing paid options for log drains - PR [#40510](https://github.com/vchavkov82/nextjs/pull/40510)
+- Fixed AI Assistant authentication - PR [#40654](https://github.com/vchavkov82/nextjs/pull/40654)
 
 ### Auth
 - Updated to `v2.183.0` - [Changelog](https://github.com/supabase/auth/blob/master/CHANGELOG.md) | [Release](https://github.com/supabase/auth/releases/tag/v2.183.0)
@@ -139,7 +139,7 @@ Check updates for each service to learn more.
 
 ### Storage
 - No image update
-- Fixed resumable uploads for files larger than 6MB (requires `docker-compose.yml` update) - PR [#40500](https://github.com/supabase/supabase/pull/40500)
+- Fixed resumable uploads for files larger than 6MB (requires `docker-compose.yml` update) - PR [#40500](https://github.com/vchavkov82/nextjs/pull/40500)
 
 ---
 
@@ -147,8 +147,8 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.11.10-sha-5291fe3` - [Dashboard updates](https://github.com/orgs/supabase/discussions/40083)
-- Added log drains - PR [#28297](https://github.com/supabase/supabase/pull/28297)
-- Fixed Studio using `postgres` role instead of `supabase_admin` - PR [#39946](https://github.com/supabase/supabase/pull/39946)
+- Added log drains - PR [#28297](https://github.com/vchavkov82/nextjs/pull/28297)
+- Fixed Studio using `postgres` role instead of `supabase_admin` - PR [#39946](https://github.com/vchavkov82/nextjs/pull/39946)
 
 ### Auth
 - Updated to `v2.182.1` - [Changelog](https://github.com/supabase/auth/blob/master/CHANGELOG.md#21821-2025-11-05) | [Release](https://github.com/supabase/auth/releases/tag/v2.182.1)
@@ -171,11 +171,11 @@ Check updates for each service to learn more.
 
 ### Studio
 - No image update
-- Fixed Studio failing to connect to Postgres with non-default settings (requires `docker-compose.yml` update) - PR [#40169](https://github.com/supabase/supabase/pull/40169)
+- Fixed Studio failing to connect to Postgres with non-default settings (requires `docker-compose.yml` update) - PR [#40169](https://github.com/vchavkov82/nextjs/pull/40169)
 
 ### Realtime
 - No image update
-- Fixed realtime logs not showing in Studio (requires `volumes/logs/vector.yml` update) - PR [#39963](https://github.com/supabase/supabase/pull/39963)
+- Fixed realtime logs not showing in Studio (requires `volumes/logs/vector.yml` update) - PR [#39963](https://github.com/vchavkov82/nextjs/pull/39963)
 
 ---
 
@@ -183,7 +183,7 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.10.27-sha-85b84e0` - [Dashboard updates](https://github.com/orgs/supabase/discussions/40083)
-- Fixed broken authentication when uploading files to Storage - PR [#39829](https://github.com/supabase/supabase/pull/39829)
+- Fixed broken authentication when uploading files to Storage - PR [#39829](https://github.com/vchavkov82/nextjs/pull/39829)
 
 ### Realtime
 - Updated to `v2.57.2` - [Release](https://github.com/supabase/realtime/releases/tag/v2.57.2)
@@ -203,8 +203,8 @@ Check updates for each service to learn more.
 
 ### Studio
 - No image update
-- Added Kong configuration for MCP server routes (requires `volumes/api/kong.yml` update) - PR [#39849](https://github.com/supabase/supabase/pull/39849)
-- Added [documentation page](https://www.assistance.bg/docs/guides/self-hosting/enable-mcp) for MCP server configuration - PR [#39952](https://github.com/supabase/supabase/pull/39952)
+- Added Kong configuration for MCP server routes (requires `volumes/api/kong.yml` update) - PR [#39849](https://github.com/vchavkov82/nextjs/pull/39849)
+- Added [documentation page](https://www.assistance.bg/docs/guides/self-hosting/enable-mcp) for MCP server configuration - PR [#39952](https://github.com/vchavkov82/nextjs/pull/39952)
 
 ---
 
@@ -212,7 +212,7 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.10.20-sha-5005fc6` - [Dashboard updates](https://github.com/orgs/supabase/discussions/39709)
-- Fixed issues with Edge Functions and cron logs not being visible in Studio - PR [#39388](https://github.com/supabase/supabase/pull/39388), PR [#39704](https://github.com/supabase/supabase/pull/39704), PR [#39711](https://github.com/supabase/supabase/pull/39711)
+- Fixed issues with Edge Functions and cron logs not being visible in Studio - PR [#39388](https://github.com/vchavkov82/nextjs/pull/39388), PR [#39704](https://github.com/vchavkov82/nextjs/pull/39704), PR [#39711](https://github.com/vchavkov82/nextjs/pull/39711)
 
 ### Realtime
 - Updated to `v2.56.0` - [Release](https://github.com/supabase/realtime/releases/tag/v2.56.0)
@@ -242,7 +242,7 @@ Check updates for each service to learn more.
 
 ### Studio
 - Updated to `2025.10.01-sha-8460121` - [Dashboard updates](https://github.com/orgs/supabase/discussions/39709)
-- Added "local" remote MCP server - PR [#38797](https://github.com/supabase/supabase/pull/38797), PR [#39041](https://github.com/supabase/supabase/pull/39041)
+- Added "local" remote MCP server - PR [#38797](https://github.com/vchavkov82/nextjs/pull/38797), PR [#39041](https://github.com/vchavkov82/nextjs/pull/39041)
 - ⚠️ Changed Studio connection method to `postgres-meta` - affects non-standard database port configurations
 
 ### Auth

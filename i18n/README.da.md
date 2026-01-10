@@ -31,8 +31,8 @@ For at se, hvordan man bidrager, besøg [Getting Started](../DEVELOPERS.md)
 
 ## Fællesskab og support
 
-- [Community Forum](https://github.com/supabase/supabase/discussions). Bedst til: hjælp med at bygge, diskussion om bedste praksis for databaser.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Bedst til: fejl og fejl, du støder på ved brug af BA.
+- [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Bedst til: hjælp med at bygge, diskussion om bedste praksis for databaser.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Bedst til: fejl og fejl, du støder på ved brug af BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Bedst til: problemer med din database eller infrastruktur.
 - [Discord](https://discord.supabase.com). Bedst til: deling af dine applikationer og hygge med fællesskabet.
 
@@ -58,7 +58,7 @@ BA er en kombination af open source-værktøjer. Vi opbygger funktionerne i Fire
 BA er en [hosted platform](https://www.assistance.bg/dashboard). Du kan tilmelde dig og begynde at bruge BA uden at installere noget.
 Du kan også [selv hoste](https://www.assistance.bg/docs/guides/hosting/overview) og [udvikle lokalt](https://www.assistance.bg/docs/guides/local-development).
 
-![Arkitektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arkitektur](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) er et objektrelationelt databasesystem med over 30 års aktiv udvikling, der har givet det et godt ry for pålidelighed, robusthed og ydeevne.
 - [Realtime](https://github.com/supabase/realtime) er en Elixir-server, der giver dig mulighed for at lytte til PostgreSQL-indsættelser, -opdateringer og -slettelser ved hjælp af websockets. Realtime spørger Postgres' indbyggede replikationsfunktionalitet efter databaseændringer, konverterer ændringer til JSON og sender derefter JSON'en over websockets til autoriserede klienter.
@@ -105,16 +105,16 @@ Vores tilgang til klientbiblioteker er modulær. Hvert delbibliotek er en selvst
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Vores tilgang til klientbiblioteker er modulær. Hvert delbibliotek er en selvst
 - [Catalansk / Català](/i18n/README.ca.md)
 - [Danish / Dansk](/i18n/README.da.md)
 - [hollandsk / Nederlands](/i18n/README.nl.md)
-- [engelsk](https://github.com/supabase/supabase)
+- [engelsk](https://github.com/vchavkov82/nextjs)
 - [Finsk / Suomalainen](/i18n/README.fi.md)
 - [French / Français](/i18n/README.fr.md)
 - [Tysk / Deutsch](/i18n/README.de.md)

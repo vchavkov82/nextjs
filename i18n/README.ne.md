@@ -25,8 +25,8 @@
 
 ## समुदाय र समर्थन सहयोग
 
-- [सामुदायिक फोरम](https://github.com/supabase/supabase/discussions)। सर्वोत्कृष्ट: निर्माणको साथ मद्दत, डाटाबेसको उत्तम अभ्यासहरूको बारेमा छलफलको लागि।
-- [गिटहब मुद्दाहरू](https://github.com/supabase/supabase/issues)। सर्वोत्कृष्ट: प्रयोग गर्दा फेला परेका बग र त्रुटिहरूको लागि।
+- [सामुदायिक फोरम](https://github.com/vchavkov82/nextjs/discussions)। सर्वोत्कृष्ट: निर्माणको साथ मद्दत, डाटाबेसको उत्तम अभ्यासहरूको बारेमा छलफलको लागि।
+- [गिटहब मुद्दाहरू](https://github.com/vchavkov82/nextjs/issues)। सर्वोत्कृष्ट: प्रयोग गर्दा फेला परेका बग र त्रुटिहरूको लागि।
 - [ई-मेल समर्थन](https://www.assistance.bg/docs/support#business-support)। सर्वोत्कृष्ट: तपाईंको डाटाबेस वा पूर्वाधारको समस्याहरूको लागि।
 
 ## स्थिति
@@ -50,7 +50,7 @@
 
 सुपाबेस एक [होस्ट गरिएको प्लेटफर्म](https://www.assistance.bg/dashboard) हो। तपाई आफै साइन अप गर्न सक्नुहुन्छ र कुनै स्थापना बिना सुपाबेस प्रयोग गर्न सक्नुहुन्छ। हामी अझै स्थानीय विकासको अनुभव सिर्जना गर्दैछौं। यो प्लेटफर्म स्थिरताको साथ हाम्रो मूल फोकस हो।
 
-![आर्किटेक्चर](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![आर्किटेक्चर](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) एक वस्तु-रिलेशनल डाटाबेस प्रणाली हो जसले ३० बर्ष भन्दा बढी सक्रिय विकासको साथ विश्वसनीयता, सुविधा मजबूती र प्रदर्शनको बलियो प्रतिष्ठा कमाएको छ।
 - [Realtime](https://github.com/supabase/realtime) एक Elixer सर्भर हो जसले तपाइँलाई वेबसकेटहरू प्रयोग गरेर PostgreSQL इन्सर्टहरू, अपडेटहरु, र डिलीटहरु सुन्न अनुमति दिन्छ। सुपाबेसले पोष्टग्रेसको भित्र निर्मित प्रतिकृति कार्यक्षमता सुन्दछ, प्रतिकृति बाइट स्ट्रिमलाई JSON मा रूपान्तरण गर्दछ, र त्यसपछि JSON लाई वेबसकेटमा प्रसारण गर्दछ।।
@@ -71,10 +71,10 @@
 
 | Repo                  | आधिकारिक                                                                               | समुदाय                                                                                                                                                                                                                     |
 | --------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **`supabase-{lang}`** | [`JS`](https://github.com/supabase/supabase-js)                                        | [`C#`](https://github.com/supabase/supabase-csharp) \| [`Flutter`](https://github.com/supabase/supabase-flutter) \| [`Python`](https://github.com/supabase/supabase-py) \| `Rust`                                          |
-| `postgrest-{lang}`    | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) |
-| `realtime-{lang}`     | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust`                                                |
-| `gotrue-{lang}`       | [`JS`](https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust`                                                      |
+| **`supabase-{lang}`** | [`JS`](https://github.com/vchavkov82/nextjs-js)                                        | [`C#`](https://github.com/vchavkov82/nextjs-csharp) \| [`Flutter`](https://github.com/vchavkov82/nextjs-flutter) \| [`Python`](https://github.com/vchavkov82/nextjs-py) \| `Rust`                                          |
+| `postgrest-{lang}`    | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js) | [`C#`](https://github.com/supabase/postgrest-csharp) \| [`Dart`](https://github.com/supabase/postgrest-dart) \| [`Python`](https://github.com/supabase/postgrest-py) \| [`Rust`](https://github.com/supabase/postgrest-rs) |
+| `realtime-{lang}`     | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js)  | [`C#`](https://github.com/supabase/realtime-csharp) \| [`Dart`](https://github.com/supabase/realtime-dart) \| [`Python`](https://github.com/supabase/realtime-py) \| `Rust`                                                |
+| `gotrue-{lang}`       | [`JS`](https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js)      | [`C#`](https://github.com/supabase/gotrue-csharp) \| [`Dart`](https://github.com/supabase/gotrue-dart) \| [`Python`](https://github.com/supabase/gotrue-py) \| `Rust`                                                      |
 
 <!--- Remove this list if you're traslating to another language, it's hard to keep updated across multiple files-->
 <!--- Keep only the link to the list of translation files-->

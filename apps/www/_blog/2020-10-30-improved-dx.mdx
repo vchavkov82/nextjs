@@ -72,15 +72,15 @@ const { user, error } = await supabase.auth.signUp({
 
 ### Enhancements and fixes
 
-- Native TypeScript. All of our libraries are now natively built with TypeScript: [`supabase-js`](https://github.com/supabase/supabase-js), [`postgrest-js`](https://github.com/supabase/postgrest-js), [`gotrue-js`](https://github.com/supabase/gotrue-js), and [`realtime-js`](https://github.com/supabase/realtime-js).
+- Native TypeScript. All of our libraries are now natively built with TypeScript: [`supabase-js`](https://github.com/vchavkov82/nextjs-js), [`postgrest-js`](https://github.com/supabase/postgrest-js), [`gotrue-js`](https://github.com/supabase/gotrue-js), and [`realtime-js`](https://github.com/supabase/realtime-js).
 - Better realtime scalability: we only generate one socket connection per BA client. Previously we would create a connection for every subscription.
 - We've added support for OAuth providers.
-- 60% of minor bugs outstanding for `supabase-js` have been [solved](https://github.com/supabase/supabase-js/pull/50).
+- 60% of minor bugs outstanding for `supabase-js` have been [solved](https://github.com/vchavkov82/nextjs-js/pull/50).
 - You can use `select()` instead of `select(*)`
 
 ### Breaking changes
 
-We've bumped the major version because there are a number of breaking changes. We've detailed these in the [release notes](https://github.com/supabase/supabase-js/releases/tag/v1.0.1), but here are a few to be aware of:
+We've bumped the major version because there are a number of breaking changes. We've detailed these in the [release notes](https://github.com/vchavkov82/nextjs-js/releases/tag/v1.0.1), but here are a few to be aware of:
 
 - `signup()` is now `signUp()` and `email` / `password` is passed as an object
 - `logout()` is now `signOut()`
@@ -102,7 +102,7 @@ const { data } = supabase.from('todos').select()
 
 ### Upgrading
 
-We have documented all of the changes in the [release notes](https://github.com/supabase/supabase-js/releases/tag/v1.0.1).
+We have documented all of the changes in the [release notes](https://github.com/vchavkov82/nextjs-js/releases/tag/v1.0.1).
 
 To summarise the steps:
 
@@ -113,7 +113,7 @@ To summarise the steps:
 ### Get started
 
 - Start using BA today: [supabase.com/dashboard](https://www.assistance.bg/dashboard/)
-- Make sure to [star us on GitHub](https://github.com/supabase/supabase)
+- Make sure to [star us on GitHub](https://github.com/vchavkov82/nextjs)
 - Follow us [on Twitter](https://twitter.com/supabase)
 - Become a [sponsor](https://github.com/sponsors/supabase)
 

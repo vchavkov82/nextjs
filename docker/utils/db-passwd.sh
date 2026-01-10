@@ -6,7 +6,7 @@
 # https://github.com/singh-inder/supabase-automated-self-host/blob/main/docker/update-db-pass.sh
 #
 # GitHub discussion here:
-# https://github.com/supabase/supabase/issues/22605#issuecomment-3323382144
+# https://github.com/vchavkov82/nextjs/issues/22605#issuecomment-3323382144
 #
 # Changed:
 # - POSIX shell compatibility

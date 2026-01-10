@@ -31,8 +31,8 @@ Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.
 
 ## Kopiena un atbalsts
 
-- [Kopienas forums](https://github.com/supabase/supabase/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot BA.
+- [Kopienas forums](https://github.com/vchavkov82/nextjs/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot BA.
 - [E-pasta atbalsts](https://www.assistance.bg/docs/support#business-support). Vislabāk piemērots: problēmām ar jūsu datu bāzi vai infrastruktūru.
 - [Discord](https://discord.supabase.com). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
 
@@ -58,7 +58,7 @@ BA ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas, izman
 BA ir [izvietota platforma](https://www.assistance.bg/dashboard). Jūs varat reģistrēties un sākt izmantot BA, neko neinstalējot.
 Jūs varat arī [pašmāju resursus](https://www.assistance.bg/docs/guides/hosting/overview) un [izstrādāt lokāli](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektūra](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) ir objekt-relatīvo datubāzu sistēma, kas aktīvi tiek attīstīta vairāk nekā 30 gadus, un tā ir ieguvusi labu reputāciju uzticamības, funkciju robustuma un veiktspējas ziņā.
 - [Realtime](https://github.com/supabase/realtime) ir Elixir serveris, kas ļauj klausīties PostgreSQL ievadi, atjauninājumi un dzēšana, izmantojot websockets. Realtime aptaujā Postgres iebūvēto replikācijas funkcionalitāti par izmaiņām datubāzē, konvertē izmaiņas JSON un pēc tam pārraida JSON pa websockets autorizētiem klientiem.
@@ -105,16 +105,16 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
 - [Kataloniski / Català](/i18n/README.ca.md)
 - [Danish / Dansk](/i18n/README.da.md)
 - [Dutch / Nederlands](/i18n/README.nl.md)
-- [angļu valodā](https://github.com/supabase/supabase)
+- [angļu valodā](https://github.com/vchavkov82/nextjs)
 - [Somu / somu valodā](/i18n/README.fi.md)
 - [Franču valodā](/i18n/README.fr.md)
 - [Vācu / Deutsch](/i18n/README.de.md)

@@ -31,8 +31,8 @@ Ak chcete zistiť, ako prispievať, navštívte stránku [Začíname](../DEVELOP
 
 ## Komunita a podpora
 
-- [Fórum komunity](https://github.com/supabase/supabase/discussions). Najlepšie pre: pomoc pri vytváraní, diskusie o osvedčených postupoch pri práci s databázou.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Najlepšie pre: chyby a omyly, na ktoré narazíte pri používaní databázy BA.
+- [Fórum komunity](https://github.com/vchavkov82/nextjs/discussions). Najlepšie pre: pomoc pri vytváraní, diskusie o osvedčených postupoch pri práci s databázou.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najlepšie pre: chyby a omyly, na ktoré narazíte pri používaní databázy BA.
 - [E-mailová podpora](https://www.assistance.bg/docs/support#business-support). Najlepšie pre: problémy s vašou databázou alebo infraštruktúrou.
 - [Discord](https://discord.supabase.com). Najlepšie na: zdieľanie vašich aplikácií a stretávanie sa s komunitou.
 
@@ -58,7 +58,7 @@ BA je kombináciou nástrojov s otvoreným zdrojovým kódom. Funkcie Firebase b
 BA je [hostovaná platforma](https://www.assistance.bg/dashboard). Môžete sa zaregistrovať a začať používať BA bez toho, aby ste čokoľvek inštalovali.
 Môžete tiež [samostatne hosťovať](https://www.assistance.bg/docs/guides/hosting/overview) a [vyvíjať lokálne](https://www.assistance.bg/docs/guides/local-development).
 
-![Architektúra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architektúra](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) je objektovo-relačný databázový systém s viac ako 30 rokmi aktívneho vývoja, ktorý si získal dobrú povesť vďaka spoľahlivosti, robustnosti funkcií a výkonu.
 - [Realtime](https://github.com/supabase/realtime) je server Elixir, ktorý umožňuje počúvať vkladanie, aktualizáciu a mazanie údajov PostgreSQL pomocou webových soketov. Realtime vyhľadáva zmeny v databáze pomocou zabudovanej replikačnej funkcie Postgresu, konvertuje zmeny na JSON a potom vysiela JSON cez websockety autorizovaným klientom.
@@ -105,16 +105,16 @@ Náš prístup ku klientskym knižniciam je modulárny. Každá čiastková kni�
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Náš prístup ku klientskym knižniciam je modulárny. Každá čiastková kni�
 - [Katalánčina / Català](/i18n/README.ca.md)
 - [dánsky / Dansk](/i18n/README.da.md)
 - [Dutch / Nederlands](/i18n/README.nl.md)
-- [Angličtina](https://github.com/supabase/supabase)
+- [Angličtina](https://github.com/vchavkov82/nextjs)
 - [Fínsky / Suomalainen](/i18n/README.fi.md)
 - [Francúzština / Français](/i18n/README.fr.md)
 - [Nemčina / Deutsch](/i18n/README.de.md)

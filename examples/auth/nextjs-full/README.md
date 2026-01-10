@@ -84,10 +84,10 @@ If you wish to just develop locally and not deploy to Vercel, [follow the steps 
 
 ## Feedback and issues
 
-Please file feedback and issues over on the [BA GitHub org](https://github.com/supabase/supabase/issues/new/choose).
+Please file feedback and issues over on the [BA GitHub org](https://github.com/vchavkov82/nextjs/issues/new/choose).
 
 ## More BA examples
 
 - [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
 - [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [BA Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
+- [BA Auth and the Next.js App Router](https://github.com/vchavkov82/nextjs/tree/master/examples/auth/nextjs)

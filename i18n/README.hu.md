@@ -31,8 +31,8 @@ A Contribute-hoz való hozzájáruláshoz látogasson el a [Getting Started](../
 
 ## Közösség és támogatás
 
-- [Közösségi fórum](https://github.com/supabase/supabase/discussions). Legjobb: segítség az építéshez, az adatbázis legjobb gyakorlatainak megvitatása.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Legjobb: hibák és hibák, amelyekkel a BA használatával találkozol.
+- [Közösségi fórum](https://github.com/vchavkov82/nextjs/discussions). Legjobb: segítség az építéshez, az adatbázis legjobb gyakorlatainak megvitatása.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Legjobb: hibák és hibák, amelyekkel a BA használatával találkozol.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Legjobb: az adatbázisoddal vagy az infrastruktúrával kapcsolatos problémákra.
 - [Discord](https://discord.supabase.com). A legjobb: az alkalmazások megosztására és a közösséggel való együttlétre.
 
@@ -58,7 +58,7 @@ A BA nyílt forráskódú eszközök kombinációja. A Firebase funkcióit váll
 A BA egy [hosztolt platform](https://www.assistance.bg/dashboard). Regisztrálhat és elkezdheti használni a BA-t anélkül, hogy bármit telepítene.
 Önállóan is [hosztolhat](https://www.assistance.bg/docs/guides/hosting/overview) és [fejleszthet helyben](https://www.assistance.bg/docs/guides/local-development).
 
-![Architektúra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architektúra](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - a [PostgreSQL](https://www.postgresql.org/) egy objektum-relációs adatbázis-rendszer, amelynek több mint 30 éves aktív fejlesztése során a megbízhatóság, a funkciók robusztussága és a teljesítménye szerzett jó hírnevet.
 - a [Realtime](https://github.com/supabase/realtime) egy Elixir szerver, amely lehetővé teszi, hogy websocketek segítségével figyelje a PostgreSQL beviteleit, frissítéseit és törléseit. A Realtime lekérdezi a Postgres beépített replikációs funkcióit az adatbázis-változásokért, a változásokat JSON-ba konvertálja, majd a JSON-t websocketeken keresztül továbbítja az engedélyezett ügyfeleknek.
@@ -105,16 +105,16 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
 - [Katalán / Català](/i18n/README.ca.md)
 - [Dán / Dansk](/i18n/README.da.md)
 - [Holland / Nederlands](/i18n/README.nl.md)
-- [angol](https://github.com/supabase/supabase)
+- [angol](https://github.com/vchavkov82/nextjs)
 - [Finn / Suomalainen](/i18n/README.fi.md)
 - [Francia / Français](/i18n/README.fr.md)
 - [Német / Deutsch](/i18n/README.de.md)

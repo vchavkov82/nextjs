@@ -108,7 +108,7 @@ const Repos = ({ tabs }: Props) => {
     <div className="flex flex-col gap-8 xl:gap-10">
       <div className="flex flex-wrap mx-auto items-center justify-center gap-y-6 gap-x-8 text-sm">
         <Link
-          href="https://github.com/supabase/supabase/blob/master/DEVELOPERS.md"
+          href="https://github.com/vchavkov82/nextjs/blob/master/DEVELOPERS.md"
           className="text-foreground-lighter hover:underline flex gap-1 items-center"
           target="_blank"
         >

@@ -209,7 +209,7 @@ export const TableRowComponent = ({ table, schema, namespace }: TableRowComponen
         )
 
         // [Joshen] Once Ivan's PR goes through, swap these out to just use useFDWDropForeignTableMutation
-        // https://github.com/supabase/supabase/pull/40206
+        // https://github.com/vchavkov82/nextjs/pull/40206
         await updateFDW({
           projectRef: project?.ref,
           connectionString: project?.connectionString,

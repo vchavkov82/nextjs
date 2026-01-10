@@ -7,7 +7,7 @@ info:
 
     BA Swift.
 
-  specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_swift_v2.yml
+  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/supabase_swift_v2.yml
   slugPrefix: '/'
   libraries:
     - id: 'Swift'
@@ -1596,7 +1596,7 @@ functions:
       - By default, BA projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
       - `select()` can be combined with [Modifiers](/docs/reference/swift/using-modifiers)
       - `select()` can be combined with [Filters](/docs/reference/swift/using-filters)
-      - If using the BA hosted platform `apikey` is technically a reserved keyword, since the API gateway will pluck it out for authentication. [It should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
+      - If using the BA hosted platform `apikey` is technically a reserved keyword, since the API gateway will pluck it out for authentication. [It should be avoided as a column name](https://github.com/vchavkov82/nextjs/issues/5465).
       - The recommended solution for getting data is to use the value property which will return a decoded model. Create a `Codable` to easily decode your database responses.
     examples:
       - id: getting-your-data

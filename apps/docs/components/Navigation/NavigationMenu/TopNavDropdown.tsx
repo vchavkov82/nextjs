@@ -42,7 +42,7 @@ const menu = [
     {
       label: 'GitHub',
       icon: 'github',
-      href: 'https://github.com/supabase/supabase',
+      href: 'https://github.com/vchavkov82/nextjs',
       otherProps: {
         target: '_blank',
         rel: 'noreferrer noopener',

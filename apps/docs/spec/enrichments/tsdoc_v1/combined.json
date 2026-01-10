@@ -20540,7 +20540,7 @@
                                       },
                                       "comment": {
                                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                                       },
                                       "parameters": [
                                         {
@@ -25519,7 +25519,7 @@
                       },
                       "comment": {
                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                       },
                       "parameters": [
                         {
@@ -27778,7 +27778,7 @@
                       },
                       "comment": {
                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                       },
                       "parameters": [
                         {
@@ -29472,7 +29472,7 @@
                       },
                       "comment": {
                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                       },
                       "parameters": [
                         {
@@ -30366,7 +30366,7 @@
                                       },
                                       "comment": {
                                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                                       },
                                       "parameters": [
                                         {
@@ -32142,7 +32142,7 @@
                       },
                       "comment": {
                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                       },
                       "parameters": [
                         {
@@ -33170,7 +33170,7 @@
                       },
                       "comment": {
                         "shortText": "If there's an error with the query, throwOnError will reject the promise by\nthrowing the error instead of returning it as part of a successful response.",
-                        "text": "{@link https://github.com/supabase/supabase-js/issues/92}\n"
+                        "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/92}\n"
                       },
                       "parameters": [
                         {
@@ -33300,7 +33300,7 @@
               "flags": {},
               "comment": {
                 "shortText": "Response format",
-                "text": "{@link https://github.com/supabase/supabase-js/issues/32}\n"
+                "text": "{@link https://github.com/vchavkov82/nextjs-js/issues/32}\n"
               },
               "children": [
                 {
@@ -53082,7 +53082,7 @@
                 "isConst": true
               },
               "comment": {
-                "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/supabase/supabase/issues/18",
+                "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/vchavkov82/nextjs/issues/18",
                 "tags": [
                   {
                     "tag": "example",
@@ -53100,7 +53100,7 @@
                     "isExported": true
                   },
                   "comment": {
-                    "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/supabase/supabase/issues/18",
+                    "shortText": "Fixes timestamp to be ISO-8601. Swaps the space between the date and time for a 'T'\nSee https://github.com/vchavkov82/nextjs/issues/18",
                     "tags": [
                       {
                         "tag": "example",

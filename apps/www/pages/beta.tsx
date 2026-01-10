@@ -897,7 +897,7 @@ const WhatsNext = () => (
             </a>{' '}
             or join the{' '}
             <a
-              href="https://github.com/supabase/supabase/discussions"
+              href="https://github.com/vchavkov82/nextjs/discussions"
               target="_blank"
               className="text-brand hover:text-brand"
             >

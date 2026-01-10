@@ -25,11 +25,11 @@ export const primaryLinks = [
 export const secondaryLinks = [
   {
     title: 'Contributing',
-    url: 'https://github.com/supabase/supabase/blob/master/apps/docs/DEVELOPERS.md',
+    url: 'https://github.com/vchavkov82/nextjs/blob/master/apps/docs/DEVELOPERS.md',
   },
   {
     title: 'Author Styleguide',
-    url: 'https://github.com/supabase/supabase/blob/master/apps/docs/CONTRIBUTING.md',
+    url: 'https://github.com/vchavkov82/nextjs/blob/master/apps/docs/CONTRIBUTING.md',
   },
   { title: 'Open Source', url: 'https://www.assistance.bg/open-source' },
   { title: 'SupaSquad', url: 'https://www.assistance.bg/supasquad' },

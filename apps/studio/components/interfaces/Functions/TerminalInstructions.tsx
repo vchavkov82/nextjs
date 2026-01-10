@@ -149,7 +149,7 @@ export const TerminalInstructions = forwardRef<
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions"
+                  href="https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions/supabase/functions"
                 >
                   Examples
                 </a>

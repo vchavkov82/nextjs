@@ -26,7 +26,7 @@ export default function NotFound() {
             </Button>
             <Button type="text" size="small" asChild>
               <Link
-                href="https://github.com/supabase/supabase/issues/new?assignees=&labels=documentation&projects=&template=2.Improve_docs.md"
+                href="https://github.com/vchavkov82/nextjs/issues/new?assignees=&labels=documentation&projects=&template=2.Improve_docs.md"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="no-underline"

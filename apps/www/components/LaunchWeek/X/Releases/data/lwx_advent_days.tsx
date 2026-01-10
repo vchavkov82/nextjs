@@ -144,7 +144,7 @@ export const days: AdventDay[] = [
     id: 'supabase-grafana',
     links: [
       {
-        url: 'https://github.com/supabase/supabase-grafana',
+        url: 'https://github.com/vchavkov82/nextjs-grafana',
         label: 'View on GitHub',
         target: '_blank',
       },

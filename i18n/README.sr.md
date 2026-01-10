@@ -31,8 +31,8 @@ Da vidite kako možete doprineti razvoju, posetite [Getting Started](../DEVELOPE
 
 ## Zajednica & Podrška
 
-- [Forum zajednice](https://github.com/supabase/supabase/discussions). Najbolje mesto za: pomoć u razvijanju, diskusije o najboljim praksama u vezi baze.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Najbolje mesto za: bagove i greške sa kojima se susretnete tokom korišćenja BA.
+- [Forum zajednice](https://github.com/vchavkov82/nextjs/discussions). Najbolje mesto za: pomoć u razvijanju, diskusije o najboljim praksama u vezi baze.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najbolje mesto za: bagove i greške sa kojima se susretnete tokom korišćenja BA.
 - [Email Podrška](https://www.assistance.bg/docs/support#business-support). Najbolje mesto za: probleme sa vašom bazom ili infrastrukturom.
 - [Discord](https://discord.supabase.com). Najbolje mesto za: deljenje vaših aplikacija i druženje sa zajednicom.
 
@@ -58,7 +58,7 @@ BA je kombinacija open source alata. Razvijamo funkcionalnosti Firebase-a korist
 BA je [hostovana platforma](https://www.assistance.bg/dashboard). Možete se prijaviti i početi sa korišćenjem BA-a bez instaliranja bilo čega.
 Takođe možete da [hostujete sami](https://www.assistance.bg/docs/guides/hosting/overview) i da [razvijate u lokalu](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektura](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektura](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) je sistem objektno-relacione baze sa preko 30 godina aktivnog razvoja čime je zaslužio jaku reputaciju za pouzdanost, robustnost funkcionalnosti i performanse.
 - [Realtime](https://github.com/supabase/realtime) je Elixir server koji vam omogućava da slušate PostgreSQL inserte, updateove, i brisanja koristeći websokete. Realtime polluje Postgres-ovu ugrađenu funkcionalnost replikacije za promene nad bazom, konvertuje promene u JSON, zatim broadcastuje taj JSON kroz websoket autorizovanim klijentima.
@@ -101,12 +101,12 @@ Naš pristup klijentskim bibliotekama je modularan. Svaka pod-biblioteka je samo
   <th colspan="7">⚡️ Oficijelni ⚡️</th>
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
   <th colspan="7">💚 Od zajednice 💚</th>
   <tr>
@@ -120,7 +120,7 @@ Naš pristup klijentskim bibliotekama je modularan. Svaka pod-biblioteka je samo
   </tr>
   <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-dart</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-dart</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>

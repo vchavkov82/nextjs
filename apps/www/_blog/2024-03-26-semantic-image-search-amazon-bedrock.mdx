@@ -20,7 +20,7 @@ toc_depth: 3
 
 In this post we'll look at how we can get started with Amazon Bedrock and BA Vector in Python using the Amazon Titan multimodal model and the [vecs client](/docs/guides/ai/vecs-python-client).
 
-You can find the full application code as a Python Poetry project on [GitHub](https://github.com/supabase/supabase/tree/master/examples/ai/aws_bedrock_image_search).
+You can find the full application code as a Python Poetry project on [GitHub](https://github.com/vchavkov82/nextjs/tree/master/examples/ai/aws_bedrock_image_search).
 
 ## Create a new Python project with Poetry
 
@@ -92,7 +92,7 @@ bedrock_client = boto3.client(
 
 ## Create embeddings for your images
 
-In the root of your project, create a new folder called `images` and add some images. You can use the images from the example project on [GitHub](https://github.com/supabase/supabase/tree/master/examples/ai/aws_bedrock_image_search/images) or you can find license free images on [unsplash](https://unsplash.com).
+In the root of your project, create a new folder called `images` and add some images. You can use the images from the example project on [GitHub](https://github.com/vchavkov82/nextjs/tree/master/examples/ai/aws_bedrock_image_search/images) or you can find license free images on [unsplash](https://unsplash.com).
 
 To send images to the Amazon Bedrock API we need to need to encode them as `base64` strings. Create the following helper methods:
 

@@ -94,7 +94,7 @@ const Examples: Example[] = [
     author_img: 'https://avatars.githubusercontent.com/u/87650496',
     repo_name: 'supabase/examples/user-management/flutter-user-management',
     repo_url:
-      'https://github.com/supabase/supabase/tree/master/examples/user-management/flutter-user-management',
+      'https://github.com/vchavkov82/nextjs/tree/master/examples/user-management/flutter-user-management',
     vercel_deploy_url: '',
     demo_url: '',
   },
@@ -138,7 +138,7 @@ const Examples: Example[] = [
     author_img: 'https://avatars.githubusercontent.com/u/54469796',
     repo_name: 'nextjs-slack-clone',
     repo_url:
-      'https://github.com/supabase/supabase/tree/master/examples/slack-clone/nextjs-slack-clone',
+      'https://github.com/vchavkov82/nextjs/tree/master/examples/slack-clone/nextjs-slack-clone',
     vercel_deploy_url: '',
     demo_url: '',
   },
@@ -211,7 +211,7 @@ const Examples: Example[] = [
     author_img: 'https://avatars.githubusercontent.com/u/54469796',
     repo_name: 'sveltejs-todo-list',
     repo_url:
-      'https://github.com/supabase/supabase/tree/master/examples/todo-list/sveltejs-todo-list',
+      'https://github.com/vchavkov82/nextjs/tree/master/examples/todo-list/sveltejs-todo-list',
     vercel_deploy_url: '',
     demo_url: '',
   },
@@ -301,7 +301,7 @@ const Examples: Example[] = [
     title: 'Upload files to Storage',
     description: 'Process multipart/form-data.',
     repo_url:
-      'https://github.com/supabase/supabase/tree/master/examples/edge-functions/supabase/functions/file-upload-storage',
+      'https://github.com/vchavkov82/nextjs/tree/master/examples/edge-functions/supabase/functions/file-upload-storage',
   },
 ]
 

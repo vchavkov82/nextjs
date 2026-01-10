@@ -31,8 +31,8 @@ Wie Sie einen Beitrag leisten können, erfahren Sie unter [Erste Schritte](../DE
 
 ## Gemeinschaft &amp; Unterstützung
 
-- [Gemeinschaftsforum](https://github.com/supabase/supabase/discussions). Am besten geeignet für: Hilfe bei der Erstellung, Diskussion über bewährte Datenbankverfahren.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Am besten geeignet für: Bugs und Fehler, auf die Sie bei der Verwendung von BA stoßen.
+- [Gemeinschaftsforum](https://github.com/vchavkov82/nextjs/discussions). Am besten geeignet für: Hilfe bei der Erstellung, Diskussion über bewährte Datenbankverfahren.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Am besten geeignet für: Bugs und Fehler, auf die Sie bei der Verwendung von BA stoßen.
 - [E-Mail-Support](https://www.assistance.bg/docs/support#business-support). Am besten für: Probleme mit Ihrer Datenbank oder Infrastruktur.
 - [Discord](https://discord.supabase.com). Am besten geeignet für: Austausch von Anwendungen und Austausch mit der Community.
 
@@ -58,7 +58,7 @@ BA ist eine Kombination aus Open-Source-Tools. Wir entwickeln die Funktionen von
 BA ist eine [gehostete Plattform](https://www.assistance.bg/dashboard). Sie können sich anmelden und BA verwenden, ohne etwas zu installieren.
 Sie können auch [selbst hosten](https://www.assistance.bg/docs/guides/hosting/overview) und [lokal entwickeln](https://www.assistance.bg/docs/guides/local-development).
 
-![Architektur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Architektur](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) ist ein objektrelationales Datenbanksystem, das seit über 30 Jahren aktiv entwickelt wird und sich einen guten Ruf in Bezug auf Zuverlässigkeit, Robustheit der Funktionen und Leistung erworben hat.
 - [Realtime](https://github.com/supabase/realtime) ist ein Elixir-Server, mit dem Sie PostgreSQL-Einsätze, -Updates und -Löschvorgänge über Websockets abhören können. Realtime fragt die in Postgres eingebaute Replikationsfunktionalität nach Datenbankänderungen ab, konvertiert die Änderungen in JSON und sendet dann das JSON über Websockets an autorisierte Clients.
@@ -105,16 +105,16 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Unser Ansatz für Client-Bibliotheken ist modular. Jede Unterbibliothek ist eine
 - [Katalanisch / Català](/i18n/README.ca.md)
 - [Dänisch / Dansk](/i18n/README.da.md)
 - [Niederländisch / Nederlands](/i18n/README.nl.md)
-- [Englisch](https://github.com/supabase/supabase)
+- [Englisch](https://github.com/vchavkov82/nextjs)
 - [Finnisch / Suomalainen](/i18n/README.fi.md)
 - [Französisch / Français](/i18n/README.fr.md)
 - [Deutsch / Deutsch](/i18n/README.de.md)

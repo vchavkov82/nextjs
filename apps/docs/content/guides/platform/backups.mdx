@@ -177,7 +177,7 @@ See the [Duplicate Project docs](/docs/guides/platform/clone-project).
 
 During the `pg_restore` process, the `search_path` is set to an empty string for predictability, and security. Using unqualified references to functions or relations can cause restorations using logical backups to fail, as the database will not be able to locate the function or relation being referenced. This can happen even if the database functions without issues during normal operations, as the `search_path` is usually set to include several schemas during normal operations. Therefore, you should always use schema-qualified names within your SQL code.
 
-You can refer to [an example PR](https://github.com/supabase/supabase/pull/28393/files) on how to update SQL code to use schema-qualified names.
+You can refer to [an example PR](https://github.com/vchavkov82/nextjs/pull/28393/files) on how to update SQL code to use schema-qualified names.
 
 #### Invalid check constraints
 

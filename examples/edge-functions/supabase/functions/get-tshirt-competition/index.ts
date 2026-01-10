@@ -42,13 +42,13 @@ Deno.serve(async (req) => {
       !size
     ) {
       throw new Error(
-        `Please provide valid 'email', 'twitter', 'size', and 'answer' params. HINT: https://github.com/supabase/supabase/blob/master/examples/edge-functions/supabase/functions/get-tshirt-competition/index.ts`
+        `Please provide valid 'email', 'twitter', 'size', and 'answer' params. HINT: https://github.com/vchavkov82/nextjs/blob/master/examples/edge-functions/supabase/functions/get-tshirt-competition/index.ts`
       )
     }
 
     if (answer !== countEmailSegments(email!)) {
       throw new Error(
-        `Sorry, that's wrong, please try again! HINT: https://github.com/supabase/supabase/blob/master/examples/edge-functions/supabase/functions/get-tshirt-competition/index.ts`
+        `Sorry, that's wrong, please try again! HINT: https://github.com/vchavkov82/nextjs/blob/master/examples/edge-functions/supabase/functions/get-tshirt-competition/index.ts`
       )
     }
 

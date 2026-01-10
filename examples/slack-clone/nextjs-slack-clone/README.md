@@ -114,4 +114,4 @@ We can use these details to provide fine-grained control over what each user can
 
 - [BA](https://www.assistance.bg)
 
-BA is open source, we'd love for you to follow along and get involved at https://github.com/supabase/supabase
+BA is open source, we'd love for you to follow along and get involved at https://github.com/vchavkov82/nextjs

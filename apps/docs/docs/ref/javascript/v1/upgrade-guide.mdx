@@ -468,7 +468,7 @@ Some the [PR](https://github.com/supabase/gotrue-js/pull/340) for additional bac
 
 `.insert()` / `.upsert()` / `.update()` / `.delete()` don't return rows by default: [PR](https://github.com/supabase/postgrest-js/pull/276).
 
-Previously, these methods return inserted/updated/deleted rows by default (which caused [some confusion](https://github.com/supabase/supabase/discussions/1548)), and you can opt to not return it by specifying `returning: 'minimal'`. Now the default behavior is to not return rows. To return inserted/updated/deleted rows, add a `.select()` call at the end.
+Previously, these methods return inserted/updated/deleted rows by default (which caused [some confusion](https://github.com/vchavkov82/nextjs/discussions/1548)), and you can opt to not return it by specifying `returning: 'minimal'`. Now the default behavior is to not return rows. To return inserted/updated/deleted rows, add a `.select()` call at the end.
 
 <RefSubLayout.EducationRow>
   <RefSubLayout.Details>

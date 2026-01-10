@@ -1,6 +1,6 @@
 // https://www.assistance.bg/docs/guides/platform/performance#optimizing-the-number-of-connections
 // https://github.com/supabase/platform/blob/develop/worker/src/lib/constants.ts#L544-L596
-// https://github.com/supabase/supabase-admin-api/blob/master/optimizations/pgbouncer.go
+// https://github.com/vchavkov82/nextjs-admin-api/blob/master/optimizations/pgbouncer.go
 // [Joshen] This matches for both Supavisor and PgBouncer
 
 export const POOLING_OPTIMIZATIONS = {

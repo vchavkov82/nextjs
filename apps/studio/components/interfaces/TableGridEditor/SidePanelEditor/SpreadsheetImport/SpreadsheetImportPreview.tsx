@@ -58,7 +58,7 @@ export const SpreadsheetImportPreview = ({
 
   /**
    * Remove items with duplicate row and code values because of the papaparse issue
-   * @link https://github.com/supabase/supabase/pull/38422#issue-3381886843
+   * @link https://github.com/vchavkov82/nextjs/pull/38422#issue-3381886843
    **/
   const dedupedErrors = errors.filter(
     (error, index, self) =>

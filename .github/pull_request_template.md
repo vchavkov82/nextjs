@@ -1,4 +1,4 @@
-## I have read the [CONTRIBUTING.md](https://github.com/supabase/supabase/blob/master/CONTRIBUTING.md) file.
+## I have read the [CONTRIBUTING.md](https://github.com/vchavkov82/nextjs/blob/master/CONTRIBUTING.md) file.
 
 YES/NO
 

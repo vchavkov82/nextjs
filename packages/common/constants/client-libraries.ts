@@ -6,27 +6,27 @@ export const CLIENT_LIBRARIES = [
     libraries: [
       {
         name: 'supabase-js',
-        url: 'https://github.com/supabase/supabase-js',
+        url: 'https://github.com/vchavkov82/nextjs-js',
       },
       {
         name: 'postgrest-js',
-        url: 'https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js',
+        url: 'https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js',
       },
       {
         name: 'auth-js',
-        url: 'https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js',
+        url: 'https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js',
       },
       {
         name: 'realtime-js',
-        url: 'https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js',
+        url: 'https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js',
       },
       {
         name: 'storage-js',
-        url: 'https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js',
+        url: 'https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js',
       },
       {
         name: 'functions-js',
-        url: 'https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js',
+        url: 'https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js',
       },
     ],
   },
@@ -160,7 +160,7 @@ export const CLIENT_LIBRARIES = [
     libraries: [
       {
         name: 'supabase-py',
-        url: 'https://github.com/supabase/supabase-py',
+        url: 'https://github.com/vchavkov82/nextjs-py',
       },
       {
         name: 'postgrest-py',
@@ -217,7 +217,7 @@ export const CLIENT_LIBRARIES = [
     libraries: [
       {
         name: 'supabase-swift',
-        url: 'https://github.com/supabase/supabase-swift',
+        url: 'https://github.com/vchavkov82/nextjs-swift',
       },
       {
         name: 'postgrest-swift',

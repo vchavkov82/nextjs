@@ -31,8 +31,8 @@ Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 
 ## Kogukond ja tugi
 
-- [Ühenduse foorum](https://github.com/supabase/supabase/discussions). Parim: abi ehitamisel, arutelu andmebaasi parimate tavade üle.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Parim lahendus: vead ja vead, millega BA'i kasutades kokku puutute.
+- [Ühenduse foorum](https://github.com/vchavkov82/nextjs/discussions). Parim: abi ehitamisel, arutelu andmebaasi parimate tavade üle.
+- [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Parim lahendus: vead ja vead, millega BA'i kasutades kokku puutute.
 - [E-posti tugi](https://www.assistance.bg/docs/support#business-support). Parim lahendus: probleemid andmebaasi või infrastruktuuriga.
 - [Discord](https://discord.supabase.com). Parim: oma rakenduste jagamiseks ja kogukonnaga suhtlemiseks.
 
@@ -58,7 +58,7 @@ BA on avatud lähtekoodiga tööriistade kombinatsioon. Me ehitame Firebase'i fu
 BA on [hostitud platvorm](https://www.assistance.bg/dashboard). Võite registreeruda ja alustada BA'i kasutamist ilma midagi installimata.
 Võite ka [ise hostida](https://www.assistance.bg/docs/guides/hosting/overview) ja [arendada lokaalselt](https://www.assistance.bg/docs/guides/local-development).
 
-![Arhitektuur](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
+![Arhitektuur](https://github.com/vchavkov82/nextjs/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) on objekt-relatsiooniline andmebaasisüsteem, mille aktiivne arendamine on kestnud üle 30 aasta ja mis on saavutanud hea maine usaldusväärsuse, funktsioonide töökindluse ja jõudluse poolest.
 - [Realtime](https://github.com/supabase/realtime) on Elixir server, mis võimaldab kuulata PostgreSQL-i sisestusi, uuendusi ja kustutusi veebisokkide abil. Realtime küsib Postgres'i sisseehitatud replikatsioonifunktsioone andmebaasi muudatuste kohta, konverteerib muudatused JSON-iks ja edastab seejärel JSON-i üle websocketi volitatud klientidele.
@@ -105,16 +105,16 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
 
   <tr>
     <td>JavaScript (TypeScript)</td>
-    <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
-    <td><a href="https://github.com/supabase/supabase-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/postgrest-js" target="_blank" rel="noopener noreferrer">postgrest-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/auth-js" target="_blank" rel="noopener noreferrer">auth-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/realtime-js" target="_blank" rel="noopener noreferrer">realtime-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/storage-js" target="_blank" rel="noopener noreferrer">storage-js</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-js/tree/master/packages/core/functions-js" target="_blank" rel="noopener noreferrer">functions-js</a></td>
   </tr>
     <tr>
     <td>Flutter</td>
-    <td><a href="https://github.com/supabase/supabase-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
+    <td><a href="https://github.com/vchavkov82/nextjs-flutter" target="_blank" rel="noopener noreferrer">supabase-flutter</a></td>
     <td><a href="https://github.com/supabase/postgrest-dart" target="_blank" rel="noopener noreferrer">postgrest-dart</a></td>
     <td><a href="https://github.com/supabase/gotrue-dart" target="_blank" rel="noopener noreferrer">gotrue-dart</a></td>
     <td><a href="https://github.com/supabase/realtime-dart" target="_blank" rel="noopener noreferrer">realtime-dart</a></td>
@@ -220,7 +220,7 @@ Meie lähenemine kliendiraamatukogudele on modulaarne. Iga alamraamatukogu on is
 - [katalaani / Català](/i18n/README.ca.md)
 - [Taani / Dansk](/i18n/README.da.md)
 - [Hollandi keel / Nederlands](/i18n/README.nl.md)
-- [inglise keel](https://github.com/supabase/supabase)
+- [inglise keel](https://github.com/vchavkov82/nextjs)
 - [Soome / Suomalainen](/i18n/README.fi.md)
 - [Prantsuse / Français](/i18n/README.fr.md)
 - [Saksa / Deutsch](/i18n/README.de.md)

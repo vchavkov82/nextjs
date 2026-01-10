@@ -1,5 +1,5 @@
 --
--- For use with https://github.com/supabase/supabase/tree/master/examples/slack-clone/nextjs-slack-clone
+-- For use with https://github.com/vchavkov82/nextjs/tree/master/examples/slack-clone/nextjs-slack-clone
 --
 
 -- Custom types

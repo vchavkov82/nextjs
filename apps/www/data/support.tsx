@@ -31,7 +31,7 @@ const data = {
       links: [
         {
           label: 'Report an issue',
-          link: 'https://github.com/supabase/supabase/issues',
+          link: 'https://github.com/vchavkov82/nextjs/issues',
           target: '_blank',
           icon: <IconGitHubSolid />,
           type: 'default',
