@@ -10,9 +10,9 @@ import { CodeBlock } from '~/features/ui/CodeBlock/CodeBlock'
 import { NamedCodeBlock } from '~/features/directives/CodeTabs.components'
 import { Accordion, AccordionItem } from '~/features/ui/Accordion.server'
 import InfoTooltip from '~/features/ui/InfoTooltip.server'
+import { TabPanel, Tabs } from '~/features/ui/Tabs.server'
 // Client components removed from components map - they cause serialization errors
 // import { ShowUntil } from '~/features/ui/ShowUntil.server'
-// import { TabPanel, Tabs } from '~/features/ui/Tabs.server'
 // import { ErrorCodes } from '../ui/ErrorCodes.server'
 // import { McpConfigPanel } from '../ui/McpConfigPanel.server'
 import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeCompact'
@@ -91,8 +91,8 @@ const components = {
   StepHikeCompactDetails: Details,
   StepHikeCompactCode: Code,
   InfoTooltip,
-  // Tabs,
-  // TabPanel,
+  Tabs,
+  TabPanel,
   h2: (props: any) => (
     <Heading tag="h2" {...props}>
       {props.children}

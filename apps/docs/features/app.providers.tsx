@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react'
+import { Suspense } from 'react'
 
 import { FeatureFlagProvider, IS_PLATFORM, ThemeProvider } from 'common'
 import dynamic from 'next/dynamic'
@@ -41,9 +42,13 @@ function GlobalProviders({ children }: PropsWithChildren) {
                 <div className="flex flex-col">
                   <SiteLayout>
                     {children}
-                    <DocsCommandMenu />
+                    <Suspense fallback={null}>
+                      <DocsCommandMenu />
+                    </Suspense>
                   </SiteLayout>
-                  <ThemeSandbox />
+                  <Suspense fallback={null}>
+                    <ThemeSandbox />
+                  </Suspense>
                 </div>
               </DocsCommandProvider>
               <SonnerToaster position="top-right" />

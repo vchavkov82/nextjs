@@ -30,7 +30,7 @@ export const TelemetryTagManager = () => {
   const isGTMEnabled = Boolean(IS_PLATFORM && process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID)
 
   if (!isGTMEnabled) {
-    return
+    return null
   }
 
   return (
