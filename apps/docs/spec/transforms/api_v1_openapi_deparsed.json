@@ -184,13 +184,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "patch": {
@@ -394,13 +388,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       },
       "delete": {
@@ -481,13 +469,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -579,13 +561,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -677,13 +653,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -775,13 +745,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -854,13 +818,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -930,13 +888,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -1076,13 +1028,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "post": {
@@ -1381,13 +1327,7 @@
             "bearer": []
           },
           {
-<<<<<<< HEAD
             "fga_permissions": ["organization_projects_create"]
-=======
-            "fga_permissions": [
-              "project_admin_write"
-            ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
           }
         ],
         "summary": "Create a project",
@@ -1400,13 +1340,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -1655,7 +1589,6 @@
         "security": [
           {
             "bearer": []
-<<<<<<< HEAD
           }
         ],
         "summary": "[Beta] Gets the list of available regions that can be used for a new project",
@@ -1668,22 +1601,6 @@
         ],
         "x-endpoint-owners": ["infra"],
         "x-oauth-scope": "organizations:read"
-=======
-          },
-          {
-            "fga_permissions": [
-              "available_regions_read"
-            ]
-          }
-        ],
-        "summary": "[Beta] Gets the list of available regions that can be used for a new project",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/organizations": {
@@ -1749,13 +1666,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       },
       "post": {
@@ -1821,27 +1732,12 @@
             "bearer": []
           },
           {
-<<<<<<< HEAD
             "fga_permissions": ["organizations_create"]
           }
         ],
         "summary": "Create an organization",
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api", "billing"]
-=======
-            "fga_permissions": [
-              "organizations_write"
-            ]
-          }
-        ],
-        "summary": "Create an organization",
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/authorize": {
@@ -1957,17 +1853,8 @@
           }
         ],
         "summary": "[Beta] Authorize user through oauth",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/token": {
@@ -2065,17 +1952,8 @@
           }
         ],
         "summary": "[Beta] Exchange auth code for user's access and refresh token",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/revoke": {
@@ -2123,17 +2001,8 @@
           }
         ],
         "summary": "[Beta] Revoke oauth app authorization and it's corresponding tokens",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/authorize/project-claim": {
@@ -2235,17 +2104,8 @@
           }
         ],
         "summary": "Authorize user through oauth and claim a project",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/snippets": {
@@ -2450,13 +2310,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -2624,13 +2478,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -2790,13 +2638,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "head": {
@@ -3005,13 +2847,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -3188,13 +3024,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -3264,13 +3094,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -3394,13 +3218,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "post": {
@@ -3557,13 +3375,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -3631,13 +3443,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "put": {
@@ -3712,13 +3518,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -3875,13 +3675,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -4009,13 +3803,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "delete": {
@@ -4160,13 +3948,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -4329,13 +4111,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "post": {
@@ -4584,13 +4360,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       },
       "delete": {
@@ -4642,13 +4412,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -4816,13 +4580,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -5022,13 +4780,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:read"
       },
       "delete": {
@@ -5079,13 +4831,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -5304,13 +5050,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -5510,13 +5250,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -5716,13 +5450,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -5796,13 +5524,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -5892,13 +5614,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -5984,13 +5700,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -6115,13 +5825,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "patch": {
@@ -6310,13 +6014,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -6465,13 +6163,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -6539,13 +6231,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "put": {
@@ -6629,13 +6315,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -6720,13 +6400,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "rest:read"
       },
       "patch": {
@@ -6834,13 +6508,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "rest:write"
       }
     },
@@ -6999,13 +6667,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "delete": {
@@ -7079,13 +6741,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra", "dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       },
       "patch": {
@@ -7182,13 +6838,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -7267,13 +6917,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "post": {
@@ -7355,13 +6999,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "delete": {
@@ -7426,13 +7064,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -7512,13 +7144,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -7622,13 +7248,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -7706,13 +7326,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -7789,13 +7403,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:read"
       },
       "delete": {
@@ -7846,13 +7454,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -7938,13 +7540,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -8030,13 +7626,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -8136,13 +7726,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -8452,13 +8036,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -8588,13 +8166,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -8673,13 +8245,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra", "support-tooling"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -8735,13 +8301,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra", "support-tooling"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8828,17 +8388,8 @@
           }
         ],
         "summary": "[Beta] Set up a read replica",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["management-api", "infra"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/read-replicas/remove": {
@@ -8902,17 +8453,8 @@
           }
         ],
         "summary": "[Beta] Remove a read replica",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["management-api", "infra"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/health": {
@@ -9099,13 +8641,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -9205,13 +8741,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -9309,13 +8839,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       }
     },
@@ -9724,13 +9248,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -9840,13 +9358,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       }
     },
@@ -9946,17 +9458,8 @@
           }
         ],
         "summary": "Get information about a signing key",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-endpoint-owners": ["auth"]
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "delete": {
         "operationId": "v1-remove-project-signing-key",
@@ -10062,13 +9565,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "patch": {
@@ -10200,13 +9697,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -10387,17 +9878,8 @@
           }
         ],
         "summary": "Gets project's storage config",
-<<<<<<< HEAD
         "tags": ["Storage"],
         "x-endpoint-owners": ["storage"]
-=======
-        "tags": [
-          "Storage"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "operationId": "v1-update-storage-config",
@@ -10546,17 +10028,8 @@
           }
         ],
         "summary": "Updates project's storage config",
-<<<<<<< HEAD
         "tags": ["Storage"],
         "x-endpoint-owners": ["storage"]
-=======
-        "tags": [
-          "Storage"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/config/database/postgres": {
@@ -10715,13 +10188,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -10993,13 +10460,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -11088,13 +10549,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -11220,13 +10675,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "patch": {
@@ -11323,13 +10772,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -12548,13 +11991,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       },
       "patch": {
@@ -14748,13 +14185,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       }
     },
@@ -14882,17 +14313,8 @@
           }
         ],
         "summary": "Gets realtime configuration",
-<<<<<<< HEAD
         "tags": ["Realtime"],
         "x-endpoint-owners": ["realtime"]
-=======
-        "tags": [
-          "Realtime"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "operationId": "v1-update-realtime-config",
@@ -14999,17 +14421,8 @@
           }
         ],
         "summary": "Updates realtime configuration",
-<<<<<<< HEAD
         "tags": ["Realtime"],
         "x-endpoint-owners": ["realtime"]
-=======
-        "tags": [
-          "Realtime"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/config/auth/third-party-auth": {
@@ -15123,13 +14536,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -15226,13 +14633,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -15337,13 +14738,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -15446,13 +14841,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -15505,13 +14894,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -15613,13 +14996,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "post": {
@@ -15670,13 +15047,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -15729,13 +15100,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -16072,17 +15437,8 @@
           }
         ],
         "summary": "List billing addons and compute instance selections",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "description": "Selects an addon variant, for example scaling the project’s compute instance up or down, and applies it to the project.",
@@ -16199,17 +15555,8 @@
           }
         ],
         "summary": "Apply or update billing addons, including compute instance size",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/billing/addons/{addon_variant}": {
@@ -16305,17 +15652,8 @@
           }
         ],
         "summary": "Remove billing addons or revert compute instance sizing",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/claim-token": {
@@ -16386,17 +15724,8 @@
           }
         ],
         "summary": "Gets project claim token",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "post": {
@@ -16470,17 +15799,8 @@
           }
         ],
         "summary": "Creates project claim token",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "delete": {
@@ -16522,17 +15842,8 @@
           }
         ],
         "summary": "Revokes project claim token",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       }
     },
@@ -16722,13 +16033,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -16929,13 +16234,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -17083,13 +16382,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["analytics"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "analytics:read"
       }
     },
@@ -17247,17 +16540,8 @@
           }
         ],
         "summary": "Gets project's usage api counts",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/analytics/endpoints/usage.api-requests-count": {
@@ -17380,17 +16664,8 @@
           }
         ],
         "summary": "Gets project's usage api requests count",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/analytics/endpoints/functions.combined-stats": {
@@ -17525,17 +16800,8 @@
           }
         ],
         "summary": "Gets a project's function combined statistics",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/cli/login-role": {
@@ -17632,13 +16898,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "delete": {
@@ -17707,13 +16967,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -17789,13 +17043,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "post": {
@@ -17881,13 +17129,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "put": {
@@ -17973,13 +17215,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "delete": {
@@ -18041,13 +17277,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -18147,13 +17377,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "patch": {
@@ -18232,13 +17456,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -18317,13 +17535,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -18400,13 +17612,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -18459,13 +17665,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -18560,13 +17760,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -18653,13 +17847,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -18781,13 +17969,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["security"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "post": {
@@ -18928,13 +18110,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["security"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -19117,17 +18293,8 @@
           }
         ],
         "summary": "Updates a user mapping for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/database/jit/list": {
@@ -19250,17 +18417,8 @@
           }
         ],
         "summary": "List all user-id to role mappings for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/database/jit/{user_id}": {
@@ -19313,17 +18471,8 @@
           }
         ],
         "summary": "Delete JIT access by user-id",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/functions": {
@@ -19440,13 +18589,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       },
       "post": {
@@ -19658,13 +18801,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       },
       "put": {
@@ -19853,13 +18990,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -20041,13 +19172,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -20172,13 +19297,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       },
       "patch": {
@@ -20387,13 +19506,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       },
       "delete": {
@@ -20455,13 +19568,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -20533,13 +19640,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["functions"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       }
     },
@@ -20630,13 +19731,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["storage"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "storage:read"
       }
     },
@@ -20896,13 +19991,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -21083,13 +20172,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -21270,13 +20353,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       },
       "put": {
@@ -21533,13 +20610,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "delete": {
@@ -21718,13 +20789,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["auth"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       }
     },
@@ -21843,13 +20908,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -21919,13 +20978,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -22019,13 +21072,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:write"
       },
@@ -22111,13 +21158,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:read"
       }
@@ -22187,13 +21228,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["infra"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:write"
       }
@@ -22278,13 +21313,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       }
     },
@@ -22391,13 +21420,7 @@
             "position": "after"
           }
         ],
-<<<<<<< HEAD
         "x-endpoint-owners": ["management-api"],
-=======
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       }
     },
@@ -22598,17 +21621,8 @@
           }
         ],
         "summary": "Gets project details for the specified organization and claim token",
-<<<<<<< HEAD
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "post": {
@@ -22656,17 +21670,8 @@
           }
         ],
         "summary": "Claims project for the specified organization",
-<<<<<<< HEAD
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       }
     },
@@ -22941,17 +21946,8 @@
           }
         ],
         "summary": "Gets all projects for the given organization",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"]
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     }
   },
