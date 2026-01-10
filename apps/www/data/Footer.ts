@@ -69,7 +69,7 @@ const footerData = [
       },
       {
         text: 'System Status',
-        url: 'https://status.supabase.com/',
+        url: 'https://status.www.assistance.bg/',
       },
       {
         text: 'Become a Partner',
@@ -97,7 +97,7 @@ const footerData = [
       },
       {
         text: 'HIPAA',
-        url: 'https://forms.supabase.com/hipaa2',
+        url: 'https://forms.www.assistance.bg/hipaa2',
       },
     ],
   },

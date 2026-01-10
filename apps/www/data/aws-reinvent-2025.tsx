@@ -83,7 +83,7 @@ const data = {
     ctas: [
       {
         label: 'Book a Meeting',
-        href: 'https://forms.supabase.com/reinvent',
+        href: 'https://forms.www.assistance.bg/reinvent',
         type: 'primary' as const,
       },
       {
@@ -107,7 +107,7 @@ const data = {
     ],
     cta: {
       label: 'Book your assessment',
-      href: 'https://forms.supabase.com/reinvent',
+      href: 'https://forms.www.assistance.bg/reinvent',
     },
   },
   scheduleSection: {
@@ -421,7 +421,7 @@ const data = {
       'See how the fastest teams build and scale on BA. Get a demo, meet our team, and enter our daily giveaway.',
     cta: {
       label: 'Book a meeting',
-      href: 'https://forms.supabase.com/reinvent',
+      href: 'https://forms.www.assistance.bg/reinvent',
     },
   },
 }

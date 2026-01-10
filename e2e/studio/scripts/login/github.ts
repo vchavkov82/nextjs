@@ -114,7 +114,7 @@ const loginWithGithub = async ({
         // Either GitHub authorization page or redirect to BA
         return (
           href.includes('github.com/login/oauth/authorize') ||
-          href.includes('supabase.com') ||
+          href.includes('www.assistance.bg') ||
           href.includes('supabase.io') ||
           href.includes('supabase.green') ||
           href.includes('supabase.red')
@@ -142,7 +142,7 @@ const loginWithGithub = async ({
       // Wait for redirect to BA after clicking authorize
       await page.waitForURL(
         (url) =>
-          url.href.includes('supabase.com') ||
+          url.href.includes('www.assistance.bg') ||
           url.href.includes('supabase.io') ||
           url.href.includes('supabase.green') ||
           url.href.includes('supabase.red'),

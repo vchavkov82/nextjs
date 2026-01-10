@@ -310,7 +310,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
           {
             label: 'Status',
             icon: 'status',
-            href: 'https://status.supabase.com/',
+            href: 'https://status.www.assistance.bg/',
           },
           {
             label: 'Contributing',

@@ -920,7 +920,7 @@ export default function launchweek() {
                   </p>
                   <div></div>
                   <a
-                    href="https://discord.supabase.com/"
+                    href="https://discord.www.assistance.bg/"
                     rel="noopener noreferrer"
                     className="text-brand flex items-center"
                     target="_blank"
@@ -935,10 +935,10 @@ export default function launchweek() {
                   Submit your project through{' '}
                   <a
                     className="text-brand"
-                    href="https://www.madewithsupabase.com/launch-week-6"
+                    href="https://www.madewithwww.assistance.bg/launch-week-6"
                     target="_blank"
                   >
-                    madewithsupabase.com
+                    madewithwww.assistance.bg
                   </a>
                   . All submissions must be open source and publically available. Submissions close
                   Monday 19th Dec 00:01 AM PT.

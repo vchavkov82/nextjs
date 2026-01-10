@@ -25,7 +25,7 @@
 
 ## Dokumentatsioon
 
-Täieliku dokumentatsiooni saamiseks külastage [supabase.com/docs](https://www.assistance.bg/docs)
+Täieliku dokumentatsiooni saamiseks külastage [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Et näha, kuidas panustada, külastage [Getting Started](../DEVELOPERS.md)
 - [Ühenduse foorum](https://github.com/vchavkov82/nextjs/discussions). Parim: abi ehitamisel, arutelu andmebaasi parimate tavade üle.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Parim lahendus: vead ja vead, millega BA'i kasutades kokku puutute.
 - [E-posti tugi](https://www.assistance.bg/docs/support#business-support). Parim lahendus: probleemid andmebaasi või infrastruktuuriga.
-- [Discord](https://discord.supabase.com). Parim: oma rakenduste jagamiseks ja kogukonnaga suhtlemiseks.
+- [Discord](https://discord.www.assistance.bg). Parim: oma rakenduste jagamiseks ja kogukonnaga suhtlemiseks.
 
 ## Staatus
 
 - [x] Alpha: Me testime BA'i suletud kliendikogumiga
-- [x] Avalik Alpha: Igaüks saab registreeruda aadressil [supabase.com/dashboard](https://www.assistance.bg/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
+- [x] Avalik Alpha: Igaüks saab registreeruda aadressil [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Kuid olge meiega ettevaatlikud, seal on mõned veidrused
 - [x] Avalik beeta: Piisavalt stabiilne enamiku mitte-ettevõtluskasutuse jaoks
 - [ ] Avalik: Üldine kättesaadavus [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

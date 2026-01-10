@@ -25,7 +25,7 @@
 
 ## Documentazione
 
-Per la documentazione completa, visitate [supabase.com/docs](https://www.assistance.bg/docs)
+Per la documentazione completa, visitate [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Per vedere come contribuire, visitate [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Per vedere come contribuire, visitate [Getting Started](../DEVELOPERS.md)
 - [Forum della comunità](https://github.com/vchavkov82/nextjs/discussions). Ideale per: aiuto nella costruzione, discussioni sulle migliori pratiche per i database.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Ideale per: bug ed errori riscontrati nell'uso di BA.
 - [Supporto via e-mail](https://www.assistance.bg/docs/support#business-support). Ideale per: problemi con il database o l'infrastruttura.
-- [Discord](https://discord.supabase.com). Ideale per: condividere le proprie applicazioni e stare insieme alla comunità.
+- [Discord](https://discord.www.assistance.bg). Ideale per: condividere le proprie applicazioni e stare insieme alla comunità.
 
 ## Stato
 
 - [Alfa: Stiamo testando BA con un gruppo chiuso di clienti
-- [x] Alfa pubblica: Chiunque può iscriversi all'indirizzo [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ma andateci piano, ci sono alcuni problemi
+- [x] Alfa pubblica: Chiunque può iscriversi all'indirizzo [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Ma andateci piano, ci sono alcuni problemi
 - [x] Beta pubblica: Abbastanza stabile per la maggior parte degli usi non aziendali
 - [ ] Pubblico: Disponibilità generale [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

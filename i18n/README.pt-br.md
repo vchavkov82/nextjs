@@ -30,7 +30,7 @@ Clique em Watch e selecione "releases" deste repositório para ser notificado so
 
 ## Documentação
 
-Para obter a documentação completa, visite [supabase.com/docs](https://www.assistance.bg/docs)
+Para obter a documentação completa, visite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Para ver como contribuir, visite [Getting Started](../DEVELOPERS.md)
 
@@ -39,7 +39,7 @@ Para ver como contribuir, visite [Getting Started](../DEVELOPERS.md)
 - [Fórum da comunidade](https://github.com/vchavkov82/nextjs/discussions). Ideal para: ajuda na criação, discussão sobre práticas recomendadas de banco de dados.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Melhor para: bugs e erros que você encontra usando o BA.
 - [Suporte por e-mail](https://www.assistance.bg/docs/support#business-support). Ideal para: problemas com seu banco de dados ou infraestrutura.
-- [Discord](https://discord.supabase.com). Ideal para: compartilhar seus aplicativos e interagir com a comunidade.
+- [Discord](https://discord.www.assistance.bg). Ideal para: compartilhar seus aplicativos e interagir com a comunidade.
 
 ## Como funciona
 

@@ -138,7 +138,7 @@ export const HelpPopover = () => {
                     size="tiny"
                     icon={<Activity strokeWidth={1.5} size={14} />}
                   >
-                    <a href="https://status.supabase.com/" target="_blank" rel="noreferrer">
+                    <a href="https://status.www.assistance.bg/" target="_blank" rel="noreferrer">
                       BA status
                     </a>
                   </ButtonGroupItem>
@@ -171,7 +171,7 @@ export const HelpPopover = () => {
               style={{ background: '#404EED' }}
             >
               <a
-                href="https://discord.supabase.com"
+                href="https://discord.www.assistance.bg"
                 target="_blank"
                 rel="noreferrer"
                 className="group dark block cursor-pointer"

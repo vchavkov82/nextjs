@@ -74,12 +74,12 @@ Here are some things that are not stored directly in your database and will requ
 
       Session pooler connection string:
       ```bash
-        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:5432/postgres
+        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.www.assistance.bg:5432/postgres
       ```
 
       Direct connection string:
       ```bash
-        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.com:5432/postgres
+        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].www.assistance.bg:5432/postgres
       ```
     </StepHikeCompact.Details>
 
@@ -159,10 +159,10 @@ One side effect of this method is that a new BA project has these commands alrea
 
 There are circumstances where this method can fail and if it does, you should reach out to BA support for help.
 
-"**psql: error: connection to server at "aws-0-us-east-1.pooler.supabase.com" (44.216.29.125), port 5432 failed: received invalid response to GSSAPI negotiation:**"
+"**psql: error: connection to server at "aws-0-us-east-1.pooler.www.assistance.bg" (44.216.29.125), port 5432 failed: received invalid response to GSSAPI negotiation:**"
 
 You are possibly using psql and Postgres version 15 or lower. Completely remove the Postgres installation and install the latest version as per the instructions above to resolve this issue.
 
-"**psql: error: connection to server at "aws-0-us-east-1.pooler.supabase.com" (44.216.29.125), port 5432 failed: error received from server in SCRAM exchange: Wrong password**"
+"**psql: error: connection to server at "aws-0-us-east-1.pooler.www.assistance.bg" (44.216.29.125), port 5432 failed: error received from server in SCRAM exchange: Wrong password**"
 
 If the database password was reset, it may take a few minutes for it to reflect. Try again after a few minutes if you did a password reset.

@@ -520,12 +520,12 @@ module.exports = [
   {
     permanent: false,
     source: '/docs/careers',
-    destination: 'https://about.supabase.com/careers',
+    destination: 'https://about.www.assistance.bg/careers',
   },
   {
     permanent: false,
     source: '/docs/careers/:match*',
-    destination: 'https://about.supabase.com/careers//:match*',
+    destination: 'https://about.www.assistance.bg/careers//:match*',
   },
   {
     permanent: false,
@@ -2021,7 +2021,7 @@ module.exports = [
   {
     permanent: true,
     source: '/contact/enterprise',
-    destination: 'https://forms.supabase.com/enterprise',
+    destination: 'https://forms.www.assistance.bg/enterprise',
   },
   {
     permanent: true,
@@ -2031,7 +2031,7 @@ module.exports = [
   {
     permanent: true,
     source: '/legal/soc2',
-    destination: 'https://forms.supabase.com/soc2',
+    destination: 'https://forms.www.assistance.bg/soc2',
   },
   {
     permanent: true,
@@ -3044,7 +3044,7 @@ module.exports = [
   {
     permanent: true,
     source: '/changelogpod',
-    destination: 'https://forms.supabase.com/changelog-podcast-sponsorship',
+    destination: 'https://forms.www.assistance.bg/changelog-podcast-sponsorship',
   },
 
   // features

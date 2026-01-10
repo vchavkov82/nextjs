@@ -25,7 +25,7 @@
 
 ## Τεκμηρίωση
 
-Για πλήρη τεκμηρίωση, επισκεφθείτε τη διεύθυνση [supabase.com/docs](https://www.assistance.bg/docs)
+Για πλήρη τεκμηρίωση, επισκεφθείτε τη διεύθυνση [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Για να δείτε πώς μπορείτε να συνεισφέρετε, επισκεφθείτε το [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Το καλύτερο για: βοήθεια με την κατασκευή, συζήτηση σχετικά με τις βέλτιστες πρακτικές της βάσης δεδομένων.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Το καλύτερο για: σφάλματα και λάθη που αντιμετωπίζετε χρησιμοποιώντας την BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Το καλύτερο για: προβλήματα με τη βάση δεδομένων ή την υποδομή σας.
-- [Discord](https://discord.supabase.com). Το καλύτερο για: να μοιράζεστε τις εφαρμογές σας και να κάνετε παρέα με την κοινότητα.
+- [Discord](https://discord.www.assistance.bg). Το καλύτερο για: να μοιράζεστε τις εφαρμογές σας και να κάνετε παρέα με την κοινότητα.
 
 ## Κατάσταση
 
 - [x] Alpha: Δοκιμάζουμε το BA με ένα κλειστό σύνολο πελατών
-- [x] Δημόσια Alpha: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
+- [x] Δημόσια Alpha: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Αλλά να είστε προσεκτικοί μαζί μας, υπάρχουν μερικές ατέλειες
 - [x] Δημόσια Beta: Αρκετά σταθερό για τις περισσότερες περιπτώσεις μη επιχειρηματικής χρήσης
 - [ ] Δημόσια: [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

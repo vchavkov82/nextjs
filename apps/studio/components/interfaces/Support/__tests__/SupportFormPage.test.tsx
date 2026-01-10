@@ -184,7 +184,7 @@ const renderSupportFormPage = (options?: Parameters<typeof customRender>[1]) =>
 const getStatusLink = (screen: Screen) => {
   const statusLink = screen
     .getAllByRole('link')
-    .find((el) => el.getAttribute('href') === 'https://status.supabase.com/')
+    .find((el) => el.getAttribute('href') === 'https://status.www.assistance.bg/')
   expect(statusLink).toBeDefined()
   return statusLink
 }

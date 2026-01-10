@@ -10,10 +10,10 @@ export SUPABASE_ACCESS_TOKEN="your-access-token"
 
 # List your organizations to get the organization ID
 curl -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
-  https://api.supabase.com/v1/organizations
+  https://api.www.assistance.bg/v1/organizations
 
 # Create a new project (replace <org-id> with your organization ID)
-curl -X POST https://api.supabase.com/v1/projects \
+curl -X POST https://api.www.assistance.bg/v1/projects \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

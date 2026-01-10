@@ -25,7 +25,7 @@
 
 ## Dokumentáció
 
-A teljes dokumentációért látogasson el [supabase.com/docs](https://www.assistance.bg/docs)
+A teljes dokumentációért látogasson el [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 A Contribute-hoz való hozzájáruláshoz látogasson el a [Getting Started](../DEVELOPERS.md) oldalra
 
@@ -34,12 +34,12 @@ A Contribute-hoz való hozzájáruláshoz látogasson el a [Getting Started](../
 - [Közösségi fórum](https://github.com/vchavkov82/nextjs/discussions). Legjobb: segítség az építéshez, az adatbázis legjobb gyakorlatainak megvitatása.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Legjobb: hibák és hibák, amelyekkel a BA használatával találkozol.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Legjobb: az adatbázisoddal vagy az infrastruktúrával kapcsolatos problémákra.
-- [Discord](https://discord.supabase.com). A legjobb: az alkalmazások megosztására és a közösséggel való együttlétre.
+- [Discord](https://discord.www.assistance.bg). A legjobb: az alkalmazások megosztására és a közösséggel való együttlétre.
 
 ## Állapot
 
 - [x] Alpha: A BA-t egy zárt ügyfélkörrel teszteljük
-- [x] Nyilvános alfa: Bárki regisztrálhat az [supabase.com/dashboard](https://www.assistance.bg/dashboard) oldalon. De legyetek óvatosak velünk, van még néhány hiba
+- [x] Nyilvános alfa: Bárki regisztrálhat az [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) oldalon. De legyetek óvatosak velünk, van még néhány hiba
 - [x] Nyilvános béta: Elég stabil a legtöbb nem vállalati felhasználási esethez
 - [ ] Nyilvános: Általános elérhetőség [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

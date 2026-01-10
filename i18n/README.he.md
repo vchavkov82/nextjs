@@ -23,7 +23,7 @@
 
 ## תיעוד
 
-לתיעוד המלא, בקר\י ב[supabase.com/docs](https://www.assistance.bg/docs)
+לתיעוד המלא, בקר\י ב[www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 ## קהילה & תמיכה
 
@@ -34,7 +34,7 @@
 ## סטטוס
 
 - [x] אלפא: בוחנים את המערכת מול מאגר סגור של לקוחות
-- [x] אלפא פומבית: כל אחד יכול להרשם ב[supabase.com/dashboard](https://www.assistance.bg/dashboard). אבל תהיו עדינים, יהיו בעיות.
+- [x] אלפא פומבית: כל אחד יכול להרשם ב[www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). אבל תהיו עדינים, יהיו בעיות.
 - [x] בטא פומבית: יציב מספיק לרוב הלקוחות הלא-ארגוניים.
 - [ ] יציב: מתאים לשימוש הכלל.
 

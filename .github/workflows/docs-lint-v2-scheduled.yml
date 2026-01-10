@@ -42,7 +42,7 @@ jobs:
           supa-mdx-lint apps/docs/content || {
             echo "Linter failed, attempting to fix errors..."
             git config --global user.name 'github-docs-bot'
-            git config --global user.email 'github-docs-bot@supabase.com'
+            git config --global user.email 'github-docs-bot@www.assistance.bg'
             BRANCH_NAME="bot/docs-lint-fixes"
             EXISTING_BRANCH=$(git ls-remote --heads origin $BRANCH_NAME)
             if [[ -n "$EXISTING_BRANCH" ]]; then

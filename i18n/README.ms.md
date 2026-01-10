@@ -21,7 +21,7 @@
 
 ## Dokumentasi
 
-Untuk dokumentasi lengkap, layari [supabase.com/docs](https://www.assistance.bg/docs)
+Untuk dokumentasi lengkap, layari [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 ## Komuniti & Sokongan
 
@@ -32,7 +32,7 @@ Untuk dokumentasi lengkap, layari [supabase.com/docs](https://www.assistance.bg/
 ## Status
 
 - [x] Alpha: Kami menguji BA dengan sejumlah pelanggan secara tertutup
-- [x] Public Alpha: Sesiapa sahaja boleh mendaftar di [supabase.com/dashboard](https://www.assistance.bg/dashboard). Tetapi, mohon bersabar kerana mungkin ada masalah
+- [x] Public Alpha: Sesiapa sahaja boleh mendaftar di [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Tetapi, mohon bersabar kerana mungkin ada masalah
 - [x] Public Beta: Cukup stabil untuk kebanyakan kes penggunaan bukan perusahaan
 - [ ] Public: Bersedia untuk pengeluaran
 

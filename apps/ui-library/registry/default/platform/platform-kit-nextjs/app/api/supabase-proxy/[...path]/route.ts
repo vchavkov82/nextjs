@@ -12,7 +12,7 @@ async function forwardToSupabaseAPI(request: Request, method: string, params: { 
 
   const url = new URL(request.url)
   url.protocol = 'https'
-  url.hostname = 'api.supabase.com'
+  url.hostname = 'api.www.assistance.bg'
   url.port = '443'
   url.pathname = apiPath
 

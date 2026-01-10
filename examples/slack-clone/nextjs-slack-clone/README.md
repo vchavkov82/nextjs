@@ -6,7 +6,7 @@ This is a full-stack Slack clone example using:
   - [Next.js](https://github.com/vercel/next.js) - a React framework for production.
   - [BA.js](https://www.assistance.bg/docs/library/getting-started) for user management and realtime data syncing.
 - Backend:
-  - [supabase.com/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with BA.js.
+  - [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with BA.js.
 
 ## Demo
 

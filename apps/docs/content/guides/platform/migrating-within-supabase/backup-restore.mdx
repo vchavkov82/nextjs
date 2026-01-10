@@ -31,12 +31,12 @@ breadcrumb: 'Migrations'
 
       Session pooler connection string:
       ```bash
-        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:5432/postgres
+        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.www.assistance.bg:5432/postgres
       ```
 
       Direct connection string:
       ```bash
-        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.com:5432/postgres
+        postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].www.assistance.bg:5432/postgres
       ```
     </StepHikeCompact.Details>
 
@@ -121,12 +121,12 @@ breadcrumb: 'Migrations'
 
         Session pooler connection string:
         ```bash
-          postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.supabase.com:5432/postgres
+          postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-us-east-1.pooler.www.assistance.bg:5432/postgres
         ```
 
         Direct connection string:
         ```bash
-          postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.com:5432/postgres
+          postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@db.[PROJECT-REF].www.assistance.bg:5432/postgres
         ```
       </StepHikeCompact.Details>
 
@@ -176,9 +176,9 @@ breadcrumb: 'Migrations'
           export NEW_PROJECT_REF="<new_project_ref>"
           export SUPABASE_ACCESS_TOKEN="<personal_access_token>"
 
-          curl "https://api.supabase.com/v1/projects/$OLD_PROJECT_REF/pgsodium" \
+          curl "https://api.www.assistance.bg/v1/projects/$OLD_PROJECT_REF/pgsodium" \
             -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" |
-          curl "https://api.supabase.com/v1/projects/$NEW_PROJECT_REF/pgsodium" \
+          curl "https://api.www.assistance.bg/v1/projects/$NEW_PROJECT_REF/pgsodium" \
             -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
             -X PUT --json @-
           ```

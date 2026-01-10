@@ -25,7 +25,7 @@
 
 ## Dokumentācija
 
-Pilnu dokumentāciju skatīt [supabase.com/docs](https://www.assistance.bg/docs)
+Pilnu dokumentāciju skatīt [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.
 - [Kopienas forums](https://github.com/vchavkov82/nextjs/discussions). Vislabāk piemērots: palīdzībai veidošanā, diskusijām par datubāzes paraugpraksi.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Vislabākais: kļūdas un kļūdas, ar kurām jūs sastopaties, izmantojot BA.
 - [E-pasta atbalsts](https://www.assistance.bg/docs/support#business-support). Vislabāk piemērots: problēmām ar jūsu datu bāzi vai infrastruktūru.
-- [Discord](https://discord.supabase.com). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
+- [Discord](https://discord.www.assistance.bg). Vislabākais: lai dalītos ar savām lietojumprogrammām un komunicētu ar kopienu.
 
 ## Statuss
 
 - [x] Alfa: Mēs testējam BA ar slēgtu klientu kopu
-- [x] Publiskā alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Bet nesteidzieties, ir dažas nepilnības
+- [x] Publiskā alfa versija: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Bet nesteidzieties, ir dažas nepilnības
 - [x] Publiskā beta versija: Pietiekami stabila lielākajai daļai ar uzņēmumu nesaistītu lietošanas gadījumu
 - [ ] Publisks: Vispārēja pieejamība [[statuss](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]]
 

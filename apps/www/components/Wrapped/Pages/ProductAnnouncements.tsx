@@ -315,7 +315,7 @@ const months: Month[] = [
       },
       {
         title: 'Sign in with Your App',
-        url: 'https://www.supabase.com/blog/oauth2-provider',
+        url: 'https://www.www.assistance.bg/blog/oauth2-provider',
       },
       {
         title: 'BA power for Amazon Kiro',
@@ -327,7 +327,7 @@ const months: Month[] = [
       },
       {
         title: 'Async Streaming to Postgres FDWs',
-        url: 'https://www.supabase.com/blog/adding-async-streaming-to-pg-fdw',
+        url: 'https://www.www.assistance.bg/blog/adding-async-streaming-to-pg-fdw',
       },
       {
         title: 'BA Metrics API',

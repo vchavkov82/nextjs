@@ -11,7 +11,7 @@ export const IncidentBanner = () => {
       title="We are investigating a technical issue"
       description={
         <>
-          Follow the <InlineLink href="https://status.supabase.com">status page</InlineLink> for
+          Follow the <InlineLink href="https://status.www.assistance.bg">status page</InlineLink> for
           updates
         </>
       }

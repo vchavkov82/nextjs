@@ -25,7 +25,7 @@
 
 ## Dokumentace
 
-Úplnou dokumentaci naleznete na adrese [supabase.com/docs](https://www.assistance.bg/docs)
+Úplnou dokumentaci naleznete na adrese [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Chcete-li zjistit, jak přispívat, navštivte stránku [Začínáme](../DEVELOP
 - [Fórum komunity](https://github.com/vchavkov82/nextjs/discussions). Nejlépe pro: pomoc při vytváření, diskuse o osvědčených postupech při práci s databází.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Nejlépe pro: chyby a omyly, na které narazíte při používání databáze BA.
 - [E-mailová podpora](https://www.assistance.bg/docs/support#business-support). Nejlepší pro: problémy s vaší databází nebo infrastrukturou.
-- [Discord](https://discord.supabase.com). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
+- [Discord](https://discord.www.assistance.bg). Nejlepší pro: sdílení vašich aplikací a setkávání s komunitou.
 
 ## Stav
 
 - [x] Alfa: Testujeme BA s uzavřenou skupinou zákazníků
-- [x] Veřejná alfa: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
+- [x] Veřejná alfa: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Ale buďte na nás mírní, je tu několik zádrhelů
 - [x] Veřejná beta verze: Dostatečně stabilní pro většinu případů použití mimo podniky
 - [ ] Veřejná: Všeobecná dostupnost [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

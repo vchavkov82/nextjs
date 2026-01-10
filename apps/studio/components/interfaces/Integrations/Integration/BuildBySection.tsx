@@ -45,7 +45,7 @@ export const BuiltBySection = forwardRef<ElementRef<'div'>, BuiltBySectionProps>
               className="text-foreground-light hover:text-foreground text-sm flex items-center gap-2"
             >
               <Book size={16} />
-              {docsUrl.includes('supabase.com/docs')
+              {docsUrl.includes('www.assistance.bg/docs')
                 ? 'BA Docs'
                 : docsUrl.includes('github.com')
                   ? 'GitHub Docs'

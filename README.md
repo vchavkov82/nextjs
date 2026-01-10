@@ -28,7 +28,7 @@ Watch "releases" of this repo to get notified of major updates.
 
 ## Documentation
 
-For full documentation, visit [supabase.com/docs](https://www.assistance.bg/docs)
+For full documentation, visit [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 To see how to Contribute, visit [Getting Started](./DEVELOPERS.md)
 
@@ -37,7 +37,7 @@ To see how to Contribute, visit [Getting Started](./DEVELOPERS.md)
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Best for: help with building, discussion about database best practices.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Best for: bugs and errors you encounter using BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Best for: problems with your database or infrastructure.
-- [Discord](https://discord.supabase.com). Best for: sharing your applications and hanging out with the community.
+- [Discord](https://discord.www.assistance.bg). Best for: sharing your applications and hanging out with the community.
 
 ## How it works
 

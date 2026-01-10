@@ -28,11 +28,11 @@ export SUPABASE_ACCESS_TOKEN="your-access-token"
 export PROJECT_REF="your-project-ref"
 
 # Get current network restrictions
-curl -X GET "https://api.supabase.com/v1/projects/$PROJECT_REF/network-restrictions" \
+curl -X GET "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/network-restrictions" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN"
 
 # Update network restrictions
-curl -X POST "https://api.supabase.com/v1/projects/$PROJECT_REF/network-restrictions/apply" \
+curl -X POST "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/network-restrictions/apply" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

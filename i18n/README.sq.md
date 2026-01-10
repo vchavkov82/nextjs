@@ -21,7 +21,7 @@
 
 ## Dokumentimi
 
-Për dokumentimin e plotë, vizitoni [supabase.com/docs](https://www.assistance.bg/docs)
+Për dokumentimin e plotë, vizitoni [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 ## Komuniteti dhe Mbështetja
 
@@ -32,7 +32,7 @@ Për dokumentimin e plotë, vizitoni [supabase.com/docs](https://www.assistance.
 ## Statusi
 
 - [x] Alfa: Ne po testojmë BA me një grup të mbyllur klientësh
-- [x] Publike Alpha: Gjithkush mund të regjistrohet në [supabase.com/dashboard](https://www.assistance.bg/dashboard). Por shkoni lehtë për ne, ka disa ngërçe
+- [x] Publike Alpha: Gjithkush mund të regjistrohet në [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Por shkoni lehtë për ne, ka disa ngërçe
 - [x] Publike Beta: Mjaft e qëndrueshme për shumicën e rasteve të përdorimit për jo ndërmarrjet
 - [ ] Publike: Gati për Prodhim / Publikim
 

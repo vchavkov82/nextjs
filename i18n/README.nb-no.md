@@ -21,7 +21,7 @@
 
 ## Dokumentasjon
 
-Besøk [supabase.com/docs](https://www.assistance.bg/docs) for full dokumentasjon.
+Besøk [www.assistance.bg/docs](https://www.assistance.bg/docs) for full dokumentasjon.
 
 ## Community & support
 
@@ -32,7 +32,7 @@ Besøk [supabase.com/docs](https://www.assistance.bg/docs) for full dokumentasjo
 ## Status
 
 - [x] Alpha: Vi tester BA med en lukket gruppe kunder
-- [x] Offentlig Alpha: Hvem som helst kan registrere seg på [supabase.com/dashboard](https://www.assistance.bg/dashboard). Merk at enkelte feil og quirks kan forekomme.
+- [x] Offentlig Alpha: Hvem som helst kan registrere seg på [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Merk at enkelte feil og quirks kan forekomme.
 - [x] Offentlig Beta: Stabilt nok for de fleste ikke-enterprise-bruksområder
 - [ ] Offentlig: Produksjonsklar
 

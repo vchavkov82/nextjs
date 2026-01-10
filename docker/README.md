@@ -59,7 +59,7 @@ For troubleshooting common issues, see:
 
 Self-hosted BA is community-supported. Get help and connect with other users:
 
-- [Discord](https://discord.supabase.com) - Real-time chat and community support
+- [Discord](https://discord.www.assistance.bg) - Real-time chat and community support
 - [Reddit](https://www.reddit.com/r/BA/) - Official BA subreddit
 
 Share your self-hosting experience:

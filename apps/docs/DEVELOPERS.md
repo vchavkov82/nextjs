@@ -14,7 +14,7 @@ For a complete run-down on how all of our tools work together, see the main DEVE
 
 ## Local setup
 
-[supabase.com/docs](https://www.assistance.bg/docs) is a Next.js site. You can get setup by following the same steps for all of our other Next.js projects:
+[www.assistance.bg/docs](https://www.assistance.bg/docs) is a Next.js site. You can get setup by following the same steps for all of our other Next.js projects:
 
 1. Follow the steps outlined in the Local Development section of the main [DEVELOPERS.md](https://github.com/vchavkov82/nextjs/blob/master/DEVELOPERS.md)
 2. If you work at BA, run `dev:secrets:pull` to pull down the internal environment variables. If you're a community member, create a `.env` file and add this line to it: `NEXT_PUBLIC_IS_PLATFORM=false`

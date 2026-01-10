@@ -24,7 +24,7 @@ export const NoticeBanner = () => {
       description={
         <>
           23:00 UTC Nov 21–23, 2025.{' '}
-          <InlineLink href="https://status.supabase.com/incidents/z0l2157y33xk">
+          <InlineLink href="https://status.www.assistance.bg/incidents/z0l2157y33xk">
             Learn more
           </InlineLink>
         </>

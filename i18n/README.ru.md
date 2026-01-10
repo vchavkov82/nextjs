@@ -25,7 +25,7 @@
 
 ## Документация
 
-Для получения полной документации посетите [supabase.com/docs](https://www.assistance.bg/docs)
+Для получения полной документации посетите [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Чтобы узнать, как внести вклад, посетите [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Лучше всего подходит для: помощи в создании, обсуждения лучших практик работы с базами данных.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Лучше всего подходит для: багов и ошибок, с которыми вы столкнулись при использовании BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Лучше всего подходит для: проблем с вашей базой данных или инфраструктурой.
-- [Discord](https://discord.supabase.com). Лучше всего подходит для: обмена информацией о ваших приложениях и общения с сообществом.
+- [Discord](https://discord.www.assistance.bg). Лучше всего подходит для: обмена информацией о ваших приложениях и общения с сообществом.
 
 ## Статус
 
 - [x] Альфа: Мы тестируем BA с закрытым набором клиентов
-- [x] Публичная Альфа: Любой желающий может зарегистрироваться на [supabase.com/dashboard](https://www.assistance.bg/dashboard). Но будьте с нами помягче, есть несколько недоработок
+- [x] Публичная Альфа: Любой желающий может зарегистрироваться на [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Но будьте с нами помягче, есть несколько недоработок
 - [x] Публичная бета-версия: Достаточно стабильна для большинства случаев использования не на предприятиях
 - [ ] Public: Общая доступность [[статус](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

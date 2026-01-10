@@ -125,7 +125,7 @@ const recursiveDecodeURI = (uri: string | null) => {
 
 /**
  * [Terry]
- * this page powers supabase.com/changelog
+ * this page powers www.assistance.bg/changelog
  * this page used to just be a feed of the releases endpoint
  * (https://api.github.com/repos/supabase/supabase/releases) (rest api)
  * but is now a blend of that legacy relases and the new Changelog category of the Discussions

@@ -30,7 +30,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
       image: '/images/index/gradient-bg.png',
       cta: {
         label: 'Start your project',
-        link: 'https://app.supabase.com',
+        link: 'https://app.www.assistance.bg',
       },
       secondaryCta: {
         label: 'Documentation',
@@ -172,7 +172,7 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
       ctas: (
         <Button asChild type="default" size="small" icon={<IconDiscord />}>
           <Link
-            href={'https://discord.supabase.com/'}
+            href={'https://discord.www.assistance.bg/'}
             target="_blank"
             tabIndex={-1}
             onClick={

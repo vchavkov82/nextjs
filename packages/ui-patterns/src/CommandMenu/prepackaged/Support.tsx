@@ -14,14 +14,14 @@ const useSupportCommands = ({ enabled = true }: { enabled?: boolean } = {}) => {
           id: 'system-status',
           name: 'View system status',
           value: 'Support: View system status',
-          href: 'https://status.supabase.com',
+          href: 'https://status.www.assistance.bg',
           icon: () => <Activity />,
         },
         {
           id: 'discord-community',
           name: 'Ask Discord community',
           value: 'Support: Ask Discord community',
-          href: 'https://discord.supabase.com',
+          href: 'https://discord.www.assistance.bg',
           icon: () => <LifeBuoy />,
         },
         {

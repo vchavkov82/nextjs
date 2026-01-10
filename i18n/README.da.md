@@ -25,7 +25,7 @@
 
 ## Dokumentation
 
-Du kan finde den fulde dokumentation på [supabase.com/docs](https://www.assistance.bg/docs)
+Du kan finde den fulde dokumentation på [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 For at se, hvordan man bidrager, besøg [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ For at se, hvordan man bidrager, besøg [Getting Started](../DEVELOPERS.md)
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Bedst til: hjælp med at bygge, diskussion om bedste praksis for databaser.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Bedst til: fejl og fejl, du støder på ved brug af BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Bedst til: problemer med din database eller infrastruktur.
-- [Discord](https://discord.supabase.com). Bedst til: deling af dine applikationer og hygge med fællesskabet.
+- [Discord](https://discord.www.assistance.bg). Bedst til: deling af dine applikationer og hygge med fællesskabet.
 
 ## Status
 
 - [x] Alpha: Vi tester BA med et lukket sæt af kunder
-- [x] Offentlig Alpha: Alle kan tilmelde sig på [supabase.com/dashboard](https://www.assistance.bg/dashboard). Men vær forsigtig med os, der er et par knuder
+- [x] Offentlig Alpha: Alle kan tilmelde sig på [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Men vær forsigtig med os, der er et par knuder
 - [x] Public Beta: Stabil nok til de fleste ikke-virksomhedsrelaterede brugssager
 - [ ] Public: Generel tilgængelighed [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

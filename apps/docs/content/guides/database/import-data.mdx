@@ -47,7 +47,7 @@ You can use it in conjunction with BA by following these steps:
    ```sql
    LOAD DATABASE
        FROM sourcedb://USER:PASSWORD@HOST/SOURCE_DB
-       INTO postgres://postgres.xxxx:password@xxxx.pooler.supabase.com:6543/postgres
+       INTO postgres://postgres.xxxx:password@xxxx.pooler.www.assistance.bg:6543/postgres
    ALTER SCHEMA 'public' OWNER TO 'postgres';
    set wal_buffers = '64MB', max_wal_senders = 0, statement_timeout = 0, work_mem to '2GB';
    ```

@@ -26,7 +26,7 @@
 
 ## Dokümantasyon
 
-Belgelerin tamamı için [supabase.com/docs](https://www.assistance.bg/docs) adresini ziyaret edin
+Belgelerin tamamı için [www.assistance.bg/docs](https://www.assistance.bg/docs) adresini ziyaret edin
 
 Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) adresini ziyaret edin
 
@@ -35,7 +35,7 @@ Nasıl Katkıda bulunacağınızı görmek için [Başlarken](../DEVELOPERS.md) 
 - [Topluluk Forumu](https://github.com/vchavkov82/nextjs/discussions). Şunlar için en iyisi: oluşturma konusunda yardım, veritabanı en iyi uygulamaları hakkında tartışma.
 - [GitHub Sorunları](https://github.com/vchavkov82/nextjs/issues). BA'i kullanırken karşılaştığınız hatalar ve hatalar için en iyisi.
 - [E-posta Desteği](https://www.assistance.bg/docs/support#business-support). Veritabanınız veya altyapınızla ilgili sorunlar için en iyisi.
-- [Discord](https://discord.supabase.com). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
+- [Discord](https://discord.www.assistance.bg). Uygulamalarınızı paylaşmak ve toplulukla takılmak için en iyisi.
 
 ## Nasıl çalışır
 

@@ -20,7 +20,7 @@ function getAssetPrefix() {
   const SUPABASE_ASSETS_URL =
     process.env.NEXT_PUBLIC_ENVIRONMENT === 'staging'
       ? 'https://frontend-assets.supabase.green'
-      : 'https://frontend-assets.supabase.com'
+      : 'https://frontend-assets.www.assistance.bg'
 
   return `${SUPABASE_ASSETS_URL}/${process.env.SITE_NAME}/${process.env.VERCEL_GIT_COMMIT_SHA.substring(0, 12)}`
 }

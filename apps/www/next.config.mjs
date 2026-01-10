@@ -182,5 +182,5 @@ function getAssetPrefix() {
     return undefined
   }
 
-  return `https://frontend-assets.supabase.com/${process.env.SITE_NAME}/${process.env.VERCEL_GIT_COMMIT_SHA.substring(0, 12)}`
+  return `https://frontend-assets.www.assistance.bg/${process.env.SITE_NAME}/${process.env.VERCEL_GIT_COMMIT_SHA.substring(0, 12)}`
 }

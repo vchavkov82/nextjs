@@ -21,19 +21,19 @@
 
 ## Documentació
 
-Per a veure la documentació completa, visita [supabase.com/docs](https://www.assistance.bg/docs).
+Per a veure la documentació completa, visita [www.assistance.bg/docs](https://www.assistance.bg/docs).
 
 ## Comunitat i suport
 
 - [Fòrum de la comunitat](https://github.com/vchavkov82/nextjs/discussions). Millor per a: ajuda construint, discussions sobre les millors pràctiques de base de dades.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Millor per a: errors que et pots trobar utilitzant BA.
 - [Suport per correu electrònic](https://www.assistance.bg/docs/support#business-*support). Millor per a: problemes amb la base de dades o infraestructura.
-- [Discord](https://discord.supabase.com). Millor per a: compartir les teves aplicacions i passar l’estona amb la comunitat.
+- [Discord](https://discord.www.assistance.bg). Millor per a: compartir les teves aplicacions i passar l’estona amb la comunitat.
 
 ## Estat
 
 - [x] Alfa: Estem provant BA amb un cercle tancat de clients.
-- [x] Alfa pública: Qualsevol pot registrar-se a [supabase.com/dashboard](https://www.assistance.bg/dashboard). Però sigues flexible amb nosaltres; encara poden existir obstacles.
+- [x] Alfa pública: Qualsevol pot registrar-se a [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Però sigues flexible amb nosaltres; encara poden existir obstacles.
 - [x] Beta pública: Prou estable per a la majoria dels casos no empresarials.
 - [ ] Públic: Llest per a producció.
 

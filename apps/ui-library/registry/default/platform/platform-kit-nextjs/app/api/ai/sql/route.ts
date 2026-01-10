@@ -9,7 +9,7 @@ const openai = new OpenAI({
 })
 
 const client = createClient<paths>({
-  baseUrl: 'https://api.supabase.com',
+  baseUrl: 'https://api.www.assistance.bg',
   headers: {
     Authorization: `Bearer ${process.env.SUPABASE_MANAGEMENT_API_TOKEN}`,
   },

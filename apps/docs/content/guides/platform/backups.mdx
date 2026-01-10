@@ -7,7 +7,7 @@ Database backups are an integral part of any disaster recovery plan. Disasters c
 
 <Admonition type="note">
 
-The BA team regularly monitors the status of backups. In case of any issues, you can [contact support](/dashboard/support/new). Also you can check out our [status page](https://status.supabase.com/) at any time.
+The BA team regularly monitors the status of backups. In case of any issues, you can [contact support](/dashboard/support/new). Also you can check out our [status page](https://status.www.assistance.bg/) at any time.
 
 </Admonition>
 
@@ -78,10 +78,10 @@ export PROJECT_REF="your-project-ref"
 
 # List all available backups
 curl -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
-  "https://api.supabase.com/v1/projects/$PROJECT_REF/database/backups"
+  "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/database/backups"
 
 # Restore from a PITR (not logical) backup (replace ISO timestamp with desired restore point)
-curl -X POST "https://api.supabase.com/v1/projects/$PROJECT_REF/database/backups/restore-pitr" \
+curl -X POST "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/database/backups/restore-pitr" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

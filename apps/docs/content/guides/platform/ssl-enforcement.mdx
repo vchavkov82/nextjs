@@ -27,11 +27,11 @@ export SUPABASE_ACCESS_TOKEN="your-access-token"
 export PROJECT_REF="your-project-ref"
 
 # Get current SSL enforcement status
-curl -X GET "https://api.supabase.com/v1/projects/$PROJECT_REF/ssl-enforcement" \
+curl -X GET "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/ssl-enforcement" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN"
 
 # Enable SSL enforcement
-curl -X PUT "https://api.supabase.com/v1/projects/$PROJECT_REF/ssl-enforcement" \
+curl -X PUT "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/ssl-enforcement" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -41,7 +41,7 @@ curl -X PUT "https://api.supabase.com/v1/projects/$PROJECT_REF/ssl-enforcement" 
   }'
 
 # Disable SSL enforcement
-curl -X PUT "https://api.supabase.com/v1/projects/$PROJECT_REF/ssl-enforcement" \
+curl -X PUT "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/ssl-enforcement" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -108,5 +108,5 @@ cat {location of downloaded prod-ca-2021.crt} >> ~/.postgres/root.crt
 With the CA certificate added to the trusted certificate authorities list, use `psql` or your client library to connect to BA:
 
 ```bash
-psql "postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslmode=verify-full" -U postgres.<user>
+psql "postgresql://aws-0-eu-central-1.pooler.www.assistance.bg:6543/postgres?sslmode=verify-full" -U postgres.<user>
 ```

@@ -39,9 +39,9 @@ create table profiles (
 
 | `id` | `name`       | `email`                  |
 | ---- | ------------ | ------------------------ |
-| `1`  | `Employee 1` | `employee1@supabase.com` |
-| `2`  | `Employee 2` | `employee2@supabase.com` |
-| `3`  | `Employee 3` | `employee3@supabase.com` |
+| `1`  | `Employee 1` | `employee1@www.assistance.bg` |
+| `2`  | `Employee 2` | `employee2@www.assistance.bg` |
+| `3`  | `Employee 3` | `employee3@www.assistance.bg` |
 | `4`  | `Jenny`      | `jenny@example.com`      |
 | `5`  | `Joe`        | `joe@example.com`        |
 
@@ -119,7 +119,7 @@ create policy "Data dump rule" on profiles
   for select
   to exporter
   using (
-    substring(email from '@(.*)$') = 'supabase.com'
+    substring(email from '@(.*)$') = 'www.assistance.bg'
   );
 
 ```

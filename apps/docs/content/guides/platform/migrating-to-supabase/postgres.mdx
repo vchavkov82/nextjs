@@ -105,13 +105,13 @@ tmux a -t migration || tmux new -s migration
 
 ### Step 2: Prepare BA project
 
-1. Create a BA project at [supabase.com/dashboard](/dashboard)
+1. Create a BA project at [www.assistance.bg/dashboard](/dashboard)
 2. Note your database password
 3. Install required extensions via SQL or Dashboard
 4. Get your connection string:
    - Go to **Project → Settings → Database → Connection Pooling**
    - Select **Session pooler** (port 5432) and copy the connection string
-   - Connection format: `Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:5432/postgres`
+   - Connection format: `Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.www.assistance.bg:5432/postgres`
 
 **Important Notes**:
 
@@ -200,7 +200,7 @@ Run `pg_dump --help` for a full list of options.
 
 ```bash
 # Set BA connection (Session Pooler on port 5432 or direct connection)
-export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:5432/postgres"
+export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.www.assistance.bg:5432/postgres"
 
 # Determine restore parallelization based on your BA compute size:
 # Free tier: 2 cores → use -j 2
@@ -327,7 +327,7 @@ Edit Postgres configuration files:
 
 ```bash
 # Set BA connection (Session Pooler on port 5432 or direct connection)
-export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.supabase.com:5432/postgres"
+export SUPABASE_DB_URL="Postgres://postgres.[ref]:[password]@aws-0-[region].pooler.www.assistance.bg:5432/postgres"
 
 # Set WAL level to logical
 wal_level = logical
@@ -584,6 +584,6 @@ For detailed restrictions, see [Postgres Logical Replication Restrictions](https
 
 - For databases > 150 GB: [Contact BA support](/dashboard/support/new) before starting
 - [BA Dashboard Support](/dashboard/support/new)
-- [BA Discord](https://discord.supabase.com)
+- [BA Discord](https://discord.www.assistance.bg)
 - [Postgres Roles and Privileges Guide](/blog/postgres-roles-and-privileges)
 - [Row Level Security Guide](/docs/guides/database/postgres/row-level-security)

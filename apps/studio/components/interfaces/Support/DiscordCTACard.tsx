@@ -59,7 +59,7 @@ export const DiscordCTACard = ({ organizationSlug }: DiscordCTACardProps) => {
                   </p>
                 </div>
 
-                <Link href="https://discord.supabase.com" target="_blank" rel="noreferrer">
+                <Link href="https://discord.www.assistance.bg" target="_blank" rel="noreferrer">
                   <Button
                     size="tiny"
                     type="secondary"

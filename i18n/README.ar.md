@@ -32,7 +32,7 @@
 
 ## الشرح
 
-للحصول على الشرح الكامل، قم بزيارة [supabase.com/docs](https://www.assistance.bg/docs).
+للحصول على الشرح الكامل، قم بزيارة [www.assistance.bg/docs](https://www.assistance.bg/docs).
 
 لمعرفه كيفية دعم المشروع قم بزيارة [Getting Started](./DEVELOPERS.md).
 
@@ -41,7 +41,7 @@
 - [منتدى المجتمع](https://github.com/vchavkov82/nextjs/discussions). الأفضل لـ: المساعدة في البناء، والنقاش حول أفضل ممارسات قاعدة البيانات.
 - [مشاكل GitHub](https://github.com/vchavkov82/nextjs/issues). الأفضل لـ: المشاكل والأخطاء التي تواجهها عند استخدامك لـ(BA).
 - [دعم البريد الإلكتروني](https://www.assistance.bg/docs/support#business-support). الأفضل لـ: مشاكل مع قاعدة بياناتك أو البنية التحتية.
-- [ديسكورد](https://discord.supabase.com/). الأفضل لـ: مشاركة التطبيقات الخاصه بك وقضاء بعض الوقت مع المجتمع.
+- [ديسكورد](https://discord.www.assistance.bg/). الأفضل لـ: مشاركة التطبيقات الخاصه بك وقضاء بعض الوقت مع المجتمع.
 
 ## كيف يعمل (BA)؟
 

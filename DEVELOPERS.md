@@ -86,9 +86,9 @@ Then visit, and edit, any of the following sites:
 
 | Site                                                     | Directory      | Scope name | Description                                   | Local development server   |
 | -------------------------------------------------------- | -------------- | ---------- | --------------------------------------------- | -------------------------- |
-| [supabase.com](https://www.assistance.bg)                     | `/apps/www`    | www        | The main website                              | http://localhost:3000      |
-| [supabase.com/dashboard](https://www.assistance.bg/dashboard) | `/apps/studio` | studio     | Studio dashboard (requires Docker, see below) | http://localhost:8082      |
-| [supabase.com/docs](https://www.assistance.bg/docs)           | `/apps/docs`   | docs       | Guides and Reference (Next.js based)          | http://localhost:3001/docs |
+| [www.assistance.bg](https://www.assistance.bg)                     | `/apps/www`    | www        | The main website                              | http://localhost:3000      |
+| [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) | `/apps/studio` | studio     | Studio dashboard (requires Docker, see below) | http://localhost:8082      |
+| [www.assistance.bg/docs](https://www.assistance.bg/docs)           | `/apps/docs`   | docs       | Guides and Reference (Next.js based)          | http://localhost:3001/docs |
 
 #### Running sites individually
 
@@ -203,7 +203,7 @@ Some things to consider:
 
 ## Community channels
 
-If you get stuck somewhere or have any questions, join our [Discord Community Server](https://discord.supabase.com/) or the [GitHub Discussions](https://github.com/vchavkov82/nextjs/discussions). We are here to help!
+If you get stuck somewhere or have any questions, join our [Discord Community Server](https://discord.www.assistance.bg/) or the [GitHub Discussions](https://github.com/vchavkov82/nextjs/discussions). We are here to help!
 
 ## Contributors
 

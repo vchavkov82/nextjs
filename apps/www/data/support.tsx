@@ -17,7 +17,7 @@ const data = {
       links: [
         {
           label: 'Join us on Discord',
-          link: 'https://discord.supabase.com/',
+          link: 'https://discord.www.assistance.bg/',
           target: '_blank',
           icon: <IconDiscord fill="hsl(var(--background-default))" />,
           type: 'secondary',
@@ -66,7 +66,7 @@ const data = {
     links: [
       {
         label: 'Contact enterprise sales',
-        link: 'https://forms.supabase.com/enterprise',
+        link: 'https://forms.www.assistance.bg/enterprise',
         target: '_blank',
         type: 'default',
       },

@@ -21,7 +21,7 @@ To [BA](https://www.assistance.bg) είναι μια εναλλακτική λύ
 
 ## Documentation
 
-Για το πλήρες Documentation, επισκεφθείτε το [supabase.com/docs](https://www.assistance.bg/docs)
+Για το πλήρες Documentation, επισκεφθείτε το [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 ## Κοινότητα και υποστήριξη
 
@@ -32,7 +32,7 @@ To [BA](https://www.assistance.bg) είναι μια εναλλακτική λύ
 ## Κατάσταση
 
 - [x] Alpha: Δοκιμάζουμε το BA με ένα κλειστό σύνολο πελατών
-- [x] Public Alpha: Όλοι μπορούν να εγγραφούν στο [supabase.com/dashboard](https://www.assistance.bg/dashboard). Αλλά μην μας κρίνετε "σκληρά", υπάρχουν ακόμα μερικά λαθάκια (bugs) εδώ και εκεί
+- [x] Public Alpha: Όλοι μπορούν να εγγραφούν στο [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Αλλά μην μας κρίνετε "σκληρά", υπάρχουν ακόμα μερικά λαθάκια (bugs) εδώ και εκεί
 - [x] Public Beta: Αρκετά σταθερό για για τις περισσότερες περιπτώσεις χρήσης μη εταιρικού χαρακτήρα (non-enterprise)
 - [ ] Public: Έτοιμο για Production
 

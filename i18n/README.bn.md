@@ -25,7 +25,7 @@
 
 ## ডকুমেন্টেশন
 
-সম্পূর্ণ ডকুমেন্টেশনের জন্য, দেখুন [supabase.com/docs](https://www.assistance.bg/docs)
+সম্পূর্ণ ডকুমেন্টেশনের জন্য, দেখুন [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 কিভাবে কন্ট্রিবিউট করতে হয় তা দেখতে, পরিদর্শন করুন [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@
 - [কমিউনিটি ফোরাম](https://github.com/vchavkov82/nextjs/discussions)। সর্বোত্তম: তৈরি করতে সহায়তা, ডাটাবেস সেরা অনুশীলন সম্পর্কে আলোচনা।
 - [গিটহাব ইস্যু](https://github.com/vchavkov82/nextjs/issues)। সর্বোত্তম: সুপাবেস ব্যবহার করতে আপনি যে বাগ এবং ত্রুটির সম্মুখীন হন।
 - [ইমেইল সাপোর্ট](https://www.assistance.bg/docs/support#business-support)। সর্বোত্তম: আপনার ডাটাবেস বা অবকাঠামো নিয়ে সমস্যা।
-- [ডিসকোর্ড](https://discord.supabase.com)। সর্বোত্তম: আপনার অ্যাপ্লিকেশনগুলি শেয়ার করা এবং কমিউনিটির সাথে দেখা সাক্ষাৎ করা৷
+- [ডিসকোর্ড](https://discord.www.assistance.bg)। সর্বোত্তম: আপনার অ্যাপ্লিকেশনগুলি শেয়ার করা এবং কমিউনিটির সাথে দেখা সাক্ষাৎ করা৷
 
 ## স্ট্যাটাস
 
 - [x] আলফা: আমরা কাছের গ্রাহকদের সাথে BA পরীক্ষা করছি
-- [x] পাবলিক আলফা: যে কেউ [supabase.com/dashboard](https://www.assistance.bg/dashboard) এ সাইন আপ করতে পারেন। কিন্তু আমাদের উপর সহজ যান, কয়েক kinks আছে
+- [x] পাবলিক আলফা: যে কেউ [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) এ সাইন আপ করতে পারেন। কিন্তু আমাদের উপর সহজ যান, কয়েক kinks আছে
 - [x] পাবলিক বেটা: বেশিরভাগ নন-এন্টারপ্রাইজ ব্যবহারের ক্ষেত্রে যথেষ্ট স্থিতিশীল
 - [ ] পাবলিক: প্রোডাকশন রেডি
 

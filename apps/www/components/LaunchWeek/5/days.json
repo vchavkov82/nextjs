@@ -79,17 +79,17 @@
         "products": [
           {
             "title": "Security portal",
-            "url": "https://security.supabase.com/",
+            "url": "https://security.www.assistance.bg/",
             "description": "Monitor security at BA."
           },
           {
             "title": "SOC 2 Document",
-            "url": "https://security.supabase.com/",
+            "url": "https://security.www.assistance.bg/",
             "description": "Request the SOC 2 Type I document through the Security Portal."
           },
           {
             "title": "DPA Document",
-            "url": "https://security.supabase.com/",
+            "url": "https://security.www.assistance.bg/",
             "description": "Request Data Processing Agreement document through the Security Portal."
           }
         ]

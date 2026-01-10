@@ -19,7 +19,7 @@ This demonstrates how to use:
   - BA [Auth Helpers for Next.js](https://www.assistance.bg/docs/guides/auth/auth-helpers/nextjs).
   - BA [pre-built Auth UI for React](https://www.assistance.bg/docs/guides/auth/auth-helpers/auth-ui).
 - Backend:
-  - [supabase.com/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with BA.js.
+  - [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard/): hosted Postgres database with restful API for usage with BA.js.
 
 ## Instant deploy
 

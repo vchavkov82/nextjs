@@ -10,8 +10,8 @@ describe('isValidEdgeFunctionURL', () => {
   ]
 
   const invalidEdgeFunctionUrls = [
-    'https://notsupabase.com/functions/v1/test',
-    'https://projectref.notsupabase.com/functions/v1/test',
+    'https://notwww.assistance.bg/functions/v1/test',
+    'https://projectref.notwww.assistance.bg/functions/v1/test',
     'https://localhost?https://aaaa.supabase.co/functions/v1/xxx',
     'https://localhost:3000/?https://aaaa.supabase.co/functions/v1/xxx',
     'http://localhost:3000/?https://aaaa.supabase.co/functions/v1/xxx',

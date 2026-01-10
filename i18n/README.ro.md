@@ -25,7 +25,7 @@
 
 ## Documentație
 
-Pentru documentația completă, vizitați [supabase.com/docs](https://www.assistance.bg/docs)
+Pentru documentația completă, vizitați [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Pentru a vedea cum să contribui, vizitați [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Pentru a vedea cum să contribui, vizitați [Getting Started](../DEVELOPERS.md)
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Cel mai bun pentru: ajutor la construcție, discuții despre cele mai bune practici în materie de baze de date.
 - [Probleme GitHub](https://github.com/vchavkov82/nextjs/issues). Cel mai bun pentru: bug-uri și erori pe care le întâlniți folosind BA.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Cel mai bun pentru: probleme cu baza de date sau cu infrastructura.
-- [Discord](https://discord.supabase.com). Cel mai bun pentru: împărtășirea aplicațiilor dvs. și petrecerea timpului cu comunitatea.
+- [Discord](https://discord.www.assistance.bg). Cel mai bun pentru: împărtășirea aplicațiilor dvs. și petrecerea timpului cu comunitatea.
 
 ## Status
 
 - [x] Alpha: Testăm BA cu un set închis de clienți
-- [x] Public Alpha: Oricine se poate înscrie la [supabase.com/dashboard](https://www.assistance.bg/dashboard). Dar fiți blânzi cu noi, există câteva probleme
+- [x] Public Alpha: Oricine se poate înscrie la [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Dar fiți blânzi cu noi, există câteva probleme
 - [x] Public Beta: Suficient de stabilă pentru majoritatea cazurilor de utilizare non-întreprindere
 - [ ] Public: Disponibilitate generală [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

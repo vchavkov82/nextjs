@@ -29,7 +29,7 @@ Pratite "izdanja" ovog repozitorija da bi bili obaviješteni o većim ažuriranj
 
 ## Dokumentacija
 
-Za cjelovitu dokumentaciju, posjetite [supabase.com/docs](https://www.assistance.bg/docs)
+Za cjelovitu dokumentaciju, posjetite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Za informacije kako doprinijeti razvoju, posjetite [Početak rada](./DEVELOPERS.md)
 
@@ -38,7 +38,7 @@ Za informacije kako doprinijeti razvoju, posjetite [Početak rada](./DEVELOPERS.
 - [Forum zajednice](https://github.com/vchavkov82/nextjs/discussions). Najbolje služi za: pomoć pri izgradnji, diskusiji o najboljoj praksi oko baza podataka.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najbolje služi za: bugove i greške na koje ste naišli koristeći BA.
 - [Email potpora](https://www.assistance.bg/docs/support#business-support). Najbolje služi za: probleme oko vaše baze podataka ili oko infrastrukture.
-- [Discord](https://discord.supabase.com). Najbolje služi za: pokazati vaše aplikacije i druženje sa ostatkom zajednice.
+- [Discord](https://discord.www.assistance.bg). Najbolje služi za: pokazati vaše aplikacije i druženje sa ostatkom zajednice.
 
 ## Kako funkcionira
 

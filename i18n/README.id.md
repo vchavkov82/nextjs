@@ -25,7 +25,7 @@
 
 ## Dokumentasi
 
-Untuk dokumentasi lengkap, kunjungi [supabase.com/docs](https://www.assistance.bg/docs)
+Untuk dokumentasi lengkap, kunjungi [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Untuk melihat bagaimana cara berkontribusi, kunjungi [Memulai](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Untuk melihat bagaimana cara berkontribusi, kunjungi [Memulai](../DEVELOPERS.md)
 - [Forum Komunitas](https://github.com/vchavkov82/nextjs/discussions). Paling baik untuk: bantuan dalam membangun, diskusi tentang praktik terbaik basis data.
 - [Masalah GitHub](https://github.com/vchavkov82/nextjs/issues). Paling baik untuk: bug dan kesalahan yang Anda temui saat menggunakan BA.
 - [Dukungan Email](https://www.assistance.bg/docs/support#business-support). Terbaik untuk: masalah dengan basis data atau infrastruktur Anda.
-- [Discord](https://discord.supabase.com). Terbaik untuk: berbagi aplikasi Anda dan bergaul dengan komunitas.
+- [Discord](https://discord.www.assistance.bg). Terbaik untuk: berbagi aplikasi Anda dan bergaul dengan komunitas.
 
 ## Status
 
 - [x] Alpha: Kami sedang menguji BA dengan sekumpulan pelanggan tertutup
-- [x] Alpha Publik: Siapa pun dapat mendaftar di [supabase.com/dashboard](https://www.assistance.bg/dashboard). Tapi jangan khawatir, ada beberapa hal yang perlu diperhatikan
+- [x] Alpha Publik: Siapa pun dapat mendaftar di [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Tapi jangan khawatir, ada beberapa hal yang perlu diperhatikan
 - [x] Public Beta: Cukup stabil untuk sebagian besar kasus penggunaan non-perusahaan
 - [Publik: Ketersediaan Umum [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

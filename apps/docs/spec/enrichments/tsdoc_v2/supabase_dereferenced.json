@@ -17839,7 +17839,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "The following is placed here to display on supabase.com/docs/reference/javascript/subscribe."
+                    "text": "The following is placed here to display on www.assistance.bg/docs/reference/javascript/subscribe."
                   }
                 ]
               },
@@ -21314,7 +21314,7 @@
                       "workerUrl": [
                         {
                           "kind": "text",
-                          "text": "The URL of the worker script. Defaults to https://realtime.supabase.com/worker.js that includes a heartbeat event call to keep the connection alive."
+                          "text": "The URL of the worker script. Defaults to https://realtime.www.assistance.bg/worker.js that includes a heartbeat event call to keep the connection alive."
                         }
                       ]
                     }

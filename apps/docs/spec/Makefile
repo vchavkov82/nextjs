@@ -12,7 +12,7 @@ run: download transform generate format
 download: download.api.v1 download.storage.v1 download.tsdoc.v2
 
 download.api.v1:
-	curl -sS https://api.supabase.com/api/v1-json > $(REPO_DIR)/api_v1_openapi.json
+	curl -sS https://api.www.assistance.bg/api/v1-json > $(REPO_DIR)/api_v1_openapi.json
 
 
 # This flow needs to be updated, so we'l comment out for the moment

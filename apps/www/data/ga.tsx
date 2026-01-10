@@ -88,7 +88,7 @@ We're committed to our Free Plan - we know the importance of this for testing ho
       {
         number: '25,000',
         text: 'Discord members',
-        url: 'https://discord.supabase.com',
+        url: 'https://discord.www.assistance.bg',
         icon: <IconDiscord />,
       },
       {
@@ -192,7 +192,7 @@ We've spent years working with larger organizations to meet their requirements f
 
 This week we've added support for BA in the AWS Marketplace. Enterprise customers can now purchase BA as part of their committed AWS spend.
 
-We'll continue to expand the BA Enterprise offering to include more deployment options, including "Bring your own cloud". If you're interested in using BA in your organization, get in touch via the [BA for Enterprise form](https://forms.supabase.com/enterprise).
+We'll continue to expand the BA Enterprise offering to include more deployment options, including "Bring your own cloud". If you're interested in using BA in your organization, get in touch via the [BA for Enterprise form](https://forms.www.assistance.bg/enterprise).
 `,
     companies: [
       {

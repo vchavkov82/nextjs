@@ -25,7 +25,7 @@
 
 ## Dokumentacija
 
-Za celotno dokumentacijo obiščite [supabase.com/docs](https://www.assistance.bg/docs)
+Za celotno dokumentacijo obiščite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Če si želite ogledati, kako prispevati, obiščite [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Za celotno dokumentacijo obiščite [supabase.com/docs](https://www.assistance.b
 - [Forum skupnosti](https://github.com/vchavkov82/nextjs/discussions). Najprimernejši za: pomoč pri gradnji, razpravo o najboljših praksah zbirke podatkov.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najprimernejši za: hrošče in napake, na katere naletite pri uporabi zbirke BA.
 - [E-poštna podpora](https://www.assistance.bg/docs/support#business-support). Najboljše za: težave s podatkovno zbirko ali infrastrukturo.
-- [Discord](https://discord.supabase.com). Najboljši za: izmenjavo aplikacij in druženje s skupnostjo.
+- [Discord](https://discord.www.assistance.bg). Najboljši za: izmenjavo aplikacij in druženje s skupnostjo.
 
 ## Status
 
 - [x] Alfa: Testiramo bazo BA z zaprtim naborom strank
-- [x] Javna alfa: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Vendar nas ne obremenjujte, saj je še nekaj pomanjkljivosti
+- [x] Javna alfa: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Vendar nas ne obremenjujte, saj je še nekaj pomanjkljivosti
 - [x] Javna beta različica: Dovolj stabilna za večino primerov uporabe, ki niso povezani s podjetji
 - [ ] Javna: Splošna razpoložljivost [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

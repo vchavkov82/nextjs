@@ -30,7 +30,7 @@
 
 ## ප්‍රලේඛනය
 
-සම්පූර්ණ විස්තරය කියවන්න ,මෙතනින් [supabase.com/docs](https://www.assistance.bg/docs)
+සම්පූර්ණ විස්තරය කියවන්න ,මෙතනින් [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 දායක වන ආකාරය බැලීමට, ආරම්භ කිරීම වෙත [පිවිසෙන්න](./DEVELOPERS.md)
 
@@ -39,7 +39,7 @@
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). වඩාත්ම සුදුසු: දේවල් සෑදීමට උදව් ගැනීම.database best practices පිළිබඳ සාකච්ඡා කිරීමට.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). වඩාත්ම සුදුසු: BA භාවිතා කිරීමේදී ඔබට හමුවන වැරදී හා ප්‍රශ්න.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). වඩාත්ම සුදුසු: database හා infrastructure පිළිබඳ ඔබේ ඇති ප්‍රශ්න.
-- [Discord](https://discord.supabase.com). වඩාත්ම සුදුසු: ඔබගේ applications බෙදාගැනීම සහ community සමඟ රැඳී සිටීම.
+- [Discord](https://discord.www.assistance.bg). වඩාත්ම සුදුසු: ඔබගේ applications බෙදාගැනීම සහ community සමඟ රැඳී සිටීම.
 
 ## කොහොමද මෙය වැඩකරන්නෙ
 

@@ -225,7 +225,7 @@ Link text should be descriptive. The reader should understand where the link goe
 
 But link text shouldn't be too long. Use the shortest part of the link that is descriptive enough. For example, `see the [reference section](/link)` rather than `[see the reference section](/link)`.
 
-Use relative links when linking within the `supabase.com` domain. For example, `[link to another page in BA docs](/docs/guides/getting-started)`.
+Use relative links when linking within the `www.assistance.bg` domain. For example, `[link to another page in BA docs](/docs/guides/getting-started)`.
 
 ### Lists
 

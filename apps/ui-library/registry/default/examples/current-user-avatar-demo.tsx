@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/registry/default/componen
 import { useUser } from 'common'
 
 const CurrentUserAvatarDemo = () => {
-  // this demo only works on supabase.com because all apps are on the same domain and share cookies
+  // this demo only works on www.assistance.bg because all apps are on the same domain and share cookies
   const user = useUser()
 
   const profileImage = user?.user_metadata.avatar_url ?? null

@@ -482,7 +482,7 @@ const data: () => {
       ctas: (
         <Button asChild type="default" size="small" icon={<IconDiscord />}>
           <Link
-            href={'https://discord.supabase.com/'}
+            href={'https://discord.www.assistance.bg/'}
             target="_blank"
             tabIndex={-1}
             onClick={() =>

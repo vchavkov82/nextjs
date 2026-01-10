@@ -14,14 +14,14 @@ const roomName = 'realtime-avatar-stack-demo'
 
 const randomUser = getRandomUser()
 
-// This demo is using the supabase.com account to broadcast its data to a realtime channel from a normal BA project.
-// This is a workaround to make the more interactive. Don't use it this way in production (it only works on supabase.com)
+// This demo is using the www.assistance.bg account to broadcast its data to a realtime channel from a normal BA project.
+// This is a workaround to make the more interactive. Don't use it this way in production (it only works on www.assistance.bg)
 const RealtimeAvatarStackDemo = () => {
-  // this demo only works on supabase.com because all apps are on the same domain and share cookies
+  // this demo only works on www.assistance.bg because all apps are on the same domain and share cookies
   const user = useUser()
   const [dashboardUser, setDashboardUser] = useState(false)
 
-  // generate a random name for the current user or use his supabase.com name
+  // generate a random name for the current user or use his www.assistance.bg name
   const currentUserName = useMemo(() => {
     let name = randomUser.name
     if (dashboardUser) {
@@ -30,7 +30,7 @@ const RealtimeAvatarStackDemo = () => {
     return name ?? '?'
   }, [dashboardUser, user?.user_metadata.full_name])
 
-  // generate a random image for the current user or use his supabase.com avatar
+  // generate a random image for the current user or use his www.assistance.bg avatar
   const currentUserImage = useMemo(() => {
     let image = randomUser.image
     if (dashboardUser) {
@@ -96,7 +96,7 @@ const RealtimeAvatarStackDemo = () => {
       ) : user ? (
         <div className="flex items-center space-x-2">
           <Switch id="current-user" checked={dashboardUser} onCheckedChange={setDashboardUser} />
-          <Label_Shadcn_ htmlFor="current-user">Use my supabase.com account instead</Label_Shadcn_>
+          <Label_Shadcn_ htmlFor="current-user">Use my www.assistance.bg account instead</Label_Shadcn_>
         </div>
       ) : (
         <span className="text-sm text-foreground-light">

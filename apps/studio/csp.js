@@ -47,7 +47,7 @@ const HCAPTCHA_JS_URL = 'https://js.hcaptcha.com'
 const CONFIGCAT_URL = 'https://cdn-global.configcat.com'
 const CONFIGCAT_PROXY_URL = ['staging', 'local'].includes(process.env.NEXT_PUBLIC_ENVIRONMENT ?? '')
   ? 'https://configcat.supabase.green'
-  : 'https://configcat.supabase.com'
+  : 'https://configcat.www.assistance.bg'
 const STRIPE_SUBDOMAINS_URL = 'https://*.stripe.com'
 const STRIPE_JS_URL = 'https://js.stripe.com'
 const STRIPE_NETWORK_URL = 'https://*.stripe.network'
@@ -60,7 +60,7 @@ const GITHUB_USER_AVATAR_URL = 'https://avatars.githubusercontent.com'
 const GOOGLE_USER_AVATAR_URL = 'https://lh3.googleusercontent.com'
 
 // This is a custom domain for Stape, which isused for GTM servers
-const STAPE_URL = 'https://ss.supabase.com'
+const STAPE_URL = 'https://ss.www.assistance.bg'
 
 const VERCEL_LIVE_URL = 'https://vercel.live'
 const SENTRY_URL =
@@ -68,8 +68,8 @@ const SENTRY_URL =
 const SUPABASE_ASSETS_URL =
   process.env.NEXT_PUBLIC_ENVIRONMENT === 'staging'
     ? 'https://frontend-assets.supabase.green'
-    : 'https://frontend-assets.supabase.com'
-const POSTHOG_URL = isDevOrStaging ? 'https://ph.supabase.green' : 'https://ph.supabase.com'
+    : 'https://frontend-assets.www.assistance.bg'
+const POSTHOG_URL = isDevOrStaging ? 'https://ph.supabase.green' : 'https://ph.www.assistance.bg'
 
 const USERCENTRICS_URLS = 'https://*.usercentrics.eu'
 const USERCENTRICS_APP_URL = 'https://app.usercentrics.eu'

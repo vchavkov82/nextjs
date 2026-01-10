@@ -25,7 +25,7 @@
 
 ## Dokumentacija
 
-Za punu dokumentaciju, posetite [supabase.com/docs](https://www.assistance.bg/docs)
+Za punu dokumentaciju, posetite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Da vidite kako možete doprineti razvoju, posetite [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Da vidite kako možete doprineti razvoju, posetite [Getting Started](../DEVELOPE
 - [Forum zajednice](https://github.com/vchavkov82/nextjs/discussions). Najbolje mesto za: pomoć u razvijanju, diskusije o najboljim praksama u vezi baze.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Najbolje mesto za: bagove i greške sa kojima se susretnete tokom korišćenja BA.
 - [Email Podrška](https://www.assistance.bg/docs/support#business-support). Najbolje mesto za: probleme sa vašom bazom ili infrastrukturom.
-- [Discord](https://discord.supabase.com). Najbolje mesto za: deljenje vaših aplikacija i druženje sa zajednicom.
+- [Discord](https://discord.www.assistance.bg). Najbolje mesto za: deljenje vaših aplikacija i druženje sa zajednicom.
 
 ## Status
 
 - [x] Alfa: Testiramo BA sa zatvorenim setom klijenata
-- [x] Javna Alfa: Bilo ko može da se prijavi na [supabase.com/dashboard](https://www.assistance.bg/dashboard). Ali ne budite grubi, biće nekih poteškoća
+- [x] Javna Alfa: Bilo ko može da se prijavi na [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Ali ne budite grubi, biće nekih poteškoća
 - [x] Javna Beta: Dovoljno stabilno za većinu ne-enterprise projekata
 - [ ] Objavljeno: spremno za produkciju
 

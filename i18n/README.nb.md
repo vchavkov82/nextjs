@@ -25,7 +25,7 @@ supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/a
 
 ## Dokumentasjon
 
-For fullstendig dokumentasjon, besøk [supabase.com/docs](https://www.assistance.bg/docs)
+For fullstendig dokumentasjon, besøk [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 For å se hvordan du kan bidra, gå til [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ For å se hvordan du kan bidra, gå til [Getting Started](../DEVELOPERS.md)
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Best for: hjelp med å bygge, diskusjon om beste praksis for databaser.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Best for: feil og feil du støter på ved bruk av BA.
 - [E-poststøtte](https://www.assistance.bg/docs/support#business-support). Best for: problemer med databasen eller infrastrukturen din.
-- [Discord](https://discord.supabase.com). Best for: å dele applikasjonene dine og henge med fellesskapet.
+- [Discord](https://discord.www.assistance.bg). Best for: å dele applikasjonene dine og henge med fellesskapet.
 
 ## Status
 
 - [x] Alpha: Vi tester BA med en lukket gruppe kunder
-- [x] Offentlig Alpha: Alle kan registrere seg på [supabase.com/dashboard](https://www.assistance.bg/dashboard). Men vær snill med oss, det er noen små problemer
+- [x] Offentlig Alpha: Alle kan registrere seg på [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Men vær snill med oss, det er noen små problemer
 - [x] Offentlig beta: Stabilt nok for de fleste brukstilfeller som ikke er for bedrifter
 - [ ] Offentlig: Generell tilgjengelighet [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

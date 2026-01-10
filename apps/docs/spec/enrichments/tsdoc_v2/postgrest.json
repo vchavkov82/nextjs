@@ -4291,7 +4291,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Types for the schema from the [type\ngenerator](https://supabase.com/docs/reference/javascript/next/typescript-support)"
+                "text": "Types for the schema from the [type\ngenerator](https://www.assistance.bg/docs/reference/javascript/next/typescript-support)"
               }
             ]
           },
@@ -7104,7 +7104,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " as the EXPLAIN plan for the query.\n\nYou need to enable the\n[db_plan_enabled](https://supabase.com/docs/guides/database/debugging-performance#enabling-explain)\nsetting before using this method."
+                    "text": " as the EXPLAIN plan for the query.\n\nYou need to enable the\n[db_plan_enabled](https://www.assistance.bg/docs/guides/database/debugging-performance#enabling-explain)\nsetting before using this method."
                   }
                 ]
               },
@@ -21765,7 +21765,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " as the EXPLAIN plan for the query.\n\nYou need to enable the\n[db_plan_enabled](https://supabase.com/docs/guides/database/debugging-performance#enabling-explain)\nsetting before using this method."
+                    "text": " as the EXPLAIN plan for the query.\n\nYou need to enable the\n[db_plan_enabled](https://www.assistance.bg/docs/guides/database/debugging-performance#enabling-explain)\nsetting before using this method."
                   }
                 ]
               },
@@ -26998,7 +26998,7 @@
     {
       "kind": "text",
 <<<<<<< HEAD
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://supabase.com/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://supabase.com/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
 =======
       "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
 >>>>>>> a500a04fd1 (Replace Supabase with BA)
@@ -27017,7 +27017,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n- [select()](https://supabase.com/docs/reference/javascript/select)\n- [insert()](https://supabase.com/docs/reference/javascript/insert)\n- [update()](https://supabase.com/docs/reference/javascript/update)\n- [delete()](https://supabase.com/docs/reference/javascript/delete)\n\n#### Custom "
+      "text": "\n\n- [select()](https://www.assistance.bg/docs/reference/javascript/select)\n- [insert()](https://www.assistance.bg/docs/reference/javascript/insert)\n- [update()](https://www.assistance.bg/docs/reference/javascript/update)\n- [delete()](https://www.assistance.bg/docs/reference/javascript/delete)\n\n#### Custom "
     },
     {
       "kind": "code",
@@ -27081,7 +27081,7 @@
     },
     {
       "kind": "text",
-      "text": " tests use the [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started) to run a local PostgreSQL database and PostgREST server.\n\n#### Quick Start\n\n"
+      "text": " tests use the [Supabase CLI](https://www.assistance.bg/docs/guides/local-development/cli/getting-started) to run a local PostgreSQL database and PostgREST server.\n\n#### Quick Start\n\n"
     },
     {
       "kind": "code",
@@ -27154,7 +27154,7 @@
     },
     {
       "kind": "text",
-      "text": ")\n\n#### Prerequisites\n\n- **Supabase CLI** must be installed ([instructions](https://supabase.com/docs/guides/local-development/cli/getting-started)) or can be used through "
+      "text": ")\n\n#### Prerequisites\n\n- **Supabase CLI** must be installed ([instructions](https://www.assistance.bg/docs/guides/local-development/cli/getting-started)) or can be used through "
     },
     {
       "kind": "code",

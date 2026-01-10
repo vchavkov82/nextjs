@@ -151,7 +151,7 @@ export async function handler(req: Request) {
                 color: golden ? '#fff' : '#A0A0A0',
               }}
             >
-              supabase.com/launch-week
+              www.assistance.bg/launch-week
             </p>
           </div>
           {/* Ticket No  */}

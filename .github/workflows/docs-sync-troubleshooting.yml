@@ -51,6 +51,6 @@ jobs:
         with:
           commit-message: '[bot] sync troubleshooting guides to db'
           title: '[bot] sync troubleshooting guides to db'
-          author: 'github-docs-sync-bot <github-docs-sync-bot@supabase.com>'
+          author: 'github-docs-sync-bot <github-docs-sync-bot@www.assistance.bg>'
           branch: 'bot/docs-sync-troubleshooting'
           branch-suffix: 'random'

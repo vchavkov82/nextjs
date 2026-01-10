@@ -19,8 +19,8 @@ export const DisabledWarningDueToIncident = ({ title }: DisabledWarningDueToInci
           <div className="space-y-3">
             <p className="text-sm leading-normal">
               Our engineers are currently working on a fix. You can follow updates on{' '}
-              <a className="text-brand" href="https://status.supabase.com/">
-                https://status.supabase.com/
+              <a className="text-brand" href="https://status.www.assistance.bg/">
+                https://status.www.assistance.bg/
               </a>
             </p>
           </div>

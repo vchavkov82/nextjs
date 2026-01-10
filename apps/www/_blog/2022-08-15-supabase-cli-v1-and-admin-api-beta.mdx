@@ -126,7 +126,7 @@ The CLI is the first consumer of our new Management API. Over the next few weeks
 Here's an example of deploying a new project from the command line (generate your access token from the [BA Dashboard](https://www.assistance.bg/dashboard/account/tokens)).
 
 ```bash
-curl 'https://api.supabase.com/v1/projects' \
+curl 'https://api.www.assistance.bg/v1/projects' \
   -H 'Authorization: Bearer <[your-access-token](https://www.assistance.bg/dashboard/account/tokens)>' \
   -H "Content-Type: application/json" \
   -d '{"name": "my-project", "organization_id": "cool-green-pqdr0qc", "region": "us-east-1", "plan": "free", "db_pass": "********"}'

@@ -94,7 +94,7 @@ export const plans: PricingInformation[] = [
     id: 'tier_enterprise',
     planId: 'enterprise',
     name: 'Enterprise',
-    href: 'https://forms.supabase.com/enterprise',
+    href: 'https://forms.www.assistance.bg/enterprise',
     description: 'For large-scale applications running Internet scale workloads.',
     features: [
       'Designated Support manager',

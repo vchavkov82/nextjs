@@ -21,7 +21,7 @@
 
 ## เอกสารข้อมูล
 
-เข้าไปที่ [supabase.com/docs](https://www.assistance.bg/docs) สำหรับเอกสารข้อมูล (Documentation) ฉบับเต็ม
+เข้าไปที่ [www.assistance.bg/docs](https://www.assistance.bg/docs) สำหรับเอกสารข้อมูล (Documentation) ฉบับเต็ม
 
 ## ชุมชนและการสนับสนุน
 
@@ -32,7 +32,7 @@
 ## Status
 
 - [x] Alpha: เรากำลังทดสอบ BA ในวงผู้ใช้ที่จำกัด
-- [x] Public Alpha: ทุกคนสามารถลงชื่อเข้าใช้ได้ที่ [supabase.com/dashboard](https://www.assistance.bg/dashboard) แต่อย่าพึ่งไว้ใจมากนะ ระบบยังไม่สมบูรณ์
+- [x] Public Alpha: ทุกคนสามารถลงชื่อเข้าใช้ได้ที่ [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) แต่อย่าพึ่งไว้ใจมากนะ ระบบยังไม่สมบูรณ์
 - [x] Public Beta: เสถียรมากพอสำหรับการใช้งานแบบทั่วไป (ไม่ใช่องค์กร)
 - [ ] Public: พร้อมสำหรับการใช้งาน
 

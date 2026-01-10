@@ -21,7 +21,7 @@
 
 ## Documentação
 
-Para ver a documentação completa, visite [supabase.com/docs](https://www.assistance.bg/docs)
+Para ver a documentação completa, visite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 ## Comunidade & Suporte
 
@@ -32,7 +32,7 @@ Para ver a documentação completa, visite [supabase.com/docs](https://www.assis
 ## Status
 
 - [x] Alpha: estamos a testar o BA com um grupo fechado de clientes
-- [x] Alpha Público: Qualquer pessoa pode se inscrever em [supabase.com/dashboard](https://www.assistance.bg/dashboard). Mas vai com calma, ainda existem alguns problemas.
+- [x] Alpha Público: Qualquer pessoa pode se inscrever em [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Mas vai com calma, ainda existem alguns problemas.
 - [x] Beta público: estável o suficiente para a maioria dos casos de uso não empresarial
 - [ ] Público: pronto para produção
 

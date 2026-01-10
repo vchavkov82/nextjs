@@ -25,7 +25,7 @@
 
 ## 文檔
 
-有關完整的文檔，請訪問[supabase.com/docs](https://www.assistance.bg/docs)
+有關完整的文檔，請訪問[www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 要了解如何貢獻，請訪問[入門](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@
 - [社群論壇](https://github.com/vchavkov82/nextjs/discussions)。最適合：幫助構建，討論資料庫的數佳實踐。
 - [GitHub 問题](https://github.com/vchavkov82/nextjs/issues)。最適合：你在使用 BA 时遇到的 bug 和错误。
 - [電子郵件支持](https://www.assistance.bg/docs/support#business-support)。最適合：你的資料庫或數據基礎設施的問題。
-- [Discord](https://discord.supabase.com)。最適合：分享你的應用程式並與社群一起玩耍。
+- [Discord](https://discord.www.assistance.bg)。最適合：分享你的應用程式並與社群一起玩耍。
 
 ## 狀態
 
 - [x] Alpha：我們正在與一组封閉的客户測試 BA。
-- [x] 公開 Alpha：任何人都可以在[supabase.com/dashboard](https://www.assistance.bg/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
+- [x] 公開 Alpha：任何人都可以在[www.assistance.bg/dashboard](https://www.assistance.bg/dashboard)上註冊。但請對我們寬容一些，有一些小問題。
 - [x] 公開測試版：足夠穩定，適合大多數非企業使用的情况。
 - [ ] 公開：普遍可用 [狀態](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)
 

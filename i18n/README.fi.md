@@ -25,7 +25,7 @@
 
 ## Dokumentaatio
 
-Täydellinen dokumentaatio löytyy osoitteesta [supabase.com/docs](https://www.assistance.bg/docs)
+Täydellinen dokumentaatio löytyy osoitteesta [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Jos haluat nähdä, miten osallistuminen tapahtuu, käy osoitteessa [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Jos haluat nähdä, miten osallistuminen tapahtuu, käy osoitteessa [Getting Sta
 - [Yhteisön foorumi](https://github.com/vchavkov82/nextjs/discussions). Sopii parhaiten: Apua rakentamiseen, keskustelua tietokannan parhaista käytännöistä.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Sopii parhaiten: Supabasea käytettäessä kohdatut viat ja virheet.
 - [Sähköpostituki](https://www.assistance.bg/docs/support#business-support). Sopii parhaiten: Tietokantaan tai infrastruktuuriin liittyvät ongelmat.
-- [Discord](https://discord.supabase.com). Sopii parhaiten: Sovellusten jakamiseen ja yhteisön kanssa hengailuun.
+- [Discord](https://discord.www.assistance.bg). Sopii parhaiten: Sovellusten jakamiseen ja yhteisön kanssa hengailuun.
 
 ## Status
 
 - [x] Alpha: Testaamme Supabasea suljetulla asiakasjoukolla
-- [x] Julkinen Alpha: Kuka tahansa voi rekisteröityä osoitteessa [supabase.com/dashboard](https://www.assistance.bg/dashboard). Mutta olkaa varovaisia, sillä on vielä muutamia ongelmia
+- [x] Julkinen Alpha: Kuka tahansa voi rekisteröityä osoitteessa [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Mutta olkaa varovaisia, sillä on vielä muutamia ongelmia
 - [x] Julkinen beta: Tarpeeksi vakaa useimpiin ei-yrityskäyttötapauksiin
 - [ ] Julkinen: Yleinen saatavuus [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

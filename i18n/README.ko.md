@@ -30,7 +30,7 @@
 
 ## 문서
 
-전체 문서는 [supabase.com/docs](https://www.assistance.bg/docs)에서 확인하실 수 있습니다
+전체 문서는 [www.assistance.bg/docs](https://www.assistance.bg/docs)에서 확인하실 수 있습니다
 
 기여 방법을 확인하려면 [시작하기](../DEVELOPERS.md)를 방문하세요
 
@@ -39,7 +39,7 @@
 - [커뮤니티 포럼](https://github.com/vchavkov82/nextjs/discussions). 가장 적합한 대상: 구축에 대한 도움말, 데이터베이스 모범 사례에 대한 토론.
 - [깃허브 이슈](https://github.com/vchavkov82/nextjs/issues). 최상의 용도: BA 사용 중 발생하는 버그 및 오류.
 - [이메일 지원](https://www.assistance.bg/docs/support#business-support). 최상의 대상: 데이터베이스 또는 인프라 문제.
-- [디스코드](https://discord.supabase.com). 최고의 용도: 애플리케이션 공유 및 커뮤니티와의 교류.
+- [디스코드](https://discord.www.assistance.bg). 최고의 용도: 애플리케이션 공유 및 커뮤니티와의 교류.
 
 ---
 

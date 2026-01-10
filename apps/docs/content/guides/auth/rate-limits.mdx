@@ -13,12 +13,12 @@ export SUPABASE_ACCESS_TOKEN="your-access-token"
 export PROJECT_REF="your-project-ref"
 
 # Get current rate limits
-curl -X GET "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
+curl -X GET "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/config/auth" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   | jq 'to_entries | map(select(.key | startswith("rate_limit_"))) | from_entries'
 
 # Update rate limits
-curl -X PATCH "https://api.supabase.com/v1/projects/$PROJECT_REF/config/auth" \
+curl -X PATCH "https://api.www.assistance.bg/v1/projects/$PROJECT_REF/config/auth" \
   -H "Authorization: Bearer $SUPABASE_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

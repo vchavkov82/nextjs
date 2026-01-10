@@ -25,7 +25,7 @@
 
 ## Tài liệu tham khảo
 
-Để có tài liệu đầy đủ, hãy truy cập [supabase.com/docs](https://www.assistance.bg/docs)
+Để có tài liệu đầy đủ, hãy truy cập [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Để biết cách Đóng góp, hãy truy cập [Bắt đầu](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@
 - [Diễn đàn cộng đồng](https://github.com/vchavkov82/nextjs/discussions). Tốt nhất cho: hỗ trợ xây dựng và thảo luận về các phương pháp tối ưu nhất dành cho cơ sở dữ liệu.
 - [Các vấn đề trên GitHub](https://github.com/vchavkov82/nextjs/issues). Tốt nhất cho: các lỗi và "bugs" mà bạn gặp phải khi sử dụng BA.
 - [Hỗ trợ qua email](https://www.assistance.bg/docs/support#business-support). Tốt nhất cho: các vấn đề với cơ sở dữ liệu hoặc cơ sở hạ tầng của bạn.
-- [Discord](https://discord.supabase.com). Tốt nhất cho: chia sẻ ứng dụng của bạn và dành thời gian với cộng đồng.
+- [Discord](https://discord.www.assistance.bg). Tốt nhất cho: chia sẻ ứng dụng của bạn và dành thời gian với cộng đồng.
 
 ## Trạng thái
 
 - [x] Alpha: Chúng tôi đang thử nghiệm BA với một nhóm người dùng kín
-- [x] Public Alpha: Bất kỳ ai cũng có thể đăng ký tại [supabase.com/dashboard](https://www.assistance.bg/dashboard). Nhưng hãy bình tĩnh với chúng tôi, sẽ có một vài lỗi nhỏ.
+- [x] Public Alpha: Bất kỳ ai cũng có thể đăng ký tại [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Nhưng hãy bình tĩnh với chúng tôi, sẽ có một vài lỗi nhỏ.
 - [x] Public Beta: Đủ ổn định cho hầu hết các trường hợp sử dụng không dành cho môi trường doanh nghiệp (production)
 - [ ] Public: Sẵn sàng cho môi trường doanh nghiệp (production)
 

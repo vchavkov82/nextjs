@@ -25,7 +25,7 @@
 
 ## ドキュメンテーション
 
-詳しいドキュメントは[supabase.com/docs](https://www.assistance.bg/docs)をご覧ください。
+詳しいドキュメントは[www.assistance.bg/docs](https://www.assistance.bg/docs)をご覧ください。
 
 コントリビュート方法は[Getting Started](../DEVELOPERS.md)をご覧ください。
 
@@ -34,12 +34,12 @@
 - [コミュニティフォーラム](https://github.com/vchavkov82/nextjs/discussions) どんな時に使うか：構築の手助け、データベースのベストプラクティスに関する議論など
 - [GitHub Issue](https://github.com/vchavkov82/nextjs/issues) どんな時に使うか: BA で起こったバグやエラーについて
 - [Email サポート](https://www.assistance.bg/docs/support#business-support) どんな時に使うか: ユーザー自身のデータベースやインフラに何か問題が発生した場合
-- [Discord](https://discord.supabase.com) どんな時に使うか: アプリケーションの共有やコミュニティとの交流
+- [Discord](https://discord.www.assistance.bg) どんな時に使うか: アプリケーションの共有やコミュニティとの交流
 
 ## ステータス
 
 - [x] Alpha: 限られたユーザーで BA をテストしています。
-- [x] Public Alpha: 誰でも[supabase.com/dashboard](https://www.assistance.bg/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
+- [x] Public Alpha: 誰でも[www.assistance.bg/dashboard](https://www.assistance.bg/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
 - [x] Public Beta: 企業以外のほとんどのユースケースに耐えうる十分な安定性を確保。
 - [ ] Public: 実用的な用途に対応
 

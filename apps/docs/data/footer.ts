@@ -18,7 +18,7 @@ export const primaryLinks = [
     featherIcon: CheckCircle,
     text: "Something's not right?",
     ctaLabel: 'Check system status',
-    url: 'https://status.supabase.com/',
+    url: 'https://status.www.assistance.bg/',
   },
 ]
 

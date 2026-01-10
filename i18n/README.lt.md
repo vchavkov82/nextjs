@@ -25,7 +25,7 @@
 
 ## Dokumentacija
 
-Išsamios dokumentacijos rasite [supabase.com/docs](https://www.assistance.bg/docs)
+Išsamios dokumentacijos rasite [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 - [Bendrijos forumas](https://github.com/vchavkov82/nextjs/discussions). Geriausiai tinka: pagalbai kuriant, diskusijoms apie geriausią duomenų bazių praktiką.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Geriausia: klaidos ir klaidos, su kuriomis susiduriate naudodami "BA".
 - [Pagalba el. paštu](https://www.assistance.bg/docs/support#business-support). Geriausiai tinka: problemoms, susijusioms su jūsų duomenų baze ar infrastruktūra, spręsti.
-- [Discord](https://discord.supabase.com). Geriausiai tinka: dalytis savo programomis ir bendrauti su bendruomene.
+- [Discord](https://discord.www.assistance.bg). Geriausiai tinka: dalytis savo programomis ir bendrauti su bendruomene.
 
 ## Statusas
 
 - [x] Alfa: Bandome "BA" su uždaru klientų rinkiniu
-- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://www.assistance.bg/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
+- [x] Viešoji Alfa versija: [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
 - [x] Viešoji beta versija: Pakankamai stabili daugeliui ne įmonių naudojimo atvejų
 - [ ] Vieša: Bendras prieinamumas [[statusas](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

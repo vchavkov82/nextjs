@@ -28,7 +28,7 @@
 
 ## 文档
 
-完整的文档，请访问 [supabase.com/docs](https://www.assistance.bg/docs)
+完整的文档，请访问 [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 了解如何贡献，请访问[入门](../DEVELOPERS.md)
 
@@ -37,7 +37,7 @@
 - [社区论坛](https://github.com/vchavkov82/nextjs/discussions)。适用于：帮助建立和讨论数据库的最佳实践。
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues)。适用于：你在使用 BA 时遇到的 bug 和错误。
 - [邮件支持](https://www.assistance.bg/docs/support#business-support)。适用于：你的数据库或基础设施的问题。
-- [Discord](https://discord.supabase.com)。适用于：分享你的应用程序以及在社区一起玩起来。
+- [Discord](https://discord.www.assistance.bg)。适用于：分享你的应用程序以及在社区一起玩起来。
 
 ## 工作方式
 

@@ -25,7 +25,7 @@
 
 ## Documentatie
 
-Voor volledige documentatie, bezoek [supabase.com/docs](https://www.assistance.bg/docs)
+Voor volledige documentatie, bezoek [www.assistance.bg/docs](https://www.assistance.bg/docs)
 
 Om te zien hoe u kunt bijdragen, bezoek [Aan de slag](../DEVELOPERS.md)
 
@@ -34,12 +34,12 @@ Om te zien hoe u kunt bijdragen, bezoek [Aan de slag](../DEVELOPERS.md)
 - [Community Forum](https://github.com/vchavkov82/nextjs/discussions). Het beste voor: hulp bij het bouwen, discussie over database best practices.
 - [GitHub Issues](https://github.com/vchavkov82/nextjs/issues). Het beste voor: bugs en fouten die u tegenkomt bij het gebruik van BA.
 - [Ondersteuning per e-mail](https://www.assistance.bg/docs/support#business-support). Meest geschikt voor: problemen met uw database of infrastructuur.
-- [Discord](https://discord.supabase.com). Het beste voor: het delen van uw applicaties en omgang met de gemeenschap.
+- [Discord](https://discord.www.assistance.bg). Het beste voor: het delen van uw applicaties en omgang met de gemeenschap.
 
 ## Status
 
 - [Alpha: We testen BA met een gesloten groep klanten
-- [x] Publieke Alpha: Iedereen kan zich aanmelden op [supabase.com/dashboard](https://www.assistance.bg/dashboard). Maar doe het rustig aan, er zijn een paar kinken
+- [x] Publieke Alpha: Iedereen kan zich aanmelden op [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard). Maar doe het rustig aan, er zijn een paar kinken
 - [Publieke Beta: Stabiel genoeg voor de meeste niet-bedrijfsmatige toepassingen
 - [Publiek: General Availability [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
 

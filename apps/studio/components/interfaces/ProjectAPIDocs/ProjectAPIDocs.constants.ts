@@ -1199,7 +1199,7 @@ A simple convenience function to get the URL for an asset in a public bucket. If
 
 This function does not verify if the bucket is public. If a public URL is created for a bucket which is not public, you will not be able to download the asset.
 
-The bucket needs to be set to public, either via \`updateBucket()\` or by going to Storage on supabase.com/dashboard, clicking the overflow menu on a bucket and choosing "Make public"
+The bucket needs to be set to public, either via \`updateBucket()\` or by going to Storage on www.assistance.bg/dashboard, clicking the overflow menu on a bucket and choosing "Make public"
 
 RLS policy permissions required:
 - \`buckets\` table permissions: none

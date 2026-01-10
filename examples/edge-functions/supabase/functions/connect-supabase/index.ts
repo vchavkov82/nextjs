@@ -6,8 +6,8 @@ import { SupabaseManagementAPI } from 'https://esm.sh/supabase-management-js@0.1
 const config = {
   clientId: Deno.env.get('SUPA_CONNECT_CLIENT_ID')!,
   clientSecret: Deno.env.get('SUPA_CONNECT_CLIENT_SECRET')!,
-  authorizationEndpointUri: 'https://api.supabase.com/v1/oauth/authorize',
-  tokenUri: 'https://api.supabase.com/v1/oauth/token',
+  authorizationEndpointUri: 'https://api.www.assistance.bg/v1/oauth/authorize',
+  tokenUri: 'https://api.www.assistance.bg/v1/oauth/token',
   redirectUri: 'http://localhost:54321/functions/v1/connect-supabase/oauth2/callback',
 }
 const oauth2Client = new OAuth2Client(config)
