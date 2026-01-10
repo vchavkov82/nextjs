@@ -111,9 +111,20 @@ const MDXRemoteBase = async ({
     // The getData error occurs when compileMDX tries to parse frontmatter
     // We've already completely removed frontmatter, so this should be safe
     // Note: compileMDX from /rsc in next-mdx-remote v5 uses a nested options structure
+    // Ensure source is clean and doesn't start with frontmatter markers
+    if (!finalSource || finalSource.trim().length === 0) {
+      throw new Error('MDX source is empty after frontmatter removal and preprocessing')
+    }
+    
+    // Final check: ensure source doesn't start with --- (frontmatter delimiter)
+    // This must be defined outside try block so it's accessible in catch block
+    const cleanSource = finalSource.trim().startsWith('---')
+      ? finalSource.replace(/^---[\s\S]*?---\s*\n?/m, '').trimStart()
+      : finalSource
+    
     try {
       const result = await compileMDX({
-        source: finalSource,
+        source: cleanSource,
         components: mergedComponents,
         options: {
           parseFrontmatter: false,
@@ -127,17 +138,27 @@ const MDXRemoteBase = async ({
         },
       })
       return result.content
-    } catch (compileError: any) {
+    } catch (compileError: unknown) {
       // If the error is about getData, it means frontmatter parsing was triggered
       // Log more details in development to help debug
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.error('MDX compilation error:', {
-          error: compileError?.message,
-          stack: compileError?.stack,
-          sourcePreview: finalSource.substring(0, 200),
-          hasFrontmatterMarkers: /^---/m.test(finalSource),
-        })
+        try {
+          // eslint-disable-next-line no-console
+          console.error('MDX compilation error:', {
+            error: compileError instanceof Error ? compileError.message : String(compileError),
+            stack: compileError instanceof Error ? compileError.stack : undefined,
+            sourcePreview:
+              typeof cleanSource === 'string' && cleanSource.length > 0
+                ? cleanSource.substring(0, 200)
+                : 'Source not available',
+            hasFrontmatterMarkers:
+              typeof cleanSource === 'string' ? /^---/m.test(cleanSource) : false,
+          })
+        } catch (logError) {
+          // If logging itself fails, just log the basic error
+          // eslint-disable-next-line no-console
+          console.error('MDX compilation failed. Error logging also failed:', logError)
+        }
       }
       throw compileError
     }
