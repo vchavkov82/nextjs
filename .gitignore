@@ -14,6 +14,7 @@ allure-report
 
 # turbo
 .turbo
+**/.turbo/
 
 # Logs
 *.log
@@ -110,6 +111,9 @@ build
 **/out/
 **/dist/
 **/build/
+
+# Contentlayer build output
+**/.contentlayer/
 
 # vuepress build output
 .vuepress/dist
