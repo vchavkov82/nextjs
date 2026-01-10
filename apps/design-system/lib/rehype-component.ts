@@ -53,17 +53,19 @@ export function rehypeComponent() {
             if (srcPath) {
               src = srcPath
             } else {
-              const component = Index[style.name][name]
-              // console.log('got to ELSE STATEMENT')
-              // console.log('filename', fileName)
-              // console.log('name', name)
+              const component = Index[style.name]?.[name]
+              
+              // Guard against undefined component or missing files property
+              if (!component || !component.files || !Array.isArray(component.files) || component.files.length === 0) {
+                console.warn(`Component "${name}" not found in style "${style.name}" or has no files. Skipping.`)
+                continue
+              }
 
               src = fileName
                 ? component.files.find((file: string) => {
                     return file.endsWith(`${fileName}.tsx`) || file.endsWith(`${fileName}.ts`)
                   }) || component.files[0]
                 : component.files[0]
-              // console.log('got to END of ELSE STATEMENT')
             }
 
             // Read the source file.
@@ -122,8 +124,14 @@ export function rehypeComponent() {
 
         try {
           for (const style of styles) {
-            const component = Index[style.name][name]
-            // console.log('GOT HERE')
+            const component = Index[style.name]?.[name]
+            
+            // Guard against undefined component or missing files property
+            if (!component || !component.files || !Array.isArray(component.files) || component.files.length === 0) {
+              console.warn(`Component "${name}" not found in style "${style.name}" or has no files. Skipping.`)
+              continue
+            }
+            
             const src = component.files[0]
 
             // Read the source file.
@@ -174,8 +182,14 @@ export function rehypeComponent() {
 
         try {
           for (const style of styles) {
-            const component = Index[style.name][name]
-            // console.log('GOT HERE')
+            const component = Index[style.name]?.[name]
+            
+            // Guard against undefined component or missing files property
+            if (!component || !component.files || !Array.isArray(component.files) || component.files.length === 0) {
+              console.warn(`Component "${name}" not found in style "${style.name}" or has no files. Skipping.`)
+              continue
+            }
+            
             const src = component.files[0]
 
             // Read the source file.

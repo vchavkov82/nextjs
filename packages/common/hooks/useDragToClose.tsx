@@ -45,4 +45,5 @@ const useDragToClose = ({
   return { ref, handleTouchStart, handleTouchMove, handleTouchEnd }
 }
 
+export { useDragToClose }
 export default useDragToClose
