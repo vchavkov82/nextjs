@@ -282,9 +282,6 @@ export const Posts: CollectionConfig = {
       // schedulePublish: true,
     },
     maxPerDoc: 50,
-    access: {
-      read: isAnyone, // Allow public read access to versions (for published posts)
-    },
   },
 }
 

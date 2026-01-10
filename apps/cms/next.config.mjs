@@ -1,4 +1,9 @@
 import { withPayload } from '@payloadcms/next/withPayload'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const redirects = async () => {
   const internetExplorerRedirect = {
@@ -55,6 +60,66 @@ const nextConfig = {
     optimizePackageImports: ['@payloadcms/ui', '@radix-ui/react-checkbox', '@radix-ui/react-label', '@radix-ui/react-select', 'lucide-react'],
     // Enable faster refresh
     optimizeCss: true,
+  },
+  webpack: (config, { webpack, isServer }) => {
+    // Ignore test files and other non-production files from node_modules
+    config.plugins = config.plugins || []
+    const emptyModulePath = path.resolve(__dirname, 'src/empty-module.js')
+    
+    // Configure resolve aliases to redirect problematic imports
+    config.resolve = config.resolve || {}
+    config.resolve.alias = config.resolve.alias || {}
+    config.resolve.alias['tap'] = emptyModulePath
+    config.resolve.alias['desm'] = emptyModulePath
+    
+    // Use NormalModuleReplacementPlugin to replace problematic imports from thread-stream test files
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /thread-stream[\\/].*[\\/]test[\\/].*\.(js|ts|mjs)$/,
+        emptyModulePath
+      )
+    )
+    
+    // Also replace any require/import of files in test directories
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /[\\/]test[\\/].*\.(test|spec)\.(js|ts|mjs)$/,
+        emptyModulePath
+      )
+    )
+    
+    // Ignore test files using IgnorePlugin
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /\.(test|spec)\.(js|ts|mjs|cjs|tsx|jsx)$/,
+        contextRegExp: /node_modules/,
+      })
+    )
+    
+    // Ignore test dependencies completely (they should never be in production builds)
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^(tap|desm)$/,
+      })
+    )
+    
+    // Ignore files in test directories
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        checkResource(resource, context) {
+          if (!context || !context.includes('node_modules')) {
+            return false
+          }
+          // Ignore files in test directories
+          if (resource.includes('/test/') || resource.includes('\\test\\')) {
+            return true
+          }
+          return false
+        },
+      })
+    )
+    
+    return config
   },
   turbopack: {
     rules: {

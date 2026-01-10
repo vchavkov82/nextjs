@@ -16,8 +16,9 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = async ({
       payload.logger.info(`Revalidating post at path: ${path}`)
       try {
         const { revalidatePath, revalidateTag } = await import('next/cache')
-        revalidatePath(path)
-        revalidateTag('posts-sitemap')
+        await revalidatePath(path)
+        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+        await revalidateTag('posts-sitemap')
       } catch {}
     }
 
@@ -29,8 +30,9 @@ export const revalidatePost: CollectionAfterChangeHook<Post> = async ({
 
       try {
         const { revalidatePath, revalidateTag } = await import('next/cache')
-        revalidatePath(oldPath)
-        revalidateTag('posts-sitemap')
+        await revalidatePath(oldPath)
+        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+        await revalidateTag('posts-sitemap')
       } catch {}
     }
   }
@@ -45,8 +47,9 @@ export const revalidateDelete: CollectionAfterDeleteHook<Post> = async ({
     const path = `/posts/${doc?.slug}`
     try {
       const { revalidatePath, revalidateTag } = await import('next/cache')
-      revalidatePath(path)
-      revalidateTag('posts-sitemap')
+      await revalidatePath(path)
+      // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+      await revalidateTag('posts-sitemap')
     } catch {}
   }
 

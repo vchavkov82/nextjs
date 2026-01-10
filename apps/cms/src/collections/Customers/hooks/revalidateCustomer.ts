@@ -16,8 +16,9 @@ export const revalidateCustomer: CollectionAfterChangeHook<Customer> = async ({
       payload.logger.info(`Revalidating event at path: ${path}`)
       try {
         const { revalidatePath, revalidateTag } = await import('next/cache')
-        revalidatePath(path)
-        revalidateTag('customers-sitemap')
+        await revalidatePath(path)
+        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+        await revalidateTag('customers-sitemap')
       } catch {
         // no-op when not running inside Next runtime (e.g., during payload migrate)
       }
@@ -31,8 +32,9 @@ export const revalidateCustomer: CollectionAfterChangeHook<Customer> = async ({
 
       try {
         const { revalidatePath, revalidateTag } = await import('next/cache')
-        revalidatePath(oldPath)
-        revalidateTag('customers-sitemap')
+        await revalidatePath(oldPath)
+        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+        await revalidateTag('customers-sitemap')
       } catch {}
     }
   }
@@ -47,8 +49,9 @@ export const revalidateDelete: CollectionAfterDeleteHook<Customer> = async ({
     const path = `/customers/${doc?.slug}`
     try {
       const { revalidatePath, revalidateTag } = await import('next/cache')
-      revalidatePath(path)
-      revalidateTag('customers-sitemap')
+      await revalidatePath(path)
+      // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
+      await revalidateTag('customers-sitemap')
     } catch {}
   }
 
