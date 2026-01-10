@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { relative } from 'node:path'
 import rehypeSlug from 'rehype-slug'
+import matter from 'gray-matter'
 
 import { GuideTemplate, newEditLink } from '~/features/docs/GuidesMdx.template'
 import { genGuideMeta, removeRedundantH1 } from '~/features/docs/GuidesMdx.utils'
@@ -86,7 +87,16 @@ const getContent = async ({ slug }: Params) => {
     `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${docsDir}/${remoteFile}`
   )
 
-  const content = removeRedundantH1(await response.text())
+  let content = await response.text()
+
+  // Parse and remove frontmatter to prevent "this.getData is not a function" error
+  const { content: contentWithoutFrontmatter } = matter(content)
+  content = contentWithoutFrontmatter
+
+  // Additional safety: ensure no frontmatter delimiters remain
+  content = content.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/m, '').trimStart()
+
+  content = removeRedundantH1(content)
 
   return {
     pathname: `/guides/cli/github-action/${slug}` satisfies `/${string}`,

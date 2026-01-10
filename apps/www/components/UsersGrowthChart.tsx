@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { FC, useEffect, useMemo, useState } from 'react'
 import { useMedia } from 'react-use'

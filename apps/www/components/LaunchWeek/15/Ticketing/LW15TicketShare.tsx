@@ -1,3 +1,5 @@
+'use client'
+
 import { useBreakpoint } from 'common'
 import dayjs from 'dayjs'
 import { Check } from 'lucide-react'

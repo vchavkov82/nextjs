@@ -1,3 +1,5 @@
+'use client'
+
 // Import Swiper styles if swiper used on page
 import 'swiper/css'
 

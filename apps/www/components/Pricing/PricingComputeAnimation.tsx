@@ -1,13 +1,20 @@
+'use client'
+
 import { useBreakpoint } from 'common'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { cn } from 'ui'
 
 const PricingComputeAnimation = () => {
   const { resolvedTheme } = useTheme()
   const [triggerAnimation, setTriggerAnimation] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const isTablet = useBreakpoint(1023)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <figure
@@ -16,9 +23,8 @@ const PricingComputeAnimation = () => {
     >
       <Image
         fill
-        src={`/images/pricing/compute/compute-cube-${
-          resolvedTheme?.includes('dark') ? 'dark' : 'light'
-        }-active.svg`}
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
         alt="Compute addon grid"
         className={cn(
           'absolute inset-0 z-20 transition-opacity opacity-0 !ease-[.76,0,.23,1] duration-300',
@@ -27,9 +33,8 @@ const PricingComputeAnimation = () => {
       />
       <Image
         fill
-        src={`/images/pricing/compute/compute-cube-${
-          resolvedTheme?.includes('dark') ? 'dark' : 'light'
-        }-active.svg`}
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
         alt="Compute addon grid"
         className={cn(
           'absolute inset-0 z-20 transition-all opacity-0 !ease-[.76,0,.23,1] duration-500 delay-500 -translate-y-[18%] blur-md',
@@ -38,9 +43,8 @@ const PricingComputeAnimation = () => {
       />
       <Image
         fill
-        src={`/images/pricing/compute/compute-cube-${
-          resolvedTheme?.includes('dark') ? 'dark' : 'light'
-        }-active.svg`}
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
         alt="Compute addon grid"
         className={cn(
           'absolute inset-0 z-20 transition-all opacity-0 !ease-[.76,0,.23,1] duration-500 delay-1000 -translate-y-[24%] blur-md',
@@ -49,17 +53,15 @@ const PricingComputeAnimation = () => {
       />
       <Image
         fill
-        src={`/images/pricing/compute/compute-cube-${
-          resolvedTheme?.includes('dark') ? 'dark' : 'light'
-        }.svg`}
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }.svg`}
         alt="Compute addon grid"
         className="absolute inset-0 z-10"
       />
       <Image
         fill
-        src={`/images/pricing/compute/compute-grid${isTablet ? '-mobile' : ''}-${
-          resolvedTheme?.includes('dark') ? 'dark' : 'light'
-        }.svg`}
+        src={`/images/pricing/compute/compute-grid${isMounted && isTablet ? '-mobile' : ''}-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }.svg`}
         alt="Compute addon grid"
         className="absolute inset-0 z-0 object-contain object-center"
       />

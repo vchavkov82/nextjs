@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react'
 import { cn } from 'ui'
 import useLw15ConfData, { UserTicketData } from '../hooks/use-conf-data'

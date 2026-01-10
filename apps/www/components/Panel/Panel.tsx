@@ -1,3 +1,5 @@
+'use client'
+
 import React, { PropsWithChildren, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { cn } from 'ui'

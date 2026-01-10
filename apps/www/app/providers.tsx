@@ -5,23 +5,17 @@ import {
   AuthProvider,
   FeatureFlagProvider,
   IS_PLATFORM,
-  PageTelemetry,
   TelemetryTagManager,
   ThemeProvider,
-  useThemeSandbox,
 } from 'common'
 import { WwwCommandMenu } from 'components/CommandMenu'
 import { API_URL } from 'lib/constants'
 import { themes, TooltipProvider, SonnerToaster } from 'ui'
 import { CommandProvider } from 'ui-patterns/CommandMenu'
-import { useConsentToast } from 'ui-patterns/consent'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { PageTelemetryClient } from './PageTelemetryClient'
 
 function Providers({ children }: { children: React.ReactNode }) {
-  // Re-enable useThemeSandbox to test
-  useThemeSandbox()
-  const { hasAcceptedConsent } = useConsentToast()
-
   return (
     <NuqsAdapter>
       <AuthProvider>
@@ -33,11 +27,7 @@ function Providers({ children }: { children: React.ReactNode }) {
                 <SonnerToaster position="top-right" />
                 <Suspense fallback={null}>{children}</Suspense>
                 <WwwCommandMenu />
-                <PageTelemetry
-                  API_URL={API_URL}
-                  hasAcceptedConsent={hasAcceptedConsent}
-                  enabled={IS_PLATFORM}
-                />
+                <PageTelemetryClient API_URL={API_URL} enabled={IS_PLATFORM} />
               </CommandProvider>
             </TooltipProvider>
           </ThemeProvider>

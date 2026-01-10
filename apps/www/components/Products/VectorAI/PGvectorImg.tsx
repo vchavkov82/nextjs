@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react'
 import { useTheme } from 'next-themes'
 import { DEFAULT_EASE } from '@/lib/animations'

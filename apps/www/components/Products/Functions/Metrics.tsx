@@ -1,3 +1,5 @@
+'use client'
+
 import dayjs from 'dayjs'
 import { useEffect, useState } from 'react'
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'

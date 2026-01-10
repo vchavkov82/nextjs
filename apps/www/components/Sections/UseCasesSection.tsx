@@ -1,3 +1,5 @@
+'use client'
+
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion'
 import Link from 'next/link'
 import { ReactNode, useRef } from 'react'

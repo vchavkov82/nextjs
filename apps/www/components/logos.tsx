@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { cn } from 'ui'
 import { range } from 'lib/helpers'
 
@@ -9,10 +12,42 @@ interface Props {
 }
 
 const Logos: React.FC<Props> = ({ className, showHeading = true, align = 'center' }) => {
+  const [isMounted, setIsMounted] = useState(false)
   const gap = 'gap-4 lg:gap-8'
 
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  // Render static version on server, animated version after hydration
+  if (!isMounted) {
+    return (
+      <div className={cn('pb-14 md:pb-24', className)}>
+        <div className="max-w-md md:max-w-lg lg:max-w-2xl mx-auto">
+          <div
+            className={cn(
+              'relative w-full mx-auto max-w-4xl opacity-90 dark:opacity-70',
+              'overflow-hidden',
+              'flex flex-nowrap justify-center',
+              'px-5 lg:px-12',
+              align === 'left' ? 'justify-start ml-0' : 'justify-center',
+              gap
+            )}
+          >
+            <LogosRow className={cn(gap, 'flex flex-nowrap w-fit')} />
+          </div>
+        </div>
+        {showHeading && (
+          <p className="w-full text-center text-sm text-foreground-lighter mt-6 lg:mt-8">
+            Trusted by fast-growing companies worldwide
+          </p>
+        )}
+      </div>
+    )
+  }
+
   return (
-    <div className={cn('pb-14 md:pb-24', className)} suppressHydrationWarning>
+    <div className={cn('pb-14 md:pb-24', className)}>
       <div className="max-w-md md:max-w-lg lg:max-w-2xl mx-auto">
         <div
           className={cn(
@@ -126,7 +161,7 @@ const logos = [
 ]
 
 const LogosRow: React.FC<{ className?: string }> = ({ className }) => (
-  <div className={cn(className)} suppressHydrationWarning>
+  <div className={cn(className)}>
     {logos.map((logo) => (
       <div key={`logos-group-${logo.name}`} className="h-12 lg:h-12 w-max !inline-block">
         <img

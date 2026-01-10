@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import dayjs from 'dayjs'
 import { Button, cn } from 'ui'

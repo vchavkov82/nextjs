@@ -117,12 +117,17 @@ export interface MermaidProps {
 export function Mermaid({ chart, className }: MermaidProps) {
   const [svg, setSvg] = useState<string>('')
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
   const { resolvedTheme } = useTheme()
 
   const isDark = resolvedTheme === 'dark'
 
   useEffect(() => {
-    if (!resolvedTheme) return
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted || !resolvedTheme) return
 
     // Re-initialize mermaid with current theme
     mermaid.initialize({
@@ -159,9 +164,9 @@ export function Mermaid({ chart, className }: MermaidProps) {
     }
 
     renderChart()
-  }, [chart, resolvedTheme])
+  }, [chart, resolvedTheme, mounted])
 
-  if (!resolvedTheme) {
+  if (!mounted || !resolvedTheme) {
     return <div className={cn('my-6 rounded-lg bg-muted p-6 animate-pulse h-64', className)} />
   }
 

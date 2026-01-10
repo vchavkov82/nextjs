@@ -1,3 +1,5 @@
+'use client'
+
 // components/AIDemoPanel.tsx
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'

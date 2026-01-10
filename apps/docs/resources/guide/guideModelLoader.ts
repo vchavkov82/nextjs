@@ -11,6 +11,54 @@ import { processMdx } from '~/scripts/helpers.mdx'
 import { GuideModel } from './guideModel'
 
 /**
+ * Ensures that no frontmatter delimiters remain in the content.
+ * This is critical to prevent the MDX compiler from trying to parse
+ * frontmatter and causing "this.getData is not a function" errors.
+ */
+function ensureFrontmatterRemoved(content: string): string {
+  if (!content || typeof content !== 'string') return ''
+
+  let cleaned = content
+
+  // Remove YAML frontmatter (--- ... ---) - most common format
+  cleaned = cleaned.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/m, '')
+
+  // Remove TOML frontmatter (+++ ... +++), though less common
+  cleaned = cleaned.replace(/^\+\+\+\s*\n[\s\S]*?\n\+\+\+\s*\n?/m, '')
+
+  // If still starts with ---, manually find and skip frontmatter block
+  if (cleaned.trim().startsWith('---')) {
+    const lines = cleaned.split('\n')
+    let startIndex = 0
+
+    if (lines[0]?.trim() === '---') {
+      // Find the closing ---
+      const closingIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() === '---')
+      if (closingIndex > 0) {
+        startIndex = closingIndex + 1
+      } else {
+        // No closing found, skip until first content line
+        startIndex = lines.findIndex(
+          (line, idx) =>
+            idx > 0 &&
+            line.trim() !== '' &&
+            line.trim() !== '---' &&
+            !line.match(/^[\w-]+:\s*/) // Skip YAML key:value lines
+        )
+        if (startIndex < 0) startIndex = 1 // Skip at least the opening ---
+      }
+    }
+
+    cleaned = lines.slice(startIndex).join('\n')
+  }
+
+  // Trim leading whitespace
+  cleaned = cleaned.trimStart()
+
+  return cleaned
+}
+
+/**
  * Determines if a file is hidden.
  *
  * A file is hidden if its name, or the name of any of its parent directories,
@@ -72,7 +120,7 @@ async function walkMdxFiles(
     },
     (error) => {
       // If we can't read the directory, add it to the error collection
-      ;(multiError.current ??= new MultiError('Failed to load some guides:')).appendError(
+      ; (multiError.current ??= new MultiError('Failed to load some guides:')).appendError(
         `Failed to read directory ${dir}: ${extractMessageFromAnyError(error)}`,
         error
       )
@@ -111,11 +159,20 @@ export class GuideModelLoader {
         // Parse frontmatter using gray-matter
         const { data: metadata, content: rawContent } = matter(fileContent)
 
+        // CRITICAL: Ensure all frontmatter is completely removed
+        // This prevents the MDX compiler from seeing --- delimiters and causing
+        // "this.getData is not a function" errors
+        const contentWithoutFrontmatter = ensureFrontmatterRemoved(rawContent)
+
         // Replace partials and code samples using directives
-        const processedContent = await preprocessMdxWithDefaults(rawContent)
+        const processedContent = await preprocessMdxWithDefaults(contentWithoutFrontmatter)
+
+        // DOUBLE-CHECK: Ensure preprocessing didn't reintroduce frontmatter
+        // This can happen if the preprocessing transforms introduce --- patterns
+        const finalContent = ensureFrontmatterRemoved(processedContent)
 
         // Process MDX to get chunked sections for embedding
-        const { sections } = await processMdx(processedContent)
+        const { sections } = await processMdx(finalContent)
 
         // Create subsections from the chunked sections
         const subsections = sections.map((section) => ({
@@ -133,7 +190,7 @@ export class GuideModelLoader {
         return new GuideModel({
           title,
           href,
-          content: processedContent,
+          content: finalContent,
           metadata,
           subsections,
         })
@@ -174,7 +231,7 @@ export class GuideModelLoader {
       result.match(
         (guide) => guides.push(guide),
         (error) => {
-          ;(multiError.current ??= new MultiError('Failed to load some guides:')).appendError(
+          ; (multiError.current ??= new MultiError('Failed to load some guides:')).appendError(
             `Failed to load ${relPath}: ${extractMessageFromAnyError(error)}`,
             error
           )

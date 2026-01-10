@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useRef } from 'react'
 import { LW14_URL } from 'lib/constants'
 import { Check, Copy } from 'lucide-react'

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { WeekDayProps, mainDays } from './data'

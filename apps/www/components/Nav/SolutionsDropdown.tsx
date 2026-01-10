@@ -1,7 +1,9 @@
+'use client'
+
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeftRight, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useWindowSize } from 'react-use'
 
 import { navData as DevelopersData } from 'data/Solutions'
@@ -70,8 +72,13 @@ const MotionLink = motion.create(Link)
 
 const MigrationLinkCard = ({ link }: { link: LinkProps }) => {
   const [hovered, setHovered] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const { width } = useWindowSize()
   const isDesktop = width >= 1280
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <MotionLink
@@ -82,12 +89,12 @@ const MigrationLinkCard = ({ link }: { link: LinkProps }) => {
       layout
     >
       <AnimatePresence mode="popLayout">
-        {(hovered || !isDesktop) && (
+        {(hovered || (isMounted && !isDesktop)) && (
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -10 }}
-            transition={{ duration: isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
+            transition={{ duration: isMounted && isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
             layout
           >
             {link.icon && <link.icon className="size-6" />}
@@ -98,7 +105,7 @@ const MigrationLinkCard = ({ link }: { link: LinkProps }) => {
       <motion.div
         className="size-6 flex items-center justify-center"
         layout
-        transition={{ duration: isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
+        transition={{ duration: isMounted && isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
       >
         <ArrowLeftRight className="size-4 text-foreground-light" strokeWidth={1.3} />
       </motion.div>
@@ -106,14 +113,14 @@ const MigrationLinkCard = ({ link }: { link: LinkProps }) => {
       <motion.div
         className="flex items-center gap-1"
         layout
-        transition={{ duration: isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
+        transition={{ duration: isMounted && isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
       >
         <span className="text-base font-medium">{link.text}</span>
       </motion.div>
 
       <motion.div
         layout
-        transition={{ duration: isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
+        transition={{ duration: isMounted && isDesktop ? 0.2 : 0, ease: 'easeInOut' }}
         className="ml-auto"
       >
         <ChevronRight

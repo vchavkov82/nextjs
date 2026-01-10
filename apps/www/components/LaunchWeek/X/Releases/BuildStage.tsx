@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC } from 'react'
 import { buildDays as days } from '@/components/LaunchWeek/X/Releases/data'
 

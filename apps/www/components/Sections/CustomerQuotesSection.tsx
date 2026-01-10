@@ -1,3 +1,5 @@
+'use client'
+
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { useTheme } from 'next-themes'

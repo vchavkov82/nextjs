@@ -1,3 +1,5 @@
+'use client'
+
 import rangeParser from 'parse-numeric-range'
 import { useMemo } from 'react'
 import CodeBlock, { CodeBlockProps } from './CodeBlock/CodeBlock'

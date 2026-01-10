@@ -1,3 +1,5 @@
+'use client'
+
 import 'swiper/css'
 
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'

@@ -48,6 +48,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
   const pathname = usePathname()
   const { width } = useWindowSize()
   const [open, setOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const isLoggedIn = useIsLoggedIn()
   const menu = getMenu()
   const sendTelemetryEvent = useSendTelemetryEvent()
@@ -68,6 +69,10 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
   const showLaunchWeekNavMode = (isGAWeekSection || isLaunchWeekXPage) && !open
 
   React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  React.useEffect(() => {
     if (open) {
       // Prevent scrolling on mount
       document.body.style.overflow = 'hidden'
@@ -76,10 +81,10 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
     }
   }, [open])
 
-  // Close mobile menu when desktop
+  // Close mobile menu when desktop (only after mount to prevent hydration mismatch)
   React.useEffect(() => {
-    if (width >= 1024) setOpen(false)
-  }, [width])
+    if (isMounted && width >= 1024) setOpen(false)
+  }, [width, isMounted])
 
   if (hideNavbar) {
     return null

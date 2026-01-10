@@ -28,9 +28,9 @@ export type StaticImport = StaticRequire | StaticImageData
 export type SourceType =
   | string
   | {
-      dark: string | StaticImport
-      light: string | StaticImport
-    }
+    dark: string | StaticImport
+    light: string | StaticImport
+  }
 
 export interface ImageProps extends Omit<NextImageProps, 'src'> {
   src: SourceType
@@ -57,14 +57,18 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
   const sizes = zoomable
     ? '(max-width: 768px) 200vw, (max-width: 1200px) 120vw, 200vw'
     : '(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 33vw'
+
+  // Use light theme as default for SSR, then switch to actual theme after mount
   const source =
-    typeof src === 'string' ? src : resolvedTheme?.includes('dark') ? src.dark : src.light
+    typeof src === 'string'
+      ? src
+      : mounted
+        ? (resolvedTheme?.includes('dark') ? src.dark : src.light)
+        : src.light
 
   useEffect(() => {
     setMounted(true)
   }, [])
-
-  if (!mounted) return null
 
   return (
     <figure className={cn('next-image--dynamic-fill', containerClassName)}>
@@ -74,7 +78,7 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
           : undefined)}
       >
         <NextImage
-          key={resolvedTheme}
+          key={mounted ? resolvedTheme : 'ssr'}
           alt={alt}
           src={source}
           sizes={sizes}

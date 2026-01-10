@@ -1,3 +1,5 @@
+'use client'
+
 import { RealtimeChannel, Session, SupabaseClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/router'
 import { createContext, Dispatch, useContext, useEffect, useMemo, useReducer } from 'react'

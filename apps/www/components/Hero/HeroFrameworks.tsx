@@ -1,7 +1,9 @@
+'use client'
+
 import { useBreakpoint } from 'common'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { cn } from 'ui'
 import { EASE_IN, EASE_OUT } from '@/lib/animations'
 import { useSendTelemetryEvent } from '@/lib/telemetry'
@@ -94,9 +96,14 @@ const textVariants = {
 
 const HeroFrameworks = ({ className }: { className?: string }) => {
   const [activeFramework, setActiveFramework] = useState<Framework>(null!)
+  const [isMounted, setIsMounted] = useState(false)
   const isXs = useBreakpoint(640)
 
   const sendTelemetryEvent = useSendTelemetryEvent()
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
     <SectionContainer className={cn(className)} id="frameworks">
@@ -143,8 +150,8 @@ const HeroFrameworks = ({ className }: { className?: string }) => {
                 )}
               >
                 <svg
-                  width={isXs ? 35 : 45}
-                  height={isXs ? 35 : 45}
+                  width={isMounted && isXs ? 35 : 45}
+                  height={isMounted && isXs ? 35 : 45}
                   fillRule="evenodd"
                   clipRule="evenodd"
                   viewBox="0 0 61 61"

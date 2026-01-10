@@ -1,3 +1,5 @@
+'use client'
+
 import { useBreakpoint } from 'common'
 import { AnimatePresence, motion } from 'framer-motion'
 import { startCase } from 'lib/helpers'

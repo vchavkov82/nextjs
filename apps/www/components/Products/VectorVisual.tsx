@@ -1,3 +1,5 @@
+'use client'
+
 import { detectBrowser, isBrowser } from 'common'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'

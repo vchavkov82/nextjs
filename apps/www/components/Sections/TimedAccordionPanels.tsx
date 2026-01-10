@@ -1,3 +1,5 @@
+'use client'
+
 import 'swiper/css'
 
 import React, { useState, useEffect, useRef } from 'react'

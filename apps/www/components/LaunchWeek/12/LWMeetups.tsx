@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { SupabaseClient } from '@supabase/supabase-js'

@@ -1,3 +1,5 @@
+'use client'
+
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import { Check } from 'lucide-react'
 import { useTheme } from 'next-themes'

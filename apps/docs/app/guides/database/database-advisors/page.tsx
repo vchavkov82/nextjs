@@ -1,6 +1,7 @@
 import { Octokit } from '@octokit/core'
 import { capitalize } from 'lodash-es'
 import rehypeSlug from 'rehype-slug'
+import matter from 'gray-matter'
 import { Heading } from 'ui'
 import { Admonition } from 'ui-patterns'
 
@@ -178,7 +179,14 @@ const getLints = async () => {
         throw Error(`Could not get contents of file ${org}/${repo}/${path}`)
       }
 
-      const content = await fileResponse.text()
+      let content = await fileResponse.text()
+
+      // Parse and remove frontmatter to prevent "this.getData is not a function" error
+      const { content: contentWithoutFrontmatter } = matter(content)
+      content = contentWithoutFrontmatter
+
+      // Additional safety: ensure no frontmatter delimiters remain
+      content = content.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/m, '').trimStart()
 
       return {
         path: getBasename(path),

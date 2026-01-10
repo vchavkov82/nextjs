@@ -1,3 +1,5 @@
+'use client'
+
 import React, { PropsWithChildren, useState, useRef, useCallback, useEffect } from 'react'
 import { cn } from 'ui'
 import Image from 'next/image'
