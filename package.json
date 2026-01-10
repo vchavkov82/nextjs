@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "find node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/test' -type d -exec rm -rf {} + 2>/dev/null || true",
     "build": "pnpm turbo run build --concurrency=96 --cache-dir=.turbo",
     "build:cms": "pnpm turbo run build --filter=cms --parallel",
     "build:design-system": "pnpm turbo run build --filter=design-system",

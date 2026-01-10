@@ -4,6 +4,7 @@
   "description": "Payload CMS for BA",
   "license": "MIT",
   "scripts": {
+    "prebuild": "find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/test' -exec rm -rf {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/bench.js' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream' -name '*.md' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream' -name 'LICENSE*' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/@esbuild+linux-x64@*/node_modules/@esbuild/linux-x64/bin' -type f -exec rm -f {} + 2>/dev/null; rm -rf .next 2>/dev/null || true",
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8192\" next build --webpack",
     "ci": "pnpm migrate && pnpm build",
     "clean": "rimraf node_modules .next",

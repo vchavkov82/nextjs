@@ -56,7 +56,7 @@ const nextConfig = {
   reactStrictMode: true,
   redirects,
   // Configure Sharp as an external package for server-side rendering
-  serverExternalPackages: ['sharp', 'pino', 'thread-stream'],
+  serverExternalPackages: ['sharp', 'pino', 'thread-stream', '@esbuild/linux-x64', 'esbuild'],
   webpack: (config) => {
     // Replace test files with empty module to prevent bundling errors
     config.plugins.push(
