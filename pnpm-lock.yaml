@@ -26097,7 +26097,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 2.0.0
-      vitest: 3.2.4(@types/node@22.13.14)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@20.0.3(supports-color@8.1.1))(msw@2.11.3(@types/node@22.13.14)(typescript@5.9.2))(sass@1.77.4)(supports-color@8.1.1)(terser@5.44.1)(tsx@4.20.3)(yaml@2.8.1)
+      vitest: 3.2.4(@types/node@25.0.3)(@vitest/ui@3.2.4)(jiti@2.5.1)(jsdom@20.0.3(supports-color@8.1.1))(msw@2.11.3(@types/node@25.0.3)(typescript@5.9.2))(sass@1.77.4)(supports-color@8.1.1)(terser@5.44.1)(tsx@4.20.3)(yaml@2.8.1)
 
   '@vitest/utils@3.2.4':
     dependencies:
@@ -31232,7 +31232,7 @@ snapshots:
       ccount: 2.0.1
       devlop: 1.1.0
       mdast-util-from-markdown: 2.0.2(supports-color@8.1.1)
-      mdast-util-to-markdown: 2.1.0
+      mdast-util-to-markdown: 2.1.2
       parse-entities: 4.0.1
       stringify-entities: 4.0.3
       unist-util-stringify-position: 4.0.0
@@ -31696,7 +31696,7 @@ snapshots:
       micromark-util-character: 2.0.1
       micromark-util-events-to-acorn: 2.0.2
       micromark-util-symbol: 2.0.1
-      micromark-util-types: 2.0.0
+      micromark-util-types: 2.0.2
       vfile-message: 4.0.2
 
   micromark-extension-mdx-jsx@3.0.2:
