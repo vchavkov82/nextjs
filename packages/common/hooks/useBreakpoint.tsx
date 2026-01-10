@@ -23,17 +23,20 @@ const twBreakpointMap = {
 
 export function useBreakpoint(breakpoint: number | keyof typeof twBreakpointMap = 'lg') {
   const [isBreakpoint, setIsBreakpoint] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const { width } = useWindowSize()
 
   const _breakpoint = typeof breakpoint === 'string' ? twBreakpointMap[breakpoint] : breakpoint
 
   useIsomorphicLayoutEffect(() => {
+    setIsMounted(true)
     if (width <= _breakpoint) {
       setIsBreakpoint(true)
     } else {
       setIsBreakpoint(false)
     }
-  }, [width])
+  }, [width, _breakpoint])
 
-  return isBreakpoint
+  // Return false on server to prevent hydration mismatch
+  return isMounted ? isBreakpoint : false
 }

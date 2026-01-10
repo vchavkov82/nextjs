@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Menu } from 'lucide-react'
@@ -62,6 +62,13 @@ const menu = [
 
 const TopNavDropdown = () => {
   const { theme, setTheme } = useTheme()
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  const currentTheme = isMounted ? theme : 'system' // Default to system on server
 
   return (
     <DropdownMenu modal={false}>
@@ -100,7 +107,7 @@ const TopNavDropdown = () => {
         <DropdownMenuGroup>
           <DropdownMenuLabel>Theme</DropdownMenuLabel>
           <DropdownMenuRadioGroup
-            value={theme}
+            value={currentTheme}
             onValueChange={(value) => {
               setTheme(value)
             }}

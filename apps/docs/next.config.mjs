@@ -239,6 +239,8 @@ const nextConfig = {
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-collapsible'],
     // Enable faster refresh
     optimizeCss: true,
+    // Allow cross-origin requests from development origins
+    allowedDevOrigins: ['suse-10.lan.assistance.bg'],
   },
   // Turbopack configuration - handles file types that webpack config above handles
   // Note: @next/mdx handles .md/.mdx files for pages, but we need to handle non-page markdown imports

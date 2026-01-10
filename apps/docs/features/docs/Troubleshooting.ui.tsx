@@ -20,6 +20,21 @@ export async function TroubleshootingPreview({ entry }: { entry: ITroubleshootin
     ? new Date()
     : (await getTroubleshootingUpdatedDates()).get(entry.data.database_id)
 
+  const now = new Date()
+  const dateLabel =
+    dateUpdated &&
+    (() => {
+      const options: Intl.DateTimeFormatOptions = {
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC',
+      }
+      if (dateUpdated.getUTCFullYear() !== now.getUTCFullYear()) {
+        options.year = 'numeric'
+      }
+      return new Intl.DateTimeFormat('en-US', options).format(dateUpdated)
+    })()
+
   const keywords = [...entry.data.topics, ...(entry.data.keywords ?? [])]
   const attributes = {
     [TROUBLESHOOTING_DATA_ATTRIBUTES.QUERY_ATTRIBUTE]:
@@ -75,14 +90,7 @@ export async function TroubleshootingPreview({ entry }: { entry: ITroubleshootin
         ))}
       </div>
       <div className="text-sm text-foreground-lighter ml-2 @4xl/troubleshooting:ml-0">
-        {dateUpdated &&
-          (() => {
-            const options = { month: 'short', day: 'numeric' } as Intl.DateTimeFormatOptions
-            if (dateUpdated.getFullYear() !== new Date().getFullYear()) {
-              options.year = 'numeric'
-            }
-            return dateUpdated.toLocaleDateString(undefined, options)
-          })()}
+        {dateLabel}
       </div>
     </div>
   )

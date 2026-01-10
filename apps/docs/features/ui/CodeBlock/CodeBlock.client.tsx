@@ -17,7 +17,10 @@ export function AnnotatedSpan({
   const [open, setOpen] = useState(false)
 
   const [isTouchDevice, setIsTouchDevice] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+  
   useEffect(() => {
+    setIsMounted(true)
     const touchDevice = !window.matchMedia('(pointer: fine)').matches
     setIsTouchDevice(touchDevice)
   }, [])

@@ -1,10 +1,12 @@
+'use client'
+
 import * as Accordion from '@radix-ui/react-accordion'
 import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 import { ChevronDown } from 'lucide-react'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import MenuIconPicker from './MenuIconPicker'
 
@@ -31,8 +33,15 @@ const HeaderLink = React.memo(function HeaderLink(props: {
 const ContentAccordionLink = React.memo(function ContentAccordionLink(props: any) {
   const pathname = usePathname()
   const { resolvedTheme } = useTheme()
+  const [isMounted, setIsMounted] = useState(false)
   const activeItem = props.subItem.url === pathname
   const activeItemRef = useRef<HTMLLIElement>(null)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  const theme = isMounted ? resolvedTheme : 'dark' // Default to dark on server
 
   const isChildActive =
     props.subItem.items && props.subItem.items.some((child: any) => child.url === pathname)
@@ -94,7 +103,7 @@ const ContentAccordionLink = React.memo(function ContentAccordionLink(props: any
                   {props.subItem.icon && (
                     <Image
                       alt={props.subItem.name}
-                      src={`${props.subItem.icon}${!resolvedTheme?.includes('dark') ? '-light' : ''}.svg`}
+                      src={`${props.subItem.icon}${!theme?.includes('dark') ? '-light' : ''}.svg`}
                       width={15}
                       height={15}
                     />
@@ -147,7 +156,7 @@ const ContentAccordionLink = React.memo(function ContentAccordionLink(props: any
               {props.subItem.icon && (
                 <Image
                   alt={props.subItem.name}
-                  src={`${props.subItem.icon}${!resolvedTheme?.includes('dark') ? '-light' : ''}.svg`}
+                  src={`${props.subItem.icon}${!theme?.includes('dark') ? '-light' : ''}.svg`}
                   width={15}
                   height={15}
                 />

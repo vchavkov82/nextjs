@@ -2,6 +2,7 @@
 
 import { ChevronRight, Play, Sparkles } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 // End of third-party imports
 
@@ -42,7 +43,13 @@ const HomePageCover = (props) => {
   const iconSize = isXs ? 'sm' : 'lg'
   const { homepageHeading } = getCustomContent(['homepage:heading'])
   const { resolvedTheme } = useTheme()
-  const isLightMode = resolvedTheme !== 'dark'
+  const [isMounted, setIsMounted] = useState(false)
+  
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  
+  const isLightMode = isMounted ? resolvedTheme !== 'dark' : false
 
   const frameworks = [
     {
