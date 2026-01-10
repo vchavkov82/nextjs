@@ -75,7 +75,7 @@ export const HomePageContent = ({ products, postgresIntegrations, selfHostingOpt
   ]
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" suppressHydrationWarning>
       <h2 id="products">Products</h2>
       <ul className="grid grid-cols-12 gap-6 not-prose [&_svg]:text-brand-600">
         {products.map((product) => {
