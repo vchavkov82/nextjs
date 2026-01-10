@@ -63,7 +63,6 @@ const MDXRemoteBase = async ({
           return String(result)
         } catch (error) {
           if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
             console.error('Error resolving feature flag:', feature, error)
           }
           return 'false'
@@ -123,11 +122,38 @@ const MDXRemoteBase = async ({
       : finalSource
     
     try {
+      // Ensure source absolutely doesn't start with frontmatter markers
+      // This is critical - even with parseFrontmatter: false, if the source
+      // starts with ---, the MDX compiler may still try to parse it and cause getData error
+      let finalCleanSource = cleanSource
+      if (finalCleanSource.trim().startsWith('---')) {
+        // More aggressive removal - find the first non-frontmatter line
+        const lines = finalCleanSource.split('\n')
+        let startIndex = 0
+        if (lines[0]?.trim() === '---') {
+          // Find the closing --- or the first content line
+          const closingIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() === '---')
+          if (closingIndex > 0) {
+            startIndex = closingIndex + 1
+          } else {
+            // No closing found, find first non-empty, non-dash line
+            startIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() !== '---' && line.trim() !== '')
+            if (startIndex < 0) startIndex = 0
+          }
+        }
+        finalCleanSource = lines.slice(startIndex).join('\n').trimStart()
+      }
+      
+      // Final safety check - remove any remaining frontmatter patterns
+      finalCleanSource = finalCleanSource.replace(/^---[\s\S]*?---\s*\n?/m, '').trimStart()
+      
+      // In next-mdx-remote v5, compileMDX from /rsc requires parseFrontmatter: false
+      // and the options must be structured correctly
       const result = await compileMDX({
-        source: cleanSource,
+        source: finalCleanSource,
         components: mergedComponents,
         options: {
-          parseFrontmatter: false,
+          parseFrontmatter: false, // Critical: must be false to prevent getData error
           mdxOptions: {
             remarkPlugins: [
               [remarkMath, { singleDollarTextMath: false }],
@@ -143,7 +169,6 @@ const MDXRemoteBase = async ({
       // Log more details in development to help debug
       if (process.env.NODE_ENV === 'development') {
         try {
-          // eslint-disable-next-line no-console
           console.error('MDX compilation error:', {
             error: compileError instanceof Error ? compileError.message : String(compileError),
             stack: compileError instanceof Error ? compileError.stack : undefined,
@@ -156,7 +181,6 @@ const MDXRemoteBase = async ({
           })
         } catch (logError) {
           // If logging itself fails, just log the basic error
-          // eslint-disable-next-line no-console
           console.error('MDX compilation failed. Error logging also failed:', logError)
         }
       }
