@@ -13,7 +13,7 @@
     "build:design-system": "pnpm turbo run build --filter=design-system",
     "build:docs": "pnpm turbo run build --filter=docs",
     "clean": "pnpm turbo run clean --parallel && rimraf -G node_modules/{*,.bin,.modules.yaml}",
-    "dev": "pnpm turbo run dev --filter='!studio' --parallel",
+    "dev": "pnpm turbo run dev --parallel",
     "dev:start": "bash scripts/dev-kill-services.sh && pnpm setup:cli && pnpm dev",
     "dev:bun": "bun run turbo run dev --parallel",
     "dev:hybrid": "bun run turbo run dev --parallel",
