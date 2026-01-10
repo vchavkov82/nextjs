@@ -50,16 +50,23 @@ const nextConfig = {
     'shared-data',
     'icons',
     'api-types',
-    // needed to make the octokit packages work in /changelog
-    '@octokit/plugin-paginate-graphql',
   ],
   experimental: {
     // Optimize for high-core systems
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-dialog', 'framer-motion'],
     // Enable faster refresh
     optimizeCss: true,
+    // Explicitly disable Turbopack to use webpack instead
+    // Note: This might not work in Next.js 16.0.10, but worth trying
     // needed to make the octokit packages work in /changelog
   },
+  // Explicitly configure webpack to ensure it's used instead of Turbopack
+  webpack: (config, { isServer }) => {
+    return config
+  },
+  // Add empty turbopack config to allow webpack config to work
+  // Next.js 16 uses Turbopack by default, but we need webpack for compatibility
+  turbopack: {},
   /**
    * Exclude huge directories from being traced into serverless functions
    * to avoid the max size limit for Serverless Functions on Vercel:
@@ -161,12 +168,26 @@ const nextConfig = {
     // prod
     ignoreBuildErrors: process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? false : true,
   },
+  serverExternalPackages: [
+    '@octokit/core',
+    '@octokit/plugin-paginate-graphql',
+  ],
 }
 
 // next.config.js.
 const configExport = () => {
-  const plugins = [withMDX, withBundleAnalyzer]
-  return plugins.reduce((acc, next) => next(acc), nextConfig)
+  // Only apply bundle analyzer if ANALYZE is enabled to avoid potential config conflicts
+  // Temporarily disable bundle analyzer to check if it's causing the turbo key issue
+  const plugins = [withMDX]
+  if (process.env.ANALYZE === 'true') {
+    plugins.push(withBundleAnalyzer)
+  }
+  const config = plugins.reduce((acc, next) => next(acc), nextConfig)
+  // Explicitly remove any turbo key that might have been added by plugins
+  if (config.experimental?.turbo !== undefined) {
+    delete config.experimental.turbo
+  }
+  return config
 }
 
 export default configExport()

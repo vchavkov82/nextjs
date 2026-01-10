@@ -96,7 +96,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     const postContent = await getPostdata(slug, '_blog')
     const parsedContent = matter(postContent) as unknown as MatterReturn
     const blogPost = parsedContent.data
-    const metaImageUrl = `/images/blog/${blogPost.image ? blogPost.image : blogPost.thumb}`
+    const rawThumb = blogPost.image ? blogPost.image : blogPost.thumb
+    // Strip query strings from local image URLs for metadata (query strings not needed for meta tags)
+    const thumbWithoutQuery = rawThumb?.includes('?') ? rawThumb.split('?')[0] : rawThumb
+    const metaImageUrl = thumbWithoutQuery ? `/images/blog/${thumbWithoutQuery}` : undefined
 
     return {
       title: blogPost.title,

@@ -159,17 +159,6 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "aspect-ratio-demo": {
-      name: "aspect-ratio-demo",
-      type: "components:example",
-      registryDependencies: ["aspect-ratio"],
-      component: React.lazy(() => import("@/registry/default/example/aspect-ratio-demo")),
-      source: "",
-      files: ["registry/default/example/aspect-ratio-demo.tsx"],
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
     "alert-dialog-destructive": {
       name: "alert-dialog-destructive",
       type: "components:example",
@@ -188,6 +177,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/alert-dialog-warning")),
       source: "",
       files: ["registry/default/example/alert-dialog-warning.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "aspect-ratio-demo": {
+      name: "aspect-ratio-demo",
+      type: "components:example",
+      registryDependencies: ["aspect-ratio"],
+      component: React.lazy(() => import("@/registry/default/example/aspect-ratio-demo")),
+      source: "",
+      files: ["registry/default/example/aspect-ratio-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

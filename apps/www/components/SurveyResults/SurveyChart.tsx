@@ -14,10 +14,11 @@ import TwoOptionToggle from '../../../studio/components/ui/TwoOptionToggle'
 import CodeBlock from '@/components/CodeBlock/CodeBlock'
 
 // Separate BA client for survey project
-const externalSupabase = createClient(
-  process.env.NEXT_PUBLIC_SURVEY_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SURVEY_SUPABASE_ANON_KEY!
-)
+// Use placeholder values during build if env vars are not set to avoid build-time errors
+const surveySupabaseUrl = process.env.NEXT_PUBLIC_SURVEY_SUPABASE_URL || 'https://placeholder.supabase.co'
+const surveySupabaseAnonKey = process.env.NEXT_PUBLIC_SURVEY_SUPABASE_ANON_KEY || 'placeholder-anon-key'
+
+const externalSupabase = createClient(surveySupabaseUrl, surveySupabaseAnonKey)
 
 // Sentinel for “no filter”
 const NO_FILTER = 'unset'

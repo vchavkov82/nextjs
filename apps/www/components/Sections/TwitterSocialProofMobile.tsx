@@ -23,6 +23,11 @@ interface Props {
 const TwitterSocialProofMobile: FC<Props> = ({ tweets, className }: any) => {
   const { basePath } = useRouter()
 
+  // Guard against undefined tweets during build
+  if (!tweets || !Array.isArray(tweets)) {
+    return null
+  }
+
   return (
     <div className={className}>
       <Swiper

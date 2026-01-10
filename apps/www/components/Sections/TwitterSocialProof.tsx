@@ -12,7 +12,7 @@ interface Props {
   className?: string
 }
 
-const tweetsData = topTweets
+const tweetsData = topTweets || []
 
 const TwitterSocialProof: React.FC<Props> = ({ className }) => {
   const { basePath } = useRouter()

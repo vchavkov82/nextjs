@@ -50,8 +50,15 @@ function FeaturedThumb(blog: PostTypes | CMSPostTypes) {
   return renderFeaturedThumb(blog, author)
 }
 
+// Helper function to strip query strings from image URLs
+// Next.js Image component doesn't support query strings on local images
+function stripQueryString(url: string): string {
+  const urlObj = new URL(url, 'http://localhost')
+  return urlObj.pathname
+}
+
 function renderFeaturedThumb(blog: PostTypes, author: any[]) {
-  const imageUrl = blog.isCMS
+  const rawImageUrl = blog.isCMS
     ? blog.thumb
       ? blog.thumb
       : blog.image
@@ -62,6 +69,14 @@ function renderFeaturedThumb(blog: PostTypes, author: any[]) {
       : blog.image
         ? `/images/blog/${blog.image}`
         : '/images/blog/blog-placeholder.png'
+
+  // Strip query strings from local image URLs (keep query strings for external URLs)
+  const imageUrl =
+    rawImageUrl.startsWith('/') || rawImageUrl.startsWith('./')
+      ? stripQueryString(rawImageUrl)
+      : rawImageUrl.includes('?')
+        ? rawImageUrl.split('?')[0]
+        : rawImageUrl
 
   return (
     <div key={blog.slug} className="w-full">

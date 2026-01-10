@@ -589,7 +589,9 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/how-supabase-accelerates-development-of-all-pull-together</loc>
+    <loc
+      >https://www.assistance.bg/blog/how-supabase-accelerates-development-of-all-pull-together</loc
+    >
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -727,7 +729,9 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/building-a-realtime-trello-board-with-supabase-and-angular</loc>
+    <loc
+      >https://www.assistance.bg/blog/building-a-realtime-trello-board-with-supabase-and-angular</loc
+    >
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -794,14 +798,6 @@
 
   <url>
     <loc>https://www.assistance.bg/blog/authentication-in-ionic-angular</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://www.assistance.bg/blog/fetching-and-caching-supabase-data-in-next-js-server-components</loc
-    >
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -987,12 +983,6 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/infinite-scroll-with-nextjs-framer-motion</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
     <loc>https://www.assistance.bg/blog/designing-with-ai-midjourney</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1161,12 +1151,6 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/react-native-storage</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
     <loc>https://www.assistance.bg/blog/beta-update-july-2023</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1174,12 +1158,6 @@
 
   <url>
     <loc>https://www.assistance.bg/blog/fewer-dimensions-are-better-pgvector</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/blog/interactive-constellation-threejs-react-three-fiber</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1294,12 +1272,6 @@
 
   <url>
     <loc>https://www.assistance.bg/blog/beta-update-october-2023</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/blog/react-native-authentication</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1432,12 +1404,6 @@
 
   <url>
     <loc>https://www.assistance.bg/blog/elixir-clustering-using-postgres</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/blog/react-query-nextjs-app-router-cache-helpers</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1635,18 +1601,6 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/calcom-platform-starter-kit-nextjs-supabase</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/blog/self-host-maps-storage-protomaps</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
     <loc>https://www.assistance.bg/blog/postgis-generate-vector-tiles</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1779,12 +1733,6 @@
   </url>
 
   <url>
-    <loc>https://www.assistance.bg/blog/in-browser-semantic-search-pglite</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
     <loc>https://www.assistance.bg/blog/flutter-uber-clone</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1792,12 +1740,6 @@
 
   <url>
     <loc>https://www.assistance.bg/blog/edge-functions-faster-smaller</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/blog/local-first-expo-legend-state</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2145,6 +2087,32 @@
   </url>
 
   <url>
+    <loc
+      >https://www.assistance.bg/blog/testing-for-vibe-coders-from-zero-to-production-confidence</loc
+    >
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/the-vibe-coding-master-checklist</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/vibe-coding-best-practices-for-prompting</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/the-vibe-coders-guide-to-supabase-environments</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/blog/lw15-hackathon-winners</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2169,7 +2137,67 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/blog/lovable-cloud-launch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/bolt-cloud-launch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/blog/postgrest-13-release</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/1000-yc-companies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/login-with-solana-ethereum</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/remote-mcp-server</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/supabase-series-e</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/triplit-joins-supabase</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/snap-launches-snap-cloud</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/supabase-security-2025-retro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/blog/introducing-trae-solo-integration</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2223,6 +2251,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/customers/exprealty</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/customers/firecrawl</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2230,6 +2264,12 @@
 
   <url>
     <loc>https://www.assistance.bg/customers/good-tape</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/customers/govsignals</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2254,6 +2294,12 @@
 
   <url>
     <loc>https://www.assistance.bg/customers/kayhanspace</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/customers/koodos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2295,6 +2341,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/customers/phoenix-energy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/customers/quilia</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2302,6 +2354,12 @@
 
   <url>
     <loc>https://www.assistance.bg/customers/quivr</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/customers/rally</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2386,6 +2444,12 @@
 
   <url>
     <loc>https://www.assistance.bg/events/migrating-from-firebase-mobbin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/events/supabase-agency-webinar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2865,6 +2929,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/partners/integrations/dbos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/partners/integrations/deepnote</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3021,6 +3091,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/partners/integrations/mux</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/partners/integrations/n8n</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3051,6 +3127,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/partners/integrations/openfort</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/partners/integrations/ory</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3076,6 +3158,12 @@
 
   <url>
     <loc>https://www.assistance.bg/partners/integrations/postgresai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/partners/integrations/postmark-by-activecampaign</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3141,7 +3229,19 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/partners/integrations/rxdb</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/partners/integrations/sequin_io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/partners/integrations/spice-ai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3285,6 +3385,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/aws-reinvent-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/beta</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3334,12 +3440,6 @@
 
   <url>
     <loc>https://www.assistance.bg/edge-functions</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://www.assistance.bg/events</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3531,6 +3631,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/solutions/agencies</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/solutions/ai-builders</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -3592,6 +3698,12 @@
 
   <url>
     <loc>https://www.assistance.bg/solutions/switch-from-neon</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/solutions/vibe-coders</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

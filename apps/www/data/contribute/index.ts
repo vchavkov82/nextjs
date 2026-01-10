@@ -7,8 +7,9 @@ import type {
   ThreadSource,
 } from '~/types/contribute'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_CONTRIBUTE_URL as string
-const supabasePublishableKey = process.env.NEXT_PUBLIC_SUPABASE_CONTRIBUTE_PUBLISHABLE_KEY as string
+// Use placeholder values during build if env vars are not set to avoid build-time errors
+const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_CONTRIBUTE_URL as string) || 'https://placeholder.supabase.co'
+const supabasePublishableKey = (process.env.NEXT_PUBLIC_SUPABASE_CONTRIBUTE_PUBLISHABLE_KEY as string) || 'placeholder-anon-key'
 
 function formatTimeAgo(date: Date): string {
   const now = new Date()

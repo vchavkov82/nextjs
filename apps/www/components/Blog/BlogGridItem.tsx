@@ -24,7 +24,17 @@ const BlogGridItem = ({ post }: Props) => {
     }
   }
 
-  const imageUrl = post.isCMS
+  // Helper function to strip query strings from image URLs
+  // Next.js Image component doesn't support query strings on local images
+  const stripQueryString = (url: string): string => {
+    if (url.startsWith('/') || url.startsWith('./')) {
+      const urlObj = new URL(url, 'http://localhost')
+      return urlObj.pathname
+    }
+    return url.includes('?') ? url.split('?')[0] : url
+  }
+
+  const rawImageUrl = post.isCMS
     ? post.thumb
       ? post.thumb
       : post.image
@@ -35,6 +45,9 @@ const BlogGridItem = ({ post }: Props) => {
       : post.image
         ? `/images/blog/${post.image}`
         : '/images/blog/blog-placeholder.png'
+
+  // Strip query strings from local image URLs (keep query strings for external URLs)
+  const imageUrl = stripQueryString(rawImageUrl)
 
   return (
     <Link
