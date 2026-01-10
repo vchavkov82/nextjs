@@ -8,9 +8,9 @@ import SqlToRest from 'ui-patterns/SqlToRest'
 import { Heading } from 'ui/src/components/CustomHTMLElements'
 import { CodeBlock } from '~/features/ui/CodeBlock/CodeBlock'
 import { NamedCodeBlock } from '~/features/directives/CodeTabs.components'
+import { Accordion, AccordionItem } from '~/features/ui/Accordion.server'
+import InfoTooltip from '~/features/ui/InfoTooltip.server'
 // Client components removed from components map - they cause serialization errors
-// import { Accordion, AccordionItem } from '~/features/ui/Accordion.server'
-// import InfoTooltip from '~/features/ui/InfoTooltip.server'
 // import { ShowUntil } from '~/features/ui/ShowUntil.server'
 // import { TabPanel, Tabs } from '~/features/ui/Tabs.server'
 // import { ErrorCodes } from '../ui/ErrorCodes.server'
@@ -23,8 +23,7 @@ import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeC
 // NavData must be statically imported to avoid serialization issues with render props
 // Functions cannot be passed from Server Components to Client Components
 import { NavData } from '~/components/NavData'
-// ProjectConfigVariables is a client component - removed to fix serialization error
-// import { ProjectConfigVariables } from '~/components/ProjectConfigVariables/ProjectConfigVariables.server'
+import { ProjectConfigVariables } from '~/components/ProjectConfigVariables/ProjectConfigVariables.server'
 
 // Static imports for Server Components
 // Dynamic imports from next/dynamic create Module objects that cannot be serialized
@@ -50,9 +49,8 @@ const AdmonitionWithMargin = (props: AdmonitionProps) => {
 }
 
 const components = {
-  // Client components removed to fix serialization error with compileMDX in RSC
-  // Accordion,
-  // AccordionItem,
+  Accordion,
+  AccordionItem,
   Admonition: AdmonitionWithMargin,
   AiPromptsIndex,
   // AppleSecretGenerator,
@@ -78,7 +76,7 @@ const components = {
   MetricsStackCards,
   NamedCodeBlock,
   NavData,
-  // ProjectConfigVariables,
+  ProjectConfigVariables,
   // RealtimeLimitsEstimator,
   RegionsList,
   SmartRegionsList,
@@ -92,9 +90,9 @@ const components = {
   StepHikeCompactStep: Step,
   StepHikeCompactDetails: Details,
   StepHikeCompactCode: Code,
+  InfoTooltip,
   // Tabs,
   // TabPanel,
-  // InfoTooltip,
   h2: (props: any) => (
     <Heading tag="h2" {...props}>
       {props.children}

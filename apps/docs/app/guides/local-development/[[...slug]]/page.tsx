@@ -20,7 +20,7 @@ const LocalDevelopmentGuidePage = async (props: { params: Promise<Params> }) => 
   }
 
   const { pathname, ...guideProps } = data
-  return <GuideTemplate {...(guideProps as Parameters<typeof GuideTemplate>[0])} />
+  return <GuideTemplate {...guideProps} />
 }
 
 const generateStaticParams = IS_PROD ? genGuidesStaticParams('local-development') : getEmptyArray
