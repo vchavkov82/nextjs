@@ -17,12 +17,12 @@ const SiteLayout = dynamic(() => import('~/layouts/SiteLayout'), {
 const DocsCommandMenu = dynamic(
   () => import('./command').then((mod) => ({ default: mod.DocsCommandMenu })),
   {
-    ssr: true,
+    ssr: false,
   }
 )
 
 const ThemeSandbox = dynamic(() => import('./ui/theme.client').then((mod) => ({ default: mod.ThemeSandbox })), {
-  ssr: true,
+  ssr: false,
 })
 
 /**
