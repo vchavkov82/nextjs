@@ -6,11 +6,20 @@ import type { ServerFunctionClient } from 'payload'
 import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts'
 import React from 'react'
 
-import { importMap } from './admin/importMap.js'
 import './custom.scss'
 
 type Args = {
   children: React.ReactNode
+}
+
+// Import importMap conditionally to avoid build errors
+let importMap: any = {}
+try {
+  const importMapModule = require('./admin/importMap.js')
+  importMap = importMapModule?.importMap || {}
+} catch (e) {
+  // Fallback to empty importMap if file doesn't exist or can't be loaded
+  importMap = {}
 }
 
 const serverFunction: ServerFunctionClient = async function (args) {
