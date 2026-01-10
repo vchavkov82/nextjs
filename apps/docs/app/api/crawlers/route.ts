@@ -17,6 +17,9 @@ import type { MethodTypes } from '~/features/docs/Reference.typeSpec'
 import type { AbbrevApiReferenceSection } from '~/features/docs/Reference.utils'
 import { BASE_PATH } from '~/lib/constants'
 
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 export async function GET(request: Request) {
   const url = new URL(request.url)
   let [, , lib, maybeVersion, slug] = url.pathname.split('/')

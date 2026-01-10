@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/test' -exec rm -rf {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/bench.js' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream/README.md' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream' -name '*.md' -exec rm -f {} + 2>/dev/null; find ../../node_modules/.pnpm -path '*/thread-stream@*/node_modules/thread-stream' -name 'LICENSE*' -exec rm -f {} + 2>/dev/null; rm -rf .next .turbo 2>/dev/null || true",
-    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8192\" next build --webpack",
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8192\" pnpm run generate:importmap 2>/dev/null || true && next build --webpack",
     "ci": "pnpm migrate && pnpm build",
     "clean": "rimraf node_modules .next",
     "dev": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=16384 --max-semi-space-size=512\" next dev --turbopack --port 3030 --hostname 0.0.0.0",
