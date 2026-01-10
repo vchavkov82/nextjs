@@ -235,16 +235,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1531
-          ]
+          "children": [1531]
         },
         {
           "title": "Properties",
-          "children": [
-            1537,
-            1536
-          ]
+          "children": [1537, 1536]
         }
       ],
       "sources": [
@@ -274,7 +269,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Base error thrown by BA Auth helpers."
+            "text": "Base error thrown by Supabase Auth helpers."
           }
         ],
         "blockTags": [
@@ -486,16 +481,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1521
-          ]
+          "children": [1521]
         },
         {
           "title": "Properties",
-          "children": [
-            1526,
-            1528
-          ]
+          "children": [1526, 1528]
         }
       ],
       "sources": [
@@ -666,10 +656,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1594,
-                                1593
-                              ]
+                              "children": [1594, 1593]
                             }
                           ],
                           "sources": [
@@ -854,10 +841,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1598,
-                        1597
-                      ]
+                      "children": [1598, 1597]
                     }
                   ],
                   "sources": [
@@ -1044,10 +1028,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-                                  "children": [
-                                    1608,
-                                    1607
-                                  ]
+                                  "children": [1608, 1607]
                                 }
                               ],
                               "sources": [
@@ -1128,12 +1109,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1605,
-                        1603,
-                        1602,
-                        1604
-                      ]
+                      "children": [1605, 1603, 1602, 1604]
                     }
                   ],
                   "sources": [
@@ -1153,24 +1129,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1588
-          ]
+          "children": [1588]
         },
         {
           "title": "Properties",
-          "children": [
-            1611,
-            1595,
-            1609,
-            1610
-          ]
+          "children": [1611, 1595, 1609, 1610]
         },
         {
           "title": "Methods",
-          "children": [
-            1599
-          ]
+          "children": [1599]
         }
       ],
       "sources": [
@@ -1417,17 +1384,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1579
-          ]
+          "children": [1579]
         },
         {
           "title": "Properties",
-          "children": [
-            1584,
-            1582,
-            1583
-          ]
+          "children": [1584, 1582, 1583]
         }
       ],
       "sources": [
@@ -1674,17 +1635,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1672
-          ]
+          "children": [1672]
         },
         {
           "title": "Properties",
-          "children": [
-            1677,
-            1675,
-            1676
-          ]
+          "children": [1677, 1675, 1676]
         }
       ],
       "sources": [
@@ -1918,17 +1873,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1571
-          ]
+          "children": [1571]
         },
         {
           "title": "Properties",
-          "children": [
-            1575,
-            1573,
-            1574
-          ]
+          "children": [1575, 1573, 1574]
         }
       ],
       "sources": [
@@ -2162,17 +2111,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1642
-          ]
+          "children": [1642]
         },
         {
           "title": "Properties",
-          "children": [
-            1646,
-            1644,
-            1645
-          ]
+          "children": [1646, 1644, 1645]
         }
       ],
       "sources": [
@@ -2323,10 +2266,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1621,
-                                1620
-                              ]
+                              "children": [1621, 1620]
                             }
                           ],
                           "sources": [
@@ -2511,10 +2451,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1625,
-                        1624
-                      ]
+                      "children": [1625, 1624]
                     }
                   ],
                   "sources": [
@@ -2701,10 +2638,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-                                  "children": [
-                                    1635,
-                                    1634
-                                  ]
+                                  "children": [1635, 1634]
                                 }
                               ],
                               "sources": [
@@ -2785,12 +2719,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1632,
-                        1630,
-                        1629,
-                        1631
-                      ]
+                      "children": [1632, 1630, 1629, 1631]
                     }
                   ],
                   "sources": [
@@ -2810,24 +2739,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1615
-          ]
+          "children": [1615]
         },
         {
           "title": "Properties",
-          "children": [
-            1638,
-            1622,
-            1636,
-            1637
-          ]
+          "children": [1638, 1622, 1636, 1637]
         },
         {
           "title": "Methods",
-          "children": [
-            1626
-          ]
+          "children": [1626]
         }
       ],
       "sources": [
@@ -3085,17 +3005,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1650
-          ]
+          "children": [1650]
         },
         {
           "title": "Properties",
-          "children": [
-            1656,
-            1654,
-            1655
-          ]
+          "children": [1656, 1654, 1655]
         }
       ],
       "sources": [
@@ -3329,17 +3243,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1563
-          ]
+          "children": [1563]
         },
         {
           "title": "Properties",
-          "children": [
-            1567,
-            1565,
-            1566
-          ]
+          "children": [1567, 1565, 1566]
         }
       ],
       "sources": [
@@ -3599,17 +3507,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1541
-          ]
+          "children": [1541]
         },
         {
           "title": "Properties",
-          "children": [
-            1546,
-            1545,
-            1548
-          ]
+          "children": [1546, 1545, 1548]
         }
       ],
       "sources": [
@@ -3937,18 +3839,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1660
-          ]
+          "children": [1660]
         },
         {
           "title": "Properties",
-          "children": [
-            1668,
-            1666,
-            1665,
-            1667
-          ]
+          "children": [1668, 1666, 1665, 1667]
         }
       ],
       "sources": [
@@ -4233,17 +4128,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            1551
-          ]
+          "children": [1551]
         },
         {
           "title": "Properties",
-          "children": [
-            1559,
-            1557,
-            1558
-          ]
+          "children": [1559, 1557, 1558]
         }
       ],
       "sources": [
@@ -4704,11 +4593,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            11,
-                            7,
-                            6
-                          ]
+                          "children": [11, 7, 6]
                         }
                       ],
                       "sources": [
@@ -4772,7 +4657,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
               }
             ]
           },
@@ -5293,10 +5178,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            46,
-                            47
-                          ]
+                          "children": [46, 47]
                         }
                       ],
                       "sources": [
@@ -5510,10 +5392,7 @@
                                       "groups": [
                                         {
                                           "title": "Properties",
-                                          "children": [
-                                            61,
-                                            60
-                                          ]
+                                          "children": [61, 60]
                                         }
                                       ],
                                       "sources": [
@@ -5558,10 +5437,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                58,
-                                62
-                              ]
+                              "children": [58, 62]
                             }
                           ],
                           "sources": [
@@ -5628,9 +5504,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        66
-                                      ]
+                                      "children": [66]
                                     }
                                   ],
                                   "sources": [
@@ -5669,10 +5543,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                64,
-                                67
-                              ]
+                              "children": [64, 67]
                             }
                           ],
                           "sources": [
@@ -5854,10 +5725,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            39,
-                            40
-                          ]
+                          "children": [39, 40]
                         }
                       ],
                       "sources": [
@@ -5980,29 +5848,15 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            2
-          ]
+          "children": [2]
         },
         {
           "title": "Properties",
-          "children": [
-            19,
-            20
-          ]
+          "children": [19, 20]
         },
         {
           "title": "Methods",
-          "children": [
-            51,
-            75,
-            48,
-            68,
-            41,
-            54,
-            34,
-            71
-          ]
+          "children": [51, 75, 48, 68, 41, 54, 34, 71]
         }
       ],
       "sources": [
@@ -6163,7 +6017,7 @@
             "summary": [
               {
                 "kind": "text",
-                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\nUsed to implement the authorization code flow on the consent page."
+                "text": "Namespace for the OAuth 2.1 authorization server methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\nUsed to implement the authorization code flow on the consent page."
               }
             ]
           },
@@ -6475,9 +6329,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-                                  "children": [
-                                    671
-                                  ]
+                                  "children": [671]
                                 }
                               ],
                               "sources": [
@@ -6535,11 +6387,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            668,
-                            669,
-                            667
-                          ]
+                          "children": [668, 669, 667]
                         }
                       ],
                       "sources": [
@@ -6667,11 +6515,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        675,
-                                        676,
-                                        677
-                                      ]
+                                      "children": [675, 676, 677]
                                     }
                                   ],
                                   "sources": [
@@ -6708,10 +6552,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                673,
-                                678
-                              ]
+                              "children": [673, 678]
                             }
                           ],
                           "sources": [
@@ -6777,10 +6618,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                680,
-                                681
-                              ]
+                              "children": [680, 681]
                             }
                           ],
                           "sources": [
@@ -6844,10 +6682,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                683,
-                                684
-                              ]
+                              "children": [683, 684]
                             }
                           ],
                           "sources": [
@@ -6982,9 +6817,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        288
-                                      ]
+                                      "children": [288]
                                     }
                                   ],
                                   "sources": [
@@ -7021,10 +6854,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                286,
-                                289
-                              ]
+                              "children": [286, 289]
                             }
                           ],
                           "sources": [
@@ -7092,9 +6922,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        293
-                                      ]
+                                      "children": [293]
                                     }
                                   ],
                                   "sources": [
@@ -7133,10 +6961,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                291,
-                                294
-                              ]
+                              "children": [291, 294]
                             }
                           ],
                           "sources": [
@@ -7204,9 +7029,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        298
-                                      ]
+                                      "children": [298]
                                     }
                                   ],
                                   "sources": [
@@ -7243,10 +7066,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                296,
-                                299
-                              ]
+                              "children": [296, 299]
                             }
                           ],
                           "sources": [
@@ -7293,7 +7113,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the BA Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
+                    "text": "Gets the current user details if there is an existing session. This method\nperforms a network request to the Supabase Auth server, so the returned\nvalue is authentic and can be used to base authorization rules on."
                   }
                 ]
               },
@@ -7455,9 +7275,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        470
-                                      ]
+                                      "children": [470]
                                     }
                                   ],
                                   "sources": [
@@ -7494,10 +7312,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                468,
-                                471
-                              ]
+                              "children": [468, 471]
                             }
                           ],
                           "sources": [
@@ -7563,10 +7378,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                473,
-                                474
-                              ]
+                              "children": [473, 474]
                             }
                           ],
                           "sources": [
@@ -8029,9 +7841,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                437
-                              ]
+                              "children": [437]
                             }
                           ],
                           "sources": [
@@ -8049,9 +7859,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        435
-                      ]
+                      "children": [435]
                     }
                   ],
                   "sources": [
@@ -8083,7 +7891,7 @@
                   },
                   {
                     "kind": "text",
-                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other BA Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
+                    "text": " as you might end\nup with a deadlock. The callback function runs inside an exclusive lock,\nso calling other Supabase Client APIs that also try to acquire the\nexclusive lock, might cause a deadlock. This behavior is observable across\ntabs. In the next major library version, this behavior will not be supported.\n\nReceive a notification every time an auth event happens."
                   }
                 ],
                 "blockTags": [
@@ -8267,9 +8075,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                447
-                              ]
+                              "children": [447]
                             }
                           ],
                           "sources": [
@@ -8287,9 +8093,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        445
-                      ]
+                      "children": [445]
                     }
                   ],
                   "sources": [
@@ -8448,9 +8252,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            380
-                          ]
+                          "children": [380]
                         }
                       ],
                       "sources": [
@@ -8691,10 +8493,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            457,
-                            456
-                          ]
+                          "children": [457, 456]
                         }
                       ],
                       "sources": [
@@ -8777,10 +8576,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                459,
-                                461
-                              ]
+                              "children": [459, 461]
                             }
                           ],
                           "sources": [
@@ -8846,10 +8642,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                463,
-                                464
-                              ]
+                              "children": [463, 464]
                             }
                           ],
                           "sources": [
@@ -8974,10 +8767,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            368,
-                            369
-                          ]
+                          "children": [368, 369]
                         }
                       ],
                       "sources": [
@@ -9624,10 +9414,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        217,
-                                        218
-                                      ]
+                                      "children": [217, 218]
                                     }
                                   ],
                                   "sources": [
@@ -9664,10 +9451,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                215,
-                                219
-                              ]
+                              "children": [215, 219]
                             }
                           ],
                           "sources": [
@@ -9754,10 +9538,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        223,
-                                        224
-                                      ]
+                                      "children": [223, 224]
                                     }
                                   ],
                                   "sources": [
@@ -9796,10 +9577,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                221,
-                                225
-                              ]
+                              "children": [221, 225]
                             }
                           ],
                           "sources": [
@@ -9964,9 +9742,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            421
-                          ]
+                          "children": [421]
                         }
                       ],
                       "sources": [
@@ -10331,10 +10107,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                490,
-                                492
-                              ]
+                              "children": [490, 492]
                             }
                           ],
                           "sources": [
@@ -10400,10 +10173,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                494,
-                                495
-                              ]
+                              "children": [494, 495]
                             }
                           ],
                           "sources": [
@@ -10516,9 +10286,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            357
-                          ]
+                          "children": [357]
                         }
                       ],
                       "sources": [
@@ -10630,49 +10398,17 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            109
-          ]
+          "children": [109]
         },
         {
           "title": "Properties",
-          "children": [
-            113,
-            114,
-            115
-          ]
+          "children": [113, 114, 115]
         },
         {
           "title": "Methods",
           "children": [
-            208,
-            662,
-            283,
-            346,
-            465,
-            192,
-            179,
-            475,
-            427,
-            276,
-            376,
-            280,
-            451,
-            364,
-            196,
-            264,
-            205,
-            267,
-            202,
-            273,
-            211,
-            417,
-            199,
-            541,
-            543,
-            486,
-            352,
-            270
+            208, 662, 283, 346, 465, 192, 179, 475, 427, 276, 376, 280, 451, 364, 196, 264, 205,
+            267, 202, 273, 211, 417, 199, 541, 543, 486, 352, 270
           ]
         }
       ],
@@ -10805,15 +10541,11 @@
       "groups": [
         {
           "title": "Constructors",
-          "children": [
-            696
-          ]
+          "children": [696]
         },
         {
           "title": "Properties",
-          "children": [
-            699
-          ]
+          "children": [699]
         }
       ],
       "sources": [
@@ -11307,20 +11039,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            901,
-            904,
-            910,
-            902,
-            907,
-            908,
-            911,
-            906,
-            909,
-            903,
-            905,
-            900
-          ]
+          "children": [901, 904, 910, 902, 907, 908, 911, 906, 909, 903, 905, 900]
         }
       ],
       "sources": [
@@ -11447,10 +11166,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            834,
-            835
-          ]
+          "children": [834, 835]
         }
       ],
       "sources": [
@@ -11472,7 +11188,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThese methods are used to implement the consent page."
+            "text": "Contains all OAuth 2.1 authorization server user-facing methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThese methods are used to implement the consent page."
           }
         ]
       },
@@ -11502,7 +11218,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Approves an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -11595,9 +11311,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1485
-                          ]
+                          "children": [1485]
                         }
                       ],
                       "sources": [
@@ -11657,7 +11371,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Denies an OAuth authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -11750,9 +11464,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1491
-                          ]
+                          "children": [1491]
                         }
                       ],
                       "sources": [
@@ -11812,7 +11524,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
+                    "text": "Retrieves details about an OAuth authorization request.\nUsed to display consent information to the user.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis method returns authorization details including client info, scopes, and user information.\nIf the response includes a redirect_uri, it means consent was already given - the caller\nshould handle the redirect manually if needed."
                   }
                 ],
                 "blockTags": [
@@ -11901,7 +11613,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+                    "text": "Lists all OAuth grants that the authenticated user has authorized.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -11969,7 +11681,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
+                    "text": "Revokes a user's OAuth grant for a specific client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nRevocation marks consent as revoked, deletes active sessions for that OAuth client,\nand invalidates associated refresh tokens."
                   }
                 ],
                 "blockTags": [
@@ -12047,9 +11759,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1498
-                          ]
+                          "children": [1498]
                         }
                       ],
                       "sources": [
@@ -12088,13 +11798,7 @@
       "groups": [
         {
           "title": "Methods",
-          "children": [
-            1480,
-            1486,
-            1477,
-            1492,
-            1494
-          ]
+          "children": [1480, 1486, 1477, 1492, 1494]
         }
       ],
       "sources": [
@@ -12191,10 +11895,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1107,
-            1108
-          ]
+          "children": [1107, 1108]
         }
       ],
       "sources": [
@@ -12392,10 +12093,7 @@
       "groups": [
         {
           "title": "Methods",
-          "children": [
-            1303,
-            1300
-          ]
+          "children": [1303, 1300]
         }
       ],
       "sources": [
@@ -12417,7 +12115,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Contains all OAuth client administration methods.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -12447,7 +12145,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Creates a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12527,7 +12225,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Deletes an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12629,10 +12327,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1443,
-                            1444
-                          ]
+                          "children": [1443, 1444]
                         }
                       ],
                       "sources": [
@@ -12677,7 +12372,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Gets details of a specific OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12755,7 +12450,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Lists all OAuth clients with optional pagination.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12837,7 +12532,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Regenerates the secret for an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12915,7 +12610,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth.\n\nThis function should only be called on a server. Never expose your "
+                    "text": "Updates an existing OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth.\n\nThis function should only be called on a server. Never expose your "
                   },
                   {
                     "kind": "code",
@@ -12985,14 +12680,7 @@
       "groups": [
         {
           "title": "Methods",
-          "children": [
-            1429,
-            1439,
-            1432,
-            1426,
-            1445,
-            1435
-          ]
+          "children": [1429, 1439, 1432, 1426, 1445, 1435]
         }
       ],
       "sources": [
@@ -13145,9 +12833,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1194
-                          ]
+                          "children": [1194]
                         }
                       ],
                       "sources": [
@@ -13225,10 +12911,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1196,
-                                1197
-                              ]
+                              "children": [1196, 1197]
                             }
                           ],
                           "sources": [
@@ -13358,11 +13041,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        1203,
-                                        1201,
-                                        1202
-                                      ]
+                                      "children": [1203, 1201, 1202]
                                     }
                                   ],
                                   "sources": [
@@ -13399,10 +13078,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1199,
-                                1204
-                              ]
+                              "children": [1199, 1204]
                             }
                           ],
                           "sources": [
@@ -13519,10 +13195,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1209,
-                            1208
-                          ]
+                          "children": [1209, 1208]
                         }
                       ],
                       "sources": [
@@ -13600,10 +13273,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1211,
-                                1212
-                              ]
+                              "children": [1211, 1212]
                             }
                           ],
                           "sources": [
@@ -13733,11 +13403,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        1218,
-                                        1216,
-                                        1217
-                                      ]
+                                      "children": [1218, 1216, 1217]
                                     }
                                   ],
                                   "sources": [
@@ -13774,10 +13440,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1214,
-                                1219
-                              ]
+                              "children": [1214, 1219]
                             }
                           ],
                           "sources": [
@@ -13940,10 +13603,7 @@
                               "groups": [
                                 {
                                   "title": "Properties",
-                                  "children": [
-                                    1226,
-                                    1227
-                                  ]
+                                  "children": [1226, 1227]
                                 }
                               ],
                               "sources": [
@@ -13961,10 +13621,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1223,
-                            1224
-                          ]
+                          "children": [1223, 1224]
                         }
                       ],
                       "sources": [
@@ -14042,10 +13699,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1229,
-                                1230
-                              ]
+                              "children": [1229, 1230]
                             }
                           ],
                           "sources": [
@@ -14248,9 +13902,7 @@
                                                       "groups": [
                                                         {
                                                           "title": "Properties",
-                                                          "children": [
-                                                            1242
-                                                          ]
+                                                          "children": [1242]
                                                         }
                                                       ],
                                                       "sources": [
@@ -14287,10 +13939,7 @@
                                               "groups": [
                                                 {
                                                   "title": "Properties",
-                                                  "children": [
-                                                    1240,
-                                                    1239
-                                                  ]
+                                                  "children": [1240, 1239]
                                                 }
                                               ],
                                               "sources": [
@@ -14363,9 +14012,7 @@
                                                       "groups": [
                                                         {
                                                           "title": "Properties",
-                                                          "children": [
-                                                            1247
-                                                          ]
+                                                          "children": [1247]
                                                         }
                                                       ],
                                                       "sources": [
@@ -14402,10 +14049,7 @@
                                               "groups": [
                                                 {
                                                   "title": "Properties",
-                                                  "children": [
-                                                    1245,
-                                                    1244
-                                                  ]
+                                                  "children": [1245, 1244]
                                                 }
                                               ],
                                               "sources": [
@@ -14425,12 +14069,7 @@
                                   "groups": [
                                     {
                                       "title": "Properties",
-                                      "children": [
-                                        1236,
-                                        1234,
-                                        1235,
-                                        1237
-                                      ]
+                                      "children": [1236, 1234, 1235, 1237]
                                     }
                                   ],
                                   "sources": [
@@ -14467,10 +14106,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1232,
-                                1248
-                              ]
+                              "children": [1232, 1248]
                             }
                           ],
                           "sources": [
@@ -14650,10 +14286,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1280,
-                            1279
-                          ]
+                          "children": [1280, 1279]
                         }
                       ],
                       "sources": [
@@ -14864,11 +14497,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1174,
-                            1175,
-                            1176
-                          ]
+                          "children": [1174, 1175, 1176]
                         }
                       ],
                       "sources": [
@@ -15018,11 +14647,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1180,
-                            1181,
-                            1182
-                          ]
+                          "children": [1180, 1181, 1182]
                         }
                       ],
                       "sources": [
@@ -15145,10 +14770,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1186,
-                            1187
-                          ]
+                          "children": [1186, 1187]
                         }
                       ],
                       "sources": [
@@ -15684,11 +15306,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1256,
-                            1257,
-                            1255
-                          ]
+                          "children": [1256, 1257, 1255]
                         }
                       ],
                       "sources": [
@@ -15836,11 +15454,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1262,
-                            1263,
-                            1261
-                          ]
+                          "children": [1262, 1263, 1261]
                         }
                       ],
                       "sources": [
@@ -16014,11 +15628,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1268,
-                            1267,
-                            1269
-                          ]
+                          "children": [1268, 1267, 1269]
                         }
                       ],
                       "sources": [
@@ -16104,21 +15714,11 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1285
-          ]
+          "children": [1285]
         },
         {
           "title": "Methods",
-          "children": [
-            1190,
-            1275,
-            1170,
-            1283,
-            1281,
-            1272,
-            1251
-          ]
+          "children": [1190, 1275, 1170, 1283, 1281, 1272, 1251]
         }
       ],
       "sources": [
@@ -16237,12 +15837,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1371,
-            1370,
-            1372,
-            1369
-          ]
+          "children": [1371, 1370, 1372, 1369]
         }
       ],
       "sources": [
@@ -16298,7 +15893,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "JWT Payload containing claims for BA authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
+            "text": "JWT Payload containing claims for Supabase authentication tokens.\n\nRequired claims (iss, aud, exp, iat, sub, role, aal, session_id) are inherited from RequiredClaims.\nAll other claims are optional as they can be customized via Custom Access Token Hooks."
           }
         ],
         "blockTags": [
@@ -16739,23 +16334,8 @@
         {
           "title": "Properties",
           "children": [
-            1364,
-            1356,
-            1354,
-            1360,
-            1349,
-            1361,
-            1362,
-            1351,
-            1358,
-            1352,
-            1353,
-            1350,
-            1357,
-            1363,
-            1365,
-            1359,
-            1355
+            1364, 1356, 1354, 1360, 1349, 1361, 1362, 1351, 1358, 1352, 1353, 1350, 1357, 1363,
+            1365, 1359, 1355
           ]
         }
       ],
@@ -17055,16 +16635,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            825,
-            828,
-            827,
-            824,
-            823,
-            826,
-            829,
-            830
-          ]
+          "children": [825, 828, 827, 824, 823, 826, 829, 830]
         }
       ],
       "sources": [
@@ -17284,11 +16855,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            914,
-            913,
-            919
-          ]
+          "children": [914, 913, 919]
         }
       ],
       "sources": [
@@ -17898,31 +17465,8 @@
         {
           "title": "Properties",
           "children": [
-            878,
-            869,
-            871,
-            872,
-            882,
-            881,
-            892,
-            879,
-            874,
-            883,
-            891,
-            868,
-            888,
-            877,
-            889,
-            890,
-            885,
-            875,
-            876,
-            880,
-            884,
-            873,
-            886,
-            887,
-            870
+            878, 869, 871, 872, 882, 881, 892, 879, 874, 883, 891, 868, 888, 877, 889, 890, 885,
+            875, 876, 880, 884, 873, 886, 887, 870
           ]
         }
       ],
@@ -18007,10 +17551,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            860,
-            861
-          ]
+          "children": [860, 861]
         }
       ],
       "sources": [
@@ -18228,13 +17769,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            898,
-            894,
-            897,
-            896,
-            895
-          ]
+          "children": [898, 894, 897, 896, 895]
         }
       ],
       "sources": [
@@ -18465,16 +18000,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            845,
-            837,
-            839,
-            843,
-            846,
-            844,
-            847,
-            838
-          ]
+          "children": [845, 837, 839, 843, 846, 844, 847, 838]
         }
       ],
       "sources": [
@@ -18662,10 +18188,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1049,
-                    1048
-                  ]
+                  "children": [1049, 1048]
                 }
               ],
               "sources": [
@@ -18739,12 +18262,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1043,
-            1046,
-            1044,
-            1045
-          ]
+          "children": [1043, 1046, 1044, 1045]
         }
       ],
       "sources": [
@@ -18856,10 +18374,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1041,
-                    1040
-                  ]
+                  "children": [1041, 1040]
                 }
               ],
               "sources": [
@@ -18960,12 +18475,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1038,
-            1035,
-            1036,
-            1037
-          ]
+          "children": [1038, 1035, 1036, 1037]
         }
       ],
       "sources": [
@@ -19044,10 +18554,7 @@
       "groups": [
         {
           "title": "Properties",
-          "children": [
-            1051,
-            1052
-          ]
+          "children": [1051, 1052]
         }
       ],
       "sources": [
@@ -19341,10 +18848,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1291,
-                1292
-              ]
+              "children": [1291, 1292]
             }
           ],
           "sources": [
@@ -19425,9 +18929,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1288
-                  ]
+                  "children": [1288]
                 }
               ],
               "sources": [
@@ -19508,9 +19010,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1298
-              ]
+              "children": [1298]
             }
           ],
           "sources": [
@@ -19596,9 +19096,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1295
-                  ]
+                  "children": [1295]
                 }
               ],
               "sources": [
@@ -20343,11 +19841,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1168,
-                    1166,
-                    1167
-                  ]
+                  "children": [1168, 1166, 1167]
                 }
               ],
               "sources": [
@@ -20482,9 +19976,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1161
-                      ]
+                      "children": [1161]
                     }
                   ],
                   "sources": [
@@ -20613,9 +20105,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1152
-                  ]
+                  "children": [1152]
                 }
               ],
               "sources": [
@@ -20850,13 +20340,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1143,
-                1145,
-                1146,
-                1144,
-                1147
-              ]
+              "children": [1143, 1145, 1146, 1144, 1147]
             }
           ],
           "sources": [
@@ -20880,7 +20364,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for getting OAuth authorization details.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -20917,7 +20401,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth consent decision (approve/deny).\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -20973,9 +20457,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1467
-                  ]
+                  "children": [1467]
                 }
               ],
               "sources": [
@@ -21003,7 +20485,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing user's OAuth grants.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -21043,7 +20525,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for revoking an OAuth grant.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -21194,11 +20676,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    793,
-                    792,
-                    791
-                  ]
+                  "children": [793, 792, 791]
                 }
               ],
               "sources": [
@@ -21307,10 +20785,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    783,
-                    782
-                  ]
+                  "children": [783, 782]
                 }
               ],
               "sources": [
@@ -21451,11 +20926,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    787,
-                    786,
-                    788
-                  ]
+                  "children": [787, 786, 788]
                 }
               ],
               "sources": [
@@ -21546,10 +21017,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    797,
-                    796
-                  ]
+                  "children": [797, 796]
                 }
               ],
               "sources": [
@@ -21663,11 +21131,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    801,
-                    800,
-                    802
-                  ]
+                  "children": [801, 800, 802]
                 }
               ],
               "sources": [
@@ -21724,7 +21188,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for creating a new OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -21932,14 +21396,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1399,
-                1400,
-                1402,
-                1401,
-                1403,
-                1404
-              ]
+              "children": [1399, 1400, 1402, 1401, 1403, 1404]
             }
           ],
           "sources": [
@@ -22222,11 +21679,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1023,
-                            1024,
-                            1022
-                          ]
+                          "children": [1023, 1024, 1022]
                         }
                       ],
                       "sources": [
@@ -22312,12 +21765,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1017,
-                    1020,
-                    1019,
-                    1018
-                  ]
+                  "children": [1017, 1020, 1019, 1018]
                 }
               ],
               "sources": [
@@ -22467,9 +21915,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1031
-                          ]
+                          "children": [1031]
                         }
                       ],
                       "sources": [
@@ -22519,12 +21965,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1026,
-                    1027,
-                    1029,
-                    1028
-                  ]
+                  "children": [1026, 1027, 1029, 1028]
                 }
               ],
               "sources": [
@@ -22878,14 +22319,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                855,
-                853,
-                852,
-                851,
-                854,
-                856
-              ]
+              "children": [855, 853, 852, 851, 854, 856]
             }
           ],
           "sources": [
@@ -23105,12 +22539,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1103,
-                1104,
-                1105,
-                1102
-              ]
+              "children": [1103, 1104, 1105, 1102]
             }
           ],
           "sources": [
@@ -23253,11 +22682,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1093,
-                1094,
-                1092
-              ]
+              "children": [1093, 1094, 1092]
             }
           ],
           "sources": [
@@ -23487,13 +22912,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1116,
-                1117,
-                1118,
-                1119,
-                1120
-              ]
+              "children": [1116, 1117, 1118, 1119, 1120]
             }
           ],
           "sources": [
@@ -23580,10 +22999,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1112,
-                    1113
-                  ]
+                  "children": [1112, 1113]
                 }
               ],
               "sources": [
@@ -23756,11 +23172,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1098,
-                1099,
-                1097
-              ]
+              "children": [1098, 1099, 1097]
             }
           ],
           "sources": [
@@ -23905,12 +23317,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1087,
-                1089,
-                1088,
-                1086
-              ]
+              "children": [1087, 1089, 1088, 1086]
             }
           ],
           "sources": [
@@ -24066,7 +23473,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a BA auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a BA auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by BA Auth."
+                    "text": "Set to \"true\" if you want to automatically detect OAuth grants in the URL and sign in the user.\nSet to \"false\" to disable automatic detection.\nSet to a function to provide custom logic for determining if a URL contains a Supabase auth callback.\nThe function receives the current URL and parsed parameters, and should return true if the URL\nshould be processed as a Supabase auth callback, or false to ignore it.\n\nThis is useful when your app uses other OAuth providers (e.g., Facebook Login) that also return\naccess_token in the URL fragment, which would otherwise be incorrectly intercepted by Supabase Auth."
                   }
                 ],
                 "blockTags": [
@@ -24271,9 +23678,7 @@
                     "text": "Set to \"true\" if there is a custom authorization header set globally."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -24372,9 +23777,7 @@
                     "text": "Provide your own locking mechanism based on the environment. By default no locking is done at this time."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -24561,9 +23964,7 @@
                     "text": " to fetch a user object in those scenarios."
                   }
                 ],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -24584,22 +23985,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                739,
-                745,
-                731,
-                743,
-                744,
-                751,
-                726,
-                750,
-                740,
-                741,
-                730,
-                752,
-                725,
-                742
-              ]
+              "children": [739, 745, 731, 743, 744, 751, 726, 750, 740, 741, 730, 752, 725, 742]
             }
           ],
           "sources": [
@@ -24670,9 +24056,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1311
-              ]
+              "children": [1311]
             }
           ],
           "sources": [
@@ -24783,11 +24167,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1335,
-                1336,
-                1337
-              ]
+              "children": [1335, 1336, 1337]
             }
           ],
           "sources": [
@@ -24822,9 +24202,7 @@
             "text": " async function, such that no other client instances will be able to\nhold it at the same time."
           }
         ],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -25508,9 +24886,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1125
-              ]
+              "children": [1125]
             }
           ],
           "sources": [
@@ -25779,9 +25155,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1130
-              ]
+              "children": [1130]
             }
           ],
           "sources": [
@@ -25949,7 +25323,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client details in an authorization request.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -26082,12 +25456,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1450,
-                1453,
-                1451,
-                1452
-              ]
+              "children": [1450, 1453, 1451, 1452]
             }
           ],
           "sources": [
@@ -26111,7 +25480,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth authorization details for the consent flow.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -26333,10 +25702,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        1462,
-                        1461
-                      ]
+                      "children": [1462, 1461]
                     }
                   ],
                   "sources": [
@@ -26354,13 +25720,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1456,
-                1458,
-                1457,
-                1463,
-                1459
-              ]
+              "children": [1456, 1458, 1457, 1463, 1459]
             }
           ],
           "sources": [
@@ -26384,7 +25744,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client object returned from the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -26813,20 +26173,7 @@
             {
               "title": "Properties",
               "children": [
-                1383,
-                1384,
-                1385,
-                1386,
-                1389,
-                1395,
-                1392,
-                1390,
-                1391,
-                1388,
-                1393,
-                1394,
-                1387,
-                1396
+                1383, 1384, 1385, 1386, 1389, 1395, 1392, 1390, 1391, 1388, 1393, 1394, 1387, 1396
               ]
             }
           ],
@@ -26851,7 +26198,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client grant types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -26887,7 +26234,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for listing OAuth clients.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -26984,10 +26331,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                1418,
-                                1417
-                              ]
+                              "children": [1418, 1417]
                             }
                           ],
                           "sources": [
@@ -27032,10 +26376,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1415,
-                    1419
-                  ]
+                  "children": [1415, 1419]
                 }
               ],
               "sources": [
@@ -27102,9 +26443,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1423
-                          ]
+                          "children": [1423]
                         }
                       ],
                       "sources": [
@@ -27143,10 +26482,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1421,
-                    1424
-                  ]
+                  "children": [1421, 1424]
                 }
               ],
               "sources": [
@@ -27172,7 +26508,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client registration type.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27208,7 +26544,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Response type for OAuth client operations.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27245,7 +26581,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client response types supported by the OAuth 2.1 server.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27272,7 +26608,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "OAuth client type indicating whether the client can keep credentials confidential.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27308,7 +26644,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "An OAuth grant representing a user's authorization of an OAuth client.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -27419,11 +26755,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1470,
-                1472,
-                1471
-              ]
+              "children": [1470, 1472, 1471]
             }
           ],
           "sources": [
@@ -27530,10 +26862,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            807,
-                            808
-                          ]
+                          "children": [807, 808]
                         }
                       ],
                       "sources": [
@@ -27570,10 +26899,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    805,
-                    809
-                  ]
+                  "children": [805, 809]
                 }
               ],
               "sources": [
@@ -27662,10 +26988,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            813,
-                            814
-                          ]
+                          "children": [813, 814]
                         }
                       ],
                       "sources": [
@@ -27704,10 +27027,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    811,
-                    815
-                  ]
+                  "children": [811, 815]
                 }
               ],
               "sources": [
@@ -27808,10 +27128,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1322,
-                1323
-              ]
+              "children": [1322, 1323]
             }
           ],
           "sources": [
@@ -27918,11 +27235,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1316,
-                1315,
-                1317
-              ]
+              "children": [1316, 1315, 1317]
             }
           ],
           "sources": [
@@ -28289,10 +27602,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    765,
-                    766
-                  ]
+                  "children": [765, 766]
                 }
               ],
               "sources": [
@@ -28383,10 +27693,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    768,
-                    769
-                  ]
+                  "children": [768, 769]
                 }
               ],
               "sources": [
@@ -28495,10 +27802,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    774,
-                    775
-                  ]
+                  "children": [774, 775]
                 }
               ],
               "sources": [
@@ -28597,10 +27901,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    777,
-                    778
-                  ]
+                  "children": [777, 778]
                 }
               ],
               "sources": [
@@ -28809,16 +28110,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1346,
-                1342,
-                1343,
-                1344,
-                1340,
-                1345,
-                1347,
-                1341
-              ]
+              "children": [1346, 1342, 1343, 1344, 1340, 1345, 1347, 1341]
             }
           ],
           "sources": [
@@ -28971,10 +28263,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1062,
-                            1061
-                          ]
+                          "children": [1062, 1061]
                         }
                       ],
                       "sources": [
@@ -29037,11 +28326,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1058,
-                    1059,
-                    1057
-                  ]
+                  "children": [1058, 1059, 1057]
                 }
               ],
               "sources": [
@@ -29121,9 +28406,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1068
-                          ]
+                          "children": [1068]
                         }
                       ],
                       "sources": [
@@ -29205,11 +28488,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1066,
-                    1065,
-                    1064
-                  ]
+                  "children": [1066, 1065, 1064]
                 }
               ],
               "sources": [
@@ -29351,10 +28630,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        927,
-                        926
-                      ]
+                      "children": [927, 926]
                     }
                   ],
                   "sources": [
@@ -29372,9 +28648,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                924
-              ]
+              "children": [924]
             }
           ],
           "sources": [
@@ -29543,9 +28817,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        980
-                      ]
+                      "children": [980]
                     }
                   ],
                   "sources": [
@@ -29753,13 +29025,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                976,
-                977,
-                978,
-                973,
-                975
-              ]
+              "children": [976, 977, 978, 973, 975]
             }
           ],
           "sources": [
@@ -29989,12 +29255,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        966,
-                        964,
-                        965,
-                        970
-                      ]
+                      "children": [966, 964, 965, 970]
                     }
                   ],
                   "sources": [
@@ -30041,10 +29302,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                962,
-                961
-              ]
+              "children": [962, 961]
             }
           ],
           "sources": [
@@ -30143,9 +29401,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            940
-                          ]
+                          "children": [940]
                         }
                       ],
                       "sources": [
@@ -30163,9 +29419,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    938
-                  ]
+                  "children": [938]
                 }
               ],
               "sources": [
@@ -30395,12 +29649,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            949,
-                            948,
-                            946,
-                            947
-                          ]
+                          "children": [949, 948, 946, 947]
                         }
                       ],
                       "sources": [
@@ -30418,10 +29667,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    943,
-                    944
-                  ]
+                  "children": [943, 944]
                 }
               ],
               "sources": [
@@ -30613,12 +29859,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            956,
-                            957,
-                            955,
-                            954
-                          ]
+                          "children": [956, 957, 955, 954]
                         }
                       ],
                       "sources": [
@@ -30663,10 +29904,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    952,
-                    951
-                  ]
+                  "children": [952, 951]
                 }
               ],
               "sources": [
@@ -30824,11 +30062,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1075,
-                            1074,
-                            1076
-                          ]
+                          "children": [1075, 1074, 1076]
                         }
                       ],
                       "sources": [
@@ -30873,10 +30107,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1072,
-                    1071
-                  ]
+                  "children": [1072, 1071]
                 }
               ],
               "sources": [
@@ -31041,11 +30272,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1082,
-                            1081,
-                            1083
-                          ]
+                          "children": [1082, 1081, 1083]
                         }
                       ],
                       "sources": [
@@ -31063,10 +30290,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1078,
-                    1079
-                  ]
+                  "children": [1078, 1079]
                 }
               ],
               "sources": [
@@ -31151,9 +30375,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1326
-              ]
+              "children": [1326]
             }
           ],
           "sources": [
@@ -31359,12 +30581,7 @@
                           "groups": [
                             {
                               "title": "Properties",
-                              "children": [
-                                934,
-                                935,
-                                933,
-                                932
-                              ]
+                              "children": [934, 935, 933, 932]
                             }
                           ],
                           "sources": [
@@ -31382,9 +30599,7 @@
                   "groups": [
                     {
                       "title": "Properties",
-                      "children": [
-                        930
-                      ]
+                      "children": [930]
                     }
                   ],
                   "sources": [
@@ -31505,9 +30720,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            989
-                          ]
+                          "children": [989]
                         }
                       ],
                       "sources": [
@@ -31748,11 +30961,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                987,
-                983,
-                992
-              ]
+              "children": [987, 983, 992]
             }
           ],
           "sources": [
@@ -31971,11 +31180,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1005,
-                            1006,
-                            1004
-                          ]
+                          "children": [1005, 1006, 1004]
                         }
                       ],
                       "sources": [
@@ -32061,12 +31266,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    999,
-                    1002,
-                    1001,
-                    1000
-                  ]
+                  "children": [999, 1002, 1001, 1000]
                 }
               ],
               "sources": [
@@ -32216,9 +31416,7 @@
                       "groups": [
                         {
                           "title": "Properties",
-                          "children": [
-                            1013
-                          ]
+                          "children": [1013]
                         }
                       ],
                       "sources": [
@@ -32268,12 +31466,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1008,
-                    1009,
-                    1011,
-                    1010
-                  ]
+                  "children": [1008, 1009, 1011, 1010]
                 }
               ],
               "sources": [
@@ -32355,9 +31548,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    818
-                  ]
+                  "children": [818]
                 }
               ],
               "sources": [
@@ -32565,9 +31756,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    1308
-                  ]
+                  "children": [1308]
                 }
               ],
               "sources": [
@@ -32593,7 +31782,7 @@
         "summary": [
           {
             "kind": "text",
-            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in BA Auth."
+            "text": "Parameters for updating an existing OAuth client.\nAll fields are optional. Only provided fields will be updated.\nOnly relevant when the OAuth 2.1 server is enabled in Supabase Auth."
           }
         ]
       },
@@ -32771,13 +31960,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                1407,
-                1408,
-                1411,
-                1409,
-                1410
-              ]
+              "children": [1407, 1408, 1411, 1409, 1410]
             }
           ],
           "sources": [
@@ -32843,9 +32026,7 @@
               "groups": [
                 {
                   "title": "Properties",
-                  "children": [
-                    821
-                  ]
+                  "children": [821]
                 }
               ],
               "sources": [
@@ -32971,10 +32152,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                757,
-                756
-              ]
+              "children": [757, 756]
             }
           ],
           "sources": [
@@ -33119,9 +32297,7 @@
       },
       "comment": {
         "summary": [],
-        "modifierTags": [
-          "@experimental"
-        ]
+        "modifierTags": ["@experimental"]
       },
       "sources": [
         {
@@ -33148,9 +32324,7 @@
               "flags": {},
               "comment": {
                 "summary": [],
-                "modifierTags": [
-                  "@experimental"
-                ]
+                "modifierTags": ["@experimental"]
               },
               "sources": [
                 {
@@ -33170,9 +32344,7 @@
           "groups": [
             {
               "title": "Properties",
-              "children": [
-                702
-              ]
+              "children": [702]
             }
           ],
           "sources": [
@@ -34062,190 +33234,42 @@
     {
       "title": "Classes",
       "children": [
-        1530,
-        1520,
-        1587,
-        1578,
-        1671,
-        1570,
-        1641,
-        1614,
-        1649,
-        1562,
-        1540,
-        1659,
-        1550,
-        1,
-        107,
-        695
+        1530, 1520, 1587, 1578, 1671, 1570, 1641, 1614, 1649, 1562, 1540, 1659, 1550, 1, 107, 695
       ]
     },
     {
       "title": "Interfaces",
       "children": [
-        899,
-        833,
-        1476,
-        1106,
-        1299,
-        1425,
-        1169,
-        1368,
-        1348,
-        822,
-        912,
-        867,
-        859,
-        893,
-        836,
-        864,
-        1042,
-        1034,
-        1050
+        899, 833, 1476, 1106, 1299, 1425, 1169, 1368, 1348, 822, 912, 867, 859, 893, 836, 864, 1042,
+        1034, 1050
       ]
     },
     {
       "title": "Type Aliases",
       "children": [
-        831,
-        713,
-        712,
-        1163,
-        958,
-        1289,
-        1286,
-        1296,
-        1293,
-        1154,
-        1158,
-        1153,
-        1155,
-        1156,
-        1157,
-        1331,
-        1149,
-        1330,
-        1332,
-        1164,
-        1159,
-        1150,
-        1148,
-        1141,
-        1464,
-        1465,
-        1473,
-        1474,
-        789,
-        780,
-        784,
-        794,
-        798,
-        1312,
-        1397,
-        1054,
-        1014,
-        1015,
-        849,
-        848,
-        1100,
-        1090,
-        1109,
-        1114,
-        1110,
-        1121,
-        1095,
-        1084,
-        723,
-        1309,
-        1333,
-        714,
-        1140,
-        1139,
-        1137,
-        1136,
-        1138,
-        1122,
-        1328,
-        1327,
-        1329,
-        1135,
-        1123,
-        1134,
-        1127,
-        1126,
-        1128,
-        1132,
-        1053,
-        1448,
-        1454,
-        1381,
-        1377,
-        1413,
-        1380,
-        1412,
-        1378,
-        1379,
-        1468,
-        803,
-        1320,
-        1313,
-        758,
-        711,
-        763,
-        772,
-        1338,
-        1055,
-        922,
-        971,
-        959,
-        936,
-        941,
-        1069,
-        1324,
-        1376,
-        928,
-        981,
-        997,
-        816,
-        760,
-        1306,
-        1405,
-        819,
-        1033,
-        754,
-        753,
-        1032
+        831, 713, 712, 1163, 958, 1289, 1286, 1296, 1293, 1154, 1158, 1153, 1155, 1156, 1157, 1331,
+        1149, 1330, 1332, 1164, 1159, 1150, 1148, 1141, 1464, 1465, 1473, 1474, 789, 780, 784, 794,
+        798, 1312, 1397, 1054, 1014, 1015, 849, 848, 1100, 1090, 1109, 1114, 1110, 1121, 1095, 1084,
+        723, 1309, 1333, 714, 1140, 1139, 1137, 1136, 1138, 1122, 1328, 1327, 1329, 1135, 1123,
+        1134, 1127, 1126, 1128, 1132, 1053, 1448, 1454, 1381, 1377, 1413, 1380, 1412, 1378, 1379,
+        1468, 803, 1320, 1313, 758, 711, 763, 772, 1338, 1055, 922, 971, 959, 936, 941, 1069, 1324,
+        1376, 928, 981, 997, 816, 760, 1306, 1405, 819, 1033, 754, 753, 1032
       ]
     },
     {
       "title": "Variables",
-      "children": [
-        685,
-        686,
-        700,
-        1375
-      ]
+      "children": [685, 686, 700, 1375]
     },
     {
       "title": "Functions",
-      "children": [
-        1502,
-        1499,
-        1508,
-        1511,
-        1514,
-        1505,
-        1517,
-        687,
-        703
-      ]
+      "children": [1502, 1499, 1508, 1511, 1514, 1505, 1517, 687, 703]
     }
   ],
   "packageName": "@supabase/auth-js",
   "readme": [
     {
       "kind": "text",
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA Auth JS SDK</h1>\n\n  <h3 align=\"center\">An isomorphic JavaScript SDK for the <a href=\"https://github.com/supabase/auth\">BA Auth</a> API.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/auth\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/auth-signup\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/auth-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/auth-js)](https://www.npmjs.com/package/@supabase/auth-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/auth-js)](https://pkg.pr.new/~/supabase/auth-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick start\n\nInstall\n\n"
+      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase Auth JS SDK</h1>\n\n  <h3 align=\"center\">An isomorphic JavaScript SDK for the <a href=\"https://github.com/supabase/auth\">Supabase Auth</a> API.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/auth\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/auth-signup\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/auth-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/supabase/supabase-js/workflows/CI/badge.svg)](https://github.com/supabase/supabase-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/auth-js)](https://www.npmjs.com/package/@supabase/auth-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/auth-js)](https://pkg.pr.new/~/supabase/auth-js)\n\n</div>\n\n## Requirements\n\n- **Node.js 20 or later** (Node.js 18 support dropped as of October 31, 2025)\n- For browser support, all modern browsers are supported\n\n> ⚠️ **Node.js 18 Deprecation Notice**\n>\n> Node.js 18 reached end-of-life on April 30, 2025. As announced in [our deprecation notice](https://github.com/orgs/supabase/discussions/37217), support for Node.js 18 was dropped on October 31, 2025.\n\n## Quick start\n\nInstall\n\n"
     },
     {
       "kind": "code",
@@ -34333,7 +33357,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n## Development\n\nThis package is part of the [BA JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
+      "text": "\n\n## Development\n\nThis package is part of the [Supabase JavaScript monorepo](https://github.com/supabase/supabase-js). To work on this package:\n\n### Building\n\n"
     },
     {
       "kind": "code",
@@ -34365,7 +33389,7 @@
     },
     {
       "kind": "text",
-      "text": ")** - Type definitions for TypeScript projects\n\n### Testing\n\n**Docker Required!** The auth-js tests require a local BA Auth server (GoTrue) running in Docker.\n\n"
+      "text": ")** - Type definitions for TypeScript projects\n\n### Testing\n\n**Docker Required!** The auth-js tests require a local Supabase Auth server (GoTrue) running in Docker.\n\n"
     },
     {
       "kind": "code",
@@ -34373,7 +33397,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\nThis command automatically:\n\n1. Stops any existing test containers\n2. Starts a BA Auth server (GoTrue) and PostgreSQL database in Docker\n3. Waits for services to be ready (30 seconds)\n4. Runs the test suite\n5. Cleans up Docker containers after tests complete\n\n#### Individual Test Commands\n\n"
+      "text": "\n\nThis command automatically:\n\n1. Stops any existing test containers\n2. Starts a Supabase Auth server (GoTrue) and PostgreSQL database in Docker\n3. Waits for services to be ready (30 seconds)\n4. Runs the test suite\n5. Cleans up Docker containers after tests complete\n\n#### Individual Test Commands\n\n"
     },
     {
       "kind": "code",
@@ -34389,7 +33413,7 @@
     },
     {
       "kind": "text",
-      "text": "\n\n#### Test Infrastructure\n\nThe Docker setup includes:\n\n- **BA Auth (GoTrue)** - The authentication server\n- **PostgreSQL** - Database for auth data\n- Pre-configured with test users and settings\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- Ports used by test infrastructure (check "
+      "text": "\n\n#### Test Infrastructure\n\nThe Docker setup includes:\n\n- **Supabase Auth (GoTrue)** - The authentication server\n- **PostgreSQL** - Database for auth data\n- Pre-configured with test users and settings\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- Ports used by test infrastructure (check "
     },
     {
       "kind": "code",
@@ -34397,7 +33421,7 @@
     },
     {
       "kind": "text",
-      "text": ")\n- No full BA instance needed - just the Auth server\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
+      "text": ")\n- No full Supabase instance needed - just the Auth server\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
     },
     {
       "kind": "relative-link",

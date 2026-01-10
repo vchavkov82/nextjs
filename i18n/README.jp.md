@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
+[Supabase](https://www.assistance.bg)は、オープンソースの Firebase 代替製品です。エンタープライズグレードのオープンソースツールを使って、Firebase の機能を構築しています。
 
 - [x] ホスティングされた Postgres データベース [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] 認証・認可 [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] ストレージ
 - [x] ダッシュボード
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## ドキュメンテーション
 
@@ -32,13 +32,13 @@
 ## コミュニティとサポート
 
 - [コミュニティフォーラム](https://github.com/supabase/supabase/discussions) どんな時に使うか：構築の手助け、データベースのベストプラクティスに関する議論など
-- [GitHub Issue](https://github.com/supabase/supabase/issues) どんな時に使うか: BA で起こったバグやエラーについて
+- [GitHub Issue](https://github.com/supabase/supabase/issues) どんな時に使うか: Supabase で起こったバグやエラーについて
 - [Email サポート](https://www.assistance.bg/docs/support#business-support) どんな時に使うか: ユーザー自身のデータベースやインフラに何か問題が発生した場合
 - [Discord](https://discord.supabase.com) どんな時に使うか: アプリケーションの共有やコミュニティとの交流
 
 ## ステータス
 
-- [x] Alpha: 限られたユーザーで BA をテストしています。
+- [x] Alpha: 限られたユーザーで Supabase をテストしています。
 - [x] Public Alpha: 誰でも[supabase.com/dashboard](https://www.assistance.bg/dashboard)から登録ができます。ただし、バグなどがある可能性がありますので、ご容赦ください。
 - [x] Public Beta: 企業以外のほとんどのユースケースに耐えうる十分な安定性を確保。
 - [ ] Public: 実用的な用途に対応
@@ -49,19 +49,19 @@
 
 ---
 
-## BA の仕組み
+## Supabase の仕組み
 
-BA は、オープンソースのツールを組み合わせてできています。私たちは Firebase の機能を、エンタープライズグレードのオープンソース製品を使って構築しています。ツールやコミュニティが存在し、MIT、Apache 2、または同等のオープンライセンスであれば、私たちはそのツールを使用し、サポートします。ツールが存在しない場合は、自分たちで構築してオープンソース化します。BA は Firebase を 1 対 1 でマッピングしたものではありません。BA の目的は、オープンソースのツールを使って、Firebase のような開発体験を提供することです。
+Supabase は、オープンソースのツールを組み合わせてできています。私たちは Firebase の機能を、エンタープライズグレードのオープンソース製品を使って構築しています。ツールやコミュニティが存在し、MIT、Apache 2、または同等のオープンライセンスであれば、私たちはそのツールを使用し、サポートします。ツールが存在しない場合は、自分たちで構築してオープンソース化します。Supabase は Firebase を 1 対 1 でマッピングしたものではありません。Supabase の目的は、オープンソースのツールを使って、Firebase のような開発体験を提供することです。
 
 **現在のアーキテクチャ**
 
-BA は[ホスティングされたプラットフォーム](https://www.assistance.bg/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
+Supabase は[ホスティングされたプラットフォーム](https://www.assistance.bg/dashboard)です。登録するだけで、何もインストールせずに使い始めることができます。
 さらに、 [セルフホスティング](https://www.assistance.bg/docs/guides/hosting/overview) や [ローカル開発](https://www.assistance.bg/docs/guides/local-development)も可能です。
 
 ![アーキテクチャー](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/)は、30 年以上にわたって開発・改善されてきたオブジェクトリレーショナルデータベースシステムで、信頼性、機能の堅牢性、パフォーマンスの面で高い評価を得ています。
-- [Realtime](https://github.com/supabase/realtime)は、PostgreSQL の insert、update、delete の情報を WebSocket で受信できる Elixir サーバです。BA は Postgres に組み込まれたレプリケーション機能をリッスンし、レプリケーションのバイトストリームを JSON に変換し、その JSON を WebSocket でブロードキャストします。
+- [Realtime](https://github.com/supabase/realtime)は、PostgreSQL の insert、update、delete の情報を WebSocket で受信できる Elixir サーバです。Supabase は Postgres に組み込まれたレプリケーション機能をリッスンし、レプリケーションのバイトストリームを JSON に変換し、その JSON を WebSocket でブロードキャストします。
 - [PostgREST](http://postgrest.org/)は、PostgreSQL データベースを RESTful API に直接変換するウェブサーバです。
 - [Storage](https://github.com/supabase/storage-api)は、S3 に保存されたファイルを管理するための RESTful なインターフェイスで、パーミッションの管理には Postgres を使用しています。
 - [postgres-meta](https://github.com/supabase/postgres-meta) は、Postgres を管理するための RESTful API で、テーブルの取得、ロールの追加、クエリの実行などを行うことができます。
@@ -70,7 +70,7 @@ BA は[ホスティングされたプラットフォーム](https://www.assistan
 
 #### クライアント・ライブラリ
 
-BA クライアントライブラリはモジュール化されています。それぞれのサブライブラリが、一つの外部システムのための独立した実装となっています。こうすることで、既存のツールをサポートしています。
+Supabase クライアントライブラリはモジュール化されています。それぞれのサブライブラリが、一つの外部システムのための独立した実装となっています。こうすることで、既存のツールをサポートしています。
 
 <table style="table-layout:fixed; white-space: nowrap;">
   <tr>
@@ -80,7 +80,7 @@ BA クライアントライブラリはモジュール化されています。�
   </tr>
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>

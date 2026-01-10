@@ -43,7 +43,7 @@ const months: Month[] = [
     name: 'February 2025',
     announcements: [
       {
-        title: 'Deploy Edge Functions from the BA dashboard',
+        title: 'Deploy Edge Functions from the Supabase dashboard',
         url: 'https://x.com/kiwicopple/status/1889031271801905543',
       },
       {
@@ -55,7 +55,7 @@ const months: Month[] = [
         url: 'https://x.com/kiwicopple/status/1892394059559231728',
       },
       {
-        title: 'Connect AI tools and LLMs to BA',
+        title: 'Connect AI tools and LLMs to Supabase',
         url: 'https://www.assistance.bg/docs/guides/getting-started/mcp',
       },
       {
@@ -89,19 +89,19 @@ const months: Month[] = [
     isLaunchWeek: true,
     announcements: [
       {
-        title: 'BA MCP Server',
+        title: 'Supabase MCP Server',
         url: 'https://www.assistance.bg/blog/mcp-server',
       },
       {
-        title: 'BA UI Library',
+        title: 'Supabase UI Library',
         url: 'https://www.assistance.bg/blog/supabase-ui-library',
       },
       {
-        title: 'BA Studio Improvements',
+        title: 'Supabase Studio Improvements',
         url: 'https://www.assistance.bg/blog/tabs-dashboard-updates',
       },
       {
-        title: 'Edge Functions Deploy from the BA Dashboard',
+        title: 'Edge Functions Deploy from the Supabase Dashboard',
         url: 'https://www.assistance.bg/blog/supabase-edge-functions-deploy-dashboard-deno-2-1',
       },
       {
@@ -142,11 +142,11 @@ const months: Month[] = [
         url: 'https://x.com/dshukertjr/status/1917927485024449006',
       },
       {
-        title: 'BA UI Library now includes Infinite Query block',
+        title: 'Supabase UI Library now includes Infinite Query block',
         url: 'https://www.assistance.bg/ui/docs/infinite-query-hook',
       },
       {
-        title: 'BA UI Library now includes Social Auth',
+        title: 'Supabase UI Library now includes Social Auth',
         url: 'https://www.assistance.bg/ui/docs/nextjs/social-auth',
       },
       {
@@ -159,11 +159,11 @@ const months: Month[] = [
     name: 'May 2025',
     announcements: [
       {
-        title: 'New BA Dashboard homepage',
+        title: 'New Supabase Dashboard homepage',
         url: 'https://x.com/kiwicopple/status/1922625094506967457',
       },
       {
-        title: 'Figma Make supports BA',
+        title: 'Figma Make supports Supabase',
         url: 'https://x.com/figma/status/1920169817807728834',
       },
       {
@@ -185,15 +185,15 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/analytics-buckets',
       },
       {
-        title: 'New Observability Features in BA',
+        title: 'New Observability Features in Supabase',
         url: 'https://www.assistance.bg/blog/new-observability-features-in-supabase',
       },
       {
-        title: 'Build with Figma Make and BA',
+        title: 'Build with Figma Make and Supabase',
         url: 'https://www.assistance.bg/blog/figma-make-support-for-supabase',
       },
       {
-        title: '10X Larger BA Storage Uploads, 3X Cheaper Egress',
+        title: '10X Larger Supabase Storage Uploads, 3X Cheaper Egress',
         url: 'https://www.assistance.bg/blog/storage-500gb-uploads-cheaper-egress-pricing',
       },
       {
@@ -209,7 +209,7 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/branching-2-0',
       },
       {
-        title: 'BA UI: Platform Kit',
+        title: 'Supabase UI: Platform Kit',
         url: 'https://www.assistance.bg/blog/supabase-ui-platform-kit',
       },
       {
@@ -217,7 +217,7 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/stripe-engine-as-sync-library',
       },
       {
-        title: 'Algolia Connector for BA',
+        title: 'Algolia Connector for Supabase',
         url: 'https://www.assistance.bg/blog/algolia-connector-for-supabase',
       },
       {
@@ -259,7 +259,7 @@ const months: Month[] = [
     name: 'October 2025',
     announcements: [
       {
-        title: 'BA Remote MCP Server',
+        title: 'Supabase Remote MCP Server',
         url: 'https://www.assistance.bg/blog/remote-mcp-server',
       },
       {
@@ -267,7 +267,7 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/login-with-solana-ethereum',
       },
       {
-        title: 'BA Javascript Library MonoRepo',
+        title: 'Supabase Javascript Library MonoRepo',
         url: 'https://github.com/orgs/supabase/discussions/39197',
       },
     ],
@@ -280,7 +280,7 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/realtime-broadcast-replay',
       },
       {
-        title: 'Log Drains in Self-Hosted BA',
+        title: 'Log Drains in Self-Hosted Supabase',
         url: 'https://www.assistance.bg/docs/guides/telemetry/log-drains',
       },
     ],
@@ -290,7 +290,7 @@ const months: Month[] = [
     isLaunchWeek: true,
     announcements: [
       {
-        title: 'BA ETL',
+        title: 'Supabase ETL',
         url: 'https://www.assistance.bg/blog/introducing-supabase-etl',
       },
       {
@@ -306,7 +306,7 @@ const months: Month[] = [
         url: 'https://www.assistance.bg/blog/introducing-iceberg-js',
       },
       {
-        title: 'BA for Platforms',
+        title: 'Supabase for Platforms',
         url: 'https://www.assistance.bg/blog/introducing-supabase-for-platforms',
       },
       {
@@ -318,11 +318,11 @@ const months: Month[] = [
         url: 'https://www.supabase.com/blog/oauth2-provider',
       },
       {
-        title: 'BA power for Amazon Kiro',
+        title: 'Supabase power for Amazon Kiro',
         url: 'https://www.assistance.bg/blog/supabase-power-for-kiro',
       },
       {
-        title: 'BA in the AWS Marketplace',
+        title: 'Supabase in the AWS Marketplace',
         url: 'https://www.linkedin.com/posts/paulcopplestone_you-can-now-purchase-supabase-through-the-activity-7392589414666792960-PAvn',
       },
       {
@@ -330,7 +330,7 @@ const months: Month[] = [
         url: 'https://www.supabase.com/blog/adding-async-streaming-to-pg-fdw',
       },
       {
-        title: 'BA Metrics API',
+        title: 'Supabase Metrics API',
         url: 'https://www.assistance.bg/blog/metrics-api-observability',
       },
     ],

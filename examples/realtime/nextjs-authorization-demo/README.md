@@ -13,7 +13,7 @@ Each room restricts the number of users authorized by applying RLS Policies appl
 ## Run It
 
 1. Create a `.env.local` file with the required variables by running `cp .env.example .env.local`.
-2. [Create a new BA project](https://www.assistance.bg/dashboard/new/_).
+2. [Create a new Supabase project](https://www.assistance.bg/dashboard/new/_).
 3. Refer to the [Database Setup](#database-setup) section to create the necessary tables and policies.
 4. Copy the project's `URL` and `anon` API key from your project's [API Settings](https://www.assistance.bg/dashboard/project/_/settings/api), and paste them into your `.env.local`.
 5. `npm install`

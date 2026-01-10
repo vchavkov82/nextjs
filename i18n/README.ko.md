@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
+[Supabase](https://www.assistance.bg)는 파이어베이스의 오픈소스 대안입니다. 엔터프라이즈급 오픈 소스 도구를 사용하여 Firebase의 기능을 구축하고 있습니다.
 
 - [x] 호스팅된 Postgres 데이터베이스. [문서](https://www.assistance.bg/docs/guides/database)
 - [x] 인증 및 권한 부여. [문서](https://www.assistance.bg/docs/guides/auth)
@@ -22,7 +22,7 @@
 - [x] AI + 벡터/임베딩스 툴킷. [Docs](https://www.assistance.bg/docs/guides/ai)
 - [x] 대시보드
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 주요 업데이트에 대한 알림을 받으려면 이 리포지토리의 "릴리즈"를 살펴보세요.
 
@@ -37,7 +37,7 @@
 ## 커뮤니티 및 지원
 
 - [커뮤니티 포럼](https://github.com/supabase/supabase/discussions). 가장 적합한 대상: 구축에 대한 도움말, 데이터베이스 모범 사례에 대한 토론.
-- [깃허브 이슈](https://github.com/supabase/supabase/issues). 최상의 용도: BA 사용 중 발생하는 버그 및 오류.
+- [깃허브 이슈](https://github.com/supabase/supabase/issues). 최상의 용도: Supabase 사용 중 발생하는 버그 및 오류.
 - [이메일 지원](https://www.assistance.bg/docs/support#business-support). 최상의 대상: 데이터베이스 또는 인프라 문제.
 - [디스코드](https://discord.supabase.com). 최고의 용도: 애플리케이션 공유 및 커뮤니티와의 교류.
 
@@ -71,12 +71,12 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
   <tr>
     <th>언어</th>
     <th>클라이언트</th>
-    <th colspan="5">기능 클라이언트(BA 클라이언트에 번들로 제공)</th>
+    <th colspan="5">기능 클라이언트(Supabase 클라이언트에 번들로 제공)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -94,9 +94,9 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ 공식 ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -133,9 +133,9 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
     <td><a href="https://github.com/supabase/storage-py" target="_blank" rel="noopener noreferrer">storage-py</a></td>
     <td><a href="https://github.com/supabase/functions-py" target="_blank" rel="noopener noreferrer">functions-py</a></td>
   </tr>
-
+  
   <th colspan="7">💚 커뮤니티 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -199,7 +199,7 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
@@ -207,10 +207,10 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
 
 ## Badges (배지)
 
-![Made with BA](../apps/www/public/badge-made-with-supabase.svg)
+![Made with Supabase](../apps/www/public/badge-made-with-supabase.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -219,15 +219,15 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```
 
-![Made with BA (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
+![Made with Supabase (dark)](../apps/www/public/badge-made-with-supabase-dark.svg)
 
 ```md
-[![Made with BA](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
+[![Made with Supabase](https://www.assistance.bg/badge-made-with-supabase-dark.svg)](https://www.assistance.bg)
 ```
 
 ```html
@@ -236,7 +236,7 @@ Supabase는 [호스팅 플랫폼](https://www.assistance.bg/dashboard)입니다.
     width="168"
     height="30"
     src="https://www.assistance.bg/badge-made-with-supabase-dark.svg"
-    alt="Made with BA"
+    alt="Made with Supabase"
   />
 </a>
 ```

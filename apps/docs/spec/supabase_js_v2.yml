@@ -2,10 +2,10 @@ openref: 0.1
 
 info:
   id: reference/supabase-js
-  title: BA Javascript Client
+  title: Supabase Javascript Client
   description: |
 
-    BA JavaScript.
+    Supabase JavaScript.
 
   definition: spec/enrichments/tsdoc_v2/combined.json
   specUrl: https://github.com/supabase/supabase/edit/master/apps/docs/spec/supabase_js_v2.yml
@@ -107,7 +107,7 @@ functions:
           });
           ```
         description: |
-          For React Native we recommend using `AsyncStorage` as the storage implementation for BA Auth.
+          For React Native we recommend using `AsyncStorage` as the storage implementation for Supabase Auth.
       - id: react-native-options-secure-storage
         name: React Native options with Expo SecureStore
         code: |
@@ -416,21 +416,21 @@ functions:
       - Subscribes to important events occurring on the user's session.
       - Use on the frontend/client. It is less useful on the server.
       - Events are emitted across tabs to keep your application's UI up-to-date. Some events can fire very frequently, based on the number of tabs open. Use a quick and efficient callback function, and defer or debounce as many operations as you can to be performed outside of the callback.
-      - **Important:** A callback can be an `async` function and it runs synchronously during the processing of the changes causing the event. You can easily create a dead-lock by using `await` on a call to another method of the BA library.
+      - **Important:** A callback can be an `async` function and it runs synchronously during the processing of the changes causing the event. You can easily create a dead-lock by using `await` on a call to another method of the Supabase library.
         - Avoid using `async` functions as callbacks.
         - Limit the number of `await` calls in `async` callbacks.
-        - Do not use other BA functions in the callback function. If you must, dispatch the functions once the callback has finished executing. Use this as a quick way to achieve this:
+        - Do not use other Supabase functions in the callback function. If you must, dispatch the functions once the callback has finished executing. Use this as a quick way to achieve this:
           ```js
           supabase.auth.onAuthStateChange((event, session) => {
             setTimeout(async () => {
-              // await on other BA function here
+              // await on other Supabase function here
               // this runs right after the callback has finished
             }, 0)
           })
           ```
       - Emitted events:
         - `INITIAL_SESSION`
-          - Emitted right after the BA client is constructed and the initial session from storage is loaded.
+          - Emitted right after the Supabase client is constructed and the initial session from storage is loaded.
         - `SIGNED_IN`
           - Emitted each time a user session is confirmed or re-established, including on user sign in and when refocusing a tab.
           - Avoid making assumptions as to when this event is fired, this may occur even when the user is already signed in. Instead, check the user object attached to the event to see if a new user has signed in and update your application's UI.
@@ -511,7 +511,7 @@ functions:
         description: |
           When using [OAuth (Social Login)](/docs/guides/auth/social-login) you sometimes wish to get access to the provider's access token and refresh token, in order to call provider APIs in the name of the user.
 
-          For example, if you are using [Sign in with Google](/docs/guides/auth/social-login/auth-google) you may want to use the provider token to call Google APIs on behalf of the user. BA Auth does not keep track of the provider access and refresh token, but does return them for you once, immediately after sign in. You can use the `onAuthStateChange` method to listen for the presence of the provider tokens and store them in local storage. You can further send them to your server's APIs for use on the backend.
+          For example, if you are using [Sign in with Google](/docs/guides/auth/social-login/auth-google) you may want to use the provider token to call Google APIs on behalf of the user. Supabase Auth does not keep track of the provider access and refresh token, but does return them for you once, immediately after sign in. You can use the `onAuthStateChange` method to listen for the presence of the provider tokens and store them in local storage. You can further send them to your server's APIs for use on the backend.
 
           Finally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend.
         code: |
@@ -903,7 +903,7 @@ functions:
         description: |
           If you need additional access from an OAuth provider, in order to access provider specific APIs in the name of the user, you can do this by passing in the scopes the user should authorize for your application. Note that the `scopes` option takes in **a space-separated list** of scopes.
 
-          Because OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the BA client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.
+          Because OAuth sign-in often includes redirects, you should register an `onAuthStateChange` callback immediately after you create the Supabase client. This callback will listen for the presence of `provider_token` and `provider_refresh_token` properties on the `session` object and store them in local storage. The client library will emit these values **only once** immediately after the user signs in. You can then access them by looking them up in local storage, or send them to your backend servers for further processing.
 
           Finally, make sure you remove them from local storage on the `SIGNED_OUT` event. If the OAuth provider supports token revocation, make sure you call those APIs either from the frontend or schedule them to be called on the backend.
         code: |
@@ -1148,7 +1148,7 @@ functions:
     notes: |
       - Parses the user's [access token](/docs/guides/auth/sessions#access-token-jwt-claims) as a [JSON Web Token (JWT)](/docs/guides/auth/jwts) and returns its components if valid and not expired.
       - If your project is using asymmetric JWT signing keys, then the verification is done locally usually without a network request using the [WebCrypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API).
-      - A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. BA provides a network-edge cache providing fast responses for these situations.
+      - A network request is sent to your project's JWT signing key discovery endpoint `https://project-id.supabase.co/auth/v1/.well-known/jwks.json`, which is cached locally. If your environment is ephemeral, such as a Lambda function that is destroyed after every request, a network request will be sent for each new invocation. Supabase provides a network-edge cache providing fast responses for these situations.
       - If the user's access token is about to expire when calling this function, the user's session will first be refreshed before validating the JWT.
       - If your project is using a symmetric secret to sign the JWT, it always sends a request similar to `getUser()` to validate the JWT at the server before returning the decoded token. This is also used if the WebCrypto API is not available in the environment. Make sure you polyfill it in such situations.
       - The returned claims can be customized per project using the [Custom Access Token Hook](/docs/guides/auth/auth-hooks/custom-access-token-hook).
@@ -1198,7 +1198,7 @@ functions:
     notes: |
       - In order to use the `signOut()` method, the user needs to be signed in first.
       - By default, `signOut()` uses the global scope, which signs out all other sessions that the user is logged into as well. Customize this behavior by passing a scope parameter.
-      - Since BA Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, BA revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.
+      - Since Supabase Auth uses JWTs for authentication, the access token JWT will be valid until it's expired. When the user signs out, Supabase revokes the refresh token and deletes the JWT from the client-side. This does not revoke the JWT and it will still be valid until it expires.
     examples:
       - id: sign-out
         name: Sign out (all sessions)
@@ -1442,7 +1442,7 @@ functions:
     $ref: '@supabase/auth-js.GoTrueClient.startAutoRefresh'
     notes: |
       - Only useful in non-browser environments such as React Native or Electron.
-      - The BA Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.
+      - The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.
       - On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.
       - To give this hint to the application, you should be calling this method when the app is in focus and calling `supabase.auth.stopAutoRefresh()` when it's out of focus.
     examples:
@@ -1467,7 +1467,7 @@ functions:
     $ref: '@supabase/auth-js.GoTrueClient.stopAutoRefresh'
     notes: |
       - Only useful in non-browser environments such as React Native or Electron.
-      - The BA Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.
+      - The Supabase Auth library automatically starts and stops proactively refreshing the session when a tab is focused or not.
       - On non-browser platforms, such as mobile or desktop apps built with web technologies, the library is not able to effectively determine whether the application is _focused_ or not.
       - When your application goes in the background or out of focus, call this method to stop the proactive refreshing of the session.
     examples:
@@ -1657,7 +1657,7 @@ functions:
         description: |
           Updates the user's custom metadata.
 
-          **Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your BA database. When calling `getUser()`, the data will be available as `user.user_metadata`.
+          **Note**: The `data` field maps to the `auth.users.raw_user_meta_data` column in your Supabase database. When calling `getUser()`, the data will be available as `user.user_metadata`.
         isSpotlight: true
         code: |
           ```js
@@ -2588,7 +2588,7 @@ functions:
     $ref: '@supabase/auth-js.GoTrueMFAApi.getAuthenticatorAssuranceLevel'
     notes: |
       - Authenticator Assurance Level (AAL) is the measure of the strength of an authentication mechanism.
-      - In BA, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.
+      - In Supabase, having an AAL of `aal1` refers to having the 1st factor of authentication such as an email and password or OAuth sign-in while `aal2` refers to the 2nd factor of authentication such as a time-based, one-time-password (TOTP) or Phone factor.
       - If the user has a verified factor, the `nextLevel` field will return `aal2`, else, it will return `aal1`.
     examples:
       - id: get-aal
@@ -3284,10 +3284,10 @@ functions:
     title: 'Fetch data: select()'
     $ref: '@supabase/postgrest-js.PostgrestQueryBuilder.select'
     notes: |
-      - By default, BA projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
+      - By default, Supabase projects return a maximum of 1,000 rows. This setting can be changed in your project's [API settings](/dashboard/project/_/settings/api). It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
       - `select()` can be combined with [Filters](/docs/reference/javascript/using-filters)
       - `select()` can be combined with [Modifiers](/docs/reference/javascript/using-modifiers)
-      - `apikey` is a reserved keyword if you're using the [BA Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
+      - `apikey` is a reserved keyword if you're using the [Supabase Platform](/docs/guides/platform) and [should be avoided as a column name](https://github.com/supabase/supabase/issues/5465).
     examples:
       - id: getting-your-data
         name: Getting your data
@@ -7089,7 +7089,7 @@ functions:
       - id: error-handling
         name: Error handling
         description: |
-          A `FunctionsHttpError` error is returned if your function throws an error, `FunctionsRelayError` if the BA Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function.
+          A `FunctionsHttpError` error is returned if your function throws an error, `FunctionsRelayError` if the Supabase Relay has an error processing your function and `FunctionsFetchError` if there is a network error in calling your function.
         isSpotlight: true
         code: |
           ```js
@@ -7307,7 +7307,7 @@ functions:
       - id: listen-to-updates
         name: Listen to updates
         description: |
-          By default, BA will send only the updated record. If you want to receive the previous values as well you can
+          By default, Supabase will send only the updated record. If you want to receive the previous values as well you can
           enable full replication for the table you are listening to:
 
           ```sql
@@ -7325,7 +7325,7 @@ functions:
       - id: listen-to-deletes
         name: Listen to deletes
         description: |
-          By default, BA does not send deleted records. If you want to receive the deleted record you can
+          By default, Supabase does not send deleted records. If you want to receive the deleted record you can
           enable full replication for the table you are listening too:
 
           ```sql
@@ -7419,7 +7419,7 @@ functions:
     title: removeChannel()
     $ref: '@supabase/supabase-js.SupabaseClient.removeChannel'
     notes: |
-      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing a channel is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: removes-a-channel
         name: Removes a channel
@@ -7433,7 +7433,7 @@ functions:
     title: removeAllChannels()
     $ref: '@supabase/supabase-js.SupabaseClient.removeAllChannels'
     notes: |
-      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. BA will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
+      - Removing channels is a great way to maintain the performance of your project's Realtime service as well as your database if you're listening to Postgres changes. Supabase will automatically handle cleanup 30 seconds after a client is disconnected, but unused channels may cause degradation as more clients are simultaneously subscribed.
     examples:
       - id: remove-all-channels
         name: Remove all channels
@@ -7652,7 +7652,7 @@ functions:
     title: 'OAuth Server API'
     notes: |
       The OAuth Server API allows you to build custom OAuth consent screens for your application.
-      Only relevant when the OAuth 2.1 server is enabled in BA Auth.
+      Only relevant when the OAuth 2.1 server is enabled in Supabase Auth.
 
   - id: auth-js-authoauthserverapi-approveauthorization
     $ref: '@supabase/auth-js.AuthOAuthServerApi.approveAuthorization'
@@ -7669,7 +7669,7 @@ functions:
     title: 'OAuth Admin API'
     notes: |
       The OAuth Admin API allows you to manage OAuth clients programmatically.
-      Only relevant when the OAuth 2.1 server is enabled in BA Auth.
+      Only relevant when the OAuth 2.1 server is enabled in Supabase Auth.
       These functions should only be called on a server. Never expose your `service_role` key in the browser.
 
   - id: auth-js-gotrueadminoauthapi-createclient

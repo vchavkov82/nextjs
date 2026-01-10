@@ -17,7 +17,7 @@
 - [x] સ્ટોરેજ
 - [x] ફંક્શન્સ
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## દસ્તાવેજીકરણ
 

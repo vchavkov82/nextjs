@@ -1,6 +1,6 @@
 ---
 title: Platform Kit
-description: The easiest way to build platforms on top of BA
+description: The easiest way to build platforms on top of Supabase
 ---
 
 <video width="100%" muted autoPlay controls>
@@ -15,7 +15,7 @@ description: The easiest way to build platforms on top of BA
 
 <BlockItem
   name="platform-kit-nextjs"
-  description="Embeddable dialog for managing BA projects via the Management API."
+  description="Embeddable dialog for managing Supabase projects via the Management API."
 />
 
 ## Folder structure
@@ -24,7 +24,7 @@ description: The easiest way to build platforms on top of BA
 
 ## Introduction
 
-The Platform Kit is a collection of customizable API's, hooks and components you can use to provide an embedded BA experience within your own platform. It comes in the form of a single dialog that enables the management of database, authentication, storage, users, secrets, logs, and performance monitoring.
+The Platform Kit is a collection of customizable API's, hooks and components you can use to provide an embedded Supabase experience within your own platform. It comes in the form of a single dialog that enables the management of database, authentication, storage, users, secrets, logs, and performance monitoring.
 
 **Features**
 
@@ -55,7 +55,7 @@ export default function Example() {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open BA Manager</Button>
+      <Button onClick={() => setOpen(true)}>Open Supabase Manager</Button>
       <SupabaseManagerDialog
         projectRef={projectRef}
         open={open}
@@ -79,7 +79,7 @@ export default function Example() {
 
 2. **Add project-level authentication checks** in your API proxy at `app/api/supabase-proxy/[...path]/route.ts` as well as your ai/sql route at `app/api/ai/sql/route.ts` to ensure only authorized users can access their own project resources.
 
-3. **Add a Toaster for notifications:**
+3. **Add a Toaster for notifications:**  
    Place the following component at the root of your app (e.g., in your `layout.tsx` or `App.tsx`) to enable toast notifications:
 
    ```tsx
@@ -98,7 +98,7 @@ export default function Example() {
    }
    ```
 
-That's it! The default setup uses your BA personal access token for the Management API.
+That's it! The default setup uses your Supabase personal access token for the Management API.
 
 ## Security
 
@@ -107,4 +107,4 @@ That's it! The default setup uses your BA personal access token for the Manageme
 
 ## Further reading
 
-- [BA Management API](https://www.assistance.bg/docs/reference/api/introduction)
+- [Supabase Management API](https://www.assistance.bg/docs/reference/api/introduction)

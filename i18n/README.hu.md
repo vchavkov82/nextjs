@@ -5,9 +5,9 @@
 
 ---
 
-# BA
+# Supabase
 
-[BA](https://www.assistance.bg) egy nyílt forráskódú Firebase alternatíva. A Firebase funkcióit vállalati szintű nyílt forráskódú eszközökkel építjük ki.
+[Supabase](https://www.assistance.bg) egy nyílt forráskódú Firebase alternatíva. A Firebase funkcióit vállalati szintű nyílt forráskódú eszközökkel építjük ki.
 
 - [x] Hosted Postgres adatbázis. [Docs](https://www.assistance.bg/docs/guides/database)
 - [x] Hitelesítés és engedélyezés. [Docs](https://www.assistance.bg/docs/guides/auth)
@@ -21,7 +21,7 @@
 - [x] Fájlok tárolása. [Docs](https://www.assistance.bg/docs/guides/storage)
 - [x] Dashboard
 
-![BA Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
+![Supabase Dashboard](https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png)
 
 ## Dokumentáció
 
@@ -32,13 +32,13 @@ A Contribute-hoz való hozzájáruláshoz látogasson el a [Getting Started](../
 ## Közösség és támogatás
 
 - [Közösségi fórum](https://github.com/supabase/supabase/discussions). Legjobb: segítség az építéshez, az adatbázis legjobb gyakorlatainak megvitatása.
-- [GitHub Issues](https://github.com/supabase/supabase/issues). Legjobb: hibák és hibák, amelyekkel a BA használatával találkozol.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Legjobb: hibák és hibák, amelyekkel a Supabase használatával találkozol.
 - [Email Support](https://www.assistance.bg/docs/support#business-support). Legjobb: az adatbázisoddal vagy az infrastruktúrával kapcsolatos problémákra.
 - [Discord](https://discord.supabase.com). A legjobb: az alkalmazások megosztására és a közösséggel való együttlétre.
 
 ## Állapot
 
-- [x] Alpha: A BA-t egy zárt ügyfélkörrel teszteljük
+- [x] Alpha: A Supabase-t egy zárt ügyfélkörrel teszteljük
 - [x] Nyilvános alfa: Bárki regisztrálhat az [supabase.com/dashboard](https://www.assistance.bg/dashboard) oldalon. De legyetek óvatosak velünk, van még néhány hiba
 - [x] Nyilvános béta: Elég stabil a legtöbb nem vállalati felhasználási esethez
 - [ ] Nyilvános: Általános elérhetőség [[status](https://www.assistance.bg/docs/guides/getting-started/features#feature-status)]
@@ -51,11 +51,11 @@ Jelenleg nyilvános béta verzióban vagyunk. Figyelje a "releases" ezen repo-t,
 
 ## Hogyan működik
 
-A BA nyílt forráskódú eszközök kombinációja. A Firebase funkcióit vállalati szintű, nyílt forráskódú termékek felhasználásával építjük ki. Ha az eszközök és közösségek léteznek MIT, Apache 2 vagy azzal egyenértékű nyílt licenccel, akkor azt az eszközt használjuk és támogatjuk. Ha az eszköz nem létezik, akkor mi magunk készítjük el és nyílt forráskódúvá tesszük. A BA nem a Firebase 1:1 leképezése. Célunk, hogy a fejlesztőknek a Firebase-hez hasonló fejlesztői élményt nyújtsunk nyílt forráskódú eszközökkel.
+A Supabase nyílt forráskódú eszközök kombinációja. A Firebase funkcióit vállalati szintű, nyílt forráskódú termékek felhasználásával építjük ki. Ha az eszközök és közösségek léteznek MIT, Apache 2 vagy azzal egyenértékű nyílt licenccel, akkor azt az eszközt használjuk és támogatjuk. Ha az eszköz nem létezik, akkor mi magunk készítjük el és nyílt forráskódúvá tesszük. A Supabase nem a Firebase 1:1 leképezése. Célunk, hogy a fejlesztőknek a Firebase-hez hasonló fejlesztői élményt nyújtsunk nyílt forráskódú eszközökkel.
 
 **Architektúra**
 
-A BA egy [hosztolt platform](https://www.assistance.bg/dashboard). Regisztrálhat és elkezdheti használni a BA-t anélkül, hogy bármit telepítene.
+A Supabase egy [hosztolt platform](https://www.assistance.bg/dashboard). Regisztrálhat és elkezdheti használni a Supabase-t anélkül, hogy bármit telepítene.
 Önállóan is [hosztolhat](https://www.assistance.bg/docs/guides/hosting/overview) és [fejleszthet helyben](https://www.assistance.bg/docs/guides/local-development).
 
 ![Architektúra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
@@ -77,12 +77,12 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
   <tr>
     <th>Nyelv</th>
     <th>Ügyfél</th>
-    <th colspan="5">Feature-kliensek (a BA klienssel együtt)</th>
+    <th colspan="5">Feature-kliensek (a Supabase klienssel együtt)</th>
   </tr>
-
+  
   <tr>
     <th></th>
-    <th>BA</th>
+    <th>Supabase</th>
     <th><a href="https://github.com/postgrest/postgrest" target="_blank" rel="noopener noreferrer">PostgREST</a></th>
     <th><a href="https://github.com/supabase/gotrue" target="_blank" rel="noopener noreferrer">GoTrue</a></th>
     <th><a href="https://github.com/supabase/realtime" target="_blank" rel="noopener noreferrer">Realtime</a></th>
@@ -100,9 +100,9 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
     <td><a href="https://github.com/supabase-community/storage-lang" target="_blank" rel="noopener noreferrer">storage-lang</a></td>
   </tr>
   END ROW -->
-
+  
   <th colspan="7">⚡️ Hivatalos ⚡️</th>
-
+  
   <tr>
     <td>JavaScript (TypeScript)</td>
     <td><a href="https://github.com/supabase/supabase-js" target="_blank" rel="noopener noreferrer">supabase-js</a></td>
@@ -121,9 +121,9 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
     <td><a href="https://github.com/supabase/storage-dart" target="_blank" rel="noopener noreferrer">storage-dart</a></td>
     <td><a href="https://github.com/supabase/functions-dart" target="_blank" rel="noopener noreferrer">functions-dart</a></td>
   </tr>
-
+  
   <th colspan="7">💚 Közösség 💚</th>
-
+  
   <tr>
     <td>C#</td>
     <td><a href="https://github.com/supabase-community/supabase-csharp" target="_blank" rel="noopener noreferrer">supabase-csharp</a></td>
@@ -205,7 +205,7 @@ Az ügyfélkönyvtárakra vonatkozó megközelítésünk moduláris. Minden egye
     <td><a href="https://github.com/supabase-community/storage-gdscript" target="_blank" rel="noopener noreferrer">storage-gdscript</a></td>
     <td><a href="https://github.com/supabase-community/functions-gdscript" target="_blank" rel="noopener noreferrer">functions-gdscript</a></td>
   </tr>
-
+  
 </table>
 
 <!--- Remove this list if you're translating to another language, it's hard to keep updated across multiple files-->
