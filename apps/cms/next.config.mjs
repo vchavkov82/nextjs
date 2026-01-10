@@ -88,8 +88,41 @@ const nextConfig = {
     // The functions exist but webpack might not be resolving them correctly
     config.resolve.conditionNames = ['import', 'require', 'node', 'default']
     
-    // Use 'exports' field but handle invalid exports gracefully
-    // This is needed for @payloadcms/next package exports like ./views, ./css, ./routes
+    // Custom plugin to handle exports field resolution more gracefully
+    // Skip exports field for packages with known invalid exports, use main/module instead
+    config.plugins.push({
+      apply: (compiler) => {
+        compiler.hooks.normalModuleFactory.tap('SelectiveExportsPlugin', (nmf) => {
+          nmf.hooks.beforeResolve.tap('SelectiveExportsPlugin', (data) => {
+            // List of packages with invalid exports that should skip exports field
+            const problematicPackages = [
+              'react-is',
+              'nodemailer',
+              'strnum',
+              'react-transition-group',
+              'body-scroll-lock',
+              'hoist-non-react-statics',
+              'memoize-one',
+            ]
+            
+            // Check if this request is for a problematic package
+            const isProblematic = problematicPackages.some(pkg => {
+              return data.request === pkg || 
+                     data.request?.startsWith(pkg + '/') ||
+                     data.context?.includes(`/${pkg}/`)
+            })
+            
+            // Skip exports field for problematic packages
+            if (isProblematic && data.resolveOptions) {
+              data.resolveOptions.exportsFields = ['module', 'main']
+            }
+          })
+        })
+      },
+    })
+    
+    // Default to using exports for all packages (needed for @payloadcms/next)
+    // The plugin above will override for specific problematic packages
     config.resolve.exportsFields = ['exports', 'module', 'main']
     
     // Use NormalModuleReplacementPlugin to replace problematic imports
