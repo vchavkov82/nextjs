@@ -17,11 +17,11 @@ async function getCombinedPosts() {
     return cachedPosts
   }
 
-  // Get static blog posts - limit to 5 for testing
-  const staticPosts = getSortedPosts({ directory: '_blog', limit: 5 })
+  // Get static blog posts
+  const staticPosts = getSortedPosts({ directory: '_blog' })
 
-  // Get CMS posts - limit to 5 for testing
-  const cmsPosts = await getAllCMSPosts({ limit: 5 })
+  // Get CMS posts
+  const cmsPosts = await getAllCMSPosts({ limit: 100 })
 
   // Combine and sort by date
   const allPosts = [...staticPosts, ...cmsPosts].sort((a: any, b: any) => {

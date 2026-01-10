@@ -1,5 +1,6 @@
 import BlogClient from './BlogClient'
 import { getSortedPosts } from 'lib/posts'
+import { getAllCMSPosts } from 'lib/get-cms-posts'
 import type { Metadata } from 'next'
 
 export const revalidate = 30
@@ -15,17 +16,15 @@ export const metadata: Metadata = {
   },
 }
 
-const INITIAL_POSTS_LIMIT = 2 // Limit to 2 posts for reference
+const INITIAL_POSTS_LIMIT = 25
 
 export default async function BlogPage() {
   try {
-    // Get static blog posts - limit to 2 for reference
-    const staticPostsData = getSortedPosts({ directory: '_blog', limit: 2, runner: '** BLOG PAGE **' })
-    
-    console.log(`[BlogPage] Found ${staticPostsData.length} static posts`)
+    // Get static blog posts
+    const staticPostsData = getSortedPosts({ directory: '_blog', runner: '** BLOG PAGE **' })
 
-    // Don't fetch CMS posts - only use static posts for reference
-    const cmsPostsData: any[] = []
+    // Get CMS posts server-side with revalidation
+    const cmsPostsData = await getAllCMSPosts({ limit: 100 })
 
     // Combine static and CMS posts and sort by date
     const allPosts = [...staticPostsData, ...cmsPostsData].sort((a: any, b: any) => {
@@ -34,13 +33,9 @@ export default async function BlogPage() {
       return dateB - dateA
     })
 
-    console.log(`[BlogPage] Total posts after sorting: ${allPosts.length}`)
-
     // Only send initial posts to client, rest will be loaded via API
     const initialPosts = allPosts.slice(0, INITIAL_POSTS_LIMIT)
     const totalPosts = allPosts.length
-
-    console.log(`[BlogPage] Sending ${initialPosts.length} initial posts, total: ${totalPosts}`)
 
     return <BlogClient initialBlogs={initialPosts} totalPosts={totalPosts} />
   } catch (error) {
