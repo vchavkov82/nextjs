@@ -41,20 +41,26 @@ interface TabsSubComponents {
 }
 
 // Wrapper component to properly forward refs to TabsPrimitive.List
-const TabsListWithRef = forwardRef<
-  React.ElementRef<typeof TabsPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> & { class?: string }
->((props, ref) => {
-  // Filter out 'class' prop to avoid React DOM warnings (should use 'className' instead)
-  const { className, class: _class, ...restProps } = props
-  return (
-    <TabsPrimitive.List
-      ref={ref}
-      className={className}
-      {...(restProps as React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>)}
-    />
-  )
-})
+type TabsListPropsWithClass = Omit<
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>,
+  'className'
+> & {
+  className?: string
+  class?: string
+}
+const TabsListWithRef = forwardRef<React.ElementRef<typeof TabsPrimitive.List>, TabsListPropsWithClass>(
+  (props, ref) => {
+    // Filter out 'class' prop to avoid React DOM warnings (should use 'className' instead)
+    const { className, class: _class, ...restProps } = props
+    return (
+      <TabsPrimitive.List
+        ref={ref}
+        className={className}
+        {...(restProps as Omit<React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>, 'className'>)}
+      />
+    )
+  }
+)
 TabsListWithRef.displayName = TabsPrimitive.List.displayName || 'TabsListWithRef'
 
 /**
