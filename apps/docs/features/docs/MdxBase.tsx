@@ -7,7 +7,6 @@ import remarkMath from 'remark-math'
 import { isFeatureEnabled } from 'common/enabled-features'
 import { preprocessMdxWithDefaults } from '~/features/directives/utils'
 import { components } from '~/features/docs/MdxBase.shared'
-import { SerializeOptions } from '~/types/next-mdx-remote-serialize'
 
 interface MDXRemoteBaseProps {
   source: string
@@ -21,6 +20,39 @@ const MDXRemoteBase = async ({
   components: customComponents,
 }: MDXRemoteBaseProps) => {
   try {
+    // STRIP FRONTMATTER FIRST, before any preprocessing
+    // The getData error occurs when compileMDX detects frontmatter delimiters
+    // We must remove frontmatter completely before preprocessing or compilation
+    let sourceWithoutFrontmatter: string
+    
+    try {
+      // Use gray-matter to parse and extract frontmatter
+      const parsed = matter(source, { excerpt: false })
+      sourceWithoutFrontmatter = parsed.content || source
+    } catch (error) {
+      // If gray-matter fails, use regex-based removal
+      sourceWithoutFrontmatter = source
+    }
+    
+    // Aggressive regex removal to ensure no frontmatter delimiters remain
+    // This handles edge cases and malformed frontmatter that gray-matter might miss
+    sourceWithoutFrontmatter = sourceWithoutFrontmatter
+      // Remove YAML frontmatter (--- ... ---) - most common format
+      .replace(/^---\s*\n[\s\S]*?\n---\s*\n?/m, '')
+      // Remove YAML frontmatter without closing delimiter (malformed)
+      .replace(/^---\s*\n[\s\S]*?(?=\n[A-Za-z#])/m, '')
+      // Remove TOML frontmatter (+++ ... +++), though less common
+      .replace(/^\+\+\+\s*\n[\s\S]*?\n\+\+\+\s*\n?/m, '')
+      // Remove any remaining triple-dash patterns at the very start
+      .replace(/^---[^\n]*---\s*\n?/m, '')
+      // Trim any leading whitespace/newlines that might confuse parsers
+      .trimStart()
+    
+    // Ensure we have valid, non-empty content
+    if (!sourceWithoutFrontmatter || typeof sourceWithoutFrontmatter !== 'string' || sourceWithoutFrontmatter.trim().length === 0) {
+      throw new Error('Invalid or empty MDX source after frontmatter removal')
+    }
+    
     const preprocess = customPreprocess ?? preprocessMdxWithDefaults
     
     // Custom preprocessing to resolve isFeatureEnabled calls
@@ -39,38 +71,35 @@ const MDXRemoteBase = async ({
       })
     }
     
-    const preprocessedSource = await preprocess(source)
+    // Now preprocess the source (frontmatter already removed)
+    const preprocessedSource = await preprocess(sourceWithoutFrontmatter)
     const resolvedSource = resolveFeatureFlags(preprocessedSource)
     
     // Note: StepHikeCompact component property access transformation is now handled
     // in the preprocessing step (see preprocessMdx in features/directives/utils.ts)
-
-    // Strip frontmatter manually to avoid getData error in next-mdx-remote v5.0.0
-    // Even with parseFrontmatter: false, compileMDX may still try to access getData
-    // if frontmatter is present in the source
-    // Use gray-matter to parse, then ensure complete removal with regex as a fallback
-    let sourceWithoutFrontmatter: string
-    try {
-      const parsed = matter(resolvedSource)
-      sourceWithoutFrontmatter = parsed.content || resolvedSource
-      
-      // Additional safety: remove any remaining frontmatter-like patterns
-      // This handles edge cases where gray-matter might miss malformed frontmatter
-      sourceWithoutFrontmatter = sourceWithoutFrontmatter.replace(
-        /^---\s*\n[\s\S]*?\n---\s*\n?/,
-        ''
-      ).trimStart()
-    } catch (error) {
-      // If gray-matter fails, try regex-based removal as fallback
-      sourceWithoutFrontmatter = resolvedSource.replace(
-        /^---\s*\n[\s\S]*?\n---\s*\n?/,
-        ''
-      ).trimStart()
-    }
-
-    // Ensure we have valid content
-    if (!sourceWithoutFrontmatter || typeof sourceWithoutFrontmatter !== 'string') {
-      throw new Error('Invalid MDX source after frontmatter removal')
+    
+    // Final safety check: ensure no frontmatter was re-introduced during preprocessing
+    // Also ensure the source doesn't start with frontmatter delimiters at all
+    let finalSource = resolvedSource.replace(/^---[\s\S]*?---\s*\n?/m, '').trimStart()
+    
+    // Additional check: if source still starts with ---, remove it completely
+    // This handles edge cases where preprocessing might have added something back
+    if (finalSource.startsWith('---')) {
+      const lines = finalSource.split('\n')
+      let skipIndex = 0
+      // Skip frontmatter block if present
+      if (lines[0] === '---') {
+        skipIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() === '---')
+        if (skipIndex > 0) {
+          finalSource = lines.slice(skipIndex + 1).join('\n').trimStart()
+        } else {
+          // No closing --- found, skip until first non-empty line that's not ---
+          skipIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() !== '---' && line.trim() !== '')
+          if (skipIndex > 0) {
+            finalSource = lines.slice(skipIndex).join('\n').trimStart()
+          }
+        }
+      }
     }
 
     const mergedComponents = {
@@ -79,27 +108,39 @@ const MDXRemoteBase = async ({
     }
 
     // Use compileMDX with parseFrontmatter: false to avoid getData issue
-    // The getData error occurs when parseFrontmatter is true or when accessing frontmatter
-    // By setting parseFrontmatter: false, we avoid the problematic code path
-    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are inside the options object
-    const { content } = await compileMDX({
-      source: sourceWithoutFrontmatter,
-      components: mergedComponents,
-      options: {
-        parseFrontmatter: false,
-        mdxOptions: {
-          remarkPlugins: [
-            [remarkMath, { singleDollarTextMath: false }],
-            remarkGfm,
-          ],
-          rehypePlugins: [rehypeKatex],
-          format: 'mdx',
+    // The getData error occurs when compileMDX tries to parse frontmatter
+    // We've already completely removed frontmatter, so this should be safe
+    // Note: compileMDX from /rsc in next-mdx-remote v5 uses a nested options structure
+    try {
+      const result = await compileMDX({
+        source: finalSource,
+        components: mergedComponents,
+        options: {
+          parseFrontmatter: false,
+          mdxOptions: {
+            remarkPlugins: [
+              [remarkMath, { singleDollarTextMath: false }],
+              remarkGfm,
+            ],
+            rehypePlugins: [rehypeKatex],
+          },
         },
-      },
-    })
-
-    // Return the MDX content directly
-    return content
+      })
+      return result.content
+    } catch (compileError: any) {
+      // If the error is about getData, it means frontmatter parsing was triggered
+      // Log more details in development to help debug
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.error('MDX compilation error:', {
+          error: compileError?.message,
+          stack: compileError?.stack,
+          sourcePreview: finalSource.substring(0, 200),
+          hasFrontmatterMarkers: /^---/m.test(finalSource),
+        })
+      }
+      throw compileError
+    }
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
