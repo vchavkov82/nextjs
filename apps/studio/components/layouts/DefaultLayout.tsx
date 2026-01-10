@@ -89,7 +89,7 @@ export const DefaultLayout = ({
               {/* Main Content Area */}
               <div className="flex flex-1 w-full overflow-y-hidden">
                 {/* Sidebar - Only show for project pages, not account pages */}
-                {(!isRouterReady || !pathname.startsWith('/account')) && <Sidebar />}
+                {isRouterReady && !pathname.startsWith('/account') && <Sidebar />}
                 {/* Main Content with Layout Sidebar */}
                 <ResizablePanelGroup
                   direction="horizontal"

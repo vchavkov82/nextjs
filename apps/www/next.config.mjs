@@ -172,6 +172,7 @@ const nextConfig = {
     '@octokit/core',
     '@octokit/plugin-paginate-graphql',
   ],
+  allowedDevOrigins: ['suse-10.lan.assistance.bg'],
 }
 
 // next.config.js.

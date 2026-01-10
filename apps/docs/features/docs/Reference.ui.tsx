@@ -176,8 +176,8 @@ export function FnParameterDetails({
       <h3 className="mb-3 text-base text-foreground">Parameters</h3>
       <ul>
         {combinedParameters.map((parameter, index) => {
-          const name = 'name' in parameter && typeof parameter.name === 'string' ? parameter.name : null
-          const key = name || `parameter-${index}`
+          const name = 'name' in parameter && typeof parameter.name === 'string' && parameter.name.trim() ? parameter.name : null
+          const key = name ? `${name}-${index}` : `parameter-${index}`
           return (
             <li key={key} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
               <ParamOrTypeDetails paramOrType={parameter} />

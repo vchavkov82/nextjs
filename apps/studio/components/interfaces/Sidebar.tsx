@@ -250,17 +250,18 @@ const ProjectLinks = () => {
   const isNewAPIDocsEnabled = useIsAPIDocsSidePanelEnabled()
   const { isEnabled: isUnifiedLogsEnabled } = useUnifiedLogsPreview()
 
-  const activeRoute = router.pathname.split('/')[3]
   // Track router readiness to avoid hydration mismatches with router.query
   const [isRouterReady, setIsRouterReady] = useState(false)
   const [hasQueryRef, setHasQueryRef] = useState(false)
+  const [activeRoute, setActiveRoute] = useState<string | undefined>(undefined)
 
   useEffect(() => {
     if (router.isReady) {
       setIsRouterReady(true)
       setHasQueryRef(!isUndefined(router.query.ref))
+      setActiveRoute(router.pathname.split('/')[3])
     }
-  }, [router.isReady, router.query.ref])
+  }, [router.isReady, router.query.ref, router.pathname])
 
   const {
     projectAuthAll: authEnabled,
