@@ -48,7 +48,30 @@ const MDXRemoteBase = async ({
     // Strip frontmatter manually to avoid getData error in next-mdx-remote v5.0.0
     // Even with parseFrontmatter: false, compileMDX may still try to access getData
     // if frontmatter is present in the source
-    const { content: sourceWithoutFrontmatter } = matter(resolvedSource)
+    // Use gray-matter to parse, then ensure complete removal with regex as a fallback
+    let sourceWithoutFrontmatter: string
+    try {
+      const parsed = matter(resolvedSource)
+      sourceWithoutFrontmatter = parsed.content || resolvedSource
+      
+      // Additional safety: remove any remaining frontmatter-like patterns
+      // This handles edge cases where gray-matter might miss malformed frontmatter
+      sourceWithoutFrontmatter = sourceWithoutFrontmatter.replace(
+        /^---\s*\n[\s\S]*?\n---\s*\n?/,
+        ''
+      ).trimStart()
+    } catch (error) {
+      // If gray-matter fails, try regex-based removal as fallback
+      sourceWithoutFrontmatter = resolvedSource.replace(
+        /^---\s*\n[\s\S]*?\n---\s*\n?/,
+        ''
+      ).trimStart()
+    }
+
+    // Ensure we have valid content
+    if (!sourceWithoutFrontmatter || typeof sourceWithoutFrontmatter !== 'string') {
+      throw new Error('Invalid MDX source after frontmatter removal')
+    }
 
     const mergedComponents = {
       ...components,
@@ -57,19 +80,21 @@ const MDXRemoteBase = async ({
 
     // Use compileMDX with parseFrontmatter: false to avoid getData issue
     // The getData error occurs when parseFrontmatter is true or when accessing frontmatter
-    // By setting parseFrontmatter to false, we avoid the problematic code path
-    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are at the top level
+    // By setting parseFrontmatter: false, we avoid the problematic code path
+    // Note: For compileMDX from /rsc, parseFrontmatter and mdxOptions are inside the options object
     const { content } = await compileMDX({
       source: sourceWithoutFrontmatter,
       components: mergedComponents,
-      parseFrontmatter: false,
-      mdxOptions: {
-        remarkPlugins: [
-          [remarkMath, { singleDollarTextMath: false }],
-          remarkGfm,
-        ],
-        rehypePlugins: [rehypeKatex],
-        format: 'mdx',
+      options: {
+        parseFrontmatter: false,
+        mdxOptions: {
+          remarkPlugins: [
+            [remarkMath, { singleDollarTextMath: false }],
+            remarkGfm,
+          ],
+          rehypePlugins: [rehypeKatex],
+          format: 'mdx',
+        },
       },
     })
 

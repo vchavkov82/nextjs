@@ -60,9 +60,8 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   children: _children,
 }) => {
   // Filter valid React elements without accessing .ref to preserve React 19 compatibility
-  // Extract props early to avoid React 19 warnings about ref access
-  // In React 19, accessing element.props can trigger warnings if the element has a ref
-  // By extracting props once and storing them, we avoid multiple prop accesses
+  // In React 19, refs are regular props (element.props.ref) and element.ref no longer exists
+  // We safely extract only the props we need without accessing any ref properties
   const children = useMemo(() => {
     const childArray: Array<{
       id: string
@@ -70,22 +69,26 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
       label?: string
       iconRight?: React.ReactNode
     }> = []
-    Children.forEach(_children, (child) => {
-      // Use isValidElement to properly check for React elements in React 19
-      if (isValidElement(child)) {
-        const element = child as React.ReactElement<PanelProps>
-        // Extract props once to avoid React 19's ref access detection
-        // Accessing element.props is safe, but accessing it multiple times
-        // can trigger warnings when elements have refs
-        const props = element.props as PanelProps
-        childArray.push({
-          id: props.id,
-          icon: props.icon,
-          label: props.label,
-          iconRight: props.iconRight,
-        })
-      }
-    })
+    if (_children) {
+      Children.forEach(_children, (child) => {
+        // Use isValidElement to properly check for React elements in React 19
+        if (isValidElement(child)) {
+          // In React 19, we must access props through element.props (not element.ref)
+          // Destructure only the props we need to avoid triggering ref access warnings
+          const element = child as React.ReactElement<PanelProps>
+          const { id, icon, label, iconRight } = element.props as PanelProps
+          // Only include children with a valid id prop
+          if (id && typeof id === 'string') {
+            childArray.push({
+              id,
+              icon,
+              label,
+              iconRight,
+            })
+          }
+        }
+      })
+    }
     return childArray
   }, [_children])
 
@@ -93,7 +96,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     activeId ??
       defaultActiveId ??
       // if no defaultActiveId is set use the first panel
-      children?.[0]?.id
+      (Array.isArray(children) && children.length > 0 ? children[0].id : undefined)
   )
 
   useMemo(() => {
@@ -149,41 +152,43 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     <TabsPrimitive.Root
       value={activeTab}
       className={[__styles.base, baseClassNames].join(' ')}
-      ref={refs?.base ? baseRefCallback : undefined}
+      ref={refs?.base ? baseRefCallback : null}
     >
-      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : undefined}>
+      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : null}>
         {addOnBefore}
-        {children.map((tab) => {
-          const isActive = activeTab === tab.id
-          const triggerClasses = [variantStyles.base, __styles.size[size]]
-          if (isActive) {
-            triggerClasses.push(variantStyles.active)
-          } else {
-            triggerClasses.push(variantStyles.inactive)
-          }
-          if (block) {
-            triggerClasses.push(__styles.block)
-          }
+        {Array.isArray(children) && children.length > 0
+          ? children.map((tab) => {
+              const isActive = activeTab === tab.id
+              const triggerClasses = [variantStyles.base, __styles.size[size]]
+              if (isActive) {
+                triggerClasses.push(variantStyles.active)
+              } else {
+                triggerClasses.push(variantStyles.inactive)
+              }
+              if (block) {
+                triggerClasses.push(__styles.block)
+              }
 
-          return (
-            <TabsPrimitive.Trigger
-              onKeyDown={(e: KeyboardEvent<HTMLButtonElement>) => {
-                if (e.key === 'Enter') {
-                  e.preventDefault()
-                  onTabClick(tab.id)
-                }
-              }}
-              onClick={() => onTabClick(tab.id)}
-              key={`${tab.id}-tab-button`}
-              value={tab.id}
-              className={triggerClasses.join(' ')}
-            >
-              {tab.icon}
-              <span>{tab.label}</span>
-              {tab.iconRight}
-            </TabsPrimitive.Trigger>
-          )
-        })}
+              return (
+                <TabsPrimitive.Trigger
+                  onKeyDown={(e: KeyboardEvent<HTMLButtonElement>) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault()
+                      onTabClick(tab.id)
+                    }
+                  }}
+                  onClick={() => onTabClick(tab.id)}
+                  key={`${tab.id}-tab-button`}
+                  value={tab.id}
+                  className={triggerClasses.join(' ')}
+                >
+                  {tab.icon}
+                  <span>{tab.label}</span>
+                  {tab.iconRight}
+                </TabsPrimitive.Trigger>
+              )
+            })
+          : null}
         {addOnAfter}
       </TabsPrimitive.List>
       {_children}

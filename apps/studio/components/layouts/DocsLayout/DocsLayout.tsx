@@ -26,12 +26,14 @@ function DocsLayout({ title, children }: { title: string; children: ReactElement
   } = useOpenAPISpecQuery({ projectRef: ref }, { enabled: !isPaused })
 
   const isNewAPIDocsEnabled = useIsAPIDocsSidePanelEnabled()
-  const hideMenu = isNewAPIDocsEnabled && router.pathname.endsWith('/graphiql')
+  // Only hide menu after router is ready to avoid hydration mismatches
+  const hideMenu =
+    isNewAPIDocsEnabled && router.isReady && router.pathname?.endsWith('/graphiql')
 
   const { projectAuthAll: authEnabled } = useIsFeatureEnabled(['project_auth:all'])
 
   const getPage = () => {
-    if (router.pathname.endsWith('graphiql')) return 'graphiql'
+    if (router.isReady && router.pathname?.endsWith('graphiql')) return 'graphiql'
 
     const { page, rpc, resource } = router.query
     if (!page && !resource && !rpc) return 'introduction'

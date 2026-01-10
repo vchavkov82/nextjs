@@ -132,9 +132,21 @@ const NewFunctionPage = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      functionName: generateRandomFunctionName(),
+      functionName: '',
     },
   })
+
+  // Generate random function name on client side only to avoid hydration mismatch
+  useEffect(() => {
+    // Only generate random name if no template is provided and no name is set
+    if (!template && typeof window !== 'undefined') {
+      const currentName = form.getValues('functionName')
+      if (!currentName) {
+        form.setValue('functionName', generateRandomFunctionName(), { shouldValidate: false })
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const { mutate: deployFunction, isPending: isDeploying } = useEdgeFunctionDeployMutation({
     // [Joshen] To investigate: For some reason, the invalidation for list of edge functions isn't triggering

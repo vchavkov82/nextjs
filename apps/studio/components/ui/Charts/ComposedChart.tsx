@@ -140,11 +140,20 @@ export function ComposedChart({
   const [focusDataIndex, setFocusDataIndex] = useState<number | null>(null)
   const [isActiveHoveredChart, setIsActiveHoveredChart] = useState(false)
   const [hiddenAttributes, setHiddenAttributes] = useState<Set<string>>(new Set())
-  const isDarkMode = resolvedTheme?.includes('dark')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Use default during SSR to avoid hydration mismatch
+  // Update to resolvedTheme after mount
+  const isDarkMode = mounted && resolvedTheme?.includes('dark')
+
+  useEffect(() => {
+    if (!mounted) return
     updateStackedChartColors(isDarkMode ?? false)
-  }, [isDarkMode])
+  }, [isDarkMode, mounted])
 
   const { Container } = useChartSize(size)
 

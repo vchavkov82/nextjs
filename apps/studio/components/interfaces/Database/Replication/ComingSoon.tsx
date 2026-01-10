@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, Circle, Database, Plus } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import ReactFlow, { Background, Handle, Position, ReactFlowProvider } from 'reactflow'
 import 'reactflow/dist/style.css'
 
@@ -74,9 +74,18 @@ const ReplicationStaticMockup = ({ projectRef }: { projectRef: string }) => {
   const edges = useMemo(() => STATIC_EDGES, [])
 
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Use default during SSR to avoid hydration mismatch
+  // Update to resolvedTheme after mount
   const backgroundPatternColor =
-    resolvedTheme === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0.4)'
+    mounted && resolvedTheme === 'dark'
+      ? 'rgba(255, 255, 255, 0.3)'
+      : 'rgba(0, 0, 0, 0.4)'
 
   const nodeTypes = useMemo(
     () => ({

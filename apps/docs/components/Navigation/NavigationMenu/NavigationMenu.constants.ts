@@ -338,11 +338,6 @@ export const cli = {
   title: 'CLI',
   items: [
     { name: 'Overview', url: '/guides/cli' },
-    { name: 'Managing Environments', url: '/guides/cli/managing-environments' },
-    {
-      name: 'Using environment variables in config.toml',
-      url: '/guides/cli/using-environment-variables-in-config',
-    },
   ],
 }
 
@@ -1683,7 +1678,7 @@ export const reference = {
 export const reference_javascript_v1 = {
   icon: 'reference-javascript',
   title: 'JavaScript',
-  url: '/guides/reference/javascript',
+  url: '/reference/javascript/v1',
   parent: '/reference',
   pkg: {
     name: '@supabase/supabase-js',
@@ -1694,7 +1689,7 @@ export const reference_javascript_v1 = {
 export const reference_javascript_v2 = {
   icon: 'reference-javascript',
   title: 'JavaScript',
-  url: '/guides/reference/javascript',
+  url: '/reference/javascript',
   parent: '/reference',
   pkg: {
     name: '@supabase/supabase-js',
@@ -1706,7 +1701,7 @@ export const reference_javascript_v2 = {
 export const reference_dart_v1 = {
   icon: 'reference-dart',
   title: 'Flutter',
-  url: '/guides/reference/dart',
+  url: '/reference/dart/v1',
   parent: '/reference',
   pkg: {
     name: 'supabase_flutter',
@@ -1717,7 +1712,7 @@ export const reference_dart_v1 = {
 export const reference_dart_v2 = {
   icon: 'reference-dart',
   title: 'Flutter',
-  url: '/guides/reference/dart',
+  url: '/reference/dart',
   parent: '/reference',
   pkg: {
     name: 'supabase_flutter',
@@ -1728,7 +1723,7 @@ export const reference_dart_v2 = {
 export const reference_csharp_v0 = {
   icon: 'reference-csharp',
   title: 'C#',
-  url: 'guides/reference/csharp',
+  url: '/reference/csharp/v0',
   parent: '/reference',
   pkg: {
     name: 'supabase',
@@ -1739,7 +1734,7 @@ export const reference_csharp_v0 = {
 export const reference_csharp_v1 = {
   icon: 'reference-csharp',
   title: 'C#',
-  url: 'guides/reference/csharp',
+  url: '/reference/csharp',
   parent: '/reference',
   pkg: {
     name: 'supabase',
@@ -1750,7 +1745,7 @@ export const reference_csharp_v1 = {
 export const reference_python_v2 = {
   icon: 'reference-python',
   title: 'Python',
-  url: '/guides/reference/python',
+  url: '/reference/python',
   parent: '/reference',
   pkg: {
     name: 'supabase-py',
@@ -1761,7 +1756,7 @@ export const reference_python_v2 = {
 export const reference_swift_v1 = {
   icon: 'reference-swift',
   title: 'swift',
-  url: 'guides/reference/swift',
+  url: '/reference/swift',
   parent: '/reference',
   pkg: {
     name: 'supabase-swift',
@@ -1772,7 +1767,7 @@ export const reference_swift_v1 = {
 export const reference_swift_v2 = {
   icon: 'reference-swift',
   title: 'swift',
-  url: 'guides/reference/swift',
+  url: '/reference/swift',
   parent: '/reference',
   pkg: {
     name: 'supabase-swift',
@@ -1783,7 +1778,7 @@ export const reference_swift_v2 = {
 export const reference_kotlin_v1 = {
   icon: 'reference-kotlin',
   title: 'kotlin',
-  url: 'guides/reference/kotlin',
+  url: '/reference/kotlin',
   parent: '/reference',
   pkg: {
     name: '@supabase-community/supabase-kt',
@@ -1794,7 +1789,7 @@ export const reference_kotlin_v1 = {
 export const reference_kotlin_v2 = {
   icon: 'reference-kotlin',
   title: 'kotlin',
-  url: 'guides/reference/kotlin',
+  url: '/reference/kotlin',
   parent: '/reference',
   pkg: {
     name: '@supabase-community/supabase-kt',
@@ -1805,7 +1800,7 @@ export const reference_kotlin_v2 = {
 export const reference_kotlin_v3 = {
   icon: 'reference-kotlin',
   title: 'kotlin',
-  url: 'guides/reference/kotlin',
+  url: '/reference/kotlin',
   parent: '/reference',
   pkg: {
     name: '@supabase-community/supabase-kt',
@@ -1816,7 +1811,7 @@ export const reference_kotlin_v3 = {
 export const reference_cli = {
   icon: 'reference-cli',
   title: 'BA CLI',
-  url: '/guides/reference/cli',
+  url: '/reference/cli/introduction',
   parent: '/',
   pkg: {
     name: 'supabase',
@@ -1826,42 +1821,42 @@ export const reference_cli = {
 export const reference_api = {
   icon: 'reference-api',
   title: 'Management API',
-  url: '/guides/reference/api',
+  url: '/reference/api/introduction',
   parent: '/reference',
 }
 
 export const reference_self_hosting_auth = {
   icon: 'self-hosting',
   title: 'Self-Hosting Auth',
-  url: '/guides/reference/self-hosting/auth',
+  url: '/reference/self-hosting-auth',
   parent: '/reference',
 }
 
 export const reference_self_hosting_storage = {
   icon: 'self-hosting',
   title: 'Self-Hosting Storage',
-  url: '/guides/reference/self-hosting/storage',
+  url: '/reference/self-hosting-storage',
   parent: '/reference',
 }
 
 export const reference_self_hosting_realtime = {
   icon: 'self-hosting',
   title: 'Self-Hosting Realtime',
-  url: '/guides/reference/self-hosting/realtime',
+  url: '/reference/self-hosting-realtime',
   parent: '/reference',
 }
 
 export const reference_self_hosting_analytics = {
   icon: 'reference-analytics',
   title: 'Self-Hosting Analytics',
-  url: '/guides/reference/self-hosting/analytics',
+  url: '/reference/self-hosting-analytics',
   parent: '/reference',
 }
 
 export const reference_self_hosting_functions = {
   icon: 'reference-functions',
   title: 'Self-Hosting Functions',
-  url: '/guides/reference/self-hosting/functions',
+  url: '/reference/self-hosting-functions',
   parent: '/reference',
 }
 

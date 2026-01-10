@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { IS_PROD } from '../constants'
 
 const defaultDark: { [name: string]: string } = {
@@ -78,55 +78,106 @@ const defaultLight: { [name: string]: string } = {
 export const useThemeSandbox = (): any => {
   const isWindowUndefined = typeof window === 'undefined'
   if (isWindowUndefined || IS_PROD) return null
-  const hash = window.location.hash
+
   const defaultConfig = defaultDark // use dark default tokens
   // const defaultConfig = defaultLight // use light default tokens
-  const localPreset = localStorage.getItem('theme-sandbox')
-  const isSandbox = hash.includes('#theme-sandbox') || localPreset !== null
-  const [themeConfig, setThemeConfig] = useState(
-    localPreset ? JSON.parse(localPreset) : defaultConfig
-  )
-  const styles = document.querySelector(':root') as any
+
+  // Initialize with default config to avoid hydration mismatch
+  // We'll check localStorage and hash after mount
+  const [themeConfig, setThemeConfig] = useState(defaultConfig)
+  const [isSandbox, setIsSandbox] = useState(false)
+  const [styles, setStyles] = useState<HTMLElement | null>(null)
+  const themeConfigRef = useRef(themeConfig)
+
+  // Initialize browser-dependent values after mount to avoid hydration mismatch
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return
+
+    const hash = window.location.hash
+    const localPreset = localStorage.getItem('theme-sandbox')
+    const rootElement = document.querySelector(':root') as HTMLElement
+
+    setStyles(rootElement)
+
+    if (localPreset) {
+      try {
+        const parsed = JSON.parse(localPreset)
+        setThemeConfig(parsed)
+      } catch (e) {
+        // Invalid JSON, use default
+        setThemeConfig(defaultConfig)
+      }
+    }
+
+    const shouldBeSandbox = hash.includes('#theme-sandbox') || localPreset !== null
+    setIsSandbox(shouldBeSandbox)
+  }, [])
+
+  // Keep ref in sync with state
+  useEffect(() => {
+    themeConfigRef.current = themeConfig
+  }, [themeConfig])
 
   const handleSetThemeConfig = (name: string, value: any) => {
-    updateCSSVariables()
-    setThemeConfig((prevConfig: any) => ({ ...prevConfig, [name]: value }))
+    setThemeConfig((prevConfig: any) => {
+      const newConfig = { ...prevConfig, [name]: value }
+      return newConfig
+    })
+    // Update CSS variables will happen in useEffect when themeConfig changes
   }
 
-  const updateCSSVariables = () => {
-    Object.entries(themeConfig).map(([key, value]) => styles.style.setProperty(key, value))
-    localStorage.setItem('theme-sandbox', JSON.stringify(themeConfig))
-  }
+  // Update CSS variables when themeConfig changes (after mount)
+  useEffect(() => {
+    if (!styles || !isSandbox) return
+
+    Object.entries(themeConfig).forEach(([key, value]) => {
+      styles.style.setProperty(key, value as string)
+    })
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme-sandbox', JSON.stringify(themeConfig))
+    }
+  }, [themeConfig, styles, isSandbox])
 
   const init = async () => {
-    if (!isSandbox) return
+    if (!isSandbox || !styles) return
     const dat = await import('dat.gui')
     const gui = new dat.GUI()
 
     gui.width = 500
 
-    Object.entries(defaultConfig).map(([key, _value]) => {
-      if (!themeConfig[key]) return localStorage.removeItem('theme-sandbox')
+    // Create a mutable copy for GUI to modify directly
+    const guiConfig = { ...themeConfigRef.current }
+
+    Object.entries(defaultConfig).forEach(([key, _value]) => {
+      if (!guiConfig[key]) {
+        if (typeof window !== 'undefined') {
+          localStorage.removeItem('theme-sandbox')
+        }
+        return
+      }
       const folderName = key.split('-')[2]
       const folder = gui.__folders[folderName] ?? gui.addFolder(folderName)
 
-      return folder
-        .add(themeConfig, key)
+      folder
+        .add(guiConfig, key)
         .name(key)
         .onChange((newValue) => {
           handleSetThemeConfig(key, newValue)
         })
     })
 
-    var obj = {
-      'Apply Theme': function () {
-        updateCSSVariables()
+    const obj = {
+      'Apply Theme': () => {
+        // Sync GUI config back to state, which will trigger useEffect to update CSS
+        setThemeConfig({ ...guiConfig })
       },
-      'Exit Sandbox': function () {
+      'Exit Sandbox': () => {
         gui.destroy()
       },
-      'Reset localStorage': function () {
-        localStorage.removeItem('theme-sandbox')
+      'Reset localStorage': () => {
+        if (typeof window !== 'undefined') {
+          localStorage.removeItem('theme-sandbox')
+        }
         setThemeConfig(defaultConfig)
       },
     }
@@ -138,8 +189,10 @@ export const useThemeSandbox = (): any => {
   }
 
   useEffect(() => {
+    if (!isSandbox) return
     init()
-  }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSandbox, styles])
 
   return { themeConfig, handleSetThemeConfig, isSandbox }
 }

@@ -79,6 +79,14 @@ export function useLocalStorageQuery<T>(key: string, initialValue: T) {
 
       return JSON.parse(item) as T
     },
+    // Disable query during SSR to prevent hydration mismatches
+    // The query will run on the client after hydration
+    enabled: typeof window !== 'undefined',
+    // Use initialValue as initial data to ensure consistent SSR/client render
+    // This ensures both server and client start with the same value
+    initialData: initialValue,
+    // Also set as placeholder data for consistency
+    placeholderData: initialValue,
   })
 
   const setValue: Dispatch<SetStateAction<T>> = (value) => {

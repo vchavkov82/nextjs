@@ -1,5 +1,4 @@
 import { ArrowDown, Check, X } from 'lucide-react'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Badge, Button, Image } from 'ui'
 import { Admonition, type AdmonitionProps } from 'ui-patterns/admonition'
@@ -20,59 +19,29 @@ import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeC
 // We transform <StepHikeCompact.Step> to <StepHikeCompactStep> in preprocessing,
 // so we provide flat component names: StepHikeCompactStep, StepHikeCompactDetails, StepHikeCompactCode
 
-// Dynamic imports for heavy components
-const AiPromptsIndex = dynamic(() => import('~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'), {
-  loading: () => <div>Loading...</div>
-})
-const AppleSecretGenerator = dynamic(() => import('~/components/AppleSecretGenerator'), {
-  loading: () => <div>Loading...</div>
-})
-const AuthProviders = dynamic(() => import('~/components/AuthProviders'), {
-  loading: () => <div>Loading...</div>
-})
-const ButtonCard = dynamic(() => import('~/components/ButtonCard'), {
-  loading: () => <div>Loading...</div>
-})
-const Extensions = dynamic(() => import('~/components/Extensions'), {
-  loading: () => <div>Loading...</div>
-})
-const JwtGenerator = dynamic(() => import('~/components/JwtGenerator').then(mod => ({ default: mod.JwtGenerator })), {
-  loading: () => <div>Loading...</div>
-})
-const JwtGeneratorSimple = dynamic(() => import('~/components/JwtGenerator').then(mod => ({ default: mod.JwtGeneratorSimple })), {
-  loading: () => <div>Loading...</div>
-})
-const MetricsStackCards = dynamic(() => import('~/components/MetricsStackCards'), {
-  loading: () => <div>Loading...</div>
-})
-const NavData = dynamic(() => import('~/components/NavData'), {
-  loading: () => <div>Loading...</div>
-})
-const Price = dynamic(() => import('~/components/Price').then(mod => ({ default: mod.Price })), {
-  loading: () => <div>Loading...</div>
-})
+// NavData must be statically imported to avoid serialization issues with render props
+// Functions cannot be passed from Server Components to Client Components
+import { NavData } from '~/components/NavData'
 // ProjectConfigVariables must be statically imported to avoid serialization issues
 // with withErrorBoundary HOC when dynamically imported
 import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
-const RealtimeLimitsEstimator = dynamic(() => import('~/components/RealtimeLimitsEstimator'), {
-  loading: () => <div>Loading...</div>
-})
-const RegionsList = dynamic(() => import('~/components/RegionsList').then(mod => ({ default: mod.RegionsList })), {
-  loading: () => <div>Loading...</div>
-})
-const SmartRegionsList = dynamic(() => import('~/components/RegionsList').then(mod => ({ default: mod.SmartRegionsList })), {
-  loading: () => <div>Loading...</div>
-})
-const SharedData = dynamic(() => import('~/components/SharedData'), {
-  loading: () => <div>Loading...</div>
-})
-// StepHikeCompact is imported statically above to preserve sub-components (Step, Details, Code)
-const CodeSampleDummy = dynamic(() => import('~/features/directives/CodeSample.client').then(mod => ({ default: mod.CodeSampleDummy })), {
-  loading: () => <div>Loading...</div>
-})
-const CodeSampleWrapper = dynamic(() => import('~/features/directives/CodeSample.client').then(mod => ({ default: mod.CodeSampleWrapper })), {
-  loading: () => <div>Loading...</div>
-})
+
+// Static imports for Server Components
+// Dynamic imports from next/dynamic create Module objects that cannot be serialized
+// when passed to compileMDX from next-mdx-remote/rsc
+// Since we're in a Server Component context, we can use static imports
+import { AiPromptsIndex } from '~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'
+import { AppleSecretGenerator } from '~/components/AppleSecretGenerator'
+import AuthProviders from '~/components/AuthProviders'
+import ButtonCard from '~/components/ButtonCard'
+import { Extensions } from '~/components/Extensions'
+import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator'
+import { MetricsStackCards } from '~/components/MetricsStackCards'
+import { Price } from '~/components/Price'
+import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator'
+import { RegionsList, SmartRegionsList } from '~/components/RegionsList'
+import { SharedData } from '~/components/SharedData'
+import { CodeSampleDummy, CodeSampleWrapper } from '~/features/directives/CodeSample.client'
 
 // Wrap Admonition for Docs-specific styling (within MDX prose, requires a margin-bottom)
 const AdmonitionWithMargin = (props: AdmonitionProps) => {

@@ -2,7 +2,7 @@ import { BASE_PATH } from 'lib/constants'
 import { useTheme } from 'next-themes'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react'
 import { cn } from 'ui'
 
 type ForgotPasswordLayoutProps = {
@@ -22,6 +22,11 @@ const ForgotPasswordLayout = ({
   children,
 }: PropsWithChildren<ForgotPasswordLayoutProps>) => {
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <div
@@ -37,7 +42,7 @@ const ForgotPasswordLayout = ({
               <Link href={logoLinkToMarketingSite ? 'https://www.assistance.bg' : '/organizations'}>
                 <Image
                   src={
-                    resolvedTheme?.includes('dark')
+                    mounted && resolvedTheme?.includes('dark')
                       ? `${BASE_PATH}/img/supabase-dark.svg`
                       : `${BASE_PATH}/img/supabase-light.svg`
                   }

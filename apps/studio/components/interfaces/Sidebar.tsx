@@ -3,7 +3,7 @@ import { isUndefined } from 'lodash'
 import { Blocks, Boxes, ChartArea, PanelLeftDashed, Receipt, Settings, Users } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ComponentProps, ComponentPropsWithoutRef, FC, ReactNode, useEffect } from 'react'
+import { ComponentProps, ComponentPropsWithoutRef, FC, ReactNode, useEffect, useState } from 'react'
 
 import { LOCAL_STORAGE_KEYS, useFlag, useIsMFAEnabled, useParams } from 'common'
 import {
@@ -64,16 +64,29 @@ export const Sidebar = ({ className, ...props }: SidebarProps) => {
   const { setOpen } = useSidebar()
   const hideSideBar = useHideSidebar()
 
-  const [sidebarBehaviour, setSidebarBehaviour] = useLocalStorageQuery(
+  const [isMounted, setIsMounted] = useState(false)
+  const [localStorageValue, setLocalStorageValue] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.SIDEBAR_BEHAVIOR,
     DEFAULT_SIDEBAR_BEHAVIOR
   )
+
+  // Use default value during SSR and initial render to avoid hydration mismatch
+  // Only use localStorage value after hydration is complete
+  const sidebarBehaviour = isMounted ? localStorageValue : DEFAULT_SIDEBAR_BEHAVIOR
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     // logic to toggle sidebar open based on sidebarBehaviour state
     if (sidebarBehaviour === 'open') setOpen(true)
     if (sidebarBehaviour === 'closed') setOpen(false)
   }, [sidebarBehaviour, setOpen])
+
+  const setSidebarBehaviour = (value: SidebarBehaviourType) => {
+    setLocalStorageValue(value)
+  }
 
   return (
     <AnimatePresence>
@@ -167,10 +180,18 @@ export function SideBarNavLink({
   disabled?: boolean
   onClick?: () => void
 } & ComponentPropsWithoutRef<typeof SidebarMenuButton>) {
-  const [sidebarBehaviour] = useLocalStorageQuery(
+  const [isMounted, setIsMounted] = useState(false)
+  const [localStorageValue] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.SIDEBAR_BEHAVIOR,
     DEFAULT_SIDEBAR_BEHAVIOR
   )
+
+  // Use default value during SSR and initial render to avoid hydration mismatch
+  const sidebarBehaviour = isMounted ? localStorageValue : DEFAULT_SIDEBAR_BEHAVIOR
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const buttonProps = {
     disabled,

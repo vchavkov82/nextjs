@@ -3,7 +3,7 @@ import Panel from 'components/ui/Panel'
 import { BASE_PATH } from 'lib/constants'
 import { useTrack } from 'lib/telemetry/track'
 import { useTheme } from 'next-themes'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { createMcpCopyHandler, McpConfigPanel, type McpClient } from 'ui-patterns/McpUrlBuilder'
 import { ShimmeringLoader } from 'ui-patterns/ShimmeringLoader'
 import type { projectKeys } from './Connect.types'
@@ -41,6 +41,15 @@ const McpTabContentInnerLoaded = ({
   const { resolvedTheme } = useTheme()
   const track = useTrack()
   const [selectedClient, setSelectedClient] = useState<McpClient | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  // Use default theme during SSR to avoid hydration mismatch
+  // Update to resolvedTheme after mount
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const theme = mounted && resolvedTheme ? (resolvedTheme as 'light' | 'dark') : 'dark'
 
   const handleCopy = useMemo(
     () =>
@@ -66,7 +75,7 @@ const McpTabContentInnerLoaded = ({
     <McpConfigPanel
       basePath={BASE_PATH}
       projectRef={projectRef}
-      theme={resolvedTheme as 'light' | 'dark'}
+      theme={theme}
       isPlatform={IS_PLATFORM}
       apiUrl={projectKeys.apiUrl ?? undefined}
       onCopyCallback={handleCopy}

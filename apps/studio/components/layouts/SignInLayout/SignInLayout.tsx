@@ -28,7 +28,12 @@ const SignInLayout = ({
   const router = useRouter()
   const queryClient = useQueryClient()
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const ongoingIncident = useFlag('ongoingIncident')
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const {
     dashboardAuthShowTestimonial: showTestimonial,
@@ -119,7 +124,7 @@ const SignInLayout = ({
                 <Link href={logoLinkToMarketingSite ? 'https://www.assistance.bg' : '/organizations'}>
                   <img
                     src={
-                      resolvedTheme?.includes('dark')
+                      mounted && resolvedTheme?.includes('dark')
                         ? `${BASE_PATH}/img/supabase-dark.svg`
                         : `${BASE_PATH}/img/supabase-light.svg`
                     }

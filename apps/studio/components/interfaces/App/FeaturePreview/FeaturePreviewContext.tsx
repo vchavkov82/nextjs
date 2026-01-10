@@ -17,57 +17,77 @@ import { FEATURE_PREVIEWS } from './FeaturePreview.constants'
 type FeaturePreviewContextType = {
   flags: { [key: string]: boolean }
   onUpdateFlag: (key: string, value: boolean) => void
+  isMounted: boolean
 }
 
 const FeaturePreviewContext = createContext<FeaturePreviewContextType>({
   flags: EMPTY_OBJ,
   onUpdateFlag: noop,
+  isMounted: false,
 })
 
 export const useFeaturePreviewContext = () => useContext(FeaturePreviewContext)
 
+// [Joshen] Similar logic to feature flagging previews, we can use flags to default opt in previews
+const isDefaultOptIn = (feature: (typeof FEATURE_PREVIEWS)[number]) => {
+  switch (feature.key) {
+    default:
+      return false
+  }
+}
+
 export const FeaturePreviewContextProvider = ({ children }: PropsWithChildren<{}>) => {
   const { hasLoaded } = useContext(FeatureFlagContext)
 
-  // [Joshen] Similar logic to feature flagging previews, we can use flags to default opt in previews
-  const isDefaultOptIn = (feature: (typeof FEATURE_PREVIEWS)[number]) => {
-    switch (feature.key) {
-      default:
-        return false
-    }
-  }
+  // Track if component has mounted to avoid hydration mismatches
+  const [isMounted, setIsMounted] = useState(false)
 
+  // Initialize flags with default values to ensure server and client render match
+  // We'll update from localStorage after mount to avoid hydration mismatches
   const [flags, setFlags] = useState(() =>
     FEATURE_PREVIEWS.reduce((a, b) => {
-      return { ...a, [b.key]: false }
+      const defaultOptIn = isDefaultOptIn(b)
+      return { ...a, [b.key]: defaultOptIn }
     }, {})
   )
 
+  // Mark as mounted after initial render to avoid hydration mismatches
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setFlags(
-        FEATURE_PREVIEWS.reduce((a, b) => {
-          const defaultOptIn = isDefaultOptIn(b)
-          const localStorageValue = localStorage.getItem(b.key)
-          return {
-            ...a,
-            [b.key]: !localStorageValue ? defaultOptIn : localStorageValue === 'true',
-          }
-        }, {})
-      )
-    }
-  }, [hasLoaded])
+    setIsMounted(true)
+  }, [])
 
-  const value = {
-    flags,
-    onUpdateFlag: (key: string, value: boolean) => {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, value.toString())
-      }
-      const updatedFlags = { ...flags, [key]: value }
-      setFlags(updatedFlags)
-    },
-  }
+  // Update flags from localStorage after mount and when feature flags have loaded
+  useEffect(() => {
+    if (!isMounted || typeof window === 'undefined' || !hasLoaded) {
+      return
+    }
+
+    // Update flags from localStorage after hydration is complete
+    setFlags(
+      FEATURE_PREVIEWS.reduce((a, b) => {
+        const defaultOptIn = isDefaultOptIn(b)
+        const localStorageValue = localStorage.getItem(b.key)
+        return {
+          ...a,
+          [b.key]: !localStorageValue ? defaultOptIn : localStorageValue === 'true',
+        }
+      }, {})
+    )
+  }, [hasLoaded, isMounted])
+
+  const value = useMemo(
+    () => ({
+      flags,
+      isMounted,
+      onUpdateFlag: (key: string, value: boolean) => {
+        if (typeof window !== 'undefined') {
+          window.localStorage.setItem(key, value.toString())
+        }
+        setFlags((prevFlags) => ({ ...prevFlags, [key]: value }))
+      },
+    }),
+    [flags, isMounted]
+  )
 
   return <FeaturePreviewContext.Provider value={value}>{children}</FeaturePreviewContext.Provider>
 }
@@ -76,18 +96,18 @@ export const FeaturePreviewContextProvider = ({ children }: PropsWithChildren<{}
 
 export const useIsAPIDocsSidePanelEnabled = () => {
   const { flags } = useFeaturePreviewContext()
-  return flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_API_SIDE_PANEL]
+  return Boolean(flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_API_SIDE_PANEL] ?? false)
 }
 
 export const useIsColumnLevelPrivilegesEnabled = () => {
   const { flags } = useFeaturePreviewContext()
-  return flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_CLS]
+  return Boolean(flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_CLS] ?? false)
 }
 
 export const useUnifiedLogsPreview = () => {
   const { flags, onUpdateFlag } = useFeaturePreviewContext()
 
-  const isEnabled = flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_UNIFIED_LOGS]
+  const isEnabled = Boolean(flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_UNIFIED_LOGS] ?? false)
 
   const enable = () => onUpdateFlag(LOCAL_STORAGE_KEYS.UI_PREVIEW_UNIFIED_LOGS, true)
   const disable = () => onUpdateFlag(LOCAL_STORAGE_KEYS.UI_PREVIEW_UNIFIED_LOGS, false)
@@ -97,12 +117,12 @@ export const useUnifiedLogsPreview = () => {
 
 export const useIsBranching2Enabled = () => {
   const { flags } = useFeaturePreviewContext()
-  return flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_BRANCHING_2_0]
+  return Boolean(flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_BRANCHING_2_0] ?? false)
 }
 
 export const useIsAdvisorRulesEnabled = () => {
   const { flags } = useFeaturePreviewContext()
-  return flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_ADVISOR_RULES]
+  return Boolean(flags[LOCAL_STORAGE_KEYS.UI_PREVIEW_ADVISOR_RULES] ?? false)
 }
 
 export const useFeaturePreviewModal = () => {
