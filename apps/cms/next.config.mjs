@@ -9,7 +9,7 @@ const webpack = require('webpack')
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
-const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
+const emptyModulePath = resolve(__dirname, 'empty-module.js')
 
 const redirects = async () => {
   const internetExplorerRedirect = {
@@ -55,10 +55,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
-  // Ensure payload packages are transpiled correctly
-  transpilePackages: ['payload', '@payloadcms/ui', '@payloadcms/next', '@payloadcms/richtext-lexical'],
   // Configure Sharp as an external package for server-side rendering
-  serverExternalPackages: ['sharp', 'pino', 'thread-stream'],
+  // Also externalize thread-stream to avoid Turbopack trying to trace worker_threads
+  serverExternalPackages: ['sharp', 'pino', 'thread-stream', '@esbuild/linux-x64', 'esbuild'],
   webpack: (config) => {
     // Replace test files with empty module to prevent bundling errors
     config.plugins.push(
@@ -125,6 +124,74 @@ const nextConfig = {
     // Enable faster refresh
     optimizeCss: true,
   },
+    resolveAlias: {
+      // Alias test files to empty module to prevent Turbopack from processing them
+      'thread-stream/test': './webpack-loaders/empty-module.js',
+      'thread-stream/test/**': './webpack-loaders/empty-module.js',
+      'thread-stream/**/test/**': './webpack-loaders/empty-module.js',
+      // Alias esbuild binary to empty module to prevent Turbopack from processing it
+      '@esbuild/linux-x64/bin/esbuild': './webpack-loaders/empty-module.js',
+      '@esbuild/linux-x64/bin/esbuild.js': './webpack-loaders/empty-module.js',
+      // Exclude worker_threads from Turbopack processing (built-in Node.js module)
+      'worker_threads': './webpack-loaders/empty-module.js',
+    },
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+      // Exclude test files from being processed by Turbopack
+      '**/test/**': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/*.test.*': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/*.spec.*': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Handle non-source files
+      '**/README.*': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/LICENSE*': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Exclude binary files
+      '**/bin/**': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Exclude esbuild binary files - use resolveAlias instead of loaders
+      '**/@esbuild/**/bin/esbuild': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/@esbuild/**/bin/esbuild.js': {
+        loaders: [],
+        as: '*.js',
+      },
+      // Exclude non-JS files that shouldn't be processed
+      '**/*.zip': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/*.sh': {
+        loaders: [],
+        as: '*.js',
+      },
+      '**/*.yml': {
+        loaders: [],
+        as: '*.js',
+      },
+    },
+  },
+>>>>>>> e96dd94191 (Update dependencies in pnpm-lock.yaml and enhance Next.js configuration)
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
