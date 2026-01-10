@@ -89,6 +89,12 @@ export async function getAllTroubleshootingErrors() {
 }
 
 async function getTroubleshootingUpdatedDatesInternal() {
+  // Skip Supabase query if credentials are not available during build
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    console.warn('Supabase credentials not available, skipping troubleshooting updated dates fetch')
+    return new Map<string, Date>()
+  }
+
   const databaseIds = (await getAllTroubleshootingEntries())
     .map((entry) => entry.data.database_id)
     .filter((id) => !id.startsWith('pseudo-'))

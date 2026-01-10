@@ -80,14 +80,28 @@ export type Database = {
   storage: DatabaseGenerated['storage']
 }
 
-let _supabase: SupabaseClient<Database>
+let _supabase: SupabaseClient<Database> | null = null
 
 export function supabase() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+  // During build, if Supabase credentials are not available, return a mock client
+  // This prevents build failures when environment variables aren't set
+  if (!supabaseUrl || !supabaseAnonKey) {
+    if (!_supabase) {
+      // Create a mock client that will fail gracefully when used
+      console.warn('Supabase environment variables not set, creating mock client')
+      _supabase = createClient(
+        'https://placeholder.supabase.co',
+        'placeholder-anon-key'
+      ) as SupabaseClient<Database>
+    }
+    return _supabase
+  }
+
   if (!_supabase) {
-    _supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
+    _supabase = createClient(supabaseUrl, supabaseAnonKey)
   }
 
   return _supabase

@@ -24,7 +24,9 @@ export default async function TroubleshootingPage({ entry }: { entry: ITroublesh
           <h1>{entry.data.title}</h1>
           {dateUpdated && (
             <p className="text-sm text-foreground-lighter">
-              Last edited: {dateUpdated.toLocaleDateString()}
+              Last edited: {typeof dateUpdated === 'object' && dateUpdated instanceof Date
+                ? dateUpdated.toLocaleDateString()
+                : String(dateUpdated)}
             </p>
           )}
           <hr className="my-7" aria-hidden />

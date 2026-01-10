@@ -74,6 +74,12 @@ const tagQuery = `
   `
 
 async function getLatestRelease(after: string | null = null) {
+  // Skip if GitHub credentials are not available during build
+  if (!process.env.DOCS_GITHUB_APP_PRIVATE_KEY) {
+    console.warn('GitHub credentials not available, skipping federated pages fetch')
+    return null
+  }
+
   try {
     const {
       repository: {
@@ -82,7 +88,7 @@ async function getLatestRelease(after: string | null = null) {
           pageInfo: { hasNextPage, endCursor },
         },
       },
-    } = await octokit().graphql<TagQueryResponse>(tagQuery, {
+    } = await (await octokit()).graphql<TagQueryResponse>(tagQuery, {
       owner: org,
       name: repo,
       after,
@@ -355,7 +361,10 @@ const getContent = async (params: Params) => {
 
     const tag = await getLatestRelease()
     if (!tag) {
-      throw new Error('No latest release found for federated wrappers pages')
+      // If no tag is found, skip federated pages during build
+      // This can happen if GitHub API is unavailable or repo structure changed
+      console.warn('No latest release found for federated wrappers pages, skipping external content fetch')
+      throw new Error(`Failed to fetch federated page: ${federatedPage.slug}`)
     }
 
     const repoPath = `${org}/${repo}/${tag}/${docsDir}/${remoteFile}`
@@ -437,10 +446,16 @@ const generateStaticParams = async () => {
     return []
   }
 
+  // Only include federated paths if GitHub credentials are available
+  // Otherwise skip them to avoid build failures
+  const includeFederatedPages = !!process.env.DOCS_GITHUB_APP_PRIVATE_KEY
+
   const mdxPaths = await genGuidesStaticParams('database/extensions/wrappers')()
-  const federatedPaths = pageMap.map(({ slug }) => ({
-    slug: [slug],
-  }))
+  const federatedPaths = includeFederatedPages
+    ? pageMap.map(({ slug }) => ({
+        slug: [slug],
+      }))
+    : []
 
   return [...mdxPaths, ...federatedPaths]
 }

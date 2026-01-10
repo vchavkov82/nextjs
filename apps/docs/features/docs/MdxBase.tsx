@@ -41,6 +41,9 @@ const MDXRemoteBase = async ({
     
     const preprocessedSource = await preprocess(source)
     const resolvedSource = resolveFeatureFlags(preprocessedSource)
+    
+    // Note: StepHikeCompact component property access transformation is now handled
+    // in the preprocessing step (see preprocessMdx in features/directives/utils.ts)
 
     // Strip frontmatter manually to avoid getData error in next-mdx-remote v5.0.0
     // Even with parseFrontmatter: false, compileMDX may still try to access getData

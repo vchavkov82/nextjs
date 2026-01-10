@@ -1,4 +1,5 @@
 import { ArrowDown, Check, X } from 'lucide-react'
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Badge, Button, Image } from 'ui'
 import { Admonition, type AdmonitionProps } from 'ui-patterns/admonition'
@@ -14,24 +15,10 @@ import { ShowUntil } from '~/features/ui/ShowUntil'
 import { TabPanel, Tabs } from '~/features/ui/Tabs'
 import { ErrorCodes } from '../ui/ErrorCodes'
 import { McpConfigPanel } from '../ui/McpConfigPanel'
-import StepHikeCompact from '~/components/StepHikeCompact'
-// These components already handle their own dynamic loading and are client components
-import { AppleSecretGenerator } from '~/components/AppleSecretGenerator'
-import { Extensions } from '~/components/Extensions'
-import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator'
-import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator'
-
-// Import components directly instead of using dynamic() for MDX
-import { AiPromptsIndex } from '~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'
-import AuthProviders from '~/components/AuthProviders'
-import ButtonCard from '~/components/ButtonCard'
-import { MetricsStackCards } from '~/components/MetricsStackCards'
-import { NavData } from '~/components/NavData'
-import { Price } from '~/components/Price'
-import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
-import { RegionsList, SmartRegionsList } from '~/components/RegionsList'
-import { SharedData } from '~/components/SharedData'
-import { CodeSampleDummy, CodeSampleWrapper } from '~/features/directives/CodeSample.client'
+import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeCompact'
+// StepHikeCompact and its sub-components are statically imported
+// We transform <StepHikeCompact.Step> to <StepHikeCompactStep> in preprocessing,
+// so we provide flat component names: StepHikeCompactStep, StepHikeCompactDetails, StepHikeCompactCode
 
 // Dynamic imports for heavy components
 const AiPromptsIndex = dynamic(() => import('~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'), {
@@ -61,12 +48,12 @@ const MetricsStackCards = dynamic(() => import('~/components/MetricsStackCards')
 const NavData = dynamic(() => import('~/components/NavData'), {
   loading: () => <div>Loading...</div>
 })
-const Price = dynamic(() => import('~/components/Price'), {
+const Price = dynamic(() => import('~/components/Price').then(mod => ({ default: mod.Price })), {
   loading: () => <div>Loading...</div>
 })
-const ProjectConfigVariables = dynamic(() => import('~/components/ProjectConfigVariables'), {
-  loading: () => <div>Loading...</div>
-})
+// ProjectConfigVariables must be statically imported to avoid serialization issues
+// with withErrorBoundary HOC when dynamically imported
+import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
 const RealtimeLimitsEstimator = dynamic(() => import('~/components/RealtimeLimitsEstimator'), {
   loading: () => <div>Loading...</div>
 })
@@ -79,9 +66,7 @@ const SmartRegionsList = dynamic(() => import('~/components/RegionsList').then(m
 const SharedData = dynamic(() => import('~/components/SharedData'), {
   loading: () => <div>Loading...</div>
 })
-const StepHikeCompact = dynamic(() => import('~/components/StepHikeCompact'), {
-  loading: () => <div>Loading...</div>
-})
+// StepHikeCompact is imported statically above to preserve sub-components (Step, Details, Code)
 const CodeSampleDummy = dynamic(() => import('~/features/directives/CodeSample.client').then(mod => ({ default: mod.CodeSampleDummy })), {
   loading: () => <div>Loading...</div>
 })
@@ -114,7 +99,7 @@ const components = {
   IconPanel,
   IconX: X,
   Image: (props: any) => <Image fill alt="" className="object-contain" {...props} />,
-  isFeatureEnabled,
+  // isFeatureEnabled is handled in preprocessing, not provided as a component
   JwtGenerator,
   JwtGeneratorSimple,
   Link,
@@ -129,7 +114,13 @@ const components = {
   SharedData,
   ShowUntil,
   SqlToRest,
-  StepHikeCompact,
+  // StepHikeCompact and its sub-components are provided as flat component names
+  // We transform <StepHikeCompact.Step> to <StepHikeCompactStep> in preprocessing (see MdxBase.tsx)
+  // so we provide these flat names here
+  StepHikeCompact: StepHikeCompactBase,
+  StepHikeCompactStep: Step,
+  StepHikeCompactDetails: Details,
+  StepHikeCompactCode: Code,
   Tabs,
   TabPanel,
   InfoTooltip,

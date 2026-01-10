@@ -16,8 +16,10 @@ interface TocItem extends HTMLAttributes<HTMLElement> {
 export function ContributingToc({ className }: { className?: string }) {
   const mobileToc = useBreakpoint('lg')
   const [tocItems, setTocItems] = useState<Array<TocItem>>([])
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const headings = [
       ...document.querySelectorAll('article.prose > h2,h3:not(#feedback-title)'),
     ] as Array<HTMLHeadingElement>
@@ -29,6 +31,17 @@ export function ContributingToc({ className }: { className?: string }) {
       }))
     setTocItems(tocItems)
   }, [])
+
+  // Return null during SSR/build to avoid serialization issues
+  if (!mounted) {
+    return (
+      <nav aria-label="Table of contents" className={cn('text-foreground-lighter', className)}>
+        <span className="hidden lg:block font-mono text-xs uppercase text-foreground px-5 mb-6">
+          On this page
+        </span>
+      </nav>
+    )
+  }
 
   return mobileToc ? (
     <MobileToc items={tocItems} />

@@ -115,24 +115,43 @@ const getGuidesMarkdown = cache_fullProcess_withDevCacheBust(
 
 const genGuidesStaticParams = (directory?: string) => async () => {
   const promises = directory
-    ? (await readdir(join(GUIDES_DIRECTORY, directory), { recursive: true }))
-      .filter((file) => extname(file) === '.mdx' && !file.split(sep).at(-1)?.startsWith('_'))
-      .map((file) => ({ slug: file.replace(/\.mdx$/, '').split(sep) }))
-      .concat(
-        (await existsFile(join(GUIDES_DIRECTORY, `${directory}.mdx`))) ? [{ slug: [] }] : []
-      )
-    : PUBLISHED_SECTIONS.map(async (section) =>
-      (await readdir(join(GUIDES_DIRECTORY, section), { recursive: true }))
-        .filter((file) => extname(file) === '.mdx' && !file.split(sep).at(-1)?.startsWith('_'))
-        .map((file) => ({
-          slug: [section, ...file.replace(/\.mdx$/, '').split(sep)],
-        }))
-        .concat(
-          (await existsFile(join(GUIDES_DIRECTORY, `${section}.mdx`)))
-            ? [{ slug: [section] }]
-            : []
-        )
-    )
+    ? [
+        (async () => {
+          const dirPath = join(GUIDES_DIRECTORY, directory)
+          try {
+            const files = await readdir(dirPath, { recursive: true })
+            return files
+              .filter((file) => extname(file) === '.mdx' && !file.split(sep).at(-1)?.startsWith('_'))
+              .map((file) => ({ slug: file.replace(/\.mdx$/, '').split(sep) }))
+              .concat(
+                (await existsFile(join(GUIDES_DIRECTORY, `${directory}.mdx`))) ? [{ slug: [] }] : []
+              )
+          } catch (error) {
+            // Directory doesn't exist, return empty array
+            console.warn(`Directory ${dirPath} does not exist, skipping static params generation`)
+            return []
+          }
+        })(),
+      ]
+    : PUBLISHED_SECTIONS.map(async (section) => {
+        try {
+          const files = await readdir(join(GUIDES_DIRECTORY, section), { recursive: true })
+          return files
+            .filter((file) => extname(file) === '.mdx' && !file.split(sep).at(-1)?.startsWith('_'))
+            .map((file) => ({
+              slug: [section, ...file.replace(/\.mdx$/, '').split(sep)],
+            }))
+            .concat(
+              (await existsFile(join(GUIDES_DIRECTORY, `${section}.mdx`)))
+                ? [{ slug: [section] }]
+                : []
+            )
+        } catch (error) {
+          // Directory doesn't exist, return empty array
+          console.warn(`Directory ${join(GUIDES_DIRECTORY, section)} does not exist, skipping static params generation`)
+          return []
+        }
+      })
 
   // Flattening earlier will not work because there is nothing to flatten
   // until the promises resolve.

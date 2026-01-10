@@ -1,3 +1,5 @@
+'use client'
+
 interface PriceProps {
   price: string
 }

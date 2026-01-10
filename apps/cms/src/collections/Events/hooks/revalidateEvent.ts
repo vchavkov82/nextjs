@@ -1,6 +1,5 @@
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
-
-// Avoid importing next/cache at module scope so migrations can run in a plain Node env
+import { revalidatePath, revalidateTag } from 'next/cache'
 
 import type { Event } from '../../../payload-types'
 
@@ -15,10 +14,8 @@ export const revalidateEvent: CollectionAfterChangeHook<Event> = async ({
 
       payload.logger.info(`Revalidating event at path: ${path}`)
       try {
-        const { revalidatePath, revalidateTag } = await import('next/cache')
-        await revalidatePath(path)
-        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-        await revalidateTag('events-sitemap')
+        await revalidatePath(path, 'page')
+        revalidateTag('events-sitemap', {})
       } catch {}
     }
 
@@ -29,10 +26,8 @@ export const revalidateEvent: CollectionAfterChangeHook<Event> = async ({
       payload.logger.info(`Revalidating old event at path: ${oldPath}`)
 
       try {
-        const { revalidatePath, revalidateTag } = await import('next/cache')
-        await revalidatePath(oldPath)
-        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-        await revalidateTag('events-sitemap')
+        await revalidatePath(oldPath, 'page')
+        revalidateTag('events-sitemap', {})
       } catch {}
     }
   }
@@ -46,10 +41,8 @@ export const revalidateDelete: CollectionAfterDeleteHook<Event> = async ({
   if (!context.disableRevalidate) {
     const path = `/events/${doc?.slug}`
     try {
-      const { revalidatePath, revalidateTag } = await import('next/cache')
-      await revalidatePath(path)
-      // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-      await revalidateTag('events-sitemap')
+      await revalidatePath(path, 'page')
+      revalidateTag('events-sitemap', {})
     } catch {}
   }
 

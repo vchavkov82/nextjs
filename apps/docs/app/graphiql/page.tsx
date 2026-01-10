@@ -9,7 +9,8 @@ const LazyGraphiQL = dynamic(
   async () => {
     const { GraphiQL: GraphiQLPrimitive } = await import('graphiql')
     const { createGraphiQLFetcher } = await import('@graphiql/toolkit')
-    await import('graphiql/style.css')
+    // CSS is bundled with graphiql v4, no need to import separately
+    // await import('graphiql/graphiql.css')
 
     return function GraphiQL(props: Omit<ComponentProps<typeof GraphiQLPrimitive>, 'fetcher'>) {
       const fetcher = createGraphiQLFetcher({

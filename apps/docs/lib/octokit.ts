@@ -1,26 +1,30 @@
 import 'server-only'
 import type { Octokit } from '@octokit/core'
 
-import { createRequire } from 'node:module'
-
-const require = createRequire(import.meta.url)
-
 import { fetchRevalidatePerDay } from '~/features/helpers.fetch'
 
-let octokitInstance: Octokit
+let octokitInstance: Octokit | null = null
+let octokitPromise: Promise<Octokit> | null = null
 
-export function octokit(): Octokit {
-  if (!octokitInstance) {
-    // Use eval('require') to hide these from Turbopack's static analysis
-    // as they trigger warnings about node:crypto re-exports in their dependencies.
-    const { createAppAuth } = eval('require')('@octokit/auth-app')
-    const { Octokit: OctokitClass } = eval('require')('@octokit/core')
-    const crypto = eval('require')('node:crypto')
+export async function octokit(): Promise<Octokit> {
+  if (octokitInstance) {
+    return octokitInstance
+  }
 
+  if (octokitPromise) {
+    return octokitPromise
+  }
+
+  octokitPromise = (async () => {
     const privateKey = process.env.DOCS_GITHUB_APP_PRIVATE_KEY
     if (!privateKey) {
-      throw new Error('DOCS_GITHUB_APP_PRIVATE_KEY environment variable is required')
+      throw new Error('DOCS_GITHUB_APP_PRIVATE_KEY environment variable is required for octokit')
     }
+
+    // Use dynamic imports for ESM packages (@octokit/core and @octokit/auth-app are ESM-only)
+    const { createAppAuth } = await import('@octokit/auth-app')
+    const { Octokit: OctokitClass } = await import('@octokit/core')
+    const crypto = await import('node:crypto')
 
     // https://github.com/gr2m/universal-github-app-jwt?tab=readme-ov-file#converting-pkcs1-to-pkcs8
     const privateKeyPkcs8 = crypto.createPrivateKey(privateKey).export({
@@ -35,10 +39,12 @@ export function octokit(): Octokit {
         installationId: process.env.DOCS_GITHUB_APP_INSTALLATION_ID,
         privateKey: privateKeyPkcs8,
       },
-    })
-  }
+    }) as Octokit
 
-  return octokitInstance
+    return octokitInstance
+  })()
+
+  return octokitPromise
 }
 
 async function getGitHubFileContents({
@@ -68,7 +74,7 @@ async function getGitHubFileContents({
   }
 
   try {
-    const response = await octokit().request('GET /repos/{owner}/{repo}/contents/{path}', {
+    const response = await (await octokit()).request('GET /repos/{owner}/{repo}/contents/{path}', {
       owner: org,
       repo: repo,
       path: path,
@@ -145,7 +151,7 @@ async function checkForImmutableCommit({
   }
 }) {
   try {
-    const response = await octokit().request('GET /repos/{owner}/{repo}/git/commits/{commit_sha}', {
+    const response = await (await octokit()).request('GET /repos/{owner}/{repo}/git/commits/{commit_sha}', {
       owner: org,
       repo: repo,
       commit_sha: branch,

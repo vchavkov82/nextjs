@@ -30,7 +30,8 @@ export default async function ContributingPage() {
             <MDXRemoteBase source={content} />
           </article>
         </div>
-        <ContributingToc />
+        {/* Temporarily commented out to test if this is the issue */}
+        {/* <ContributingToc /> */}
       </LayoutMainContent>
     </SidebarSkeleton>
   )

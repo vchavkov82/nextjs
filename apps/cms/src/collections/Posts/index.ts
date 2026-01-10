@@ -282,6 +282,7 @@ export const Posts: CollectionConfig = {
       // schedulePublish: true,
     },
     maxPerDoc: 50,
+    // Note: access control for versions is handled at the collection level
   },
 }
 

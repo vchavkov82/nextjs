@@ -1,6 +1,5 @@
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
-
-// Avoid importing next/cache at module scope so migrations can run in a plain Node env
+import { revalidatePath, revalidateTag } from 'next/cache'
 
 import type { Customer } from '../../../payload-types'
 
@@ -15,10 +14,8 @@ export const revalidateCustomer: CollectionAfterChangeHook<Customer> = async ({
 
       payload.logger.info(`Revalidating event at path: ${path}`)
       try {
-        const { revalidatePath, revalidateTag } = await import('next/cache')
-        await revalidatePath(path)
-        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-        await revalidateTag('customers-sitemap')
+        await revalidatePath(path, 'page')
+        revalidateTag('customers-sitemap', {})
       } catch {
         // no-op when not running inside Next runtime (e.g., during payload migrate)
       }
@@ -31,10 +28,8 @@ export const revalidateCustomer: CollectionAfterChangeHook<Customer> = async ({
       payload.logger.info(`Revalidating old event at path: ${oldPath}`)
 
       try {
-        const { revalidatePath, revalidateTag } = await import('next/cache')
-        await revalidatePath(oldPath)
-        // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-        await revalidateTag('customers-sitemap')
+        await revalidatePath(oldPath, 'page')
+        revalidateTag('customers-sitemap', {})
       } catch {}
     }
   }
@@ -48,10 +43,8 @@ export const revalidateDelete: CollectionAfterDeleteHook<Customer> = async ({
   if (!context.disableRevalidate) {
     const path = `/customers/${doc?.slug}`
     try {
-      const { revalidatePath, revalidateTag } = await import('next/cache')
-      await revalidatePath(path)
-      // @ts-expect-error - revalidateTag types are incorrect when dynamically imported
-      await revalidateTag('customers-sitemap')
+      await revalidatePath(path, 'page')
+      revalidateTag('customers-sitemap', {})
     } catch {}
   }
 
