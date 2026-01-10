@@ -1927,11 +1927,7 @@ Absolutely. The SQL Editor includes syntax highlighting to improve code readabil
 
 ### Is the editor accessible via the BA CLI?
 
-<<<<<<< HEAD
-Yes, the editor is available locally through [Supabase CLI](/features/cli).
-=======
 While the editor is primarily a web-based tool within BA Studio, you can execute SQL queries using the [BA CLI](/features/cli) by utilizing the supabase db query command. This allows for integration into scripts and automation workflows.
->>>>>>> a500a04fd1 (Replace Supabase with BA)
 `,
     icon: FileCode2,
     products: [ADDITIONAL_PRODUCTS.STUDIO],

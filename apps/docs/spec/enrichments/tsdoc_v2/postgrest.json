@@ -26997,11 +26997,7 @@
   "readme": [
     {
       "kind": "text",
-<<<<<<< HEAD
       "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"Supabase Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">Supabase PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
-=======
-      "text": "<br />\n<p align=\"center\">\n  <a href=\"https://supabase.io\">\n        <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--dark.svg\">\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/supabase-logo-wordmark--light.svg\">\n      <img alt=\"BA Logo\" width=\"300\" src=\"https://raw.githubusercontent.com/supabase/supabase/master/packages/common/assets/images/logo-preview.jpg\">\n    </picture>\n  </a>\n\n  <h1 align=\"center\">BA PostgREST JS SDK</h1>\n\n  <h3 align=\"center\">Isomorphic JavaScript SDK for <a href=\"https://postgrest.org\">PostgREST</a> with an ORM-like interface.</h3>\n\n  <p align=\"center\">\n    <a href=\"https://www.assistance.bg/docs/guides/database\">Guides</a>\n    ·\n    <a href=\"https://www.assistance.bg/docs/reference/javascript/select\">Reference Docs</a>\n    ·\n    <a href=\"https://supabase.github.io/supabase-js/postgrest-js/v2/spec.json\">TypeDoc</a>\n  </p>\n</p>\n\n<div align=\"center\">\n\n[![Build](https://github.com/vchavkov82/nextjs-js/workflows/CI/badge.svg)](https://github.com/vchavkov82/nextjs-js/actions?query=branch%3Amaster)\n[![Package](https://img.shields.io/npm/v/@supabase/postgrest-js)](https://www.npmjs.com/package/@supabase/postgrest-js)\n[![License: MIT](https://img.shields.io/npm/l/@supabase/supabase-js)](#license)\n[![pkg.pr.new](https://pkg.pr.new/badge/supabase/postgrest-js)](https://pkg.pr.new/~/supabase/postgrest-js)\n\n</div>\n\n### Quick start\n\nInstall\n\n"
->>>>>>> a500a04fd1 (Replace Supabase with BA)
     },
     {
       "kind": "code",
@@ -27129,7 +27125,6 @@
     },
     {
       "kind": "text",
-<<<<<<< HEAD
       "text": ".\n\n#### Test Types Explained\n\n- **Unit Tests** - Jest tests covering all client functionality ("
     },
     {
@@ -27187,9 +27182,6 @@
     {
       "kind": "text",
       "text": "\n\n**Note:** These v12 tests will be removed when v3 ships (sometime in 2026).\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
-=======
-      "text": "\n- **Generated Types Test** - Ensures generated types match database schema\n- **Unit Tests** - Jest tests covering all client functionality\n- **Smoke Tests** - Basic import/require tests for CommonJS and ESM\n\n#### Prerequisites\n\n- **Docker** must be installed and running\n- **Port 3000** - PostgREST server (API)\n- **Port 8080** - Database schema endpoint (for type generation)\n\n**Note:** Unlike a full BA instance, this uses a minimal PostgREST setup specifically for testing the SDK.\n\n### Contributing\n\nWe welcome contributions! Please see our [Contributing Guide]("
->>>>>>> a500a04fd1 (Replace Supabase with BA)
     },
     {
       "kind": "relative-link",

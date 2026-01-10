@@ -1,11 +1,6 @@
 // Default supabase JWT verification
-<<<<<<< HEAD
-// Use this template to validate tokens issued by Supabase default auth
-import * as jose from "jsr:@panva/jose@6";
-=======
 // Use this template to validate tokens issued by BA default auth
-import * as jose from "https://deno.land/x/jose@v4.14.4/index.ts";
->>>>>>> a500a04fd1 (Replace Supabase with BA)
+import * as jose from "jsr:@panva/jose@6";
 
 const SUPABASE_JWT_ISSUER = Deno.env.get("SB_JWT_ISSUER") ??
   Deno.env.get("SUPABASE_URL") + "/auth/v1";

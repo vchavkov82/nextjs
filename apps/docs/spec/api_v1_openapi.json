@@ -50,24 +50,9 @@
           }
         ],
         "summary": "Get database branch config",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "patch": {
@@ -128,24 +113,9 @@
           }
         ],
         "summary": "Update database branch config",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       },
       "delete": {
@@ -206,24 +176,9 @@
           }
         ],
         "summary": "Delete a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -286,24 +241,9 @@
           }
         ],
         "summary": "Pushes a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -366,24 +306,9 @@
           }
         ],
         "summary": "Merges a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -446,24 +371,9 @@
           }
         ],
         "summary": "Resets a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -516,24 +426,9 @@
           }
         ],
         "summary": "Restore a scheduled branch deletion",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -594,24 +489,9 @@
           }
         ],
         "summary": "[Beta] Diffs a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -646,24 +526,9 @@
           }
         ],
         "summary": "List all projects",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "post": {
@@ -691,37 +556,11 @@
             }
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organization_projects_create"] }],
         "summary": "Create a project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "project_admin_write"
-            ]
-          }
-        ],
-        "summary": "Create a project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -802,32 +641,12 @@
             }
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }],
         "summary": "[Beta] Gets the list of available regions that can be used for a new project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: organizations:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
         "x-oauth-scope": "organizations:read"
-=======
-        "security": [
-          {
-            "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "available_regions_read"
-            ]
-          }
-        ],
-        "summary": "[Beta] Gets the list of available regions that can be used for a new project",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/organizations": {
@@ -864,24 +683,9 @@
           }
         ],
         "summary": "List all organizations",
-<<<<<<< HEAD
         "tags": ["Organizations"],
         "x-badges": [{ "name": "OAuth scope: organizations:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Organizations"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: organizations:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       },
       "post": {
@@ -912,30 +716,10 @@
             "description": "Unexpected error creating an organization"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organizations_create"] }],
         "summary": "Create an organization",
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api", "billing"]
-=======
-        "security": [
-          {
-            "bearer": []
-          },
-          {
-            "fga_permissions": [
-              "organizations_write"
-            ]
-          }
-        ],
-        "summary": "Create an organization",
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/authorize": {
@@ -1051,17 +835,8 @@
           }
         ],
         "summary": "[Beta] Authorize user through oauth",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/token": {
@@ -1098,17 +873,8 @@
           }
         ],
         "summary": "[Beta] Exchange auth code for user's access and refresh token",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/revoke": {
@@ -1138,17 +904,8 @@
           }
         ],
         "summary": "[Beta] Revoke oauth app authorization and it's corresponding tokens",
-<<<<<<< HEAD
         "tags": ["OAuth"],
         "x-endpoint-owners": ["auth", "management-api"]
-=======
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/oauth/authorize/project-claim": {
@@ -1246,7 +1003,6 @@
             "bearer": []
           }
         ],
-<<<<<<< HEAD
         "responses": { "204": { "description": "" } },
         "security": [
           { "bearer": [] },
@@ -1255,15 +1011,6 @@
         "summary": "Authorize user through oauth and claim a project",
         "tags": ["OAuth"],
         "x-endpoint-owners": ["management-api"]
-=======
-        "summary": "Authorize user through oauth and claim a project",
-        "tags": [
-          "OAuth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/snippets": {
@@ -1351,24 +1098,9 @@
           }
         ],
         "summary": "Lists SQL snippets for the logged in user",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -1412,24 +1144,9 @@
           }
         ],
         "summary": "Gets a specific SQL snippet",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -1499,24 +1216,9 @@
           }
         ],
         "summary": "List all action runs",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "head": {
@@ -1638,24 +1340,9 @@
           }
         ],
         "summary": "Get the status of an action run",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -1726,24 +1413,9 @@
           }
         ],
         "summary": "Update the status of an action run",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -1804,24 +1476,9 @@
           }
         ],
         "summary": "Get the logs of an action run",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -1875,32 +1532,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_read"] }],
         "summary": "Get project api keys",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Get project api keys",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "post": {
@@ -1959,32 +1595,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_write"] }],
         "summary": "Creates a new API key for the project",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Creates a new API key for the project",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -2026,32 +1641,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_read"] }],
         "summary": "Check whether JWT based legacy (anon, service_role) API keys are enabled. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Check whether JWT based legacy (anon, service_role) API keys are enabled. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "put": {
@@ -2100,32 +1694,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_write"] }],
         "summary": "Disable or re-enable JWT based legacy (anon, service_role) API keys. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Disable or re-enable JWT based legacy (anon, service_role) API keys. This API endpoint will be removed in the future, check for HTTP 404 Not Found.",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -2195,32 +1768,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_write"] }],
         "summary": "Updates an API key for the project",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Updates an API key for the project",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -2278,32 +1830,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_read"] }],
         "summary": "Get API key",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Get API key",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "delete": {
@@ -2378,32 +1909,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["api_gateway_keys_write"] }],
         "summary": "Deletes an API key for the project",
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Deletes an API key for the project",
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -2458,24 +1968,9 @@
           }
         ],
         "summary": "List all database branches",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       },
       "post": {
@@ -2535,24 +2030,9 @@
           }
         ],
         "summary": "Create a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       },
       "delete": {
@@ -2595,24 +2075,9 @@
           }
         ],
         "summary": "Disables preview branching",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:write"
       }
     },
@@ -2672,24 +2137,9 @@
           }
         ],
         "summary": "Get a database branch",
-<<<<<<< HEAD
         "tags": ["Environments"],
         "x-badges": [{ "name": "OAuth scope: environment:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Environments"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: environment:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "environment:read"
       }
     },
@@ -2740,24 +2190,9 @@
           }
         ],
         "summary": "[Beta] Gets project's custom hostname config",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:read"
       },
       "delete": {
@@ -2799,24 +2234,9 @@
           }
         ],
         "summary": "[Beta] Deletes a project's custom hostname configuration",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -2877,24 +2297,9 @@
           }
         ],
         "summary": "[Beta] Updates project's custom hostname configuration",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -2945,24 +2350,9 @@
           }
         ],
         "summary": "[Beta] Attempts to verify the DNS configuration for project's custom hostname configuration",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -3013,24 +2403,9 @@
           }
         ],
         "summary": "[Beta] Activates a custom hostname for a project.",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -3075,32 +2450,11 @@
             "description": "Failed to retrieve project's network bans"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["database_network_bans_read"] }],
         "summary": "[Beta] Gets project's network bans",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Gets project's network bans",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -3145,32 +2499,11 @@
             "description": "Failed to retrieve project's enriched network bans"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["database_network_bans_read"] }],
         "summary": "[Beta] Gets project's network bans with additional information about which databases they affect",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Gets project's network bans with additional information about which databases they affect",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -3218,32 +2551,11 @@
             "description": "Failed to remove network bans."
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["database_network_bans_write"] }],
         "summary": "[Beta] Remove network bans.",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Remove network bans.",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -3294,24 +2606,9 @@
           }
         ],
         "summary": "[Beta] Gets project's network restrictions",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "patch": {
@@ -3370,24 +2667,9 @@
           }
         ],
         "summary": "[Alpha] Updates project's network restrictions by adding or removing CIDRs",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -3448,24 +2730,9 @@
           }
         ],
         "summary": "[Beta] Updates project's network restrictions",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -3516,24 +2783,9 @@
           }
         ],
         "summary": "[Beta] Gets project's pgsodium config",
-<<<<<<< HEAD
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "put": {
@@ -3592,24 +2844,9 @@
           }
         ],
         "summary": "[Beta] Updates project's pgsodium config. Updating the root_key can cause all data encrypted with the older key to become inaccessible.",
-<<<<<<< HEAD
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -3660,24 +2897,9 @@
           }
         ],
         "summary": "Gets project's postgrest config",
-<<<<<<< HEAD
         "tags": ["Rest"],
         "x-badges": [{ "name": "OAuth scope: rest:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "tags": [
-          "Rest"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: rest:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "rest:read"
       },
       "patch": {
@@ -3736,24 +2958,9 @@
           }
         ],
         "summary": "Updates project's postgrest config",
-<<<<<<< HEAD
         "tags": ["Rest"],
         "x-badges": [{ "name": "OAuth scope: rest:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "tags": [
-          "Rest"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: rest:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "rest:write"
       }
     },
@@ -3798,32 +3005,11 @@
             "description": "Failed to retrieve project"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_read"] }],
         "summary": "Gets a specific project that belongs to the authenticated user",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Gets a specific project that belongs to the authenticated user",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "delete": {
@@ -3863,32 +3049,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_write"] }],
         "summary": "Deletes the given project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra", "dev-workflows"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Deletes the given project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       },
       "patch": {
@@ -3941,32 +3106,11 @@
             "description": "Failed to update project"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_write"] }],
         "summary": "Updates the given project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Updates the given project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -4021,24 +3165,9 @@
           }
         ],
         "summary": "List all secrets",
-<<<<<<< HEAD
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       },
       "post": {
@@ -4091,24 +3220,9 @@
           }
         ],
         "summary": "Bulk create secrets",
-<<<<<<< HEAD
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "delete": {
@@ -4161,24 +3275,9 @@
           }
         ],
         "summary": "Bulk delete secrets",
-<<<<<<< HEAD
         "tags": ["Secrets"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Secrets"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -4229,24 +3328,9 @@
           }
         ],
         "summary": "[Beta] Get project's SSL enforcement configuration.",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -4305,24 +3389,9 @@
           }
         ],
         "summary": "[Beta] Update project's SSL enforcement configuration.",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -4383,24 +3452,9 @@
           }
         ],
         "summary": "Generate TypeScript types",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -4451,24 +3505,9 @@
           }
         ],
         "summary": "[Beta] Gets current vanity subdomain config",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:read"
       },
       "delete": {
@@ -4510,24 +3549,9 @@
           }
         ],
         "summary": "[Beta] Deletes a project's vanity subdomain configuration",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -4588,24 +3612,9 @@
           }
         ],
         "summary": "[Beta] Checks vanity subdomain availability",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -4666,24 +3675,9 @@
           }
         ],
         "summary": "[Beta] Activates a vanity subdomain for a project.",
-<<<<<<< HEAD
         "tags": ["Domains"],
         "x-badges": [{ "name": "OAuth scope: domains:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Domains"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: domains:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "domains:write"
       }
     },
@@ -4739,7 +3733,6 @@
           }
         },
         "security": [
-<<<<<<< HEAD
           { "bearer": [] },
           { "fga_permissions": ["project_admin_write", "database_write"] }
         ],
@@ -4747,25 +3740,6 @@
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Upgrades the project's Postgres version",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -4811,7 +3785,6 @@
           }
         },
         "security": [
-<<<<<<< HEAD
           { "bearer": [] },
           { "fga_permissions": ["project_admin_read", "database_read"] }
         ],
@@ -4819,25 +3792,6 @@
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Returns the project's eligibility for upgrades",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -4891,7 +3845,6 @@
           }
         },
         "security": [
-<<<<<<< HEAD
           { "bearer": [] },
           { "fga_permissions": ["project_admin_read", "database_read"] }
         ],
@@ -4899,25 +3852,6 @@
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Gets the latest status of the project's upgrade",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -4962,32 +3896,11 @@
             "description": "Failed to get project readonly mode status"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["database_readonly_config_read"] }],
         "summary": "Returns project's readonly mode status",
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra", "support-tooling"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Returns project's readonly mode status",
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -5025,32 +3938,11 @@
             "description": "Failed to disable project's readonly mode"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["database_readonly_config_write"] }],
         "summary": "Disables project's readonly mode for the next 15 minutes",
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra", "support-tooling"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Disables project's readonly mode for the next 15 minutes",
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -5098,25 +3990,10 @@
             "description": "Failed to set up read replica"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["infra_read_replicas_write"] }],
         "summary": "[Beta] Set up a read replica",
         "tags": ["Database"],
         "x-endpoint-owners": ["management-api", "infra"]
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Set up a read replica",
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/read-replicas/remove": {
@@ -5163,25 +4040,10 @@
             "description": "Failed to remove read replica"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["infra_read_replicas_write"] }],
         "summary": "[Beta] Remove a read replica",
         "tags": ["Database"],
         "x-endpoint-owners": ["management-api", "infra"]
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "[Beta] Remove a read replica",
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/health": {
@@ -5265,24 +4127,9 @@
           }
         ],
         "summary": "Gets project's service health status",
-<<<<<<< HEAD
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -5330,24 +4177,9 @@
           }
         ],
         "summary": "Set up the project's existing JWT secret as an in_use JWT signing key. This endpoint will be removed in the future always check for HTTP 404 Not Found.",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -5393,24 +4225,9 @@
           }
         ],
         "summary": "Get the signing key information for the JWT secret imported as signing key for this project. This endpoint will be removed in the future, check for HTTP 404 Not Found.",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       }
     },
@@ -5468,24 +4285,9 @@
           }
         ],
         "summary": "Create a new signing key for the project in standby status",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "get": {
@@ -5531,24 +4333,9 @@
           }
         ],
         "summary": "List all signing keys for the project",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:read"
       }
     },
@@ -5605,17 +4392,8 @@
           }
         ],
         "summary": "Get information about a signing key",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-endpoint-owners": ["auth"]
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "delete": {
         "operationId": "v1-remove-project-signing-key",
@@ -5669,24 +4447,9 @@
           }
         ],
         "summary": "Remove a signing key from a project. Only possible if the key has been in revoked status for a while.",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       },
       "patch": {
@@ -5751,24 +4514,9 @@
           }
         ],
         "summary": "Update a signing key, mainly its status",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: secrets:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: secrets:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "secrets:write"
       }
     },
@@ -5819,17 +4567,8 @@
           }
         ],
         "summary": "Gets project's storage config",
-<<<<<<< HEAD
         "tags": ["Storage"],
         "x-endpoint-owners": ["storage"]
-=======
-        "tags": [
-          "Storage"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "operationId": "v1-update-storage-config",
@@ -5880,17 +4619,8 @@
           }
         ],
         "summary": "Updates project's storage config",
-<<<<<<< HEAD
         "tags": ["Storage"],
         "x-endpoint-owners": ["storage"]
-=======
-        "tags": [
-          "Storage"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/config/database/postgres": {
@@ -5940,24 +4670,9 @@
           }
         ],
         "summary": "Gets project's Postgres config",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -6016,24 +4731,9 @@
           }
         ],
         "summary": "Updates project's Postgres config",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -6079,24 +4779,9 @@
           }
         },
         "summary": "Get project's pgbouncer config",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -6150,24 +4835,9 @@
           }
         ],
         "summary": "Gets project's supavisor config",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "patch": {
@@ -6226,24 +4896,9 @@
           }
         ],
         "summary": "Updates project's supavisor config",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -6294,24 +4949,9 @@
           }
         ],
         "summary": "Gets project's auth config",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       },
       "patch": {
@@ -6370,24 +5010,9 @@
           }
         ],
         "summary": "Updates a project's auth config",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       }
     },
@@ -6435,17 +5060,8 @@
           }
         ],
         "summary": "Gets realtime configuration",
-<<<<<<< HEAD
         "tags": ["Realtime"],
         "x-endpoint-owners": ["realtime"]
-=======
-        "tags": [
-          "Realtime"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "operationId": "v1-update-realtime-config",
@@ -6493,17 +5109,8 @@
           }
         ],
         "summary": "Updates realtime configuration",
-<<<<<<< HEAD
         "tags": ["Realtime"],
         "x-endpoint-owners": ["realtime"]
-=======
-        "tags": [
-          "Realtime"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/config/auth/third-party-auth": {
@@ -6560,24 +5167,9 @@
           }
         ],
         "summary": "Creates a new third-party auth integration",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -6626,24 +5218,9 @@
           }
         ],
         "summary": "Lists all third-party auth integrations",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -6700,24 +5277,9 @@
           }
         ],
         "summary": "Removes a third-party auth integration",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -6772,24 +5334,9 @@
           }
         ],
         "summary": "Get a third-party integration",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -6824,32 +5371,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_write"] }],
         "summary": "Pauses the given project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["infra", "management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Pauses the given project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -6891,32 +5417,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_read"] }],
         "summary": "Lists available restore versions for the given project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Lists available restore versions for the given project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       },
       "post": {
@@ -6949,32 +5454,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_write"] }],
         "summary": "Restores the given project",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Restores the given project",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -7009,32 +5493,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_write"] }],
         "summary": "Cancels the given project restoration",
         "tags": ["Projects"],
         "x-badges": [{ "name": "OAuth scope: projects:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Cancels the given project restoration",
-        "tags": [
-          "Projects"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:write"
       }
     },
@@ -7086,17 +5549,8 @@
           }
         ],
         "summary": "List billing addons and compute instance selections",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       },
       "patch": {
         "description": "Selects an addon variant, for example scaling the project’s compute instance up or down, and applies it to the project.",
@@ -7148,17 +5602,8 @@
           }
         ],
         "summary": "Apply or update billing addons, including compute instance size",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/billing/addons/{addon_variant}": {
@@ -7254,17 +5699,8 @@
           }
         ],
         "summary": "Remove billing addons or revert compute instance sizing",
-<<<<<<< HEAD
         "tags": ["Billing"],
         "x-endpoint-owners": ["billing"]
-=======
-        "tags": [
-          "Billing"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/claim-token": {
@@ -7305,25 +5741,10 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["project_admin_read"] }],
         "summary": "Gets project claim token",
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Gets project claim token",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "post": {
@@ -7364,26 +5785,12 @@
           }
         },
         "security": [
-<<<<<<< HEAD
           { "bearer": [] },
           { "fga_permissions": ["organization_admin_write", "project_admin_write"] }
         ],
         "summary": "Creates project claim token",
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Creates project claim token",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "delete": {
@@ -7417,26 +5824,12 @@
           }
         },
         "security": [
-<<<<<<< HEAD
           { "bearer": [] },
           { "fga_permissions": ["organization_admin_write", "project_admin_write"] }
         ],
         "summary": "Revokes project claim token",
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"],
-=======
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Revokes project claim token",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       }
     },
@@ -7486,24 +5879,9 @@
           }
         ],
         "summary": "Gets project performance advisors.",
-<<<<<<< HEAD
         "tags": ["Advisors"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Advisors"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -7564,24 +5942,9 @@
           }
         ],
         "summary": "Gets project security advisors.",
-<<<<<<< HEAD
         "tags": ["Advisors"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Advisors"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -7657,24 +6020,9 @@
           }
         ],
         "summary": "Gets project's logs",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-badges": [{ "name": "OAuth scope: analytics:read", "position": "after" }],
         "x-endpoint-owners": ["analytics"],
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: analytics:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "analytics:read"
       }
     },
@@ -7742,17 +6090,8 @@
           }
         ],
         "summary": "Gets project's usage api counts",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/analytics/endpoints/usage.api-requests-count": {
@@ -7802,17 +6141,8 @@
           }
         ],
         "summary": "Gets project's usage api requests count",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/analytics/endpoints/functions.combined-stats": {
@@ -7884,17 +6214,8 @@
           }
         ],
         "summary": "Gets a project's function combined statistics",
-<<<<<<< HEAD
         "tags": ["Analytics"],
         "x-endpoint-owners": ["analytics"]
-=======
-        "tags": [
-          "Analytics"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/cli/login-role": {
@@ -7954,24 +6275,9 @@
           }
         ],
         "summary": "[Beta] Create a login role for CLI with temporary password",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "delete": {
@@ -8020,24 +6326,9 @@
           }
         ],
         "summary": "[Beta] Delete existing login roles used by CLI",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["dev-workflows"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8089,24 +6380,9 @@
           }
         ],
         "summary": "[Beta] List applied migration versions",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "post": {
@@ -8168,24 +6444,9 @@
           }
         ],
         "summary": "[Beta] Apply a database migration",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "put": {
@@ -8247,24 +6508,9 @@
           }
         ],
         "summary": "[Beta] Upsert a database migration without applying",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       },
       "delete": {
@@ -8317,24 +6563,9 @@
           }
         ],
         "summary": "[Beta] Rollback database migrations and remove them from history table",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8395,24 +6626,9 @@
           }
         ],
         "summary": "[Beta] Fetch an existing entry from migration history",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "patch": {
@@ -8474,24 +6690,9 @@
           }
         ],
         "summary": "[Beta] Patch an existing entry in migration history",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8545,24 +6746,9 @@
           }
         ],
         "summary": "[Beta] Run sql query",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8617,24 +6803,9 @@
           }
         ],
         "summary": "[Beta] Run a sql query as supabase_read_only_user",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -8678,24 +6849,9 @@
           }
         ],
         "summary": "[Beta] Enables Database Webhooks on the project",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8745,24 +6901,9 @@
           }
         ],
         "summary": "Gets database metadata for the given project.",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: projects:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: projects:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "projects:read"
       }
     },
@@ -8823,24 +6964,9 @@
           }
         ],
         "summary": "Updates the database password",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["management-api", "infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -8892,24 +7018,9 @@
           }
         ],
         "summary": "Get user-id to role mappings for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["security"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "post": {
@@ -8969,24 +7080,9 @@
           }
         ],
         "summary": "Authorize user-id to role mappings for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["security"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       },
       "put": {
@@ -9046,17 +7142,8 @@
           }
         ],
         "summary": "Updates a user mapping for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/database/jit/list": {
@@ -9107,17 +7194,8 @@
           }
         ],
         "summary": "List all user-id to role mappings for JIT access",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/database/jit/{user_id}": {
@@ -9170,17 +7248,8 @@
           }
         ],
         "summary": "Delete JIT access by user-id",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-endpoint-owners": ["security"]
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     },
     "/v1/projects/{ref}/functions": {
@@ -9234,24 +7303,9 @@
           }
         ],
         "summary": "List all functions",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:read", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       },
       "post": {
@@ -9380,24 +7434,9 @@
           }
         ],
         "summary": "Create a function",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       },
       "put": {
@@ -9460,24 +7499,9 @@
           }
         ],
         "summary": "Bulk update functions",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -9560,24 +7584,9 @@
           }
         ],
         "summary": "Deploy a function",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -9639,24 +7648,9 @@
           }
         ],
         "summary": "Retrieve a function",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:read", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       },
       "patch": {
@@ -9791,24 +7785,9 @@
           }
         ],
         "summary": "Update a function",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       },
       "delete": {
@@ -9861,24 +7840,9 @@
           }
         ],
         "summary": "Delete a function",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:write", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:write"
       }
     },
@@ -9940,24 +7904,9 @@
           }
         ],
         "summary": "Retrieve a function body",
-<<<<<<< HEAD
         "tags": ["Edge Functions"],
         "x-badges": [{ "name": "OAuth scope: edge_functions:read", "position": "after" }],
         "x-endpoint-owners": ["functions"],
-=======
-        "tags": [
-          "Edge Functions"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: edge_functions:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "edge_functions:read"
       }
     },
@@ -10011,24 +7960,9 @@
           }
         ],
         "summary": "Lists all buckets",
-<<<<<<< HEAD
         "tags": ["Storage"],
         "x-badges": [{ "name": "OAuth scope: storage:read", "position": "after" }],
         "x-endpoint-owners": ["storage"],
-=======
-        "tags": [
-          "Storage"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: storage:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "storage:read"
       }
     },
@@ -10089,24 +8023,9 @@
           }
         ],
         "summary": "Creates a new SSO provider",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "get": {
@@ -10155,24 +8074,9 @@
           }
         ],
         "summary": "Lists all SSO providers",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       }
     },
@@ -10232,24 +8136,9 @@
           }
         ],
         "summary": "Gets a SSO provider by its UUID",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:read", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:read"
       },
       "put": {
@@ -10317,24 +8206,9 @@
           }
         ],
         "summary": "Updates a SSO provider by its UUID",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       },
       "delete": {
@@ -10392,24 +8266,9 @@
           }
         ],
         "summary": "Removes a SSO provider by its UUID",
-<<<<<<< HEAD
         "tags": ["Auth"],
         "x-badges": [{ "name": "OAuth scope: auth:write", "position": "after" }],
         "x-endpoint-owners": ["auth"],
-=======
-        "tags": [
-          "Auth"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: auth:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "auth:write"
       }
     },
@@ -10460,24 +8319,9 @@
           }
         ],
         "summary": "Lists all backups",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:read"
       }
     },
@@ -10528,24 +8372,9 @@
           }
         ],
         "summary": "Restores a PITR backup for a database",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "database:write"
       }
     },
@@ -10603,24 +8432,9 @@
           }
         ],
         "summary": "Initiates a creation of a restore point for a database",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:write"
       },
@@ -10679,24 +8493,9 @@
           }
         ],
         "summary": "Get restore points for project",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:read", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:read"
       }
@@ -10748,24 +8547,9 @@
           }
         ],
         "summary": "Initiates an undo to a given restore point",
-<<<<<<< HEAD
         "tags": ["Database"],
         "x-badges": [{ "name": "OAuth scope: database:write", "position": "after" }],
         "x-endpoint-owners": ["infra"],
-=======
-        "tags": [
-          "Database"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: database:write",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true,
         "x-oauth-scope": "database:write"
       }
@@ -10809,32 +8593,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["members_write"] }],
         "summary": "List members of an organization",
         "tags": ["Organizations"],
         "x-badges": [{ "name": "OAuth scope: organizations:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "List members of an organization",
-        "tags": [
-          "Organizations"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: organizations:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       }
     },
@@ -10874,32 +8637,11 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organization_admin_read"] }],
         "summary": "Gets information about the organization",
         "tags": ["Organizations"],
         "x-badges": [{ "name": "OAuth scope: organizations:read", "position": "after" }],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Gets information about the organization",
-        "tags": [
-          "Organizations"
-        ],
-        "x-badges": [
-          {
-            "name": "OAuth scope: organizations:read",
-            "position": "after"
-          }
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-oauth-scope": "organizations:read"
       }
     },
@@ -10947,25 +8689,10 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organization_admin_write"] }],
         "summary": "Gets project details for the specified organization and claim token",
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Gets project details for the specified organization and claim token",
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       },
       "post": {
@@ -11004,25 +8731,10 @@
             "description": "Rate limit exceeded"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organization_admin_write"] }],
         "summary": "Claims project for the specified organization",
         "tags": ["Organizations"],
         "x-endpoint-owners": ["management-api"],
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Claims project for the specified organization",
-        "tags": [
-          "Organizations"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "x-internal": true
       }
     },
@@ -11115,25 +8827,10 @@
             "description": "Failed to retrieve projects"
           }
         },
-<<<<<<< HEAD
         "security": [{ "bearer": [] }, { "fga_permissions": ["organization_projects_read"] }],
         "summary": "Gets all projects for the given organization",
         "tags": ["Projects"],
         "x-endpoint-owners": ["management-api"]
-=======
-        "security": [
-          {
-            "bearer": []
-          }
-        ],
-        "summary": "Gets all projects for the given organization",
-        "tags": [
-          "Projects"
-        ],
-        "x-endpoint-owners": [
-          "unowned"
-        ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
       }
     }
   },
@@ -12159,19 +9856,8 @@
       },
       "CreateOrganizationV1": {
         "type": "object",
-<<<<<<< HEAD
         "properties": { "name": { "type": "string", "maxLength": 256 } },
         "required": ["name"],
-=======
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "name"
-        ],
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         "additionalProperties": false
       },
       "OAuthTokenBody": {
@@ -13789,7 +11475,6 @@
               "type": "string"
             }
           },
-<<<<<<< HEAD
           "duration_estimate_hours": { "type": "number" },
           "legacy_auth_custom_roles": { "type": "array", "items": { "type": "string" } },
           "objects_to_be_dropped": {
@@ -13894,12 +11579,6 @@
                   "required": ["type", "slot_name"]
                 }
               ]
-=======
-          "user_defined_objects_in_internal_schemas": {
-            "type": "array",
-            "items": {
-              "type": "string"
->>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           }
         },
@@ -14059,24 +11738,11 @@
             ]
           },
           "healthy": {
-<<<<<<< HEAD
             "type": "boolean",
             "deprecated": true,
             "description": "Deprecated. Use `status` instead."
           },
           "status": { "type": "string", "enum": ["COMING_UP", "ACTIVE_HEALTHY", "UNHEALTHY"] },
-=======
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "COMING_UP",
-              "ACTIVE_HEALTHY",
-              "UNHEALTHY"
-            ]
-          },
->>>>>>> a500a04fd1 (Replace Supabase with BA)
           "info": {
             "oneOf": [
               {
@@ -14105,23 +11771,12 @@
                 "type": "object",
                 "properties": {
                   "healthy": {
-<<<<<<< HEAD
                     "type": "boolean",
                     "deprecated": true,
                     "description": "Deprecated. Use `status` instead."
                   },
                   "db_connected": { "type": "boolean" },
                   "connected_cluster": { "type": "integer" }
-=======
-                    "type": "boolean"
-                  },
-                  "db_connected": {
-                    "type": "boolean"
-                  },
-                  "connected_cluster": {
-                    "type": "integer"
-                  }
->>>>>>> a500a04fd1 (Replace Supabase with BA)
                 },
                 "required": [
                   "healthy",

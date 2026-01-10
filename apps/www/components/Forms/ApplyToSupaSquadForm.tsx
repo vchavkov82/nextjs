@@ -116,15 +116,6 @@ const languagesSpoken: string[] = [
   'Other',
 ]
 
-<<<<<<< HEAD
-=======
-const headerContent = {
-  title: 'Apply to join SupaSquad',
-  description:
-    'Join our community of passionate contributors and help shape the future of BA. Fill out the form below to apply.',
-}
-
->>>>>>> a500a04fd1 (Replace Supabase with BA)
 const FormContent = memo(function FormContent({
   form,
   errors,

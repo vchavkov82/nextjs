@@ -6,11 +6,6 @@ import { GlassPanel } from 'ui-patterns/GlassPanel'
 import { IconPanel } from 'ui-patterns/IconPanel'
 import SqlToRest from 'ui-patterns/SqlToRest'
 import { Heading } from 'ui/src/components/CustomHTMLElements'
-<<<<<<< HEAD
-=======
-import dynamic from 'next/dynamic'
-import { isFeatureEnabled } from 'common/enabled-features'
->>>>>>> b333ef10b8 (clean up docs errors)
 import { CodeBlock } from '~/features/ui/CodeBlock/CodeBlock'
 import { NamedCodeBlock } from '~/features/directives/CodeTabs.components'
 import { Accordion, AccordionItem } from '~/features/ui/Accordion'

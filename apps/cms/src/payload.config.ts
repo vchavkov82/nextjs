@@ -8,10 +8,7 @@ import { seoPlugin } from '@payloadcms/plugin-seo'
 import { s3Storage } from '@payloadcms/storage-s3'
 import { buildConfig, type Plugin } from 'payload'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
-<<<<<<< HEAD
 import nodemailer from 'nodemailer'
-=======
->>>>>>> b333ef10b8 (clean up docs errors)
 import { defaultLexical } from './fields/defaultLexical.ts'
 import { getServerSideURL } from './utilities/getURL.ts'
 import { WWW_SITE_ORIGIN } from './utilities/constants.ts'
@@ -105,7 +102,6 @@ export default buildConfig({
     },
   }),
   // Add email adapter to prevent warnings
-<<<<<<< HEAD
   // Create transport with verification disabled to prevent startup errors when SMTP server is unavailable
   email: (() => {
     const transport = nodemailer.createTransport({
@@ -134,17 +130,6 @@ export default buildConfig({
       defaultFromName: 'BA CMS',
     })
   })(),
-=======
-  email: nodemailerAdapter({
-    transportOptions: {
-      host: process.env.SMTP_HOST || 'localhost',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false,
-    },
-    defaultFromAddress: process.env.SMTP_FROM || 'noreply@localhost',
-    defaultFromName: 'Supabase CMS',
-  }),
->>>>>>> b333ef10b8 (clean up docs errors)
   // Global configuration for better performance
   globals: [],
   graphQL: {

@@ -92,16 +92,7 @@
       "groups": [
         {
           "title": "Enumeration Members",
-<<<<<<< HEAD
           "children": [774, 776, 775, 777]
-=======
-          "children": [
-            770,
-            772,
-            771,
-            773
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -200,16 +191,7 @@
       "groups": [
         {
           "title": "Enumeration Members",
-<<<<<<< HEAD
           "children": [779, 782, 780, 781]
-=======
-          "children": [
-            775,
-            778,
-            776,
-            777
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -289,15 +271,7 @@
       "groups": [
         {
           "title": "Enumeration Members",
-<<<<<<< HEAD
           "children": [785, 786, 784]
-=======
-          "children": [
-            781,
-            782,
-            780
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -396,16 +370,7 @@
       "groups": [
         {
           "title": "Enumeration Members",
-<<<<<<< HEAD
           "children": [791, 790, 788, 789]
-=======
-          "children": [
-            787,
-            786,
-            784,
-            785
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -7538,16 +7503,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
                   "children": [506, 507, 508, 505]
-=======
-                  "children": [
-                    505,
-                    506,
-                    507,
-                    504
-                  ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -8878,67 +8834,14 @@
         {
           "title": "Properties",
           "children": [
-<<<<<<< HEAD
             517, 468, 469, 471, 500, 498, 497, 472, 509, 474, 487, 484, 485, 473, 495, 496, 478,
             486, 499, 493, 492, 501, 502, 503, 482, 483, 494, 520, 522, 521
-=======
-            516,
-            468,
-            469,
-            471,
-            499,
-            497,
-            496,
-            472,
-            508,
-            474,
-            487,
-            484,
-            485,
-            473,
-            494,
-            495,
-            478,
-            486,
-            498,
-            492,
-            491,
-            500,
-            501,
-            502,
-            482,
-            483,
-            493,
-            519,
-            521,
-            520
->>>>>>> a500a04fd1 (Replace Supabase with BA)
           ]
         },
         {
           "title": "Methods",
           "children": [
-<<<<<<< HEAD
             555, 527, 547, 531, 529, 576, 535, 549, 551, 553, 542, 569, 559, 540, 537, 567, 562
-=======
-            553,
-            525,
-            545,
-            529,
-            527,
-            573,
-            533,
-            547,
-            549,
-            551,
-            540,
-            567,
-            557,
-            538,
-            535,
-            565,
-            560
->>>>>>> a500a04fd1 (Replace Supabase with BA)
           ]
         }
       ],
@@ -9719,15 +9622,7 @@
       "groups": [
         {
           "title": "Methods",
-<<<<<<< HEAD
           "children": [802, 796, 806]
-=======
-          "children": [
-            798,
-            792,
-            802
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -10720,40 +10615,11 @@
       "groups": [
         {
           "title": "Properties",
-<<<<<<< HEAD
           "children": [853, 854, 814, 813, 811, 856, 855, 835, 840, 830, 825, 812, 817, 815, 816]
         },
         {
           "title": "Methods",
           "children": [845, 818, 849, 822]
-=======
-          "children": [
-            849,
-            850,
-            810,
-            809,
-            807,
-            852,
-            851,
-            831,
-            836,
-            826,
-            821,
-            808,
-            813,
-            811,
-            812
-          ]
-        },
-        {
-          "title": "Methods",
-          "children": [
-            841,
-            814,
-            845,
-            818
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -10882,13 +10748,7 @@
       "groups": [
         {
           "title": "Constructors",
-<<<<<<< HEAD
           "children": [861]
-=======
-          "children": [
-            857
-          ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
         }
       ],
       "sources": [
@@ -11925,27 +11785,7 @@
             {
               "title": "Properties",
               "children": [
-<<<<<<< HEAD
                 692, 677, 676, 689, 679, 669, 668, 687, 675, 688, 683, 678, 667, 666, 674, 690, 691
-=======
-                688,
-                673,
-                672,
-                685,
-                675,
-                666,
-                665,
-                683,
-                671,
-                684,
-                679,
-                674,
-                664,
-                663,
-                670,
-                686,
-                687
->>>>>>> a500a04fd1 (Replace Supabase with BA)
               ]
             }
           ],
@@ -12084,17 +11924,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
               "children": [698, 701, 699, 700, 697]
-=======
-              "children": [
-                694,
-                697,
-                695,
-                696,
-                693
-              ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -12274,16 +12104,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
               "children": [704, 707, 705, 706]
-=======
-              "children": [
-                700,
-                703,
-                701,
-                702
-              ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -12619,15 +12440,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
                   "children": [735, 736, 738]
-=======
-                  "children": [
-                    731,
-                    732,
-                    734
-                  ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -12828,15 +12641,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
                   "children": [716, 717, 718]
-=======
-                  "children": [
-                    712,
-                    713,
-                    714
-                  ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -13037,15 +12842,7 @@
               "groups": [
                 {
                   "title": "Properties",
-<<<<<<< HEAD
                   "children": [726, 727, 728]
-=======
-                  "children": [
-                    722,
-                    723,
-                    724
-                  ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
                 }
               ],
               "sources": [
@@ -13270,16 +13067,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
               "children": [747, 745, 746, 748]
-=======
-              "children": [
-                743,
-                741,
-                742,
-                744
-              ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -13502,16 +13290,7 @@
           "groups": [
             {
               "title": "Properties",
-<<<<<<< HEAD
               "children": [757, 755, 756, 758]
-=======
-              "children": [
-                753,
-                751,
-                752,
-                754
-              ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
             }
           ],
           "sources": [
@@ -13755,7 +13534,6 @@
   "groups": [
     {
       "title": "Enumerations",
-<<<<<<< HEAD
       "children": [773, 778, 783, 787]
     },
     {
@@ -13773,54 +13551,6 @@
     {
       "title": "Variables",
       "children": [792]
-=======
-      "children": [
-        769,
-        774,
-        779,
-        783
-      ]
-    },
-    {
-      "title": "Classes",
-      "children": [
-        59,
-        463,
-        1,
-        789
-      ]
-    },
-    {
-      "title": "Interfaces",
-      "children": [
-        806,
-        856
-      ]
-    },
-    {
-      "title": "Type Aliases",
-      "children": [
-        448,
-        462,
-        661,
-        691,
-        698,
-        705,
-        729,
-        710,
-        720,
-        739,
-        749,
-        759,
-        768
-      ]
-    },
-    {
-      "title": "Variables",
-      "children": [
-        788
-      ]
->>>>>>> a500a04fd1 (Replace Supabase with BA)
     }
   ],
   "packageName": "@supabase/realtime-js",
