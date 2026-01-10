@@ -169,6 +169,7 @@ const MDXRemoteBase = async ({
       // Log more details in development to help debug
       if (process.env.NODE_ENV === 'development') {
         try {
+          // eslint-disable-next-line no-console
           console.error('MDX compilation error:', {
             error: compileError instanceof Error ? compileError.message : String(compileError),
             stack: compileError instanceof Error ? compileError.stack : undefined,
