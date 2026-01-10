@@ -5,7 +5,7 @@ import { X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Dispatch, Fragment, SetStateAction, useEffect } from 'react'
+import { Dispatch, Fragment, SetStateAction, useEffect, useState } from 'react'
 import { useKey } from 'react-use'
 
 import { useIsLoggedIn, useIsUserLoading } from 'common'
@@ -109,8 +109,14 @@ const GlobalMobileMenu = ({ open, setOpen }: Props) => {
   const isLoggedIn = useIsLoggedIn()
   const isUserLoading = useIsUserLoading()
   const pathname = usePathname()
+  const [isMounted, setIsMounted] = useState(false)
 
   const { navigationLogo } = getCustomContent(['navigation:logo'])
+
+  // Track mounted state to prevent hydration mismatch
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -166,7 +172,7 @@ const GlobalMobileMenu = ({ open, setOpen }: Props) => {
               <Menu />
             </div>
             <div className="absolute bottom-0 left-0 right-0 top-auto w-full bg-alternative flex items-stretch p-4 gap-4">
-              {!isUserLoading && (
+              {isMounted && !isUserLoading && (
                 <>
                   {isLoggedIn ? (
                     <Button block size="medium" asChild>

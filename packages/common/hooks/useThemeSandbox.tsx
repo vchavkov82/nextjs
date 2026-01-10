@@ -76,8 +76,9 @@ const defaultLight: { [name: string]: string } = {
  * - select "Reset localStorage" and refresh page to restart
  */
 export const useThemeSandbox = (): any => {
-  const isWindowUndefined = typeof window === 'undefined'
-  if (isWindowUndefined || IS_PROD) return null
+  // Always return consistent value during SSR and initial client render
+  // to prevent hydration mismatch
+  const [isMounted, setIsMounted] = useState(false)
 
   const defaultConfig = defaultDark // use dark default tokens
   // const defaultConfig = defaultLight // use light default tokens
@@ -89,9 +90,14 @@ export const useThemeSandbox = (): any => {
   const [styles, setStyles] = useState<HTMLElement | null>(null)
   const themeConfigRef = useRef(themeConfig)
 
+  // Set mounted state after first render to enable client-only features
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   // Initialize browser-dependent values after mount to avoid hydration mismatch
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof document === 'undefined') return
+    if (!isMounted || typeof window === 'undefined' || typeof document === 'undefined') return
 
     const hash = window.location.hash
     const localPreset = localStorage.getItem('theme-sandbox')
@@ -111,7 +117,7 @@ export const useThemeSandbox = (): any => {
 
     const shouldBeSandbox = hash.includes('#theme-sandbox') || localPreset !== null
     setIsSandbox(shouldBeSandbox)
-  }, [])
+  }, [isMounted, defaultConfig])
 
   // Keep ref in sync with state
   useEffect(() => {
@@ -193,6 +199,9 @@ export const useThemeSandbox = (): any => {
     init()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSandbox, styles])
+
+  // Return null during SSR and before mount to prevent hydration mismatch
+  if (!isMounted || IS_PROD) return null
 
   return { themeConfig, handleSetThemeConfig, isSandbox }
 }
