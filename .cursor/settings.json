@@ -26,6 +26,8 @@
   "cursor.composer.autoApproveEdits": true,
   "cursor.composer.autoApproveFileOperations": true,
   "cursor.composer.autoApproveTerminalCommands": true,
-  "cursor.composer.autoRun": true
+  "cursor.composer.autoRun": true,
+  "terminal.integrated.copyOnSelection": false,
+  "terminal.integrated.rightClickBehavior": "copyPaste"
 }
 
