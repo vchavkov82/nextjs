@@ -15,7 +15,6 @@ import {
   useCronJobsInfiniteQuery,
 } from 'data/database-cron-jobs/database-cron-jobs-infinite-query'
 import { useDatabaseExtensionsQuery } from 'data/database-extensions/database-extensions-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { handleErrorOnDelete, useQueryStateWithSelect } from 'hooks/misc/useQueryStateWithSelect'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -102,7 +101,6 @@ export const CronjobsTab = () => {
     connectionString: project?.connectionString,
   })
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const columns = useMemo(() => {
     return formatCronJobColumns({

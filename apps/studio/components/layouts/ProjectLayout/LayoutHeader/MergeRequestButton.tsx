@@ -6,7 +6,6 @@ import { useParams } from 'common'
 import { ButtonTooltip } from 'components/ui/ButtonTooltip'
 import { useBranchUpdateMutation } from 'data/branches/branch-update-mutation'
 import { useBranchesQuery } from 'data/branches/branches-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 
@@ -20,7 +19,6 @@ export const MergeRequestButton = () => {
 
   const { data: branches } = useBranchesQuery({ projectRef }, { enabled: Boolean(projectDetails) })
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const { mutate: updateBranch, isPending: isUpdating } = useBranchUpdateMutation({
     onError: () => {

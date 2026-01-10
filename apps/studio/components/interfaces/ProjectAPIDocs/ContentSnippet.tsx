@@ -1,6 +1,5 @@
 import { useParams } from 'common'
 
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { PropsWithChildren } from 'react'
 import { SimpleCodeBlock } from 'ui'
@@ -29,7 +28,6 @@ const ContentSnippet = ({
 }: PropsWithChildren<ContentSnippetProps>) => {
   const { ref: projectRef } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const codeSnippet = snippet[selectedLanguage]?.(apikey, endpoint).replaceAll(
     '[ref]',

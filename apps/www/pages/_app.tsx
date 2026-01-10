@@ -6,8 +6,6 @@ import {
   AuthProvider,
   FeatureFlagProvider,
   IS_PLATFORM,
-  PageTelemetry,
-  TelemetryTagManager,
   ThemeProvider,
 } from 'common'
 import { DefaultSeo } from 'next-seo'
@@ -24,12 +22,10 @@ import MetaFaviconsPagesRouter, {
 import { WwwCommandMenu } from '@/components/CommandMenu'
 import { API_URL, APP_NAME, DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 import useDarkLaunchWeeks from '../hooks/useDarkLaunchWeeks'
-import { useWwwCommandMenuTelemetry } from '../hooks/useWwwCommandMenuTelemetry'
 import { AppProviders } from '@/components/AppProviders'
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  const { onTelemetry } = useWwwCommandMenuTelemetry()
 
   const site_title = `${APP_NAME} | The Postgres Development Platform.`
   const { basePath } = useRouter()
@@ -93,7 +89,7 @@ export default function App({ Component, pageProps }: AppProps) {
             forcedTheme={forceDarkMode ? 'dark' : undefined}
           >
             <TooltipProvider delayDuration={0}>
-              <CommandProvider app="www" onTelemetry={onTelemetry}>
+              <CommandProvider app="www">
                 <SonnerToaster position="top-right" />
                 <Component {...pageProps} />
                 <WwwCommandMenu />
@@ -103,7 +99,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </ThemeProvider>
         </FeatureFlagProvider>
       </AuthProvider>
-      <TelemetryTagManager />
     </>
   )
 }

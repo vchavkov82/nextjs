@@ -7,7 +7,6 @@ import type { TableField } from '../TableEditor.types'
 import { tableTemplates } from './templates'
 import type { TableSuggestion } from './types'
 import { convertTableSuggestionToTableField } from './utils'
-import { useTrack } from 'lib/telemetry/track'
 
 interface QuickstartTemplatesWidgetProps {
   onSelectTemplate: (tableData: Partial<TableField>) => void
@@ -22,7 +21,6 @@ export const QuickstartTemplatesWidget = ({
   disabled,
 }: QuickstartTemplatesWidgetProps) => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null)
-  const track = useTrack()
 
   useEffect(() => {
     if (activeCategory === null && CATEGORIES.length > 0) {

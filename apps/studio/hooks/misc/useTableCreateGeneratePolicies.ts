@@ -4,7 +4,6 @@ import { useEffect, useMemo, useRef } from 'react'
 
 import { usePHFlag } from 'hooks/ui/useFlag'
 import { IS_PLATFORM } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 
 dayjs.extend(utc)
 
@@ -50,7 +49,6 @@ export function useTableCreateGeneratePolicies({
   isNewRecord = false,
   projectInsertedAt,
 }: UseTableCreateGeneratePoliciesOptions): UseTableCreateGeneratePoliciesResult {
-  const track = useTrack()
   const tableCreateGeneratePoliciesFlag = usePHFlag<string>('tableCreateGeneratePolicies')
   const hasTrackedExposure = useRef(false)
 

@@ -118,3 +118,10 @@ export function useConsentState() {
     updateServices: snap.updateServices,
   }
 }
+
+/**
+ * Stub function - telemetry has been removed
+ */
+export function clearTelemetryDataCookie() {
+  // No-op: telemetry has been removed
+}

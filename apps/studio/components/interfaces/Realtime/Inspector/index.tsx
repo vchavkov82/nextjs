@@ -1,7 +1,6 @@
 import { useParams } from 'common'
 import { useState, useEffect } from 'react'
 
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useDatabasePublicationsQuery } from 'data/database-publications/database-publications-query'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -48,7 +47,6 @@ export const RealtimeInspector = () => {
     enableBroadcast: true,
   })
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { logData, sendMessage } = useRealtimeMessages(realtimeConfig, setRealtimeConfig)
 
   // Update enableDbChanges when publications change

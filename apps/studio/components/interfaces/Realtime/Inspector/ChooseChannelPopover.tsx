@@ -7,7 +7,6 @@ import * as z from 'zod'
 
 import { DocsButton } from 'components/ui/DocsButton'
 import { getTemporaryAPIKey } from 'data/api-keys/temp-api-keys-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { DOCS_URL } from 'lib/constants'
 import {
@@ -37,7 +36,6 @@ export const ChooseChannelPopover = ({ config, onChangeConfig }: ChooseChannelPo
   const [open, setOpen] = useState(false)
   const { ref } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const form = useForm<z.infer<typeof FormSchema>>({
     mode: 'onBlur',

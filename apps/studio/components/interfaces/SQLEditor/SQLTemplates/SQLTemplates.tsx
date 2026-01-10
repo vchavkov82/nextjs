@@ -6,7 +6,6 @@ import { toast } from 'sonner'
 import { useParams } from 'common'
 import { SQL_TEMPLATES } from 'components/interfaces/SQLEditor/SQLEditor.queries'
 import { ActionCard } from 'components/layouts/Tabs/ActionCard'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -34,7 +33,6 @@ const SQLTemplates = () => {
     }
   )
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const handleNewQuery = async (sql: string, name: string) => {
     if (!ref) return console.error('Project ref is required')

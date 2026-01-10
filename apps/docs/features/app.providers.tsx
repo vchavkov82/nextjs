@@ -8,7 +8,6 @@ import { API_URL } from '~/lib/constants'
 import { AuthContainer } from './auth/auth.client'
 import { DocsCommandProvider } from './command'
 import { QueryClientProvider } from './data/queryClient.client'
-import { PageTelemetry } from './telemetry/telemetry.client'
 import { ScrollRestoration } from './ui/helpers.scroll.client'
 
 const SiteLayout = dynamic(() => import('~/layouts/SiteLayout'), {
@@ -34,7 +33,6 @@ function GlobalProviders({ children }: PropsWithChildren) {
     <QueryClientProvider>
       <AuthContainer>
         <FeatureFlagProvider API_URL={API_URL} enabled={IS_PLATFORM}>
-          <PageTelemetry />
           <ScrollRestoration />
           <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange attribute="class">
             <TooltipProvider delayDuration={0}>

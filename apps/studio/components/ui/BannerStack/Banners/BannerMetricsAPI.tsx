@@ -1,6 +1,5 @@
 import { useParams } from 'common/hooks'
 import { BannerCard } from '../BannerCard'
-import { useTrack } from 'lib/telemetry/track'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { LOCAL_STORAGE_KEYS } from 'common'
 import { Badge } from 'ui'
@@ -13,7 +12,6 @@ import { useBannerStack } from '../BannerStackProvider'
 
 export const BannerMetricsAPI = () => {
   const { ref } = useParams()
-  const track = useTrack()
   const { dismissBanner } = useBannerStack()
   const [, setIsDismissed] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.OBSERVABILITY_BANNER_DISMISSED(ref ?? ''),

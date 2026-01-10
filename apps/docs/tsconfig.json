@@ -2,6 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "noImplicitAny": false,
+    "baseUrl": ".",
     "paths": {
       // @deprecated: use @/ instead of ~/
       "~/*": [

@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
-import { IS_PLATFORM, PageTelemetry, useThemeSandbox } from 'common'
-import { useConsentToast } from 'ui-patterns/consent'
+import { useThemeSandbox } from 'common'
 
 interface AppProvidersProps {
     API_URL: string
 }
 
 /**
- * Component that wraps hooks which depend on browser-only state (consent, theme sandbox)
+ * Component that wraps hooks which depend on browser-only state (theme sandbox)
  * This is needed because these hooks use reactive state (Valtio) that may differ
  * between server and client on initial render
  */
@@ -23,20 +22,12 @@ export function AppProviders({ API_URL }: AppProvidersProps) {
         return null
     }
 
-    return <AppProvidersContent API_URL={API_URL} />
+    return <AppProvidersContent />
 }
 
-function AppProvidersContent({ API_URL }: { API_URL: string }) {
-    const { hasAcceptedConsent } = useConsentToast()
-
+function AppProvidersContent() {
     // Initialize browser-dependent features after mount
     useThemeSandbox()
 
-    return (
-        <PageTelemetry
-            API_URL={API_URL}
-            hasAcceptedConsent={hasAcceptedConsent}
-            enabled={IS_PLATFORM}
-        />
-    )
+    return null
 }

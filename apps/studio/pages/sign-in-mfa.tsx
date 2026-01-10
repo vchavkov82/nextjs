@@ -7,7 +7,6 @@ import { getAccessToken, useParams } from 'common'
 import { SignInMfaForm } from 'components/interfaces/SignIn/SignInMfaForm'
 import SignInLayout from 'components/layouts/SignInLayout/SignInLayout'
 import { useAddLoginEvent } from 'data/misc/audit-login-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import useLatest from 'hooks/misc/useLatest'
 import { auth, buildPathWithParams, getReturnToPath } from 'lib/gotrue'
 import type { NextPageWithLayout } from 'types'
@@ -23,7 +22,6 @@ const SignInMfaPage: NextPageWithLayout = () => {
   } = useParams()
   const signInMethodRef = useLatest(signInMethod)
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: addLoginEvent } = useAddLoginEvent()
 
   const [loading, setLoading] = useState(true)

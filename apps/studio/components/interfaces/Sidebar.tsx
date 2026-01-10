@@ -13,7 +13,6 @@ import {
   generateToolRoutes,
 } from 'components/layouts/ProjectLayout/NavigationBar/NavigationBar.utils'
 import { ProjectIndexPageLink } from 'data/prefetchers/project.$ref'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useHideSidebar } from 'hooks/misc/useHideSidebar'
 import { useIsFeatureEnabled } from 'hooks/misc/useIsFeatureEnabled'
 import { useLints } from 'hooks/misc/useLints'
@@ -247,7 +246,6 @@ const ProjectLinks = () => {
   const snap = useAppStateSnapshot()
   const { securityLints, errorLints } = useLints()
   const showReports = useIsFeatureEnabled('reports:all')
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const isNewAPIDocsEnabled = useIsAPIDocsSidePanelEnabled()
   const { isEnabled: isUnifiedLogsEnabled } = useUnifiedLogsPreview()

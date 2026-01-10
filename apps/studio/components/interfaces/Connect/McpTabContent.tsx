@@ -1,7 +1,6 @@
 import { IS_PLATFORM, useParams } from 'common'
 import Panel from 'components/ui/Panel'
 import { BASE_PATH } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { useTheme } from 'next-themes'
 import { useEffect, useMemo, useState } from 'react'
 import { createMcpCopyHandler, McpConfigPanel, type McpClient } from 'ui-patterns/McpUrlBuilder'
@@ -39,7 +38,6 @@ const McpTabContentInnerLoaded = ({
   projectKeys: projectKeys
 }) => {
   const { resolvedTheme } = useTheme()
-  const track = useTrack()
   const [selectedClient, setSelectedClient] = useState<McpClient | null>(null)
   const [mounted, setMounted] = useState(false)
 
@@ -56,19 +54,13 @@ const McpTabContentInnerLoaded = ({
       createMcpCopyHandler({
         selectedClient,
         source: 'studio',
-        onTrack: (event) => track(event.action, event.properties, event.groups),
         projectRef,
       }),
-    [selectedClient, track, projectRef]
+    [selectedClient, projectRef]
   )
 
   const handleInstall = () => {
-    if (selectedClient?.label) {
-      track('mcp_install_button_clicked', {
-        client: selectedClient.label,
-        source: 'studio',
-      })
-    }
+    // Telemetry removed
   }
 
   return (

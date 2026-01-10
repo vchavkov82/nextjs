@@ -11,7 +11,6 @@ import { SupportLink } from 'components/interfaces/Support/SupportLink'
 import { InlineLinkClassName } from 'components/ui/InlineLink'
 import { useFeedbackCategoryQuery } from 'data/feedback/feedback-category'
 import { useSendFeedbackMutation } from 'data/feedback/feedback-send'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { timeout } from 'lib/helpers'
@@ -67,7 +66,6 @@ export const FeedbackWidget = ({ onClose }: FeedbackWidgetProps) => {
   const isLikelySupport = isLikelySupportRequest(feedback)
   const effectiveCategory = category ?? (isLikelySupport ? 'support' : null)
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: submitFeedback } = useSendFeedbackMutation({
     onSuccess: () => {
       setIsFeedbackSent(true)

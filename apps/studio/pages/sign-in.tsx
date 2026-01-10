@@ -5,8 +5,6 @@ import { useEffect } from 'react'
 
 import { LastSignInWrapper } from 'components/interfaces/SignIn/LastSignInWrapper'
 import { SignInForm } from 'components/interfaces/SignIn/SignInForm'
-import { SignInWithCustom } from 'components/interfaces/SignIn/SignInWithCustom'
-import { SignInWithGitHub } from 'components/interfaces/SignIn/SignInWithGitHub'
 import { AuthenticationLayout } from 'components/layouts/AuthenticationLayout'
 import SignInLayout from 'components/layouts/SignInLayout/SignInLayout'
 import { useCustomContent } from 'hooks/custom-content/useCustomContent'
@@ -19,23 +17,16 @@ const SignInPage: NextPageWithLayout = () => {
   const router = useRouter()
 
   const {
-    dashboardAuthSignInWithGithub: signInWithGithubEnabled,
     dashboardAuthSignInWithSso: signInWithSsoEnabled,
     dashboardAuthSignInWithEmail: signInWithEmailEnabled,
     dashboardAuthSignUp: signUpEnabled,
   } = useIsFeatureEnabled([
-    'dashboard_auth:sign_in_with_github',
     'dashboard_auth:sign_in_with_sso',
     'dashboard_auth:sign_in_with_email',
     'dashboard_auth:sign_up',
   ])
 
-  const { dashboardAuthCustomProvider: customProvider } = useCustomContent([
-    'dashboard_auth:custom_provider',
-  ])
-
-  const showOrDivider =
-    (signInWithGithubEnabled || signInWithSsoEnabled || customProvider) && signInWithEmailEnabled
+  const showOrDivider = signInWithSsoEnabled && signInWithEmailEnabled
 
   useEffect(() => {
     if (!IS_PLATFORM) {
@@ -47,8 +38,6 @@ const SignInPage: NextPageWithLayout = () => {
   return (
     <>
       <div className="flex flex-col gap-5">
-        {customProvider && <SignInWithCustom providerName={customProvider} />}
-        {signInWithGithubEnabled && <SignInWithGitHub />}
         {signInWithSsoEnabled && (
           <LastSignInWrapper type="sso">
             <Button

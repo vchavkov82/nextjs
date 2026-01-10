@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useSonner } from 'sonner'
-import { useTrack } from 'lib/telemetry/track'
 
 export const ToastErrorTracker = () => {
-  const track = useTrack()
   const { toasts } = useSonner()
   const trackRef = useRef(new Set<string | number>())
 

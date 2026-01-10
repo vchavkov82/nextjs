@@ -12,7 +12,6 @@ import {
 } from 'data/organizations/request-upgrade-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
-import { useTrack } from 'lib/telemetry/track'
 import {
   Badge,
   Button,
@@ -59,7 +58,6 @@ export const RequestUpgradeToBillingOwners = ({
   className,
 }: PropsWithChildren<RequestUpgradeToBillingOwnersProps>) => {
   const [open, setOpen] = useState(false)
-  const track = useTrack()
   const { data: project } = useSelectedProjectQuery()
   const { data: organization } = useSelectedOrganizationQuery()
   const slug = organization?.slug

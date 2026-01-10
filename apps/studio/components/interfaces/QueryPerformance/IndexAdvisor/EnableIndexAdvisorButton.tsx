@@ -4,7 +4,6 @@ import { toast } from 'sonner'
 import { useDatabaseExtensionEnableMutation } from 'data/database-extensions/database-extension-enable-mutation'
 import { useDatabaseExtensionsQuery } from 'data/database-extensions/database-extensions-query'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
-import { useTrack } from 'lib/telemetry/track'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,7 +19,6 @@ import {
 import { getIndexAdvisorExtensions } from './index-advisor.utils'
 
 export const EnableIndexAdvisorButton = () => {
-  const track = useTrack()
   const { data: project } = useSelectedProjectQuery()
 
   const [isDialogOpen, setIsDialogOpen] = useState(false)

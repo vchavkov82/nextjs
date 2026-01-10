@@ -4,7 +4,6 @@ import { createLintSummaryPrompt, lintInfoMap } from 'components/interfaces/Lint
 import { SIDEBAR_KEYS } from 'components/layouts/ProjectLayout/LayoutSidebar/LayoutSidebarProvider'
 import { Lint } from 'data/lint/lint-query'
 import { DOCS_URL } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { ExternalLink } from 'lucide-react'
 import { useAiAssistantStateSnapshot } from 'state/ai-assistant-state'
 import { useSidebarManagerSnapshot } from 'state/sidebar-manager-state'
@@ -19,7 +18,6 @@ interface LintDetailProps {
 }
 
 const LintDetail = ({ lint, projectRef, onAskAssistant }: LintDetailProps) => {
-  const track = useTrack()
   const snap = useAiAssistantStateSnapshot()
   const { openSidebar } = useSidebarManagerSnapshot()
 

@@ -1,13 +1,7 @@
-import { CustomerioAppClient, CustomerioTrackClient } from '@/lib/customerio'
-import { insertPageInDatabase } from '@/lib/notion'
-
 import {
   SupaSquadApplication,
   supaSquadApplicationSchema,
 } from '@/data/open-source/contributing/supasquad.utils'
-
-const NOTION_API_KEY = process.env.NOTION_SUPASQUAD_API_KEY
-const NOTION_DB_ID = process.env.NOTION_SUPASQUAD_APPLICATIONS_DB_ID
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -19,38 +13,11 @@ export async function OPTIONS() {
   return new Response('ok', { headers: corsHeaders })
 }
 
-function truncateRichText(s: string, max = 1900) {
-  if (!s) return ''
-  return s.length > max ? s.slice(0, max) + '…' : s
-}
-
-function asMultiSelect(values: string[]) {
-  return values.map((v) => ({ name: v }))
-}
-
-function normalizeTrack(t: { heading: string; description: string } | string) {
-  // Handle both old string format and new object format
-  const trackName = typeof t === 'string' ? t : t.heading
-  if (trackName === 'Builder/Maintainer') return 'Builder / Maintainer'
-  return trackName
-}
-
 export async function POST(req: Request) {
-  if (!NOTION_API_KEY || !NOTION_DB_ID) {
-    return new Response(
-      JSON.stringify({ message: 'Server misconfigured: missing Notion credentials' }),
-      {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 500,
-      }
-    )
-  }
-
   let body: unknown
   try {
     body = await req.json()
   } catch (error: any) {
-
     return new Response(JSON.stringify({ message: 'Invalid JSON' }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       status: 400,
@@ -65,121 +32,12 @@ export async function POST(req: Request) {
     })
   }
 
-  const data = parsed.data
-
-  try {
-    const notionProps = getNotionPageProps(data)
-    const notionPageId = await insertPageInDatabase(NOTION_DB_ID, NOTION_API_KEY, notionProps)
-
-    await savePersonAndEventInCustomerIO({
-      ...data,
-      tracks: data.tracks.map(normalizeTrack),
-      notion_page_id: notionPageId,
-      source_url: req.headers.get('origin'),
-    })
-
-    return new Response(JSON.stringify({ message: 'Submission successful', id: notionPageId }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 201,
-    })
-  } catch (err: any) {
-    console.error(err)
-    return new Response(
-      JSON.stringify({ message: 'Error sending your application', error: err?.message }),
-      {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 502,
-      }
-    )
-  }
+  // External service integrations removed
+  return new Response(JSON.stringify({ message: 'Submission successful' }), {
+    headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    status: 201,
+  })
 }
-
-const savePersonAndEventInCustomerIO = async (data: any) => {
-  const customerioSiteId = process.env.CUSTOMERIO_SITE_ID
-  const customerioApiKey = process.env.CUSTOMERIO_API_KEY
-
-  if (customerioSiteId && customerioApiKey) {
-    try {
-      const customerioClient = new CustomerioTrackClient(customerioSiteId, customerioApiKey)
-
-      // Create or update profile in Customer.io
-      // Note: only include personal information
-      // not application specific responses
-      await customerioClient.createOrUpdateProfile(data.email, {
-        first_name: data.first_name,
-        last_name: data.last_name,
-        email: data.email,
-        city: data.city,
-        country: data.country,
-        github: data.github,
-        twitter: data.twitter,
-        discord: data.discord,
-      })
-
-      // Track the supasquad_application_form_submitted event
-      // This includes application specific responses
-      const customerioEvent = {
-        userId: data.email,
-        type: 'track' as const,
-        event: 'supasquad_application_form_submitted',
-        properties: {
-          ...data,
-          event_type: 'supasquad_application_form_submitted',
-          source: 'supasquad_application_form',
-          submitted_at: new Date().toISOString(),
-        },
-        timestamp: customerioClient.isoToUnixTimestamp(new Date().toISOString()),
-      }
-
-      await customerioClient.trackEvent(data.email, customerioEvent)
-
-      await sendConfirmationEmail({
-        email: data.email,
-        first_name: data.first_name,
-        last_name: data.last_name,
-      })
-    } catch (error) {
-      console.error('Customer.io Track API integration failed:', error)
-    }
-  }
-}
-
-const sendConfirmationEmail = async (emailData: {
-  email: string
-  first_name: string
-  last_name: string
-}) => {
-  const customerioApiKey = process.env.CUSTOMERIO_APP_API_KEY
-
-  if (customerioApiKey) {
-    const customerioAppClient = new CustomerioAppClient(customerioApiKey)
-
-    try {
-      const emailRequest = {
-        transactional_message_id: 9,
-        to: emailData.email,
-        identifiers: {
-          email: emailData.email,
-        },
-        message_data: {
-          first_name: emailData.first_name,
-          last_name: emailData.last_name,
-        },
-        send_at: customerioAppClient.isoToUnixTimestamp(
-          new Date(Date.now() + 60 * 1000).toISOString()
-        ), // Schedule to send after 1 minute
-      }
-
-      await customerioAppClient.sendTransactionalEmail(emailRequest)
-    } catch (error) {
-      throw new Error(`Failed to send confirmation email: ${error}`)
-    }
-  } else {
-    console.warn('Customer.io App API key is not set')
-  }
-}
-
-const getNotionPageProps = (data: SupaSquadApplication) => {
   const fullName =
     `${data.first_name?.trim() || ''} ${data.last_name?.trim() || ''}`.trim() || 'Unnamed'
 

@@ -4,7 +4,6 @@ import { useState } from 'react'
 
 import { useParams } from 'common'
 import { useContentQuery } from 'data/content/content-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useIsFeatureEnabled } from 'hooks/misc/useIsFeatureEnabled'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { Metric, METRIC_CATEGORIES, METRICS } from 'lib/constants/metrics'
@@ -53,7 +52,6 @@ export const MetricOptions = ({ config, handleChartSelection }: MetricOptionsPro
     return true
   })
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const debouncedSearch = useDebounce(search, 300)
   const { data, isPending: isLoading } = useContentQuery({

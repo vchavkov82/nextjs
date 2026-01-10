@@ -30,7 +30,6 @@ import { RealtimeButtonVariant, useRealtimeExperiment } from 'hooks/misc/useReal
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { useIsProtectedSchema } from 'hooks/useProtectedSchemas'
 import { DOCS_URL } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { parseAsBoolean, useQueryState } from 'nuqs'
 import { useTableEditorTableStateSnapshot } from 'state/table-editor-table'
 import {
@@ -55,7 +54,6 @@ export interface GridHeaderActionsProps {
 export const GridHeaderActions = ({ table, isRefetching }: GridHeaderActionsProps) => {
   const { ref } = useParams()
   const { data: project } = useSelectedProjectQuery()
-  const track = useTrack()
 
   const [showWarning, setShowWarning] = useQueryState(
     'showWarning',

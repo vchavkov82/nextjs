@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import { useParams } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { DOCS_URL } from 'lib/constants'
 import {
@@ -36,7 +35,6 @@ export const RealtimeFilterPopover = ({ config, onChangeConfig }: RealtimeFilter
 
   const { ref } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   // Update tempConfig when config changes to ensure consistency
   useEffect(() => {

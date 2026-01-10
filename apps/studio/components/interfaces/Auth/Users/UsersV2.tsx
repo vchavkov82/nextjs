@@ -33,7 +33,6 @@ import { useUserDeleteMutation } from 'data/auth/user-delete-mutation'
 import { useUserIndexStatusesQuery } from 'data/auth/user-search-indexes-query'
 import { useUsersCountQuery } from 'data/auth/users-count-query'
 import { User, useUsersInfiniteQuery } from 'data/auth/users-infinite-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useIsFeatureEnabled } from 'hooks/misc/useIsFeatureEnabled'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
@@ -97,7 +96,6 @@ export const UsersV2 = () => {
   const gridRef = useRef<DataGridHandle>(null)
   const xScroll = useRef<number>(0)
   const isNewAPIDocsEnabled = useIsAPIDocsSidePanelEnabled()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const {
     authenticationShowProviderFilter: showProviderFilter,

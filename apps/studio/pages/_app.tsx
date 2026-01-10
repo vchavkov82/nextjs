@@ -36,7 +36,6 @@ import { ErrorBoundary } from 'react-error-boundary'
 import {
   FeatureFlagProvider,
   getFlags,
-  TelemetryTagManager,
   ThemeProvider,
   useThemeSandbox,
 } from 'common'
@@ -56,7 +55,6 @@ import { useCustomContent } from 'hooks/custom-content/useCustomContent'
 import { AuthProvider } from 'lib/auth'
 import { API_URL, BASE_PATH, IS_PLATFORM, useDefaultProvider } from 'lib/constants'
 import { ProfileProvider } from 'lib/profile'
-import { Telemetry } from 'lib/telemetry'
 import { AiAssistantStateContextProvider } from 'state/ai-assistant-state'
 import type { AppPropsWithLayout } from 'types'
 import { SonnerToaster, TooltipProvider } from 'ui'
@@ -170,7 +168,6 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
                       </ThemeProvider>
                     </RouteValidationWrapper>
                   </TooltipProvider>
-                  <Telemetry />
                   {!isTestEnv && (
                     <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-left" />
                   )}
@@ -180,7 +177,6 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
           </HydrationBoundary>
         </NuqsAdapter>
       </QueryClientProvider>
-      <TelemetryTagManager />
     </ErrorBoundary>
   )
 }

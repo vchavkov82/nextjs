@@ -175,11 +175,15 @@ export function FnParameterDetails({
     <div className={className ?? ''}>
       <h3 className="mb-3 text-base text-foreground">Parameters</h3>
       <ul>
-        {combinedParameters.map((parameter) => (
-          <li key={parameter.name ?? Math.random()} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
-            <ParamOrTypeDetails paramOrType={parameter} />
-          </li>
-        ))}
+        {combinedParameters.map((parameter, index) => {
+          const name = 'name' in parameter && typeof parameter.name === 'string' ? parameter.name : null
+          const key = name || `parameter-${index}`
+          return (
+            <li key={key} className="border-t last-of-type:border-b py-5 flex flex-col gap-3">
+              <ParamOrTypeDetails paramOrType={parameter} />
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

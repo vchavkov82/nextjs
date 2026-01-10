@@ -6,7 +6,6 @@ import { LOCAL_STORAGE_KEYS } from 'common'
 import { AdvisorPanel } from 'components/ui/AdvisorPanel/AdvisorPanel'
 import { AIAssistant } from 'components/ui/AIAssistantPanel/AIAssistant'
 import { EditorPanel } from 'components/ui/EditorPanel/EditorPanel'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import useLatest from 'hooks/misc/useLatest'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
@@ -23,7 +22,6 @@ export const LayoutSidebarProvider = ({ children }: PropsWithChildren) => {
   const router = useRouter()
   const { data: project } = useSelectedProjectQuery()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
   const { openSidebar, activeSidebar } = useSidebarManagerSnapshot()
 
   const [sidebarURLParam, setSidebarUrlParam] = useQueryState('sidebar', parseAsString)

@@ -7,7 +7,6 @@ import { createLintSummaryPrompt } from 'components/interfaces/Linter/Linter.uti
 import { SIDEBAR_KEYS } from 'components/layouts/ProjectLayout/LayoutSidebar/LayoutSidebarProvider'
 import { ButtonTooltip } from 'components/ui/ButtonTooltip'
 import { Lint, useProjectLintsQuery } from 'data/lint/lint-query'
-import { useTrack } from 'lib/telemetry/track'
 import { useAdvisorStateSnapshot } from 'state/advisor-state'
 import { useAiAssistantStateSnapshot } from 'state/ai-assistant-state'
 import { useSidebarManagerSnapshot } from 'state/sidebar-manager-state'
@@ -26,7 +25,6 @@ export const AdvisorSection = ({ showEmptyState = false }: { showEmptyState?: bo
       enabled: !showEmptyState,
     }
   )
-  const track = useTrack()
   const snap = useAiAssistantStateSnapshot()
   const { openSidebar } = useSidebarManagerSnapshot()
   const { setSelectedItem } = useAdvisorStateSnapshot()

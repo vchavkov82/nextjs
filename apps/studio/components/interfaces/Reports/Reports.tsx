@@ -20,7 +20,6 @@ import {
   UpsertContentPayload,
   useContentUpsertMutation,
 } from 'data/content/content-upsert-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -76,7 +75,6 @@ const Reports = () => {
       if (vars.payload.type === 'report') toast.error(`Failed to update report: ${error.message}`)
     },
   })
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const currentReport = userContents?.content.find((report) => report.id === reportId)
   const currentReportContent = currentReport?.content as Dashboards.Content

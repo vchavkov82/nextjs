@@ -9,7 +9,6 @@ import { useDatabaseExtensionsQuery } from 'data/database-extensions/database-ex
 import { useSchemaCreateMutation } from 'data/database/schema-create-mutation'
 import { invalidateSchemasQuery, useSchemasQuery } from 'data/database/schemas-query'
 import { useFDWCreateMutation } from 'data/fdw/fdw-create-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import {
@@ -48,7 +47,6 @@ export const CreateWrapperSheet = ({
 
   const { data: project } = useSelectedProjectQuery()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const [newTables, setNewTables] = useState<any[]>([])
   const [isEditingTable, setIsEditingTable] = useState(false)

@@ -2,8 +2,8 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { toast } from 'sonner'
 
 import { Query } from '@supabase/pg-meta/src/query'
+import { sendEvent } from 'data/telemetry/send-event-mutation'
 import { executeSql } from 'data/sql/execute-sql-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { RoleImpersonationState, wrapWithRoleImpersonation } from 'lib/role-impersonation'
 import { isRoleImpersonationEnabled } from 'state/role-impersonation-state'
@@ -67,7 +67,6 @@ export const useTableRowCreateMutation = ({
   'mutationFn'
 > = {}) => {
   const queryClient = useQueryClient()
-  const { mutate: sendEvent } = useSendEventMutation()
   const { data: org } = useSelectedOrganizationQuery()
 
   return useMutation<TableRowCreateData, ResponseError, TableRowCreateVariables>({

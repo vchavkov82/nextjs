@@ -11,7 +11,6 @@ import z from 'zod'
 
 import { useAddLoginEvent } from 'data/misc/audit-login-mutation'
 import { getMfaAuthenticatorAssuranceLevel } from 'data/profile/mfa-authenticator-assurance-level-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useLastSignIn } from 'hooks/misc/useLastSignIn'
 import { captureCriticalError } from 'lib/error-reporting'
 import { auth, buildPathWithParams, getReturnToPath } from 'lib/gotrue'
@@ -48,7 +47,6 @@ export const SignInForm = () => {
     setReturnTo(getReturnToPath())
   }, [])
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: addLoginEvent } = useAddLoginEvent()
 
   let forgotPasswordUrl = `/forgot-password`

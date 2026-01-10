@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { toast } from 'sonner'
 
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
+import { sendEvent } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { sqlEventParser } from 'lib/sql-event-parser'
 import { executeSql, ExecuteSqlData, ExecuteSqlVariables } from './execute-sql-query'
@@ -34,7 +34,6 @@ export const useExecuteSqlMutation = ({
   'mutationFn'
 > = {}) => {
   const queryClient = useQueryClient()
-  const { mutate: sendEvent } = useSendEventMutation()
   const { data: org } = useSelectedOrganizationQuery()
 
   return useMutation<ExecuteSqlData, QueryResponseError, ExecuteSqlVariables>({

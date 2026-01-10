@@ -54,7 +54,6 @@ import { withAuth } from 'hooks/misc/withAuth'
 import { usePHFlag } from 'hooks/ui/useFlag'
 import { DOCS_URL, PROJECT_STATUS, PROVIDERS, useDefaultProvider } from 'lib/constants'
 import { isHomeNewVariant, type HomeNewFlagValue } from 'lib/featureFlags/homeNew'
-import { useTrack } from 'lib/telemetry/track'
 import { AWS_REGIONS, type CloudProvider } from 'shared-data'
 import type { NextPageWithLayout } from 'types'
 import { Button, Form_Shadcn_, FormField_Shadcn_, useWatch_Shadcn_ } from 'ui'
@@ -64,7 +63,6 @@ import ConfirmationModal from 'ui-patterns/Dialogs/ConfirmationModal'
 const sizesWithNoCostConfirmationRequired: DesiredInstanceSize[] = ['micro', 'small']
 
 const Wizard: NextPageWithLayout = () => {
-  const track = useTrack()
   const router = useRouter()
   const { slug, projectName } = useParams()
   const defaultProvider = useDefaultProvider()

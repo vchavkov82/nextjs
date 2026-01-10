@@ -23,7 +23,6 @@ import { useBranchPushMutation } from 'data/branches/branch-push-mutation'
 import { useBranchUpdateMutation } from 'data/branches/branch-update-mutation'
 import { useBranchesQuery } from 'data/branches/branches-query'
 import { useProjectDetailQuery } from 'data/projects/project-detail-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useBranchMergeDiff } from 'hooks/branches/useBranchMergeDiff'
 import { useWorkflowManagement } from 'hooks/branches/useWorkflowManagement'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
@@ -213,7 +212,6 @@ const MergePage: NextPageWithLayout = () => {
     },
   })
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const { mutate: mergeBranch, isPending: isMerging } = useBranchMergeMutation({
     onSuccess: (data) => {

@@ -13,7 +13,6 @@ import { createSqlSnippetSkeletonV2 } from 'components/interfaces/SQLEditor/SQLE
 import { QuickstartAIWidget } from 'components/interfaces/TableGridEditor/SidePanelEditor/TableEditor/TableQuickstart/QuickstartAIWidget'
 import { QuickstartTemplatesWidget } from 'components/interfaces/TableGridEditor/SidePanelEditor/TableEditor/TableQuickstart/QuickstartTemplatesWidget'
 import { QuickstartVariant } from 'components/interfaces/TableGridEditor/SidePanelEditor/TableEditor/TableQuickstart/types'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useQuerySchemaState } from 'hooks/misc/useSchemaQueryState'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
@@ -22,7 +21,6 @@ import { usePHFlag } from 'hooks/ui/useFlag'
 import { useIsProtectedSchema } from 'hooks/useProtectedSchemas'
 import { uuidv4 } from 'lib/helpers'
 import { useProfile } from 'lib/profile'
-import { useTrack } from 'lib/telemetry/track'
 import { AssistantMessageType, useAiAssistantStateSnapshot } from 'state/ai-assistant-state'
 import { useSidebarManagerSnapshot } from 'state/sidebar-manager-state'
 import { useSqlEditorV2StateSnapshot } from 'state/sql-editor-v2'
@@ -72,8 +70,6 @@ export function NewTab() {
   const [quickstarts] = partition(SQL_TEMPLATES, { type: 'quickstart' })
   const hasTrackedExposure = useRef(false)
 
-  const { mutate: sendEvent } = useSendEventMutation()
-  const track = useTrack()
   const { can: canCreateSQLSnippet } = useAsyncCheckPermissions(
     PermissionAction.CREATE,
     'user_content',

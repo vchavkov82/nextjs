@@ -29,7 +29,6 @@ import {
   UpsertContentPayload,
   useContentUpsertMutation,
 } from 'data/content/content-upsert-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -49,7 +48,6 @@ export function CustomReportSection() {
   const { profile } = useProfile()
   const state = useDatabaseSelectorStateSnapshot()
   const { data: organization } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
   const { invalidateInfraMonitoringQuery } = useInvalidateAnalyticsQuery()
   const { data: project } = useSelectedProjectQuery()
 

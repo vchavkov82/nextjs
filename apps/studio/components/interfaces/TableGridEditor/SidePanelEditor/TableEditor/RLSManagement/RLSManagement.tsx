@@ -10,7 +10,6 @@ import { useDatabasePoliciesQuery } from 'data/database-policies/database-polici
 import { useQuerySchemaState } from 'hooks/misc/useSchemaQueryState'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { DOCS_URL } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { Button, cn } from 'ui'
 import { Admonition } from 'ui-patterns/admonition'
 import type { ForeignKey } from '../../ForeignKeySelector/ForeignKeySelector.types'
@@ -42,7 +41,6 @@ export const RLSManagement = ({
   onRLSUpdate,
   onGeneratedPoliciesChange,
 }: RLSManagementProps) => {
-  const track = useTrack()
   const { data: project } = useSelectedProjectQuery()
   const { selectedSchema } = useQuerySchemaState()
 

@@ -9,7 +9,6 @@ import {
 import { InlineLink } from 'components/ui/InlineLink'
 import { TextConfirmModal } from 'components/ui/TextConfirmModalWrapper'
 import { useDpaRequestMutation } from 'data/documents/dpa-request-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useProfile } from 'lib/profile'
 import { Button } from 'ui'
@@ -21,7 +20,6 @@ export const DPA = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: requestDpa, isPending: isRequesting } = useDpaRequestMutation({
     onSuccess: () => {
       toast.success('DPA request sent successfully')

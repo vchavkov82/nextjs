@@ -1,4 +1,3 @@
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { GitBranchIcon } from 'lucide-react'
@@ -46,7 +45,6 @@ export const OutOfDateNotice = ({
   const hasOutdatedMigrations = isBranchOutOfDateMigrations && missingMigrationsCount > 0
   const { data: selectedOrg } = useSelectedOrganizationQuery()
   const { data: project } = useSelectedProjectQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const isBranch = project?.parent_project_ref !== undefined
   const parentProjectRef = isBranch ? project?.parent_project_ref : project?.ref

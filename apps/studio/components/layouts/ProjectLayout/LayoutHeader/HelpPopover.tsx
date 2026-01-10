@@ -9,7 +9,6 @@ import type { SupportFormUrlKeys } from 'components/interfaces/Support/SupportFo
 import { SupportLink } from 'components/interfaces/Support/SupportLink'
 import { SIDEBAR_KEYS } from 'components/layouts/ProjectLayout/LayoutSidebar/LayoutSidebarProvider'
 import { ButtonTooltip } from 'components/ui/ButtonTooltip'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { DOCS_URL } from 'lib/constants'
@@ -33,7 +32,6 @@ export const HelpPopover = () => {
   const { data: org } = useSelectedOrganizationQuery()
   const snap = useAiAssistantStateSnapshot()
   const { openSidebar } = useSidebarManagerSnapshot()
-  const { mutate: sendEvent } = useSendEventMutation()
   const [isOpen, setIsOpen] = useState(false)
 
   const projectRef = project?.parent_project_ref ?? (router.query.ref as string | undefined)

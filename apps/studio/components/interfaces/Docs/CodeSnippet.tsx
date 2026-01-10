@@ -1,5 +1,4 @@
 import { useParams } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { SimpleCodeBlock } from 'ui'
 
@@ -15,7 +14,6 @@ interface CodeSnippetProps {
 const CodeSnippet = ({ selectedLang, snippet }: CodeSnippetProps) => {
   const { ref: projectRef } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const handleCopy = () => {
     sendEvent({

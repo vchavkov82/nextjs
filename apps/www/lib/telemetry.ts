@@ -1,23 +1,13 @@
-'use client'
-
-import { sendTelemetryEvent } from 'common'
-import type { TelemetryEvent } from 'common/telemetry-constants'
-import { API_URL } from 'lib/constants'
-import { usePathname, useSearchParams } from 'next/navigation'
-import { useCallback } from 'react'
-
+/**
+ * Telemetry stub - returns a no-op function
+ * External telemetry has been removed
+ */
 export function useSendTelemetryEvent() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  return useCallback(
-    (event: TelemetryEvent) => {
-      const url = new URL(API_URL ?? 'http://localhost:3000')
-      url.pathname = pathname ?? ''
-      url.search = searchParams?.toString() ?? ''
-
-      return sendTelemetryEvent(API_URL, event, url.toString())
-    },
-    [pathname, searchParams]
-  )
+  return (_event: {
+    action: string
+    properties?: Record<string, unknown>
+    groups?: Record<string, string>
+  }) => {
+    // No-op: telemetry has been removed
+  }
 }

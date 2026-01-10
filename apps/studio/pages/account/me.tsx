@@ -1,7 +1,6 @@
 import { AccountConnections } from 'components/interfaces/Account/Preferences/AccountConnections'
 import { AccountDeletion } from 'components/interfaces/Account/Preferences/AccountDeletion'
 import { AccountIdentities } from 'components/interfaces/Account/Preferences/AccountIdentities'
-import { AnalyticsSettings } from 'components/interfaces/Account/Preferences/AnalyticsSettings'
 import { HotkeySettings } from 'components/interfaces/Account/Preferences/HotkeySettings'
 import { InlineEditorSettings } from 'components/interfaces/Account/Preferences/InlineEditorSettings'
 import { ProfileInformation } from 'components/interfaces/Account/Preferences/ProfileInformation'
@@ -93,8 +92,6 @@ const ProfileCard = () => {
         <HotkeySettings />
 
         <InlineEditorSettings />
-
-        {profileShowAnalyticsAndMarketing && <AnalyticsSettings />}
 
         {profileShowAccountDeletion && <AccountDeletion />}
       </PageContainer>

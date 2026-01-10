@@ -3,12 +3,12 @@ import { PropsWithChildren, createContext, useContext, useEffect, useMemo } from
 import { toast } from 'sonner'
 
 import { useIsLoggedIn, useUser } from 'common'
+import { sendEvent } from 'data/telemetry/send-event-mutation'
 import { usePermissionsQuery } from 'data/permissions/permissions-query'
 import { useProfileCreateMutation } from 'data/profile/profile-create-mutation'
 import { useProfileIdentitiesQuery } from 'data/profile/profile-identities-query'
 import { useProfileQuery } from 'data/profile/profile-query'
 import type { Profile } from 'data/profile/types'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import type { ResponseError } from 'types'
 import { useSignOut } from './auth'
 import { getGitHubProfileImgUrl } from './github'
@@ -35,7 +35,6 @@ export const ProfileProvider = ({ children }: PropsWithChildren<{}>) => {
   const router = useRouter()
   const signOut = useSignOut()
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: createProfile, isPending: isCreatingProfile } = useProfileCreateMutation({
     onSuccess: () => {
       sendEvent({ action: 'sign_up', properties: { category: 'conversion' } })

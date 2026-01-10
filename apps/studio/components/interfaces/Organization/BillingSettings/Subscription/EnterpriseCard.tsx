@@ -1,6 +1,5 @@
 import { Check } from 'lucide-react'
 
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { PricingInformation } from 'shared-data'
 import { Button, cn } from 'ui'
@@ -17,7 +16,6 @@ export const EnterpriseCard = ({ plan, isCurrentPlan }: EnterpriseCardProps) => 
   const features = plan.features
   const currentPlan = selectedOrganization?.plan.name
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   return (
     <div

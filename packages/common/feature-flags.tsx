@@ -26,10 +26,8 @@ export async function getFeatureFlags(API_URL: string) {
 }
 
 export async function trackFeatureFlag(API_URL: string, body: TrackFeatureFlagVariables) {
-  const consent = hasConsented()
-
-  if (!consent) return undefined
-  await post(`${ensurePlatformSuffix(API_URL)}/telemetry/feature-flags/track`, { body })
+  // Telemetry removed - no-op
+  return Promise.resolve()
 }
 
 export type FeatureFlagContextType = {

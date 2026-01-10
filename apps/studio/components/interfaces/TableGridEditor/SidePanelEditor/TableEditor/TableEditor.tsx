@@ -21,7 +21,6 @@ import { useTableCreateGeneratePolicies } from 'hooks/misc/useTableCreateGenerat
 import { useUrlState } from 'hooks/ui/useUrlState'
 import { useProtectedSchemas } from 'hooks/useProtectedSchemas'
 import { DOCS_URL } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { type PlainObject } from 'lib/type-helpers'
 import { TableEditorStateContext, useTableEditorStateSnapshot } from 'state/table-editor'
 import { Badge, Checkbox, Input, SidePanel } from 'ui'
@@ -77,7 +76,6 @@ export const TableEditor = ({
   updateEditorDirty = noop,
   apiAccessToggleHandler,
 }: TableEditorProps) => {
-  const track = useTrack()
   const snap = useTableEditorStateSnapshot()
   const tableEditorApi = useContext(TableEditorStateContext)
   const { realtimeAll: realtimeEnabled } = useIsFeatureEnabled(['realtime:all'])

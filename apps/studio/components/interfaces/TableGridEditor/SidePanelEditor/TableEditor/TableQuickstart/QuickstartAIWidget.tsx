@@ -15,7 +15,6 @@ import { AI_QUICK_IDEAS } from './constants'
 import type { TableSuggestion } from './types'
 import { useAITableGeneration } from './useAITableGeneration'
 import { convertTableSuggestionToTableField } from './utils'
-import { useTrack } from 'lib/telemetry/track'
 
 interface QuickstartAIWidgetProps {
   onSelectTable: (tableData: Partial<TableField>) => void
@@ -27,7 +26,6 @@ const SUCCESS_MESSAGE_DURATION_MS = 3000
 export const QuickstartAIWidget = ({ onSelectTable, disabled }: QuickstartAIWidgetProps) => {
   const [lastGeneratedPrompt, setLastGeneratedPrompt] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
-  const track = useTrack()
 
   const {
     generateTables,

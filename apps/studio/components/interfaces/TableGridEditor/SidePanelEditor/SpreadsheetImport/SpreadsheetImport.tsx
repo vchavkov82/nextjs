@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 
 import { useParams } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useChanged } from 'hooks/misc/useChanged'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useTableEditorStateSnapshot } from 'state/table-editor'
@@ -68,7 +67,6 @@ export const SpreadsheetImport = ({
   const [errors, setErrors] = useState<any>([])
   const [selectedHeaders, setSelectedHeaders] = useState<string[]>([])
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const selectedTableColumns = (selectedTable?.columns ?? []).map((column) => column.name)
   const incompatibleHeaders = selectedHeaders.filter(

@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { LOCAL_STORAGE_KEYS } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { Card, CardContent, FormControl_Shadcn_, FormField_Shadcn_, Form_Shadcn_, Switch } from 'ui'
@@ -37,7 +36,6 @@ export const InlineEditorSettings = () => {
   )
   const { data: org } = useSelectedOrganizationQuery()
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const form = useForm<z.infer<typeof InlineEditorSchema>>({
     resolver: zodResolver(InlineEditorSchema),

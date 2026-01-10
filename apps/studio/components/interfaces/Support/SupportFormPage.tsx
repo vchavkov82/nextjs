@@ -7,10 +7,10 @@ import { toast } from 'sonner'
 // End of third-party imports
 
 import CopyButton from 'components/ui/CopyButton'
+import { sendEvent } from 'data/telemetry/send-event-mutation'
 import { useOrganizationsQuery } from 'data/organizations/organizations-query'
 import { useIncidentStatusQuery } from 'data/platform/incident-status-query'
 import { usePlatformStatusQuery } from 'data/platform/platform-status-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useStateTransition } from 'hooks/misc/useStateTransition'
 import { BASE_PATH, DOCS_URL } from 'lib/constants'
 import { Button, cn, Tooltip, TooltipContent, TooltipTrigger } from 'ui'
@@ -32,8 +32,6 @@ import { SupportFormV2 } from './SupportFormV2'
 import { useSupportForm } from './useSupportForm'
 
 function useSupportFormTelemetry() {
-  const { mutate: sendEvent } = useSendEventMutation()
-
   return useCallback(
     ({
       projectRef,
@@ -54,7 +52,7 @@ function useSupportFormTelemetry() {
           organization: orgSlug,
         },
       }),
-    [sendEvent]
+    []
   )
 }
 

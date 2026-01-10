@@ -1,7 +1,6 @@
 
 import { useFeatureFlags } from 'common'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
-import { trackFeatureFlag } from 'lib/posthog'
 
 const isObjectEmpty = (obj: Object) => {
   return Object.keys(obj).length === 0
@@ -50,17 +49,8 @@ export function usePHFlag<T = string | boolean>(name: string) {
   }
 
   if (trackedValue !== flagValue) {
-    try {
-      // [Joshen] Only fire the track endpoint once across sessions unless the flag value changes
-      // Note: This cannot guarantee excess calls in the event for e.g user clears local storage or uses incognito
-      // trackFeatureFlag checks for telemetry consent before actually firing the request too
-      trackFeatureFlag({ feature_flag_name: name, feature_flag_value: flagValue })
-      setTrackedValue(flagValue as string)
-    } catch (error: any) {
-      // Sentry not imported - just log the error
-      console.error('Feature flag tracking error:', error)
-      console.error(error.message)
-    }
+    // Telemetry removed - just update local storage
+    setTrackedValue(flagValue as string)
   }
 
   return flagValue as T

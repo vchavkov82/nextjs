@@ -79,7 +79,6 @@ vi.mock('hooks/misc/useSelectedOrganization', () => ({
 }))
 
 vi.mock('data/telemetry/send-event-mutation', () => ({
-  useSendEventMutation: () => ({
     mutate: vi.fn(),
   }),
 }))

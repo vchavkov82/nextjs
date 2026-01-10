@@ -12,7 +12,6 @@ import { useNotificationsV2UpdateMutation } from 'data/notifications/notificatio
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { IS_PLATFORM } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import { AdvisorSeverity, AdvisorTab, useAdvisorStateSnapshot } from 'state/advisor-state'
 import { useSidebarManagerSnapshot } from 'state/sidebar-manager-state'
 import { AdvisorDetail } from './AdvisorDetail'
@@ -50,7 +49,6 @@ const notificationPriorityToSeverity = (priority: string | null | undefined): Ad
 }
 
 export const AdvisorPanel = () => {
-  const track = useTrack()
   const {
     activeTab,
     severityFilters,

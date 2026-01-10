@@ -1,6 +1,5 @@
 import { BookOpenText } from 'lucide-react'
 import { useParams } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useAppStateSnapshot } from 'state/app-state'
 import { ButtonTooltip } from './ButtonTooltip'
@@ -14,7 +13,6 @@ export const APIDocsButton = ({ section, source }: APIDocsButtonProps) => {
   const snap = useAppStateSnapshot()
   const { ref } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   return (
     <ButtonTooltip

@@ -5,7 +5,6 @@ import { PropsWithChildren, useEffect, useRef } from 'react'
 import { Admonition } from 'ui-patterns/admonition'
 
 import { Button } from 'ui'
-import { useTrack } from 'lib/telemetry/track'
 
 export interface AlertErrorProps {
   projectRef?: string
@@ -53,7 +52,6 @@ export const AlertError = ({
   children,
   additionalActions,
 }: PropsWithChildren<AlertErrorProps>) => {
-  const track = useTrack()
   const hasTrackedRef = useRef(false)
 
   const formattedErrorMessage = error?.message?.includes('503')

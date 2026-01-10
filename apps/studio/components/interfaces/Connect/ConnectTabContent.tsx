@@ -8,7 +8,6 @@ import { useSupavisorConfigurationQuery } from 'data/database/supavisor-configur
 import { useProjectAddonsQuery } from 'data/subscriptions/project-addons-query'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { pluckObjectFields } from 'lib/helpers'
-import { useTrack } from 'lib/telemetry/track'
 import { cn, CopyCallbackContext } from 'ui'
 import { GenericSkeletonLoader } from 'ui-patterns/ShimmeringLoader'
 import { getAddons } from '../Billing/Subscription/Subscription.utils'
@@ -33,7 +32,6 @@ interface ConnectContentTabProps extends HTMLAttributes<HTMLDivElement> {
 export const ConnectTabContent = forwardRef<HTMLDivElement, ConnectContentTabProps>(
   ({ projectKeys, filePath, connectionTab, selectedFrameworkOrTool, ...props }, ref) => {
     const { ref: projectRef } = useParams()
-    const track = useTrack()
     const { data: selectedOrg } = useSelectedOrganizationQuery()
     const allowPgBouncerSelection = useMemo(() => selectedOrg?.plan.id !== 'free', [selectedOrg])
 

@@ -10,7 +10,6 @@ import { useGetIndexAdvisorResult } from 'data/database/retrieve-index-advisor-r
 import { useGetIndexesFromSelectQuery } from 'data/database/retrieve-index-from-select-query'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { DOCS_URL } from 'lib/constants'
-import { useTrack } from 'lib/telemetry/track'
 import {
   AccordionContent_Shadcn_,
   AccordionItem_Shadcn_,
@@ -60,7 +59,6 @@ export const QueryIndexes = ({
   const { data: project } = useSelectedProjectQuery()
   const [showStartupCosts, setShowStartupCosts] = useState(false)
   const [isExecuting, setIsExecuting] = useState(false)
-  const track = useTrack()
   const [hasTrackedTabView, setHasTrackedTabView] = useState(false)
 
   const {

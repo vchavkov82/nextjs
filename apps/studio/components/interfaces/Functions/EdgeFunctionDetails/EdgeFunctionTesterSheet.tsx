@@ -12,7 +12,6 @@ import { useSessionAccessTokenQuery } from 'data/auth/session-access-token-query
 import { useProjectPostgrestConfigQuery } from 'data/config/project-postgrest-config-query'
 import { useProjectSettingsV2Query } from 'data/config/project-settings-v2-query'
 import { useEdgeFunctionTestMutation } from 'data/edge-functions/edge-function-test-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { IS_PLATFORM } from 'lib/constants'
@@ -96,7 +95,6 @@ export const EdgeFunctionTesterSheet = ({ visible, onClose }: EdgeFunctionTester
   const { data: accessToken } = useSessionAccessTokenQuery({ enabled: IS_PLATFORM })
   const { serviceKey } = getKeys(apiKeys)
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: testEdgeFunction, isPending } = useEdgeFunctionTestMutation({
     onSuccess: (res) => setResponse(res),
     onError: (err) => {

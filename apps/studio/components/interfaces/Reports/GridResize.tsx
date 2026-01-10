@@ -10,7 +10,6 @@ import {
   UpsertContentPayload,
   useContentUpsertMutation,
 } from 'data/content/content-upsert-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { useProfile } from 'lib/profile'
@@ -56,7 +55,6 @@ export const GridResize = ({
   const { data: project } = useSelectedProjectQuery()
   const { data: selectedOrg } = useSelectedOrganizationQuery()
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutate: upsertContent } = useContentUpsertMutation()
 
   const onUpdateLayout = (layout: RGL.Layout[]) => {

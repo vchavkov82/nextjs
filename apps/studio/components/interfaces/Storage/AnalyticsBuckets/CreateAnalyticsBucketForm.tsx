@@ -9,7 +9,6 @@ import { useDatabaseExtensionEnableMutation } from 'data/database-extensions/dat
 import { useAnalyticsBucketCreateMutation } from 'data/storage/analytics-bucket-create-mutation'
 import { useAnalyticsBucketsQuery } from 'data/storage/analytics-buckets-query'
 import { useIcebergWrapperCreateMutation } from 'data/storage/iceberg-wrapper-create-mutation'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { DOCS_URL } from 'lib/constants'
@@ -127,7 +126,6 @@ export const CreateAnalyticsBucketForm = ({
   const { data: buckets = [] } = useAnalyticsBucketsQuery({ projectRef: ref })
   const wrappersExtensionNeedsUpgrading = wrappersExtensionState === 'needs-upgrade'
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const { mutateAsync: createAnalyticsBucket, isPending: isCreatingAnalyticsBucket } =
     useAnalyticsBucketCreateMutation({

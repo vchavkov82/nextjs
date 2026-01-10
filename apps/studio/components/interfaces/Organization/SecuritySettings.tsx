@@ -14,7 +14,6 @@ import { UpgradeToPro } from 'components/ui/UpgradeToPro'
 import { useOrganizationMembersQuery } from 'data/organizations/organization-members-query'
 import { useOrganizationMfaToggleMutation } from 'data/organizations/organization-mfa-mutation'
 import { useOrganizationMfaQuery } from 'data/organizations/organization-mfa-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useProfile } from 'lib/profile'
@@ -52,7 +51,6 @@ export const SecuritySettings = () => {
     PermissionAction.UPDATE,
     'organizations'
   )
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const isPaidPlan = selectedOrganization?.plan.id !== 'free'
 

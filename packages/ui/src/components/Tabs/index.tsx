@@ -1,1 +1,1 @@
-export { default as Tabs, type TabsProps } from './Tabs'
+export { default as Tabs, Panel, type TabsProps } from './Tabs'

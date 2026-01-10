@@ -10,7 +10,6 @@ import { useDatabaseExtensionEnableMutation } from 'data/database-extensions/dat
 import { useS3VectorsWrapperCreateMutation } from 'data/storage/s3-vectors-wrapper-create-mutation'
 import { useVectorBucketCreateMutation } from 'data/storage/vector-bucket-create-mutation'
 import { useVectorBucketsQuery } from 'data/storage/vector-buckets-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { DOCS_URL } from 'lib/constants'
@@ -100,7 +99,6 @@ export const CreateVectorBucketDialog = ({
     defaultValues: { name: '' },
   })
 
-  const { mutate: sendEvent } = useSendEventMutation()
   const { mutateAsync: createVectorBucket } = useVectorBucketCreateMutation({
     onError: () => { },
   })

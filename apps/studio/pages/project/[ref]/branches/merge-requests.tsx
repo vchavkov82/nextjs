@@ -23,7 +23,6 @@ import NoPermission from 'components/ui/NoPermission'
 import { useBranchUpdateMutation } from 'data/branches/branch-update-mutation'
 import { Branch, useBranchesQuery } from 'data/branches/branches-query'
 import { useGitHubConnectionsQuery } from 'data/integrations/github-connections-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
@@ -91,7 +90,6 @@ const MergeRequestsPage: NextPageWithLayout = () => {
 
   const isGithubConnected = githubConnection !== undefined
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const { mutate: updateBranch, isPending: isUpdating } = useBranchUpdateMutation({
     onError: () => {
@@ -331,7 +329,6 @@ const MergeRequestsPageWrapper = ({ children }: PropsWithChildren<{}>) => {
   const { data: branches } = useBranchesQuery({ projectRef })
   const previewBranches = (branches || []).filter((b) => !b.is_default)
 
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const { mutate: updateBranch, isPending: isUpdating } = useBranchUpdateMutation({
     onError: () => {

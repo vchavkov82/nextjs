@@ -6,7 +6,6 @@ import { Button, Input, copyToClipboard } from 'ui'
 
 import { getKeys, useAPIKeysQuery } from 'data/api-keys/api-keys-query'
 import { useProjectSettingsV2Query } from 'data/config/project-settings-v2-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import ContentSnippet from '../ContentSnippet'
@@ -19,7 +18,6 @@ export const Introduction = ({ showKeys, language, apikey, endpoint }: ContentPr
   const { data: apiKeys } = useAPIKeysQuery({ projectRef: ref }, { enabled: canReadAPIKeys })
   const { data } = useProjectSettingsV2Query({ projectRef: ref })
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const [copied, setCopied] = useState<'anon' | 'service'>()
 

@@ -3,7 +3,6 @@ import { MessageSquare } from 'lucide-react'
 import Link from 'next/link'
 import { useCallback, useEffect, useState } from 'react'
 
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { AiIconAnimation, Button } from 'ui'
 import { NO_ORG_MARKER, NO_PROJECT_MARKER } from './SupportForm.utils'
 
@@ -13,7 +12,6 @@ interface AIAssistantOptionProps {
 }
 
 export const AIAssistantOption = ({ projectRef, organizationSlug }: AIAssistantOptionProps) => {
-  const { mutate: sendEvent } = useSendEventMutation()
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {

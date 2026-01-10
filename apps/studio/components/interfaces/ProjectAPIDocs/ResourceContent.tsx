@@ -2,7 +2,6 @@ import { SimpleCodeBlock } from 'ui'
 import { useParams } from 'common'
 import { DocsButton } from 'components/ui/DocsButton'
 import { Markdown } from '../Markdown'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 
 interface ResourceContentProps {
@@ -19,7 +18,6 @@ interface ResourceContentProps {
 const ResourceContent = ({ selectedLanguage, snippet, codeSnippets }: ResourceContentProps) => {
   const { ref: projectRef } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
-  const { mutate: sendEvent } = useSendEventMutation()
 
   const handleCopy = (title: string) => {
     sendEvent({

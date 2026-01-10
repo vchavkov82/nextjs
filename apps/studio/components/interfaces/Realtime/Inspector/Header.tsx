@@ -5,7 +5,6 @@ import { Dispatch, SetStateAction } from 'react'
 import { IS_PLATFORM, useParams } from 'common'
 import { ButtonTooltip } from 'components/ui/ButtonTooltip'
 import { getTemporaryAPIKey } from 'data/api-keys/temp-api-keys-query'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { ChooseChannelPopover } from './ChooseChannelPopover'
@@ -19,7 +18,6 @@ interface HeaderProps {
 }
 
 export const Header = ({ config, onChangeConfig }: HeaderProps) => {
-  const { mutate: sendEvent } = useSendEventMutation()
   const { ref } = useParams()
   const { data: org } = useSelectedOrganizationQuery()
 

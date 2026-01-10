@@ -23,7 +23,6 @@ import {
 import { QueryPerformanceRow } from './QueryPerformance.types'
 import { buildQueryExplanationPrompt } from './QueryPerformance.ai'
 import { formatDuration } from './QueryPerformance.utils'
-import { useTrack } from 'lib/telemetry/track'
 
 interface QueryDetailProps {
   selectedRow?: QueryPerformanceRow
@@ -47,7 +46,6 @@ export const QueryDetail = ({ selectedRow, onClickViewSuggestion, onClose }: Que
 
   const { openSidebar } = useSidebarManagerSnapshot()
   const aiSnap = useAiAssistantStateSnapshot()
-  const track = useTrack()
 
   const showExplainWithAiInQueryPerformance = useFlag('ShowExplainWithAiInQueryPerformance')
 

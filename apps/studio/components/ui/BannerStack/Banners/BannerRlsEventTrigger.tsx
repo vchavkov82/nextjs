@@ -11,7 +11,6 @@ import { useDatabaseEventTriggersQuery } from 'data/database-event-triggers/data
 import { useAsyncCheckPermissions } from 'hooks/misc/useCheckPermissions'
 import { useLocalStorageQuery } from 'hooks/misc/useLocalStorage'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
-import { useTrack } from 'lib/telemetry/track'
 import Link from 'next/link'
 import { Button, cn } from 'ui'
 import { BannerCard } from '../BannerCard'
@@ -23,7 +22,6 @@ export const BannerRlsEventTrigger = () => {
   const { data: project } = useSelectedProjectQuery()
   const projectRef = ref ?? project?.ref
   const [hasCreated, setHasCreated] = useState(false)
-  const track = useTrack()
   const [, setIsDismissed] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.RLS_EVENT_TRIGGER_BANNER_DISMISSED(projectRef ?? 'unknown'),
     false

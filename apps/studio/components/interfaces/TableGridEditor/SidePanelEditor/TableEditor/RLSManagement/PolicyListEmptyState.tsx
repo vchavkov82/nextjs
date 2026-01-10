@@ -13,7 +13,6 @@ import {
 } from 'data/database/foreign-key-constraints-query'
 import { useOrgAiOptInLevel } from 'hooks/misc/useOrgOptedIntoAi'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
-import { useTrack } from 'lib/telemetry/track'
 import { Button, Card, CardContent, cn } from 'ui'
 import type { ForeignKey } from '../../ForeignKeySelector/ForeignKeySelector.types'
 import { ColumnField } from '../../SidePanelEditor.types'
@@ -39,7 +38,6 @@ export const PolicyListEmptyState = ({
   isDuplicating,
   onGeneratedPoliciesChange,
 }: PolicyListEmptyStateProps) => {
-  const track = useTrack()
   const { data: project } = useSelectedProjectQuery()
   const { includeSchemaMetadata } = useOrgAiOptInLevel()
 

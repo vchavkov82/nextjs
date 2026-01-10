@@ -3,7 +3,6 @@ import { parseAsString, useQueryState } from 'nuqs'
 import { useRouter } from 'next/router'
 
 import { useParams } from 'common'
-import { useSendEventMutation } from 'data/telemetry/send-event-mutation'
 import { useSelectedOrganizationQuery } from 'hooks/misc/useSelectedOrganization'
 import { useAiAssistantStateSnapshot } from 'state/ai-assistant-state'
 import {
@@ -23,7 +22,6 @@ export const DeployEdgeFunctionButton = () => {
   const { data: org } = useSelectedOrganizationQuery()
   const snap = useAiAssistantStateSnapshot()
   const { openSidebar } = useSidebarManagerSnapshot()
-  const { mutate: sendEvent } = useSendEventMutation()
   const [, setCreateMethod] = useQueryState('create', parseAsString)
 
   return (

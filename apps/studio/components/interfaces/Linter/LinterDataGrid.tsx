@@ -13,7 +13,6 @@ import {
 } from 'components/interfaces/Linter/Linter.utils'
 import { Lint } from 'data/lint/lint-query'
 import { useRouter } from 'next/router'
-import { useTrack } from 'lib/telemetry/track'
 import { Button, ResizableHandle, ResizablePanel, ResizablePanelGroup, cn } from 'ui'
 import { GenericSkeletonLoader } from 'ui-patterns/ShimmeringLoader'
 import { EntityTypeIcon } from './Linter.utils'
@@ -35,7 +34,6 @@ const LinterDataGrid = ({
   const gridRef = useRef<DataGridHandle>(null)
   const { ref } = useParams()
   const router = useRouter()
-  const track = useTrack()
 
   const lintCols = [
     {
