@@ -35,10 +35,10 @@ function GlobalProviders({ children }: PropsWithChildren) {
         <FeatureFlagProvider API_URL={API_URL} enabled={IS_PLATFORM}>
           <PageTelemetry />
           <ScrollRestoration />
-          <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange>
+          <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange attribute="class">
             <TooltipProvider delayDuration={0}>
               <DocsCommandProvider>
-                <div className="flex flex-col">
+                <div className="flex flex-col" suppressHydrationWarning>
                   <SiteLayout>
                     {children}
                     <DocsCommandMenu />

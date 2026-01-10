@@ -8,12 +8,13 @@ import SqlToRest from 'ui-patterns/SqlToRest'
 import { Heading } from 'ui/src/components/CustomHTMLElements'
 import { CodeBlock } from '~/features/ui/CodeBlock/CodeBlock'
 import { NamedCodeBlock } from '~/features/directives/CodeTabs.components'
-import { Accordion, AccordionItem } from '~/features/ui/Accordion'
-import InfoTooltip from '~/features/ui/InfoTooltip'
-import { ShowUntil } from '~/features/ui/ShowUntil'
-import { TabPanel, Tabs } from '~/features/ui/Tabs'
-import { ErrorCodes } from '../ui/ErrorCodes'
-import { McpConfigPanel } from '../ui/McpConfigPanel'
+// Client components removed from components map - they cause serialization errors
+// import { Accordion, AccordionItem } from '~/features/ui/Accordion.server'
+// import InfoTooltip from '~/features/ui/InfoTooltip.server'
+// import { ShowUntil } from '~/features/ui/ShowUntil.server'
+// import { TabPanel, Tabs } from '~/features/ui/Tabs.server'
+// import { ErrorCodes } from '../ui/ErrorCodes.server'
+// import { McpConfigPanel } from '../ui/McpConfigPanel.server'
 import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeCompact'
 // StepHikeCompact and its sub-components are statically imported
 // We transform <StepHikeCompact.Step> to <StepHikeCompactStep> in preprocessing,
@@ -22,23 +23,23 @@ import StepHikeCompactBase, { Step, Details, Code } from '~/components/StepHikeC
 // NavData must be statically imported to avoid serialization issues with render props
 // Functions cannot be passed from Server Components to Client Components
 import { NavData } from '~/components/NavData'
-// ProjectConfigVariables must be statically imported to avoid serialization issues
-// with withErrorBoundary HOC when dynamically imported
-import { ProjectConfigVariables } from '~/components/ProjectConfigVariables'
+// ProjectConfigVariables is a client component - removed to fix serialization error
+// import { ProjectConfigVariables } from '~/components/ProjectConfigVariables/ProjectConfigVariables.server'
 
 // Static imports for Server Components
 // Dynamic imports from next/dynamic create Module objects that cannot be serialized
 // when passed to compileMDX from next-mdx-remote/rsc
 // Since we're in a Server Component context, we can use static imports
 import { AiPromptsIndex } from '~/app/guides/getting-started/ai-prompts/[slug]/AiPromptsIndex'
-import { AppleSecretGenerator } from '~/components/AppleSecretGenerator'
+// Client components removed - they cause serialization errors in compileMDX
+// import { AppleSecretGenerator } from '~/components/AppleSecretGenerator/index.server'
 import AuthProviders from '~/components/AuthProviders'
 import ButtonCard from '~/components/ButtonCard'
-import { Extensions } from '~/components/Extensions'
-import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator'
+// import { Extensions } from '~/components/Extensions/index.server'
+// import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator/index.server'
 import { MetricsStackCards } from '~/components/MetricsStackCards'
-import { Price } from '~/components/Price'
-import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator'
+// import { Price } from '~/components/Price.server'
+// import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator/index.server'
 import { RegionsList, SmartRegionsList } from '~/components/RegionsList'
 import { SharedData } from '~/components/SharedData'
 import { CodeSampleDummy, CodeSampleWrapper } from '~/features/directives/CodeSample.client'
@@ -49,19 +50,20 @@ const AdmonitionWithMargin = (props: AdmonitionProps) => {
 }
 
 const components = {
-  Accordion,
-  AccordionItem,
+  // Client components removed to fix serialization error with compileMDX in RSC
+  // Accordion,
+  // AccordionItem,
   Admonition: AdmonitionWithMargin,
   AiPromptsIndex,
-  AppleSecretGenerator,
+  // AppleSecretGenerator,
   AuthProviders,
   Badge,
   Button,
   ButtonCard,
   CodeSampleDummy,
   CodeSampleWrapper,
-  ErrorCodes,
-  Extensions,
+  // ErrorCodes,
+  // Extensions,
   GlassPanel,
   IconArrowDown: ArrowDown,
   IconCheck: Check,
@@ -69,19 +71,19 @@ const components = {
   IconX: X,
   Image: (props: any) => <Image fill alt="" className="object-contain" {...props} />,
   // isFeatureEnabled is handled in preprocessing, not provided as a component
-  JwtGenerator,
-  JwtGeneratorSimple,
+  // JwtGenerator,
+  // JwtGeneratorSimple,
   Link,
-  McpConfigPanel,
+  // McpConfigPanel,
   MetricsStackCards,
   NamedCodeBlock,
   NavData,
-  ProjectConfigVariables,
-  RealtimeLimitsEstimator,
+  // ProjectConfigVariables,
+  // RealtimeLimitsEstimator,
   RegionsList,
   SmartRegionsList,
   SharedData,
-  ShowUntil,
+  // ShowUntil,
   SqlToRest,
   // StepHikeCompact and its sub-components are provided as flat component names
   // We transform <StepHikeCompact.Step> to <StepHikeCompactStep> in preprocessing (see MdxBase.tsx)
@@ -90,9 +92,9 @@ const components = {
   StepHikeCompactStep: Step,
   StepHikeCompactDetails: Details,
   StepHikeCompactCode: Code,
-  Tabs,
-  TabPanel,
-  InfoTooltip,
+  // Tabs,
+  // TabPanel,
+  // InfoTooltip,
   h2: (props: any) => (
     <Heading tag="h2" {...props}>
       {props.children}
@@ -109,7 +111,7 @@ const components = {
     </Heading>
   ),
   pre: CodeBlock,
-  Price,
+  // Price,
 }
 
 export { components }

@@ -1,3 +1,5 @@
+'use client'
+
 import { FC, PropsWithChildren, useEffect, useState } from 'react'
 // import createConfigCatClient from 'configcat-js'
 import FlagContext from './FlagContext'

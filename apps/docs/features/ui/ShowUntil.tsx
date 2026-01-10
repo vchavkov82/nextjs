@@ -1,12 +1,22 @@
-import { type ReactNode } from 'react'
+'use client'
+
+import { type ReactNode, useState, useEffect } from 'react'
 
 export function ShowUntil({ children, date }: { children: ReactNode; date: string }) {
-  const currentDate = new Date()
-  const untilDate = new Date(date)
+  const [shouldShow, setShouldShow] = useState(true) // Default to showing on server
+  
+  useEffect(() => {
+    const currentDate = new Date()
+    const untilDate = new Date(date)
+    
+    if (isNaN(untilDate.getTime()) || currentDate < untilDate) {
+      setShouldShow(true)
+    } else {
+      setShouldShow(false)
+    }
+  }, [date])
 
-  if (isNaN(untilDate.getTime()) || currentDate < untilDate) {
-    return <>{children}</>
-  } else {
-    return null
-  }
+  // Always render children on server (and initial client render) to avoid hydration mismatch
+  // The useEffect will hide it on client if the date has passed
+  return shouldShow ? <>{children}</> : null
 }

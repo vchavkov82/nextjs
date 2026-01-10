@@ -1,3 +1,5 @@
+'use client'
+
 import { noop } from 'lodash-es'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'

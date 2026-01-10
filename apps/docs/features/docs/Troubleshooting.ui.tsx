@@ -16,11 +16,14 @@ import {
 } from './Troubleshooting.utils.shared'
 
 export async function TroubleshootingPreview({ entry }: { entry: ITroubleshootingEntry }) {
+  // Use a fixed reference date for pseudo entries to avoid hydration mismatch
+  const fixedDate = new Date('2024-01-01')
   const dateUpdated = entry.data.database_id.startsWith('pseudo-')
-    ? new Date()
+    ? fixedDate
     : (await getTroubleshootingUpdatedDates()).get(entry.data.database_id)
 
-  const now = new Date()
+  // Use the same fixed date for year comparison to ensure consistency
+  const now = fixedDate
   const dateLabel =
     dateUpdated &&
     (() => {

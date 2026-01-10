@@ -121,31 +121,64 @@ const MDXRemoteBase = async ({
       ? finalSource.replace(/^---[\s\S]*?---\s*\n?/m, '').trimStart()
       : finalSource
     
+    // Declare finalCleanSource outside try block so it's accessible in catch for error logging
+    let finalCleanSource = cleanSource
+    
     try {
       // Ensure source absolutely doesn't start with frontmatter markers
       // This is critical - even with parseFrontmatter: false, if the source
       // starts with ---, the MDX compiler may still try to parse it and cause getData error
-      let finalCleanSource = cleanSource
-      if (finalCleanSource.trim().startsWith('---')) {
-        // More aggressive removal - find the first non-frontmatter line
-        const lines = finalCleanSource.split('\n')
-        let startIndex = 0
-        if (lines[0]?.trim() === '---') {
-          // Find the closing --- or the first content line
-          const closingIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() === '---')
-          if (closingIndex > 0) {
-            startIndex = closingIndex + 1
-          } else {
-            // No closing found, find first non-empty, non-dash line
-            startIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() !== '---' && line.trim() !== '')
-            if (startIndex < 0) startIndex = 0
+      
+      // Multiple passes to ensure all frontmatter is removed
+      let previousSource = ''
+      let iterations = 0
+      const maxIterations = 5
+      
+      while (finalCleanSource !== previousSource && iterations < maxIterations) {
+        previousSource = finalCleanSource
+        iterations++
+        
+        // Remove YAML frontmatter (--- ... ---)
+        finalCleanSource = finalCleanSource.replace(/^---\s*\n[\s\S]*?\n---\s*\n?/m, '')
+        
+        // Remove TOML frontmatter (+++ ... +++)
+        finalCleanSource = finalCleanSource.replace(/^\+\+\+\s*\n[\s\S]*?\n\+\+\+\s*\n?/m, '')
+        
+        // If still starts with ---, manually find and skip frontmatter block
+        if (finalCleanSource.trim().startsWith('---')) {
+          const lines = finalCleanSource.split('\n')
+          let startIndex = 0
+          
+          if (lines[0]?.trim() === '---') {
+            // Find the closing --- 
+            const closingIndex = lines.findIndex((line, idx) => idx > 0 && line.trim() === '---')
+            if (closingIndex > 0) {
+              startIndex = closingIndex + 1
+            } else {
+              // No closing found, skip until first content line
+              startIndex = lines.findIndex((line, idx) => 
+                idx > 0 && 
+                line.trim() !== '' && 
+                line.trim() !== '---' &&
+                !line.match(/^[\w-]+:\s*/)  // Skip YAML key:value lines
+              )
+              if (startIndex < 0) startIndex = 1 // Skip at least the opening ---
+            }
           }
+          
+          finalCleanSource = lines.slice(startIndex).join('\n')
         }
-        finalCleanSource = lines.slice(startIndex).join('\n').trimStart()
+        
+        finalCleanSource = finalCleanSource.trimStart()
       }
       
-      // Final safety check - remove any remaining frontmatter patterns
-      finalCleanSource = finalCleanSource.replace(/^---[\s\S]*?---\s*\n?/m, '').trimStart()
+      // Log if we still have frontmatter markers after cleanup
+      if (process.env.NODE_ENV === 'development' && finalCleanSource.trim().startsWith('---')) {
+        console.warn('WARNING: Source still starts with --- after cleanup:', {
+          preview: finalCleanSource.substring(0, 100),
+          iterations,
+        })
+      }
       
       // In next-mdx-remote v5, compileMDX from /rsc requires parseFrontmatter: false
       // and the options must be structured correctly
@@ -168,20 +201,25 @@ const MDXRemoteBase = async ({
       // If the error is about getData, it means frontmatter parsing was triggered
       // Log more details in development to help debug
       if (process.env.NODE_ENV === 'development') {
+        const errorMessage = compileError instanceof Error ? compileError.message : String(compileError)
+        const isGetDataError = errorMessage.includes('getData')
+        
         try {
-          console.error('MDX compilation error:', {
-            error: compileError instanceof Error ? compileError.message : String(compileError),
+          console.warn('MDX compilation error:', {
+            error: errorMessage,
+            isGetDataError,
             stack: compileError instanceof Error ? compileError.stack : undefined,
-            sourcePreview:
-              typeof cleanSource === 'string' && cleanSource.length > 0
-                ? cleanSource.substring(0, 200)
-                : 'Source not available',
-            hasFrontmatterMarkers:
-              typeof cleanSource === 'string' ? /^---/m.test(cleanSource) : false,
+            sourcePreview: finalCleanSource.substring(0, 300),
+            startsWithDashes: finalCleanSource.trim().startsWith('---'),
+            firstLine: finalCleanSource.split('\n')[0],
           })
+          
+          if (isGetDataError) {
+            console.warn('getData error detected - frontmatter may still be present in source')
+          }
         } catch (logError) {
           // If logging itself fails, just log the basic error
-          console.error('MDX compilation failed. Error logging also failed:', logError)
+          console.warn('MDX compilation failed. Error logging also failed:', logError)
         }
       }
       throw compileError

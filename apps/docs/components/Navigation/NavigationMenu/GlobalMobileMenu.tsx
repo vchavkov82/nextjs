@@ -1,3 +1,5 @@
+'use client'
+
 import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion'
 import { X } from 'lucide-react'
 import Image from 'next/image'

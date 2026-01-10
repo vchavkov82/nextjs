@@ -1,3 +1,5 @@
+'use client'
+
 import { KJUR } from 'jsrsasign'
 import { ChangeEvent, useState } from 'react'
 import { Button, CodeBlock, Input, Select } from 'ui'
