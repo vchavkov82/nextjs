@@ -17,7 +17,7 @@ type MatchPageSectionsFunction = 'match_page_sections_v2' | 'match_page_sections
 
 export async function clippy(
   openai: OpenAI,
-  supabaseClient: SupabaseClient<any, 'public', any>,
+  baClient: SupabaseClient<any, 'public', any>,
   messages: Message[],
   options?: { useAltSearchIndex?: boolean }
 ) {
@@ -71,7 +71,7 @@ export async function clippy(
     : 'match_page_sections_v2'
   const joinedTable = options?.useAltSearchIndex ? 'page_nimbus' : 'page'
 
-  const { error: matchError, data: pageSections } = (await supabaseClient
+  const { error: matchError, data: pageSections } = (await baClient
     .rpc(searchFunction, {
       embedding,
       match_threshold: 0.78,

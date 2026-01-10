@@ -1,6 +1,6 @@
 # Developing BA
 
-- [Developing BA](#developing-supabase)
+- [Developing BA](#developing-ba)
 
   - [Getting started](#getting-started)
     - [Install dependencies](#install-dependencies)
@@ -11,7 +11,7 @@
       - [Running sites individually](#running-sites-individually)
       - [Shared components](#shared-components)
       - [Installing packages](#installing-packages)
-  - [Running Docker for BA Studio](#running-docker-for-supabase-studio)
+  - [Running Docker for Business Assistance Studio](#running-docker-for-business-assistance-studio)
     - [Prerequisites](#prerequisites)
     - [Get Started](#get-started)
   - [Create a pull request](#create-a-pull-request)
@@ -55,12 +55,12 @@ To contribute code to [BA](https://www.assistance.bg), you must fork the [BA rep
 1. Clone your GitHub forked repo:
 
    ```sh
-   git clone https://github.com/<github_username>/supabase.git
+   git clone https://github.com/<github_username>/nextjs.git
    ```
 
 2. Go to the BA directory:
    ```sh
-   cd supabase
+   cd nextjs
    ```
 
 ### Install dependencies
@@ -123,7 +123,7 @@ For example:
 
 ---
 
-## Running Docker for BA Studio
+## Running Docker for Business Assistance Studio
 
 To run Studio locally, you'll need to setup Docker in addition to your NextJS frontend.
 
@@ -183,16 +183,16 @@ Create a new entry in the [`redirects.js`](https://github.com/vchavkov82/nextjs/
 
 ### Federated docs
 
-We support "federating" docs, meaning doc content can come directly from external repos other than [`supabase/supabase`](https://github.com/vchavkov82/nextjs).
+We support "federating" docs, meaning doc content can come directly from external repos other than [`vchavkov82/nextjs`](https://github.com/vchavkov82/nextjs).
 
-- It's great for things like client libs who have their own set of docs that we don't want to duplicate on the official BA docs (eg. [`supabase/vecs`](https://github.com/supabase/vecs)).
+- It's great for things like client libs who have their own set of docs that we don't want to duplicate on the official Business Assistance docs (eg. [`vchavkov82/vecs`](https://github.com/vchavkov82/vecs)).
 - No duplication or manual steps required - fetches and generates automatically as part of the docs build pipeline.
 - It's flexible - you can "embed" external docs nearly anywhere at any level in BA docs, but they will feel native.
 - If you are maintaining a repo containing docs that you think could also live in BA docs, feel free to create an issue and we can work together to integrate.
 
 Federated docs work using Next.js's build pipeline. We use `getStaticProps()` to fetch remote documentation (ie. markdown) at build time which is processed and passed to the respective page within the docs.
 
-See the [Vecs Python source code](https://github.com/vchavkov82/nextjs/tree/master/apps/docs/app/guides/ai/python/%5Bslug%5D to see how we do this for [`supabase/vecs`](https://github.com/supabase/vecs). Use this as a starting point for federating other docs.
+See the [Vecs Python source code](https://github.com/vchavkov82/nextjs/tree/master/apps/docs/app/guides/ai/python/%5Bslug%5D to see how we do this for [`vchavkov82/vecs`](https://github.com/vchavkov82/vecs). Use this as a starting point for federating other docs.
 
 Some things to consider:
 
@@ -208,5 +208,5 @@ If you get stuck somewhere or have any questions, join our [Discord Community Se
 ## Contributors
 
 <a href="https://github.com/vchavkov82/nextjs/graphs/contributors">
-   <img src="https://contributors.deno.dev/supabase/supabase?height=1200&width=1200&count=90" width="1200" height="1200" alt="contributors">
+   <img src="https://contributors.deno.dev/vchavkov82/nextjs?height=1200&width=1200&count=90" width="1200" height="1200" alt="contributors">
 </a>

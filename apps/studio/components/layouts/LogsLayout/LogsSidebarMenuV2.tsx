@@ -270,7 +270,7 @@ export function LogsSidebarMenuV2() {
                 type="default"
                 className="px-1.5"
                 icon={<CircleHelpIcon />}
-                onClick={() => selectFeaturePreview('supabase-ui-preview-unified-logs')}
+                onClick={() => selectFeaturePreview('ba-ui-preview-unified-logs')}
                 tooltip={{ content: { side: 'bottom', text: 'More information' } }}
               />
             </>
