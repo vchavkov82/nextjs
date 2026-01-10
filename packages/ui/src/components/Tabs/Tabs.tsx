@@ -43,11 +43,17 @@ interface TabsSubComponents {
 // Wrapper component to properly forward refs to TabsPrimitive.List
 const TabsListWithRef = forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> & { class?: string }
 >((props, ref) => {
   // Filter out 'class' prop to avoid React DOM warnings (should use 'className' instead)
-  const { className, class: _class, ...restProps } = props as typeof props & { class?: string }
-  return <TabsPrimitive.List ref={ref} className={className} {...restProps} />
+  const { className, class: _class, ...restProps } = props
+  return (
+    <TabsPrimitive.List
+      ref={ref}
+      className={className}
+      {...(restProps as React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>)}
+    />
+  )
 })
 TabsListWithRef.displayName = TabsPrimitive.List.displayName || 'TabsListWithRef'
 
@@ -165,13 +171,16 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   if (__styles?.base) baseClasses.push(__styles.base)
   if (baseClassNames) baseClasses.push(baseClassNames)
 
+  const listClassName = listClasses.join(' ').trim() || undefined
+  const baseClassName = baseClasses.join(' ').trim() || undefined
+
   return (
     <TabsPrimitive.Root
       value={activeTab}
-      className={baseClasses.join(' ')}
-      ref={refs?.base ? baseRefCallback : null}
+      className={baseClassName}
+      ref={refs?.base ? baseRefCallback : undefined}
     >
-      <TabsListWithRef className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : null}>
+      <TabsListWithRef className={listClassName} ref={refs?.list ? listRefCallback : undefined}>
         {addOnBefore}
         {Array.isArray(children) && children.length > 0
           ? children.map((tab) => {

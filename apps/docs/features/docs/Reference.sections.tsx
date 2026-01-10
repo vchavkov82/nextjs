@@ -163,11 +163,54 @@ interface CliCommandSectionProps {
   section: AbbrevApiReferenceSection
 }
 
+type CliExampleType = { id: string; name: string; code: string; response?: string }
+
+function CliExamples({ examples }: { examples: CliExampleType[] }) {
+  if (examples.length === 0) return null
+
+  return (
+    <Tabs_Shadcn_ defaultValue={examples[0].id}>
+      <TabsList_Shadcn_ className="flex-wrap gap-2 border-0">
+        {examples.map((example) => (
+          <TabsTrigger_Shadcn_
+            key={example.id}
+            value={example.id}
+            className={cn(
+              'px-2.5 py-1 rounded-full',
+              'border-0 bg-surface-200 hover:bg-surface-300',
+              'text-xs text-foreground-lighter',
+              // Undoing styles from primitive component
+              'data-[state=active]:border-0 data-[state=active]:shadow-0',
+              'data-[state=active]:bg-foreground data-[state=active]:text-background',
+              'transition'
+            )}
+          >
+            {example.name}
+          </TabsTrigger_Shadcn_>
+        ))}
+      </TabsList_Shadcn_>
+      {examples.map((example) => (
+        <TabsContent_Shadcn_ key={example.id} value={example.id}>
+          <CodeBlock lang="bash" className="mb-6">
+            {example.code}
+          </CodeBlock>
+          <h3 className="text-foreground-lighter text-sm mb-2">Response</h3>
+          <CodeBlock lang="txt">{example.response}</CodeBlock>
+        </TabsContent_Shadcn_>
+      ))}
+    </Tabs_Shadcn_>
+  )
+}
+
 async function CliCommandSection({ link, section }: CliCommandSectionProps) {
   const cliSpec = await getCliSpec()
   const command = ((cliSpec as any).commands ?? []).find((cmd) => cmd.id === section.id)
 
   if (!command) return null
+
+  const hasExamples =
+    'examples' in command && Array.isArray(command.examples) && command.examples.length > 0
+  const examples = hasExamples ? (command.examples as CliExampleType[]) : []
 
   return (
     <RefSubLayout.Section columns="double" link={link} {...section}>
@@ -234,42 +277,11 @@ async function CliCommandSection({ link, section }: CliCommandSectionProps) {
           </>
         )}
       </div>
-      <div className="overflow-auto">
-        {'examples' in command &&
-          Array.isArray(command.examples) &&
-          command.examples.length > 0 && (
-            <Tabs_Shadcn_ defaultValue={command.examples[0].id}>
-              <TabsList_Shadcn_ className="flex-wrap gap-2 border-0">
-                {command.examples.map((example) => (
-                  <TabsTrigger_Shadcn_
-                    key={example.id}
-                    value={example.id}
-                    className={cn(
-                      'px-2.5 py-1 rounded-full',
-                      'border-0 bg-surface-200 hover:bg-surface-300',
-                      'text-xs text-foreground-lighter',
-                      // Undoing styles from primitive component
-                      'data-[state=active]:border-0 data-[state=active]:shadow-0',
-                      'data-[state=active]:bg-foreground data-[state=active]:text-background',
-                      'transition'
-                    )}
-                  >
-                    {example.name}
-                  </TabsTrigger_Shadcn_>
-                ))}
-              </TabsList_Shadcn_>
-              {command.examples.map((example) => (
-                <TabsContent_Shadcn_ key={example.id} value={example.id}>
-                  <CodeBlock lang="bash" className="mb-6">
-                    {example.code}
-                  </CodeBlock>
-                  <h3 className="text-foreground-lighter text-sm mb-2">Response</h3>
-                  <CodeBlock lang="txt">{example.response}</CodeBlock>
-                </TabsContent_Shadcn_>
-              ))}
-            </Tabs_Shadcn_>
-          )}
-      </div>
+      {hasExamples && (
+        <div className="overflow-auto">
+          <CliExamples examples={examples} />
+        </div>
+      )}
     </RefSubLayout.Section>
   )
 }
@@ -423,6 +435,8 @@ interface FunctionSectionProps {
   useTypeSpec: boolean
 }
 
+type ExampleType = { id: string; name: string; code: string; response?: string; description?: string; data?: { sql?: string } }
+
 async function FunctionSection({
   sdkId,
   version,
@@ -488,11 +502,13 @@ async function FunctionSection({
       <div className="overflow-auto">
         {(() => {
           // Prefer YAML examples, fallback to TypeDoc examples
-          const yamlExamples =
+          const yamlExamples: ExampleType[] =
             'examples' in fn && Array.isArray(fn.examples) && fn.examples.length > 0
-              ? fn.examples
+              ? (fn.examples as any[]).filter((ex): ex is ExampleType => 
+                  typeof ex === 'object' && ex !== null && 'id' in ex && 'name' in ex && 'code' in ex
+                )
               : []
-          const examples = yamlExamples.length > 0 ? yamlExamples : types?.comment?.examples || []
+          const examples: ExampleType[] = yamlExamples.length > 0 ? yamlExamples : (types?.comment?.examples || [])
 
           if (examples.length === 0) return null
 
