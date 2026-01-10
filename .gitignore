@@ -96,6 +96,7 @@ next-env.d.ts
 
 # Build outputs
 .next
+**/.next/
 out
 dist
 build
@@ -103,6 +104,12 @@ build
 
 # nuxt.js build output
 .nuxt
+**/.nuxt/
+
+# Build outputs
+**/out/
+**/dist/
+**/build/
 
 # vuepress build output
 .vuepress/dist
