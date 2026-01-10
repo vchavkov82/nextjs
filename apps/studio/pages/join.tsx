@@ -9,17 +9,21 @@ import { cn } from 'ui'
 
 const JoinOrganizationPage: NextPageWithLayout = () => {
   const { resolvedTheme } = useTheme()
-  const isDarkMode = resolvedTheme?.includes('dark')
-
   const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Use default during SSR to avoid hydration mismatch
+  // Update to resolvedTheme after mount
+  const isDarkMode = mounted && resolvedTheme?.includes('dark')
 
   const imgUrl = useMemo(
     () =>
       isDarkMode ? `${BASE_PATH}/img/supabase-dark.svg` : `${BASE_PATH}/img/supabase-light.svg`,
     [isDarkMode]
   )
-
-  useEffect(() => setMounted(true), [])
 
   return (
     <>

@@ -7,6 +7,7 @@ import {
   useCallback,
   useMemo,
   useState,
+  forwardRef,
   type KeyboardEvent,
   type PropsWithChildren,
   type RefObject,
@@ -38,6 +39,17 @@ export interface TabsProps {
 interface TabsSubComponents {
   Panel: React.FC<PropsWithChildren<PanelProps>>
 }
+
+// Wrapper component to properly forward refs to TabsPrimitive.List
+const TabsListWithRef = forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+>((props, ref) => {
+  // Filter out 'class' prop to avoid React DOM warnings (should use 'className' instead)
+  const { className, class: _class, ...restProps } = props as typeof props & { class?: string }
+  return <TabsPrimitive.List ref={ref} className={className} {...restProps} />
+})
+TabsListWithRef.displayName = TabsPrimitive.List.displayName || 'TabsListWithRef'
 
 /**
  * @deprecated Use `import { Tabs_shadcn_ } from "ui"` instead
@@ -104,7 +116,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
   }, [activeId])
 
   let __styles = styleHandler('tabs')
-  const variantStyles = __styles[type] ?? __styles.pills
+  const variantStyles = __styles?.[type] ?? __styles?.pills
 
   function onTabClick(id: string) {
     onClick?.(id)
@@ -114,9 +126,10 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     }
   }
 
-  const listClasses = [variantStyles.list]
-  if (scrollable) listClasses.push(__styles.scrollable)
-  if (wrappable) listClasses.push(__styles.wrappable)
+  const listClasses: string[] = []
+  if (variantStyles?.list) listClasses.push(variantStyles.list)
+  if (scrollable && __styles?.scrollable) listClasses.push(__styles.scrollable)
+  if (wrappable && __styles?.wrappable) listClasses.push(__styles.wrappable)
   if (listClassNames) listClasses.push(listClassNames)
 
   // Normalize refs to handle both RefObject and callback refs
@@ -148,24 +161,30 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
     [refs?.list]
   )
 
+  const baseClasses: string[] = []
+  if (__styles?.base) baseClasses.push(__styles.base)
+  if (baseClassNames) baseClasses.push(baseClassNames)
+
   return (
     <TabsPrimitive.Root
       value={activeTab}
-      className={[__styles.base, baseClassNames].join(' ')}
+      className={baseClasses.join(' ')}
       ref={refs?.base ? baseRefCallback : null}
     >
-      <TabsPrimitive.List className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : null}>
+      <TabsListWithRef className={listClasses.join(' ')} ref={refs?.list ? listRefCallback : null}>
         {addOnBefore}
         {Array.isArray(children) && children.length > 0
           ? children.map((tab) => {
               const isActive = activeTab === tab.id
-              const triggerClasses = [variantStyles.base, __styles.size[size]]
-              if (isActive) {
+              const triggerClasses: string[] = []
+              if (variantStyles?.base) triggerClasses.push(variantStyles.base)
+              if (__styles?.size?.[size]) triggerClasses.push(__styles.size[size])
+              if (isActive && variantStyles?.active) {
                 triggerClasses.push(variantStyles.active)
-              } else {
+              } else if (!isActive && variantStyles?.inactive) {
                 triggerClasses.push(variantStyles.inactive)
               }
-              if (block) {
+              if (block && __styles?.block) {
                 triggerClasses.push(__styles.block)
               }
 
@@ -190,7 +209,7 @@ const Tabs: React.FC<PropsWithChildren<TabsProps>> & TabsSubComponents = ({
             })
           : null}
         {addOnAfter}
-      </TabsPrimitive.List>
+      </TabsListWithRef>
       {_children}
     </TabsPrimitive.Root>
   )

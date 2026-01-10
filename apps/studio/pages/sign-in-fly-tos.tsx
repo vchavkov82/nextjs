@@ -12,6 +12,7 @@ import { Button } from 'ui'
 
 const SignInFlyTos = () => {
   const [loading, setLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
   const isLoggedIn = useIsLoggedIn()
   const router = useRouter()
   const {
@@ -37,6 +38,10 @@ const SignInFlyTos = () => {
   })
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
     if (!isReady) {
       return
     }
@@ -50,7 +55,7 @@ const SignInFlyTos = () => {
       : fly_organization_id
         ? getOrgByFlyOrgId({ flyOrganizationId: fly_organization_id as string })
         : setLoading(false)
-  }, [isReady])
+  }, [isReady, isLoggedIn, fly_extension_id, fly_organization_id, getProjectByFlyExtensionId, getOrgByFlyOrgId])
 
   const [isRedirecting, setIsRedirecting] = useState(false)
 
@@ -74,18 +79,20 @@ const SignInFlyTos = () => {
           <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
             <div className="flex w-full items-center justify-between md:w-auto">
               <Link href="/projects">
-                <div>
-                  <Image
-                    src={
-                      resolvedTheme?.includes('dark')
-                        ? `${BASE_PATH}/img/supabase-dark.svg`
-                        : `${BASE_PATH}/img/supabase-light.svg`
-                    }
-                    alt=""
-                    height={24}
-                    width={120}
-                  />
-                </div>
+                {mounted && (
+                  <div>
+                    <Image
+                      src={
+                        resolvedTheme?.includes('dark')
+                          ? `${BASE_PATH}/img/supabase-dark.svg`
+                          : `${BASE_PATH}/img/supabase-light.svg`
+                      }
+                      alt=""
+                      height={24}
+                      width={120}
+                    />
+                  </div>
+                )}
               </Link>
             </div>
           </div>

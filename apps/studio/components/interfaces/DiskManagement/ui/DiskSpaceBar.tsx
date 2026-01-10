@@ -10,7 +10,7 @@ import { useDiskUtilizationQuery } from 'data/config/disk-utilization-query'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { GB } from 'lib/constants'
 import { formatBytes } from 'lib/helpers'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Badge, cn, Tooltip, TooltipContent, TooltipTrigger } from 'ui'
 import { DiskStorageSchemaType } from '../DiskManagement.schema'
 import { AUTOSCALING_THRESHOLD } from './DiskManagement.constants'
@@ -23,7 +23,15 @@ export const DiskSpaceBar = ({ form }: DiskSpaceBarProps) => {
   const { ref } = useParams()
   const { resolvedTheme } = useTheme()
   const { formState, watch } = form
-  const isDarkMode = resolvedTheme?.includes('dark')
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Use default during SSR to avoid hydration mismatch
+  // Update to resolvedTheme after mount
+  const isDarkMode = mounted && resolvedTheme?.includes('dark')
   const { data: project } = useSelectedProjectQuery()
 
   const {

@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 import { LOCAL_STORAGE_KEYS } from 'common'
 import { SupportLink } from 'components/interfaces/Support/SupportLink'
@@ -14,6 +15,11 @@ const Error500: NextPage = () => {
   const router = useRouter()
   const signOut = useSignOut()
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const [lastVisitedOrganization] = useLocalStorageQuery(
     LOCAL_STORAGE_KEYS.LAST_VISITED_ORGANIZATION,
@@ -33,16 +39,18 @@ const Error500: NextPage = () => {
           <div className="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
             <div className="flex w-full items-center justify-between md:w-auto">
               <Link href="/projects">
-                <Image
-                  src={
-                    resolvedTheme?.includes('dark')
-                      ? `${router.basePath}/img/supabase-dark.svg`
-                      : `${router.basePath}/img/supabase-light.svg`
-                  }
-                  alt=""
-                  height={24}
-                  width={120}
-                />
+                {mounted && (
+                  <Image
+                    src={
+                      resolvedTheme?.includes('dark')
+                        ? `${router.basePath}/img/supabase-dark.svg`
+                        : `${router.basePath}/img/supabase-light.svg`
+                    }
+                    alt=""
+                    height={24}
+                    width={120}
+                  />
+                )}
               </Link>
             </div>
           </div>
