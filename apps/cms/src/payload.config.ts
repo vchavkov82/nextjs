@@ -113,7 +113,7 @@ export default buildConfig({
       tls: {
         rejectUnauthorized: false,
       },
-    } as nodemailer.TransportOptions)
+    } as Parameters<typeof nodemailer.createTransport>[0])
     // Override verify to prevent connection verification on startup
     // The adapter will call verify() which would fail if SMTP server is not running
     transport.verify = function (callback?: (err: Error | null, success: true) => void): void | Promise<true> {
