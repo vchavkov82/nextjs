@@ -54,7 +54,7 @@ Imagine you're building a Photo Album app. You want your users to upload photos 
 
 One of the most straightforward ways to implement is using streams:
 
-```jsx
+```typescript
 import { ZipReaderStream } from 'https://deno.land/x/zipjs/index.js'
 import { createClient } from 'jsr:@supabase/supabase-js@2'
 
@@ -96,7 +96,7 @@ If you test out the streaming version, it will run into memory limit errors when
 
 We can modify it instead to write the zip file to a temporary file. Then, use a background task to extract and upload it to BA Storage. This way, we only read parts of the zip file to the memory.
 
-```jsx
+```typescript
 import { BlobWriter, ZipReader, ZipReaderStream } from 'https://deno.land/x/zipjs/index.js'
 
 import { createClient } from 'jsr:@supabase/supabase-js@2'
@@ -182,7 +182,7 @@ OpenAI recently introduced a [Realtime API](https://openai.com/index/introducing
 
 With our new support for WebSockets, you can easily do this in Edge Functions without standing up any infrastructure. Additionally, you can use [BA Auth](https://www.assistance.bg/docs/guides/auth) to authenticate users and protect your OpenAI usage from being abused.
 
-```jsx
+```typescript
 import { createClient } from 'jsr:@supabase/supabase-js@2'
 
 const supabase = createClient(

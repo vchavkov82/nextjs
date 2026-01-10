@@ -2,10 +2,7 @@
 
 import 'react-medium-image-zoom/dist/styles.css'
 
-import { useEffect, useState } from 'react'
 import NextImage, { type ImageProps as NextImageProps } from 'next/image'
-import { useTheme } from 'next-themes'
-import { useBreakpoint } from 'common'
 import { cn } from '../../lib/utils'
 import Zoom from 'react-medium-image-zoom'
 import ZoomContent from './ZoomContent'
@@ -49,38 +46,60 @@ export interface ImageProps extends Omit<NextImageProps, 'src'> {
  * - containerClassName: {string} (optional) to style the parent <figure> container
  */
 const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAlign, ...props }: ImageProps) => {
-  const [mounted, setMounted] = useState(false)
-  const { resolvedTheme } = useTheme()
-  const isLessThanLgBreakpoint = useBreakpoint()
-
   const Component = zoomable ? Zoom : 'span'
   const sizes = zoomable
     ? '(max-width: 768px) 200vw, (max-width: 1200px) 120vw, 200vw'
     : '(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 33vw'
 
-  // Use light theme as default for SSR, then switch to actual theme after mount
-  const source =
-    typeof src === 'string'
-      ? src
-      : mounted
-        ? (resolvedTheme?.includes('dark') ? src.dark : src.light)
-        : src.light
+  // Use fixed zoomMargin to prevent hydration mismatch
+  const zoomMargin = 80
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // For themed images, render both and use CSS to show/hide based on theme
+  // This prevents hydration mismatches since the HTML is identical on server and client
+  const isThemedImage = typeof src !== 'string'
+
+  if (isThemedImage) {
+    return (
+      <figure className={cn('next-image--dynamic-fill', containerClassName)}>
+        <Component
+          {...(zoomable
+            ? { ZoomContent: ZoomContent, zoomMargin }
+            : undefined)}
+        >
+          <NextImage
+            alt={alt}
+            src={src.light}
+            sizes={sizes}
+            className={cn(props.className, 'dark:hidden')}
+            style={props.style}
+            {...props}
+          />
+          <NextImage
+            alt={alt}
+            src={src.dark}
+            sizes={sizes}
+            className={cn(props.className, 'hidden dark:block')}
+            style={props.style}
+            {...props}
+          />
+        </Component>
+        {caption && (
+          <figcaption className={cn(getCaptionAlign(captionAlign))}>{caption}</figcaption>
+        )}
+      </figure>
+    )
+  }
 
   return (
     <figure className={cn('next-image--dynamic-fill', containerClassName)}>
       <Component
         {...(zoomable
-          ? { ZoomContent: ZoomContent, zoomMargin: isLessThanLgBreakpoint ? 20 : 80 }
+          ? { ZoomContent: ZoomContent, zoomMargin }
           : undefined)}
       >
         <NextImage
-          key={mounted ? resolvedTheme : 'ssr'}
           alt={alt}
-          src={source}
+          src={src}
           sizes={sizes}
           className={props.className}
           style={props.style}

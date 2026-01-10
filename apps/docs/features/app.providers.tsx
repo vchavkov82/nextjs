@@ -38,7 +38,7 @@ function GlobalProviders({ children }: PropsWithChildren) {
           <ThemeProvider defaultTheme="system" enableSystem disableTransitionOnChange attribute="class">
             <TooltipProvider delayDuration={0}>
               <DocsCommandProvider>
-                <div className="flex flex-col" suppressHydrationWarning>
+                <div className="flex flex-col">
                   <SiteLayout>
                     {children}
                     <DocsCommandMenu />

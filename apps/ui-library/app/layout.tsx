@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
+// Use a fixed date to avoid hydration mismatch from new Date() calls
+const buildDate = new Date('2024-01-01').toISOString()
+
 export const metadata: Metadata = {
   applicationName: 'BA UI Library',
   title: 'BA UI Library',
@@ -23,8 +26,8 @@ export const metadata: Metadata = {
     authors: 'BA',
     url: `${BASE_PATH}`,
     images: `${BASE_PATH}/img/supabase-og-image.png`,
-    publishedTime: new Date().toISOString(),
-    modifiedTime: new Date().toISOString(),
+    publishedTime: buildDate,
+    modifiedTime: buildDate,
   },
   twitter: {
     card: 'summary_large_image',
