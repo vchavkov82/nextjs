@@ -1,9 +1,15 @@
+import { fileURLToPath } from 'url'
+import { dirname, resolve } from 'path'
 import { withPayload } from '@payloadcms/next/withPayload'
 import { createRequire } from 'module'
 import path from 'path'
 
 const require = createRequire(import.meta.url)
 const webpack = require('webpack')
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
 
 const redirects = async () => {
   const internetExplorerRedirect = {
@@ -50,16 +56,61 @@ const nextConfig = {
   reactStrictMode: true,
   redirects,
   // Configure Sharp as an external package for server-side rendering
-  serverExternalPackages: ['sharp'],
-  // Exclude test files from being traced into serverless functions
+  serverExternalPackages: ['sharp', 'pino', 'thread-stream'],
+  webpack: (config) => {
+    // Replace test files with empty module to prevent bundling errors
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /thread-stream[\\/]test[\\/]/,
+        emptyModulePath
+      )
+    )
+    // Replace test files in general
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /\.test\.(js|ts|mjs)$/,
+        emptyModulePath
+      )
+    )
+    // Replace spec files
+    config.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(
+        /\.spec\.(js|ts|mjs)$/,
+        emptyModulePath
+      )
+    )
+    // Ignore test files from thread-stream package
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        checkResource(resource, context) {
+          // Ignore any file in a test directory within thread-stream
+          if (context.includes('thread-stream') && resource.includes('/test/')) {
+            return true
+          }
+          // Ignore test files
+          if (resource.includes('.test.') || resource.includes('.spec.')) {
+            return true
+          }
+          // Ignore non-source files
+          if (
+            resource.match(/\.(md|yml|yaml|zip|sh|LICENSE|CHANGELOG)$/) ||
+            resource.includes('/README') ||
+            resource.includes('/bin/')
+          ) {
+            return true
+          }
+          return false
+        },
+      })
+    )
+    return config
+  },
   outputFileTracingExcludes: {
     '*': [
+      // Exclude test directories from being traced
       '**/node_modules/**/test/**',
-      '**/node_modules/**/tests/**',
-      '**/node_modules/**/*.test.js',
-      '**/node_modules/**/*.test.ts',
-      '**/node_modules/thread-stream/test/**',
-      '**/node_modules/pino/**/test/**',
+      '**/node_modules/**/*.test.*',
+      '**/node_modules/**/*.spec.*',
     ],
   },
   onDemandEntries: {
@@ -71,49 +122,6 @@ const nextConfig = {
     optimizePackageImports: ['@payloadcms/ui', '@radix-ui/react-checkbox', '@radix-ui/react-label', '@radix-ui/react-select', 'lucide-react'],
     // Enable faster refresh
     optimizeCss: true,
-  },
-  webpack: (config, { isServer }) => {
-    // Ignore test files and test dependencies
-    config.plugins.push(
-      new webpack.IgnorePlugin({
-        checkResource(resource, context) {
-          // Ignore test files in node_modules
-          if (context.includes('node_modules')) {
-            // Check if resource is a test file path
-            if (
-              resource.includes('/test/') ||
-              resource.includes('/tests/') ||
-              resource.endsWith('.test.js') ||
-              resource.endsWith('.test.ts') ||
-              resource.endsWith('.test.mjs')
-            ) {
-              return true
-            }
-          }
-          
-          // Ignore test dependencies
-          const testPackages = ['tap', 'desm', 'fastbench', 'pino-elasticsearch']
-          if (testPackages.includes(resource)) {
-            return true
-          }
-          
-          return false
-        },
-      })
-    )
-    
-    // Also use NormalModuleReplacementPlugin as a fallback for thread-stream test files
-    config.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(
-        /thread-stream[\/\\]test[\/\\].*$/,
-        (resource) => {
-          // Replace test files with empty module
-          resource.request = path.join(process.cwd(), 'apps/cms/empty-module.js')
-        }
-      )
-    )
-
-    return config
   },
 }
 

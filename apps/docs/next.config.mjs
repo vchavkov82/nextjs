@@ -419,6 +419,11 @@ const nextConfig = {
         loaders: [],
         as: '*.js',
       },
+      // Handle CSS files from graphiql
+      'graphiql/**/*.css': {
+        loaders: ['css-loader'],
+        as: '*.css',
+      },
     },
   },
   async headers() {
