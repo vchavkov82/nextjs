@@ -1,0 +1,60 @@
+---
+title: 'Windows'
+---
+
+Learn how to set up and use Windows self-hosted runners for your CI/CD workflows.
+
+## Overview
+
+Windows runners provide full Windows Server support for Windows-based development and testing.
+
+## Supported Versions
+
+Windows runners support:
+
+- Windows Server 2019
+- Windows Server 2022
+- Windows 10/11 (for development)
+
+## Features
+
+Windows runners support:
+
+- PowerShell and CMD
+- .NET Framework and .NET Core
+- Visual Studio Build Tools
+- Windows-specific tools and services
+
+## Setup
+
+Configure Windows runners in your workflow:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted-windows
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: dotnet build
+```
+
+## PowerShell
+
+Use PowerShell for Windows-specific tasks:
+
+```yaml
+steps:
+  - name: PowerShell Script
+    shell: pwsh
+    run: |
+      Write-Host "Building on Windows"
+      dotnet build
+```
+
+## Best Practices
+
+- Use appropriate Windows Server versions
+- Install required Visual Studio components
+- Use PowerShell for scripting
+- Test on multiple Windows versions if needed

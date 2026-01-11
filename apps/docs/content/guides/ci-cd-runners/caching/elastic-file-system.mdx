@@ -1,0 +1,63 @@
+---
+title: 'Elastic File System'
+---
+
+Use Elastic File System (EFS) for shared filesystem caching across runners.
+
+## Overview
+
+Elastic File System provides a shared filesystem that can be mounted by multiple runners, enabling shared caching.
+
+## How It Works
+
+Elastic File System:
+
+- Provides a shared filesystem
+- Mounted by multiple runners
+- Enables shared caches
+- Provides persistent storage
+
+## Setup
+
+Configure EFS in your stack:
+
+```yaml
+caching:
+  elastic_file_system:
+    enabled: true
+    file_system_id: fs-12345678
+    mount_point: /mnt/efs/cache
+```
+
+## Usage
+
+Use EFS-mounted directories for caching:
+
+```yaml
+steps:
+  - name: Restore Cache
+    run: |
+      if [ -d /mnt/efs/cache/npm ]; then
+        cp -r /mnt/efs/cache/npm ~/.npm
+      fi
+  - name: Install Dependencies
+    run: npm install
+  - name: Save Cache
+    run: cp -r ~/.npm /mnt/efs/cache/npm
+```
+
+## Benefits
+
+Elastic File System provides:
+
+- **Shared caching**: Share caches across runners
+- **Persistent storage**: Survives runner restarts
+- **Scalability**: Multiple runners can access
+- **Performance**: Network-attached storage
+
+## Best Practices
+
+- Use for shared caches
+- Monitor EFS performance
+- Set appropriate performance mode
+- Clean up stale caches

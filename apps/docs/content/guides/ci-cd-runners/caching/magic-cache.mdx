@@ -1,0 +1,57 @@
+---
+title: 'Magic Cache'
+---
+
+How to use CI/CD Runners Magic Cache to speed up your builds and get unlimited cache on CI/CD runners, by swapping the cache backend to S3.
+
+## Overview
+
+Magic Cache automatically swaps the cache backend to S3, providing unlimited cache storage and faster cache operations.
+
+## How It Works
+
+Magic Cache:
+
+- Intercepts cache operations
+- Stores caches in S3
+- Provides unlimited storage
+- Maintains compatibility with existing cache actions
+
+## Setup
+
+Enable Magic Cache in your configuration:
+
+```yaml
+caching:
+  magic_cache:
+    enabled: true
+    bucket: my-cache-bucket
+    region: us-east-1
+```
+
+## Benefits
+
+Magic Cache provides:
+
+- **Unlimited storage**: Store caches of any size
+- **Faster operations**: Optimized S3 access
+- **Cost effective**: Pay only for storage used
+- **Compatible**: Works with existing cache actions
+
+## Usage
+
+Use Magic Cache with standard cache actions:
+
+```yaml
+- uses: actions/cache@v3
+  with:
+    path: ~/.npm
+    key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+```
+
+## Best Practices
+
+- Use appropriate cache keys
+- Set cache expiration policies
+- Monitor cache hit rates
+- Clean up stale caches

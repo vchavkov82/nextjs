@@ -1,0 +1,47 @@
+---
+title: 'Static IPs'
+---
+
+Learn how CI/CD Runners can be configured with static IP addresses for CI/CD runners, ensuring secure, compliant, and reliable CI/CD workflows.
+
+## Overview
+
+Static IP addresses provide fixed IP addresses for runners, which is useful for whitelisting, compliance, and predictable networking.
+
+## Configuration
+
+Configure static IPs in your stack:
+
+```yaml
+networking:
+  static_ips:
+    enabled: true
+    allocation_ids:
+      - eipalloc-12345678
+      - eipalloc-87654321
+```
+
+## Benefits
+
+Static IPs provide:
+
+- **Whitelisting**: Fixed IPs for allowlisting
+- **Compliance**: Meet IP-based requirements
+- **Reliability**: Predictable networking
+- **Security**: Control outbound connections
+
+## Use Cases
+
+Static IPs are useful for:
+
+- **Whitelisting**: Allowlist runner IPs in external systems
+- **Compliance**: Meet regulatory requirements
+- **Firewalls**: Configure firewall rules
+- **Monitoring**: Track runner traffic by IP
+
+## Best Practices
+
+- Use Elastic IPs for cost-effective static IPs
+- Monitor IP usage
+- Document IP assignments
+- Use IP whitelisting only when necessary

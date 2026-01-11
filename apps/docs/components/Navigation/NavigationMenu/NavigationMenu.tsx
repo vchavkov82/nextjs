@@ -19,6 +19,7 @@ enum MenuId {
   Queues = 'queues',
   Platform = 'platform',
   Deployment = 'deployment',
+  CiCdRunners = 'ci_cd_runners',
   Telemetry = 'telemetry',
   Resources = 'resources',
   Security = 'security',
@@ -140,6 +141,10 @@ const menus: Menu[] = [
   },
   {
     id: MenuId.Deployment,
+    type: 'guide',
+  },
+  {
+    id: MenuId.CiCdRunners,
     type: 'guide',
   },
   {

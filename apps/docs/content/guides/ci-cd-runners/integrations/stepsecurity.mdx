@@ -1,0 +1,59 @@
+---
+title: 'StepSecurity'
+---
+
+Integrate CI/CD Runners with StepSecurity for enhanced security.
+
+## Overview
+
+StepSecurity provides security scanning and monitoring for CI/CD workflows, helping identify and remediate security issues.
+
+## Integration
+
+Integrate StepSecurity with CI/CD Runners:
+
+```yaml
+integrations:
+  stepsecurity:
+    enabled: true
+    api_key: your-api-key
+    scan_on: [push, pull_request]
+```
+
+## Features
+
+StepSecurity provides:
+
+- **Security scanning**: Scan for vulnerabilities
+- **Secrets detection**: Detect exposed secrets
+- **Compliance checks**: Ensure compliance
+- **Security monitoring**: Monitor security posture
+
+## Configuration
+
+Configure StepSecurity scanning:
+
+```yaml
+stepsecurity:
+  enabled: true
+  scan_containers: true
+  scan_dependencies: true
+  fail_on_high: true
+```
+
+## Benefits
+
+StepSecurity integration provides:
+
+- **Security**: Identify vulnerabilities early
+- **Compliance**: Meet security requirements
+- **Visibility**: Understand security posture
+- **Remediation**: Fix issues quickly
+
+## Best Practices
+
+- Enable scanning on all workflows
+- Review scan results regularly
+- Fix high-severity issues promptly
+- Use security policies
+- Monitor security trends

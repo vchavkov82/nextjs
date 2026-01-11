@@ -158,6 +158,8 @@ export const getMenuId = (pathname: string | null) => {
       return MenuId.Database
     case pathname.startsWith('deployment'):
       return MenuId.Deployment
+    case pathname.startsWith('ci-cd-runners'):
+      return MenuId.CiCdRunners
     case pathname.startsWith('functions'):
       return MenuId.Functions
     case pathname.startsWith('getting-started'):

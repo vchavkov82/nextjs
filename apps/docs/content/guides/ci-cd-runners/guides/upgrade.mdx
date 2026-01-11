@@ -1,0 +1,54 @@
+---
+title: 'Upgrade'
+---
+
+Learn how to upgrade CI/CD Runners to the latest version.
+
+## Upgrade Process
+
+The upgrade process varies depending on your installation method:
+
+### Infrastructure-as-Code
+
+If using Terraform or CloudFormation:
+
+1. Update the runner module version in your configuration
+2. Run `terraform apply` or update your CloudFormation stack
+3. Monitor the upgrade process
+4. Verify runners are running the new version
+
+### Managed Installation
+
+For managed installations:
+
+1. Follow the upgrade instructions for your platform
+2. Ensure backups are in place
+3. Test the upgrade in a non-production environment first
+4. Monitor for issues after upgrade
+
+## Pre-Upgrade Checklist
+
+Before upgrading:
+
+- Review release notes for breaking changes
+- Backup current configuration
+- Test upgrade in staging environment
+- Ensure compatibility with your CI/CD platform version
+- Plan for downtime if required
+
+## Post-Upgrade Verification
+
+After upgrading:
+
+- Verify runners are connected and functioning
+- Run test jobs to ensure compatibility
+- Check logs for any errors
+- Monitor performance metrics
+
+## Rollback
+
+If issues occur after upgrade:
+
+- Keep previous version configuration available
+- Follow rollback procedures for your installation method
+- Contact support if needed

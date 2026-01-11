@@ -66,6 +66,12 @@ const navCommands = [
     icon: () => <ArrowRight />,
   },
   {
+    id: 'nav-ci-cd-runners',
+    name: 'Go to CI/CD Runners',
+    route: '/guides/ci-cd-runners',
+    icon: () => <ArrowRight />,
+  },
+  {
     id: 'nav-platform',
     name: 'Go to Platform',
     route: '/guides/platform',

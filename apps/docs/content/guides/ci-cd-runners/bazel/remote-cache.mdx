@@ -1,0 +1,92 @@
+---
+title: 'Remote Cache'
+---
+
+Speed up your Bazel builds with remote caching on CI/CD Runners.
+
+## Overview
+
+Remote caching allows Bazel to store and retrieve build artifacts from a shared cache, dramatically reducing build times for incremental builds.
+
+## How It Works
+
+Remote cache stores:
+
+- **Action results**: Outputs from build actions
+- **Input files**: Source files and dependencies
+- **Metadata**: Build metadata and dependency graphs
+
+When Bazel runs a build, it checks the remote cache first. If cache hits are found, Bazel can skip executing those actions, resulting in much faster builds.
+
+## Configuration
+
+Configure remote caching in your `.bazelrc` file:
+
+```bazelrc
+build --remote_cache=https://cache.runners.dev
+build --remote_header=x-api-key=$CACHE_TOKEN
+```
+
+## GitHub Actions Integration
+
+Use remote cache in GitHub Actions:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configure Bazel Remote Cache
+        run: |
+          echo "build --remote_cache=${{ secrets.BAZEL_CACHE_ENDPOINT }}" >> .bazelrc
+          echo "build --remote_header=x-api-key=${{ secrets.BAZEL_CACHE_TOKEN }}" >> .bazelrc
+      - name: Build with Bazel
+        run: bazel build //...
+```
+
+## Environment Variables
+
+Set cache endpoint and token:
+
+```bash
+export BAZEL_CACHE_ENDPOINT=https://cache.runners.dev
+export BAZEL_CACHE_TOKEN=your-token
+```
+
+## Benefits
+
+Remote caching provides:
+
+- **Faster incremental builds**: Reuse artifacts from previous builds
+- **Team sharing**: Share cache across team members
+- **CI/CD optimization**: Faster CI builds with shared cache
+- **Cost savings**: Reduce compute time and costs
+
+## Best Practices
+
+- Use unique cache keys per branch/PR
+- Monitor cache hit rates
+- Clean up stale cache entries
+- Use appropriate cache sizes
+- Configure cache expiration policies
+
+## Advanced Configuration
+
+Configure cache behavior:
+
+```bazelrc
+build --remote_cache=https://cache.runners.dev
+build --remote_header=x-api-key=$CACHE_TOKEN
+build --remote_timeout=600
+build --remote_max_connections=100
+```
+
+## Troubleshooting
+
+Common issues:
+
+- **Cache misses**: Check cache keys and configuration
+- **Slow cache access**: Verify network connectivity and cache endpoint
+- **Authentication errors**: Verify cache token is valid
+- **Cache size issues**: Monitor and manage cache size

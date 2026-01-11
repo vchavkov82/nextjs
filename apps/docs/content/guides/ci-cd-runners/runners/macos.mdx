@@ -1,0 +1,59 @@
+---
+title: 'macOS'
+---
+
+Custom macOS GitHub Actions self-hosted runners on cloud infrastructure.
+
+## Overview
+
+macOS runners provide macOS environments for iOS, macOS, and cross-platform development.
+
+## Supported Versions
+
+macOS runners support:
+
+- macOS 12 (Monterey)
+- macOS 13 (Ventura)
+- macOS 14 (Sonoma)
+
+## Features
+
+macOS runners support:
+
+- Xcode and iOS development
+- macOS-specific tools
+- Native macOS applications
+- Swift and Objective-C development
+
+## Setup
+
+Configure macOS runners in your workflow:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted-macos
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build iOS App
+        run: xcodebuild -project MyApp.xcodeproj
+```
+
+## Xcode
+
+Use Xcode for iOS and macOS development:
+
+```yaml
+steps:
+  - name: Select Xcode Version
+    run: sudo xcode-select -s /Applications/Xcode_14.2.app
+  - name: Build
+    run: xcodebuild -scheme MyApp build
+```
+
+## Best Practices
+
+- Use appropriate macOS versions for your target
+- Install required Xcode versions
+- Use code signing certificates securely
+- Test on multiple macOS versions if needed

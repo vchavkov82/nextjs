@@ -1,0 +1,60 @@
+---
+title: 'Best Practices'
+---
+
+Best practices for running CI/CD Runners effectively and efficiently.
+
+## Resource Sizing
+
+- **Right-size instances**: Match instance types to your workload requirements
+- **Use spot instances**: Save costs on non-critical workloads
+- **Monitor utilization**: Adjust sizing based on actual usage patterns
+
+## Caching
+
+- **Enable caching**: Use caching strategies to speed up builds
+- **Cache dependencies**: Cache package managers and build tools
+- **Use appropriate cache backends**: Choose cache backend based on workload
+
+## Security
+
+- **Least privilege**: Use minimal IAM permissions
+- **Network isolation**: Use private subnets and security groups
+- **Regular updates**: Keep runner images and dependencies updated
+- **Secrets management**: Use secure secret storage and rotation
+
+## Cost Optimization
+
+- **Use warm pools**: Reduce cold start times
+- **Right-size instances**: Avoid over-provisioning
+- **Monitor costs**: Track and optimize spending
+- **Use spot instances**: For non-critical workloads
+- **Leverage caching**: Reduce build times and compute costs
+- **Optimize build steps**: Minimize unnecessary work
+
+## Monitoring
+
+- **Set up alerts**: Monitor runner health and job failures
+- **Track metrics**: Monitor performance and utilization
+- **Review logs**: Regularly review logs for issues
+- **Cost reporting**: Track and optimize costs
+
+## Job Configuration
+
+- **Optimize job steps**: Minimize job execution time
+- **Use matrix builds**: Efficiently test multiple configurations
+- **Set appropriate timeouts**: Prevent runaway jobs
+- **Use job labels**: Route jobs to appropriate runners
+
+## Scaling
+
+- **Horizontal scaling**: Add more runners for increased capacity
+- **Vertical scaling**: Use larger instances for heavy workloads
+- **Auto-scaling**: Configure auto-scaling based on queue depth
+- **Warm pools**: Keep runners ready for faster job starts
+
+## Networking
+
+- **Use VPCs**: Isolate runners in private networks
+- **Static IPs**: Use static IPs for whitelisting if needed
+- **Network security**: Implement proper security groups and NACLs

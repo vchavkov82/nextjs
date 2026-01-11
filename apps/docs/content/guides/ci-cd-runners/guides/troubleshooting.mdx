@@ -1,0 +1,55 @@
+---
+title: 'Troubleshooting'
+---
+
+Common issues and solutions when working with CI/CD Runners.
+
+## Runner Not Connecting
+
+If runners are not connecting to your CI/CD platform:
+
+- Check network connectivity and firewall rules
+- Verify authentication credentials
+- Review runner logs for error messages
+- Ensure runner registration tokens are valid
+
+## Jobs Failing
+
+If jobs are failing on runners:
+
+- Check runner capacity and resources
+- Review job logs for specific errors
+- Verify required dependencies are installed
+- Check disk space and memory usage
+
+## Performance Issues
+
+If runners are performing poorly:
+
+- Review runner instance types and sizing
+- Check caching configuration
+- Verify network bandwidth
+- Monitor resource utilization
+
+## Common Errors
+
+### Runner Timeout
+
+Runners may timeout if jobs run too long. Consider:
+- Increasing job timeout limits
+- Using larger runner instances
+- Optimizing job steps
+
+### Out of Memory
+
+If runners run out of memory:
+- Use larger instance types
+- Optimize job steps
+- Use spot instances for cost-effective scaling
+
+## Getting Help
+
+For additional help, see:
+- [Best Practices](/guides/ci-cd-runners/guides/best-practices)
+- [Configuration Guide](/guides/ci-cd-runners/configuration/overview)
+- [Monitoring](/guides/ci-cd-runners/monitoring/overview)

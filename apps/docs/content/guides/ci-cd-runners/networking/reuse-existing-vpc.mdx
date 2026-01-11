@@ -1,0 +1,49 @@
+---
+title: 'Reuse Existing VPC'
+---
+
+CI/CD Runners can be configured to reuse an existing VPC, to avoid creating a new one.
+
+## Overview
+
+Reusing an existing VPC allows you to integrate CI/CD Runners into your existing network infrastructure.
+
+## Configuration
+
+Configure runners to use an existing VPC:
+
+```yaml
+networking:
+  vpc:
+    vpc_id: vpc-12345678
+    subnet_ids:
+      - subnet-12345678
+      - subnet-87654321
+    security_group_ids:
+      - sg-12345678
+```
+
+## Benefits
+
+Reusing an existing VPC provides:
+
+- **Integration**: Work with existing infrastructure
+- **Network isolation**: Use existing network policies
+- **Cost savings**: Avoid creating duplicate resources
+- **Simplicity**: Single VPC to manage
+
+## Requirements
+
+When reusing a VPC, ensure:
+
+- Subnets have appropriate route tables
+- Security groups allow necessary traffic
+- NAT gateways exist for outbound access (if needed)
+- DNS resolution is configured
+
+## Best Practices
+
+- Use private subnets for runners
+- Configure appropriate security groups
+- Enable VPC flow logs for monitoring
+- Document network architecture

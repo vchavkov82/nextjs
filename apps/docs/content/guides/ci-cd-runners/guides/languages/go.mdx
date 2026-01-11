@@ -1,0 +1,50 @@
+---
+title: 'Go'
+---
+
+Using CI/CD Runners with Go projects.
+
+## Overview
+
+CI/CD Runners provide optimized environments for Go builds and tests.
+
+## Setup
+
+Configure your CI/CD workflow for Go:
+
+```yaml
+name: Go CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+      - run: go test ./...
+      - run: go build ./...
+```
+
+## Caching
+
+Cache Go modules for faster builds:
+
+```yaml
+- uses: actions/cache@v3
+  with:
+    path: |
+      ~/.cache/go-build
+      ~/go/pkg/mod
+    key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+```
+
+## Best Practices
+
+- Use Go module caching
+- Test on multiple Go versions
+- Use build tags for conditional compilation
+- Optimize test execution time

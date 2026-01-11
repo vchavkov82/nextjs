@@ -1,0 +1,43 @@
+---
+title: 'Overview'
+---
+
+Overview of the different caching strategies available in CI/CD Runners, and how to use them.
+
+## Caching Strategies
+
+CI/CD Runners support multiple caching strategies to speed up builds and reduce costs:
+
+- **Remote Cache**: Distributed caching for build tools (Bazel, Go, Gradle, Turborepo, sccache, Pants)
+- **Magic Cache**: Automatic cache backend swapping to S3
+- **Ephemeral Registry**: Fast ephemeral Docker registry
+- **Snapshots**: Block-level snapshots for fast restore
+- **Docker S3 Exporter**: Export Docker layers to S3
+- **Elastic File System**: Shared filesystem for caching
+- **YOLO mode (tmpfs)**: In-memory caching for speed
+
+## Benefits
+
+Caching provides:
+
+- **Faster builds**: Reuse cached dependencies and artifacts
+- **Cost savings**: Reduce build times and infrastructure costs
+- **Scalability**: Share caches across runners
+- **Flexibility**: Choose the right strategy for your workload
+
+## Choosing a Strategy
+
+Select a caching strategy based on:
+
+- **Workload type**: Build systems, package managers, Docker builds
+- **Cache size**: Small vs large caches
+- **Performance requirements**: Speed vs cost tradeoffs
+- **Infrastructure**: Available storage and networking
+
+## Best Practices
+
+- Enable caching for package managers
+- Use appropriate cache backends
+- Monitor cache hit rates
+- Optimize cache keys
+- Clean up stale caches

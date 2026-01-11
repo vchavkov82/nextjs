@@ -1,0 +1,62 @@
+---
+title: 'Rust'
+---
+
+Using CI/CD Runners with Rust projects.
+
+## Overview
+
+CI/CD Runners provide optimized environments for Rust builds and tests.
+
+## Setup
+
+Configure your CI/CD workflow for Rust:
+
+```yaml
+name: Rust CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test
+      - run: cargo build --release
+```
+
+## Caching
+
+The Rust cache action automatically handles caching of:
+
+- Cargo registry
+- Cargo git index
+- Target directory
+
+## Cross-Compilation
+
+Test on multiple targets:
+
+```yaml
+strategy:
+  matrix:
+    target:
+      - x86_64-unknown-linux-gnu
+      - x86_64-pc-windows-msvc
+      - x86_64-apple-darwin
+
+- uses: dtolnay/rust-toolchain@stable
+  with:
+    targets: ${{ matrix.target }}
+- run: cargo test --target ${{ matrix.target }}
+```
+
+## Best Practices
+
+- Use rust-cache for efficient caching
+- Test on multiple targets
+- Use Clippy for code quality
+- Optimize build times with build profiles

@@ -1,0 +1,89 @@
+---
+title: 'CI/CD Runners'
+subtitle: 'Self-hosted CI/CD runners for GitHub Actions and other CI/CD platforms'
+---
+
+CI/CD Runners allow you to run your CI/CD workflows on self-hosted infrastructure, providing better performance, cost savings, and control over your build environment.
+
+## Overview
+
+CI/CD Runners enable you to execute your GitHub Actions workflows (and other CI/CD platforms) on your own infrastructure. This gives you:
+
+- **Cost savings**: Run CI/CD jobs at a fraction of the cost of hosted runners
+- **Performance**: Customize runner instances to match your workload requirements
+- **Control**: Full control over the build environment, dependencies, and security
+- **Flexibility**: Support for Linux, Windows, macOS, and GPU runners
+- **Scalability**: Scale runners based on your workload needs
+
+## Runner Types
+
+CI/CD Runners support multiple runner types:
+
+- **Linux**: Native x64 and arm64 architectures
+- **Windows**: Full Windows Server support
+- **macOS**: Custom macOS runners
+- **GPU**: NVIDIA and AMD GPU support for ML workloads
+- **Pools**: Warm pools for faster job startup times
+
+## Key Features
+
+- Multiple runner types (Linux, Windows, macOS, GPU)
+- Warm pools for reduced queuing times
+- Caching strategies for faster builds
+- Custom images and configurations
+- Networking and security controls
+- Monitoring and cost reporting
+- Integration with security tools
+- Container builds with native Intel and Arm support
+- Remote caching for build tools (Bazel, Go, Gradle, Turborepo, sccache, Pants)
+- High-performance compute with faster CPUs and networking
+
+## Performance Benefits
+
+CI/CD Runners provide significant performance improvements:
+
+- **30% faster CPUs**: Advanced compute instances for faster builds
+- **10x faster networking**: Optimized network throughput for cache and artifact transfers
+- **10x faster cache throughput**: High-performance distributed caching
+- **Unrestricted concurrency**: Run multiple jobs in parallel without limits
+- **50% lower cost**: More cost-effective than hosted runners
+
+## Container Builds
+
+CI/CD Runners support accelerated container builds with:
+
+- Native Intel and Arm architecture support
+- Automatic layer caching
+- Multi-platform builds
+- Integration with existing CI providers
+- Docker BuildKit support
+
+See [Container Builds](/guides/ci-cd-runners/guides/container-builds) for details.
+
+## Remote Caching
+
+Distributed remote caching supports multiple build tools:
+
+- **Bazel**: Remote execution and caching
+- **Go**: Module and build cache
+- **Gradle**: Build cache and dependency cache
+- **Turborepo**: Remote cache for monorepos
+- **sccache**: Rust and C++ compilation cache
+- **Pants**: Build cache for Python
+
+See [Remote Caching](/guides/ci-cd-runners/caching/remote-cache) for details.
+
+## Bazel Support
+
+CI/CD Runners provide comprehensive support for Bazel builds:
+
+- **Remote Caching**: Share build artifacts across builds
+- **Remote Execution**: Execute builds on remote infrastructure
+- **Build Insights**: Visualize and debug builds
+- **GitHub Actions Integration**: Seamless CI/CD integration
+
+See [Bazel Documentation](/guides/ci-cd-runners/bazel/overview) for details.
+
+## Getting Started
+
+To get started with CI/CD Runners, see the [Installation guide](/guides/ci-cd-runners/guides/installation).

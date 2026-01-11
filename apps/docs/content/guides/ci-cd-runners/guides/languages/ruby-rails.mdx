@@ -1,0 +1,75 @@
+---
+title: 'Ruby & Rails'
+---
+
+Using CI/CD Runners with Ruby and Rails projects.
+
+## Overview
+
+CI/CD Runners provide optimized environments for Ruby and Rails applications.
+
+## Setup
+
+Configure your CI/CD workflow for Ruby:
+
+```yaml
+name: Ruby CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      - run: bundle exec rspec
+      - run: bundle exec rubocop
+```
+
+## Database Setup
+
+For Rails applications, set up test databases:
+
+```yaml
+services:
+  postgres:
+    image: postgres:15
+    env:
+      POSTGRES_PASSWORD: postgres
+    options: >-
+      --health-cmd pg_isready
+      --health-interval 10s
+      --health-timeout 5s
+      --health-retries 5
+
+- name: Setup Database
+  env:
+    DATABASE_URL: postgres://postgres:postgres@localhost/test
+  run: |
+    bundle exec rails db:create
+    bundle exec rails db:schema:load
+```
+
+## Caching
+
+Cache Ruby gems for faster builds:
+
+```yaml
+- uses: actions/cache@v3
+  with:
+    path: vendor/bundle
+    key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+    restore-keys: |
+      ${{ runner.os }}-gems-
+```
+
+## Best Practices
+
+- Use Bundler caching
+- Run tests in parallel when possible
+- Use database fixtures efficiently
+- Cache assets for asset pipeline builds

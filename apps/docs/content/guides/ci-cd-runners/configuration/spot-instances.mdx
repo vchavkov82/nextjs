@@ -1,0 +1,43 @@
+---
+title: 'Spot Instances'
+---
+
+Learn how to use spot instances with CI/CD Runners for cost savings.
+
+## Overview
+
+Spot instances allow you to use spare cloud capacity at significantly reduced prices, providing substantial cost savings for CI/CD workloads.
+
+## Benefits
+
+Spot instances provide:
+
+- **Cost savings**: Up to 90% discount compared to on-demand
+- **Scalability**: Access to additional capacity
+- **Flexibility**: Suitable for fault-tolerant workloads
+
+## Configuration
+
+Enable spot instances in your configuration:
+
+```yaml
+runners:
+  - name: spot
+    spot_enabled: true
+    spot_max_price: "0.10"
+    on_demand_fallback: true
+```
+
+## Best Practices
+
+- Use spot instances for fault-tolerant workloads
+- Enable on-demand fallback for critical jobs
+- Set appropriate max prices
+- Handle spot interruptions gracefully
+- Use spot instances with warm pools
+
+<Admonition type="note">
+
+Spot instances can be interrupted. Ensure your jobs can handle interruptions or use on-demand fallback for critical jobs.
+
+</Admonition>

@@ -1,0 +1,64 @@
+---
+title: 'SSH / SSM Access'
+---
+
+CI/CD Runners provides a dedicated SSH / SSM console to access your CI/CD runners, for easy troubleshooting.
+
+## Overview
+
+SSH and SSM access allow you to securely connect to runners for debugging, troubleshooting, and manual intervention.
+
+## SSH Access
+
+Configure SSH access:
+
+```yaml
+networking:
+  ssh:
+    enabled: true
+    key_pair: my-key-pair
+    allowed_cidrs:
+      - 10.0.0.0/8
+```
+
+## SSM Access
+
+Configure SSM access (AWS):
+
+```yaml
+networking:
+  ssm:
+    enabled: true
+    instance_profile: arn:aws:iam::123456789012:instance-profile/runners-ssm
+```
+
+## Usage
+
+### SSH
+
+```bash
+ssh -i key.pem ec2-user@runner-ip
+```
+
+### SSM
+
+```bash
+aws ssm start-session --target i-1234567890abcdef0
+```
+
+## Security
+
+SSH and SSM access should be:
+
+- Restricted to necessary IP ranges
+- Used only for troubleshooting
+- Disabled in production if not needed
+- Monitored and audited
+
+## Best Practices
+
+- Use SSM when possible (no key management)
+- Restrict access to necessary IPs
+- Use SSH keys securely
+- Enable audit logging
+- Disable access when not needed

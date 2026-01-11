@@ -1,0 +1,112 @@
+---
+title: 'Setup'
+---
+
+Learn how to set up Bazel with CI/CD Runners for remote caching and execution.
+
+## Prerequisites
+
+Before setting up Bazel with CI/CD Runners:
+
+- Bazel installed (version 4.0+ recommended)
+- CI/CD Runners installed and configured
+- Access to remote cache and execution endpoints
+- Authentication tokens for cache and execution
+
+## Quick Start
+
+Add these lines to your `.bazelrc` file:
+
+```bazelrc
+# Remote Cache
+build --remote_cache=https://cache.runners.dev
+build --remote_header=x-api-key=$BAZEL_CACHE_TOKEN
+
+# Remote Execution (optional)
+build --remote_executor=https://exec.runners.dev
+build --remote_header=x-api-key=$BAZEL_EXEC_TOKEN
+build --remote_instance_name=my-project
+```
+
+## Step-by-Step Setup
+
+### 1. Configure Remote Cache
+
+Add remote cache configuration to `.bazelrc`:
+
+```bazelrc
+build --remote_cache=https://cache.runners.dev
+build --remote_header=x-api-key=$BAZEL_CACHE_TOKEN
+build --remote_timeout=600
+```
+
+### 2. Set Environment Variables
+
+Set authentication tokens:
+
+```bash
+export BAZEL_CACHE_TOKEN=your-cache-token
+export BAZEL_EXEC_TOKEN=your-exec-token  # If using remote execution
+```
+
+### 3. Configure Remote Execution (Optional)
+
+Add remote execution configuration:
+
+```bazelrc
+build --remote_executor=https://exec.runners.dev
+build --remote_header=x-api-key=$BAZEL_EXEC_TOKEN
+build --remote_instance_name=my-project
+build --jobs=100
+```
+
+### 4. Verify Configuration
+
+Test your configuration:
+
+```bash
+bazel build //... --remote_cache=https://cache.runners.dev
+```
+
+## Platform Configuration
+
+Configure execution platforms:
+
+```bazelrc
+build --platforms=@platforms//os:linux
+build --host_platform=@platforms//os:linux
+build --extra_execution_platforms=@platforms//os:linux
+```
+
+## Instance Names
+
+Use meaningful instance names:
+
+```bazelrc
+# Per repository
+build --remote_instance_name=my-org/my-repo
+
+# Per branch
+build --remote_instance_name=my-org/my-repo-$BRANCH_NAME
+
+# Per environment
+build --remote_instance_name=my-project-production
+```
+
+## Best Practices
+
+- Use environment variables for tokens
+- Configure appropriate timeouts
+- Use unique instance names per project/branch
+- Monitor cache hit rates
+- Set up separate configurations for different environments
+
+## Troubleshooting
+
+If setup fails:
+
+1. Verify endpoints are accessible
+2. Check authentication tokens are valid
+3. Verify Bazel version compatibility
+4. Check network connectivity
+5. Review Bazel logs for errors

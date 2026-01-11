@@ -1,0 +1,50 @@
+---
+title: 'Installation'
+---
+
+Install CI/CD Runners to begin running your CI/CD workflows on self-hosted infrastructure.
+
+## Prerequisites
+
+Before installing CI/CD Runners, ensure you have:
+
+- Access to cloud infrastructure (AWS, Azure, or GCP)
+- Appropriate IAM permissions for creating and managing resources
+- A GitHub repository or CI/CD platform account
+- Basic knowledge of infrastructure-as-code tools
+
+## Quick Start
+
+The installation process typically involves:
+
+1. Setting up the runner infrastructure
+2. Configuring runner types and pools
+3. Connecting to your CI/CD platform
+4. Verifying runner connectivity
+5. Setting up caching (optional but recommended)
+
+## Installation Methods
+
+CI/CD Runners can be installed using:
+
+- Infrastructure-as-code (Terraform, CloudFormation, etc.)
+- CLI tools
+- Managed services
+- GitHub Actions setup actions
+
+## Performance Considerations
+
+After installation, consider:
+
+- **Enable caching**: Set up remote caching for faster builds
+- **Use appropriate instance types**: Match instance size to workload
+- **Configure warm pools**: Reduce job startup times
+- **Monitor performance**: Track build times and optimize
+
+## Next Steps
+
+After installation, see:
+
+- [Configuration](/guides/ci-cd-runners/configuration/overview) - Configure runners for your use case
+- [Runners](/guides/ci-cd-runners/runners/overview) - Learn about different runner types
+- [Troubleshooting](/guides/ci-cd-runners/guides/troubleshooting) - Common issues and solutions

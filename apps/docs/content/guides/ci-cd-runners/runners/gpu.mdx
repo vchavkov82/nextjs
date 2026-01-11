@@ -1,0 +1,60 @@
+---
+title: 'GPU'
+---
+
+10x cheaper GPU runners with NVIDIA or AMD GPUs for CI/CD workflows.
+
+## Overview
+
+GPU runners provide access to NVIDIA and AMD GPUs for machine learning, AI, and GPU-accelerated workloads.
+
+## Supported GPUs
+
+GPU runners support:
+
+- **NVIDIA**: Various NVIDIA GPU models (V100, A100, T4, etc.)
+- **AMD**: AMD GPU support for compute workloads
+
+## Use Cases
+
+GPU runners are ideal for:
+
+- Machine learning training and inference
+- AI model testing
+- GPU-accelerated builds
+- Scientific computing
+- Graphics rendering
+
+## Setup
+
+Configure GPU runners in your workflow:
+
+```yaml
+jobs:
+  train:
+    runs-on: self-hosted-gpu
+    steps:
+      - uses: actions/checkout@v3
+      - name: Train Model
+        run: |
+          python train.py
+```
+
+## CUDA Support
+
+GPU runners support CUDA for NVIDIA GPUs:
+
+```yaml
+steps:
+  - name: Check CUDA
+    run: nvidia-smi
+  - name: Run CUDA Code
+    run: ./cuda-program
+```
+
+## Best Practices
+
+- Use GPU runners only when needed
+- Monitor GPU utilization
+- Use spot instances for cost savings
+- Optimize GPU memory usage

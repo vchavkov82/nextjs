@@ -1,0 +1,139 @@
+---
+title: 'Container Builds'
+---
+
+Accelerate your Docker image builds with CI/CD Runners container builds.
+
+## Overview
+
+Container builds provide accelerated Docker image builds with native Intel and Arm support, automatic layer caching, and integration with your existing CI/CD workflows.
+
+## Benefits
+
+Container builds provide:
+
+- **Faster builds**: Up to 10-20x faster than standard Docker builds
+- **Native architectures**: Support for both Intel (amd64) and Arm (arm64)
+- **Automatic caching**: Intelligent layer caching reduces build times
+- **Multi-platform**: Build for multiple platforms in a single command
+- **Easy integration**: Works with GitHub Actions, GitLab CI, CircleCI, and more
+
+## Quick Start
+
+Replace `docker build` with the CI/CD Runners build command:
+
+```bash
+# Before
+docker build -t myapp:latest .
+
+# After
+runners build -t myapp:latest .
+```
+
+## GitHub Actions Integration
+
+Use container builds in GitHub Actions:
+
+```yaml
+name: Build Container
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up runners
+        uses: runners/setup-action@v1
+      - name: Build with runners
+        run: |
+          runners build \
+            --tag myapp:${{ github.sha }} \
+            --target app \
+            --file docker/Dockerfile \
+            --build-arg COMMIT=${{ github.sha }} \
+            --platform linux/arm64,linux/amd64 \
+            --progress plain \
+            --push
+```
+
+## Multi-Platform Builds
+
+Build for multiple platforms simultaneously:
+
+```yaml
+- name: Build multi-platform
+  run: |
+    runners build \
+      --platform linux/amd64,linux/arm64 \
+      --tag myapp:latest \
+      --push \
+      .
+```
+
+## Advanced Features
+
+### Build Arguments
+
+Pass build arguments:
+
+```yaml
+runners build \
+  --build-arg NODE_ENV=production \
+  --build-arg VERSION=${{ github.sha }} \
+  --tag myapp:latest \
+  .
+```
+
+### Target Stages
+
+Build specific stages:
+
+```yaml
+runners build \
+  --target production \
+  --tag myapp:latest \
+  .
+```
+
+### SSH Support
+
+Use SSH for private repositories:
+
+```yaml
+runners build \
+  --ssh default \
+  --tag myapp:latest \
+  .
+```
+
+### BuildKit Features
+
+Leverage BuildKit features:
+
+```yaml
+runners build \
+  --progress plain \
+  --cache-from type=registry,ref=myapp:cache \
+  --cache-to type=registry,ref=myapp:cache,mode=max \
+  --tag myapp:latest \
+  .
+```
+
+## Performance
+
+Container builds provide significant performance improvements:
+
+- **First build**: 3-5x faster than standard Docker builds
+- **Cached builds**: 10-20x faster with layer caching
+- **Multi-platform**: Build all platforms in parallel
+- **Network**: 10x faster cache and layer transfer
+
+## Best Practices
+
+- Use layer caching for faster rebuilds
+- Build for multiple platforms when needed
+- Use build arguments for configuration
+- Leverage BuildKit features
+- Monitor build times and optimize

@@ -1,0 +1,48 @@
+---
+title: 'Stack Metrics'
+---
+
+Monitor your CI/CD Runners installation with metrics and observability tools.
+
+## Overview
+
+Stack metrics provide infrastructure-level monitoring for your CI/CD Runners installation.
+
+## Available Metrics
+
+Stack metrics include:
+
+- **Runner count**: Number of active runners
+- **Queue depth**: Number of queued jobs
+- **Resource utilization**: Overall infrastructure usage
+- **Error rates**: Infrastructure error rates
+- **Cost metrics**: Infrastructure costs
+
+## Integration
+
+Stack metrics can be integrated with:
+
+- CloudWatch (AWS)
+- Prometheus
+- Grafana
+- Custom monitoring tools
+
+## Configuration
+
+Configure stack metrics:
+
+```yaml
+monitoring:
+  stack_metrics:
+    enabled: true
+    backend: cloudwatch
+    region: us-east-1
+```
+
+## Best Practices
+
+- Monitor runner capacity
+- Track queue depths
+- Monitor error rates
+- Set up infrastructure alerts
+- Review metrics regularly

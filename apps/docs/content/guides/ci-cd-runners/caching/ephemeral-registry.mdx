@@ -1,0 +1,61 @@
+---
+title: 'Ephemeral Registry'
+---
+
+How to use the ephemeral registry with CI/CD Runners, for incredible build speeds.
+
+## Overview
+
+Ephemeral registry provides a fast, temporary Docker registry for building and caching Docker images.
+
+## How It Works
+
+Ephemeral registry:
+
+- Creates a temporary registry per job
+- Stores images in memory or fast storage
+- Provides fast push/pull operations
+- Automatically cleans up after jobs
+
+## Setup
+
+Enable ephemeral registry in your configuration:
+
+```yaml
+caching:
+  ephemeral_registry:
+    enabled: true
+    storage_backend: memory
+```
+
+## Usage
+
+Use ephemeral registry in your workflows:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Push
+        run: |
+          docker build -t registry.local/myapp:latest .
+          docker push registry.local/myapp:latest
+```
+
+## Benefits
+
+Ephemeral registry provides:
+
+- **Fast operations**: Optimized for speed
+- **Temporary storage**: Automatic cleanup
+- **Compatibility**: Works with Docker workflows
+- **Cost effective**: No persistent storage costs
+
+## Best Practices
+
+- Use for temporary builds
+- Push to permanent registry if needed
+- Monitor registry performance
+- Clean up unused images

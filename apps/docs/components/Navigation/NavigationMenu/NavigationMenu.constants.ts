@@ -148,6 +148,12 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
             level: 'deployment',
           },
           {
+            label: 'CI/CD Runners',
+            icon: 'github',
+            href: '/guides/ci-cd-runners' as `/${string}`,
+            level: 'ci_cd_runners',
+          },
+          {
             label: 'Self-Hosting',
             icon: 'self-hosting',
             href: '/guides/self-hosting' as `/${string}`,
@@ -1577,6 +1583,124 @@ export const deployment: NavMenuConstant = {
       items: [
         { name: 'Managing environments', url: '/guides/deployment/managing-environments' },
         { name: 'Database migrations', url: '/guides/deployment/database-migrations' },
+      ],
+    },
+  ],
+}
+
+export const ci_cd_runners: NavMenuConstant = {
+  title: 'CI/CD Runners',
+  url: '/guides/ci-cd-runners',
+  icon: 'github',
+  items: [
+    { name: 'Overview', url: '/guides/ci-cd-runners' },
+    {
+      name: 'Guides',
+      url: undefined,
+      items: [
+        { name: 'Installation', url: '/guides/ci-cd-runners/guides/installation' },
+        { name: 'Container Builds', url: '/guides/ci-cd-runners/guides/container-builds' },
+        { name: 'Troubleshooting', url: '/guides/ci-cd-runners/guides/troubleshooting' },
+        { name: 'Upgrade', url: '/guides/ci-cd-runners/guides/upgrade' },
+        { name: 'Downgrade', url: '/guides/ci-cd-runners/guides/downgrade' },
+        { name: 'Uninstall', url: '/guides/ci-cd-runners/guides/uninstall' },
+        { name: 'Best Practices', url: '/guides/ci-cd-runners/guides/best-practices' },
+        { name: 'CLI', url: '/guides/ci-cd-runners/guides/cli' },
+        {
+          name: 'Languages',
+          url: undefined,
+          items: [
+            { name: 'Go', url: '/guides/ci-cd-runners/guides/languages/go' },
+            { name: 'Ruby & Rails', url: '/guides/ci-cd-runners/guides/languages/ruby-rails' },
+            { name: 'Rust', url: '/guides/ci-cd-runners/guides/languages/rust' },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'Runners',
+      url: undefined,
+      items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/runners/overview' },
+        { name: 'Linux', url: '/guides/ci-cd-runners/runners/linux' },
+        { name: 'Windows', url: '/guides/ci-cd-runners/runners/windows' },
+        { name: 'GPU', url: '/guides/ci-cd-runners/runners/gpu' },
+        { name: 'macOS', url: '/guides/ci-cd-runners/runners/macos' },
+        { name: 'Pools', url: '/guides/ci-cd-runners/runners/pools' },
+      ],
+    },
+    {
+      name: 'Configuration',
+      url: undefined,
+      items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/configuration/overview' },
+        { name: 'Job labels', url: '/guides/ci-cd-runners/configuration/job-labels' },
+        {
+          name: 'Repository configuration',
+          url: '/guides/ci-cd-runners/configuration/repository-configuration',
+        },
+        {
+          name: 'Stack configuration',
+          url: '/guides/ci-cd-runners/configuration/stack-configuration',
+        },
+        { name: 'Environments', url: '/guides/ci-cd-runners/configuration/environments' },
+        { name: 'Custom images', url: '/guides/ci-cd-runners/configuration/custom-images' },
+        { name: 'Resource tags', url: '/guides/ci-cd-runners/configuration/resource-tags' },
+        { name: 'Spot instances', url: '/guides/ci-cd-runners/configuration/spot-instances' },
+      ],
+    },
+    {
+      name: 'Caching',
+      url: undefined,
+      items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/caching/overview' },
+        { name: 'Remote Cache', url: '/guides/ci-cd-runners/caching/remote-cache' },
+        { name: 'Magic Cache', url: '/guides/ci-cd-runners/caching/magic-cache' },
+        { name: 'Ephemeral registry', url: '/guides/ci-cd-runners/caching/ephemeral-registry' },
+        { name: 'Snapshots', url: '/guides/ci-cd-runners/caching/snapshots' },
+        { name: 'Docker S3 Exporter', url: '/guides/ci-cd-runners/caching/docker-s3-exporter' },
+        {
+          name: 'Elastic File System',
+          url: '/guides/ci-cd-runners/caching/elastic-file-system',
+        },
+        { name: 'YOLO mode (tmpfs)', url: '/guides/ci-cd-runners/caching/yolo-mode' },
+      ],
+    },
+    {
+      name: 'Networking',
+      url: undefined,
+      items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/networking/overview' },
+        { name: 'Reuse existing VPC', url: '/guides/ci-cd-runners/networking/reuse-existing-vpc' },
+        { name: 'SSH / SSM access', url: '/guides/ci-cd-runners/networking/ssh-ssm-access' },
+        { name: 'Static IPs', url: '/guides/ci-cd-runners/networking/static-ips' },
+      ],
+    },
+    {
+      name: 'Monitoring',
+      url: undefined,
+      items: [
+        { name: 'Job Metrics', url: '/guides/ci-cd-runners/monitoring/job-metrics' },
+        { name: 'Stack Metrics', url: '/guides/ci-cd-runners/monitoring/stack-metrics' },
+        { name: 'Alerts', url: '/guides/ci-cd-runners/monitoring/alerts' },
+        { name: 'Cost report', url: '/guides/ci-cd-runners/monitoring/cost-report' },
+        { name: 'Job retries', url: '/guides/ci-cd-runners/monitoring/job-retries' },
+      ],
+    },
+    {
+      name: 'Integrations',
+      url: undefined,
+      items: [{ name: 'StepSecurity', url: '/guides/ci-cd-runners/integrations/stepsecurity' }],
+    },
+    {
+      name: 'Bazel',
+      url: undefined,
+      items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/bazel/overview' },
+        { name: 'Setup', url: '/guides/ci-cd-runners/bazel/setup' },
+        { name: 'Remote Cache', url: '/guides/ci-cd-runners/bazel/remote-cache' },
+        { name: 'Remote Execution', url: '/guides/ci-cd-runners/bazel/remote-execution' },
+        { name: 'GitHub Actions', url: '/guides/ci-cd-runners/bazel/github-actions' },
       ],
     },
   ],

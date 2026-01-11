@@ -1,0 +1,171 @@
+---
+title: 'Remote Cache'
+---
+
+Make all builds incremental with distributed remote caching for Bazel, Go, Gradle, Turborepo, sccache, and Pants.
+
+## Overview
+
+Remote cache provides distributed caching for build tools, allowing you to share cache across your entire team and CI/CD workflows, even in local development.
+
+## Supported Build Tools
+
+Remote cache supports:
+
+- **Bazel**: Remote execution and caching
+- **Go**: Module cache and build cache
+- **Gradle**: Build cache and dependency cache
+- **Turborepo**: Remote cache for monorepos
+- **sccache**: Rust and C++ compilation cache
+- **Pants**: Build cache for Python
+
+## Benefits
+
+Remote cache provides:
+
+- **Incremental builds**: Reuse cached artifacts across builds
+- **Team sharing**: Share cache with entire team
+- **CI/CD integration**: Use same cache in CI and local development
+- **Cost savings**: Reduce build times and compute costs
+- **Global distribution**: Low-latency access worldwide
+
+## Configuration
+
+Configure remote cache in your CI/CD workflow:
+
+```yaml
+env:
+  CACHE_ENDPOINT: https://cache.runners.dev
+  CACHE_TOKEN: ${{ secrets.RUNNERS_CACHE_TOKEN }}
+```
+
+## Bazel
+
+Use remote cache with Bazel:
+
+```yaml
+steps:
+  - name: Configure Bazel
+    run: |
+      echo "build --remote_cache=$CACHE_ENDPOINT" >> .bazelrc
+      echo "build --remote_header=x-api-key=$CACHE_TOKEN" >> .bazelrc
+  - name: Build with Bazel
+    run: bazel build //...
+```
+
+## Go
+
+Use remote cache with Go:
+
+```yaml
+env:
+  GOCACHE: ${{ runner.temp }}/go-cache
+  GOMODCACHE: ${{ runner.temp }}/go-mod-cache
+
+steps:
+  - name: Restore Go cache
+    uses: actions/cache@v3
+    with:
+      path: |
+        ${{ runner.temp }}/go-cache
+        ${{ runner.temp }}/go-mod-cache
+      key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+  - name: Build Go
+    run: go build ./...
+```
+
+## Gradle
+
+Use remote cache with Gradle:
+
+```yaml
+steps:
+  - name: Configure Gradle
+    run: |
+      echo "buildCache {
+        remote {
+          url = 'https://cache.runners.dev/gradle'
+          credentials {
+            username = 'token'
+            password = '$CACHE_TOKEN'
+          }
+        }
+      }" >> gradle.properties
+  - name: Build with Gradle
+    run: ./gradlew build
+```
+
+## Turborepo
+
+Use remote cache with Turborepo:
+
+```yaml
+steps:
+  - name: Build with Turborepo
+    run: |
+      npx turbo build \
+        --token=$CACHE_TOKEN \
+        --team=myteam \
+        --api=$CACHE_ENDPOINT
+```
+
+## sccache
+
+Use remote cache with sccache (Rust/C++):
+
+```yaml
+env:
+  SCCACHE_WEBDAV_ENDPOINT: https://cache.runners.dev/sccache
+  SCCACHE_WEBDAV_TOKEN: ${{ secrets.RUNNERS_CACHE_TOKEN }}
+  RUSTC_WRAPPER: sccache
+
+steps:
+  - name: Build with sccache
+    run: cargo build --release
+```
+
+## Pants
+
+Use remote cache with Pants:
+
+```yaml
+steps:
+  - name: Configure Pants
+    run: |
+      echo "[GLOBAL]
+      remote_cache_read = true
+      remote_cache_write = true
+      remote_cache_url = $CACHE_ENDPOINT/pants
+      remote_cache_headers = {'x-api-key': '$CACHE_TOKEN'}" >> pants.toml
+  - name: Build with Pants
+    run: ./pants package ::
+```
+
+## Local Development
+
+Use remote cache in local development:
+
+```bash
+export CACHE_ENDPOINT=https://cache.runners.dev
+export CACHE_TOKEN=your-token
+
+# Use same cache as CI/CD
+go build ./...
+```
+
+## Performance
+
+Remote cache provides:
+
+- **First build**: Similar to local build
+- **Subsequent builds**: 10-100x faster with cache hits
+- **Team sharing**: Instant access to teammates' builds
+- **Global access**: Low latency worldwide
+
+## Best Practices
+
+- Use cache tokens securely (secrets)
+- Set appropriate cache keys
+- Monitor cache hit rates
+- Clean up stale cache entries
+- Use cache for dependencies and build artifacts

@@ -1,0 +1,50 @@
+---
+title: 'Uninstall'
+---
+
+Learn how to uninstall CI/CD Runners.
+
+## Before Uninstalling
+
+Before uninstalling CI/CD Runners:
+
+- Ensure no active jobs are running
+- Backup any important configuration or data
+- Remove runners from your CI/CD platform
+- Notify team members of the change
+
+## Uninstall Process
+
+The uninstall process depends on your installation method:
+
+### Infrastructure-as-Code
+
+If using Terraform:
+
+1. Remove runner resources from configuration
+2. Run `terraform destroy` (with caution)
+3. Verify all resources are removed
+
+### Managed Installation
+
+For managed installations:
+
+1. Follow platform-specific uninstall procedures
+2. Remove runners from CI/CD platform
+3. Clean up any remaining resources
+4. Verify complete removal
+
+## Post-Uninstall Cleanup
+
+After uninstalling:
+
+- Remove any remaining cloud resources
+- Clean up network configurations
+- Remove IAM roles and policies if no longer needed
+- Verify no costs are being incurred
+
+<Admonition type="danger">
+
+Uninstalling CI/CD Runners will permanently remove all runners and configurations. Ensure you have backups and have removed runners from your CI/CD platform before proceeding.
+
+</Admonition>

@@ -1,0 +1,56 @@
+---
+title: 'Job Retries'
+---
+
+Jobs processed with CI/CD Runners are regularly inspected to ensure they were able to get a runner assigned, as well as detect idle runners and remove them.
+
+## Overview
+
+Job retries automatically handle job failures and ensure jobs are properly executed.
+
+## Automatic Retries
+
+CI/CD Runners automatically retries:
+
+- Jobs that fail due to runner issues
+- Jobs that timeout
+- Jobs that fail due to infrastructure problems
+
+## Configuration
+
+Configure retry behavior:
+
+```yaml
+monitoring:
+  job_retries:
+    enabled: true
+    max_attempts: 3
+    backoff_strategy: exponential
+    retry_on:
+      - runner_unavailable
+      - infrastructure_error
+```
+
+## Retry Strategies
+
+Retry strategies include:
+
+- **Fixed delay**: Constant delay between retries
+- **Exponential backoff**: Increasing delays
+- **Custom backoff**: Custom retry logic
+
+## Monitoring
+
+Monitor retry metrics:
+
+- **Retry rate**: Percentage of jobs retried
+- **Retry success rate**: Success rate after retries
+- **Retry causes**: Reasons for retries
+
+## Best Practices
+
+- Set appropriate retry limits
+- Use exponential backoff
+- Monitor retry rates
+- Investigate high retry rates
+- Optimize to reduce retries

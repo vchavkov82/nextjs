@@ -1,0 +1,55 @@
+---
+title: 'Custom Images'
+---
+
+CI/CD Runners provides compatible images with official CI/CD runners, but you can also bring your own images if you want!
+
+## Overview
+
+Custom images allow you to use pre-configured images with your tools, dependencies, and configurations already installed.
+
+## Benefits
+
+Custom images provide:
+
+- **Faster job startup**: Pre-installed dependencies
+- **Consistency**: Same environment across jobs
+- **Customization**: Install specific tools and versions
+- **Reproducibility**: Consistent builds
+
+## Building Custom Images
+
+Build custom images using Docker or Packer:
+
+```dockerfile
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    build-essential
+
+# Install custom tools
+RUN curl -fsSL https://example.com/tool | bash
+```
+
+## Using Custom Images
+
+Configure runners to use custom images:
+
+```yaml
+runners:
+  - name: custom
+    image: my-registry/custom-runner:latest
+    labels:
+      - linux
+      - custom
+```
+
+## Best Practices
+
+- Keep images minimal
+- Use multi-stage builds
+- Tag images with versions
+- Regularly update base images
+- Test images before using in production

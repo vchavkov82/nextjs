@@ -1,0 +1,56 @@
+---
+title: 'Pools'
+---
+
+Learn how to use runner warm pools to get <10s queuing time for your CI/CD workflows.
+
+## Overview
+
+Runner pools maintain warm runners ready to execute jobs, reducing queuing time and improving workflow performance.
+
+## Benefits
+
+Runner pools provide:
+
+- **Fast startup**: Warm runners start jobs immediately
+- **Cost optimization**: Efficient resource utilization
+- **Auto-scaling**: Scale based on queue depth
+- **Load balancing**: Distribute jobs across runners
+
+## Configuration
+
+Configure runner pools with:
+
+- Minimum and maximum pool sizes
+- Scaling policies
+- Instance types
+- Auto-scaling rules
+
+## Setup
+
+Create a runner pool:
+
+```yaml
+# Pool configuration example
+pool:
+  name: production-pool
+  min_size: 2
+  max_size: 10
+  instance_type: medium
+```
+
+## Auto-Scaling
+
+Runner pools support auto-scaling:
+
+- Scale up when queue depth increases
+- Scale down when idle
+- Configure scaling thresholds
+- Set cooldown periods
+
+## Best Practices
+
+- Size pools based on workload patterns
+- Use warm pools for critical workflows
+- Monitor pool utilization
+- Adjust scaling policies based on metrics

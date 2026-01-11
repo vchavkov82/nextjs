@@ -1,0 +1,57 @@
+---
+title: 'Docker S3 Exporter'
+---
+
+Export Docker layers to S3 for caching and faster builds.
+
+## Overview
+
+Docker S3 Exporter allows you to export Docker layers to S3, providing efficient caching for Docker builds.
+
+## How It Works
+
+Docker S3 Exporter:
+
+- Exports Docker layers to S3
+- Imports layers from S3
+- Caches layers efficiently
+- Speeds up Docker builds
+
+## Setup
+
+Configure Docker S3 Exporter:
+
+```yaml
+caching:
+  docker_s3_exporter:
+    enabled: true
+    bucket: my-docker-cache-bucket
+    region: us-east-1
+```
+
+## Usage
+
+Docker S3 Exporter works automatically with Docker builds:
+
+```yaml
+steps:
+  - uses: actions/checkout@v3
+  - name: Build Docker Image
+    run: docker build -t myapp .
+```
+
+## Benefits
+
+Docker S3 Exporter provides:
+
+- **Layer caching**: Cache Docker layers in S3
+- **Faster builds**: Reuse cached layers
+- **Cost effective**: Pay only for storage used
+- **Scalability**: Share caches across runners
+
+## Best Practices
+
+- Use appropriate cache keys
+- Monitor cache hit rates
+- Set cache expiration policies
+- Clean up unused layers

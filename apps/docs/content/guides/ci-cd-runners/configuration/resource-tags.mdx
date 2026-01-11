@@ -1,0 +1,46 @@
+---
+title: 'Resource Tags'
+---
+
+Learn how to tag CI/CD Runners resources with custom tags, as well as the default tags that are applied.
+
+## Overview
+
+Resource tags allow you to organize, track, and manage CI/CD Runners resources in your cloud environment.
+
+## Default Tags
+
+CI/CD Runners automatically applies default tags:
+
+- **ManagedBy**: `ci-cd-runners`
+- **RunnerId**: Unique runner identifier
+- **StackName**: Stack name
+- **Environment**: Environment name (if applicable)
+
+## Custom Tags
+
+Add custom tags to resources:
+
+```yaml
+tags:
+  Project: my-project
+  Team: engineering
+  CostCenter: infrastructure
+  Environment: production
+```
+
+## Using Tags
+
+Tags can be used for:
+
+- **Cost tracking**: Track costs by tag
+- **Resource organization**: Group related resources
+- **Automation**: Trigger actions based on tags
+- **Compliance**: Meet tagging requirements
+
+## Best Practices
+
+- Use consistent tagging conventions
+- Tag all resources
+- Use tags for cost allocation
+- Document tagging policies

@@ -1,0 +1,61 @@
+---
+title: 'Snapshots'
+---
+
+Save and restore entire folders with block-level snapshots. Helps to speed-up docker builds in your CI/CD workflows.
+
+## Overview
+
+Snapshots allow you to save and restore entire directories at the block level, providing fast restore times for Docker builds and other workflows.
+
+## How It Works
+
+Snapshots:
+
+- Capture directory state at block level
+- Store snapshots efficiently
+- Restore directories quickly
+- Support incremental snapshots
+
+## Setup
+
+Configure snapshots in your configuration:
+
+```yaml
+caching:
+  snapshots:
+    enabled: true
+    storage_backend: s3
+    bucket: my-snapshots-bucket
+```
+
+## Usage
+
+Use snapshots in your workflows:
+
+```yaml
+steps:
+  - name: Restore Snapshot
+    run: |
+      snapshot restore my-snapshot
+  - name: Build Docker Image
+    run: docker build -t myapp .
+  - name: Save Snapshot
+    run: snapshot save my-snapshot
+```
+
+## Benefits
+
+Snapshots provide:
+
+- **Fast restore**: Block-level restore is fast
+- **Efficient storage**: Incremental snapshots
+- **Docker optimization**: Speed up Docker builds
+- **Flexibility**: Use for any directory-based cache
+
+## Best Practices
+
+- Use for Docker layer caching
+- Take snapshots after dependency installation
+- Set snapshot retention policies
+- Monitor snapshot sizes

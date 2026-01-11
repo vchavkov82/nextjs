@@ -1,0 +1,80 @@
+---
+title: 'Repository Configuration'
+---
+
+Learn all about repository configuration files for CI/CD Runners.
+
+## Overview
+
+Repository configuration files allow you to configure runners per repository using a configuration file in your repository.
+
+## Configuration File
+
+Create a `.github/runners.yml` file in your repository:
+
+```yaml
+runners:
+  - name: default
+    labels:
+      - linux
+      - x64
+    instance_type: medium
+    min_size: 1
+    max_size: 5
+```
+
+## Configuration Options
+
+- **runners**: List of runner configurations
+- **labels**: Job labels for routing
+- **instance_type**: Instance type to use
+- **min_size**: Minimum number of runners
+- **max_size**: Maximum number of runners
+
+## Examples
+
+### Basic Configuration
+
+```yaml
+runners:
+  - name: default
+    labels:
+      - linux
+    instance_type: medium
+```
+
+### Multiple Runners
+
+```yaml
+runners:
+  - name: default
+    labels:
+      - linux
+    instance_type: medium
+  - name: gpu
+    labels:
+      - linux
+      - gpu
+    instance_type: gpu
+```
+
+### Environment-Specific
+
+```yaml
+environments:
+  production:
+    runners:
+      - name: prod
+        instance_type: large
+  development:
+    runners:
+      - name: dev
+        instance_type: small
+```
+
+## Best Practices
+
+- Keep configuration simple
+- Use appropriate instance types
+- Set reasonable min/max sizes
+- Document configuration decisions

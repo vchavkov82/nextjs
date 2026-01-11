@@ -1,0 +1,62 @@
+---
+title: 'Stack Configuration'
+---
+
+Learn how to configure your CI/CD Runners stack.
+
+## Overview
+
+Stack configuration allows you to configure infrastructure-level settings for your CI/CD Runners installation.
+
+## Configuration Options
+
+Stack configuration includes:
+
+- **Infrastructure settings**: VPC, subnets, security groups
+- **Scaling settings**: Auto-scaling policies
+- **Caching settings**: Cache backend configuration
+- **Monitoring settings**: Logging and metrics
+- **Security settings**: IAM roles, encryption
+
+## Configuration Methods
+
+Stack configuration can be set via:
+
+- Infrastructure-as-Code (Terraform, CloudFormation)
+- CLI tools
+- Configuration files
+- Environment variables
+
+## Examples
+
+### Terraform Configuration
+
+```hcl
+module "runners" {
+  source = "ci-cd-runners/stack"
+
+  vpc_id = "vpc-123456"
+  subnet_ids = ["subnet-123", "subnet-456"]
+  
+  min_runners = 2
+  max_runners = 10
+  
+  cache_backend = "s3"
+  cache_bucket = "my-cache-bucket"
+}
+```
+
+### Environment Variables
+
+```bash
+export RUNNERS_VPC_ID=vpc-123456
+export RUNNERS_MIN_SIZE=2
+export RUNNERS_MAX_SIZE=10
+```
+
+## Best Practices
+
+- Use Infrastructure-as-Code for reproducibility
+- Document all configuration decisions
+- Test configuration changes in staging
+- Use version control for configurations

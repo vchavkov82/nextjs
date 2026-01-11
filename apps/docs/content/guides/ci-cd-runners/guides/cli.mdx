@@ -1,0 +1,72 @@
+---
+title: 'CLI'
+---
+
+Command-line interface for managing CI/CD Runners.
+
+## Installation
+
+Install the CI/CD Runners CLI:
+
+```bash
+# Installation instructions vary by platform
+```
+
+## Common Commands
+
+### List Runners
+
+```bash
+runners list
+```
+
+### Create Runner
+
+```bash
+runners create --type linux --size medium
+```
+
+### Update Runner
+
+```bash
+runners update <runner-id> --size large
+```
+
+### Delete Runner
+
+```bash
+runners delete <runner-id>
+```
+
+### View Logs
+
+```bash
+runners logs <runner-id>
+```
+
+### Configure
+
+```bash
+runners config set <key> <value>
+runners config get <key>
+```
+
+## Configuration
+
+CLI configuration can be stored in:
+
+- Environment variables
+- Configuration files
+- Command-line flags
+
+## Authentication
+
+The CLI uses authentication tokens for API access. Set your token:
+
+```bash
+runners auth login
+```
+
+## Examples
+
+See the [Best Practices](/guides/ci-cd-runners/guides/best-practices) guide for common usage patterns.

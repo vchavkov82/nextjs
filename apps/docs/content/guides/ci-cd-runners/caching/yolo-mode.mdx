@@ -1,0 +1,64 @@
+---
+title: 'YOLO mode (tmpfs)'
+---
+
+Use YOLO mode (tmpfs) for in-memory caching for maximum speed.
+
+## Overview
+
+YOLO mode uses tmpfs (in-memory filesystem) for caching, providing the fastest possible cache operations at the cost of volatility.
+
+## How It Works
+
+YOLO mode:
+
+- Uses tmpfs for caching
+- Provides extremely fast operations
+- Loses cache on restart
+- Best for temporary caches
+
+## Setup
+
+Enable YOLO mode in your configuration:
+
+```yaml
+caching:
+  yolo_mode:
+    enabled: true
+    size: 10G
+    mount_point: /tmp/cache
+```
+
+## Usage
+
+Use YOLO mode for fast temporary caches:
+
+```yaml
+steps:
+  - name: Install Dependencies
+    run: npm install --cache /tmp/cache/npm
+  - name: Build
+    run: npm run build
+```
+
+## Benefits
+
+YOLO mode provides:
+
+- **Maximum speed**: In-memory operations
+- **Simple setup**: Easy to enable
+- **Low overhead**: No persistent storage
+- **Fast cleanup**: Automatic on restart
+
+<Admonition type="warning">
+
+YOLO mode caches are lost when the runner restarts. Use only for temporary caches that can be rebuilt quickly.
+
+</Admonition>
+
+## Best Practices
+
+- Use for fast temporary caches
+- Don't rely on persistence
+- Monitor memory usage
+- Use appropriate cache sizes

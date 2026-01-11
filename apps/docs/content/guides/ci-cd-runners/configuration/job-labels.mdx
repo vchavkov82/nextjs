@@ -1,0 +1,58 @@
+---
+title: 'Job Labels'
+---
+
+Learn how to configure your CI/CD runners with specific requirements in terms of CPU, GPU, RAM, volume size, and more.
+
+## Overview
+
+Job labels allow you to route jobs to specific runners based on requirements like CPU, GPU, RAM, and other specifications.
+
+## Label Format
+
+Job labels use a simple format:
+
+```yaml
+runs-on: [self-hosted, linux, cpu-4, ram-8gb]
+```
+
+## Common Labels
+
+- **OS**: `linux`, `windows`, `macos`
+- **CPU**: `cpu-2`, `cpu-4`, `cpu-8`, `cpu-16`
+- **RAM**: `ram-4gb`, `ram-8gb`, `ram-16gb`, `ram-32gb`
+- **GPU**: `gpu`, `gpu-nvidia`, `gpu-amd`
+- **Architecture**: `x64`, `arm64`
+
+## Examples
+
+### CPU Requirements
+
+```yaml
+jobs:
+  build:
+    runs-on: [self-hosted, linux, cpu-4, ram-8gb]
+```
+
+### GPU Requirements
+
+```yaml
+jobs:
+  train:
+    runs-on: [self-hosted, linux, gpu-nvidia]
+```
+
+### Multiple Requirements
+
+```yaml
+jobs:
+  test:
+    runs-on: [self-hosted, linux, cpu-8, ram-16gb, x64]
+```
+
+## Best Practices
+
+- Use specific labels to match job requirements
+- Avoid over-specifying labels
+- Use labels consistently across workflows
+- Document label meanings for your team

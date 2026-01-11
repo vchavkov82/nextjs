@@ -1,0 +1,55 @@
+---
+title: 'Alerts'
+---
+
+Receive job errors and monitoring alarms with CI/CD Runners alerts.
+
+## Overview
+
+Alerts notify you of issues with jobs, runners, or infrastructure, enabling proactive problem resolution.
+
+## Alert Types
+
+Alerts can be configured for:
+
+- **Job failures**: Failed job executions
+- **Runner issues**: Runner health problems
+- **Infrastructure**: Infrastructure errors
+- **Cost thresholds**: Cost limit breaches
+- **Performance**: Performance degradation
+
+## Configuration
+
+Configure alerts:
+
+```yaml
+monitoring:
+  alerts:
+    - type: job_failure
+      threshold: 5
+      channel: slack
+      webhook: https://hooks.slack.com/services/...
+    - type: cost_threshold
+      threshold: 1000
+      channel: email
+      recipients:
+        - admin@example.com
+```
+
+## Alert Channels
+
+Alerts can be sent via:
+
+- **Email**: Email notifications
+- **Slack**: Slack webhooks
+- **PagerDuty**: PagerDuty integration
+- **Webhooks**: Custom webhook endpoints
+- **SNS/SQS**: AWS messaging services
+
+## Best Practices
+
+- Set appropriate thresholds
+- Use multiple channels for critical alerts
+- Avoid alert fatigue
+- Review and tune alerts regularly
+- Document alert procedures

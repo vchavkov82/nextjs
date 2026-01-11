@@ -1,0 +1,56 @@
+---
+title: 'Linux'
+---
+
+Learn how to set up and use Linux self-hosted runners for your CI/CD workflows.
+
+## Overview
+
+Linux runners support native x64 and arm64 architectures and provide a flexible environment for Linux-based builds and tests.
+
+## Supported Architectures
+
+- **x64**: 64-bit x86 architecture (amd64)
+- **arm64**: 64-bit ARM architecture (aarch64)
+
+## Supported Distributions
+
+Linux runners can use various Linux distributions:
+
+- Ubuntu (LTS versions)
+- Amazon Linux
+- Debian
+- Custom distributions
+
+## Setup
+
+Configure Linux runners in your workflow:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted-linux
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./build.sh
+```
+
+## Docker Support
+
+Linux runners support Docker and containerized workloads:
+
+```yaml
+steps:
+  - uses: actions/checkout@v3
+  - uses: docker/build-push-action@v4
+    with:
+      context: .
+      push: false
+```
+
+## Best Practices
+
+- Use appropriate instance types for your workload
+- Enable caching for faster builds
+- Use Docker for consistent environments
+- Monitor resource utilization
