@@ -1,25 +1,24 @@
 .logo {
   --duration: 500ms;
   --curve: ease;
+}
 
-  &[data-animate='false'] {
-    &[data-state='enter'] {
-      opacity: 0;
-      animation: none;
-    }
-    &[data-state='exit'] {
-      opacity: 1;
-      animation: none;
-    }
-  }
+.logo[data-animate='false'][data-state='enter'] {
+  opacity: 0;
+  animation: none;
+}
 
-  &[data-state='enter'][data-animate='true'] {
-    animation: enter var(--duration) var(--curve) var(--delay) both;
-  }
+.logo[data-animate='false'][data-state='exit'] {
+  opacity: 1;
+  animation: none;
+}
 
-  &[data-state='exit'][data-animate='true'] {
-    animation: exit var(--duration) var(--curve) var(--delay) both;
-  }
+.logo[data-state='enter'][data-animate='true'] {
+  animation: enter var(--duration) var(--curve) var(--delay) both;
+}
+
+.logo[data-state='exit'][data-animate='true'] {
+  animation: exit var(--duration) var(--curve) var(--delay) both;
 }
 
 @keyframes enter {

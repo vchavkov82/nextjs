@@ -1,5 +1,7 @@
 import bundleAnalyzer from '@next/bundle-analyzer'
 import nextMdx from '@next/mdx'
+import { fileURLToPath } from 'url'
+import { dirname } from 'path'
 
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
@@ -10,6 +12,9 @@ import rewrites from './lib/rewrites.js'
 
 import { remarkCodeHike } from '@code-hike/mdx'
 import codeHikeTheme from 'config/code-hike.theme.json' with { type: 'json' }
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const withMDX = nextMdx({
   extension: /\.mdx?$/,
@@ -63,6 +68,17 @@ const nextConfig = {
   },
   // Explicitly configure webpack to ensure it's used instead of Turbopack
   webpack: (config, { isServer }) => {
+    // Fix webpack cache serialization issues with Warning objects
+    // This prevents "No serializer registered for Warning" errors
+    if (config.cache) {
+      config.cache = {
+        ...config.cache,
+        type: 'filesystem',
+        buildDependencies: {
+          config: [__filename],
+        },
+      }
+    }
     return config
   },
   // Add empty turbopack config to allow webpack config to work
