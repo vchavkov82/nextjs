@@ -1017,11 +1017,6 @@ module.exports = [
   },
   {
     permanent: true,
-    source: '/blog/2021/11/30/supabase-studio',
-    destination: '/blog/supabase-studio',
-  },
-  {
-    permanent: true,
     source: '/blog/2021/12/01/realtime-row-level-security-in-postgresql',
     destination: '/blog/realtime-row-level-security-in-postgresql',
   },

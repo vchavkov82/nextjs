@@ -42,10 +42,10 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
-    "eslint": "^9.0.0",
+    "eslint": "^9.39.2",
     "prettier": "3.2.5",
-    "prettier-plugin-sql-cst": "^0.11.0",
-    "rimraf": "^6.0.0",
+    "prettier-plugin-sql-cst": "^0.11.8",
+    "rimraf": "^6.1.2",
     "sass": "^1.72.0",
     "supabase": "^2.65.6",
     "supports-color": "^8.0.0",
@@ -119,6 +119,6 @@
     "vfile-matter": "^3.0.1"
   },
   "dependencies": {
-    "@supabase/sql-to-rest": "^0.1.6"
+    "@supabase/sql-to-rest": "^0.1.8"
   }
 }
