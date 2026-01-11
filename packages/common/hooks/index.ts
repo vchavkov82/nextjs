@@ -13,3 +13,6 @@ export * from './useOnChange'
 export * from './useParams'
 export * from './useSearchParamsShallow'
 export * from './useThemeSandbox'
+
+// Auth hooks
+export { useIsLoggedIn, useUser, useIsUserLoading } from '../auth'

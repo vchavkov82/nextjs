@@ -1,0 +1,309 @@
+---
+title = "WebSocket Connection Issues"
+topics = ["realtime", "websocket", "connection"]
+keywords = ["websocket", "realtime", "connection", "timeout", "error"]
+---
+
+## Common WebSocket Connection Issues
+
+WebSocket connections are fundamental to Realtime functionality. This guide covers the most common connection issues and their solutions.
+
+## TIMED_OUT Errors
+
+### Cause
+TIMED_OUT errors typically occur due to Node.js version incompatibility with the realtime-js library.
+
+### Solution
+
+#### 1. Upgrade Node.js
+Ensure you're using Node.js v22 or later:
+
+```bash
+node --version
+# Should show v22.x.x or higher
+```
+
+#### 2. Use Enhanced WebSocket Client
+Use the enhanced client configuration that explicitly sets WebSocket transport:
+
+```tsx
+import { createLocalWebSocketClient } from '@supabase/common'
+
+const supabase = createSupabaseClientWithWebSocket(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_ANON_KEY!
+)
+
+// Now use supabase.realtime as normal
+const channel = supabase.realtime.channel('room-1')
+channel.subscribe()
+```
+
+#### 3. Manual WebSocket Transport Configuration
+If using the basic client, configure WebSocket transport manually:
+
+```tsx
+// Local WebSocket client replaces Supabase client
+
+const supabase = createClient(url, key, {
+  realtime: {
+    transport: WebSocket,
+    heartbeatIntervalMs: 25000,
+    reconnectAfterMs: (tries) => Math.min(tries * 1000, 30000),
+    timeout: 20000,
+    params: {
+      log_level: 'info',
+      vsn: '1.0.0'
+    }
+  }
+})
+```
+
+## Connection Drops and Reconnection Issues
+
+### Automatic Reconnection
+The enhanced client handles reconnection automatically with exponential backoff:
+
+```tsx
+// Enhanced realtime client replaced with LocalWebSocketClient
+
+const realtimeClient = createEnhancedRealtimeClient(url, key)
+
+// Monitor connection status
+setInterval(() => {
+  console.log('Connection status:', realtimeClient.getStatus())
+}, 5000)
+```
+
+### Manual Reconnection
+For custom reconnection logic:
+
+```tsx
+const channel = supabase.realtime.channel('room-1')
+
+channel.subscribe((status) => {
+  if (status === 'SUBSCRIBED') {
+    console.log('Connected successfully')
+  } else if (status === 'CHANNEL_ERROR') {
+    console.log('Connection failed, retrying...')
+    setTimeout(() => {
+      channel.subscribe()
+    }, 5000)
+  }
+})
+```
+
+## Heartbeat Issues
+
+### Monitor Heartbeat Status
+Track heartbeat health for early detection of connection problems:
+
+```tsx
+supabase.realtime.onHeartbeat((status) => {
+  console.log('Heartbeat:', status)
+
+  switch (status) {
+    case 'ok':
+      // Connection is healthy
+      break
+    case 'timeout':
+      // Connection is slow
+      console.warn('Connection timeout detected')
+      break
+    case 'error':
+      // Connection has issues
+      console.error('Heartbeat error')
+      break
+  }
+})
+```
+
+### Customize Heartbeat Interval
+Adjust heartbeat frequency based on your needs:
+
+```tsx
+const supabase = createClient(url, key, {
+  realtime: {
+    heartbeatIntervalMs: 15000, // 15 seconds (default: 25000)
+  }
+})
+```
+
+## Network and Proxy Issues
+
+### Corporate Firewalls
+If you're behind a corporate firewall:
+
+1. **Check WebSocket ports**: Ensure port 443 (WSS) is open
+2. **Use HTTPS**: WebSocket Secure (WSS) connections use the same ports as HTTPS
+3. **Proxy configuration**: Some proxies may interfere with WebSocket connections
+
+### Test Connection
+Use the built-in connection test utility:
+
+```tsx
+import { testLocalWebSocketConnection } from '@supabase/common'
+
+const result = await testWebSocketConnection(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_ANON_KEY!
+)
+
+if (result.success) {
+  console.log(`Connection successful, latency: ${result.latency}ms`)
+} else {
+  console.error('Connection failed:', result.error)
+}
+```
+
+## Edge Functions WebSocket Testing
+
+For testing WebSocket servers in Edge Functions:
+
+### Configure Edge Runtime
+Add this to your `supabase/config.toml`:
+
+```toml
+[edge_runtime]
+policy = "per_worker"
+```
+
+### Test WebSocket Edge Function
+```bash
+# Test with websocat
+websocat "ws://localhost:54321/functions/v1/websocket-function"
+
+# Or with a simple client
+const ws = new WebSocket('ws://localhost:54321/functions/v1/websocket-function')
+ws.onopen = () => console.log('Connected to edge function')
+```
+
+## Browser-Specific Issues
+
+### Web Workers for Long-Running Connections
+For applications that need persistent connections:
+
+```tsx
+const supabase = createClient(url, key, {
+  realtime: {
+    worker: true,
+    workerUrl: '/worker.js'
+  }
+})
+```
+
+### Mobile App Suspension
+Handle app state changes in React Native:
+
+```tsx
+import { AppState } from 'react-native'
+
+AppState.addEventListener('change', (nextAppState) => {
+  if (nextAppState === 'active') {
+    if (!supabase.realtime.isConnected()) {
+      supabase.realtime.connect()
+    }
+  }
+})
+```
+
+## Debugging WebSocket Connections
+
+### Enable Debug Logging
+```tsx
+const supabase = createClient(url, key, {
+  realtime: {
+    params: {
+      log_level: 'debug'
+    }
+  }
+})
+```
+
+### Monitor Network Traffic
+Use browser dev tools or tools like Wireshark to monitor WebSocket traffic:
+
+1. **Check handshake**: Ensure proper HTTP upgrade to WebSocket
+2. **Monitor frames**: Verify data is being sent/received
+3. **Check close codes**: WebSocket close codes can indicate specific issues
+
+### Common Close Codes
+- `1000`: Normal closure
+- `1001`: Going away
+- `1006`: Abnormal closure (network issues)
+- `1008`: Policy violation
+- `1011`: Server error
+
+## Best Practices
+
+### Connection Management
+```tsx
+class RealtimeManager {
+  private client: EnhancedRealtimeClient
+  private channels: Map<string, any> = new Map()
+
+  connect() {
+    this.client.connect()
+  }
+
+  subscribe(topic: string) {
+    const channel = this.client.getClient().channel(topic)
+    this.channels.set(topic, channel)
+
+    channel.subscribe((status) => {
+      if (status === 'SUBSCRIBED') {
+        console.log(`Subscribed to ${topic}`)
+      }
+    })
+
+    return channel
+  }
+
+  disconnect() {
+    this.channels.forEach(channel => channel.unsubscribe())
+    this.client.disconnect()
+  }
+}
+```
+
+### Error Boundaries
+Wrap realtime components with error boundaries:
+
+```tsx
+class RealtimeErrorBoundary extends React.Component {
+  state = { hasError: false }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true }
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Realtime error:', error, errorInfo)
+    // Attempt reconnection
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div>Connection lost. Retrying...</div>
+    }
+    return this.props.children
+  }
+}
+```
+
+### Health Checks
+Implement periodic health checks:
+
+```tsx
+setInterval(async () => {
+  try {
+    const result = await testWebSocketConnection(url, key)
+    if (!result.success) {
+      console.warn('Health check failed:', result.error)
+      // Trigger reconnection logic
+    }
+  } catch (error) {
+    console.error('Health check error:', error)
+  }
+}, 60000) // Check every minute
+```

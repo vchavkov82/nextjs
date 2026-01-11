@@ -34,7 +34,9 @@
     "flags": "^4.0.0",
     "lodash": "^4.17.21",
     "next-themes": "^0.3.0",
+    "pg": "^8.11.3",
     "react-use": "^17.4.0",
+    "ws": "^8.14.2",
     "valtio": "catalog:"
   },
   "devDependencies": {
@@ -49,8 +51,6 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
-    "@supabase/auth-js": "catalog:",
-    "@supabase/supabase-js": "catalog:",
     "next": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"

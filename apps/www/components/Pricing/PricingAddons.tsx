@@ -1,9 +1,11 @@
+'use client'
+
 import { ArrowUpRight } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { FC } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { Button, cn } from 'ui'
 import CostControlAnimation from './CostControlAnimation'
 
@@ -65,6 +67,11 @@ const PricingAddons: FC = () => {
 const AddonCard = ({ addon }: any) => {
   const { basePath } = useRouter()
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const isHighlightCard = addon.id === 'addon-cost-control'
 
@@ -117,13 +124,15 @@ const AddonCard = ({ addon }: any) => {
           addon.id === 'addon-pitr' && 'lg:flex items-end'
         )}
       >
-        <Image
-          src={`${basePath}/images/pricing/${addon.heroImg}${resolvedTheme?.includes('dark') ? '' : '-light'
-            }.svg`}
-          alt={`${addon.name} illustration`}
-          fill
-          className={cn('object-contain', addon.id === 'addon-pitr' && 'object-bottom')}
-        />
+        {mounted && (
+          <Image
+            src={`${basePath}/images/pricing/${addon.heroImg}${resolvedTheme?.includes('dark') ? '' : '-light'
+              }.svg`}
+            alt={`${addon.name} illustration`}
+            fill
+            className={cn('object-contain', addon.id === 'addon-pitr' && 'object-bottom')}
+          />
+        )}
       </div>
       <div className="p-4 lg:pl-0 lg:-ml-2 xl:ml-0 gap-4 col-span-2">
         <div className="flex flex-col gap-2">
@@ -131,13 +140,15 @@ const AddonCard = ({ addon }: any) => {
             {addon.price}
           </p>
           <div className="flex items-center gap-2">
-            <Image
-              src={`${basePath}/images/pricing/${addon.icon}${resolvedTheme?.includes('dark') ? '' : '-light'
-                }.svg`}
-              width={14}
-              height={14}
-              alt="Compute"
-            />
+            {mounted && (
+              <Image
+                src={`${basePath}/images/pricing/${addon.icon}${resolvedTheme?.includes('dark') ? '' : '-light'
+                  }.svg`}
+                width={14}
+                height={14}
+                alt="Compute"
+              />
+            )}
             <h3 className="text-sm text-foreground">{addon.name}</h3>
           </div>
           <p className="text-foreground-lighter text-[13px]">{addon.description}</p>

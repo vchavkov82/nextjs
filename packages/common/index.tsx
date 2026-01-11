@@ -10,3 +10,10 @@ export * from './helpers'
 export * from './hooks'
 export * from './MetaFavicons/pages-router'
 export * from './Providers'
+export * from './src/websocket'
+export * from './src/realtime-adapter'
+export * from './src/supabase-mock'
+
+// Server-side exports - import directly from their files when needed
+// export * from './src/websocket-server'
+// export * from './src/init-websocket-server'

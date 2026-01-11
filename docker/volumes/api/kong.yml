@@ -216,6 +216,26 @@ services:
         paths:
           - /pg/
     plugins:
+      - name: cors
+      - name: key-auth
+        config:
+          hide_credentials: false
+      - name: acl
+        config:
+          hide_groups_header: true
+          allow:
+            - admin
+  ## Platform API routes (for development/docs)
+  - name: platform-api
+    _comment: 'pg-meta platform API: /api/* -> http://meta:8080/*'
+    url: http://meta:8080/
+    routes:
+      - name: platform-api-all
+        strip_path: true
+        paths:
+          - /api/
+    plugins:
+      - name: cors
       - name: key-auth
         config:
           hide_credentials: false

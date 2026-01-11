@@ -1,23 +1,61 @@
-import { createClient } from '@supabase/supabase-js'
-import { Database } from './database.types'
+// Mock Supabase client for compatibility
+// This provides the same interface as Supabase but doesn't connect to any external service
 
-// Only create client if URL is provided to avoid build-time errors
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+interface MockDatabase {
+  // Define your database types here
+  [key: string]: any
+}
 
-// Always create client with a placeholder URL during build to avoid errors
-// The client will fail at runtime if env vars are not set, but won't fail the build
-const supabase = createClient<Database>(
-  supabaseUrl || 'https://placeholder.supabase.co',
-  supabaseAnonKey || 'placeholder-anon-key',
-  {
-    realtime: {
-      params: {
-        eventsPerSecond: 1000,
-      },
-    },
+class MockSupabaseClient {
+  constructor(url: string, key: string, options?: any) {}
+
+  // Mock auth methods
+  auth = {
+    signIn: async () => ({ data: null, error: null }),
+    signOut: async () => ({ error: null }),
+    getUser: async () => ({ data: { user: null }, error: null }),
+    getSession: async () => ({ data: { session: null }, error: null }),
   }
-)
+
+  // Mock database methods
+  from: (table: string) => ({
+    select: () => ({
+      eq: () => ({
+        single: async () => ({ data: null, error: null }),
+        limit: () => ({ data: [], error: null }),
+      }),
+      limit: () => ({ data: [], error: null }),
+    }),
+    insert: () => ({
+      select: () => ({ data: null, error: null }),
+    }),
+    update: () => ({
+      eq: () => ({ data: null, error: null }),
+    }),
+    delete: () => ({
+      eq: () => ({ data: null, error: null }),
+    }),
+  })
+
+  // Mock storage methods
+  storage = {
+    from: () => ({
+      upload: async () => ({ data: null, error: null }),
+      download: async () => ({ data: null, error: null }),
+      remove: async () => ({ data: null, error: null }),
+    }),
+  }
+
+  // Mock realtime methods
+  channel: () => ({
+    subscribe: () => ({
+      unsubscribe: () => {},
+    }),
+  })
+}
+
+// Create mock client
+const supabase = new MockSupabaseClient('', '', {})
 
 export type SupabaseClient = typeof supabase
 

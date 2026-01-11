@@ -80,10 +80,6 @@
     ],
     "catalog": {
       "@sentry/nextjs": "^10.26.0",
-      "@supabase/auth-js": "2.87.0",
-      "@supabase/postgrest-js": "2.87.0",
-      "@supabase/realtime-js": "2.87.0",
-      "@supabase/supabase-js": "2.87.0",
       "@types/node": "^22.0.0",
       "@types/react": "^18.3.0",
       "@types/react-dom": "^18.3.0",
@@ -117,7 +113,5 @@
     "prettier": "3.2.5",
     "vfile-matter": "^3.0.1"
   },
-  "dependencies": {
-    "@supabase/sql-to-rest": "^0.1.6"
-  }
+  "dependencies": {}
 }

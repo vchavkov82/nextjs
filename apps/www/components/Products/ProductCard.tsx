@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Panel from '@/components/Panel'
 import { cn } from 'ui'
-import { detectBrowser, isBrowser } from 'common'
+import { detectBrowser } from 'common'
 
 const ProductCard = ({
   className,
@@ -26,7 +26,15 @@ const ProductCard = ({
   onClick?: any
   alignLeft?: boolean
   isDatabase?: boolean
-}) => (
+}) => {
+  const [hasShimmer, setHasShimmer] = useState(false)
+
+  useEffect(() => {
+    // Set shimmer after hydration to avoid SSR/client mismatch
+    setHasShimmer(detectBrowser() !== 'Safari')
+  }, [])
+
+  return (
   <Link
     href={url}
     className={cn(
@@ -36,7 +44,7 @@ const ProductCard = ({
     onClick={onClick}
   >
     <Panel
-      hasShimmer={isBrowser && detectBrowser() !== 'Safari'}
+      hasShimmer={hasShimmer}
       hasActiveOnHover
       hasMotion={title.includes('Edge Functions')}
       outerClassName="relative w-full h-full"
@@ -92,6 +100,7 @@ const ProductCard = ({
       {image && image}
     </Panel>
   </Link>
-)
+  )
+}
 
 export default ProductCard

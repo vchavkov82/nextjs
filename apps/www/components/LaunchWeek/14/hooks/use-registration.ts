@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { REALTIME_CHANNEL_STATES, RealtimeChannel, SupabaseClient } from '@supabase/supabase-js'
+import { REALTIME_CHANNEL_STATES, RealtimeChannel, SupabaseClient } from 'common'
 
 import useConfData from './use-conf-data'
 import { LW14_URL } from '@/lib/constants'

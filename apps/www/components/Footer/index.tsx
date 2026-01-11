@@ -1,7 +1,6 @@
 'use client'
 
 import { CheckIcon } from '@heroicons/react/outline'
-import { REALTIME_CHANNEL_STATES } from '@supabase/supabase-js'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
@@ -28,15 +27,7 @@ const Footer = (props: Props) => {
   const isGAWeek = pathname?.includes('/ga-week')
   const forceDark = isDarkLaunchWeek
 
-  useEffect(() => {
-    const channel = supabase.channel('footer')
-    if (channel.state === REALTIME_CHANNEL_STATES.closed) {
-      channel.subscribe()
-    }
-    return () => {
-      channel.unsubscribe()
-    }
-  }, [])
+  // Realtime functionality removed - using local setup instead
 
   if (props.hideFooter) {
     return null

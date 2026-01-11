@@ -33,7 +33,6 @@
     "@octokit/rest": "^21.0.2",
     "@payloadcms/live-preview-react": "^3.0.0",
     "@radix-ui/react-dialog": "^1.0.5",
-    "@supabase/supabase-js": "catalog:",
     "ai-commands": "workspace:*",
     "animejs": "^4.0.2",
     "class-variance-authority": "^0.7.1",

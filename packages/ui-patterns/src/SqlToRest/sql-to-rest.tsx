@@ -1,15 +1,31 @@
 'use client'
 
 import Editor, { useMonaco } from '@monaco-editor/react'
-import type {
-  HttpRequest,
-  ParsingError,
-  RenderError,
-  Statement,
-  SupabaseJsQuery,
-  UnimplementedError,
-  UnsupportedError,
-} from '@supabase/sql-to-rest'
+
+// Type definitions for @supabase/sql-to-rest (used when package is not available)
+interface HttpRequest {
+  method: string
+  path: string
+  query: Record<string, any>
+  headers: Record<string, string>
+  body?: any
+}
+
+interface ParsingError extends Error {}
+interface RenderError extends Error {}
+interface UnimplementedError extends Error {}
+interface UnsupportedError extends Error {}
+
+interface Statement {
+  table: string
+  operation: string
+  [key: string]: any
+}
+
+interface SupabaseJsQuery {
+  code: string
+  [key: string]: any
+}
 import { ChevronUp, GitPullRequest } from 'lucide-react'
 import type { editor } from 'monaco-editor'
 import { useTheme } from 'next-themes'
@@ -194,9 +210,18 @@ export default function SqlToRest({
       setSql(sql)
 
       try {
-        const tools = await import('@supabase/sql-to-rest')
+        // Try to import @supabase/sql-to-rest, handle gracefully if not available
+        let tools: any
+        try {
+          tools = await import('@supabase/sql-to-rest')
+          setTools(tools)
+        } catch (importError) {
+          // Package not available, set an error state
+          setParsingError(new Error('SQL to REST conversion tools are not available. Please install @supabase/sql-to-rest package.') as ParsingError)
+          return
+        }
+
         const { processSql, renderHttp, renderSupabaseJs, formatHttp, formatCurl } = tools
-        setTools(tools)
 
         const statement = await processSql(sql)
         const httpRequest = await renderHttp(statement)
@@ -215,32 +240,33 @@ export default function SqlToRest({
         setFormattedHttp(formatHttp(baseUrl, httpRequest))
         setFormattedCurl(formatCurl(baseUrl, httpRequest))
       } catch (error) {
-        const { ParsingError, UnimplementedError, UnsupportedError, RenderError } = await import(
-          '@supabase/sql-to-rest'
-        )
-
         setParsingError(undefined)
         setUnimplementedError(undefined)
         setUnsupportedError(undefined)
         setHttpRenderError(undefined)
         setSupabaseJsRenderError(undefined)
 
-        if (error instanceof ParsingError) {
-          setParsingError(error)
-        } else if (error instanceof UnimplementedError) {
-          setUnimplementedError(error)
-        } else if (error instanceof UnsupportedError) {
-          setUnsupportedError(error)
-        } else if (error instanceof RenderError) {
-          if (error.renderer === 'http') {
-            setHttpRenderError(error)
-          } else if (error.renderer === 'supabase-js') {
-            setSupabaseJsRenderError(error)
+        // Handle errors generically since @supabase/sql-to-rest is not available
+        const errorMessage = error instanceof Error ? error.message : String(error)
+        const errorObj = error as any
+
+        if (errorMessage.includes('parse') || errorMessage.includes('syntax')) {
+          setParsingError(error as ParsingError)
+        } else if (errorMessage.includes('not implemented') || errorMessage.includes('unimplemented')) {
+          setUnimplementedError(error as UnimplementedError)
+        } else if (errorMessage.includes('not supported') || errorMessage.includes('unsupported')) {
+          setUnsupportedError(error as UnsupportedError)
+        } else if (errorMessage.includes('render') || errorObj.renderer) {
+          // Check renderer property or operation context
+          if (errorObj.renderer === 'http' || httpRequest === undefined) {
+            setHttpRenderError(error as RenderError)
+          } else if (errorObj.renderer === 'supabase-js' || httpRequest !== undefined) {
+            setSupabaseJsRenderError(error as RenderError)
           } else {
-            console.error(error)
+            console.error('Unknown render error:', error)
           }
         } else {
-          console.error(error)
+          console.error('Unknown error:', error)
         }
       }
     },

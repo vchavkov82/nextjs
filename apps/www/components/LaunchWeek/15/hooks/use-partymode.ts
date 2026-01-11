@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import useLw14ConfData from './use-conf-data'
 import supabase from '../supabase'
-import { REALTIME_CHANNEL_STATES, REALTIME_SUBSCRIBE_STATES } from '@supabase/supabase-js'
+import { REALTIME_CHANNEL_STATES, REALTIME_SUBSCRIBE_STATES } from 'common'
 
 const LW14_TOPIC = 'lw14'
 const GAUGES_UPDATES_EVENT = 'gauges-update'

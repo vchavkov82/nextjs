@@ -1,13 +1,24 @@
-import { AuthClient, navigatorLock, User } from '@supabase/auth-js'
+// Local authentication system - replaces Supabase Auth
+export interface User {
+  id: number
+  email: string
+  created_at: string
+}
 
-export const STORAGE_KEY = process.env.NEXT_PUBLIC_STORAGE_KEY || 'supabase.dashboard.auth.token'
+export interface Session {
+  user: User
+  token: string
+  expires_at: string
+}
+
+export const STORAGE_KEY = process.env.NEXT_PUBLIC_STORAGE_KEY || 'local.auth.token'
 export const AUTH_DEBUG_KEY =
-  process.env.NEXT_PUBLIC_AUTH_DEBUG_KEY || 'supabase.dashboard.auth.debug'
+  process.env.NEXT_PUBLIC_AUTH_DEBUG_KEY || 'local.auth.debug'
 export const AUTH_DEBUG_PERSISTED_KEY =
-  process.env.NEXT_PUBLIC_AUTH_DEBUG_PERSISTED_KEY || 'supabase.dashboard.auth.debug.persist'
+  process.env.NEXT_PUBLIC_AUTH_DEBUG_PERSISTED_KEY || 'local.auth.debug.persist'
 export const AUTH_NAVIGATOR_LOCK_DISABLED_KEY =
   process.env.NEXT_PUBLIC_AUTH_NAVIGATOR_LOCK_KEY ||
-  'supabase.dashboard.auth.navigatorLock.disabled'
+  'local.auth.navigatorLock.disabled'
 
 /**
  * Catches errors thrown when accessing localStorage. Safari with certain
@@ -200,7 +211,58 @@ async function debuggableNavigatorLock<R>(
   }
 }
 
-export const gotrueClient = new AuthClient({
+// Mock GoTrue client for local development
+// This replaces the real Supabase Auth client with a local implementation
+class MockAuthClient {
+  constructor(options: any) {
+    // Store options but don't do any initialization that could fail
+    this.options = options
+  }
+
+  options: any
+
+  async getSession() {
+    // Check localStorage for session
+    if (typeof window === 'undefined') {
+      return { data: { session: null }, error: null }
+    }
+
+    try {
+      const token = localStorage.getItem(this.options.storageKey)
+      if (token) {
+        // Mock session - in real implementation, validate token
+        const session = {
+          access_token: token,
+          user: {
+            id: 'mock-user-id',
+            email: 'user@localhost',
+          },
+        }
+        return { data: { session }, error: null }
+      }
+    } catch (error) {
+      console.warn('Failed to get session from localStorage:', error)
+    }
+
+    return { data: { session: null }, error: null }
+  }
+
+  onAuthStateChange(callback: (event: string) => void) {
+    // Mock subscription - doesn't actually listen for changes
+    return {
+      data: {
+        subscription: {
+          unsubscribe: () => {
+            // No-op
+          },
+        },
+      },
+    }
+  }
+}
+
+// Create the client instance
+export const gotrueClient = new MockAuthClient({
   url: process.env.NEXT_PUBLIC_GOTRUE_URL,
   storageKey: STORAGE_KEY,
   detectSessionInUrl: shouldDetectSessionInUrl,

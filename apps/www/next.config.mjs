@@ -89,6 +89,12 @@ const nextConfig = {
       level: 'error',
       debug: [],
     }
+
+    // Mock Supabase imports to avoid dependency issues
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@supabase/supabase-js': pathJoin(__dirname, 'lib', 'supabase-mock.ts'),
+    }
     
     // Suppress Edge Runtime warnings for packages that use Node.js APIs
     // These warnings occur because packages like @supabase/supabase-js and openai

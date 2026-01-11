@@ -1,185 +1,221 @@
 'use client'
 
-import type { AuthError, Session } from '@supabase/supabase-js'
 import {
   createContext,
   PropsWithChildren,
   useCallback,
   useContext,
   useEffect,
-  useMemo,
   useState,
 } from 'react'
-import { clearLocalStorage } from './constants/local-storage'
-import { gotrueClient, type User } from './gotrue'
+import { type User, type Session, STORAGE_KEY } from './gotrue'
 
 export type { User }
-
-const DEFAULT_SESSION: any = {
-  access_token: undefined,
-  expires_at: 0,
-  expires_in: 0,
-  refresh_token: '',
-  token_type: '',
-  user: {
-    aud: '',
-    app_metadata: {},
-    confirmed_at: '',
-    created_at: '',
-    email: '',
-    email_confirmed_at: '',
-    id: '',
-    identities: [],
-    last_signed_in_at: '',
-    phone: '',
-    role: '',
-    updated_at: '',
-    user_metadata: {},
-  },
-} as unknown as Session
 
 /* Auth Context */
 
 type AuthState =
   | {
       session: Session | null
-      error: AuthError | null
+      error: Error | null
       isLoading: false
     }
   | {
       session: null
-      error: AuthError | null
+      error: Error | null
       isLoading: true
     }
 
-export type AuthContext = { refreshSession: () => Promise<Session | null> } & AuthState
+export type AuthContext = {
+  refreshSession: () => Promise<Session | null>
+  signIn: (email: string, password: string) => Promise<{ user: User | null; error: Error | null }>
+  signUp: (email: string, password: string) => Promise<{ user: User | null; error: Error | null }>
+  signOut: () => Promise<void>
+} & AuthState
 
 export const AuthContext = createContext<AuthContext>({
   session: null,
   error: null,
   isLoading: true,
   refreshSession: () => Promise.resolve(null),
+  signIn: () => Promise.resolve({ user: null, error: null }),
+  signUp: () => Promise.resolve({ user: null, error: null }),
+  signOut: () => Promise.resolve(),
 })
 
 export type AuthProviderProps = {
-  alwaysLoggedIn?: boolean
+  children: React.ReactNode
 }
 
-export const AuthProvider = ({
-  alwaysLoggedIn,
-  children,
-}: PropsWithChildren<AuthProviderProps>) => {
-  const [state, setState] = useState<AuthState>({ session: null, error: null, isLoading: true })
+export function AuthProvider({ children }: AuthProviderProps) {
+  const [session, setSession] = useState<Session | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<Error | null>(null)
 
+  // Load session from localStorage on mount
   useEffect(() => {
-    let mounted = true
-    gotrueClient.initialize().then(({ error }) => {
-      if (mounted && error !== null) {
-        setState((prev) => ({ ...prev, error }))
+    const loadSession = async () => {
+      try {
+        const token = localStorage.getItem(STORAGE_KEY)
+        if (token) {
+          // In a real implementation, validate the token with the server
+          // For now, we'll create a mock session
+          const mockUser: User = {
+            id: 1,
+            email: 'user@localhost',
+            created_at: new Date().toISOString(),
+          }
+          const mockSession: Session = {
+            user: mockUser,
+            token,
+            expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+          }
+          setSession(mockSession)
+        }
+      } catch (err) {
+        console.error('Failed to load session:', err)
+        setError(err as Error)
+      } finally {
+        setIsLoading(false)
       }
-    })
+    }
 
-    return () => {
-      mounted = false
+    loadSession()
+  }, [])
+
+  const signIn = useCallback(async (email: string, password: string) => {
+    try {
+      setError(null)
+      // Mock authentication - replace with real API call
+      if (email === 'admin@localhost' && password === 'password') {
+        const mockUser: User = {
+          id: 1,
+          email,
+          created_at: new Date().toISOString(),
+        }
+        const token = `mock_token_${Date.now()}`
+        const mockSession: Session = {
+          user: mockUser,
+          token,
+          expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+        }
+
+        localStorage.setItem(STORAGE_KEY, token)
+        setSession(mockSession)
+        return { user: mockUser, error: null }
+      } else {
+        const authError = new Error('Invalid credentials')
+        setError(authError)
+        return { user: null, error: authError }
+      }
+    } catch (err) {
+      const authError = err as Error
+      setError(authError)
+      return { user: null, error: authError }
     }
   }, [])
 
-  // Keep the session in sync
-  useEffect(() => {
-    const {
-      data: { subscription },
-    } = gotrueClient.onAuthStateChange((_event, session) => {
-      setState((prev) => ({
-        session,
-        // If there is a session, we clear the error
-        error: session !== null ? null : prev.error,
-        isLoading: false,
-      }))
-    })
+  const signUp = useCallback(async (email: string, password: string) => {
+    try {
+      setError(null)
+      // Mock registration - replace with real API call
+      const mockUser: User = {
+        id: Date.now(), // Simple ID generation
+        email,
+        created_at: new Date().toISOString(),
+      }
+      const token = `mock_token_${Date.now()}`
+      const mockSession: Session = {
+        user: mockUser,
+        token,
+        expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
+      }
 
-    return subscription.unsubscribe
+      localStorage.setItem(STORAGE_KEY, token)
+      setSession(mockSession)
+      return { user: mockUser, error: null }
+    } catch (err) {
+      const authError = err as Error
+      setError(authError)
+      return { user: null, error: authError }
+    }
   }, [])
 
-  // Helper method to refresh the session.
-  // For example after a user updates their profile
+  const signOut = useCallback(async () => {
+    try {
+      localStorage.removeItem(STORAGE_KEY)
+      setSession(null)
+      setError(null)
+    } catch (err) {
+      console.error('Sign out error:', err)
+    }
+  }, [])
+
   const refreshSession = useCallback(async () => {
-    const {
-      data: { session },
-    } = await gotrueClient.refreshSession()
-
+    // Mock refresh - in real implementation, validate token with server
     return session
-  }, [])
+  }, [session])
 
-  const value = useMemo(() => {
-    if (alwaysLoggedIn) {
-      return { session: DEFAULT_SESSION, error: null, isLoading: false, refreshSession } as const
-    } else {
-      return { ...state, refreshSession } as const
-    }
-  }, [state, refreshSession])
+  const value: AuthContext = {
+    session,
+    error,
+    isLoading,
+    refreshSession,
+    signIn,
+    signUp,
+    signOut,
+  }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
-/* Auth Utils */
-
-export const useAuth = () => useContext(AuthContext)
-
-export const useSession = () => useAuth().session
-
-export const useUser = () => useSession()?.user ?? null
-
-export const useIsUserLoading = () => useAuth().isLoading
-
-export const useIsLoggedIn = () => {
-  const user = useUser()
-
-  return user !== null
+export function useAuth() {
+  const context = useContext(AuthContext)
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider')
+  }
+  return context
 }
 
-export const useAuthError = () => useAuth().error
-
-export const useIsMFAEnabled = () => {
-  const user = useUser()
-
-  return user !== null && user.factors && user.factors.length > 0
+// Convenience hooks for backward compatibility
+export function useIsLoggedIn(): boolean {
+  const { session } = useAuth()
+  return !!session
 }
 
-export const signOut = async () => await gotrueClient.signOut()
-
-export const logOut = async () => {
-  await signOut()
-  clearLocalStorage()
+export function useUser(): User | null {
+  const { session } = useAuth()
+  return session?.user || null
 }
 
-let currentSession: Session | null = null
+export function useIsUserLoading(): boolean {
+  const { isLoading } = useAuth()
+  return isLoading
+}
 
-gotrueClient.onAuthStateChange((event, session) => {
-  currentSession = session
-})
-
-/**
- * Grabs the currently available access token, or calls getSession.
- */
-export async function getAccessToken() {
-  // ignore if server-side
-  if (typeof window === 'undefined') return undefined
-
-  const aboutToExpire = currentSession?.expires_at
-    ? currentSession.expires_at - Math.ceil(Date.now() / 1000) < 30
-    : false
-
-  if (!currentSession || aboutToExpire) {
-    const {
-      data: { session },
-      error,
-    } = await gotrueClient.getSession()
-    if (error) {
-      throw error
-    }
-
-    return session?.access_token
+// Utility functions for backward compatibility
+// Note: These functions work with localStorage-based auth for non-React contexts
+export async function getAccessToken(): Promise<string | null> {
+  // For non-React contexts, check localStorage directly
+  if (typeof window === 'undefined') {
+    return null
   }
 
-  return currentSession.access_token
+  try {
+    const token = localStorage.getItem('local.auth.token')
+    return token
+  } catch {
+    return null
+  }
+}
+
+export async function logOut(): Promise<void> {
+  // For non-React contexts, clear localStorage directly
+  if (typeof window !== 'undefined') {
+    try {
+      localStorage.removeItem('local.auth.token')
+    } catch {
+      // Ignore localStorage errors
+    }
+  }
 }

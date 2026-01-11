@@ -50,7 +50,7 @@ export const LogsBarChart = ({
   return (
     <div
       data-testid="logs-bar-chart"
-      className={cn('flex flex-col gap-y-3', isFullHeight ? 'h-full' : 'h-24')}
+      className={cn('flex flex-col gap-y-3', isFullHeight ? 'h-full min-h-[200px]' : 'h-24')}
     >
       <ChartContainer
         className="h-full"

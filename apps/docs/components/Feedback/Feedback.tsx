@@ -1,6 +1,4 @@
 'use client'
-
-import { createClient } from '@supabase/supabase-js'
 import { Check, MessageSquareQuote, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import {
@@ -80,10 +78,19 @@ function Feedback({ className }: { className?: string }) {
   const { mutate: sendFeedbackComment } = useSendFeedbackMutation()
   const supabase = useConstant(() =>
     IS_PLATFORM
-      ? createClient<Database>(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!,
-          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-        )
+      ? (() => {
+          try {
+            // Dynamic import to avoid build-time errors when package is not installed
+            const { createClient } = require('@supabase/supabase-js')
+            return createClient<Database>(
+              process.env.NEXT_PUBLIC_SUPABASE_URL!,
+              process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+            )
+          } catch {
+            console.warn('Supabase client not available')
+            return undefined
+          }
+        })()
       : undefined
   )
 
