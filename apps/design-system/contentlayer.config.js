@@ -8,7 +8,8 @@ import { codeImport } from 'remark-code-import'
 import remarkGfm from 'remark-gfm'
 import { visit } from 'unist-util-visit'
 
-import { rehypeComponent } from './lib/rehype-component'
+// Note: We don't import rehype-component here to avoid .tsx import issues during contentlayer build
+// import { rehypeComponent } from './lib/rehype-component'
 import { rehypeNpmCommand } from './lib/rehype-npm-command'
 
 // Cache the highlighter instance to prevent creating multiple instances
@@ -119,7 +120,8 @@ export default makeSource({
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
       rehypeSlug,
-      rehypeComponent,
+      // Note: rehypeComponent is disabled to avoid .tsx import issues during contentlayer build
+      // rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {
           if (node?.type === 'element' && node?.tagName === 'pre') {
