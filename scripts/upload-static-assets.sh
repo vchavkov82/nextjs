@@ -99,8 +99,37 @@ log_debug() {
   fi
 }
 
+# Check if upload should proceed
+should_upload() {
+  # Check for explicit disable
+  if [[ "${FORCE_ASSET_CDN:-}" == "-1" ]]; then
+    log_info "Asset CDN explicitly disabled via FORCE_ASSET_CDN=-1"
+    return 1
+  fi
+  
+  # Check for force mode
+  if [[ "$FORCE" == "true" ]] || [[ "${FORCE_ASSET_CDN:-}" == "1" ]]; then
+    log_info "Upload forced via --force or FORCE_ASSET_CDN=1"
+    return 0
+  fi
+  
+  # Check for production environment
+  if [[ "${VERCEL_ENV:-}" == "production" ]]; then
+    log_info "Running in production environment, proceeding with upload"
+    return 0
+  fi
+  
+  log_info "Skipping upload. Set FORCE_ASSET_CDN=1, VERCEL_ENV=production, or use --force"
+  return 1
+}
+
 # Validation functions
 validate_required_vars() {
+  # Skip validation if upload shouldn't proceed
+  if ! should_upload; then
+    return 0
+  fi
+  
   local missing_vars=()
   
   if [[ -z "${SITE_NAME:-}" ]]; then
@@ -130,30 +159,6 @@ validate_commit_sha() {
     log_error "Invalid commit SHA format: $sha"
     exit 1
   fi
-}
-
-# Check if upload should proceed
-should_upload() {
-  # Check for explicit disable
-  if [[ "$FORCE_ASSET_CDN" == "-1" ]]; then
-    log_info "Asset CDN explicitly disabled via FORCE_ASSET_CDN=-1"
-    return 1
-  fi
-  
-  # Check for force mode
-  if [[ "$FORCE" == "true" ]] || [[ "$FORCE_ASSET_CDN" == "1" ]]; then
-    log_info "Upload forced via --force or FORCE_ASSET_CDN=1"
-    return 0
-  fi
-  
-  # Check for production environment
-  if [[ "$VERCEL_ENV" == "production" ]]; then
-    log_info "Running in production environment, proceeding with upload"
-    return 0
-  fi
-  
-  log_info "Skipping upload. Set FORCE_ASSET_CDN=1, VERCEL_ENV=production, or use --force"
-  return 1
 }
 
 # Determine bucket name based on environment
@@ -292,15 +297,16 @@ main() {
   # Change to project root
   cd "$PROJECT_ROOT"
   
+  # Check if upload should proceed
+  if ! should_upload; then
+    log_info "Upload skipped, exiting successfully"
+    exit 0
+  fi
+  
   # Validate prerequisites
   validate_required_vars
   validate_commit_sha "$VERCEL_GIT_COMMIT_SHA"
   validate_directories
-  
-  # Check if upload should proceed
-  if ! should_upload; then
-    exit 0
-  fi
   
   # Setup AWS CLI
   setup_aws_cli

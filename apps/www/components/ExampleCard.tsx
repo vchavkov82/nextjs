@@ -21,9 +21,6 @@ function ExampleCard(props: any) {
       href={props.repo_url}
       className="w-full h-full"
       target="_blank"
-      onClick={() => {
-        if (props.inHomepage)
-          }}
     >
       <Panel outerClassName="h-full" innerClassName="bg-surface-75 group/panel" hasActiveOnHover>
         <div className="flex flex-col justify-between">

@@ -66,8 +66,7 @@ const data: () => {
           label: 'Start your project',
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
-          onClick: () =>
-            ,
+          onClick: () => undefined,
         },
       ],
     },

@@ -41,7 +41,6 @@ const Products: React.FC<Props> = (props) => {
             </li>
           </ul>
         }
-        onClick={() => }
         image={<DatabaseVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -57,7 +56,6 @@ const Products: React.FC<Props> = (props) => {
           </>
         }
         image={<AuthVisual className="hidden sm:block" />}
-        onClick={() => }
       />
       <ProductCard
         className="col-span-6 xl:col-span-3"
@@ -72,7 +70,6 @@ const Products: React.FC<Props> = (props) => {
             <strong>without deploying or scaling servers.</strong>
           </>
         }
-        onClick={() => }
         image={<FunctionsVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -89,7 +86,6 @@ const Products: React.FC<Props> = (props) => {
           </>
         }
         image={<StorageVisual className="hidden sm:block" />}
-        onClick={() => }
       />
       <ProductCard
         alignLeft
@@ -102,7 +98,6 @@ const Products: React.FC<Props> = (props) => {
             <br className="hidden sm:inline-block" /> with real-time data synchronization.
           </>
         }
-        onClick={() => }
         image={<RealtimeVisual className="hidden sm:block" />}
         className="
           col-span-6 pointer-events-none xl:col-span-3
@@ -185,7 +180,6 @@ const Products: React.FC<Props> = (props) => {
             </li>
           </ul>
         }
-        onClick={() => }
         image={<VectorVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -195,7 +189,6 @@ const Products: React.FC<Props> = (props) => {
         icon={props.products['data-api'].icon}
         title={props.products['data-api'].name}
         subtitle={props.products['data-api'].description}
-        onClick={() => }
         image={<DataAPIsVisual className="hidden sm:block" />}
       />
       <p className="text-xl sm:text-2xl text-foreground-lighter col-span-full tracking-[-.01rem]">

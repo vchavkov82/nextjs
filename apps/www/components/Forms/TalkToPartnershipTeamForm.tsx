@@ -246,14 +246,10 @@ const TalkToPartnershipTeamForm: FC<Props> = ({ className }) => {
 
             <Separator className="col-span-full" />
             <Button
-              block
-              htmlType="submit"
-              size="small"
+              type="primary"
               className="col-span-full"
               disabled={isSubmitting}
               loading={isSubmitting}
-              onClick={() =>
-                }
             >
               Submit
             </Button>

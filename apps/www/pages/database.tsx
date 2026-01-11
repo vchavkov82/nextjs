@@ -20,7 +20,6 @@ import HighlightsCards from '@/data/products/database/highlight-cards'
 
 import { ArrowUpRight, X } from 'lucide-react'
 import { PRODUCT_NAMES } from 'shared-data/products'
-import { TweetCard } from 'ui-patterns/TweetCard'
 import ProductsNav from '@/components/Products/ProductsNav'
 import ProductHeader from '@/components/Sections/ProductHeader'
 import { ETLVisual } from '@/data/products/database/etl-visual'
@@ -228,12 +227,10 @@ function Database() {
                 <ImageCarousel
                   content={TableViewCarouselData}
                   footer={[
-                    <TweetCard
-                      handle="@Elsolo244"
-                      key="@Elsolo244"
-                      img_url={`${basePath}/images/twitter-profiles/v6citnk33y2wpeyzrq05_400x400.jpeg`}
-                      quote="Where has @supabase been all my life? 😍"
-                    />,
+                    <div key="@Elsolo244" className="text-center text-sm text-foreground-lighter">
+                      <p>"Where has @supabase been all my life? 😍"</p>
+                      <p className="mt-2">- @Elsolo244</p>
+                    </div>,
                   ]}
                 />
               </SectionContainer>
@@ -243,12 +240,10 @@ function Database() {
                 <ImageCarousel
                   content={SqlViewCarouselData}
                   footer={[
-                    <TweetCard
-                      handle="@jim_bisenius"
-                      key="@jim_bisenius"
-                      img_url={`${basePath}/images/twitter-profiles/rLgwUZSB_400x400.jpg`}
-                      quote="@MongoDB or @MySQL?!?! Please, let me introduce you to @supabase and the wonderful world of @Postgres before it's too late!!"
-                    />,
+                    <div key="@jim_bisenius" className="text-center text-sm text-foreground-lighter">
+                      <p>"@MongoDB or @MySQL?!?! Please, let me introduce you to @supabase and the wonderful world of @Postgres before it's too late!!"</p>
+                      <p className="mt-2">- @jim_bisenius</p>
+                    </div>,
                   ]}
                 />
               </SectionContainer>

@@ -326,8 +326,6 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
         <Button asChild size="medium">
           <Link
             href="https://www.assistance.bg/dashboard"
-            onClick={() =>
-              }
           >
             Start your project
           </Link>
@@ -335,8 +333,6 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
         <Button asChild size="medium" type="default">
           <Link
             href="/contact/sales"
-            onClick={() =>
-              }
           >
             Request a demo
           </Link>

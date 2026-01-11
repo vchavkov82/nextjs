@@ -166,8 +166,6 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                     <Button type="default" className="hidden lg:block" asChild>
                       <Link
                         href="https://www.assistance.bg/dashboard"
-                        onClick={() =>
-                          }
                       >
                         Sign in
                       </Link>
@@ -175,8 +173,6 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                     <Button className="hidden lg:block" asChild>
                       <Link
                         href="https://www.assistance.bg/dashboard"
-                        onClick={() =>
-                          }
                       >
                         Start your project
                       </Link>

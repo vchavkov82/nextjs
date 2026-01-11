@@ -123,8 +123,6 @@ const HeroFrameworks = ({ className }: { className?: string }) => {
               key={framework.name}
               href={framework.docs}
               className="transition-opacity group"
-              onClick={() =>
-                }
               onMouseOver={() => setActiveFramework(framework)}
               onMouseOut={() => setActiveFramework(null!)}
             >

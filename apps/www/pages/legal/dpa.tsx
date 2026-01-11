@@ -15,12 +15,10 @@ const DPA = () => {
                   part of this commitment, we have prepared a Data Processing Addendum ("DPA"). You
                   can review a static PDF version of our latest DPA document{' '}
                   <a
-                    href="https://www.assistance.bg/downloads/docs/BA+DPA+250805.pdf"
+                    href="https://supabase.com/legal/data-processing-addendum"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-link hover:underline"
-                    onClick={() =>
-                      }
                   >
                     here
                   </a>

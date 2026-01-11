@@ -86,15 +86,13 @@ const data: () => {
           label: 'Start your project',
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
-          onClick: () =>
-            ,
+          onClick: () => undefined,
         },
         {
           label: 'Request a demo',
           href: 'https://www.assistance.bg/contact/sales',
           type: 'default' as any,
-          onClick: () =>
-            ,
+          onClick: () => undefined,
         },
       ],
     },

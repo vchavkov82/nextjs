@@ -279,8 +279,6 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                     <Link
                       href={event.main_cta?.url ?? '#'}
                       target={event.main_cta?.target ? event.main_cta?.target : undefined}
-                      onClick={() =>
-                        }
                     >
                       {IS_REGISTRATION_OPEN
                         ? event.main_cta?.label

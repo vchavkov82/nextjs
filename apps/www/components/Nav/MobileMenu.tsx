@@ -277,8 +277,6 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         href="https://www.assistance.bg/dashboard"
                         passHref
                         legacyBehavior
-                        onClick={() =>
-                          }
                       >
                         <Button block type="default" asChild>
                           <a type={undefined} className="h-10 py-4">
@@ -290,8 +288,6 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         href="https://www.assistance.bg/dashboard"
                         passHref
                         legacyBehavior
-                        onClick={() =>
-                          }
                       >
                         <Button block asChild>
                           <a type={undefined} className="h-10 py-4">

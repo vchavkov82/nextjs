@@ -16,8 +16,6 @@ const RepoCard = ({ repo, activeTab, index }: { repo: any; activeTab: number; in
         href={repo.html_url}
         target="_blank"
         className="h-full"
-        onClick={() =>
-          }
       >
         <Panel
           outerClassName="md:h-full"

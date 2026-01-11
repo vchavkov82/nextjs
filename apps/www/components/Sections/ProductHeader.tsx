@@ -51,8 +51,6 @@ const ProductHeader = (props: Types) => {
               <Link
                 href="https://www.assistance.bg/dashboard"
                 as="https://www.assistance.bg/dashboard"
-                onClick={() =>
-                  }
               >
                 Start a project
               </Link>
@@ -63,8 +61,6 @@ const ProductHeader = (props: Types) => {
                   href={props.documentation_url}
                   as={props.documentation_url}
                   className="ml-2"
-                  onClick={() =>
-                    }
                 >
                   See documentation
                 </Link>

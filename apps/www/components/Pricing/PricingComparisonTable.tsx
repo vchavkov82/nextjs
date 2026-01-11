@@ -53,8 +53,6 @@ const MobileHeader = ({
       {isUpgradablePlan && hasExistingOrganizations ? (
         <UpgradePlan
           organizations={organizations}
-          onClick={() =>
-            }
           size="medium"
           planId={selectedPlan.planId}
         />
@@ -62,8 +60,6 @@ const MobileHeader = ({
         <Button asChild size="medium" type={plan === 'Enterprise' ? 'default' : 'primary'} block>
           <Link
             href={selectedPlan.href}
-            onClick={() =>
-              }
           >
             {selectedPlan.cta}
           </Link>
@@ -383,8 +379,6 @@ const PricingComparisonTable = ({
                         {isUpgradablePlan && hasExistingOrganizations ? (
                           <UpgradePlan
                             organizations={organizations}
-                            onClick={() =>
-                              }
                             size="tiny"
                             planId={plan.planId}
                           />
@@ -397,8 +391,6 @@ const PricingComparisonTable = ({
                           >
                             <Link
                               href={plan.href}
-                              onClick={() =>
-                                }
                             >
                               {plan.cta}
                             </Link>

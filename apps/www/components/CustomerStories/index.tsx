@@ -108,8 +108,6 @@ export const CompositionCol: React.FC<CompositionColProps> = ({ column, classNam
             href={customer.url!}
             key={customer.organization}
             className="col-span-12 md:col-span-4 w-full md:w-[450px] h-full"
-            onClick={() =>
-              }
           >
             <CustomerCard size="expanded" customer={customer} />
           </Link>
@@ -118,8 +116,6 @@ export const CompositionCol: React.FC<CompositionColProps> = ({ column, classNam
             href={customer.url!}
             key={customer.organization}
             className="col-span-12 md:col-span-4 w-full h-full flex-grow"
-            onClick={() =>
-              }
           >
             <CustomerCard size="narrow" customer={customer} />
           </Link>
