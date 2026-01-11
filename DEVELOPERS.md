@@ -11,9 +11,6 @@
       - [Running sites individually](#running-sites-individually)
       - [Shared components](#shared-components)
       - [Installing packages](#installing-packages)
-  - [Running Docker for Business Assistance Studio](#running-docker-for-business-assistance-studio)
-    - [Prerequisites](#prerequisites)
-    - [Get Started](#get-started)
   - [Create a pull request](#create-a-pull-request)
   - [Issue assignment](#issue-assignment)
   - [Common tasks](#common-tasks)
@@ -38,7 +35,6 @@ You will need to install and configure the following dependencies on your machin
 - [Node.js v22.x or higher](https://nodejs.org)
 - [pnpm](https://pnpm.io/) version 9.x.x or higher
 - [make](https://www.gnu.org/software/make/) or the equivalent to `build-essentials` for your OS
-- [Docker](https://docs.docker.com/get-docker/) (to run studio locally)
 
 ## Local development
 
@@ -87,7 +83,6 @@ Then visit, and edit, any of the following sites:
 | Site                                                     | Directory      | Scope name | Description                                   | Local development server   |
 | -------------------------------------------------------- | -------------- | ---------- | --------------------------------------------- | -------------------------- |
 | [www.assistance.bg](https://www.assistance.bg)                     | `/apps/www`    | www        | The main website                              | http://localhost:3000      |
-| [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard) | `/apps/studio` | studio     | Studio dashboard (requires Docker, see below) | http://localhost:8082      |
 | [www.assistance.bg/docs](https://www.assistance.bg/docs)           | `/apps/docs`   | docs       | Guides and Reference (Next.js based)          | http://localhost:3001/docs |
 
 #### Running sites individually
@@ -117,45 +112,10 @@ Installing a package in a specific workspace requires you to move to the workspa
 
 For example:
 
-1. `cd apps/studio`: move to the `studio` workspace.
-2. `pnpm add react`: installs `react` into `studio` workspace.
-
+1. `cd apps/www`: move to the `www` workspace.
+2. `pnpm add react`: installs `react` into `www` workspace.
 
 ---
-
-## Running Docker for Business Assistance Studio
-
-To run Studio locally, you'll need to setup Docker in addition to your NextJS frontend.
-
-#### Prerequisites
-
-First, make sure you have the Docker installed on your device. You can download and install it from [here](https://docs.docker.com/get-docker/).
-
-#### Get Started
-
-1. Navigate to the `docker` directory in your forked repo
-
-   ```sh
-   cd docker
-   ```
-
-2. Copy the example `env` file
-
-   ```sh
-   cp .env.example .env
-   ```
-
-3. Run docker:
-
-   ```sh
-   docker compose up
-   ```
-
-This command initializes the containers specified in the `docker-compose.yml` file. It might take a few moments to complete, depending on your computer and internet connection.
-
-Once the `docker compose up` process completes, you should have your local version of BA up and running within Docker containers. You can access it at `http://localhost:8082`.
-
-Remember to keep the Docker application open as long as you're working with your local BA instance.
 
 ## Create a pull request
 
