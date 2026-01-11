@@ -4,7 +4,6 @@ import { Button } from 'ui'
 import ProductModules from '../ProductModules'
 
 import MainProducts from 'data/MainProducts'
-import { topTweets } from 'shared-data/tweets'
 import { IconDiscord } from 'ui'
 
 export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
@@ -165,30 +164,6 @@ export default (sendTelemetryEvent?: (event: { action: string }) => void) => {
           ],
         },
       ],
-    },
-    twitterSocialSection: {
-      heading: 'Join the community',
-      subheading: 'Discover what our community has to say about their BA experience.',
-      ctas: (
-        <Button asChild type="default" size="small" icon={<IconDiscord />}>
-          <Link
-            href={'https://discord.www.assistance.bg/'}
-            target="_blank"
-            tabIndex={-1}
-            onClick={
-              sendTelemetryEvent
-                ? () =>
-                  sendTelemetryEvent({
-                    action: 'homepage_discord_button_clicked',
-                  })
-                : undefined
-            }
-          >
-            Join us on Discord
-          </Link>
-        </Button>
-      ),
-      tweets: topTweets,
     },
   }
 }

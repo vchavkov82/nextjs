@@ -7,13 +7,9 @@ import { useBreakpoint } from 'common'
 
 import { Button } from 'ui'
 import Panel from './Panel'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 function ExampleCard(props: any) {
   const isXs = useBreakpoint()
   const [mounted, setMounted] = useState(false)
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -27,11 +23,7 @@ function ExampleCard(props: any) {
       target="_blank"
       onClick={() => {
         if (props.inHomepage)
-          sendTelemetryEvent({
-            action: 'homepage_project_template_card_clicked',
-            properties: { templateTitle: props.title },
-          })
-      }}
+          }}
     >
       <Panel outerClassName="h-full" innerClassName="bg-surface-75 group/panel" hasActiveOnHover>
         <div className="flex flex-col justify-between">

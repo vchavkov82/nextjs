@@ -1720,11 +1720,6 @@ module.exports = [
   },
   {
     permanent: true,
-    source: '/docs/guides/auth/auth-twitter',
-    destination: '/docs/guides/auth/social-login/auth-twitter',
-  },
-  {
-    permanent: true,
     source: '/docs/guides/auth/auth-github',
     destination: '/docs/guides/auth/social-login/auth-github',
   },

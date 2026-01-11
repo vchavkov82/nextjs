@@ -11,7 +11,6 @@ import { Solutions } from 'data/Solutions'
 const WhySupabase = dynamic(() => import('components/Solutions/FeaturesSection'))
 const PlatformSection = dynamic(() => import('components/Solutions/PlatformSection'))
 const PlatformStarterSection = dynamic(() => import('components/Solutions/TwoColumnsSection'))
-const TwitterSocialSection = dynamic(() => import('components/TwitterSocialSection'))
 const MPCSection = dynamic(() => import('components/Solutions/MPCSection'))
 
 const BeginnersPage: NextPage = () => {
@@ -37,7 +36,6 @@ const BeginnersPage: NextPage = () => {
         />
         <WhySupabase {...content.why} />
         <PlatformSection {...content.platform} />
-        <TwitterSocialSection {...content.twitterSocialSection} />
         <PlatformStarterSection {...content.platformStarterSection} />
         <MPCSection {...content.mcp} />
       </Layout>

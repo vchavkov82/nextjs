@@ -17,8 +17,6 @@ import { ChevronRight } from 'lucide-react'
 import ProductModulesData from '@/data/ProductModules'
 import staticContent from '.generated/staticContent/_index.json'
 
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 interface Props {
   open: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
@@ -28,7 +26,6 @@ interface Props {
 const MobileMenu = ({ open, setOpen, menu }: Props) => {
   const isLoggedIn = useIsLoggedIn()
   const isUserLoading = useIsUserLoading()
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const { jobsCount } = staticContent
 
   const container = {
@@ -281,11 +278,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         passHref
                         legacyBehavior
                         onClick={() =>
-                          sendTelemetryEvent({
-                            action: 'sign_in_button_clicked',
-                            properties: { buttonLocation: 'Mobile Nav' },
-                          })
-                        }
+                          }
                       >
                         <Button block type="default" asChild>
                           <a type={undefined} className="h-10 py-4">
@@ -298,11 +291,7 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                         passHref
                         legacyBehavior
                         onClick={() =>
-                          sendTelemetryEvent({
-                            action: 'start_project_button_clicked',
-                            properties: { buttonLocation: 'Mobile Nav' },
-                          })
-                        }
+                          }
                       >
                         <Button block asChild>
                           <a type={undefined} className="h-10 py-4">

@@ -9,7 +9,6 @@ import { useIsLoggedIn, useUser } from 'common'
 import { Button, buttonVariants, cn } from 'ui'
 import { AuthenticatedDropdownMenu } from 'ui-patterns'
 
-import { useSendTelemetryEvent } from 'lib/telemetry'
 import HamburgerButton from './HamburgerMenu'
 import RightClickBrandLogo from './RightClickBrandLogo'
 import useDropdownMenu from './useDropdownMenu'
@@ -57,7 +56,6 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
   const [isMounted, setIsMounted] = useState(false)
   const isLoggedIn = useIsLoggedIn()
   const menu = getMenu()
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const user = useUser()
   const userMenu = useDropdownMenu(user)
 
@@ -169,11 +167,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                       <Link
                         href="https://www.assistance.bg/dashboard"
                         onClick={() =>
-                          sendTelemetryEvent({
-                            action: 'sign_in_button_clicked',
-                            properties: { buttonLocation: 'Header Nav' },
-                          })
-                        }
+                          }
                       >
                         Sign in
                       </Link>
@@ -182,11 +176,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                       <Link
                         href="https://www.assistance.bg/dashboard"
                         onClick={() =>
-                          sendTelemetryEvent({
-                            action: 'start_project_button_clicked',
-                            properties: { buttonLocation: 'Header Nav' },
-                          })
-                        }
+                          }
                       >
                         Start your project
                       </Link>

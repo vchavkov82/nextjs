@@ -17,8 +17,6 @@ import { capitalize, isNotNullOrUndefined } from '@/lib/helpers'
 import mdxComponents from '@/lib/mdx/mdxComponents'
 import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
 import { getAllPostSlugs, getPostdata } from '@/lib/posts'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
@@ -180,8 +178,6 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
 
   const Icon = eventIcons[event.type]
 
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return (
     <>
       <NextSeo
@@ -284,11 +280,7 @@ const EventPage = ({ event }: InferGetStaticPropsType<typeof getStaticProps>) =>
                       href={event.main_cta?.url ?? '#'}
                       target={event.main_cta?.target ? event.main_cta?.target : undefined}
                       onClick={() =>
-                        sendTelemetryEvent({
-                          action: 'www_pricing_plan_cta_clicked',
-                          properties: { eventTitle: event.title },
-                        })
-                      }
+                        }
                     >
                       {IS_REGISTRATION_OPEN
                         ? event.main_cta?.label

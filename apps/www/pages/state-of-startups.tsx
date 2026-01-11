@@ -14,8 +14,6 @@ import { SurveyChapterSection } from '@/components/SurveyResults/SurveyChapterSe
 import { SurveySectionBreak } from '@/components/SurveyResults/SurveySectionBreak'
 import { StateOfStartupsHeader } from '@/components/SurveyResults/StateOfStartupsHeader'
 
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 import pageData from '@/data/surveys/state-of-startups-2025'
 
 function StateOfStartupsPage() {
@@ -307,7 +305,6 @@ const ParticipantsList = () => {
 
 // Component for the 'Builders choose BA' CTA at the bottom of the page
 const CTABanner = forwardRef<HTMLElement>((props, ref) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   return (
     <section
       className="flex flex-col items-center gap-4 px-4 py-32 text-center border-b border-muted"
@@ -330,11 +327,7 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
           <Link
             href="https://www.assistance.bg/dashboard"
             onClick={() =>
-              sendTelemetryEvent({
-                action: 'start_project_button_clicked',
-                properties: { buttonLocation: 'CTA Banner' },
-              })
-            }
+              }
           >
             Start your project
           </Link>
@@ -343,11 +336,7 @@ const CTABanner = forwardRef<HTMLElement>((props, ref) => {
           <Link
             href="/contact/sales"
             onClick={() =>
-              sendTelemetryEvent({
-                action: 'request_demo_button_clicked',
-                properties: { buttonLocation: 'CTA Banner' },
-              })
-            }
+              }
           >
             Request a demo
           </Link>

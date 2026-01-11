@@ -40,7 +40,6 @@ import type { MPCSectionProps } from 'components/Solutions/MPCSection'
 
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 import { useBreakpoint } from 'common'
-import { useSendTelemetryEvent } from 'lib/telemetry'
 import { companyStats } from 'data/company-stats'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
@@ -63,8 +62,6 @@ const data: () => {
 } = () => {
   const isXs = useBreakpoint(640)
   const editors = getEditors(isXs)
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return {
     metadata: {
       metaTitle: 'BA for Postgres Developers',
@@ -90,20 +87,14 @@ const data: () => {
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'start_project_button_clicked',
-              properties: { buttonLocation: 'Solutions: Postgres Developers page hero' },
-            }),
+            ,
         },
         {
           label: 'Request a demo',
           href: 'https://www.assistance.bg/contact/sales',
           type: 'default' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'request_demo_button_clicked',
-              properties: { buttonLocation: 'Solutions: Postgres Developers page hero' },
-            }),
+            ,
         },
       ],
     },

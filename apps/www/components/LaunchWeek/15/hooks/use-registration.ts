@@ -160,7 +160,7 @@ export const useRegistration = ({ onError, onRegister }: RegistrationProps = {})
 
     if (username) {
       const channel = subscribeToTicketChanges(username, (payload) => {
-        const platinum = !!payload.new.shared_on_twitter && !!payload.new.shared_on_linkedin
+        const platinum = !!payload.new.shared_on_linkedin
         const secret = !!payload.new.game_won_at
 
         dispatch({

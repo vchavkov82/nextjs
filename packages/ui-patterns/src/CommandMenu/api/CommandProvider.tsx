@@ -11,11 +11,6 @@ import { initPagesState } from '../internal/state/pagesState'
 import { initQueryState } from '../internal/state/queryState'
 import { initViewState } from '../internal/state/viewState'
 import { CrossCompatRouterContext } from './hooks/useCrossCompatRouter'
-import {
-  useCommandMenuTelemetry,
-  type CommandMenuTelemetryCallback,
-} from './hooks/useCommandMenuTelemetry'
-import { CommandMenuTelemetryContext } from './hooks/useCommandMenuTelemetryContext'
 import { useCommandMenuOpen, useSetCommandMenuOpen, useToggleCommandMenu } from './hooks/viewHooks'
 
 const CommandProviderInternal = ({ children }: PropsWithChildren) => {
@@ -32,19 +27,11 @@ const CommandProviderInternal = ({ children }: PropsWithChildren) => {
 // This is a component not a hook so it can access the wrapping context.
 const CommandShortcut = ({
   openKey,
-  app,
-  onTelemetry,
 }: {
   openKey: string
-  app?: 'docs' | 'www'
-  onTelemetry?: CommandMenuTelemetryCallback
 }) => {
   const toggleOpen = useToggleCommandMenu()
   const isOpen = useCommandMenuOpen()
-  const { sendTelemetry } = useCommandMenuTelemetry({
-    app: app ?? 'docs',
-    onTelemetry,
-  })
 
   useEffect(() => {
     if (openKey === '') return
@@ -55,14 +42,13 @@ const CommandShortcut = ({
       if (evt.key === openKey && usesPrimaryModifier && !otherModifiersActive) {
         evt.preventDefault()
         toggleOpen()
-        !isOpen && sendTelemetry('keyboard_shortcut')
       }
     }
 
     document.addEventListener('keydown', handleKeydown)
 
     return () => document.removeEventListener('keydown', handleKeydown)
-  }, [isOpen, openKey, sendTelemetry, toggleOpen])
+  }, [isOpen, openKey, toggleOpen])
 
   return null
 }
@@ -104,22 +90,12 @@ interface CommandProviderProps extends PropsWithChildren {
    * Defaults to `k`. Pass an empty string to disable the keyboard shortcut.
    */
   openKey?: string
-  /**
-   * The app where the command menu is being used
-   */
-  app?: 'docs' | 'www'
-  /**
-   * Optional callback to send telemetry events
-   */
-  onTelemetry?: CommandMenuTelemetryCallback
 }
 
-const CommandProvider = ({ children, openKey, app, onTelemetry }: CommandProviderProps) => (
+const CommandProvider = ({ children, openKey }: CommandProviderProps) => (
   <CommandProviderInternal>
-    <CommandMenuTelemetryContext.Provider value={{ app: app ?? 'docs', onTelemetry }}>
-      <CommandShortcut openKey={openKey ?? 'k'} app={app} onTelemetry={onTelemetry} />
-      <CloseOnNavigation>{children}</CloseOnNavigation>
-    </CommandMenuTelemetryContext.Provider>
+    <CommandShortcut openKey={openKey ?? 'k'} />
+    <CloseOnNavigation>{children}</CloseOnNavigation>
   </CommandProviderInternal>
 )
 

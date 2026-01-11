@@ -537,21 +537,6 @@ const FormContent = memo(function FormContent({
                 )}
               />
 
-              <FormField_Shadcn_
-                control={form.control}
-                name="twitter"
-                render={({ field }) => (
-                  <FormItem_Shadcn_>
-                    <FormLabel_Shadcn_ className="text-foreground">Twitter</FormLabel_Shadcn_>
-                    <FormControl_Shadcn_>
-                      <div className="relative mt-1">
-                        <Input_Shadcn_ type="text" placeholder="@yourhandle" {...field} />
-                      </div>
-                    </FormControl_Shadcn_>
-                    <FormMessage_Shadcn_ />
-                  </FormItem_Shadcn_>
-                )}
-              />
             </div>
           </div>
 
@@ -626,7 +611,6 @@ const ApplyToSupaSquadForm: FC<Props> = ({
       monthly_commitment: '',
       languages_spoken: [],
       github: '',
-      twitter: '',
       discord: '',
     },
     mode: 'onBlur',

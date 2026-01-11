@@ -292,7 +292,6 @@ export * from './src/components/Icon/icons/IconMicSolid'
 export * from './src/components/Icon/icons/IconPartners'
 export * from './src/components/Icon/icons/IconPresence'
 export * from './src/components/Icon/icons/IconProductHunt'
-export * from './src/components/Icon/icons/IconTwitterX'
 export * from './src/components/Icon/icons/IconYCombinator'
 export * from './src/components/Icon/icons/IconYoutubeSolid'
 

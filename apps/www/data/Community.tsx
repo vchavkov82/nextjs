@@ -41,17 +41,6 @@ const data: CommunityItem[] = [
     ),
   },
   {
-    title: 'Twitter',
-    stat: '140,000+',
-    statLabel: 'Followers',
-    img: 'twitter.png',
-    detail: () => (
-      <div>
-        <p>Some twitter callouts</p>
-      </div>
-    ),
-  },
-  {
     title: 'Discord',
     stat: '34,000+',
     statLabel: 'SupaTroopers',

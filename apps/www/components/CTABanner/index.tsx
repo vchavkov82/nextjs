@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Button, cn } from 'ui'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 interface Props {
   className?: string
@@ -8,7 +7,6 @@ interface Props {
 }
 
 const CTABanner = ({ darkerBg, className }: Props) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   return (
     <div
       className={cn(
@@ -27,12 +25,6 @@ const CTABanner = ({ darkerBg, className }: Props) => {
         <Button asChild size="medium">
           <Link
             href="https://www.assistance.bg/dashboard"
-            onClick={() =>
-              sendTelemetryEvent({
-                action: 'start_project_button_clicked',
-                properties: { buttonLocation: 'CTA Banner' },
-              })
-            }
           >
             Start your project
           </Link>
@@ -40,12 +32,6 @@ const CTABanner = ({ darkerBg, className }: Props) => {
         <Button asChild size="medium" type="default">
           <Link
             href="/contact/sales"
-            onClick={() =>
-              sendTelemetryEvent({
-                action: 'request_demo_button_clicked',
-                properties: { buttonLocation: 'CTA Banner' },
-              })
-            }
           >
             Request a demo
           </Link>

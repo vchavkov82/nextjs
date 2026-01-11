@@ -9,7 +9,6 @@ import MainProducts from '../MainProducts'
 
 import type { MPCSectionProps } from 'components/Solutions/MPCSection'
 import type { PlatformSectionProps } from 'components/Solutions/PlatformSection'
-import type { TwitterSocialSectionProps } from 'components/TwitterSocialSection'
 import type { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import {
   FrameworkLink,
@@ -20,8 +19,6 @@ import {
 } from './solutions.utils'
 
 import { useBreakpoint } from 'common'
-import { useSendTelemetryEvent } from 'lib/telemetry'
-import { topTweets } from 'shared-data'
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
@@ -36,14 +33,11 @@ const data: () => {
   heroSection: HeroSection
   why: FeaturesSection
   platform: PlatformSectionProps
-  twitterSocialSection: TwitterSocialSectionProps
   platformStarterSection: TwoColumnsSectionProps
   mcp: MPCSectionProps
 } = () => {
   const isXs = useBreakpoint(640)
   const editors = getEditors(isXs)
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return {
     metadata: {
       metaTitle: 'BA for Beginners',
@@ -73,10 +67,7 @@ const data: () => {
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'start_project_button_clicked',
-              properties: { buttonLocation: 'Solutions: Beginners page hero' },
-            }),
+            ,
         },
       ],
     },
@@ -475,27 +466,6 @@ const data: () => {
           ),
         },
       ],
-    },
-    twitterSocialSection: {
-      heading: 'Fun projects built with BA',
-      subheading: 'Discover what our community has to say about their BA experience.',
-      ctas: (
-        <Button asChild type="default" size="small" icon={<IconDiscord />}>
-          <Link
-            href={'https://discord.www.assistance.bg/'}
-            target="_blank"
-            tabIndex={-1}
-            onClick={() =>
-              sendTelemetryEvent({
-                action: 'homepage_discord_button_clicked',
-              })
-            }
-          >
-            Join us on Discord
-          </Link>
-        </Button>
-      ),
-      tweets: topTweets,
     },
     platformStarterSection: {
       id: 'platform-starter',

@@ -11,8 +11,6 @@ import StorageVisual from './StorageVisual'
 import VectorVisual from './VectorVisual'
 
 import { PRODUCT_MODULES_SHORTNAMES, PRODUCT_SHORTNAMES } from 'shared-data/products'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 import type { ProductType } from '@/data/MainProducts'
 
 interface Props {
@@ -20,17 +18,6 @@ interface Props {
 }
 
 const Products: React.FC<Props> = (props) => {
-  const _sendTelemetryEvent = useSendTelemetryEvent()
-
-  const sendTelemetryEvent = async (
-    product: PRODUCT_SHORTNAMES | PRODUCT_MODULES_SHORTNAMES | 'data-api'
-  ) => {
-    return await _sendTelemetryEvent({
-      action: 'homepage_product_card_clicked',
-      properties: { product },
-    })
-  }
-
   return (
     <SectionContainer className="!pt-0 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-4 xl:gap-3 2xl:gap-6 md:grid-cols-12">
       <ProductCard
@@ -54,7 +41,7 @@ const Products: React.FC<Props> = (props) => {
             </li>
           </ul>
         }
-        onClick={() => sendTelemetryEvent(PRODUCT_SHORTNAMES.DATABASE)}
+        onClick={() => }
         image={<DatabaseVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -70,7 +57,7 @@ const Products: React.FC<Props> = (props) => {
           </>
         }
         image={<AuthVisual className="hidden sm:block" />}
-        onClick={() => sendTelemetryEvent(PRODUCT_SHORTNAMES.AUTHENTICATION)}
+        onClick={() => }
       />
       <ProductCard
         className="col-span-6 xl:col-span-3"
@@ -85,7 +72,7 @@ const Products: React.FC<Props> = (props) => {
             <strong>without deploying or scaling servers.</strong>
           </>
         }
-        onClick={() => sendTelemetryEvent(PRODUCT_SHORTNAMES.FUNCTIONS)}
+        onClick={() => }
         image={<FunctionsVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -102,7 +89,7 @@ const Products: React.FC<Props> = (props) => {
           </>
         }
         image={<StorageVisual className="hidden sm:block" />}
-        onClick={() => sendTelemetryEvent(PRODUCT_SHORTNAMES.STORAGE)}
+        onClick={() => }
       />
       <ProductCard
         alignLeft
@@ -115,7 +102,7 @@ const Products: React.FC<Props> = (props) => {
             <br className="hidden sm:inline-block" /> with real-time data synchronization.
           </>
         }
-        onClick={() => sendTelemetryEvent(PRODUCT_SHORTNAMES.REALTIME)}
+        onClick={() => }
         image={<RealtimeVisual className="hidden sm:block" />}
         className="
           col-span-6 pointer-events-none xl:col-span-3
@@ -198,7 +185,7 @@ const Products: React.FC<Props> = (props) => {
             </li>
           </ul>
         }
-        onClick={() => sendTelemetryEvent(PRODUCT_MODULES_SHORTNAMES.VECTOR)}
+        onClick={() => }
         image={<VectorVisual className="hidden sm:block" />}
       />
       <ProductCard
@@ -208,7 +195,7 @@ const Products: React.FC<Props> = (props) => {
         icon={props.products['data-api'].icon}
         title={props.products['data-api'].name}
         subtitle={props.products['data-api'].description}
-        onClick={() => sendTelemetryEvent('data-api')}
+        onClick={() => }
         image={<DataAPIsVisual className="hidden sm:block" />}
       />
       <p className="text-xl sm:text-2xl text-foreground-lighter col-span-full tracking-[-.01rem]">

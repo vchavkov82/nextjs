@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { cn } from 'ui'
 import { EASE_IN, EASE_OUT } from '@/lib/animations'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import SectionContainer from '../Layouts/SectionContainer'
 
 type Framework = {
@@ -98,8 +97,6 @@ const HeroFrameworks = ({ className }: { className?: string }) => {
   const [activeFramework, setActiveFramework] = useState<Framework>(null!)
   const isXs = useBreakpoint(640)
 
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return (
     <SectionContainer className={cn(className)} id="frameworks">
       <div className="relative z-20 w-full max-w-6xl mx-auto h-full flex flex-col xl:flex-row gap-4 items-center justify-between">
@@ -127,11 +124,7 @@ const HeroFrameworks = ({ className }: { className?: string }) => {
               href={framework.docs}
               className="transition-opacity group"
               onClick={() =>
-                sendTelemetryEvent({
-                  action: 'homepage_framework_quickstart_clicked',
-                  properties: { frameworkName: framework.name },
-                })
-              }
+                }
               onMouseOver={() => setActiveFramework(framework)}
               onMouseOut={() => setActiveFramework(null!)}
             >

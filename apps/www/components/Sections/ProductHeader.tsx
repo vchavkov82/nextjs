@@ -3,8 +3,6 @@ import Link from 'next/link'
 import { Button } from 'ui'
 import ProductIcon from '../ProductIcon'
 import { BookOpen } from 'lucide-react'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 type subheader = string
 interface Types {
   h1: string | ReactNode
@@ -18,7 +16,6 @@ interface Types {
 }
 
 const ProductHeader = (props: Types) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   return (
     <div className="container relative mx-auto px-6 pt-16 pb-0 sm:px-16 lg:pt-28 xl:px-20">
       <div className="grid grid-cols-12">
@@ -55,11 +52,7 @@ const ProductHeader = (props: Types) => {
                 href="https://www.assistance.bg/dashboard"
                 as="https://www.assistance.bg/dashboard"
                 onClick={() =>
-                  sendTelemetryEvent({
-                    action: 'start_project_button_clicked',
-                    properties: { buttonLocation: 'Product Page Header - ' + props.title },
-                  })
-                }
+                  }
               >
                 Start a project
               </Link>
@@ -71,13 +64,7 @@ const ProductHeader = (props: Types) => {
                   as={props.documentation_url}
                   className="ml-2"
                   onClick={() =>
-                    sendTelemetryEvent({
-                      action: 'see_documentation_button_clicked',
-                      properties: {
-                        buttonLocation: 'Product Page Header - ' + props.title,
-                      },
-                    })
-                  }
+                    }
                 >
                   See documentation
                 </Link>

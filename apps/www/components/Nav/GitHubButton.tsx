@@ -1,9 +1,7 @@
 import { Button } from 'ui'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import staticContent from '.generated/staticContent/_index.json'
 
 const GitHubButton = () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const githubStars = staticContent.githubStars
 
   const kFormatter = (num: number) => {
@@ -28,7 +26,7 @@ const GitHubButton = () => {
       className="hidden group lg:flex text-foreground-light hover:text-foreground"
       type="text"
       asChild
-      onClick={() => sendTelemetryEvent({ action: 'homepage_github_button_clicked' })}
+      onClick={() => }
     >
       <a type={undefined} href="https://github.com/vchavkov82/nextjs" target="_blank">
         <span className="flex items-center gap-1">

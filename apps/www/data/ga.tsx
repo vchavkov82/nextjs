@@ -1,6 +1,6 @@
 import { KeyIcon, RewindIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/outline'
 import { Activity } from 'lucide-react'
-import { IconDiscord, IconGitHubSolid, IconTwitterX, IconYoutubeSolid } from 'ui'
+import { IconDiscord, IconGitHubSolid, IconYoutubeSolid } from 'ui'
 import { companyStats } from 'data/company-stats'
 
 export const data = (isDark: boolean) => ({
@@ -78,12 +78,6 @@ We're committed to our Free Plan - we know the importance of this for testing ho
         text: 'GitHub stars',
         url: 'https://github.com/supabase',
         icon: <IconGitHubSolid />,
-      },
-      {
-        number: '106,000',
-        text: 'Twitter followers',
-        url: 'https://twitter.com/supabase',
-        icon: <IconTwitterX />,
       },
       {
         number: '25,000',
@@ -170,7 +164,7 @@ We're committed to our Free Plan - we know the importance of this for testing ho
     title: 'Build in a weekend, scale to millions',
     paragraph: '03',
     content: `
-Our tagline is “Build in a weekend, scale to millions”. This isn't hyperbole. In the past, reaching 1 million users was an incredible challenge. It took Instagram 2.5 months, Facebook 10 months, and Twitter 24 months.
+Our tagline is "Build in a weekend, scale to millions". This isn't hyperbole. In the past, reaching 1 million users was an incredible challenge. It took Instagram 2.5 months and Facebook 10 months.
 
 In the past year, we've had 12 companies start on BA and grow from zero to over 1 million users.
 

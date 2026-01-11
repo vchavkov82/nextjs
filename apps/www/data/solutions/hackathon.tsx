@@ -41,7 +41,6 @@ import type { MPCSectionProps } from 'components/Solutions/MPCSection'
 
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 import { useBreakpoint } from 'common'
-import { useSendTelemetryEvent } from 'lib/telemetry'
 import { companyStats } from 'data/company-stats'
 import { DerivLogo, SoshiLogo } from '@/components/BrandLogo'
 
@@ -60,7 +59,6 @@ const data: () => {
   mcp: MPCSectionProps
   ctaSection?: any
 } = () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const isXs = useBreakpoint(640)
   const editors = getEditors(isXs)
 
@@ -91,10 +89,7 @@ const data: () => {
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'start_project_button_clicked',
-              properties: { buttonLocation: 'Solutions: Developers page hero' },
-            }),
+            ,
         },
       ],
     },

@@ -18,7 +18,6 @@ import {
 
 import { useCurrentPage, usePageComponent, usePopPage } from './hooks/pagesHooks'
 import { useQuery, useSetQuery } from './hooks/queryHooks'
-import { useCommandMenuTelemetryContext } from './hooks/useCommandMenuTelemetryContext'
 import {
   useCommandMenuOpen,
   useCommandMenuSize,
@@ -117,7 +116,6 @@ function useTouchGestures({ toggleOpen }: { toggleOpen: () => void }) {
 function CommandMenuTrigger({ children }: PropsWithChildren) {
   const open = useCommandMenuOpen()
   const setOpen = useSetCommandMenuOpen()
-  const telemetryContext = useCommandMenuTelemetryContext()
 
   const childFromProps = Children.only(children) as ReactElement<
     {
@@ -130,20 +128,6 @@ function CommandMenuTrigger({ children }: PropsWithChildren) {
   const handleOpen = () => {
     setOpen(!open)
     childFromProps.props.onOpen?.(!open)
-
-    // Send telemetry when opening via click
-    if (!open && telemetryContext?.onTelemetry) {
-      const event = {
-        action: 'command_menu_opened' as const,
-        properties: {
-          trigger_type: 'search_input' as const,
-          app: telemetryContext.app,
-        },
-        groups: {},
-      }
-
-      telemetryContext.onTelemetry(event)
-    }
   }
 
   const childWithClickHandler = cloneElement(childFromProps, {

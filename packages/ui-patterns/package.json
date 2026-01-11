@@ -114,14 +114,6 @@
       "import": "./src/CommandMenu/api/hooks/useCommandFilterState.ts",
       "types": "./src/CommandMenu/api/hooks/useCommandFilterState.ts"
     },
-    "./CommandMenu/api/hooks/useCommandMenuTelemetry": {
-      "import": "./src/CommandMenu/api/hooks/useCommandMenuTelemetry.ts",
-      "types": "./src/CommandMenu/api/hooks/useCommandMenuTelemetry.ts"
-    },
-    "./CommandMenu/api/hooks/useCommandMenuTelemetryContext": {
-      "import": "./src/CommandMenu/api/hooks/useCommandMenuTelemetryContext.tsx",
-      "types": "./src/CommandMenu/api/hooks/useCommandMenuTelemetryContext.tsx"
-    },
     "./CommandMenu/api/hooks/useCrossCompatRouter": {
       "import": "./src/CommandMenu/api/hooks/useCrossCompatRouter.tsx",
       "types": "./src/CommandMenu/api/hooks/useCrossCompatRouter.tsx"

@@ -82,20 +82,6 @@ export const HackernewsSvg = () => (
   </svg>
 )
 
-export const TwitterSpacesSvg = () => (
-  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M4.46228 5.78799C4.46228 3.4802 6.3331 1.60938 8.64089 1.60938C10.9487 1.60938 12.8195 3.4802 12.8195 5.78799V8.17578C12.8195 10.4836 10.9487 12.3544 8.64089 12.3544C6.3331 12.3544 4.46228 10.4836 4.46228 8.17578V5.78799ZM6.85006 8.17578C7.09719 8.17578 7.29777 7.9752 7.29777 7.72807V6.2357C7.29777 5.98857 7.09719 5.78799 6.85006 5.78799C6.60292 5.78799 6.40235 5.98857 6.40235 6.2357V7.72807C6.40235 7.9752 6.60292 8.17578 6.85006 8.17578ZM8.64089 8.77272C8.88803 8.77272 9.0886 8.57215 9.0886 8.32501V5.63876C9.0886 5.39162 8.88803 5.19105 8.64089 5.19105C8.39376 5.19105 8.19319 5.39162 8.19319 5.63876V8.32501C8.19319 8.57215 8.39376 8.77272 8.64089 8.77272ZM10.4317 8.17578C10.6789 8.17578 10.8794 7.9752 10.8794 7.72807V6.2357C10.8794 5.98857 10.6789 5.78799 10.4317 5.78799C10.1846 5.78799 9.98402 5.98857 9.98402 6.2357V7.72807C9.98402 7.9752 10.1846 8.17578 10.4317 8.17578Z"
-      fill="#8F8F8F"
-    />
-    <path
-      d="M2.85924 9.24628C3.17502 9.15077 3.50692 9.32985 3.60243 9.64624C4.24654 11.7934 6.23138 13.3992 8.64185 13.3992C11.0523 13.3992 13.0372 11.7934 13.6819 9.64564C13.7768 9.32926 14.1099 9.15137 14.4251 9.24569C14.7402 9.34 14.9205 9.6725 14.825 9.98888C14.0364 12.6172 11.6039 14.5931 8.64185 14.5931C5.67981 14.5931 3.24725 12.6172 2.45928 9.98948C2.36377 9.6737 2.54286 9.34179 2.85924 9.24628Z"
-      fill="#8F8F8F"
-    />
-  </svg>
-)
 
 export const ProductHuntSvg = () => (
   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -326,7 +312,6 @@ export const SectionButtons = ({
   github,
   url,
   hackernews,
-  twitter_spaces,
   product_hunt,
   mobileGrid,
 }: {
@@ -336,7 +321,6 @@ export const SectionButtons = ({
   github?: string
   url?: string
   hackernews?: string
-  twitter_spaces?: string
   product_hunt?: string
   mobileGrid?: boolean
 }) => {
@@ -400,14 +384,6 @@ export const SectionButtons = ({
           Product Hunt
           <div className="bg-[#313131] rounded-full hidden sm:inline-block p-1 ml-2">
             <ProductHuntSvg />
-          </div>
-        </ChipLink>
-      )}
-      {twitter_spaces && (
-        <ChipLink href={twitter_spaces} target="_blank" className="col-span-full">
-          Twitter Spaces
-          <div className="bg-[#313131] rounded-full hidden sm:inline-block p-1 ml-2">
-            <TwitterSpacesSvg />
           </div>
         </ChipLink>
       )}

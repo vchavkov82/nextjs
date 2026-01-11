@@ -823,7 +823,7 @@ BA's Email Login provides a robust foundation for user authentication, allowing 
 BA's Social Login feature enables users to authenticate using their existing accounts from popular social platforms and services, providing a streamlined, password-free access to your application.
 
 ## Key features
-1. Multiple provider support: Integrate with various platforms like Google, Facebook, Twitter, and more.
+1. Multiple provider support: Integrate with various platforms like Google, Facebook, and more.
 2. OAuth standard: Implement secure authentication using the open OAuth standard.
 3. Provider tokens: Access provider tokens for additional API calls to the OAuth provider.
 4. Customizable setup: Configure each social provider according to your needs.

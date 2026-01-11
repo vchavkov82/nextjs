@@ -151,17 +151,6 @@ const authProviders = [
     authType: 'social',
   },
   {
-    name: 'Twitter',
-    logo: '/docs/img/icons/twitter-icon',
-    href: '/guides/auth/social-login/auth-twitter',
-    official: true,
-    supporter: 'BA',
-    platform: true,
-    selfHosted: true,
-    authType: 'social',
-    hasLightIcon: true,
-  },
-  {
     name: 'Twitch',
     logo: '/docs/img/icons/twitch-icon',
     href: '/guides/auth/social-login/auth-twitch',

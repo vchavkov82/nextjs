@@ -39,7 +39,6 @@ import type { MPCSectionProps } from 'components/Solutions/MPCSection'
 
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
 import { useBreakpoint } from 'common'
-import { useSendTelemetryEvent } from 'lib/telemetry'
 import { companyStats } from '../company-stats'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
@@ -58,7 +57,6 @@ const data: () => {
   platformStarterSection: TwoColumnsSectionProps
   mcp: MPCSectionProps
 } = () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const isXs = useBreakpoint(640)
   const editors = getEditors(isXs)
 
@@ -90,10 +88,7 @@ const data: () => {
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'start_project_button_clicked',
-              properties: { buttonLocation: 'Solutions: Developers page hero' },
-            }),
+            ,
         },
       ],
     },

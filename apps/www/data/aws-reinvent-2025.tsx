@@ -276,7 +276,7 @@ const data = {
         subheading: (
           <>
             <span className="text-foreground">Secure authentication</span> with email/password,
-            magic links, OAuth (Google, GitHub, Twitter, etc.), SAML, SSO, and phone/SMS OTP.
+            magic links, OAuth (Google, GitHub, etc.), SAML, SSO, and phone/SMS OTP.
           </>
         ),
         className: '!border-l-0 sm:!border-l sm:!border-t-0',

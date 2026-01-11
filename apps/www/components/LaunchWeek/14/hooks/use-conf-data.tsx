@@ -34,7 +34,6 @@ export type UserTicketData = {
     hideMetadata?: boolean
     theme?: string
   }
-  shared_on_twitter?: string
   shared_on_linkedin?: string
   secret?: boolean
 }

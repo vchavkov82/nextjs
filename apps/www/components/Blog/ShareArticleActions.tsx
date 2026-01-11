@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { cn, IconLinkedinSolid, IconTwitterX, IconYCombinator } from 'ui'
+import { cn, IconLinkedinSolid, IconYCombinator } from 'ui'
 
 const ShareArticleActions = ({
   title,
@@ -19,15 +19,6 @@ const ShareArticleActions = ({
 
   return (
     <div className={cn('mt-4 flex items-center gap-4', className)}>
-      <Link
-        aria-label="Share on X"
-        href={`https://twitter.com/intent/tweet?url=${permalink}&text=${encodedTitle}`}
-        target="_blank"
-        className="text-foreground-lighter hover:text-foreground"
-      >
-        <IconTwitterX size={iconSize} />
-      </Link>
-
       <Link
         aria-label="Share on Linkedin"
         href={`https://www.linkedin.com/shareArticle?url=${permalink}&text=${encodedTitle}`}

@@ -2,11 +2,9 @@ import Link from 'next/link'
 
 import { Button } from 'ui'
 import SectionContainer from '@/components/Layouts/SectionContainer'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import AnnouncementBadge from '../Announcement/Badge'
 
 const Hero = () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
 
   return (
     <div className="relative -mt-[65px]">
@@ -37,12 +35,6 @@ const Hero = () => {
                     <Link
                       href="https://www.assistance.bg/dashboard"
                       as="https://www.assistance.bg/dashboard"
-                      onClick={() =>
-                        sendTelemetryEvent({
-                          action: 'start_project_button_clicked',
-                          properties: { buttonLocation: 'Homepage Hero' },
-                        })
-                      }
                     >
                       Start your project
                     </Link>
@@ -51,12 +43,6 @@ const Hero = () => {
                     <Link
                       href="/contact/sales"
                       as="/contact/sales"
-                      onClick={() =>
-                        sendTelemetryEvent({
-                          action: 'request_demo_button_clicked',
-                          properties: { buttonLocation: 'Homepage Hero' },
-                        })
-                      }
                     >
                       Request a demo
                     </Link>

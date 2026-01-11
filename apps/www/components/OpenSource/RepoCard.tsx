@@ -3,10 +3,7 @@ import { Star } from 'lucide-react'
 import Link from 'next/link'
 
 import Panel from '@/components/Panel'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 const RepoCard = ({ repo, activeTab, index }: { repo: any; activeTab: number; index: number }) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
   return (
     <motion.div
       key={`${activeTab}-${repo.name}`}
@@ -20,11 +17,7 @@ const RepoCard = ({ repo, activeTab, index }: { repo: any; activeTab: number; in
         target="_blank"
         className="h-full"
         onClick={() =>
-          sendTelemetryEvent({
-            action: 'open_source_repo_card_clicked',
-            properties: { repoName: repo.name },
-          })
-        }
+          }
       >
         <Panel
           outerClassName="md:h-full"

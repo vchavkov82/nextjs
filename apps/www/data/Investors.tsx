@@ -4,7 +4,6 @@ type Investor = {
   title: string
   img: string
   lead: boolean
-  twitter?: string | null
   linkedIn?: string | null
 }
 
@@ -15,7 +14,6 @@ const data: Investor[] = [
     title: 'Coatue Growth Fund',
     img: '/images/logos/coatue.png',
     lead: true,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -24,7 +22,6 @@ const data: Investor[] = [
     title: 'Mozilla',
     img: '/images/logos/mozilla--grey.png',
     lead: true,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -33,7 +30,6 @@ const data: Investor[] = [
     title: 'Y Combinator',
     img: '/images/logos/yc--grey.png',
     lead: true,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -42,7 +38,6 @@ const data: Investor[] = [
     title: 'Felicis',
     img: '/images/logos/felicis.png',
     lead: true,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -51,7 +46,6 @@ const data: Investor[] = [
     title: 'GitHub Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -60,7 +54,6 @@ const data: Investor[] = [
     title: 'Docker Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -69,7 +62,6 @@ const data: Investor[] = [
     title: 'Vercel Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -78,7 +70,6 @@ const data: Investor[] = [
     title: 'PagerDuty Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -87,7 +78,6 @@ const data: Investor[] = [
     title: 'Fly Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -96,7 +86,6 @@ const data: Investor[] = [
     title: 'Base Case Capital',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -105,7 +94,6 @@ const data: Investor[] = [
     title: 'Vercel DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -114,7 +102,6 @@ const data: Investor[] = [
     title: 'Vercel CRO',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -123,7 +110,6 @@ const data: Investor[] = [
     title: '1Password CTO, Ex-Facebook',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -132,7 +118,6 @@ const data: Investor[] = [
     title: 'UI.dev Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -141,7 +126,6 @@ const data: Investor[] = [
     title: 'Stripe',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -150,7 +134,6 @@ const data: Investor[] = [
     title: 'Quiet Capital',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -159,7 +142,6 @@ const data: Investor[] = [
     title: 'LogDNA Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -168,7 +150,6 @@ const data: Investor[] = [
     title: 'Pipedream Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -177,7 +158,6 @@ const data: Investor[] = [
     title: 'HashiCorp - VP Eng',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -186,7 +166,6 @@ const data: Investor[] = [
     title: 'Instagram Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -195,7 +174,6 @@ const data: Investor[] = [
     title: 'Netlify DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -204,7 +182,6 @@ const data: Investor[] = [
     title: 'Netlify Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -213,7 +190,6 @@ const data: Investor[] = [
     title: 'Netlify Cofounder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -222,7 +198,6 @@ const data: Investor[] = [
     title: 'Rogue Capital',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -231,7 +206,6 @@ const data: Investor[] = [
     title: 'Makerpad Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -240,7 +214,6 @@ const data: Investor[] = [
     title: 'GitHub CTO',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -249,7 +222,6 @@ const data: Investor[] = [
     title: 'Temporal DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -258,7 +230,6 @@ const data: Investor[] = [
     title: 'GitHub DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -267,7 +238,6 @@ const data: Investor[] = [
     title: 'Stripe DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -276,7 +246,6 @@ const data: Investor[] = [
     title: 'Retool DevRel',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -285,7 +254,6 @@ const data: Investor[] = [
     title: 'On Deck',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -294,7 +262,6 @@ const data: Investor[] = [
     title: 'Wayfinder Ventures',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -303,7 +270,6 @@ const data: Investor[] = [
     title: 'Chapter One',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -312,7 +278,6 @@ const data: Investor[] = [
     title: 'Todd and Rahul Angel Fund',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -321,7 +286,6 @@ const data: Investor[] = [
     title: 'Customer Strategy at Blend',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -330,7 +294,6 @@ const data: Investor[] = [
     title: 'Investor',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -339,7 +302,6 @@ const data: Investor[] = [
     title: 'Worklife VC',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -348,7 +310,6 @@ const data: Investor[] = [
     title: 'Education at Airtable',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
   {
@@ -357,7 +318,6 @@ const data: Investor[] = [
     title: 'Infinitus Founder',
     img: '',
     lead: false,
-    twitter: null,
     linkedIn: null,
   },
 ]

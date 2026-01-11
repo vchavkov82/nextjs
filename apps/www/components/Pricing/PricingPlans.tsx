@@ -4,7 +4,6 @@ import { Check } from 'lucide-react'
 import { plans } from 'shared-data/plans'
 import { Button, cn } from 'ui'
 import { Organization } from '@/data/organizations'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import UpgradePlan from './UpgradePlan'
 
 interface PricingPlansProps {
@@ -13,8 +12,6 @@ interface PricingPlansProps {
 }
 
 const PricingPlans = ({ organizations, hasExistingOrganizations }: PricingPlansProps) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return (
     <div className="mx-auto lg:container lg:px-16 xl:px-12 flex flex-col">
       <div className="relative z-10 mx-auto w-full px-4 sm:px-6 lg:px-8">
@@ -27,15 +24,7 @@ const PricingPlans = ({ organizations, hasExistingOrganizations }: PricingPlansP
             const footer = plan.footer
 
             const sendPricingEvent = () => {
-              sendTelemetryEvent({
-                action: 'www_pricing_plan_cta_clicked',
-                properties: {
-                  plan: plan.name,
-                  showUpgradeText: isUpgradablePlan && hasExistingOrganizations ? true : false,
-                  section: 'main',
-                },
-              })
-            }
+              }
 
             return (
               <div

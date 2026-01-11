@@ -432,7 +432,6 @@ export type Database = {
           referred_by: string | null
           role: string | null
           shared_on_linkedin: string | null
-          shared_on_twitter: string | null
           ticket_number: number
           user_id: string
           username: string | null
@@ -573,7 +572,6 @@ export type Database = {
           role: string | null
           secret: boolean | null
           shared_on_linkedin: string | null
-          shared_on_twitter: string | null
           ticket_number: number | null
           username: string | null
         }

@@ -9,7 +9,6 @@ import { Button, Select, cn } from 'ui'
 import { PricingTableRowDesktop, PricingTableRowMobile } from '@/components/Pricing/PricingTableRow'
 import Solutions from '@/data/MainProducts'
 import { Organization } from '@/data/organizations'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import UpgradePlan from './UpgradePlan'
 
 const MobileHeader = ({
@@ -31,8 +30,6 @@ const MobileHeader = ({
   organizations?: Organization[]
   hasExistingOrganizations?: boolean
 }) => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   const selectedPlan = plans.find((p) => p.name === plan)!
   const isUpgradablePlan = selectedPlan.name === 'Pro' || selectedPlan.name === 'Team'
 
@@ -57,16 +54,7 @@ const MobileHeader = ({
         <UpgradePlan
           organizations={organizations}
           onClick={() =>
-            sendTelemetryEvent({
-              action: 'www_pricing_plan_cta_clicked',
-              properties: {
-                plan,
-                showUpgradeText: true,
-                section: 'comparison_table',
-                tableMode: 'mobile',
-              },
-            })
-          }
+            }
           size="medium"
           planId={selectedPlan.planId}
         />
@@ -75,16 +63,7 @@ const MobileHeader = ({
           <Link
             href={selectedPlan.href}
             onClick={() =>
-              sendTelemetryEvent({
-                action: 'www_pricing_plan_cta_clicked',
-                properties: {
-                  plan,
-                  showUpgradeText: false,
-                  section: 'comparison_table',
-                  tableMode: 'mobile',
-                },
-              })
-            }
+              }
           >
             {selectedPlan.cta}
           </Link>
@@ -104,8 +83,6 @@ const PricingComparisonTable = ({
   hasExistingOrganizations,
 }: PricingComparisonTableProps) => {
   const [activeMobilePlan, setActiveMobilePlan] = useState('Free')
-
-  const sendTelemetryEvent = useSendTelemetryEvent()
 
   return (
     <div
@@ -407,16 +384,7 @@ const PricingComparisonTable = ({
                           <UpgradePlan
                             organizations={organizations}
                             onClick={() =>
-                              sendTelemetryEvent({
-                                action: 'www_pricing_plan_cta_clicked',
-                                properties: {
-                                  plan: plan.name,
-                                  showUpgradeText: true,
-                                  section: 'comparison_table',
-                                  tableMode: 'desktop',
-                                },
-                              })
-                            }
+                              }
                             size="tiny"
                             planId={plan.planId}
                           />
@@ -430,16 +398,7 @@ const PricingComparisonTable = ({
                             <Link
                               href={plan.href}
                               onClick={() =>
-                                sendTelemetryEvent({
-                                  action: 'www_pricing_plan_cta_clicked',
-                                  properties: {
-                                    plan: plan.name,
-                                    showUpgradeText: false,
-                                    section: 'comparison_table',
-                                    tableMode: 'desktop',
-                                  },
-                                })
-                              }
+                                }
                             >
                               {plan.cta}
                             </Link>

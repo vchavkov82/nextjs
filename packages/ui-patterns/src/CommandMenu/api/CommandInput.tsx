@@ -7,7 +7,6 @@ import { useBreakpoint, useDebounce } from 'common'
 import { CommandInput_Shadcn_, cn } from 'ui'
 
 import { useQuery, useSetQuery } from './hooks/queryHooks'
-import { useCommandMenuTelemetryContext } from './hooks/useCommandMenuTelemetryContext'
 
 const INPUT_TYPED_EVENT_DEBOUNCE_TIME = 2000 // 2s
 
@@ -54,54 +53,15 @@ const CommandInput = forwardRef<
   const [inputValue, setInputValue] = useState(query)
   useEffect(() => {
     setInputValue(query)
-    previousValueRef.current = query
   }, [query])
 
-  // Get telemetry context
-  const telemetryContext = useCommandMenuTelemetryContext()
   const previousValueRef = useRef<string>(inputValue)
-
-  const inputTelemetryEvent = useCallback(
-    (value: string) => {
-      if (telemetryContext?.onTelemetry) {
-        const event = {
-          action: 'command_menu_search_submitted' as const,
-          properties: {
-            query: value,
-            app: telemetryContext.app,
-          },
-          groups: {},
-        }
-        telemetryContext.onTelemetry(event)
-      }
-    },
-    [telemetryContext]
-  )
-
-  const debouncedTelemetry = useDebounce(
-    useCallback(() => {
-      inputTelemetryEvent(inputValue)
-      previousValueRef.current = inputValue
-    }, [inputTelemetryEvent, inputValue]),
-    INPUT_TYPED_EVENT_DEBOUNCE_TIME
-  )
 
   const handleValueChange = useCallback(
     (value: string) => {
       setInputValue(value)
-
-      // Only trigger telemetry if the user is adding characters (not removing with backspace)
-      const isAddingCharacters = value.length > previousValueRef.current.length
-
-      if (!isAddingCharacters) {
-        previousValueRef.current = value
-        return
-      }
-
-      // Trigger debounced telemetry
-      debouncedTelemetry()
     },
-    [debouncedTelemetry]
+    []
   )
 
   // To handle CJK input

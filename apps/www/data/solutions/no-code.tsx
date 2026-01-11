@@ -10,7 +10,6 @@ import type { FeaturesSection, HeroSection, Metadata } from './solutions.utils'
 import type { Quotes } from './solutions.utils'
 
 import { PRODUCT_SHORTNAMES } from 'shared-data/products'
-import { useSendTelemetryEvent } from 'lib/telemetry'
 
 const AuthVisual = dynamic(() => import('components/Products/AuthVisual'))
 const ComputePricingCalculator = dynamic(
@@ -28,8 +27,6 @@ const data: () => {
   platform: PlatformSectionProps
   platformStarterSection: TwoColumnsSectionProps
 } = () => {
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   return {
     metadata: {
       metaTitle: 'BA for building Apps',
@@ -59,10 +56,7 @@ const data: () => {
           href: 'https://www.assistance.bg/dashboard',
           type: 'primary' as any,
           onClick: () =>
-            sendTelemetryEvent({
-              action: 'start_project_button_clicked',
-              properties: { buttonLocation: 'Solutions: No Code page hero' },
-            }),
+            ,
         },
       ],
     },

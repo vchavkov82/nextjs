@@ -28,7 +28,6 @@ import ShimmeringLoader from 'ui-patterns/ShimmeringLoader'
 import { useDebounce } from '~/hooks/useDebounce'
 import { useIntersectionObserver } from '~/hooks/useIntersectionObserver'
 import { useProjectsInfiniteQuery } from '~/lib/fetch/projects-infinite'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
 
 type PlatformType = (typeof PLATFORMS)[number]['value']
 
@@ -267,8 +266,6 @@ export function McpConfigPanel() {
   const [selectedPlatform, setSelectedPlatform] = useState<'hosted' | 'local'>('hosted')
   const [selectedClient, setSelectedClient] = useState<McpClient | null>(null)
   const { resolvedTheme } = useTheme()
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   const isPlatform = selectedPlatform === 'hosted'
   const project = isPlatform ? selectedProject : null
 
@@ -278,27 +275,16 @@ export function McpConfigPanel() {
         selectedClient,
         source: 'docs',
         onTrack: (event) => {
-          sendTelemetryEvent({
-            action: event.action,
-            properties: event.properties,
-            groups: (event.groups || {}) as any,
+          as any,
           })
         },
         projectRef: project?.ref,
       }),
-    [selectedClient, sendTelemetryEvent, project?.ref]
   )
 
   const handleInstall = () => {
     if (selectedClient?.label) {
-      sendTelemetryEvent({
-        action: 'mcp_install_button_clicked',
-        properties: {
-          client: selectedClient.label,
-          source: 'docs',
-        },
-        groups: {
-          ...(project?.ref && { project: project.ref }),
+      ,
         } as any,
       })
     }

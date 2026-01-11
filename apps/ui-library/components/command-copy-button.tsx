@@ -3,13 +3,10 @@
 import { Check, Copy } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-import { useSendTelemetryEvent } from '@/lib/telemetry'
 import { Button_Shadcn_ } from 'ui'
 
 export function CommandCopyButton({ command }: { command: string }) {
   const [copied, setCopied] = useState(false)
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   useEffect(() => {
     if (copied) {
       const timeout = setTimeout(() => setCopied(false), 2000)
@@ -53,16 +50,7 @@ export function CommandCopyButton({ command }: { command: string }) {
         // Parse command and send telemetry event
         const { framework, packageManager, title } = parseCommandForTelemetry(command)
 
-        sendTelemetryEvent({
-          action: 'supabase_ui_command_copy_button_clicked',
-          properties: {
-            templateTitle: title,
-            command: command,
-            framework,
-            packageManager,
-          },
-        })
-      }}
+        }}
     >
       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
     </Button_Shadcn_>

@@ -17,7 +17,6 @@ import { Button, cn } from 'ui'
 
 import { IS_PLATFORM } from '~/lib/constants'
 import { useSendFeedbackMutation } from '~/lib/fetch/feedback'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
 import { getLinearTeam, getSanitizedTabParams } from './Feedback.utils'
 import { type FeedbackFields, FeedbackModal } from './FeedbackModal'
 
@@ -78,7 +77,6 @@ function Feedback({ className }: { className?: string }) {
   const feedbackButtonRef = useRef<HTMLButtonElement>(null)
 
   const pathname = usePathname() ?? ''
-  const sendTelemetryEvent = useSendTelemetryEvent()
   const { mutate: sendFeedbackComment } = useSendFeedbackMutation()
   const supabase = useConstant(() =>
     IS_PLATFORM
@@ -109,10 +107,6 @@ function Feedback({ className }: { className?: string }) {
   }
 
   function handleVote(response: Response) {
-    sendTelemetryEvent({
-      action: 'docs_feedback_clicked',
-      properties: { response },
-    })
     sendFeedbackVote(response)
     dispatch({ event: 'VOTED', response })
     // Focus so screen reader users are aware of the new element

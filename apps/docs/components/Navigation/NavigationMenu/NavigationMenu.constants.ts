@@ -376,12 +376,6 @@ export const SocialLoginItems: Array<Partial<NavMenuSection>> = [
     url: '/guides/auth/social-login/auth-azure',
   },
   {
-    name: 'Twitter',
-    icon: '/docs/img/icons/twitter-icon',
-    url: '/guides/auth/social-login/auth-twitter',
-    hasLightIcon: true,
-  },
-  {
     name: 'GitHub',
     icon: '/docs/img/icons/github-icon',
     url: '/guides/auth/social-login/auth-github',

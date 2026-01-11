@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { CircleAlert } from 'lucide-react'
 import { Button, cn, Input_Shadcn_, Label_Shadcn_, Separator, TextArea_Shadcn_ } from 'ui'
 import { Alert } from 'ui/src/components/shadcn/ui/alert'
-import { useSendTelemetryEvent } from '@/lib/telemetry'
-
 interface FormData {
   firstName: string
   secondName: string
@@ -98,8 +96,6 @@ const TalkToPartnershipTeamForm: FC<Props> = ({ className }) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [success, setSuccess] = useState<string | null>(null)
   const [startTime, setStartTime] = useState<number>(0)
-  const sendTelemetryEvent = useSendTelemetryEvent()
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setErrors({})
@@ -257,11 +253,7 @@ const TalkToPartnershipTeamForm: FC<Props> = ({ className }) => {
               disabled={isSubmitting}
               loading={isSubmitting}
               onClick={() =>
-                sendTelemetryEvent({
-                  action: 'request_demo_button_clicked',
-                  properties: { buttonLocation: 'Enterprise Request Demo Form' },
-                })
-              }
+                }
             >
               Submit
             </Button>

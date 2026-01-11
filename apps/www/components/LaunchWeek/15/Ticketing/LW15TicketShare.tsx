@@ -24,7 +24,6 @@ export default function LW15TicketShare() {
   const permalink = encodeURIComponent(link)
   const text = LW15_TWEET_TEXT
   const encodedText = encodeURIComponent(text)
-  const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&text=${encodedText}`
   const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${permalink}&text=${encodedText}`
   const downloadUrl = `/api-v2/ticket-og?username=${encodeURIComponent(username ?? '')}`
   const TICKETS_TABLE = 'tickets'
@@ -45,18 +44,9 @@ export default function LW15TicketShare() {
     }
   }, [downloadUrl])
 
-  const handleShare = async (social: 'twitter' | 'linkedin') => {
+  const handleShare = async (social: 'linkedin') => {
     setTimeout(async () => {
-      if (social === 'twitter') {
-        await supabase
-          .from(TICKETS_TABLE)
-          .update({
-            shared_on_twitter: 'now',
-            metadata: { ...metadata, theme: resolvedTheme },
-          })
-          .eq('launch_week', 'lw15')
-          .eq('username', username)
-      } else if (social === 'linkedin') {
+      if (social === 'linkedin') {
         await supabase
           .from(TICKETS_TABLE)
           .update({
@@ -67,7 +57,7 @@ export default function LW15TicketShare() {
           .eq('username', username)
       }
 
-      if (userData.shared_on_linkedin && userData.shared_on_twitter) {
+      if (userData.shared_on_linkedin) {
         await fetch(`/api-v2/ticket-og?username=${username}&platinum=true`)
       }
     })
@@ -75,18 +65,6 @@ export default function LW15TicketShare() {
 
   return (
     <div className="flex flex-row flex-wrap justify-stretch w-full gap-1 pointer-events-auto">
-      <Button
-        onClick={() => handleShare('twitter')}
-        type={userData.shared_on_twitter ? 'secondary' : 'default'}
-        icon={userData.shared_on_twitter && <Check strokeWidth={2} />}
-        size={isLessThanMd ? 'tiny' : 'small'}
-        className="px-2 lg:px-3.5 h-[28px] lg:h-[34px] flex-1 w-full"
-        asChild
-      >
-        <Link href={tweetUrl} target="_blank">
-          {userData.shared_on_twitter ? 'Shared on Twitter' : 'Share on Twitter'}
-        </Link>
-      </Button>
       <Button
         onClick={() => handleShare('linkedin')}
         type={userData.shared_on_linkedin ? 'secondary' : 'default'}
@@ -96,7 +74,7 @@ export default function LW15TicketShare() {
         asChild
       >
         <Link href={linkedInUrl} target="_blank">
-          {userData.shared_on_linkedin ? 'Shared on Linkedin' : 'Share on Linkedin'}
+          {userData.shared_on_linkedin ? 'Shared on LinkedIn' : 'Share on LinkedIn'}
         </Link>
       </Button>
     </div>
