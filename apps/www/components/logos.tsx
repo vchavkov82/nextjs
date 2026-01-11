@@ -19,33 +19,6 @@ const Logos: React.FC<Props> = ({ className, showHeading = true, align = 'center
     setIsMounted(true)
   }, [])
 
-  // Render static version on server, animated version after hydration
-  if (!isMounted) {
-    return (
-      <div className={cn('pb-14 md:pb-24', className)}>
-        <div className="max-w-md md:max-w-lg lg:max-w-2xl mx-auto">
-          <div
-            className={cn(
-              'relative w-full mx-auto max-w-4xl opacity-90 dark:opacity-70',
-              'overflow-hidden',
-              'flex flex-nowrap justify-center',
-              'px-5 lg:px-12',
-              align === 'left' ? 'justify-start ml-0' : 'justify-center',
-              gap
-            )}
-          >
-            <LogosRow className={cn(gap, 'flex flex-nowrap w-fit')} />
-          </div>
-        </div>
-        {showHeading && (
-          <p className="w-full text-center text-sm text-foreground-lighter mt-6 lg:mt-8">
-            Trusted by fast-growing companies worldwide
-          </p>
-        )}
-      </div>
-    )
-  }
-
   return (
     <div className={cn('pb-14 md:pb-24', className)}>
       <div className="max-w-md md:max-w-lg lg:max-w-2xl mx-auto">
@@ -53,21 +26,22 @@ const Logos: React.FC<Props> = ({ className, showHeading = true, align = 'center
           className={cn(
             'relative w-full mx-auto max-w-4xl opacity-90 dark:opacity-70',
             'overflow-hidden',
-            "before:content[''] before:absolute before:inset-0 before:w-full before:bg-[linear-gradient(to_right,hsl(var(--background-default))_0%,transparent_10%,transparent_90%,hsl(var(--background-default))_100%)] before:z-10",
             'flex flex-nowrap justify-center',
             'px-5 lg:px-12',
             align === 'left' ? 'justify-start ml-0' : 'justify-center',
-            gap
+            gap,
+            isMounted && "before:content[''] before:absolute before:inset-0 before:w-full before:bg-[linear-gradient(to_right,hsl(var(--background-default))_0%,transparent_10%,transparent_90%,hsl(var(--background-default))_100%)] before:z-10"
           )}
+          suppressHydrationWarning
         >
-          {range(0, 4).map((_, i) => (
+          {range(0, isMounted ? 4 : 1).map((_, i) => (
             <LogosRow
               key={`logos-group-${i}`}
               className={cn(
                 gap,
                 'flex flex-nowrap w-fit',
-                'animate-[marquee_90000ms_linear_both_infinite] will-change-transform',
-                'motion-reduce:animate-none motion-reduce:will-change-none'
+                isMounted && 'animate-[marquee_90000ms_linear_both_infinite] will-change-transform',
+                isMounted && 'motion-reduce:animate-none motion-reduce:will-change-none'
               )}
             />
           ))}
