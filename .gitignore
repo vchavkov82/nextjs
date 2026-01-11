@@ -141,6 +141,7 @@ llms.txt
 .cursor/
 .cursorignore
 .cursorrules
+llms.txt
 
 #include template .env file for docker-compose
 !docker/.env
