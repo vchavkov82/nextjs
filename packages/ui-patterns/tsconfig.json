@@ -2,7 +2,10 @@
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
     "resolveJsonModule": true,
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "common/*": ["../common/*"]
+    }
   },
   "include": [".", "./../../packages/ui/src/**/*.d.ts", "../ui/src/components/Icons"],
   "exclude": ["dist", "build", "node_modules"]

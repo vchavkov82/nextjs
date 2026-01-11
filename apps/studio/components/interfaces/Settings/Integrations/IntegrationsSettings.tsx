@@ -8,6 +8,10 @@ import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { AlertDescription_Shadcn_, AlertTitle_Shadcn_, Alert_Shadcn_, WarningIcon } from 'ui'
 import { AWSPrivateLinkSection } from './AWSPrivateLink/AWSPrivateLinkSection'
 
+export const IntegrationImageHandler = ({ title }: { title: string }) => {
+  return <div className="mt-4 text-sm text-foreground-light">Integration: {title}</div>
+}
+
 const IntegrationSettings = () => {
   const { data: project } = useSelectedProjectQuery()
   const { data: parentProject } = useProjectDetailQuery({ ref: project?.parent_project_ref })

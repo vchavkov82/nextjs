@@ -63,9 +63,7 @@ const CommandItem = forwardRef<
       const event = {
         action: 'command_menu_command_clicked' as const,
         properties: {
-          command_name: command.name,
-          command_value: command.value,
-          command_type: isActionCommand(command) ? ('action' as const) : ('route' as const),
+          command_id: command.id,
           app: telemetryContext.app,
         },
         groups: {},

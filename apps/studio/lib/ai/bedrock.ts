@@ -1,3 +1,5 @@
+'use server'
+
 import { createAmazonBedrock } from '@ai-sdk/amazon-bedrock'
 import { LanguageModel } from 'ai'
 import { createCredentialChain, fromNodeProviderChain } from '@aws-sdk/credential-providers'

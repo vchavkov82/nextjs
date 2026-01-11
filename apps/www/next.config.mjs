@@ -50,6 +50,7 @@ const nextConfig = {
     'shared-data',
     'icons',
     'api-types',
+    'next-mdx-remote',
   ],
   experimental: {
     // Optimize for high-core systems
@@ -169,8 +170,10 @@ const nextConfig = {
     ignoreBuildErrors: process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? false : true,
   },
   serverExternalPackages: [
+    '@octokit/auth-app',
     '@octokit/core',
     '@octokit/plugin-paginate-graphql',
+    '@octokit/rest',
   ],
   allowedDevOrigins: ['suse-10.lan.assistance.bg'],
 }

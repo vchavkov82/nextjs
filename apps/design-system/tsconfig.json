@@ -19,6 +19,7 @@
     "paths": {
       "@/*": ["./*"],
       "@ui/*": ["./../../packages/ui/src/*"], // handle ui package paths
+      "common/*": ["./../../packages/common/*"],
       "contentlayer/generated": ["./.contentlayer/generated"],
       "icons/*": ["./../../packages/icons/*"]
     },

@@ -1,5 +1,5 @@
 # BA UI Library
-Last updated: 2026-01-11T10:19:08.125Z
+Last updated: 2026-01-11T11:43:16.299Z
 
 ## Overview
 Library of components for your project. The components integrate with BA and are shadcn compatible.

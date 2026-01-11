@@ -1,8 +1,4 @@
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/outline'
-import { createAppAuth } from '@octokit/auth-app'
-import { Octokit } from '@octokit/core'
-import { paginateGraphql } from '@octokit/plugin-paginate-graphql'
-import { Octokit as OctokitRest } from '@octokit/rest'
 import dayjs from 'dayjs'
 import { GitCommit } from 'lucide-react'
 import { GetServerSideProps } from 'next'
@@ -49,6 +45,10 @@ async function fetchDiscussions(
   categoryId: string,
   cursor: string | null = null
 ) {
+  const { Octokit } = await import('@octokit/core')
+  const { createAppAuth } = await import('@octokit/auth-app')
+  const { paginateGraphql } = await import('@octokit/plugin-paginate-graphql')
+  
   const ExtendedOctokit = Octokit.plugin(paginateGraphql)
   type ExtendedOctokit = InstanceType<typeof ExtendedOctokit>
 
@@ -141,6 +141,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res, query }) => 
   const next = recursiveDecodeURI(encodedNext)
   const restPage = query.restPage ? Number(query.restPage) : 1
 
+  const { Octokit: OctokitRest } = await import('@octokit/rest')
+  
   const octokitRest = new OctokitRest({
     auth: process.env.GITHUB_CHANGELOG_APP_REST_KEY,
   })

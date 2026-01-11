@@ -36,6 +36,8 @@ export const GOTRUE_ERRORS = {
 
 // External service dependencies removed
 
+export const STRIPE_PUBLIC_KEY = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY || ''
+
 export const USAGE_APPROACHING_THRESHOLD = 0.75
 
 export const DOCS_URL = process.env.NEXT_PUBLIC_DOCS_URL || 'https://www.assistance.bg/docs'

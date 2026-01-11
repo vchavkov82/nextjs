@@ -22,12 +22,12 @@ export interface StaticRequire {
 }
 export type StaticImport = StaticRequire | StaticImageData
 
-export type SourceType =
-  | string
-  | {
-    dark: string | StaticImport
-    light: string | StaticImport
-  }
+export type ThemedSource = {
+  dark: string | StaticImport
+  light: string | StaticImport
+}
+
+export type SourceType = string | ThemedSource
 
 export interface ImageProps extends Omit<NextImageProps, 'src'> {
   src: SourceType
@@ -63,7 +63,7 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
   // For themed images, render both and use CSS to show/hide based on theme
   // This prevents hydration mismatches since the HTML is identical on server and client
   if (typeof src !== 'string') {
-    const themedSrc = src as { dark: string | StaticImport; light: string | StaticImport }
+    const themedSrc = src as ThemedSource
     return (
       <Wrapper className={cn('next-image--dynamic-fill', containerClassName)}>
         <Component
@@ -73,17 +73,17 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
         >
           <NextImage
             alt={alt}
-            src={themedSrc.light}
+            src={themedSrc.light as any}
             sizes={sizes}
-            {...nextImageProps}
+            {...(nextImageProps as any)}
             className={cn(nextImageProps.className, 'dark:hidden')}
             style={nextImageProps.style}
           />
           <NextImage
             alt={alt}
-            src={themedSrc.dark}
+            src={themedSrc.dark as any}
             sizes={sizes}
-            {...nextImageProps}
+            {...(nextImageProps as any)}
             className={cn(nextImageProps.className, 'hidden dark:block')}
             style={nextImageProps.style}
           />
@@ -104,9 +104,9 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
       >
         <NextImage
           alt={alt}
-          src={src}
+          src={src as any}
           sizes={sizes}
-          {...nextImageProps}
+          {...(nextImageProps as any)}
         />
       </Component>
       {caption && (

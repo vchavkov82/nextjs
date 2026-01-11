@@ -67,7 +67,7 @@ const CommandInput = forwardRef<
         const event = {
           action: 'command_menu_search_submitted' as const,
           properties: {
-            value: value,
+            query: value,
             app: telemetryContext.app,
           },
           groups: {},
