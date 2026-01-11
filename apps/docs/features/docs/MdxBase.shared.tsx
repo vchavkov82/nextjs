@@ -37,7 +37,7 @@ import ButtonCard from '~/components/ButtonCard'
 // import { Extensions } from '~/components/Extensions/index.server'
 // import { JwtGenerator, JwtGeneratorSimple } from '~/components/JwtGenerator/index.server'
 import { MetricsStackCards } from '~/components/MetricsStackCards'
-// import { Price } from '~/components/Price.server'
+import { Price } from '~/components/Price.server'
 // import { RealtimeLimitsEstimator } from '~/components/RealtimeLimitsEstimator/index.server'
 import { RegionsList, SmartRegionsList } from '~/components/RegionsList'
 import { SharedData } from '~/components/SharedData'
@@ -109,7 +109,7 @@ const components = {
     </Heading>
   ),
   pre: CodeBlock,
-  // Price,
+  Price,
 }
 
 export { components }

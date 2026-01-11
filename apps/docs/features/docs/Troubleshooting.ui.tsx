@@ -76,10 +76,10 @@ export async function TroubleshootingPreview({ entry }: { entry: ITroubleshootin
             {(entry.data.errors || [])
               .map(formatError)
               .filter(Boolean)
-              .map((error, index) => (
-                <Fragment key={error}>
+              .map((error, index, array) => (
+                <Fragment key={`${entry.data.database_id}-error-${index}`}>
                   <code>{error}</code>
-                  {index < (entry.data.errors?.length || 0) - 1 ? ', ' : ''}
+                  {index < array.length - 1 ? ', ' : ''}
                 </Fragment>
               ))}
           </span>

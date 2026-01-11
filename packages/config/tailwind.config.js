@@ -369,6 +369,7 @@ const uiConfig = ui({
       }),
       screens: {
         xs: '480px',
+        '4xl': '1920px',
       },
       fontFamily: {
         sans: 'var(--font-custom, Circular, custom-font, Helvetica Neue, Helvetica, Arial, sans-serif)',

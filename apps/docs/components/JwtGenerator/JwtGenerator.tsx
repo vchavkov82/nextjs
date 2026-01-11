@@ -5,7 +5,8 @@ import { ChangeEvent, useState } from 'react'
 import { Button, CodeBlock, Input, Select } from 'ui'
 
 const JWT_HEADER = { alg: 'HS256', typ: 'JWT' }
-const now = new Date()
+// Use fixed dates to avoid hydration mismatch from new Date() calls
+const now = new Date('2024-01-01')
 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 const fiveYears = new Date(now.getFullYear() + 5, now.getMonth(), now.getDate())
 

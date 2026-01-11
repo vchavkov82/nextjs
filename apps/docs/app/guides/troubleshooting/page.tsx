@@ -20,10 +20,19 @@ import { getCustomContent } from '~/lib/custom-content/getCustomContent'
 const { metadataTitle } = getCustomContent(['metadata:title'])
 
 export default async function GlobalTroubleshootingPage() {
-  const troubleshootingEntries = await getAllTroubleshootingEntries()
-  const keywords = await getAllTroubleshootingKeywords()
-  const products = await getAllTroubleshootingProducts()
-  const errors = await getAllTroubleshootingErrors()
+  let troubleshootingEntries: Awaited<ReturnType<typeof getAllTroubleshootingEntries>> = []
+  let keywords: Awaited<ReturnType<typeof getAllTroubleshootingKeywords>> = []
+  let products: Awaited<ReturnType<typeof getAllTroubleshootingProducts>> = []
+  let errors: Awaited<ReturnType<typeof getAllTroubleshootingErrors>> = []
+
+  try {
+    troubleshootingEntries = await getAllTroubleshootingEntries()
+    keywords = await getAllTroubleshootingKeywords()
+    products = await getAllTroubleshootingProducts()
+    errors = await getAllTroubleshootingErrors()
+  } catch (error) {
+    console.error('Error loading troubleshooting data:', error)
+  }
 
   return (
     <SidebarSkeleton hideSideNav className="w-full max-w-screen-lg mx-auto">
@@ -43,16 +52,15 @@ export default async function GlobalTroubleshootingPage() {
         <TroubleshootingFilterEmptyState />
         <div id={TROUBLESHOOTING_CONTAINER_ID} className="@container/troubleshooting">
           <h2 className="sr-only">Matching troubleshooting entries</h2>
-          <ul className="grid @4xl/troubleshooting:grid-cols-[78%_15%_7%]">
-            {troubleshootingEntries.map((entry) => (
-              <li
-                key={entry.data.database_id}
-                className="grid grid-cols-subgrid @4xl/troubleshooting:col-span-3"
-              >
-                <TroubleshootingPreview entry={entry} />
-              </li>
-            ))}
-          </ul>
+          {troubleshootingEntries && troubleshootingEntries.length > 0 ? (
+            <div className="grid @4xl/troubleshooting:grid-cols-[78%_15%_7%] gap-y-4">
+              {troubleshootingEntries.map((entry) => (
+                <TroubleshootingPreview key={entry?.data?.database_id} entry={entry} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-foreground-light">No troubleshooting entries available.</p>
+          )}
         </div>
       </div>
     </SidebarSkeleton>
