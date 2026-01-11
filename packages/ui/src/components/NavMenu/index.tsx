@@ -1,9 +1,9 @@
 import { HTMLAttributes, PropsWithChildren, forwardRef } from 'react'
 import { cn } from '../../lib/utils/cn'
 
-interface NavMenuProps extends HTMLAttributes<HTMLDivElement> {}
+interface NavMenuProps extends HTMLAttributes<HTMLElement> {}
 
-export const NavMenu = forwardRef<HTMLDivElement, NavMenuProps>(
+export const NavMenu = forwardRef<HTMLElement, NavMenuProps>(
   (
     props: PropsWithChildren<{
       className?: string

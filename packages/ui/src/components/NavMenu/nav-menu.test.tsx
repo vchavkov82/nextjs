@@ -18,7 +18,7 @@ describe('NavMenu Component', () => {
   })
 
   it('forwards ref', () => {
-    const ref = React.createRef<HTMLDivElement>()
+    const ref = React.createRef<HTMLElement>()
 
     render(<NavMenu ref={ref}>test</NavMenu>)
     expect(ref.current).toBeInTheDocument()

@@ -54,17 +54,16 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
   // Use fixed zoomMargin to prevent hydration mismatch
   const zoomMargin = 80
 
-  // For themed images, render both and use CSS to show/hide based on theme
-  // This prevents hydration mismatches since the HTML is identical on server and client
-  const isThemedImage = typeof src !== 'string'
-
   // Use <figure> only when there's a caption (semantically correct and avoids DOM nesting issues in <p> tags)
   const Wrapper = caption ? 'figure' : 'div'
 
   // Filter out custom props that shouldn't be passed to NextImage
-  const { wide, ...nextImageProps } = props as ImageProps & { wide?: boolean }
+  const { wide, alt: _alt, ...nextImageProps } = props as ImageProps & { wide?: boolean }
 
-  if (isThemedImage) {
+  // For themed images, render both and use CSS to show/hide based on theme
+  // This prevents hydration mismatches since the HTML is identical on server and client
+  if (typeof src !== 'string') {
+    const themedSrc = src as { dark: string | StaticImport; light: string | StaticImport }
     return (
       <Wrapper className={cn('next-image--dynamic-fill', containerClassName)}>
         <Component
@@ -74,7 +73,7 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
         >
           <NextImage
             alt={alt}
-            src={src.light}
+            src={themedSrc.light}
             sizes={sizes}
             {...nextImageProps}
             className={cn(nextImageProps.className, 'dark:hidden')}
@@ -82,7 +81,7 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
           />
           <NextImage
             alt={alt}
-            src={src.dark}
+            src={themedSrc.dark}
             sizes={sizes}
             {...nextImageProps}
             className={cn(nextImageProps.className, 'hidden dark:block')}
