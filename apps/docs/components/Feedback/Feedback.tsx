@@ -160,7 +160,7 @@ function Feedback({ className }: { className?: string }) {
               'text-foreground-light',
               '[transition-property:opacity,transform,color] [transition-duration:150ms,250ms,250ms]',
               'motion-reduce:[transition-duration:150ms,1ms,300ms]',
-              'ease-[cubic-bezier(.76,0,.23,1)]',
+              '[transition-timing-function:cubic-bezier(.76,0,.23,1)]',
               !isNo && 'hover:text-warning hover:border-warning-500',
               isNo && `bg-warning text-warning-200 !border-warning disabled:opacity-100`,
               !showNo && 'opacity-0 invisible'
@@ -179,7 +179,7 @@ function Feedback({ className }: { className?: string }) {
               'text-foreground-light',
               '[transition-property:opacity,transform,color] [transition-duration:150ms,250ms,250ms]',
               'motion-reduce:[transition-duration:150ms,1ms,300ms]',
-              'ease-[cubic-bezier(.76,0,.23,1)]',
+              '[transition-timing-function:cubic-bezier(.76,0,.23,1)]',
               !isYes && 'hover:text-brand-600 hover:border-brand-500',
               isYes &&
                 'bg-brand text-brand-200 !border-brand disabled:opacity-100 -translate-x-[calc(100%+var(--container-inline-flex-gap,0.5rem))]',

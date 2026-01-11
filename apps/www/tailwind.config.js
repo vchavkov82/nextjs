@@ -1,6 +1,9 @@
 const config = require('config/tailwind.config')
 
 module.exports = config({
+  // Note: Build warnings about "Unmatched selector: %" for 0% and 50% are harmless.
+  // These occur when Tailwind processes CSS keyframes with percentage selectors.
+  // They don't affect functionality and can be safely ignored.
   content: [
     './_blog/*.mdx',
     './components/**/*.tsx',

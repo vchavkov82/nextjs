@@ -3,7 +3,7 @@ import authors from 'lib/authors.json'
 import LayoutComparison from '@/layouts/comparison'
 import mdxComponents from '@/lib/mdx/mdxComponents'
 import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
-import { getAllPostSlugs, getPostdata, getSortedPosts } from '@/lib/posts'
+import { getAllPostSlugs, getPostdata, getSortedPosts, getLightSortedPosts } from '@/lib/posts'
 
 // import all components used in blog articles here
 // for instance, if you use a button, you must add `Button` in the components object below.
@@ -26,27 +26,30 @@ export async function getStaticProps({ params }: any) {
 
   const mdxSource: any = await mdxSerialize(content)
 
+  // Use lightweight loading for related posts to reduce data size
   const relatedPosts = getSortedPosts({
     directory: '_alternatives',
     limit: 5,
     tags: mdxSource.scope.tags,
+    lightweight: true,
   })
 
-  const allPosts = getSortedPosts({ directory: '_alternatives' })
+  // Use light version for navigation to avoid loading full content for all posts
+  const allPostsLight = getLightSortedPosts('_alternatives')
 
-  const currentIndex = allPosts
+  const currentIndex = allPostsLight
     .map(function (e) {
       return e.slug
     })
     .indexOf(filePath)
 
-  const nextPost = allPosts[currentIndex + 1]
-  const prevPost = allPosts[currentIndex - 1]
+  const nextPost = allPostsLight[currentIndex + 1]
+  const prevPost = allPostsLight[currentIndex - 1]
 
   return {
     props: {
       prevPost: currentIndex === 0 ? null : prevPost ? prevPost : null,
-      nextPost: currentIndex === allPosts.length ? null : nextPost ? nextPost : null,
+      nextPost: currentIndex === allPostsLight.length ? null : nextPost ? nextPost : null,
       relatedPosts,
       blog: {
         slug: `${params.slug}`,

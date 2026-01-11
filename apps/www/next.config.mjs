@@ -90,6 +90,34 @@ const nextConfig = {
       debug: [],
     }
     
+    // Suppress Edge Runtime warnings for packages that use Node.js APIs
+    // These warnings occur because packages like @supabase/supabase-js and openai
+    // reference Node.js APIs, but they have fallbacks for Edge Runtime
+    if (config.ignoreWarnings) {
+      config.ignoreWarnings = [
+        ...config.ignoreWarnings,
+        {
+          module: /node_modules\/@supabase\/(realtime-js|supabase-js)/,
+          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
+        },
+        {
+          module: /node_modules\/openai/,
+          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
+        },
+      ]
+    } else {
+      config.ignoreWarnings = [
+        {
+          module: /node_modules\/@supabase\/(realtime-js|supabase-js)/,
+          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
+        },
+        {
+          module: /node_modules\/openai/,
+          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
+        },
+      ]
+    }
+    
     return config
   },
   // Add empty turbopack config to allow webpack config to work

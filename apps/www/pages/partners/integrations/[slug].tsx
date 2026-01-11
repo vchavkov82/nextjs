@@ -1,57 +1,28 @@
-import { type CodeHikeConfig, remarkCodeHike } from '@code-hike/mdx'
-import { CH } from '@code-hike/mdx/components'
 import { ChevronLeft, ExternalLink } from 'lucide-react'
 import { type GetStaticPaths, type GetStaticProps } from 'next'
-import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { serialize } from 'next-mdx-remote/serialize'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
-import { type Dispatch, type SetStateAction, useState } from 'react'
-import remarkGfm from 'remark-gfm'
+import { useState } from 'react'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { useBreakpoint } from 'common'
-import codeHikeTheme from 'config/code-hike.theme.json' with { type: 'json' }
 import { Button } from 'ui'
-import { Admonition } from 'ui-patterns/admonition'
 import { ExpandableVideo } from 'ui-patterns/ExpandableVideo'
 
 import ImageModal from '@/components/ImageModal'
 import DefaultLayout from '@/components/Layouts/Default'
 import SectionContainer from '@/components/Layouts/SectionContainer'
+import { PartnerOverview } from '@/components/Partners/PartnerOverview'
 import supabase from '@/lib/supabaseMisc'
 import type { Partner } from '@/types/partners'
 import Error404 from '../../404'
 
-/**
- * Returns custom components so that the markdown converts to a nice looking html.
- */
-function mdxComponents(callback: Dispatch<SetStateAction<string | null>>) {
-  const components = {
-    CH,
-    Admonition,
-    /**
-     * Returns a custom img element which has a bound onClick listener. When the image is clicked, it will open a modal showing that particular image.
-     */
-    img: (
-      props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
-    ) => {
-      return <img {...props} onClick={() => callback(props.src!)} />
-    },
-  }
+// Partner type without overview (fetched client-side via API)
+type PartnerWithoutOverview = Omit<Partner, 'overview'>
 
-  return components
-}
-
-function Partner({
-  partner,
-  overview,
-}: {
-  partner: Partner
-  overview: MDXRemoteSerializeResult<Record<string, unknown>, Record<string, unknown>>
-}) {
+function Partner({ partner }: { partner: PartnerWithoutOverview }) {
   const [focusedImage, setFocusedImage] = useState<string | null>(null)
   const isNarrow = useBreakpoint('lg')
 
@@ -187,9 +158,7 @@ function Partner({
                   Overview
                 </h2>
 
-                <div className="prose">
-                  <MDXRemote {...overview} components={mdxComponents(setFocusedImage)} />
-                </div>
+                <PartnerOverview slug={partner.slug} onImageClick={setFocusedImage} />
               </div>
 
               {!isNarrow && <PartnerDetails partner={partner} />}
@@ -319,7 +288,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   let { data: partner } = await supabase
     .from('partners')
-    .select('*')
+    .select(
+      'slug, title, description, logo, images, call_to_action_link, video, type, developer, category, website, docs'
+    )
     .eq('approved', true)
     .eq('slug', params!.slug as string)
     .single()
@@ -330,25 +301,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
-  const codeHikeOptions: CodeHikeConfig = {
-    theme: codeHikeTheme,
-    lineNumbers: true,
-    showCopyButton: true,
-    skipLanguages: [],
-    autoImport: false,
-  }
-
-  // Parse markdown
-  const overview = await serialize(partner.overview, {
-    parseFrontmatter: false, // Avoid getData error in next-mdx-remote v5
-    mdxOptions: {
-      useDynamicImport: true,
-      remarkPlugins: [remarkGfm, [remarkCodeHike, codeHikeOptions]],
-    },
-  })
-
+  // Overview is fetched and serialized client-side via API route to reduce page data size
   return {
-    props: { partner, overview },
+    props: { partner },
     revalidate: 1800, // 30 minutes
   }
 }

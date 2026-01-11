@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 
+export const dynamic = 'force-dynamic'
+
 export interface LumaGeoAddressJson {
   city: string
   type: string
@@ -67,7 +69,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Extract query parameters from the request
-    const { searchParams } = new URL(request.url)
+    const { searchParams } = request.nextUrl
     const after = searchParams.get('after')
     const before = searchParams.get('before')
 

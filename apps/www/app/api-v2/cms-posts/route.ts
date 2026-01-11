@@ -5,6 +5,7 @@ import { generateReadingTime } from '@/lib/helpers'
 
 // Lightweight runtime for better performance
 export const runtime = 'edge'
+export const dynamic = 'force-dynamic'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -135,7 +136,7 @@ export async function OPTIONS() {
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
+    const { searchParams } = request.nextUrl
     const mode = searchParams.get('mode') || 'preview' // 'preview' or 'full'
     const limit = searchParams.get('limit') || '100'
     const slug = searchParams.get('slug') // For fetching specific post

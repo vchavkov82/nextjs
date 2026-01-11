@@ -6,6 +6,9 @@ import OpenAI from 'openai'
 import { isFeatureEnabled } from 'common/enabled-features'
 
 export const runtime = 'edge'
+// Note: Using Edge Runtime with @supabase/supabase-js and openai may generate build
+// warnings about Node.js APIs (process.versions, process.platform, etc.). These warnings
+// are expected and can be safely ignored - both packages have fallbacks for Edge Runtime.
 /* To avoid OpenAI errors, restrict to the Vercel Edge Function regions that
   overlap with the OpenAI API regions.
 

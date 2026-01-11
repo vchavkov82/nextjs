@@ -2,7 +2,6 @@
  * @file events.ts
  * @description Unified api to fetch events from Luma and Filesystem.
  */
-import supabase from 'lib/supabase'
 import { getSortedPosts } from 'lib/posts'
 import authors from 'lib/authors.json'
 import { EventHost, SUPABASE_HOST, SupabaseEvent } from './eventsTypes'
@@ -89,16 +88,6 @@ interface LumaEvent {
     last_name: string | null
     avatar_url: string
   }>
-}
-
-interface MeetupRecord {
-  id: string
-  city: string
-  country?: string
-  link: string
-  start_at: string
-  timezone: string
-  launch_week: string
 }
 
 interface EventRecord {
@@ -205,36 +194,7 @@ export const getStaticEvents = async (): Promise<{
   onDemandEvents: SupabaseEvent[]
   categories: { [key: string]: number }
 }> => {
-  const { data: meetups, error } = await supabase
-    .from('meetups')
-    .select('id, city, country, link, start_at, timezone, launch_week')
-    .eq('is_published', true)
-
-  if (error) console.log('meetups error: ', error)
-
-  const meetupEvents: SupabaseEvent[] =
-    meetups?.map((meetup: any) => ({
-      slug: '',
-      type: 'event',
-      title: `Launch Week ${meetup.launch_week.slice(2)} Meetup: ${meetup.city}, ${meetup.country}`,
-      date: meetup.start_at,
-      description: '',
-      thumb: '',
-      cover_url: '',
-      path: '',
-      url: meetup.link || '',
-      tags: ['meetup', 'launch-week'],
-      categories: ['meetup'],
-      timezone: meetup.timezone || 'America/Los_Angeles',
-      location: `${meetup.city}, ${meetup.country}`,
-      hosts: [SUPABASE_HOST],
-      source: 'supabase',
-      disable_page_build: true,
-      link: {
-        href: meetup.link || '#',
-        target: '_blank',
-      },
-    })) ?? []
+  const meetupEvents: SupabaseEvent[] = []
 
   const staticEvents = getSortedPosts({
     directory: '_events',

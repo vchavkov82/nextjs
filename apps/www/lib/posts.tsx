@@ -35,6 +35,7 @@ type GetSortedPostsParams = {
   runner?: unknown
   currentPostSlug?: string
   categories?: any
+  lightweight?: boolean // New option to return minimal data
 }
 
 export const getSortedPosts = ({
@@ -43,6 +44,7 @@ export const getSortedPosts = ({
   tags,
   categories,
   currentPostSlug,
+  lightweight = false,
 }: GetSortedPostsParams): Post[] => {
   //Finding directory named "blog" from the current working directory of Node.
   let postDirectory = path.join(process.cwd(), directory)
@@ -95,13 +97,27 @@ export const getSortedPosts = ({
       const url = `/${directory.replace('_', '')}/${slug}`
       const contentPath = `/${directory.replace('_', '')}/${slug}`
 
-      const frontmatter = {
+        const frontmatter = {
         ...data,
         formattedDate,
         readingTime,
         url: url,
         path: contentPath,
       }
+
+        // For lightweight mode, only return essential fields to reduce data size
+        if (lightweight) {
+          return {
+            slug,
+            title: data.title,
+            description: data.description,
+            date: data.date,
+            formattedDate,
+            url: url,
+            path: contentPath,
+            tags: data.tags,
+          } as Post
+        }
 
         return {
           slug,
@@ -251,6 +267,79 @@ export const getAllTags = (directory: Directories) => {
   })
 
   return tags
+}
+
+// Lightweight version for navigation - only returns slug, title, and date for prev/next
+export type LightPost = {
+  slug: string
+  title?: string
+  date?: string
+}
+
+export const getLightSortedPosts = (directory: Directories): LightPost[] => {
+  let postDirectory = path.join(process.cwd(), directory)
+
+  // If directory doesn't exist at root, try apps/www prefix (for monorepo)
+  if (!fs.existsSync(postDirectory)) {
+    const altPath = path.join(process.cwd(), 'apps/www', directory)
+    if (fs.existsSync(altPath)) {
+      postDirectory = altPath
+    } else {
+      console.error(`[getLightSortedPosts] Directory not found: ${postDirectory} or ${altPath}`)
+      return []
+    }
+  }
+
+  //Reads all the files in the post directory
+  let fileNames: string[]
+  try {
+    fileNames = fs.readdirSync(postDirectory)
+  } catch (error) {
+    console.error(`[getLightSortedPosts] Error reading directory ${postDirectory}:`, error)
+    return []
+  }
+
+  const allPosts = fileNames
+    .filter((filename) => filename.endsWith('.mdx')) // Only process .mdx files
+    .map((filename) => {
+      try {
+        const slug =
+          directory === '_blog' || directory === '_events'
+            ? filename.replace('.mdx', '').substring(FILENAME_SUBSTRING)
+            : filename.replace('.mdx', '')
+
+        const fullPath = path.join(postDirectory, filename)
+
+        //Extracts contents of the MDX file
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data } = matter(fileContents) as unknown as {
+          data: { [key: string]: any; title?: string; date?: string }
+        }
+
+        return {
+          slug,
+          title: data.title,
+          date: data.date,
+        }
+      } catch (error) {
+        console.error(`[getLightSortedPosts] Error processing file ${filename}:`, error)
+        return null
+      }
+    })
+    .filter((post): post is LightPost => post !== null) // Remove any failed posts
+
+  let sortedPosts = [...allPosts]
+
+  sortedPosts = sortedPosts.sort((a: any, b: any) => {
+    const dateA = a.date ? new Date(a.date).getTime() : 0
+    const dateB = b.date ? new Date(b.date).getTime() : 0
+    // Handle invalid dates
+    const validDateA = isNaN(dateA) ? 0 : dateA
+    const validDateB = isNaN(dateB) ? 0 : dateB
+    return validDateB - validDateA
+  })
+
+  return sortedPosts
 }
 
 const getDatesFromFileName = (filename: string) => {

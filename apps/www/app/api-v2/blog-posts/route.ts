@@ -3,6 +3,7 @@ import { getSortedPosts } from 'lib/posts'
 import { getAllCMSPosts } from 'lib/get-cms-posts'
 
 export const revalidate = 30
+export const dynamic = 'force-dynamic'
 
 // Cache for combined posts to avoid re-fetching on every request
 let cachedPosts: any[] | null = null
@@ -39,7 +40,7 @@ async function getCombinedPosts() {
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
+    const { searchParams } = request.nextUrl
     const offset = parseInt(searchParams.get('offset') || '0', 10)
     const limit = parseInt(searchParams.get('limit') || '25', 10)
     const category = searchParams.get('category')

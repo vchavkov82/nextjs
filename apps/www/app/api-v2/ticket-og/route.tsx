@@ -3,6 +3,9 @@ import { ImageResponse } from '@vercel/og'
 import useTicketBg from 'components/LaunchWeek/15/hooks/use-ticket-bg'
 
 export const runtime = 'edge' // 'nodejs' is the default
+// Note: Using Edge Runtime with @supabase/supabase-js may generate build warnings about
+// Node.js APIs (process.versions, etc.). These warnings are expected and can be safely
+// ignored - the Supabase client has fallbacks for Edge Runtime environments.
 export const dynamic = 'force-dynamic' // defaults to auto
 export const fetchCache = 'force-no-store'
 export const revalidate = 0
