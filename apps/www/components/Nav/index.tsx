@@ -17,27 +17,33 @@ import useDropdownMenu from './useDropdownMenu'
 import { getMenu } from 'data/nav'
 import { usePathname } from 'next/navigation'
 
-const MenuItem = dynamic(() => import('./MenuItem'))
-const MobileMenu = dynamic(() => import('./MobileMenu'))
-const NavigationMenu = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenu)
+const MenuItem = dynamic(() => import('./MenuItem'), { ssr: true })
+const MobileMenu = dynamic(() => import('./MobileMenu'), { ssr: true })
+const NavigationMenu = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenu),
+  { ssr: true }
 )
-const NavigationMenuContent = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuContent)
+const NavigationMenuContent = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuContent),
+  { ssr: true }
 )
-const NavigationMenuItem = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuItem)
+const NavigationMenuItem = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuItem),
+  { ssr: true }
 )
-const NavigationMenuLink = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuLink)
+const NavigationMenuLink = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuLink),
+  { ssr: true }
 )
-const NavigationMenuList = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuList)
+const NavigationMenuList = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuList),
+  { ssr: true }
 )
-const NavigationMenuTrigger = dynamic(() =>
-  import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuTrigger)
+const NavigationMenuTrigger = dynamic(
+  () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuTrigger),
+  { ssr: true }
 )
-const ScrollProgress = dynamic(() => import('components/ScrollProgress'))
+const ScrollProgress = dynamic(() => import('components/ScrollProgress'), { ssr: true })
 
 interface Props {
   hideNavbar: boolean
@@ -86,11 +92,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
     if (isMounted && width >= 1024) setOpen(false)
   }, [width, isMounted])
 
-  if (hideNavbar) {
-    return null
-  }
-
-  return (
+  return hideNavbar ? null : (
     <>
       <div
         className={cn('sticky top-0 z-40 transform', disableStickyNav && 'relative')}

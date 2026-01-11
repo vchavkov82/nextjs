@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import DefaultLayout from 'components/Layouts/Default'
 import BlogGridItem from 'components/Blog/BlogGridItem'
 import BlogListItem from 'components/Blog/BlogListItem'
@@ -66,13 +66,24 @@ interface BlogClientProps {
 
 export default function BlogClient({ initialBlogs, totalPosts }: BlogClientProps) {
   const { BLOG_VIEW } = LOCAL_STORAGE_KEYS
-  const localView = isBrowser ? (localStorage?.getItem(BLOG_VIEW) as BlogView) : undefined
-  const [view, setView] = useState<BlogView>(localView ?? 'list')
+  // Initialize with default 'list' view to prevent hydration mismatch
+  // We'll update from localStorage after mount
+  const [view, setView] = useState<BlogView>('list')
   const [isFiltering, setIsFiltering] = useState(false)
   const [filterParams, setFilterParams] = useState<{ category?: string; search?: string }>({})
   const [filteredPosts, setFilteredPosts] = useState<any[] | null>(null)
   const [filteredTotal, setFilteredTotal] = useState<number | null>(null)
   const isList = view === 'list'
+
+  // Load view preference from localStorage after mount to avoid hydration mismatch
+  useEffect(() => {
+    if (isBrowser) {
+      const localView = localStorage?.getItem(BLOG_VIEW) as BlogView
+      if (localView) {
+        setView(localView)
+      }
+    }
+  }, [BLOG_VIEW])
 
   // Determine which posts and total to use based on filter state
   const currentPosts = filteredPosts ?? initialBlogs
