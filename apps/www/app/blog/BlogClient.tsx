@@ -14,7 +14,7 @@ import type PostTypes from 'types/post'
 
 export type BlogView = 'list' | 'grid'
 
-const POSTS_PER_PAGE = 25
+const POSTS_PER_PAGE = 6
 const SKELETON_COUNT = 6
 
 function BlogListItemSkeleton() {

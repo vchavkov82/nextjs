@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 }
 
-const INITIAL_POSTS_LIMIT = 25
+const INITIAL_POSTS_LIMIT = 6
 
 export default async function BlogPage() {
   try {
@@ -24,7 +24,7 @@ export default async function BlogPage() {
     const staticPostsData = getSortedPosts({ directory: '_blog', runner: '** BLOG PAGE **' })
 
     // Get CMS posts server-side with revalidation
-    const cmsPostsData = await getAllCMSPosts({ limit: 100 })
+    const cmsPostsData = await getAllCMSPosts({ limit: 0 })
 
     // Combine static and CMS posts and sort by date
     const allPosts = [...staticPostsData, ...cmsPostsData].sort((a: any, b: any) => {
