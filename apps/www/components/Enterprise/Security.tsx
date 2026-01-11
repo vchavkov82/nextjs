@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { TextLink } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 import type { LucideIcon } from 'lucide-react'
 

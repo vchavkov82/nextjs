@@ -1,5 +1,5 @@
 import { Android } from '../Visuals'
-import { SurveyStatCard } from '~/components/SurveyResults/SurveyStatCard'
+import { SurveyStatCard } from '@/components/SurveyResults/SurveyStatCard'
 import { AnimatedGridBackground } from '../AnimatedGridBackground'
 
 const toolRankings = [

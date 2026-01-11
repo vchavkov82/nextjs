@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { mainDays as days } from './data'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import DaySection from './components/DaySection'
 import { TextLink } from 'ui'
 

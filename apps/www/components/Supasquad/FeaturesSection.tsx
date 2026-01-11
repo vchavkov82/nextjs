@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import dynamic from 'next/dynamic'
 import { cn } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import type {
   Feature,
   FeaturesSection as FeaturesSectionType,
-} from '~/data/open-source/contributing/supasquad.utils'
+} from '@/data/open-source/contributing/supasquad.utils'
 
 const FeatureIcon = dynamic(() => import('~/components/Supasquad/FeatureIcon'), { ssr: false })
 

@@ -3,10 +3,10 @@ import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import { cn } from 'ui'
 
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import EnterpriseFormQuotes from '~/components/EnterpriseFormQuotes'
-import RequestADemoForm from '~/components/Forms/RequestADemoForm'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import EnterpriseFormQuotes from '@/components/EnterpriseFormQuotes'
+import RequestADemoForm from '@/components/Forms/RequestADemoForm'
 
 const data = {
   meta_title: 'Contact Sales & Request a Demo | Supabase',

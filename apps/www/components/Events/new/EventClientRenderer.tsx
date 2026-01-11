@@ -1,10 +1,10 @@
 import { cn } from 'ui'
-import DefaultLayout from '~/components/Layouts/Default'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import { getStaticEvents } from '~/lib/events'
-import { SupabaseEvent } from '~/lib/eventsTypes'
-import { EventBanner } from '~/components/Events/new/EventBanner'
-import { EventsProvider } from '~/app/events/context'
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import { getStaticEvents } from '@/lib/events'
+import { SupabaseEvent } from '@/lib/eventsTypes'
+import { EventBanner } from '@/components/Events/new/EventBanner'
+import { EventsProvider } from '@/app/events/context'
 import { EventGallery } from './EventGallery'
 
 export function EventClientRenderer({

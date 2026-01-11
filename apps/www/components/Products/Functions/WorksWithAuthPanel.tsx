@@ -1,5 +1,5 @@
 import React from 'react'
-import CodeWindow from '~/components/CodeWindow'
+import CodeWindow from '@/components/CodeWindow'
 
 const code = `import { createClient } from 'jsr:@supabase/supabase-js@2'
 

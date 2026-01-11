@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 import Link from 'next/link'
 
-import Panel from '~/components/Panel'
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import Panel from '@/components/Panel'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
 const RepoCard = ({ repo, activeTab, index }: { repo: any; activeTab: number; index: number }) => {
   const sendTelemetryEvent = useSendTelemetryEvent()

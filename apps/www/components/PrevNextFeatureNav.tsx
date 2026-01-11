@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from 'ui'
 
-import { type FeatureType, features } from '~/data/features'
+import { type FeatureType, features } from '@/data/features'
 
 interface Props {
   className?: string

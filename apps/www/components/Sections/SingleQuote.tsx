@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { FC } from 'react'
 import { cn } from 'ui'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 interface Props {
   id: string

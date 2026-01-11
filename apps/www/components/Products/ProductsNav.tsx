@@ -3,7 +3,7 @@ import { cn } from 'ui'
 import Link from 'next/link'
 import { PRODUCT_NAMES, products } from 'shared-data/products'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 interface Props {
   activePage: PRODUCT_NAMES

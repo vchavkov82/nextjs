@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Link from 'next/link'
 
 import { TextLink } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import Panel from '~/components/Panel'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
 
 import type { LucideIcon } from 'lucide-react'
 import Image from 'next/image'

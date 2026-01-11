@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import { Button, cn } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 interface Feature {
   icon: string

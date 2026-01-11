@@ -1,5 +1,5 @@
 import React from 'react'
-import CodeWindow from '~/components/CodeWindow'
+import CodeWindow from '@/components/CodeWindow'
 
 const ciCode = `jobs:
  deploy:

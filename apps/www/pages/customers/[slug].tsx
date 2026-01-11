@@ -6,12 +6,12 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from 'ui'
-import CTABanner from '~/components/CTABanner'
-import DefaultLayout from '~/components/Layouts/Default'
-import { SITE_ORIGIN } from '~/lib/constants'
-import mdxComponents from '~/lib/mdx/mdxComponents'
-import { mdxSerialize } from '~/lib/mdx/mdxSerialize'
-import { getAllPostSlugs, getPostdata, getSortedPosts } from '~/lib/posts'
+import CTABanner from '@/components/CTABanner'
+import DefaultLayout from '@/components/Layouts/Default'
+import { SITE_ORIGIN } from '@/lib/constants'
+import mdxComponents from '@/lib/mdx/mdxComponents'
+import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
+import { getAllPostSlugs, getPostdata, getSortedPosts } from '@/lib/posts'
 
 // table of contents extractor
 const toc = require('markdown-toc')

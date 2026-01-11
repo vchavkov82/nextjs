@@ -5,7 +5,7 @@ import { WeekDayProps, mainDays as days } from './data'
 import { cn } from 'ui'
 import { isBrowser } from 'common'
 
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 import Player from '../Album/Player'
 
 const LWXStickyNav: FC = () => {

@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
 import { cn, TextLink } from 'ui'
-import SectionContainer from '~/components/Layouts/SectionContainer'
-import CodeWindow from '~/components/CodeWindow'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+import CodeWindow from '@/components/CodeWindow'
 
 const codeSnippet = `
 select pgmq.create('my_special_queue');

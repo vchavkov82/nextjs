@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion'
-import { INITIAL_BOTTOM, getAnimation } from '~/lib/animations'
+import { INITIAL_BOTTOM, getAnimation } from '@/lib/animations'
 
-import Panel from '~/components/Panel'
-import SectionContainer from '~/components/Layouts/SectionContainer'
+import Panel from '@/components/Panel'
+import SectionContainer from '@/components/Layouts/SectionContainer'
 
 interface Highlight {
   image?: React.ReactNode

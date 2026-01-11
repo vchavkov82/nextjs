@@ -3,8 +3,8 @@ import {
   convertRichTextToMarkdownWithBlocks,
   convertRichTextToMarkdown,
 } from './convertRichTextToMarkdown'
-import { generateTocFromMarkdown } from '~/lib/toc'
-import { mdxSerialize } from '~/lib/mdx/mdxSerialize'
+import { generateTocFromMarkdown } from '@/lib/toc'
+import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
 // Define minimal block structure for compatibility
 type CMSBlock = {
   blockType: string

@@ -1,4 +1,4 @@
-import { CardProps } from '~/components/NewFeatureCard'
+import { CardProps } from '@/components/NewFeatureCard'
 
 const cards: { [name: string]: CardProps } = {
   branching: {

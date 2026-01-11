@@ -8,15 +8,15 @@ import { motion } from 'framer-motion'
 import { Button, cn } from 'ui'
 
 import { useFlag } from 'common'
-import DefaultLayout from '~/components/Layouts/Default'
-import { SurveyChapter } from '~/components/SurveyResults/SurveyChapter'
-import { SurveyChapterSection } from '~/components/SurveyResults/SurveyChapterSection'
-import { SurveySectionBreak } from '~/components/SurveyResults/SurveySectionBreak'
-import { StateOfStartupsHeader } from '~/components/SurveyResults/StateOfStartupsHeader'
+import DefaultLayout from '@/components/Layouts/Default'
+import { SurveyChapter } from '@/components/SurveyResults/SurveyChapter'
+import { SurveyChapterSection } from '@/components/SurveyResults/SurveyChapterSection'
+import { SurveySectionBreak } from '@/components/SurveyResults/SurveySectionBreak'
+import { StateOfStartupsHeader } from '@/components/SurveyResults/StateOfStartupsHeader'
 
-import { useSendTelemetryEvent } from '~/lib/telemetry'
+import { useSendTelemetryEvent } from '@/lib/telemetry'
 
-import pageData from '~/data/surveys/state-of-startups-2025'
+import pageData from '@/data/surveys/state-of-startups-2025'
 
 function StateOfStartupsPage() {
   const router = useRouter()

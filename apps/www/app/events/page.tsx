@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { getStaticEvents } from '~/lib/events'
-import { EventClientRenderer } from '~/components/Events/new/EventClientRenderer'
+import { getStaticEvents } from '@/lib/events'
+import { EventClientRenderer } from '@/components/Events/new/EventClientRenderer'
 
 export const metadata: Metadata = {
   title: 'View all Supabase events and meetups.',

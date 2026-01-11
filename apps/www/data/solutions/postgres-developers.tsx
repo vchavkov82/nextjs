@@ -20,7 +20,7 @@ import { CubeIcon } from '@heroicons/react/outline'
 import { cn, Image, Input_Shadcn_, Switch } from 'ui'
 
 import MainProducts from '../MainProducts'
-import { TwoColumnsSectionProps } from '~/components/Solutions/TwoColumnsSection'
+import { TwoColumnsSectionProps } from '@/components/Solutions/TwoColumnsSection'
 import { frameworks } from 'components/Hero/HeroFrameworks'
 import Logos from 'components/logos'
 
