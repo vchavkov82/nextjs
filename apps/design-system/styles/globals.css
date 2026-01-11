@@ -27,13 +27,14 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     /* font-feature-settings: "rlig" 1, "calt" 1; */
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
@@ -43,28 +44,67 @@
 }
 
 @layer utilities {
+  .text-foreground-muted {
+    color: hsl(var(--color-foreground-muted));
+  }
+  .bg-surface-200 {
+    background-color: hsl(var(--color-surface-200));
+  }
+  .bg-surface-100 {
+    background-color: hsl(var(--color-surface-100));
+  }
+  .border-foreground-muted {
+    border-color: hsl(var(--color-foreground-muted));
+  }
+  
   .step {
     counter-increment: step;
   }
 
   .step:before {
-    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
-    @apply ml-[-50px] mt-[-4px];
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: hsl(var(--muted));
+    border-radius: 9999px;
+    font-family: ui-monospace, SF Mono, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-indent: -9999px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: hsl(var(--background));
+    margin-left: -12.5rem;
+    margin-top: -1rem;
     content: counter(step);
   }
 
   .chunk-container {
-    @apply shadow-none;
+    box-shadow: none;
   }
 
   .chunk-container::after {
     content: '';
-    @apply absolute -inset-4 shadow-xl rounded-xl border;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    left: -1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border-radius: 0.75rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(var(--border));
   }
 }
 
 @media (max-width: 640px) {
   .container {
-    @apply px-4;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

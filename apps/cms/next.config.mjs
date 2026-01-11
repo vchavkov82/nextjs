@@ -12,6 +12,8 @@ const __dirname = dirname(__filename)
 const requireModule = createRequire(import.meta.url)
 const emptyModulePath = resolve(__dirname, 'webpack-loaders/empty-module.js')
 const payloadStubPath = resolve(__dirname, 'webpack-loaders/payload-stub.js')
+const payloadWrapperPath = resolve(__dirname, 'webpack-loaders/payload-wrapper.js')
+const payloadSharedWrapperPath = resolve(__dirname, 'webpack-loaders/payload-shared-wrapper.js')
 
 // Resolve problematic package paths at module load time (ESM compatible)
 let hoistNonReactStaticsPath
@@ -77,8 +79,12 @@ const nextConfig = {
   transpilePackages: ['payload', '@payloadcms/ui', '@payloadcms/next', '@payloadcms/richtext-lexical'],
   // Configure Sharp as an external package for server-side rendering
   // Also externalize thread-stream to avoid Turbopack trying to trace worker_threads
+  // Note: 'payload' removed from serverExternalPackages because it's in transpilePackages
   serverExternalPackages: ['sharp', 'pino', 'thread-stream', '@esbuild/linux-x64', 'esbuild'],
   webpack: (config) => {
+    // Allow more flexible exports resolution for payload packages
+    config.resolve.exportsFields = ['exports', 'module', 'main'];
+
     // Handle worker_threads (Node.js built-in module)
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -233,6 +239,10 @@ const nextConfig = {
               'ieee754',
               'undici',
               'wrappy',
+              // Add payload and drizzle packages to allow more flexible imports
+              'payload',
+              'drizzle-orm',
+              '@payloadcms/drizzle',
             ]
             
             // Check if this request is for a problematic package
@@ -312,18 +322,19 @@ const nextConfig = {
       // Fallback: try to use the dist path directly
       // This might not work if webpack still validates exports
     }
+
     
     // Custom plugin to fix payload exports resolution
     // Webpack's static analysis sometimes fails to resolve exports that exist at runtime
     config.plugins.push({
       apply: (compiler) => {
         compiler.hooks.normalModuleFactory.tap('PayloadExportsFixPlugin', (nmf) => {
-          nmf.hooks.afterResolve.tap('PayloadExportsFixPlugin', (data) => {
-            // Skip exports validation for payload package since we know the exports exist
-            if (data.request === 'payload' || data.request === 'payload/shared') {
+          nmf.hooks.beforeResolve.tap('PayloadExportsFixPlugin', (data) => {
+            // Allow direct imports from payload/dist/exports/shared.js for our wrapper
+            if (data.request && data.request.includes('payload/dist/exports/shared.js')) {
               if (data.resolveOptions) {
-                // Ensure payload uses exports field but allow fallback to module/main
-                data.resolveOptions.exportsFields = ['exports', 'module', 'main']
+                // Skip exports field validation for direct file imports
+                data.resolveOptions.exportsFields = ['module', 'main']
               }
             }
           })
