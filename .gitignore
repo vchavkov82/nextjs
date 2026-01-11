@@ -119,10 +119,12 @@ build
 .vscode
 .idea
 .vercel
+.cursor/
 
 # AI assistant local files
 .claude/
 CLAUDE.md
+llms.txt
 
 #include template .env file for docker-compose
 !docker/.env
