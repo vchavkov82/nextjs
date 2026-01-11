@@ -84,6 +84,7 @@ function AuthPage() {
               width={1372}
               height={1074}
               style={{ width: '100%', height: 'auto' }}
+              loading="eager"
             />,
           ]}
           documentation_url={'/docs/guides/auth'}
@@ -117,6 +118,7 @@ function AuthPage() {
                           key={auth.name}
                           height={21}
                           width={21}
+                          style={{ height: 'auto' }}
                         />
                       </div>
                     )
