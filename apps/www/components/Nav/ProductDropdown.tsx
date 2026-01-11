@@ -145,6 +145,7 @@ export const ProductDropdown = () => {
                         src={`/${customer.imgUrl}`}
                         alt={customer.title}
                         fill
+                        sizes="100%"
                         className="!p-3 object-contain brightness-70 contrast-[.35] filter"
                       />
                     </div>

@@ -5,45 +5,48 @@ import {
   type CSSProperties,
   type MouseEventHandler,
   forwardRef,
+  memo,
+  useCallback,
   useReducer,
   useRef,
   useState,
 } from 'react'
 
-import { type Database, useConstant, useIsLoggedIn } from 'common'
+import { useIsLoggedIn } from 'common'
 import { Button, cn } from 'ui'
 
-import { IS_PLATFORM } from '~/lib/constants'
 import { useSendFeedbackMutation } from '~/lib/fetch/feedback'
 import { getLinearTeam, getSanitizedTabParams } from './Feedback.utils'
 import { type FeedbackFields, FeedbackModal } from './FeedbackModal'
 
-const FeedbackButton = forwardRef<
-  HTMLButtonElement,
-  { isYes: boolean; onClick: MouseEventHandler; visible: boolean }
->(({ isYes, onClick, visible }, ref) => {
-  const isLoggedIn = useIsLoggedIn()
-  if (!isLoggedIn) return null
+const FeedbackButton = memo(
+  forwardRef<
+    HTMLButtonElement,
+    { isYes: boolean; onClick: MouseEventHandler; visible: boolean }
+  >(({ isYes, onClick, visible }, ref) => {
+    const isLoggedIn = useIsLoggedIn()
+    if (!isLoggedIn) return null
 
-  return (
-    <button
-      ref={ref}
-      className={cn(
-        'mt-0',
-        'flex items-center gap-1',
-        'text-xs text-foreground-lighter',
-        'hover:text-foreground text-left',
-        !visible && 'opacity-0 invisible',
-        '[transition-property:opacity,color]',
-        '[transition-delay:700ms,0ms]'
-      )}
-      onClick={onClick}
-    >
-      {isYes ? <>What went well?</> : <>How can we improve?</>}
-      <MessageSquareQuote size={14} strokeWidth={1.5} />
-    </button>
-  )
-})
+    return (
+      <button
+        ref={ref}
+        className={cn(
+          'mt-0',
+          'flex items-center gap-1',
+          'text-xs text-foreground-lighter',
+          'hover:text-foreground text-left',
+          !visible && 'opacity-0 invisible',
+          '[transition-property:opacity,color]',
+          '[transition-delay:700ms,0ms]'
+        )}
+        onClick={onClick}
+      >
+        {isYes ? <>What went well?</> : <>How can we improve?</>}
+        <MessageSquareQuote size={14} strokeWidth={1.5} />
+      </button>
+    )
+  })
+)
 FeedbackButton.displayName = 'FeedbackButton'
 
 type Response = 'yes' | 'no'
@@ -76,23 +79,6 @@ function Feedback({ className }: { className?: string }) {
 
   const pathname = usePathname() ?? ''
   const { mutate: sendFeedbackComment } = useSendFeedbackMutation()
-  const supabase = useConstant(() =>
-    IS_PLATFORM
-      ? (() => {
-          try {
-            // Dynamic import to avoid build-time errors when package is not installed
-            const { createClient } = require('@supabase/supabase-js')
-            return createClient<Database>(
-              process.env.NEXT_PUBLIC_SUPABASE_URL!,
-              process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-            )
-          } catch {
-            console.warn('Supabase client not available')
-            return undefined
-          }
-        })()
-      : undefined
-  )
 
   const unanswered = state.type === 'unanswered'
   const isYes = 'response' in state && state.response === 'yes'
@@ -100,48 +86,42 @@ function Feedback({ className }: { className?: string }) {
   const showYes = unanswered || isYes
   const showNo = unanswered || isNo
 
-  async function sendFeedbackVote(response: Response) {
-    if (!supabase) return
-
-    const { error } = await supabase.from('feedback').insert({
-      vote: response,
-      page: pathname,
-      metadata: {
-        query: getSanitizedTabParams(),
-      },
-    })
-    if (error) console.error(error)
-  }
-
-  function handleVote(response: Response) {
-    sendFeedbackVote(response)
+  const handleVote = useCallback((response: Response) => {
     dispatch({ event: 'VOTED', response })
     // Focus so screen reader users are aware of the new element
     setTimeout(() => {
       feedbackButtonRef.current?.focus()
       // Wait for element to show up first
     }, 700)
-  }
+  }, [])
 
-  function refocusButton() {
+  const refocusButton = useCallback(() => {
     setTimeout(() => {
       feedbackButtonRef.current?.focus()
       // Wait for modal to disappear and button to become focusable again
     }, 100)
-  }
+  }, [])
 
-  async function handleSubmit({ page, comment, title }: FeedbackFields) {
-    sendFeedbackComment({
-      message: comment,
-      pathname: page,
-      title,
-      // @ts-expect-error -- can't click this button without having a state.response
-      isHelpful: state.response === 'yes',
-      team: getLinearTeam(pathname),
-    })
+  const handleSubmit = useCallback(
+    async ({ page, comment, title }: FeedbackFields) => {
+      sendFeedbackComment({
+        message: comment,
+        pathname: page,
+        title,
+        // @ts-expect-error -- can't click this button without having a state.response
+        isHelpful: state.response === 'yes',
+        team: getLinearTeam(pathname),
+      })
+      setModalOpen(false)
+      refocusButton()
+    },
+    [pathname, sendFeedbackComment, state.response, refocusButton]
+  )
+
+  const handleModalCancel = useCallback(() => {
     setModalOpen(false)
     refocusButton()
-  }
+  }, [refocusButton])
 
   return (
     <section className={cn('@container', className)} aria-labelledby="feedback-title">
@@ -226,10 +206,7 @@ function Feedback({ className }: { className?: string }) {
       <FeedbackModal
         visible={modalOpen}
         page={pathname}
-        onCancel={() => {
-          setModalOpen(false)
-          refocusButton()
-        }}
+        onCancel={handleModalCancel}
         onSubmit={handleSubmit}
       />
     </section>

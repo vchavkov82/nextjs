@@ -130,6 +130,7 @@ const AddonCard = ({ addon }: any) => {
               }.svg`}
             alt={`${addon.name} illustration`}
             fill
+            sizes="100%"
             className={cn('object-contain', addon.id === 'addon-pitr' && 'object-bottom')}
           />
         )}

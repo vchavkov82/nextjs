@@ -24,15 +24,6 @@ import { API_URL, APP_NAME, DEFAULT_META_DESCRIPTION } from '@/lib/constants'
 import useDarkLaunchWeeks from '../hooks/useDarkLaunchWeeks'
 import { AppProviders } from '@/components/AppProviders'
 
-// Initialize WebSocket server on development mode (server-side only)
-if (typeof window === 'undefined' && process.env.NODE_ENV === 'development') {
-  import('common').then(({ initializeLocalServices }) => {
-    initializeLocalServices(parseInt(process.env.WS_PORT || '8081')).catch((error) => {
-      console.error('Failed to start WebSocket server:', error)
-    })
-  })
-}
-
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 

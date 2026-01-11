@@ -19,7 +19,6 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
         alt="BA Authentication user db rows"
         fill
         sizes="100%"
-        priority
         quality={100}
         className="hidden dark:block absolute inset-0 object-cover object-center xl:object-bottom"
       />
@@ -39,7 +38,6 @@ const AuthVisual: React.FC<Props> = ({ className }) => {
         alt="BA Authentication user db rows"
         fill
         sizes="100%"
-        priority
         quality={100}
         className="dark:hidden absolute inset-0 object-cover object-center xl:object-bottom"
       />

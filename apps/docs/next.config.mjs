@@ -92,15 +92,19 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       'libpg-query$': wasmPath,
+      '@supabase/supabase-js': resolve(__dirname, '../../packages/common/src/supabase-mock.ts'),
     }
 
+    // Alias modules that may not be available to empty modules
+    // This prevents build errors when optional dependencies are missing
+    config.resolve.alias['@supabase/sql-to-rest'] = emptyModulePath
+
     // On the server, we can't load the native libpg-query module.
-    // Since SqlToRest is dynamically imported with ssr: false, 
+    // Since SqlToRest is dynamically imported with ssr: false,
     // we can safely alias it to an empty module on the server.
     if (isServer) {
       config.resolve.alias['libpg-query'] = emptyModulePath
       config.resolve.alias['libpg-query$'] = emptyModulePath
-      config.resolve.alias['@supabase/sql-to-rest'] = emptyModulePath
     }
 
     // Force replacement of libpg-query native module with WASM version

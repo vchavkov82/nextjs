@@ -35,6 +35,7 @@ const PricingComputeAnimation = () => {
         src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }-active.svg`}
         alt="Compute addon grid"
+        sizes="100%"
         className={cn(
           'absolute inset-0 z-20 transition-opacity opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-300',
           triggerAnimation && 'opacity-100'
@@ -45,6 +46,7 @@ const PricingComputeAnimation = () => {
         src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }-active.svg`}
         alt="Compute addon grid"
+        sizes="100%"
         className={cn(
           'absolute inset-0 z-20 transition-all opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-500 delay-500 -translate-y-[18%] blur-md',
           triggerAnimation && 'opacity-100 -translate-y-[8%] blur-none'
@@ -55,6 +57,7 @@ const PricingComputeAnimation = () => {
         src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }-active.svg`}
         alt="Compute addon grid"
+        sizes="100%"
         className={cn(
           'absolute inset-0 z-20 transition-all opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-500 delay-1000 -translate-y-[24%] blur-md',
           triggerAnimation && 'opacity-100 -translate-y-[16%] blur-none'
@@ -65,6 +68,7 @@ const PricingComputeAnimation = () => {
         src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }.svg`}
         alt="Compute addon grid"
+        sizes="100%"
         className="absolute inset-0 z-10"
       />
       <Image
@@ -72,6 +76,7 @@ const PricingComputeAnimation = () => {
         src={`/images/pricing/compute/compute-grid${isTablet ? '-mobile' : ''}-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }.svg`}
         alt="Compute addon grid"
+        sizes="100%"
         className="absolute inset-0 z-0 object-contain object-center"
       />
     </figure>

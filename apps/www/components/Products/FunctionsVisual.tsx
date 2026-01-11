@@ -83,7 +83,6 @@ const FunctionsVisual: React.FC<Props> = ({ className }) => {
         fill
         sizes="100%"
         quality={100}
-        priority
         className="hidden dark:block absolute inset-0 object-cover object-center"
       />
       <Image
@@ -92,7 +91,6 @@ const FunctionsVisual: React.FC<Props> = ({ className }) => {
         fill
         sizes="100%"
         quality={100}
-        priority
         className="dark:hidden absolute inset-0 object-cover object-center"
       />
       <div

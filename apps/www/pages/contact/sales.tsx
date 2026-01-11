@@ -144,6 +144,7 @@ export const CustomerLogo = ({ title, logo }: { title: string; logo: string }) =
       alt={`${title} logo`}
       priority
       draggable={false}
+      sizes="100%"
       className="
         bg-no-repeat m-0
         object-left object-contain

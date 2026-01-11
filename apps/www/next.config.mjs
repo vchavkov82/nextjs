@@ -64,9 +64,6 @@ const nextConfig = {
     optimizePackageImports: ['ui', 'ui-patterns', 'lucide-react', '@radix-ui/react-dialog', 'framer-motion'],
     // Enable faster refresh
     optimizeCss: true,
-    // Explicitly disable Turbopack to use webpack instead
-    // Note: This might not work in Next.js 16.0.10, but worth trying
-    // needed to make the octokit packages work in /changelog
   },
   // Explicitly configure webpack to ensure it's used instead of Turbopack
   webpack: (config, { isServer }) => {
@@ -126,9 +123,6 @@ const nextConfig = {
     
     return config
   },
-  // Add empty turbopack config to allow webpack config to work
-  // Next.js 16 uses Turbopack by default, but we need webpack for compatibility
-  turbopack: {},
   /**
    * Exclude huge directories from being traced into serverless functions
    * to avoid the max size limit for Serverless Functions on Vercel:

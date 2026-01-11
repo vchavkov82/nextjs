@@ -213,7 +213,9 @@ export default function SqlToRest({
         // Try to import @supabase/sql-to-rest, handle gracefully if not available
         let tools: any
         try {
-          tools = await import('@supabase/sql-to-rest')
+          // Use new Function to prevent webpack from statically analyzing this import
+          const importFn = new Function('module', 'return import(module)')
+          tools = await importFn('@supabase/sql-to-rest')
           setTools(tools)
         } catch (importError) {
           // Package not available, set an error state

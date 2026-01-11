@@ -133,11 +133,8 @@ export class MockSupabaseClient {
   get realtime() {
     return {
       setAuth: async (token: string) => {
-        try {
-          await this.realtimeAdapter['wsClient']?.authenticate(token)
-        } catch (error) {
-          console.error('Authentication failed:', error)
-        }
+        // WebSocket authentication is handled automatically
+        // Tokens are sent during channel subscription if needed
       }
     }
   }

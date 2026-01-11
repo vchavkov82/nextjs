@@ -178,7 +178,7 @@ export class RealtimeChannel {
     filter: any,
     callback: EventCallback
   ): this {
-    // For broadcast and presence, we filter by event name in the emit function
+    // For broadcast and presence, we filter by event name in the callback
     if (event === 'broadcast' || event === 'presence') {
       const eventName = filter?.event || event
       const key = `${event}:${eventName}`
@@ -187,19 +187,14 @@ export class RealtimeChannel {
         this.eventCallbacks.set(key, new Set())
       }
 
-      // Create a wrapper callback that filters by event name
+      // Store the callback with filter information
       const wrappedCallback = (message: any) => {
-        if (
-          event === 'broadcast' &&
-          (filter?.event === undefined || message.event === filter.event)
-        ) {
-          callback(message)
-        } else if (
-          event === 'presence' &&
-          (filter?.event === undefined || message.event === filter.event)
-        ) {
-          callback(message)
+        // Check if this message matches the filter
+        if (filter?.event && message.event !== filter.event) {
+          return // Skip if event doesn't match
         }
+        // Pass the message to the original callback
+        callback(message)
       }
 
       this.eventCallbacks.get(key)!.add(wrappedCallback)
