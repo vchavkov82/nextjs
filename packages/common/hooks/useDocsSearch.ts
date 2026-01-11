@@ -202,6 +202,18 @@ const useDocsSearch = () => {
 
     let sourcesLoaded = 0
 
+    // Check if SUPABASE_URL is configured
+    if (!SUPABASE_URL) {
+      sourcesLoaded = NUMBER_SOURCES
+      dispatch({
+        type: 'errored',
+        key: localKey,
+        sourcesLoaded,
+        message: 'Supabase URL is not configured',
+      })
+      return
+    }
+
     const useAlternateSearchIndex = !isFeatureEnabled('search:fullIndex')
 
     const searchEndpoint = useAlternateSearchIndex ? 'docs_search_fts_nimbus' : 'docs_search_fts'
@@ -237,13 +249,14 @@ const useDocsSearch = () => {
       })
       .catch((error: unknown) => {
         sourcesLoaded += 1
-        console.error(`[ERROR] Error fetching Full Text Search results: ${error}`)
+        const errorMessage = error instanceof Error ? error.message : String(error)
+        console.error(`[ERROR] Error fetching Full Text Search results: ${errorMessage}`)
 
         dispatch({
           type: 'errored',
           key: localKey,
           sourcesLoaded,
-          message: '',
+          message: errorMessage,
         })
       })
 

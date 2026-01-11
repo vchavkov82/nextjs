@@ -1692,17 +1692,6 @@ export const ci_cd_runners: NavMenuConstant = {
       url: undefined,
       items: [{ name: 'StepSecurity', url: '/guides/ci-cd-runners/integrations/stepsecurity' }],
     },
-    {
-      name: 'Bazel',
-      url: undefined,
-      items: [
-        { name: 'Overview', url: '/guides/ci-cd-runners/bazel/overview' },
-        { name: 'Setup', url: '/guides/ci-cd-runners/bazel/setup' },
-        { name: 'Remote Cache', url: '/guides/ci-cd-runners/bazel/remote-cache' },
-        { name: 'Remote Execution', url: '/guides/ci-cd-runners/bazel/remote-execution' },
-        { name: 'GitHub Actions', url: '/guides/ci-cd-runners/bazel/github-actions' },
-      ],
-    },
   ],
 }
 

@@ -1,0 +1,105 @@
+---
+title: 'Runner Configuration'
+---
+
+Configure CI/CD Runners for Gitea Actions workflows.
+
+## Overview
+
+Configure runners for optimal performance with Gitea Actions workflows, including labels, environments, and resource allocation.
+
+## Runner Labels
+
+Use labels to target specific runners:
+
+```bash
+./config.sh --url https://gitea.example.com --token YOUR_TOKEN --labels "linux,docker,gpu"
+```
+
+Use labels in workflows:
+
+```yaml
+jobs:
+  build:
+    runs-on: [self-hosted, linux, docker]
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Building on Linux Docker runner"
+```
+
+## Runner Groups
+
+Organize runners into groups in Gitea:
+
+1. Go to **Settings > Actions > Runners**
+2. Create a new runner group
+3. Add runners to the group
+4. Assign runner groups to organizations or repositories
+
+## Environment Variables
+
+Set environment variables for runners:
+
+```bash
+# Set in runner configuration
+export CUSTOM_VAR="value"
+
+# Or in .env file
+echo "CUSTOM_VAR=value" >> .env
+```
+
+Use in workflows:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted
+    env:
+      CUSTOM_VAR: ${{ env.CUSTOM_VAR }}
+    steps:
+      - run: echo $CUSTOM_VAR
+```
+
+## Runner Resources
+
+Configure runner resources:
+
+- **CPU**: Specify CPU requirements
+- **Memory**: Set memory limits
+- **Storage**: Configure disk space
+- **Network**: Set network bandwidth
+
+## Runner Scaling
+
+Scale runners based on workload:
+
+- **Auto-scaling**: Automatically scale runners based on queue depth
+- **Manual scaling**: Manually adjust runner count
+- **Scheduled scaling**: Scale runners on a schedule
+
+## Security Configuration
+
+Configure runner security:
+
+- **Runner tokens**: Use secure tokens for authentication
+- **Network isolation**: Isolate runners from sensitive networks
+- **Access control**: Limit runner access to specific repositories
+- **Secret management**: Securely manage secrets and credentials
+
+## Best Practices
+
+- Use appropriate labels for job routing
+- Organize runners into logical groups
+- Set appropriate resource limits
+- Monitor runner performance
+- Keep runners updated
+- Document runner configurations
+
+## Troubleshooting
+
+Common issues:
+
+- **Label mismatches**: Verify labels match workflow requirements
+- **Resource constraints**: Check CPU, memory, and disk usage
+- **Network issues**: Verify network connectivity
+- **Authentication errors**: Check runner tokens and permissions

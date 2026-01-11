@@ -1,0 +1,119 @@
+---
+title: 'Runner Configuration'
+---
+
+Configure CI/CD Runners for GitHub Actions workflows.
+
+## Overview
+
+Configure runners for optimal performance with GitHub Actions workflows, including labels, environments, and resource allocation.
+
+## Runner Labels
+
+Use labels to target specific runners:
+
+```bash
+./config.sh --url https://github.com/OWNER/REPO --token YOUR_TOKEN --labels "self-hosted,linux,docker,gpu"
+```
+
+Use labels in workflows:
+
+```yaml
+jobs:
+  build:
+    runs-on: [self-hosted, linux, docker]
+    steps:
+      - uses: actions/checkout@v3
+      - run: docker build -t myapp .
+```
+
+## Runner Groups
+
+Organize runners into groups (organization/enterprise only):
+
+1. Go to **Settings > Actions > Runner groups**
+2. Create a new runner group
+3. Add runners to the group
+4. Assign runner groups to repositories
+
+## Environment Variables
+
+Set environment variables for runners:
+
+```bash
+# Set in runner configuration
+export CUSTOM_VAR="value"
+
+# Or in .env file in runner directory
+echo "CUSTOM_VAR=value" >> .env
+```
+
+Use in workflows:
+
+```yaml
+jobs:
+  build:
+    runs-on: self-hosted
+    env:
+      CUSTOM_VAR: ${{ env.CUSTOM_VAR }}
+    steps:
+      - run: echo $CUSTOM_VAR
+```
+
+## Runner Resources
+
+Configure runner resources:
+
+- **CPU**: Specify CPU requirements and limits
+- **Memory**: Set memory limits for jobs
+- **Storage**: Configure disk space and cleanup
+- **Network**: Set network bandwidth and access
+
+## Runner Scaling
+
+Scale runners based on workload:
+
+- **Auto-scaling**: Automatically scale runners based on queue depth
+- **Manual scaling**: Manually adjust runner count
+- **Scheduled scaling**: Scale runners on a schedule
+- **Event-driven scaling**: Scale based on repository events
+
+## Security Configuration
+
+Configure runner security:
+
+- **Runner tokens**: Use secure tokens for authentication
+- **Network isolation**: Isolate runners from sensitive networks
+- **Access control**: Limit runner access to specific repositories
+- **Secret management**: Securely manage GitHub secrets
+- **Runner updates**: Keep runners updated for security patches
+
+## Runner Maintenance
+
+Maintain runners for reliability:
+
+- **Update runners**: Regularly update to the latest version
+- **Monitor logs**: Check runner logs for issues
+- **Clean up**: Remove unused runners
+- **Health checks**: Monitor runner health and availability
+- **Backup configuration**: Backup runner configurations
+
+## Best Practices
+
+- Use appropriate labels for job routing
+- Organize runners into logical groups
+- Set appropriate resource limits
+- Monitor runner performance and utilization
+- Keep runners updated
+- Document runner configurations
+- Use separate runners for different environments (dev, staging, prod)
+
+## Troubleshooting
+
+Common issues:
+
+- **Label mismatches**: Verify labels match workflow requirements
+- **Resource constraints**: Check CPU, memory, and disk usage
+- **Network issues**: Verify network connectivity to GitHub
+- **Authentication errors**: Check runner tokens and permissions
+- **Runner offline**: Check runner service status and logs

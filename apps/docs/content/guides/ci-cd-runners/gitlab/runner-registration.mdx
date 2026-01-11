@@ -1,0 +1,182 @@
+---
+title: 'Runner Registration'
+---
+
+Learn how to register CI/CD Runners with your GitLab instance.
+
+## Overview
+
+Registering runners with GitLab allows your CI/CD Runners infrastructure to execute GitLab CI/CD jobs. Runners can be registered at different levels: instance, group, or project.
+
+## Registration Methods
+
+### Instance-Level Runners
+
+Register runners for the entire GitLab instance (GitLab administrators only):
+
+```bash
+gitlab-runner register \
+  --url https://gitlab.example.com/ \
+  --registration-token $INSTANCE_TOKEN \
+  --executor docker \
+  --docker-image alpine:latest \
+  --description "CI/CD Runner" \
+  --tag-list "docker,linux" \
+  --run-untagged=true \
+  --locked=false
+```
+
+### Group-Level Runners
+
+Register runners for a specific GitLab group:
+
+1. Go to your GitLab group
+2. Navigate to **Settings > CI/CD > Runners**
+3. Expand **Runners** section
+4. Copy the registration token
+5. Register the runner:
+
+```bash
+gitlab-runner register \
+  --url https://gitlab.example.com/ \
+  --registration-token $GROUP_TOKEN \
+  --executor docker \
+  --docker-image alpine:latest \
+  --description "Group Runner" \
+  --tag-list "docker,group" \
+  --run-untagged=false \
+  --locked=false
+```
+
+### Project-Level Runners
+
+Register runners for a specific GitLab project:
+
+1. Go to your GitLab project
+2. Navigate to **Settings > CI/CD > Runners**
+3. Expand **Runners** section
+4. Copy the registration token
+5. Register the runner:
+
+```bash
+gitlab-runner register \
+  --url https://gitlab.example.com/ \
+  --registration-token $PROJECT_TOKEN \
+  --executor docker \
+  --docker-image alpine:latest \
+  --description "Project Runner" \
+  --tag-list "docker,project" \
+  --run-untagged=false \
+  --locked=true
+```
+
+## Interactive Registration
+
+Register interactively:
+
+```bash
+gitlab-runner register
+```
+
+Follow the prompts:
+
+1. GitLab instance URL
+2. Registration token
+3. Runner description
+4. Runner tags
+5. Executor type
+6. Executor configuration
+
+## Configuration File Registration
+
+Register multiple runners via configuration file:
+
+```toml
+concurrent = 4
+
+[[runners]]
+  name = "runner-1"
+  url = "https://gitlab.example.com/"
+  token = "token-1"
+  executor = "docker"
+  [runners.docker]
+    image = "alpine:latest"
+
+[[runners]]
+  name = "runner-2"
+  url = "https://gitlab.example.com/"
+  token = "token-2"
+  executor = "docker"
+  [runners.docker]
+    image = "docker:latest"
+```
+
+## Runner Tags
+
+Use tags to target specific runners:
+
+```bash
+gitlab-runner register \
+  --tag-list "docker,linux,amd64"
+```
+
+Tags are used in GitLab CI/CD configuration:
+
+```yaml
+build:
+  tags:
+    - docker
+    - linux
+  script:
+    - echo "Building on Linux runner"
+```
+
+## Runner Locking
+
+Lock runners to specific projects (project-level only):
+
+```bash
+gitlab-runner register \
+  --locked=true
+```
+
+## Verification
+
+Verify runner registration:
+
+```bash
+# List registered runners
+gitlab-runner list
+
+# Verify runner connectivity
+gitlab-runner verify
+
+# Check runner status in GitLab UI
+# Settings > CI/CD > Runners
+```
+
+## Unregistering Runners
+
+Unregister a runner:
+
+```bash
+gitlab-runner unregister --url https://gitlab.example.com/ --token $RUNNER_TOKEN --name "runner-name"
+```
+
+## Best Practices
+
+- Use descriptive runner names
+- Tag runners appropriately
+- Lock project runners to specific projects
+- Use group runners for shared resources
+- Monitor runner availability and performance
+- Document runner configurations
+
+## Troubleshooting
+
+Common issues:
+
+- **Registration fails**: Verify URL and token are correct
+- **Token expired**: Generate a new registration token
+- **Network errors**: Check connectivity to GitLab instance
+- **Permission denied**: Verify runner has necessary permissions

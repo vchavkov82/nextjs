@@ -1,0 +1,138 @@
+---
+title: 'Setup'
+---
+
+Learn how to set up self-hosted GitHub Actions runners with CI/CD Runners.
+
+## Prerequisites
+
+Before setting up GitHub Actions runners:
+
+- GitHub repository, organization, or enterprise account
+- CI/CD Runners infrastructure configured
+- Access to GitHub for runner registration
+- Appropriate permissions to add runners
+
+## Install GitHub Actions Runner
+
+Download and install the GitHub Actions Runner:
+
+### Linux
+
+```bash
+# Create a folder
+mkdir actions-runner && cd actions-runner
+
+# Download the latest runner package
+curl -o actions-runner-linux-x64-2.311.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-linux-x64-2.311.0.tar.gz
+
+# Extract the installer
+tar xzf ./actions-runner-linux-x64-2.311.0.tar.gz
+```
+
+### macOS
+
+```bash
+# Create a folder
+mkdir actions-runner && cd actions-runner
+
+# Download the latest runner package
+curl -o actions-runner-osx-x64-2.311.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-osx-x64-2.311.0.tar.gz
+
+# Extract the installer
+tar xzf ./actions-runner-osx-x64-2.311.0.tar.gz
+```
+
+### Windows
+
+```powershell
+# Create a folder
+mkdir actions-runner; cd actions-runner
+
+# Download the latest runner package
+Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.311.0/actions-runner-win-x64-2.311.0.zip -OutFile actions-runner-win-x64-2.311.0.zip
+
+# Extract the installer
+Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory("$PWD/actions-runner-win-x64-2.311.0.zip", "$PWD")
+```
+
+## Configure Runner
+
+Configure the runner for your repository, organization, or enterprise:
+
+### Repository Runner
+
+```bash
+./config.sh --url https://github.com/OWNER/REPO --token YOUR_TOKEN
+```
+
+### Organization Runner
+
+```bash
+./config.sh --url https://github.com/OWNER --token YOUR_TOKEN
+```
+
+### Enterprise Runner
+
+```bash
+./config.sh --url https://github.com/enterprises/ENTERPRISE --token YOUR_TOKEN
+```
+
+Follow the prompts:
+
+1. Enter the runner group (if applicable)
+2. Enter the name of the runner
+3. Enter labels (optional)
+4. Enter the work folder (default: `_work`)
+
+## Install Runner as Service
+
+Install and start the runner as a service:
+
+### Linux (systemd)
+
+```bash
+sudo ./svc.sh install
+sudo ./svc.sh start
+```
+
+### macOS (launchd)
+
+```bash
+./svc.sh install
+./svc.sh start
+```
+
+### Windows (NSSM)
+
+```powershell
+.\svc.cmd install
+.\svc.cmd start
+```
+
+## Verify Installation
+
+Verify the runner is registered:
+
+1. Go to your GitHub repository/organization
+2. Navigate to **Settings > Actions > Runners**
+3. Verify your runner appears in the list
+4. Check runner status (should be "online")
+
+## Best Practices
+
+- Use descriptive runner names
+- Label runners appropriately (e.g., `self-hosted`, `linux`, `docker`)
+- Run runners as services for reliability
+- Monitor runner logs for issues
+- Keep runners updated to the latest version
+- Use separate runners for different environments
+
+## Troubleshooting
+
+Common issues:
+
+- **Runner not connecting**: Check GitHub URL and token
+- **Service not starting**: Check service logs and permissions
+- **Network errors**: Verify connectivity to GitHub
+- **Permission errors**: Verify runner has necessary permissions
