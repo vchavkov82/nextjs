@@ -424,6 +424,12 @@ const TEMPLATE_INTEGRATIONS: IntegrationDefinition[] = [
   },
 ]
 
+// Constants for Stripe Sync Engine schema detection
+// TODO: These were previously imported from 'stripe-experiment-sync/supabase'
+// The package has been removed, so these constants are defined locally
+export const STRIPE_SCHEMA_COMMENT_PREFIX = '@supabase/stripe-sync-engine'
+export const INSTALLATION_INSTALLED_SUFFIX = 'installed'
+
 export const INTEGRATIONS: IntegrationDefinition[] = [
   ...WRAPPER_INTEGRATIONS,
   ...SUPABASE_INTEGRATIONS,

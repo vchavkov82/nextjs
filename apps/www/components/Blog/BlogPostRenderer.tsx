@@ -1,7 +1,6 @@
 'use client'
 
 import dayjs from 'dayjs'
-import { MDXRemote } from 'next-mdx-remote'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -31,6 +30,10 @@ const ReactMarkdown = dynamic<{ children: string }>(
     import('react-markdown').then(
       (m) => m.default as unknown as ComponentType<{ children: string }>
     ),
+  { ssr: false }
+)
+const MDXRemote = dynamic(
+  () => import('next-mdx-remote').then((mod) => mod.MDXRemote),
   { ssr: false }
 )
 

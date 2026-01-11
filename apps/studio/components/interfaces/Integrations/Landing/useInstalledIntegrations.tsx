@@ -7,12 +7,12 @@ import { useFlag } from 'common'
 import { useIsFeatureEnabled } from 'hooks/misc/useIsFeatureEnabled'
 import { useSelectedProjectQuery } from 'hooks/misc/useSelectedProject'
 import { EMPTY_ARR } from 'lib/void'
+import { wrapperMetaComparator } from '../Wrappers/Wrappers.utils'
 import {
+  INTEGRATIONS,
   INSTALLATION_INSTALLED_SUFFIX,
   STRIPE_SCHEMA_COMMENT_PREFIX,
-} from 'stripe-experiment-sync/supabase'
-import { wrapperMetaComparator } from '../Wrappers/Wrappers.utils'
-import { INTEGRATIONS } from './Integrations.constants'
+} from './Integrations.constants'
 
 export const useInstalledIntegrations = () => {
   const { data: project } = useSelectedProjectQuery()

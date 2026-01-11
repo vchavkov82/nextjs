@@ -43,7 +43,7 @@ export interface ImageProps extends Omit<NextImageProps, 'src'> {
  * - zoomable: {boolean} (optional) to make the image zoomable on click
  * - caption: {string} (optional) to add a figcaption
  * - captionAlign: {'left' | 'center' | 'right'} (optional) to align the caption
- * - containerClassName: {string} (optional) to style the parent <figure> container
+ * - containerClassName: {string} (optional) to style the parent container (<figure> when caption exists, <div> otherwise)
  */
 const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAlign, ...props }: ImageProps) => {
   const Component = zoomable ? Zoom : 'span'
@@ -58,9 +58,15 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
   // This prevents hydration mismatches since the HTML is identical on server and client
   const isThemedImage = typeof src !== 'string'
 
+  // Use <figure> only when there's a caption (semantically correct and avoids DOM nesting issues in <p> tags)
+  const Wrapper = caption ? 'figure' : 'div'
+
+  // Filter out custom props that shouldn't be passed to NextImage
+  const { wide, ...nextImageProps } = props as ImageProps & { wide?: boolean }
+
   if (isThemedImage) {
     return (
-      <figure className={cn('next-image--dynamic-fill', containerClassName)}>
+      <Wrapper className={cn('next-image--dynamic-fill', containerClassName)}>
         <Component
           {...(zoomable
             ? { ZoomContent: ZoomContent, zoomMargin }
@@ -70,28 +76,28 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
             alt={alt}
             src={src.light}
             sizes={sizes}
-            className={cn(props.className, 'dark:hidden')}
-            style={props.style}
-            {...props}
+            {...nextImageProps}
+            className={cn(nextImageProps.className, 'dark:hidden')}
+            style={nextImageProps.style}
           />
           <NextImage
             alt={alt}
             src={src.dark}
             sizes={sizes}
-            className={cn(props.className, 'hidden dark:block')}
-            style={props.style}
-            {...props}
+            {...nextImageProps}
+            className={cn(nextImageProps.className, 'hidden dark:block')}
+            style={nextImageProps.style}
           />
         </Component>
         {caption && (
           <figcaption className={cn(getCaptionAlign(captionAlign))}>{caption}</figcaption>
         )}
-      </figure>
+      </Wrapper>
     )
   }
 
   return (
-    <figure className={cn('next-image--dynamic-fill', containerClassName)}>
+    <Wrapper className={cn('next-image--dynamic-fill', containerClassName)}>
       <Component
         {...(zoomable
           ? { ZoomContent: ZoomContent, zoomMargin }
@@ -101,15 +107,13 @@ const Image = ({ src, alt = '', zoomable, containerClassName, caption, captionAl
           alt={alt}
           src={src}
           sizes={sizes}
-          className={props.className}
-          style={props.style}
-          {...props}
+          {...nextImageProps}
         />
       </Component>
       {caption && (
         <figcaption className={cn(getCaptionAlign(captionAlign))}>{caption}</figcaption>
       )}
-    </figure>
+    </Wrapper>
   )
 }
 
