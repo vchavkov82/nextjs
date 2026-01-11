@@ -412,7 +412,7 @@ const MultiSelectorContent = React.forwardRef<HTMLDivElement, React.HTMLAttribut
         className={cn(
           'absolute w-full bg-overlay shadow-md z-10 border border-overlay top-[calc(100%+0.25rem)] rounded-md transition-all -translate-y-3',
           open
-            ? 'opacity-100 translate-y-0 visible duration-150 ease-[cubic-bezier(0.76,0,0.23,1)]'
+            ? 'opacity-100 translate-y-0 visible duration-150 [transition-timing-function:cubic-bezier(0.76,0,0.23,1)]'
             : 'opacity-0 -translate-y-3 invisible duration-0',
           className
         )}
