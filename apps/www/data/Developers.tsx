@@ -1,4 +1,4 @@
-import { Calendar, SquarePlus } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import {
   IconBriefcase2,
   IconChangelog,
@@ -76,11 +76,6 @@ export const data = {
           description: 'We support existing open source tools and communities wherever possible.',
           url: '/open-source',
           icon: IconGitHubSolid,
-        },
-        {
-          text: 'GitHub Discussions',
-          url: 'https://github.com/orgs/supabase/discussions',
-          icon: IconDiscussions,
         },
         {
           text: 'Become a Partner',

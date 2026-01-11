@@ -96,6 +96,7 @@ function Database() {
               width={1680}
               height={1116}
               className="w-full h-auto"
+              priority
             />
           }
           documentation_url={'/docs/guides/database'}

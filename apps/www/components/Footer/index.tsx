@@ -84,7 +84,7 @@ const Footer = (props: Props) => {
                 width={160}
                 height={30}
                 alt="BA Logo"
-                className="dark:hidden"
+                className="dark:hidden w-full h-auto"
                 priority
               />
               <Image
@@ -92,7 +92,7 @@ const Footer = (props: Props) => {
                 width={160}
                 height={30}
                 alt="BA Logo"
-                className="hidden dark:block"
+                className="hidden dark:block w-full h-auto"
                 priority
               />
             </Link>
