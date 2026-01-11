@@ -13,34 +13,15 @@ export function useForceDeepDark() {
   const forceDarkMode = useDarkLaunchWeeks()
 
   useEffect(() => {
-    const handleDocumentLoad = () => {
-      // Update the HTML element attributes
-      const theme = forceDarkMode || isDarkTheme ? 'dark' : 'light'
+    // Only update if theme is actually resolved to prevent hydration mismatch
+    if (!resolvedTheme && !forceDarkMode) return
 
-      document.documentElement.setAttribute('data-theme', theme)
-      document.documentElement.style.colorScheme = theme
+    const themeValue = forceDarkMode || isDarkTheme ? 'dark' : 'light'
 
-      // wait before setting the theme
-      setTimeout(() => {
-        document.documentElement.setAttribute('data-theme', theme)
-        document.documentElement.style.colorScheme = theme
-      }, 200)
-
-      // Clean up the event listener
-      window.removeEventListener('load', handleDocumentLoad)
-    }
-
-    // Check if document is already loaded
-    if (document.readyState === 'complete') {
-      handleDocumentLoad()
-    } else {
-      // Add a global load event listener
-      window.addEventListener('load', handleDocumentLoad)
-    }
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('load', handleDocumentLoad)
-    }
-  }, [resolvedTheme, theme, isDarkTheme, router])
+    // Use requestAnimationFrame to ensure DOM updates happen after paint
+    requestAnimationFrame(() => {
+      document.documentElement.setAttribute('data-theme', themeValue)
+      document.documentElement.style.colorScheme = themeValue
+    })
+  }, [resolvedTheme, theme, isDarkTheme, forceDarkMode, router])
 }

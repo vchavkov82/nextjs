@@ -24,6 +24,9 @@ import ProductsNav from '@/components/Products/ProductsNav'
 import ProductHeader from '@/components/Sections/ProductHeader'
 import { ETLVisual } from '@/data/products/database/etl-visual'
 
+import DefaultLayout from '@/components/Layouts/Default'
+import SectionContainer from '@/components/Layouts/SectionContainer'
+
 const NewFeatureCard = dynamic(() => import('@/components/NewFeatureCard'))
 const ImageCarousel = dynamic(() => import('@/components/Carousels/ImageCarousel'))
 const SplitCodeBlockCarousel = dynamic(
@@ -31,8 +34,6 @@ const SplitCodeBlockCarousel = dynamic(
 )
 const FeatureColumn = dynamic(() => import('@/components/FeatureColumn'))
 const SingleQuote = dynamic(() => import('@/components/Sections/SingleQuote'))
-const DefaultLayout = dynamic(() => import('@/components/Layouts/Default'))
-const SectionContainer = dynamic(() => import('@/components/Layouts/SectionContainer'))
 const ProductIcon = dynamic(() => import('@/components/ProductIcon'))
 const APISection = dynamic(() => import('@/components/Sections/APISection'))
 const GithubExamples = dynamic(() => import('@/components/Sections/GithubExamples'))

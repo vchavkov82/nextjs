@@ -16,33 +16,33 @@ import useDropdownMenu from './useDropdownMenu'
 import { getMenu } from 'data/nav'
 import { usePathname } from 'next/navigation'
 
-const MenuItem = dynamic(() => import('./MenuItem'), { ssr: true })
-const MobileMenu = dynamic(() => import('./MobileMenu'), { ssr: true })
+const MenuItem = dynamic(() => import('./MenuItem'), { ssr: false })
+const MobileMenu = dynamic(() => import('./MobileMenu'), { ssr: false })
 const NavigationMenu = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenu),
-  { ssr: true }
+  { ssr: false }
 )
 const NavigationMenuContent = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuContent),
-  { ssr: true }
+  { ssr: false }
 )
 const NavigationMenuItem = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuItem),
-  { ssr: true }
+  { ssr: false }
 )
 const NavigationMenuLink = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuLink),
-  { ssr: true }
+  { ssr: false }
 )
 const NavigationMenuList = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuList),
-  { ssr: true }
+  { ssr: false }
 )
 const NavigationMenuTrigger = dynamic(
   () => import('ui/src/components/shadcn/ui/navigation-menu').then((mod) => mod.NavigationMenuTrigger),
-  { ssr: true }
+  { ssr: false }
 )
-const ScrollProgress = dynamic(() => import('components/ScrollProgress'), { ssr: true })
+const ScrollProgress = dynamic(() => import('components/ScrollProgress'), { ssr: false })
 
 interface Props {
   hideNavbar: boolean
@@ -104,16 +104,18 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
             showLaunchWeekNavMode && '!bg-transparent dark:!bg-black transition-all',
             isGAWeekSection && 'dark:!bg-alternative'
           )}
+          suppressHydrationWarning
         />
         <nav
           className={cn(
             `relative z-40 border-default border-b backdrop-blur-sm transition-opacity`,
             showLaunchWeekNavMode && 'border-muted border-b bg-transparent'
           )}
+          suppressHydrationWarning
         >
-          <div className="relative flex justify-between h-16 mx-auto lg:container lg:px-16 xl:px-20">
-            <div className="flex items-center px-6 lg:px-0 flex-1 sm:items-stretch justify-between">
-              <div className="flex items-center">
+          <div className="relative flex justify-between h-16 mx-auto lg:container lg:px-16 xl:px-20" suppressHydrationWarning>
+            <div className="flex items-center px-6 lg:px-0 flex-1 sm:items-stretch justify-between" suppressHydrationWarning>
+              <div className="flex items-center" suppressHydrationWarning>
                 <div className="flex items-center flex-shrink-0">
                   <RightClickBrandLogo />
                 </div>
@@ -153,7 +155,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                   </NavigationMenuList>
                 </NavigationMenu>
               </div>
-              <div className="flex items-center gap-2 opacity-0 animate-fade-in !scale-100 delay-300">
+              <div className="flex items-center gap-2 opacity-0 animate-fade-in !scale-100 delay-300" suppressHydrationWarning>
                 {isLoggedIn ? (
                   <>
                     <Button className="hidden lg:block" asChild>
