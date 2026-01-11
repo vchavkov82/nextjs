@@ -256,7 +256,7 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
 
     if (!preview) {
       // For published posts, try to get the latest published version using versions API
-      const versionsUrl = `${PAYLOAD_URL}/api/posts/versions?where[version.slug][equals]=${slug}&where[version._status][equals]=published&sort=-updatedAt&limit=1&depth=2`
+      const versionsUrl = `${PAYLOAD_URL}/api/posts/versions?where[version.slug][equals]=${slug}&where[version._status][equals]=published&sort=-updatedAt&limit=1&depth=1`
 
       response = await fetch(versionsUrl, {
         headers: {
@@ -285,7 +285,7 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
     // Fallback to regular API (for preview mode or if versions API fails)
     if (preview) {
       // In preview mode, always try to get the latest draft first
-      url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=2&draft=true`
+      url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=1&draft=true`
 
       response = await fetch(url, {
         headers: {
@@ -298,7 +298,7 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
 
       // If no draft found, try published version
       if (!response.ok || (await response.clone().json()).docs?.length === 0) {
-        url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=2&draft=false`
+        url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=1&draft=false`
         response = await fetch(url, {
           headers: {
             'Content-Type': 'application/json',
@@ -310,7 +310,7 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
       }
     } else {
       // For non-preview mode, get published version
-      url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=2&draft=false`
+      url = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=1&draft=false`
 
       response = await fetch(url, {
         headers: {
@@ -348,7 +348,7 @@ export async function getCMSPostBySlug(slug: string, preview = false) {
 
     // If we're in preview mode and there's no draft, try to get the published version
     if (!data.docs.length && preview) {
-      const publishedUrl = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=2`
+      const publishedUrl = `${PAYLOAD_URL}/api/posts?where[slug][equals]=${slug}&depth=1`
 
       const publishedResponse = await fetch(publishedUrl, {
         headers: {
@@ -488,7 +488,7 @@ export async function getAllCMSPosts({
 } = {}): Promise<ProcessedPost[]> {
   try {
     const response = await fetch(
-      `${PAYLOAD_URL}/api/posts?depth=2&draft=false&where[_status][equals]=published`,
+      `${PAYLOAD_URL}/api/posts?depth=1&draft=false&where[_status][equals]=published`,
       {
         headers: {
           'Content-Type': 'application/json',

@@ -3,7 +3,6 @@ import {
   convertRichTextToMarkdownWithBlocks,
   convertRichTextToMarkdown,
 } from './convertRichTextToMarkdown'
-import { generateTocFromMarkdown } from '@/lib/toc'
 import { mdxSerialize } from '@/lib/mdx/mdxSerialize'
 // Define minimal block structure for compatibility
 type CMSBlock = {
@@ -30,16 +29,14 @@ export async function processCMSContent(
     // Convert rich text to markdown with blocks converted to existing www syntax
     const { markdown, blocks } = convertRichTextToMarkdownWithBlocks(richTextContent)
 
-    // Generate TOC from the converted markdown
-    const toc = await generateTocFromMarkdown(markdown, tocDepth)
-
     // Serialize the markdown for MDX (blocks are now converted to existing components)
+    // mdxSerialize already collects TOC, so we reuse that instead of generating separately
     const mdxContent = await mdxSerialize(markdown, { tocDepth })
 
     return {
       content: mdxContent,
       blocks,
-      toc,
+      toc: mdxContent.scope?.toc || { content: '', json: [] },
       plainMarkdown: markdown,
     }
   } catch (error) {
@@ -47,13 +44,12 @@ export async function processCMSContent(
 
     // Fallback to basic conversion
     const plainMarkdown = convertRichTextToMarkdown(richTextContent)
-    const toc = await generateTocFromMarkdown(plainMarkdown, tocDepth)
     const mdxContent = await mdxSerialize(plainMarkdown, { tocDepth })
 
     return {
       content: mdxContent,
       blocks: [],
-      toc,
+      toc: mdxContent.scope?.toc || { content: '', json: [] },
       plainMarkdown,
     }
   }
@@ -71,12 +67,11 @@ export async function processCMSContentLegacy(
   plainMarkdown: string
 }> {
   const plainMarkdown = convertRichTextToMarkdown(richTextContent)
-  const toc = await generateTocFromMarkdown(plainMarkdown, tocDepth)
   const mdxContent = await mdxSerialize(plainMarkdown, { tocDepth })
 
   return {
     content: mdxContent,
-    toc,
+    toc: mdxContent.scope?.toc || { content: '', json: [] },
     plainMarkdown,
   }
 }

@@ -157,7 +157,7 @@ export async function GET(request: NextRequest) {
         allVersionsUrl.searchParams.set('where[version.slug][equals]', slug)
         allVersionsUrl.searchParams.set('sort', '-updatedAt') // Get the most recent version regardless of status
         allVersionsUrl.searchParams.set('limit', '1')
-        allVersionsUrl.searchParams.set('depth', '2')
+        allVersionsUrl.searchParams.set('depth', '1')
 
         const allVersionsResponse = await fetch(allVersionsUrl.toString(), {
           headers: {
@@ -247,7 +247,7 @@ export async function GET(request: NextRequest) {
         // Strategy 2: Try to get the most recent draft
         const draftUrl = new URL('/api/posts', baseUrl)
         draftUrl.searchParams.set('where[slug][equals]', slug)
-        draftUrl.searchParams.set('depth', '2')
+        draftUrl.searchParams.set('depth', '1')
         draftUrl.searchParams.set('draft', 'true')
         draftUrl.searchParams.set('sort', '-updatedAt') // Get the most recent version
 
@@ -328,7 +328,7 @@ export async function GET(request: NextRequest) {
 
         const publishedUrl = new URL('/api/posts', baseUrl)
         publishedUrl.searchParams.set('where[slug][equals]', slug)
-        publishedUrl.searchParams.set('depth', '2')
+        publishedUrl.searchParams.set('depth', '1')
         publishedUrl.searchParams.set('draft', 'false')
 
         const publishedResponse = await fetch(publishedUrl.toString(), {
@@ -410,7 +410,7 @@ export async function GET(request: NextRequest) {
       versionsUrl.searchParams.set('where[version._status][equals]', 'published')
       versionsUrl.searchParams.set('sort', '-createdAt') // Use createdAt instead of updatedAt for versions
       versionsUrl.searchParams.set('limit', '1')
-      versionsUrl.searchParams.set('depth', '2')
+      versionsUrl.searchParams.set('depth', '1')
 
       const versionsResponse = await fetch(versionsUrl.toString(), {
         headers: {
@@ -530,7 +530,7 @@ export async function GET(request: NextRequest) {
           versionsByParentUrl.searchParams.set('where[version._status][equals]', 'published')
           versionsByParentUrl.searchParams.set('sort', '-createdAt')
           versionsByParentUrl.searchParams.set('limit', '1')
-          versionsByParentUrl.searchParams.set('depth', '2')
+          versionsByParentUrl.searchParams.set('depth', '1')
 
           const versionsByParentResponse = await fetch(versionsByParentUrl.toString(), {
             headers: {
@@ -615,7 +615,7 @@ export async function GET(request: NextRequest) {
 
     // Fallback to regular posts API for listing or if versions API fails
     const url = new URL('/api/posts', baseUrl)
-    url.searchParams.set('depth', '2')
+    url.searchParams.set('depth', '1')
     url.searchParams.set('draft', 'false')
     url.searchParams.set('limit', limit)
 
@@ -633,9 +633,9 @@ export async function GET(request: NextRequest) {
         ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {}),
         ...cfHeaders,
       },
-      // For individual post requests, don't cache to ensure fresh data
-      cache: slug ? 'no-store' : 'default',
-      next: slug ? undefined : { revalidate: 300 },
+      // Cache strategy: published posts can be cached, drafts must not be cached
+      cache: slug && !isDraftMode ? 'default' : 'no-store',
+      next: slug && !isDraftMode ? { revalidate: 60 } : undefined,
       // Add SSL configuration for production
       ...(process.env.NODE_ENV === 'production' && {
         // Allow self-signed certificates in development, but use proper SSL in production
