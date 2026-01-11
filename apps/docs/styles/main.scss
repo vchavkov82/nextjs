@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import './../../../packages/ui/build/css/source/global.css';
-@import './../../../packages/ui/build/css/themes/dark-combined.css';
+@import './../../../packages/ui/build/css/themes/dark.css';
 @import './../../../packages/ui/build/css/themes/light.css';
 
 @font-face {
@@ -32,7 +32,8 @@
 }
 
 body {
-  @apply bg-background text-foreground;
+  background-color: hsl(var(--background-default));
+  color: hsl(var(--foreground-default));
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,12 +75,13 @@ article h1 {
 }
 
 .p:not(.prose *):not(.overwrite) {
-  @apply text-foreground-light;
+  color: hsl(var(--foreground-light));
   margin-bottom: 16px;
 }
 
 .small:not(.prose *):not(.overwrite) {
-  @apply text-foreground-muted text-xs;
+  color: hsl(var(--foreground-muted));
+  font-size: 0.75rem;
 }
 
 .prose :where(p):not(:where([class~='not-prose'] *)) {
@@ -123,7 +125,8 @@ pre[class*='language-'] {
 
 .method-list-item-validation {
   code {
-    @apply text-xs bg-control rounded;
+    @apply text-xs rounded;
+    background-color: hsl(var(--background-surface-100));
     padding: 1px 6px;
   }
 }
@@ -133,7 +136,8 @@ pre[class*='language-'] {
 }
 
 .method-list-group .method-list-group {
-  @apply border border-overlay rounded-md;
+  @apply border rounded-md;
+  border-color: hsl(var(--border-default));
   margin-bottom: 20px;
   max-width: 600px;
 }
@@ -207,7 +211,7 @@ h4 code {
 
 // code inside admonitions
 .admonition-content p code {
-  @apply bg-control;
+  background-color: hsl(var(--background-surface-100));
   word-break: keep-all !important;
   white-space: nowrap !important;
 }

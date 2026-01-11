@@ -1,6 +1,6 @@
 @import url(../pages/launch-week/launchWeek.css);
 @import './../../../packages/ui/build/css/source/global.css';
-@import './../../../packages/ui/build/css/themes/dark-combined.css';
+@import './../../../packages/ui/build/css/themes/dark.css';
 @import './../../../packages/ui/build/css/themes/light.css';
 
 @tailwind base;
@@ -47,7 +47,8 @@ html {
 }
 
 body {
-  @apply bg text-foreground;
+  background-color: hsl(var(--background-default));
+  color: hsl(var(--foreground-default));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -107,19 +108,27 @@ h6:not(.overwrite) {
 }
 
 .label:not(.prose *):not(.overwrite) {
-  @apply text-xs font-mono uppercase text-foreground-lighter tracking-wider;
+  @apply text-xs font-mono uppercase tracking-wider;
+  color: hsl(var(--foreground-muted));
 }
 
 .heading-gradient {
-  @apply text-[#F4FFFA00] bg-clip-text bg-gradient-to-b from-foreground to-foreground/70;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom, hsl(var(--foreground-default)), hsl(var(--foreground-default) / 0.7));
 }
 
 .heading-gradient-brand {
-  @apply text-[#3ECF8E00] bg-clip-text bg-gradient-to-b from-brand to-brand/80;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom, hsl(var(--brand-default)), hsl(var(--brand-default) / 0.8));
 }
 
 .toc-animate {
-  @apply !translate-x-1 !text-brand;
+  @apply !translate-x-1;
+  color: hsl(var(--brand-default)) !important;
 }
 
 .prose-toc a {
@@ -154,12 +163,13 @@ h6:not(.overwrite) {
 }
 
 .p:not(.prose *):not(.overwrite) {
-  @apply text-foreground-light;
+  color: hsl(var(--foreground-light));
   margin-bottom: 16px;
 }
 
 .small:not(.prose *):not(.overwrite) {
-  @apply text-foreground-lighter text-xs;
+  color: hsl(var(--foreground-muted));
+  @apply text-xs;
 }
 
 .sbui-border-fix select {
@@ -184,7 +194,7 @@ h6:not(.overwrite) {
 }
 
 .section--bg {
-  @apply bg-background;
+  background-color: hsl(var(--background-default));
   position: relative;
   height: 100%;
   width: 100%;
@@ -211,22 +221,24 @@ h6:not(.overwrite) {
 /* Database page */
 
 .dashboard-tabs div[role='separator'] {
-  @apply border border-strong;
+  @apply border;
+  border-color: hsl(var(--border-default));
 }
 
 .sbui-tabs--alt div[role='tablist'] .sbui-btn-primary {
-  @apply bg-border-stronger text-white;
+  background-color: hsl(var(--border-strong));
+  color: white;
   text-shadow: none;
   font-weight: 400;
 }
 .sbui-tabs--alt div[role='tablist'] .sbui-btn-text {
-  @apply text-border-muted;
+  color: hsl(var(--border-muted));
   font-weight: 400;
   shadow: none;
 }
 
 .sbui-tabs--underline-alt div[role='tablist'] .sbui-tab-button-underline--active {
-  @apply border-foreground-muted;
+  border-color: hsl(var(--foreground-muted));
 }
 /* override position of tabs  */
 .dashboard-tabs > div > div {
@@ -253,7 +265,7 @@ table {
 }
 
 .sbui-typography-container thead {
-  @apply text-border;
+  color: hsl(var(--border-default));
 }
 
 .sbui-typography a {
@@ -732,7 +744,7 @@ launch week
   transition-timing-function: cubic-bezier(0.24, 0.25, 0.05, 1) !important;
 }
 [data-rmiz-modal-overlay='visible'] {
-  @apply !bg-background;
+  background-color: hsl(var(--background-default)) !important;
   opacity: 0.8;
 }
 [data-rmiz-modal-img] {
