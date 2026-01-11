@@ -13,7 +13,7 @@ echo ""
 # Check 1: Is PostgreSQL container running?
 echo "1. Checking if PostgreSQL container is running..."
 cd "$DOCKER_DIR"
-if podman compose -f docker-compose.postgres.yml ps 2>&1 | grep -q "postgres.*Up"; then
+if podman-compose -f docker-compose.postgres.yml ps 2>&1 | grep -q "postgres.*Up"; then
     echo "   ✓ PostgreSQL container is running"
 else
     echo "   ✗ PostgreSQL container is NOT running"
@@ -37,9 +37,9 @@ echo ""
 
 # Check 3: Database connection test
 echo "3. Testing database connection..."
-if podman compose -f docker-compose.postgres.yml exec -T postgres psql -U postgres -d postgres -c "SELECT version();" > /dev/null 2>&1; then
+if podman-compose -f docker-compose.postgres.yml exec -T postgres psql -U postgres -d postgres -c "SELECT version();" > /dev/null 2>&1; then
     echo "   ✓ Successfully connected to PostgreSQL"
-    VERSION=$(podman compose -f docker-compose.postgres.yml exec -T postgres psql -U postgres -d postgres -t -c "SELECT version();" 2>/dev/null | head -1)
+    VERSION=$(podman-compose -f docker-compose.postgres.yml exec -T postgres psql -U postgres -d postgres -t -c "SELECT version();" 2>/dev/null | head -1)
     echo "     $VERSION"
 else
     echo "   ✗ Cannot connect to PostgreSQL (container may not be running)"
@@ -52,7 +52,7 @@ if [ -f "$DOCKER_DIR/docker-compose.yml" ]; then
     if grep -q "supabase" "$DOCKER_DIR/docker-compose.yml" 2>/dev/null; then
         echo "   ⚠ Found Supabase docker-compose.yml"
         echo "     You have both Supabase and PostgreSQL-only compose files"
-        echo "     Use: podman compose -f docker-compose.postgres.yml up"
+        echo "     Use: podman-compose -f docker-compose.postgres.yml up"
     fi
 else
     echo "   ✓ No Supabase docker-compose.yml found"

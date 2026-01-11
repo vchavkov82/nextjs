@@ -10,6 +10,6 @@ DOCKER_DIR="$PROJECT_ROOT/docker"
 cd "$DOCKER_DIR"
 
 echo "Stopping PostgreSQL..."
-podman compose -f docker-compose.postgres.yml down
+podman-compose -f docker-compose.postgres.yml down
 
 echo "PostgreSQL stopped."

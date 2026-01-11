@@ -1,6 +1,6 @@
 # Simple PostgreSQL-only setup
-# Usage: podman compose -f docker-compose.postgres.yml up -d
-#        podman compose -f docker-compose.postgres.yml down
+# Usage: podman-compose -f docker-compose.postgres.yml up -d
+#        podman-compose -f docker-compose.postgres.yml down
 
 name: postgres
 
