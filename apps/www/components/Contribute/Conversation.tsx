@@ -5,7 +5,7 @@ import { Badge, Card, CardContent } from 'ui'
 import { getThreadRepliesById } from '~/data/contribute'
 import type { ThreadRow } from '~/types/contribute'
 import { HelpOnPlatformButton } from './HelpOnPlatformButton'
-import { DiscordIcon, GitHubIcon, RedditIcon } from './Icons'
+import { GitHubIcon } from './Icons'
 import { markdownComponents } from './markdownComponents'
 import { RepliesList } from './RepliesList'
 
@@ -27,9 +27,7 @@ export async function Conversation({ thread }: { thread: ThreadRow }) {
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                {thread.channel === 'discord' && <DiscordIcon className="h-5 w-5 text-[#5865F2]" />}
-                {thread.channel === 'reddit' && <RedditIcon className="h-5 w-5 text-[#FF4500]" />}
-                {thread.channel === 'github' && <GitHubIcon className="h-5 w-5 text-foreground" />}
+                <GitHubIcon className="h-5 w-5 text-foreground" />
                 <span className="text-sm text-foreground-lighter capitalize">{thread.channel}</span>
                 <span className="text-sm text-foreground-lighter">·</span>
                 <span className="text-sm text-foreground-lighter">{thread.posted}</span>

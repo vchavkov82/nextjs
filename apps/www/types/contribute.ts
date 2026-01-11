@@ -2,7 +2,7 @@ import { Tables } from '~/lib/contribute.types'
 
 export type Thread = Tables<'contribute_threads'>
 
-export type ThreadSource = 'discord' | 'reddit' | 'github'
+export type ThreadSource = 'github'
 
 export interface ThreadRow {
   id: string

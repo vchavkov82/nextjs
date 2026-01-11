@@ -25,7 +25,7 @@ import {
 
 import type { ThreadRow } from '~/types/contribute'
 import { FilterPopover } from './FilterPopover'
-import { DiscordIcon, GitHubIcon, RedditIcon } from './Icons'
+import { GitHubIcon } from './Icons'
 
 interface TabConfig {
   id: string
@@ -90,7 +90,7 @@ export function UnansweredThreadsTable({
   allStacks,
 }: {
   threads: ThreadRow[]
-  channelCounts: { all: number; discord: number; reddit: number; github: number }
+  channelCounts: { all: number; github: number }
   allProductAreas: string[]
   allStacks: string[]
 }) {
@@ -122,18 +122,6 @@ export function UnansweredThreadsTable({
       label: 'All',
     },
     {
-      id: 'discord',
-      label: 'Discord',
-      icon: DiscordIcon,
-      iconColor: 'text-[#5865F2]',
-    },
-    {
-      id: 'reddit',
-      label: 'Reddit',
-      icon: RedditIcon,
-      iconColor: 'text-[#FF4500]',
-    },
-    {
       id: 'github',
       label: 'GitHub',
       icon: GitHubIcon,
@@ -141,7 +129,7 @@ export function UnansweredThreadsTable({
     },
   ]
 
-  const validTabs = ['all', 'discord', 'reddit', 'github'] as const
+  const validTabs = ['all', 'github'] as const
   const currentTab = (
     validTabs.includes(channel as (typeof validTabs)[number]) ? channel : 'all'
   ) as (typeof validTabs)[number]
@@ -399,30 +387,7 @@ function ThreadRow({
         <div className="flex items-center gap-3 overflow-hidden">
           {/* Channel icon */}
           <div className="flex items-center justify-center bg-surface-200 h-10 w-10 rounded-md">
-            {thread.channel === 'discord' && (
-              <DiscordIcon
-                className={cn(
-                  'h-4 w-4',
-                  thread.channel === 'discord' ? 'text-[#5865F2]' : 'text-foreground-lighter'
-                )}
-              />
-            )}
-            {thread.channel === 'reddit' && (
-              <RedditIcon
-                className={cn(
-                  'h-4 w-4',
-                  thread.channel === 'reddit' ? 'text-[#FF4500]' : 'text-foreground-lighter'
-                )}
-              />
-            )}
-            {thread.channel === 'github' && (
-              <GitHubIcon
-                className={cn(
-                  'h-4 w-4',
-                  thread.channel === 'github' ? 'text-foreground' : 'text-foreground-lighter'
-                )}
-              />
-            )}
+            <GitHubIcon className="h-4 w-4 text-foreground" />
           </div>
           <div className="min-w-0 flex-1 flex flex-col gap-y-0.5">
             {/* Thread title */}

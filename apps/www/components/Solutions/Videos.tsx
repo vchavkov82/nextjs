@@ -18,25 +18,8 @@ const EnterpriseSecurity: FC<Testimonials> = (props) => {
       </div>
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-fit mt-4">
         <Panel innerClassName="p-2">
-          <div className="video-container !rounded-md">
-            <iframe
-              className="w-full"
-              src="https://www.youtube-nocookie.com/embed/9GQtXXERnqU"
-              title="BA + Lovable"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        </Panel>
-        <Panel innerClassName="p-2">
-          <div className="video-container !rounded-md">
-            <iframe
-              className="w-full"
-              src="https://www.youtube-nocookie.com/embed/LfAV5fmRybg"
-              title="BA + Bolt"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+          <div className="space-y-4">
+            <p className="text-foreground-light">Video content coming soon.</p>
           </div>
         </Panel>
       </ul>

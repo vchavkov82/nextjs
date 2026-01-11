@@ -13,12 +13,11 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import SectionContainer from '../Layouts/SectionContainer'
 import { useBreakpoint } from 'common'
-import { TweetCard } from 'ui-patterns/TweetCard'
 
 SwiperCore.use([Autoplay])
 
 interface CardInterface {
-  type: 'twitter' | 'customer-story'
+  type: 'customer-story'
   avatar?: string
   author: string
   role?: string
@@ -33,13 +32,6 @@ interface CardInterface {
 const vectorImagesDir = '/images/product/vector/community/'
 
 const cards: CardInterface[] = [
-  {
-    type: 'twitter',
-    avatar: '',
-    author: 'Yasser',
-    quote:
-      '@kiwicopple @supabase @PostgreSQL @OpenAI Adding vector embeddings support to @BA is awesome. Glad I built https://t.co/jnCYOLa4iK on supabase.',
-  },
   {
     type: 'customer-story',
     avatar: '',
@@ -63,21 +55,6 @@ const cards: CardInterface[] = [
     image: vectorImagesDir + 'supabase+markprompt.svg',
     abstract: 'Firecrawl switches from Pinecone to BA for PostgreSQL vector embeddings.',
     url: '/customers/firecrawl',
-  },
-  {
-    type: 'twitter',
-    avatar: '',
-    author: 'Batuhan',
-    quote: (
-      <>
-        To create long-term memory for your ChatGPT application you can use @supabase vector
-        database.
-        <br />
-        You can fix two common problems with this method:
-        <br />
-        Global Memory Token Size Limit Handling
-      </>
-    ),
   },
 ]
 
@@ -199,17 +176,9 @@ const CommunitySlider = () => {
         >
           {cards.map((card, i) => (
             <SwiperSlide key={card.author}>
-              {card.type === 'twitter' ? (
-                <TweetCard
-                  handle={`@${card.author}`}
-                  quote={card.quote}
-                  img_url={`${basePath}${card.avatar}`}
-                />
-              ) : (
-                <Link href={`${basePath}${card.url}`}>
-                  <Card {...card} />
-                </Link>
-              )}
+              <Link href={`${basePath}${card.url}`}>
+                <Card {...card} />
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

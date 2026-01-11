@@ -17,7 +17,7 @@ const benefits: Benefit[] = [
     icon: Award,
     title: 'Community Recognition',
     description:
-      'Get a Badge on Discord and flair on Reddit showcasing your SupaSquad status in the community.',
+      'Get a Badge and flair showcasing your SupaSquad status in the community.',
   },
   {
     icon: Zap,

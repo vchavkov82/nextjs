@@ -52,25 +52,10 @@ export async function handler(req: Request) {
       Deno.env.get('MISC_USE_ANON_KEY') ?? ''
     )
 
-    // Track social shares
-    if (userAgent?.toLocaleLowerCase().includes('twitter')) {
-      await supabaseAdminClient
-        .from(LW_TABLE)
-        .update({ sharedOnTwitter: 'now' })
-        .eq('username', username)
-        .is('sharedOnTwitter', null)
-    } else if (userAgent?.toLocaleLowerCase().includes('linkedin')) {
-      await supabaseAdminClient
-        .from(LW_TABLE)
-        .update({ sharedOnLinkedIn: 'now' })
-        .eq('username', username)
-        .is('sharedOnLinkedIn', null)
-    }
-
     // Get ticket data
     const { data, error } = await supabaseAdminClient
       .from(LW_MATERIALIZED_VIEW)
-      .select('name, ticketNumber, sharedOnTwitter, sharedOnLinkedIn, metadata')
+      .select('name, ticketNumber, metadata')
       .eq('username', username)
       .maybeSingle()
 
@@ -79,9 +64,7 @@ export async function handler(req: Request) {
 
     const { name, ticketNumber, metadata } = data
 
-    const platinum = (!!data?.sharedOnTwitter && !!data?.sharedOnLinkedIn) ?? false
-    if (assumePlatinum && !platinum) return await fetch(`${STORAGE_URL}/assets/golden_no_meme.png`)
-    const ticketType = data.metadata?.hasSecretTicket ? 'secret' : platinum ? 'platinum' : 'regular'
+    const ticketType = data.metadata?.hasSecretTicket ? 'secret' : 'regular'
 
     // Else, generate image and upload to storage.
     const BACKGROUND = {

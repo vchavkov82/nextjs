@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Badge, Button } from 'ui'
-import { DiscordIcon, GitHubIcon, RedditIcon } from '~/components/Contribute/Icons'
+import { GitHubIcon } from '~/components/Contribute/Icons'
 import { getUserActivity } from '~/data/contribute'
 import type { ThreadRow } from '~/types/contribute'
 
@@ -13,9 +13,7 @@ function ThreadCard({ thread }: { thread: ThreadRow }) {
     >
       <div className="grid gap-2">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
-          {thread.channel === 'discord' && <DiscordIcon className="h-4 w-4 text-[#5865F2]" />}
-          {thread.channel === 'reddit' && <RedditIcon className="h-4 w-4 text-[#FF4500]" />}
-          {thread.channel === 'github' && <GitHubIcon className="h-4 w-4 text-foreground" />}
+          <GitHubIcon className="h-4 w-4 text-foreground" />
           <span className="capitalize">{thread.channel}</span>
           <span>•</span>
           <span>{thread.posted}</span>

@@ -13,7 +13,7 @@ export function HelpOnPlatformButton({
   className = 'w-full sm:w-fit',
 }: HelpOnPlatformButtonProps) {
   const platformName =
-    channel === 'discord' ? 'Discord' : channel === 'reddit' ? 'Reddit' : 'GitHub'
+    channel === 'github' ? 'GitHub' : 'Platform'
 
   return (
     <Button asChild type="default" className={className}>

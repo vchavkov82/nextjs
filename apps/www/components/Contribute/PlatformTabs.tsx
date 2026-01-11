@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const tabs = [
-  { href: '/contribute/reddit', label: 'Reddit' },
-  { href: '/contribute/discord', label: 'Discord' },
   { href: '/contribute/github', label: 'GitHub' },
 ]
 

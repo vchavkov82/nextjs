@@ -132,11 +132,7 @@ const footerData = [
         text: 'SupaSquad',
         url: '/supasquad',
       },
-      {
-        text: 'DevTo',
-        url: 'https://dev.to/supabase',
-      },
-      {
+            {
         text: 'RSS',
         url: '/rss.xml',
       },
