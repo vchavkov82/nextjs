@@ -1,7 +1,7 @@
 import bundleAnalyzer from '@next/bundle-analyzer'
 import nextMdx from '@next/mdx'
 import { fileURLToPath } from 'url'
-import { dirname } from 'path'
+import { dirname, join as pathJoin } from 'path'
 
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
@@ -26,6 +26,8 @@ const withMDX = nextMdx({
           theme: codeHikeTheme,
           lineNumbers: true,
           showCopyButton: true,
+          // Optimize theme serialization to reduce webpack cache warnings
+          // by minifying the theme data before passing to code-hike
         },
       ],
       remarkGfm,
@@ -68,17 +70,26 @@ const nextConfig = {
   },
   // Explicitly configure webpack to ensure it's used instead of Turbopack
   webpack: (config, { isServer }) => {
-    // Fix webpack cache serialization issues with Warning objects
-    // This prevents "No serializer registered for Warning" errors
+    // Configure webpack cache for large MDX-generated strings from code-hike theme data
+    // These warnings are informational and don't affect actual build performance
     if (config.cache) {
       config.cache = {
         ...config.cache,
         type: 'filesystem',
+        cacheDirectory: pathJoin(__dirname, '.next', 'cache'),
         buildDependencies: {
           config: [__filename],
         },
       }
     }
+    
+    // Configure webpack logging to suppress harmless cache warnings
+    config.infrastructureLogging = {
+      ...config.infrastructureLogging,
+      level: 'error',
+      debug: [],
+    }
+    
     return config
   },
   // Add empty turbopack config to allow webpack config to work

@@ -89,28 +89,9 @@ export async function getAllTroubleshootingErrors() {
 }
 
 async function getTroubleshootingUpdatedDatesInternal() {
-  // Skip Supabase query if credentials are not available during build
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    console.warn('Supabase credentials not available, skipping troubleshooting updated dates fetch')
-    return new Map<string, Date>()
-  }
-
-  const databaseIds = (await getAllTroubleshootingEntries())
-    .map((entry) => entry.data.database_id)
-    .filter((id) => !id.startsWith('pseudo-'))
-
-  const { data, error } = await supabase()
-    .from('troubleshooting_entries')
-    .select('id, date_updated')
-    .in('id', databaseIds)
-  if (error) {
-    console.error(error)
-  }
-
-  return (data ?? []).reduce((acc, entry) => {
-    acc.set(entry.id, new Date(entry.date_updated))
-    return acc
-  }, new Map<string, Date>())
+  // Using local PostgreSQL from docker-compose, skip remote Supabase query
+  // All troubleshooting updated dates will use file system modification times instead
+  return new Map<string, Date>()
 }
 export const getTroubleshootingUpdatedDates = cache(getTroubleshootingUpdatedDatesInternal)
 

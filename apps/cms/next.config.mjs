@@ -115,11 +115,6 @@ const nextConfig = {
 
     return config
   },
-  // Configure server to listen on all interfaces for remote access
-  server: {
-    host: '0.0.0.0',
-    port: 3030,
-  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })
