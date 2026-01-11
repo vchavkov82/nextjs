@@ -18,7 +18,7 @@ export interface UseCommandMenuTelemetryOptions {
   /**
    * The app where the command menu is being used
    */
-  app: 'studio' | 'docs' | 'www'
+  app: 'docs' | 'www'
   /**
    * Optional callback to send telemetry events
    */

@@ -59,19 +59,9 @@ else
 fi
 echo ""
 
-# Check 5: Studio app self-hosted configuration
-echo "5. Checking Studio app configuration..."
-if [ -d "$PROJECT_ROOT/apps/studio" ]; then
-    echo "   ℹ Studio app supports self-hosted mode"
-    echo "   Set IS_PLATFORM=false or unset NEXT_PUBLIC_IS_PLATFORM to use local PostgreSQL"
-    echo "   Uses: POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_PASSWORD"
-fi
-echo ""
-
 echo "=== Summary ==="
 echo ""
 echo "For local PostgreSQL setup:"
 echo "  - Start: ./scripts/start-postgres.sh"
 echo "  - Connection: postgresql://postgres:postgres@localhost:5432/postgres"
-echo "  - Studio env: Set IS_PLATFORM=false or unset NEXT_PUBLIC_IS_PLATFORM"
 echo ""

@@ -103,7 +103,6 @@ const uiConfig = ui({
       /*
        * custom background re-maps
        */
-      studio: `hsl(var(--background-200)/ <alpha-value>)`,
     }),
     borderColor: (theme) => ({
       ...theme('colors'),

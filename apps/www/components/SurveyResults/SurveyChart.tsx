@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from 'ui'
 import { ChevronsUpDown } from 'lucide-react'
-import TwoOptionToggle from '../../../studio/components/ui/TwoOptionToggle'
+// Removed TwoOptionToggle import - studio component no longer exists
 import CodeBlock from '@/components/CodeBlock/CodeBlock'
 
 // Separate BA client for survey project
@@ -338,12 +338,24 @@ export function SurveyChart({
             </div>
           )}
           <div className="hidden xs:block">
-            <TwoOptionToggle
-              options={['SQL', 'chart']}
-              activeOption={view}
-              onClickOption={handleViewChange}
-              borderOverride="border-overlay"
-            />
+            <div className="flex border border-overlay rounded-md">
+              <Button
+                type={view === 'chart' ? 'primary' : 'default'}
+                size="tiny"
+                onClick={() => handleViewChange('chart')}
+                className="rounded-r-none border-0"
+              >
+                Chart
+              </Button>
+              <Button
+                type={view === 'sql' ? 'primary' : 'default'}
+                size="tiny"
+                onClick={() => handleViewChange('sql')}
+                className="rounded-l-none border-0"
+              >
+                SQL
+              </Button>
+            </div>
           </div>
         </div>
         <motion.div

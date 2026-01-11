@@ -36,13 +36,13 @@ const CommandShortcut = ({
   onTelemetry,
 }: {
   openKey: string
-  app?: 'studio' | 'docs' | 'www'
+  app?: 'docs' | 'www'
   onTelemetry?: CommandMenuTelemetryCallback
 }) => {
   const toggleOpen = useToggleCommandMenu()
   const isOpen = useCommandMenuOpen()
   const { sendTelemetry } = useCommandMenuTelemetry({
-    app: app ?? 'studio',
+    app: app ?? 'docs',
     onTelemetry,
   })
 
@@ -107,7 +107,7 @@ interface CommandProviderProps extends PropsWithChildren {
   /**
    * The app where the command menu is being used
    */
-  app?: 'studio' | 'docs' | 'www'
+  app?: 'docs' | 'www'
   /**
    * Optional callback to send telemetry events
    */
@@ -116,7 +116,7 @@ interface CommandProviderProps extends PropsWithChildren {
 
 const CommandProvider = ({ children, openKey, app, onTelemetry }: CommandProviderProps) => (
   <CommandProviderInternal>
-    <CommandMenuTelemetryContext.Provider value={{ app: app ?? 'studio', onTelemetry }}>
+    <CommandMenuTelemetryContext.Provider value={{ app: app ?? 'docs', onTelemetry }}>
       <CommandShortcut openKey={openKey ?? 'k'} app={app} onTelemetry={onTelemetry} />
       <CloseOnNavigation>{children}</CloseOnNavigation>
     </CommandMenuTelemetryContext.Provider>

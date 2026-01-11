@@ -29,7 +29,7 @@ export interface CommandMenuOpenedEvent {
     trigger_type: 'keyboard_shortcut' | 'search_input'
     trigger_location?: string
     location?: string
-    app: 'studio' | 'docs' | 'www'
+    app: 'docs' | 'www'
   }
   groups: Record<string, string>
 }
@@ -38,7 +38,7 @@ export interface CommandMenuCommandClickedEvent {
   action: 'command_menu_command_clicked'
   properties: {
     command_id: string
-    app: 'studio' | 'docs' | 'www'
+    app: 'docs' | 'www'
   }
   groups: Record<string, string>
 }
@@ -47,7 +47,7 @@ export interface CommandMenuSearchSubmittedEvent {
   action: 'command_menu_search_submitted'
   properties: {
     query: string
-    app: 'studio' | 'docs' | 'www'
+    app: 'docs' | 'www'
   }
   groups: Record<string, string>
 }

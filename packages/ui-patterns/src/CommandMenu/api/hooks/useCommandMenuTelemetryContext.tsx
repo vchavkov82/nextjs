@@ -4,7 +4,7 @@ import { createContext, useContext } from 'react'
 import type { CommandMenuTelemetryCallback } from './useCommandMenuTelemetry'
 
 interface CommandMenuTelemetryContextValue {
-  app: 'studio' | 'docs' | 'www'
+  app: 'docs' | 'www'
   onTelemetry?: CommandMenuTelemetryCallback
 }
 
