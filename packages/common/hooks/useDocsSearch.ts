@@ -228,7 +228,19 @@ const useDocsSearch = () => {
       },
       body: JSON.stringify({ query: query.trim() }),
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          return res
+            .json()
+            .then((errorData) => {
+              throw new Error(errorData?.message || `HTTP ${res.status}: ${res.statusText}`)
+            })
+            .catch(() => {
+              throw new Error(`HTTP ${res.status}: ${res.statusText}`)
+            })
+        }
+        return res.json()
+      })
       .then((data) => {
         sourcesLoaded += 1
         if (!Array.isArray(data)) {
@@ -250,7 +262,10 @@ const useDocsSearch = () => {
       .catch((error: unknown) => {
         sourcesLoaded += 1
         const errorMessage = error instanceof Error ? error.message : String(error)
-        console.error(`[ERROR] Error fetching Full Text Search results: ${errorMessage}`)
+        // Only log network errors in development to reduce noise
+        if (process.env.NODE_ENV === 'development') {
+          console.error(`[ERROR] Error fetching Full Text Search results: ${errorMessage}`)
+        }
 
         dispatch({
           type: 'errored',

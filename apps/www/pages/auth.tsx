@@ -81,9 +81,9 @@ function AuthPage() {
                 dark: `${basePath}/images/product/auth/header--dark.png`,
               }}
               alt="auth header"
-              layout="responsive"
-              width="1372"
-              height="1074"
+              width={1372}
+              height={1074}
+              style={{ width: '100%', height: 'auto' }}
             />,
           ]}
           documentation_url={'/docs/guides/auth'}

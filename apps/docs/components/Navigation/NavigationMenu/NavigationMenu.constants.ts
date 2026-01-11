@@ -1680,6 +1680,7 @@ export const ci_cd_runners: NavMenuConstant = {
       name: 'Monitoring',
       url: undefined,
       items: [
+        { name: 'Overview', url: '/guides/ci-cd-runners/monitoring/overview' },
         { name: 'Job Metrics', url: '/guides/ci-cd-runners/monitoring/job-metrics' },
         { name: 'Stack Metrics', url: '/guides/ci-cd-runners/monitoring/stack-metrics' },
         { name: 'Alerts', url: '/guides/ci-cd-runners/monitoring/alerts' },
