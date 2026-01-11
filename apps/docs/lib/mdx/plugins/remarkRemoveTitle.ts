@@ -1,4 +1,4 @@
-import type { Parent } from 'mdast'
+import type { Parent } from '@types/mdast'
 
 /**
  * Removes the top heading from a MD file if

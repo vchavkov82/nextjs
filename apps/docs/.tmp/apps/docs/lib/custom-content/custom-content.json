@@ -1,0 +1,9 @@
+{
+    "homepage:heading": "BA Documentation",
+    "metadata:application_name": "BA Docs",
+    "metadata:title": "BA Docs",
+    "navigation:logo": {
+        "light": "/docs/supabase-light.svg",
+        "dark": "/docs/supabase-dark.svg"
+    }
+}

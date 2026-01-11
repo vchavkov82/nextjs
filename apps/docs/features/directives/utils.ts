@@ -1,4 +1,4 @@
-import { type Root } from 'mdast'
+import { type Root } from '@types/mdast'
 import { gfmToMarkdown } from 'mdast-util-gfm'
 import { mdxToMarkdown } from 'mdast-util-mdx'
 import { toMarkdown } from 'mdast-util-to-markdown'

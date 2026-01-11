@@ -1,5 +1,5 @@
 import matter from 'gray-matter'
-import type { Code, Heading, Root } from 'mdast'
+import type { Code, Heading, Root } from '@types/mdast'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import { readdir, readFile, stat } from 'node:fs/promises'

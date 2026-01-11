@@ -33,7 +33,7 @@
  * ```
  */
 
-import { type Root } from 'mdast'
+import { type Root } from '@types/mdast'
 import type { MdxJsxFlowElement } from 'mdast-util-mdx-jsx'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'

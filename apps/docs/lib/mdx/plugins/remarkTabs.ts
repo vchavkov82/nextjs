@@ -1,4 +1,4 @@
-import type { Content, Paragraph, Root } from 'mdast'
+import type { Content, Paragraph, Root } from '@types/mdast'
 import type { MdxJsxFlowElement } from 'mdast-util-mdx'
 import type { Node } from 'unist'
 import { visit } from 'unist-util-visit'

@@ -19,7 +19,7 @@
  * ````
  */
 
-import { type Parent, type Code, type Root } from 'mdast'
+import { type Parent, type Code, type Root } from '@types/mdast'
 import type { MdxJsxFlowElement } from 'mdast-util-mdx-jsx'
 import { SKIP, visitParents } from 'unist-util-visit-parents'
 

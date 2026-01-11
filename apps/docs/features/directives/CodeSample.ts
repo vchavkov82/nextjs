@@ -34,7 +34,7 @@
 import * as acorn from 'acorn'
 import tsPlugin from 'acorn-typescript'
 import amaro from 'amaro'
-import { type BlockContent, type Code, type DefinitionContent, type Root } from 'mdast'
+import { type BlockContent, type Code, type DefinitionContent, type Root } from '@types/mdast'
 import type { MdxJsxAttributeValueExpression, MdxJsxFlowElement } from 'mdast-util-mdx-jsx'
 import assert from 'node:assert'
 import { readFile } from 'node:fs/promises'

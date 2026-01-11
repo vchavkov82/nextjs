@@ -1,6 +1,6 @@
 import GithubSlugger from 'github-slugger'
 import matter from 'gray-matter'
-import { type Content, type Root } from 'mdast'
+import { type Content, type Root } from '@types/mdast'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toMarkdown } from 'mdast-util-to-markdown'
 import { mdxFromMarkdown, mdxToMarkdown } from 'mdast-util-mdx'
