@@ -47,7 +47,7 @@
       "outputs": [".next/**", "!.next/cache/**", ".contentlayer/**"]
     },
     "www#build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "cms#build"],
       "env": [
         "ANALYZE",
         "CI",
@@ -56,6 +56,8 @@
         "CMS_API_KEY",
         "CMS_PREVIEW_SECRET",
         "CMS_SITE_ORIGIN",
+        "CMS_TIMEOUT_MS",
+        "SKIP_CMS_SITEMAP",
         "NEXT_PUBLIC_MISC_USE_URL",
         "NEXT_PUBLIC_MISC_USE_ANON_KEY",
         "NEXT_PUBLIC_STUDIO_URL",

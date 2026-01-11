@@ -15,7 +15,7 @@ import TileGrid from '../../../components/Partners/TileGrid'
 export async function getStaticProps() {
   const { data: partners } = await supabase
     .from('partners')
-    .select('*')
+    .select('slug, title, description, logo, category, featured')
     .eq('approved', true)
     .eq('type', 'technology')
     .order('category')

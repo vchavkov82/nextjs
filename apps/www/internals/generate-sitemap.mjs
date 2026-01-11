@@ -16,21 +16,34 @@ const CMS_SITE_ORIGIN =
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_BRANCH_URL?.replace('zone-www-dot-com-git-', 'cms-git-')}`
       : 'http://localhost:3030'
 const CMS_API_KEY = process.env.CMS_API_KEY
+const CMS_SKIP = process.env.SKIP_CMS_SITEMAP === 'true'
+const CMS_TIMEOUT = parseInt(process.env.CMS_TIMEOUT_MS || '5000', 10)
 
 /**
  * Get CMS blog posts for sitemap
  */
 const getCMSBlogPosts = async () => {
+  if (CMS_SKIP) {
+    console.log('[getCMSBlogPosts] Skipping CMS fetch (SKIP_CMS_SITEMAP=true)')
+    return []
+  }
+
   try {
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), CMS_TIMEOUT)
+
     const response = await fetch(
       `${CMS_SITE_ORIGIN}/api/posts?depth=0&draft=false&where[_status][equals]=published&limit=1000`,
       {
+        signal: controller.signal,
         headers: {
           'Content-Type': 'application/json',
           ...(CMS_API_KEY && { Authorization: `Bearer ${CMS_API_KEY}` }),
         },
       }
     )
+
+    clearTimeout(timeoutId)
 
     if (!response.ok) {
       console.warn(`[getCMSBlogPosts] HTTP error! status: ${response.status}`)
@@ -52,9 +65,19 @@ const getCMSBlogPosts = async () => {
         updatedAt: post.updatedAt || new Date().toISOString(),
       }))
 
+    console.log(`[getCMSBlogPosts] Successfully fetched ${posts.length} blog posts from CMS`)
     return posts
   } catch (error) {
-    console.warn('Error fetching CMS blog posts for sitemap:', error)
+    if (error.name === 'AbortError') {
+      console.warn(
+        `[getCMSBlogPosts] Timeout after ${CMS_TIMEOUT}ms connecting to CMS at ${CMS_SITE_ORIGIN}. Continuing without CMS blog posts.`
+      )
+    } else {
+      console.warn(
+        `[getCMSBlogPosts] Failed to fetch blog posts from ${CMS_SITE_ORIGIN}. Continuing without CMS blog posts.`,
+        error.message
+      )
+    }
     return []
   }
 }
@@ -87,7 +110,6 @@ async function generate() {
 
   // Fetch CMS blog posts
   const cmsBlogPosts = await getCMSBlogPosts()
-  console.log(`Found ${cmsBlogPosts.length} CMS blog posts for sitemap`)
 
   const blogUrl = 'blog'
   const caseStudiesUrl = 'case-studies'
@@ -222,6 +244,11 @@ async function generate() {
    */
   writeFileSync('public/sitemap.xml', sitemapRouter)
   writeFileSync('public/sitemap_www.xml', formatted)
+  
+  console.log(`✓ Sitemap generated successfully`)
+  console.log(`  - Static pages: ${staticUrls.length}`)
+  console.log(`  - CMS blog posts: ${cmsBlogPosts.length}`)
+  console.log(`  - Total URLs: ${staticUrls.length + cmsBlogPosts.length}`)
 }
 
 generate()

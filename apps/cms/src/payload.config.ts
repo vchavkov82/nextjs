@@ -90,7 +90,9 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  cors: [getServerSideURL(), WWW_SITE_ORIGIN].filter(Boolean),
+  cors: process.env.NODE_ENV === 'production' 
+    ? [getServerSideURL(), WWW_SITE_ORIGIN].filter(Boolean)
+    : '*', // Allow all origins in development for remote IP access
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
