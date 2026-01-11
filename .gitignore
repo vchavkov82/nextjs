@@ -137,6 +137,11 @@ build
 CLAUDE.md
 llms.txt
 
+# Cursor IDE files
+.cursor/
+.cursorignore
+.cursorrules
+
 #include template .env file for docker-compose
 !docker/.env
 !docker/supabase/.env

@@ -73,6 +73,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  // Ensure payload packages are transpiled correctly
+  transpilePackages: ['payload', '@payloadcms/ui', '@payloadcms/next', '@payloadcms/richtext-lexical'],
   // Configure Sharp as an external package for server-side rendering
   // Also externalize thread-stream to avoid Turbopack trying to trace worker_threads
   serverExternalPackages: ['sharp', 'pino', 'thread-stream', '@esbuild/linux-x64', 'esbuild'],
@@ -140,6 +142,18 @@ const nextConfig = {
       'on-exit-leak-free': requireModule.resolve('on-exit-leak-free/index.js'),
       'thread-stream': requireModule.resolve('thread-stream/index.js'),
       'safe-stable-stringify': requireModule.resolve('safe-stable-stringify'),
+      'pino-pretty': requireModule.resolve('pino-pretty'),
+      'ci-info': requireModule.resolve('ci-info'),
+      'pino-abstract-transport': requireModule.resolve('pino-abstract-transport'),
+      'secure-json-parse': requireModule.resolve('secure-json-parse'),
+      'dateformat': requireModule.resolve('dateformat/lib/dateformat'),
+      'split2': requireModule.resolve('split2'),
+      'once': requireModule.resolve('once/once.js'),
+      'end-of-stream': requireModule.resolve('end-of-stream'),
+      'fast-safe-stringify': requireModule.resolve('fast-safe-stringify'),
+      'ieee754': requireModule.resolve('ieee754'),
+      'undici': requireModule.resolve('undici'),
+      'wrappy': requireModule.resolve('wrappy'),
     }
     
     // Configure webpack to properly resolve ESM exports from payload
@@ -207,6 +221,18 @@ const nextConfig = {
               'on-exit-leak-free',
               'thread-stream',
               'safe-stable-stringify',
+              'pino-pretty',
+              'ci-info',
+              'pino-abstract-transport',
+              'secure-json-parse',
+              'dateformat',
+              'split2',
+              'once',
+              'end-of-stream',
+              'fast-safe-stringify',
+              'ieee754',
+              'undici',
+              'wrappy',
             ]
             
             // Check if this request is for a problematic package
@@ -287,6 +313,23 @@ const nextConfig = {
       // This might not work if webpack still validates exports
     }
     
+    // Custom plugin to fix payload exports resolution
+    // Webpack's static analysis sometimes fails to resolve exports that exist at runtime
+    config.plugins.push({
+      apply: (compiler) => {
+        compiler.hooks.normalModuleFactory.tap('PayloadExportsFixPlugin', (nmf) => {
+          nmf.hooks.afterResolve.tap('PayloadExportsFixPlugin', (data) => {
+            // Skip exports validation for payload package since we know the exports exist
+            if (data.request === 'payload' || data.request === 'payload/shared') {
+              if (data.resolveOptions) {
+                // Ensure payload uses exports field but allow fallback to module/main
+                data.resolveOptions.exportsFields = ['exports', 'module', 'main']
+              }
+            }
+          })
+        })
+      }
+    })
     
     // Replace test files with empty module to prevent bundling errors
     config.plugins.push(
