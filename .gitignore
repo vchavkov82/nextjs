@@ -172,3 +172,6 @@ gcloud.json
 **/.sentryclirc
 
 keys.json
+
+
+llms.txt
