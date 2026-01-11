@@ -21,7 +21,7 @@ const FlyOut = (props: Props) => {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [handleCancel])
 
   return (
     <>

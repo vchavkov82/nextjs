@@ -97,6 +97,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
       <div
         className={cn('sticky top-0 z-40 transform', disableStickyNav && 'relative')}
         style={{ transform: 'translate3d(0,0,999px)' }}
+        suppressHydrationWarning
       >
         <div
           className={cn(
@@ -122,6 +123,7 @@ const Nav = ({ hideNavbar, stickyNavbar = true }: Props) => {
                   delayDuration={0}
                   className="hidden pl-8 sm:space-x-4 lg:flex h-16"
                   viewportClassName="rounded-xl bg-background"
+                  suppressHydrationWarning
                 >
                   <NavigationMenuList>
                     {menu.primaryNav.map((menuItem) =>

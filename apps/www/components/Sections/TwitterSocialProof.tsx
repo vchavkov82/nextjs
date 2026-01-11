@@ -16,13 +16,8 @@ const tweetsData = topTweets || []
 
 const TwitterSocialProof: React.FC<Props> = ({ className }) => {
   const { basePath } = useRouter()
-  const [isMounted, setIsMounted] = React.useState(false)
   const isSm = useBreakpoint()
   const isMd = useBreakpoint(1024)
-
-  React.useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   return (
     <>
@@ -44,8 +39,9 @@ const TwitterSocialProof: React.FC<Props> = ({ className }) => {
               'motion-reduce:animate-none motion-reduce:will-change-none',
               'will-change-transform transition-transform'
             )}
+            suppressHydrationWarning
           >
-            {tweetsData.slice(0, isMounted ? (isSm ? 9 : isMd ? 12 : 18) : 18).map((tweet: any, i: number) => (
+            {tweetsData.slice(0, 18).map((tweet: any, i: number) => (
               <Link
                 key={tweet.text}
                 href={tweet.url}

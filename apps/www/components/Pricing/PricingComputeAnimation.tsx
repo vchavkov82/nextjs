@@ -3,18 +3,13 @@
 import { useBreakpoint } from 'common'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { cn } from 'ui'
 
 const PricingComputeAnimation = () => {
   const { resolvedTheme } = useTheme()
   const [triggerAnimation, setTriggerAnimation] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
   const isTablet = useBreakpoint(1023)
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   return (
     <figure
@@ -60,7 +55,7 @@ const PricingComputeAnimation = () => {
       />
       <Image
         fill
-        src={`/images/pricing/compute/compute-grid${isMounted && isTablet ? '-mobile' : ''}-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+        src={`/images/pricing/compute/compute-grid${isTablet ? '-mobile' : ''}-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
           }.svg`}
         alt="Compute addon grid"
         className="absolute inset-0 z-0 object-contain object-center"
