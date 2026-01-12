@@ -219,57 +219,8 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
             href: '/guides/ci-cd-runners' as `/${string}`,
             level: 'reference_ci_cd_runners',
           },
-          {
-            label: 'Flutter',
-            icon: 'reference-dart',
-            href: '/reference/dart' as `/${string}`,
-            level: 'reference_dart',
-            enabled: sdkDartEnabled,
-          },
-          {
-            label: 'Swift',
-            icon: 'reference-swift',
-            href: '/reference/swift' as `/${string}`,
-            level: 'reference_swift',
-            enabled: sdkSwiftEnabled,
-          },
-          {
-            label: 'Python',
-            icon: 'reference-python',
-            href: '/reference/python' as `/${string}`,
-            level: 'reference_python',
-            enabled: sdkPythonEnabled,
-          },
-          {
-            label: 'C#',
-            icon: 'reference-csharp',
-            href: '/reference/csharp' as `/${string}`,
-            level: 'reference_csharp',
-            community: true,
-            enabled: sdkCsharpEnabled,
-          },
-          {
-            label: 'Kotlin',
-            icon: 'reference-kotlin',
-            href: '/reference/kotlin' as `/${string}`,
-            level: 'reference_kotlin',
-            community: true,
-            enabled: sdkKotlinEnabled,
-          },
         ],
         [
-          {
-            label: 'CLI Commands',
-            icon: 'reference-cli',
-            href: '/reference/cli/introduction' as `/${string}`,
-            level: 'reference_javascript',
-          },
-          {
-            label: 'Management API',
-            icon: 'reference-api',
-            href: '/reference/api/introduction' as `/${string}`,
-            level: 'reference_javascript',
-          },
           {
             label: 'UI Library',
             icon: 'ui',
@@ -1782,165 +1733,10 @@ export const reference = {
 }
 
 // TODO: How to?
-export const reference_dart_v1 = {
-  icon: 'reference-dart',
-  title: 'Flutter',
-  url: '/reference/dart/v1',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase_flutter',
-    repo: 'https://github.com/vchavkov82/nextjs-flutter',
-  },
-}
-
-export const reference_dart_v2 = {
-  icon: 'reference-dart',
-  title: 'Flutter',
-  url: '/reference/dart',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase_flutter',
-    repo: 'https://github.com/vchavkov82/nextjs-flutter',
-  },
-}
-
-export const reference_csharp_v0 = {
-  icon: 'reference-csharp',
-  title: 'C#',
-  url: '/reference/csharp/v0',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase',
-    repo: 'https://github.com/supabase-community/supabase-csharp',
-  },
-}
-
-export const reference_csharp_v1 = {
-  icon: 'reference-csharp',
-  title: 'C#',
-  url: '/reference/csharp',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase',
-    repo: 'https://github.com/supabase-community/supabase-csharp',
-  },
-}
-
-export const reference_python_v2 = {
-  icon: 'reference-python',
-  title: 'Python',
-  url: '/reference/python',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase-py',
-    repo: 'https://github.com/vchavkov82/nextjs-py',
-  },
-}
-
-export const reference_swift_v1 = {
-  icon: 'reference-swift',
-  title: 'swift',
-  url: '/reference/swift',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase-swift',
-    repo: 'https://github.com/vchavkov82/nextjs-swift',
-  },
-}
-
-export const reference_swift_v2 = {
-  icon: 'reference-swift',
-  title: 'swift',
-  url: '/reference/swift',
-  parent: '/reference',
-  pkg: {
-    name: 'supabase-swift',
-    repo: 'https://github.com/vchavkov82/nextjs-swift',
-  },
-}
-
-export const reference_kotlin_v1 = {
-  icon: 'reference-kotlin',
-  title: 'kotlin',
-  url: '/reference/kotlin',
-  parent: '/reference',
-  pkg: {
-    name: '@supabase-community/supabase-kt',
-    repo: 'https://github.com/supabase-community/supabase-kt',
-  },
-}
-
-export const reference_kotlin_v2 = {
-  icon: 'reference-kotlin',
-  title: 'kotlin',
-  url: '/reference/kotlin',
-  parent: '/reference',
-  pkg: {
-    name: '@supabase-community/supabase-kt',
-    repo: 'https://github.com/supabase-community/supabase-kt',
-  },
-}
-
-export const reference_kotlin_v3 = {
-  icon: 'reference-kotlin',
-  title: 'kotlin',
-  url: '/reference/kotlin',
-  parent: '/reference',
-  pkg: {
-    name: '@supabase-community/supabase-kt',
-    repo: 'https://github.com/supabase-community/supabase-kt',
-  },
-}
-
-export const reference_cli = {
-  icon: 'reference-cli',
-  title: 'BA CLI',
-  url: '/reference/cli/introduction',
-  parent: '/',
-  pkg: {
-    name: 'supabase',
-    repo: 'https://github.com/supabase/cli',
-  },
-}
 export const reference_api = {
   icon: 'reference-api',
   title: 'Management API',
   url: '/reference/api/introduction',
-  parent: '/reference',
-}
-
-export const reference_self_hosting_auth = {
-  icon: 'self-hosting',
-  title: 'Self-Hosting Auth',
-  url: '/reference/self-hosting-auth',
-  parent: '/reference',
-}
-
-export const reference_self_hosting_storage = {
-  icon: 'self-hosting',
-  title: 'Self-Hosting Storage',
-  url: '/reference/self-hosting-storage',
-  parent: '/reference',
-}
-
-export const reference_self_hosting_realtime = {
-  icon: 'self-hosting',
-  title: 'Self-Hosting Realtime',
-  url: '/reference/self-hosting-realtime',
-  parent: '/reference',
-}
-
-export const reference_self_hosting_analytics = {
-  icon: 'reference-analytics',
-  title: 'Self-Hosting Analytics',
-  url: '/reference/self-hosting-analytics',
-  parent: '/reference',
-}
-
-export const reference_self_hosting_functions = {
-  icon: 'reference-functions',
-  title: 'Self-Hosting Functions',
-  url: '/reference/self-hosting-functions',
   parent: '/reference',
 }
 
@@ -1957,57 +1753,6 @@ export const reference_ci_cd_runners_v1 = {
 
 export const references = [
   {
-    label: 'Client libraries',
-    items: [
-      {
-        label: 'supabase-js',
-        versions: ['v2', 'v1'],
-        description: 'something about the reference',
-        icon: '/docs/img/icons/javascript-icon.svg',
-        url: '/reference/javascript/start',
-      },
-      {
-        label: 'supabase-py',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/python-icon.svg',
-        url: '/reference/python/start',
-        enabled: sdkPythonEnabled,
-      },
-      {
-        label: 'supabase-dart',
-        versions: ['v1', 'v0'],
-        description: 'something about the reference',
-        icon: '/docs/img/icons/dart-icon.svg',
-        url: '/reference/dart/start',
-        enabled: sdkDartEnabled,
-      },
-      {
-        label: 'supabase-csharp',
-        versions: ['v0'],
-        description: 'something about the reference',
-        icon: '/docs/img/icons/c-sharp-icon.svg',
-        url: '/reference/csharp/start',
-        enabled: sdkCsharpEnabled,
-      },
-      {
-        label: 'supabase-swift',
-        versions: ['v2', 'v1'],
-        description: 'something about the reference',
-        icon: '/docs/img/icons/swift-icon.svg',
-        url: '/reference/swift/start',
-        enabled: sdkSwiftEnabled,
-      },
-      {
-        label: 'supabase-kt',
-        versions: ['v3', 'v2', 'v1'],
-        description: 'something about the reference',
-        icon: '/docs/img/icons/kotlin-icon.svg',
-        url: '/reference/kotlin/start',
-        enabled: sdkKotlinEnabled,
-      },
-    ],
-  },
-  {
     label: 'Platform Tools',
     items: [
       {
@@ -2016,41 +1761,6 @@ export const references = [
         description: 'something about the reference',
         icon: '/docs/img/icons/github-icon.svg',
         url: '/guides/ci-cd-runners',
-      },
-      {
-        label: 'CLI',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/cli-icon.svg',
-        url: '/reference/cli/start',
-      },
-      {
-        label: 'Management API',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/api-icon.svg',
-        url: '/reference/management-api/start',
-      },
-    ],
-  },
-  {
-    label: 'Self-Hosting',
-    items: [
-      {
-        label: 'Auth server',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/menu/auth.svg',
-        url: '/reference/auth/start',
-      },
-      {
-        label: 'Storage server',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/menu/storage.svg',
-        url: '/reference/storage/start',
-      },
-      {
-        label: 'Realtime server',
-        description: 'something about the reference',
-        icon: '/docs/img/icons/menu/realtime.svg',
-        url: '/reference/realtime/start',
       },
     ],
   },
