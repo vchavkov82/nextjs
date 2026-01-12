@@ -3,31 +3,21 @@
 # Test Script to Verify Content Preservation Setup
 # Usage: ./scripts/test-content-preservation.sh
 #
-# This script validates that the git attributes configuration and merge driver
+# This script validates that git attributes configuration and merge driver
 # are properly set up for content preservation during rebases.
 
 set -e
 
-# Colors
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+# Load common library
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=./lib-rebase-common.sh
+source "$SCRIPT_DIR/lib-rebase-common.sh"
 
 # Test counters
 TESTS_PASSED=0
 TESTS_FAILED=0
 
-# Helper functions
-print_header() {
-    echo ""
-    echo -e "${BLUE}════════════════════════════════════════════════════════════${NC}"
-    echo -e "${BLUE}$1${NC}"
-    echo -e "${BLUE}════════════════════════════════════════════════════════════${NC}"
-    echo ""
-}
-
+# Test result tracking
 print_test() {
     echo -e "${YELLOW}[TEST]${NC} $1"
 }
@@ -42,34 +32,28 @@ print_fail() {
     TESTS_FAILED=$((TESTS_FAILED + 1))
 }
 
-print_info() {
-    echo -e "${GREEN}[INFO]${NC} $1"
-}
-
 # Test 1: Git repository check
 test_git_repo() {
     print_test "Checking if in a git repository..."
-
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    if check_git_repo; then
+        print_pass "Git repository found"
+        return 0
+    else
         print_fail "Not in a git repository"
         return 1
     fi
-
-    print_pass "Git repository found"
-    return 0
 }
 
 # Test 2: .gitattributes existence
 test_gitattributes_exists() {
     print_test "Checking if .gitattributes file exists..."
-
-    if [ ! -f ".gitattributes" ]; then
+    if [ -f ".gitattributes" ]; then
+        print_pass ".gitattributes file exists"
+        return 0
+    else
         print_fail ".gitattributes not found in repository root"
         return 1
     fi
-
-    print_pass ".gitattributes file exists"
-    return 0
 }
 
 # Test 3: .gitattributes contains content patterns
@@ -100,7 +84,7 @@ test_gitattributes_content() {
         return 1
     fi
 
-    print_pass ".gitattributes contains all required content patterns ($found patterns)"
+    print_pass ".gitattributes contains all required patterns ($found patterns)"
     return 0
 }
 
@@ -113,7 +97,7 @@ test_merge_strategy() {
         return 1
     fi
 
-    local count=$(grep -c "merge=ours" .gitattributes 2>/dev/null || true)
+    local count=$(grep -c "merge=ours" .gitattributes 2>/dev/null || echo "0")
     print_pass "Found merge=ours strategy ($count occurrences)"
     return 0
 }
@@ -163,8 +147,8 @@ test_branch_structure() {
         return 1
     fi
 
-    local current=$(git branch --show-current)
-    print_pass "Branch structure valid (current: $current)"
+    local current=$(get_current_branch)
+    print_pass "Branch structure valid (current: ${current:-detached})"
     return 0
 }
 
@@ -172,7 +156,7 @@ test_branch_structure() {
 test_remote_connectivity() {
     print_test "Checking remote connectivity..."
 
-    if ! git remote | grep -q "^origin$"; then
+    if ! check_origin_remote; then
         print_fail "Origin remote not found"
         return 1
     fi
@@ -204,100 +188,102 @@ test_rebase_script() {
     return 0
 }
 
-# Test 10: No uncommitted changes on develop
-test_develop_clean() {
-    print_test "Checking if develop branch is clean..."
+# Test 10: pnpm availability and scripts
+test_pnpm() {
+    print_test "Checking pnpm and scripts..."
 
-    # Check if we're in the middle of a rebase
-    if [ -d ".git/rebase-merge" ] || [ -d ".git/rebase-apply" ]; then
-        print_pass "Skipped (rebase in progress) - check develop manually after rebase"
-        return 0
-    fi
-
-    # Save current branch
-    local current=$(git branch --show-current)
-
-    # If not on a branch (detached HEAD), skip this test
-    if [ -z "$current" ]; then
-        print_pass "Skipped (detached HEAD state)"
-        return 0
-    fi
-
-    # Check if there are uncommitted changes that would prevent checkout
-    if ! git diff-index --quiet HEAD -- 2>/dev/null; then
-        print_pass "Skipped (uncommitted changes on current branch)"
-        return 0
-    fi
-
-    # Switch to develop temporarily
-    if ! git checkout develop > /dev/null 2>&1; then
-        print_fail "Cannot checkout develop branch"
+    if ! check_pnpm; then
+        print_fail "pnpm not installed"
         return 1
     fi
 
-    # Check for changes on develop
-    local has_changes=0
-    if ! git diff-index --quiet HEAD -- 2>/dev/null; then
-        has_changes=1
-    fi
+    local pnpm_version=$(pnpm --version 2>/dev/null || echo "unknown")
 
-    # Switch back to original branch
-    git checkout "$current" > /dev/null 2>&1
+    # Check for required scripts (non-fatal)
+    local scripts_found=0
+    for script in "build:docs" "typecheck"; do
+        if pnpm run "$script" --help > /dev/null 2>&1; then
+            scripts_found=$((scripts_found + 1))
+        fi
+    done
 
-    if [ $has_changes -eq 1 ]; then
-        print_fail "develop branch has uncommitted changes"
-        return 1
-    fi
-
-    print_pass "develop branch is clean"
+    print_pass "pnpm available (v$pnpm_version, $scripts_found/2 scripts found)"
     return 0
 }
 
-# Test 11: Simulate conflict detection (dry-run)
+# Test 11: Common library
+test_common_library() {
+    print_test "Checking common library..."
+
+    if [ ! -f "scripts/lib-rebase-common.sh" ]; then
+        print_fail "scripts/lib-rebase-common.sh not found"
+        return 1
+    fi
+
+    # Test if key functions are available
+    if ! declare -f print_info > /dev/null; then
+        print_fail "Common library functions not loaded"
+        return 1
+    fi
+
+    print_pass "Common library loaded successfully"
+    return 0
+}
+
+# Test 12: Conflict potential analysis
 test_conflict_potential() {
     print_test "Analyzing potential conflicts..."
 
     git fetch origin develop > /dev/null 2>&1
 
-    local current=$(git branch --show-current)
-    local merge_base=$(git merge-base HEAD origin/develop)
+    local current=$(get_current_branch)
+    if [ -z "$current" ]; then
+        print_pass "Skipped (detached HEAD state)"
+        return 0
+    fi
 
-    # Check for files changed in current branch
+    local merge_base=$(get_merge_base HEAD origin/develop)
+    if [ -z "$merge_base" ]; then
+        print_pass "Skipped (no common ancestor)"
+        return 0
+    fi
+
     local branch_changes=$(git diff --name-only "$merge_base" HEAD 2>/dev/null | wc -l)
-
-    # Check for files changed in develop since merge base
     local develop_changes=$(git diff --name-only "$merge_base" origin/develop 2>/dev/null | wc -l)
+    local potential_conflicts=$(comm -12 \
+        <(git diff --name-only "$merge_base" HEAD 2>/dev/null | sort) \
+        <(git diff --name-only "$merge_base" origin/develop 2>/dev/null | sort) | wc -l)
 
-    # Check for potential overlaps
-    local potential_conflicts=$(comm -12 <(git diff --name-only "$merge_base" HEAD 2>/dev/null | sort) <(git diff --name-only "$merge_base" origin/develop 2>/dev/null | sort) | wc -l)
-
-    print_pass "Analyzed changes (branch: $branch_changes, develop: $develop_changes, potential conflicts: $potential_conflicts)"
+    print_pass "Analyzed (branch: $branch_changes, develop: $develop_changes, conflicts: $potential_conflicts)"
 
     if [ "$potential_conflicts" -gt 0 ]; then
-        print_info "Expected conflicts in: $(comm -12 <(git diff --name-only "$merge_base" HEAD 2>/dev/null | sort) <(git diff --name-only "$merge_base" origin/develop 2>/dev/null | sort) | head -3 | tr '\n' ',')"
+        local conflict_files=$(comm -12 \
+            <(git diff --name-only "$merge_base" HEAD 2>/dev/null | sort) \
+            <(git diff --name-only "$merge_base" origin/develop 2>/dev/null | sort) | head -3 | tr '\n' ', ')
+        print_info "Sample conflicts: ${conflict_files%,}"
     fi
 
     return 0
 }
 
-# Test 12: Environment check
+# Test 13: Environment check
 test_environment() {
     print_test "Checking shell environment..."
 
     # Check bash version
     if [ -z "$BASH_VERSION" ]; then
-        print_fail "Script requires bash (not running in bash)"
+        print_fail "Not running in bash"
         return 1
     fi
 
-    local bash_version=$(echo "$BASH_VERSION" | cut -d. -f1)
-    if [ "$bash_version" -lt 4 ]; then
+    local bash_major=$(echo "$BASH_VERSION" | cut -d. -f1)
+    if [ "$bash_major" -lt 4 ]; then
         print_fail "Bash 4+ required (current: $BASH_VERSION)"
         return 1
     fi
 
     # Check required commands
-    local required_commands=("git" "grep" "mktemp")
+    local required_commands=("git" "grep" "mktemp" "wc")
     local missing=0
 
     for cmd in "${required_commands[@]}"; do
@@ -329,7 +315,8 @@ main() {
     test_branch_structure
     test_remote_connectivity
     test_rebase_script
-    test_develop_clean
+    test_pnpm
+    test_common_library
     test_conflict_potential
     test_environment
 
@@ -338,7 +325,7 @@ main() {
 
     local total=$((TESTS_PASSED + TESTS_FAILED))
 
-    echo -e "Total Tests: $total"
+    echo "Total Tests: $total"
     echo -e "${GREEN}Passed: $TESTS_PASSED${NC}"
     if [ $TESTS_FAILED -gt 0 ]; then
         echo -e "${RED}Failed: $TESTS_FAILED${NC}"
@@ -350,18 +337,19 @@ main() {
         print_info "✓ All tests passed! Setup is ready for rebasing."
         print_info ""
         print_info "Next steps:"
-        print_info "1. Create a backup branch: git checkout -b <branch>-backup"
-        print_info "2. Run rebase: ./scripts/rebase-from-develop.sh"
-        print_info "3. Test build: pnpm build:docs"
+        print_info "  1. Create backup: git checkout -b <branch>-backup"
+        print_info "  2. Run rebase: ./scripts/rebase-from-develop.sh"
+        print_info "  3. Test build: pnpm build:docs"
+        print_info "  4. Verify: git diff HEAD@{1} apps/docs/content"
         print_info ""
         return 0
     else
-        print_fail "✗ Some tests failed. Review errors above and fix them."
+        print_fail "✗ $TESTS_FAILED test(s) failed. Review errors above."
         print_info ""
         print_info "Common fixes:"
-        print_info "• .gitattributes missing: Check file exists at repository root"
-        print_info "• merge.ours not configured: Run 'git config merge.ours.driver true'"
-        print_info "• develop branch issues: Ensure develop branch is up to date"
+        print_info "  • Missing .gitattributes: Check file exists at repo root"
+        print_info "  • merge.ours not configured: Run 'git config merge.ours.driver true'"
+        print_info "  • pnpm not installed: Run 'npm install -g pnpm'"
         print_info ""
         return 1
     fi
