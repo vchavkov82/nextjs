@@ -88,12 +88,13 @@ export function parseReferencePath(slug: Array<string>) {
 
 async function generateStaticParamsForSdkVersion(sdkId: string, version: string) {
   const flattenedSections = await getFlattenedSections(sdkId, version)
+  const libPath = REFERENCES[sdkId].libPath
 
   return (flattenedSections || [])
     .filter((section) => section.type !== 'category' && !!section.slug)
     .map((section) => ({
       slug: [
-        sdkId,
+        libPath,
         version === REFERENCES[sdkId].versions[0] ? null : version,
         'crawlers',
         section.slug,
@@ -156,7 +157,8 @@ export async function generateReferenceMetadata(
       slug.length > 0
         ? flattenedSections?.find((section) => section.slug === slug[0])?.title
         : undefined
-    const url = [BASE_PATH, 'reference', sdkId, path[0]].filter(Boolean).join('/')
+    const libPath = REFERENCES[sdkId].libPath
+    const url = [BASE_PATH, 'reference', libPath, path[0]].filter(Boolean).join('/')
 
     const images = generateOpenGraphImageMeta({
       type: 'API Reference',
@@ -212,7 +214,8 @@ export async function redirectNonexistentReferenceSection(
     initialSelectedSection &&
     !validSlugs.some((params) => params.slug[0] === initialSelectedSection)
   ) {
-    redirect(`/reference/${sdkId}` + (!isLatestVersion ? '/' + version : ''))
+    const libPath = REFERENCES[sdkId].libPath
+    redirect(`/reference/${libPath}` + (!isLatestVersion ? '/' + version : ''))
   }
 }
 

@@ -216,7 +216,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
           {
             label: 'CI/CD Runners',
             icon: 'github',
-            href: '/reference/ci-cd-runners/v1/introduction' as `/${string}`,
+            href: '/reference/ci-cd-runners' as `/${string}`,
             level: 'reference_ci_cd_runners_v1',
           },
           {
