@@ -1,0 +1,247 @@
+/* ─────────────────────────────────────────────────────────────
+   Supabase Theme Fixes
+   Uses the existing Supabase color system (green brand)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* Supabase Brand Colors */
+  --sb-green: #3ecf8e;
+  --sb-green-dark: #24b47e;
+  --sb-green-light: #65d9a5;
+
+  /* Backgrounds */
+  --sb-bg-primary: hsl(0deg 0% 100%);
+  --sb-bg-secondary: hsl(0deg 0% 98%);
+  --sb-bg-tertiary: hsl(0deg 0% 96%);
+
+  /* Text */
+  --sb-text-primary: hsl(0deg 0% 9%);
+  --sb-text-secondary: hsl(0deg 0% 40%);
+  --sb-text-muted: hsl(0deg 0% 55%);
+
+  /* Borders */
+  --sb-border: hsl(0deg 0% 90%);
+  --sb-border-strong: hsl(0deg 0% 80%);
+}
+
+/* Dark mode */
+[data-theme='dark'],
+.dark {
+  --sb-bg-primary: hsl(0deg 0% 7%);
+  --sb-bg-secondary: hsl(0deg 0% 10%);
+  --sb-bg-tertiary: hsl(0deg 0% 14%);
+
+  --sb-text-primary: hsl(0deg 0% 98%);
+  --sb-text-secondary: hsl(0deg 0% 75%);
+  --sb-text-muted: hsl(0deg 0% 55%);
+
+  --sb-border: hsl(0deg 0% 20%);
+  --sb-border-strong: hsl(0deg 0% 30%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --sb-bg-primary: hsl(0deg 0% 7%);
+    --sb-bg-secondary: hsl(0deg 0% 10%);
+    --sb-bg-tertiary: hsl(0deg 0% 14%);
+
+    --sb-text-primary: hsl(0deg 0% 98%);
+    --sb-text-secondary: hsl(0deg 0% 75%);
+    --sb-text-muted: hsl(0deg 0% 55%);
+
+    --sb-border: hsl(0deg 0% 20%);
+    --sb-border-strong: hsl(0deg 0% 30%);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Navigation Menu Fixes
+   ───────────────────────────────────────────────────────────── */
+
+/* Navigation trigger buttons */
+[data-radix-collection-item] {
+  color: var(--sb-text-secondary);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+[data-radix-collection-item]:hover {
+  color: var(--sb-text-primary);
+  background-color: var(--sb-bg-secondary);
+}
+
+[data-radix-collection-item][data-state="open"] {
+  color: var(--sb-green);
+}
+
+/* Dropdown content */
+[data-radix-menu-content],
+[data-radix-navigation-menu-viewport] {
+  background-color: var(--sb-bg-primary);
+  border: 1px solid var(--sb-border);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu items */
+[data-radix-menu-content] a,
+[data-radix-navigation-menu-content] a {
+  color: var(--sb-text-secondary);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+[data-radix-menu-content] a:hover,
+[data-radix-navigation-menu-content] a:hover {
+  color: var(--sb-text-primary);
+  background-color: var(--sb-bg-secondary);
+}
+
+/* Icon containers in menu */
+.bg-background {
+  background-color: var(--sb-bg-primary);
+}
+
+.bg-surface-75 {
+  background-color: var(--sb-bg-secondary);
+}
+
+.bg-surface-200 {
+  background-color: var(--sb-bg-tertiary);
+}
+
+/* Text colors */
+.text-foreground {
+  color: var(--sb-text-primary);
+}
+
+.text-foreground-light {
+  color: var(--sb-text-secondary);
+}
+
+.text-foreground-lighter {
+  color: var(--sb-text-muted);
+}
+
+.text-foreground-muted {
+  color: var(--sb-text-muted);
+}
+
+/* Borders */
+.border {
+  border-color: var(--sb-border);
+}
+
+.border-default {
+  border-color: var(--sb-border);
+}
+
+/* Hover states */
+.hover\:text-foreground:hover {
+  color: var(--sb-text-primary);
+}
+
+.hover\:bg-surface-200:hover {
+  background-color: var(--sb-bg-tertiary);
+}
+
+.group:hover .group-hover\/menu-item\:text-foreground {
+  color: var(--sb-text-primary);
+}
+
+.group:hover .group-hover\/menu-item\:text-foreground-light {
+  color: var(--sb-text-secondary);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Button Fixes - Supabase Green
+   ───────────────────────────────────────────────────────────── */
+
+/* Primary buttons - Supabase green */
+.btn-primary,
+button[class*="primary"],
+.bg-brand {
+  background-color: var(--sb-green) !important;
+  color: #000 !important;
+  border-color: var(--sb-green) !important;
+}
+
+.btn-primary:hover,
+button[class*="primary"]:hover,
+.bg-brand:hover {
+  background-color: var(--sb-green-dark) !important;
+  border-color: var(--sb-green-dark) !important;
+}
+
+/* Brand color classes */
+.text-brand {
+  color: var(--sb-green);
+}
+
+.border-brand {
+  border-color: var(--sb-green);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Focus & Accessibility
+   ───────────────────────────────────────────────────────────── */
+
+/* Focus ring using brand color */
+.focus-visible\:ring-brand:focus-visible {
+  --tw-ring-color: var(--sb-green);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--sb-green);
+  outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Smooth Transitions
+   ───────────────────────────────────────────────────────────── */
+
+a, button, [role="menuitem"], [data-radix-collection-item] {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Animation Fixes
+   ───────────────────────────────────────────────────────────── */
+
+/* Dropdown animation */
+[data-radix-navigation-menu-viewport] {
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chevron animation */
+.group:hover .group-hover\/menu-item\:translate-x-0 {
+  transform: translateX(0);
+}
+
+.group:hover .group-hover\/menu-item\:opacity-100 {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Reduced Motion
+   ───────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

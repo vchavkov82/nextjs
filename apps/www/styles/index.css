@@ -3,11 +3,8 @@
 @import './../../../packages/ui/build/css/themes/dark-combined.css';
 @import './../../../packages/ui/build/css/themes/light.css';
 
-/* Modern Design System - Primary */
-@import './design-system.css';
-@import './animations-modern.css';
-@import './navigation.css';
-@import './navigation-overrides.css';
+/* Supabase Theme Fixes */
+@import './supabase-fixes.css';
 
 @tailwind base;
 @tailwind components;
@@ -67,98 +64,6 @@ body {
   @apply text-foreground;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* LocalStack Typography */
-  font-family: 'Aeonik', var(--font-custom, Circular, custom-font, sans-serif);
-}
-
-/* LocalStack Typography Classes */
-.ls-h1 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-5xl);
-  font-weight: var(--ls-font-bold);
-  line-height: var(--ls-leading-tight);
-  letter-spacing: var(--ls-tracking-tight);
-  color: var(--ls-text-primary);
-}
-
-.ls-h2 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-4xl);
-  font-weight: var(--ls-font-bold);
-  line-height: var(--ls-leading-tight);
-  letter-spacing: var(--ls-tracking-tight);
-  color: var(--ls-text-primary);
-}
-
-.ls-h3 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-3xl);
-  font-weight: var(--ls-font-semibold);
-  line-height: var(--ls-leading-tight);
-  letter-spacing: var(--ls-tracking-tight);
-  color: var(--ls-text-primary);
-}
-
-.ls-h4 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-2xl);
-  font-weight: var(--ls-font-semibold);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-primary);
-}
-
-.ls-h5 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-xl);
-  font-weight: var(--ls-font-semibold);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-primary);
-}
-
-.ls-h6 {
-  font-family: 'Aeonik', var(--font-custom, sans-serif);
-  font-size: var(--ls-text-lg);
-  font-weight: var(--ls-font-semibold);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-primary);
-}
-
-.ls-body-lg {
-  font-size: var(--ls-text-lg);
-  line-height: var(--ls-leading-relaxed);
-  color: var(--ls-text-secondary);
-}
-
-.ls-body {
-  font-size: var(--ls-text-base);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-secondary);
-}
-
-.ls-body-sm {
-  font-size: var(--ls-text-sm);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-secondary);
-}
-
-.ls-caption {
-  font-size: var(--ls-text-xs);
-  line-height: var(--ls-leading-normal);
-  color: var(--ls-text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: var(--ls-tracking-wide);
-  font-weight: var(--ls-font-medium);
-}
-
-.ls-code {
-  font-family: 'Aeonik Mono', monospace;
-  font-size: var(--ls-text-sm);
-  font-weight: var(--ls-font-normal);
-  background-color: var(--ls-bg-secondary);
-  color: var(--ls-text-primary);
-  padding: 0.2em 0.4em;
-  border-radius: var(--ls-radius-sm);
-  border: 1px solid var(--ls-border-primary);
 }
 
 /* h1,
