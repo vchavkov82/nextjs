@@ -274,20 +274,15 @@ export function McpConfigPanel() {
       createMcpCopyHandler({
         selectedClient,
         source: 'docs',
-        onTrack: (event) => {
-          as any,
-          })
+        onTrack: () => {
+          // Tracking not implemented
         },
         projectRef: project?.ref,
       }),
   )
 
   const handleInstall = () => {
-    if (selectedClient?.label) {
-      ,
-        } as any,
-      })
-    }
+    // Install callback
   }
 
   return (

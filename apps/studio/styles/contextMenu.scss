@@ -1,0 +1,12 @@
+/* Context menu styles */
+.context-menu {
+  @apply bg-surface-0 dark:bg-surface-1000 border border-scale-600 dark:border-scale-500 rounded-md shadow-lg py-1;
+}
+
+.context-menu-item {
+  @apply px-3 py-2 text-sm cursor-pointer hover:bg-surface-200 dark:hover:bg-surface-800;
+}
+
+.context-menu-separator {
+  @apply border-t border-scale-600 dark:border-scale-500 my-1;
+}

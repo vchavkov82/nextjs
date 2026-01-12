@@ -1,0 +1,12 @@
+/* Code block styles */
+pre {
+  @apply bg-surface-200 dark:bg-surface-900 rounded-md p-4 overflow-x-auto;
+}
+
+code {
+  @apply text-sm font-mono bg-surface-100 dark:bg-surface-800 px-1 py-0.5 rounded;
+}
+
+pre code {
+  @apply bg-transparent p-0;
+}
