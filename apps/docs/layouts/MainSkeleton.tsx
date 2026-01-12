@@ -145,6 +145,10 @@ const levelsData = {
     icon: 'reference-kotlin',
     name: 'Kotlin Reference v3.0',
   },
+  reference_ci_cd_runners_v1: {
+    icon: 'github',
+    name: 'CI/CD Runners Reference v1.0',
+  },
   reference_cli: {
     icon: 'reference-cli',
     name: 'CLI Reference',
@@ -172,10 +176,6 @@ const levelsData = {
   reference_self_hosting_functions: {
     icon: 'reference-functions',
     name: 'Functions Server Reference',
-  },
-  reference_self_hosting_ci_cd_runners: {
-    icon: 'github',
-    name: 'Self-Hosted CI/CD Runners Reference',
   },
 }
 

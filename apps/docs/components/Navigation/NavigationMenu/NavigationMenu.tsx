@@ -37,6 +37,7 @@ enum MenuId {
   RefKotlinV1 = 'reference_kotlin_v1',
   RefKotlinV2 = 'reference_kotlin_v2',
   RefKotlinV3 = 'reference_kotlin_v3',
+  RefCiCdRunnersV1 = 'reference_ci_cd_runners_v1',
   RefCli = 'reference_cli',
   RefApi = 'reference_api',
   SelfHostingAuth = 'reference_self_hosting_auth',
@@ -44,7 +45,6 @@ enum MenuId {
   SelfHostingRealtime = 'reference_self_hosting_realtime',
   SelfHostingAnalytics = 'reference_self_hosting_analytics',
   SelfHostingFunctions = 'reference_self_hosting_functions',
-  SelfHostingCiCdRunners = 'reference_self_hosting_ci_cd_runners',
 }
 
 interface BaseMenu {
@@ -197,6 +197,11 @@ const menus: Menu[] = [
     path: '/reference/kotlin',
   },
   {
+    id: MenuId.RefCiCdRunnersV1,
+    type: 'reference',
+    path: '/reference/ci-cd-runners/v1',
+  },
+  {
     id: MenuId.RefCli,
     type: 'reference',
     path: '/reference/cli',
@@ -237,12 +242,6 @@ const menus: Menu[] = [
     type: 'reference',
     path: '/reference/self-hosting-functions',
     commonSectionsFile: 'common-self-hosting-functions-sections.json',
-  },
-  {
-    id: MenuId.SelfHostingCiCdRunners,
-    type: 'reference',
-    path: '/reference/self-hosting-ci-cd-runners',
-    commonSectionsFile: 'common-self-hosting-ci-cd-runners-sections.json',
   },
 ]
 

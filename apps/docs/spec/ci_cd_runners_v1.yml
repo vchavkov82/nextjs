@@ -1,0 +1,15 @@
+openref: 0.1
+
+info:
+  id: reference/ci-cd-runners
+  title: CI/CD Runners
+  description: |
+    Self-hosted CI/CD Runners allow you to run your CI/CD workflows on your own infrastructure, providing better performance, cost savings, and control over your build environment.
+  slugPrefix: '/'
+  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/ci_cd_runners_v1.yml
+  libraries:
+    - name: 'CI/CD Runners'
+      id: 'ci-cd-runners'
+      version: '1.0.0'
+
+functions: []

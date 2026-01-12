@@ -9,6 +9,20 @@ const sdkPythonEnabled = !!_features.sdkPython
 const sdkSwiftEnabled = !!_features.sdkSwift
 
 export const REFERENCES = {
+  ci_cd_runners: {
+    type: 'sdk',
+    name: 'CI/CD Runners',
+    library: 'ci-cd-runners',
+    libPath: 'ci-cd-runners',
+    versions: ['v1'],
+    icon: 'github',
+    meta: {
+      v1: {
+        libId: 'reference_ci_cd_runners_v1',
+        specFile: 'ci_cd_runners_v1',
+      },
+    },
+  },
   dart: {
     type: 'sdk',
     name: 'Flutter',
@@ -152,13 +166,6 @@ export const REFERENCES = {
     libPath: 'self-hosting-storage',
     versions: [],
     icon: 'self-hosting',
-  },
-  self_hosting_ci_cd_runners: {
-    type: 'self-hosting',
-    name: 'Self-Hosted CI/CD Runners',
-    libPath: 'self-hosting-ci-cd-runners',
-    versions: [],
-    icon: 'github',
   },
 }
 

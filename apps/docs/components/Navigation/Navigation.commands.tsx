@@ -84,6 +84,13 @@ const navCommands = [
     icon: () => <ArrowRight />,
   },
   {
+    id: 'nav-ref-ci-cd-runners',
+    name: 'Go to CI/CD Runners reference',
+    value: 'Reference, API, SDK: Go to CI/CD Runners reference (CI/CD Runners)',
+    route: '/reference/ci-cd-runners/v1/introduction',
+    icon: () => <ArrowRight />,
+  },
+  {
     id: 'nav-ref-dart',
     name: 'Go to Dart reference',
     value: 'Reference, API, SDK: Go to Dart reference (Flutter)',

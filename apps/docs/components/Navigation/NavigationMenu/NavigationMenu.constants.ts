@@ -211,6 +211,12 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
       menuItems: [
         [
           {
+            label: 'CI/CD Runners',
+            icon: 'github',
+            href: '/reference/ci-cd-runners/v1/introduction' as `/${string}`,
+            level: 'reference_ci_cd_runners_v1',
+          },
+          {
             label: 'Client Library Reference',
           },
           {
@@ -1934,11 +1940,15 @@ export const reference_self_hosting_functions = {
   parent: '/reference',
 }
 
-export const reference_self_hosting_ci_cd_runners = {
+export const reference_ci_cd_runners_v1 = {
   icon: 'github',
-  title: 'Self-Hosted CI/CD Runners',
-  url: '/reference/self-hosting-ci-cd-runners',
+  title: 'CI/CD Runners',
+  url: '/reference/ci-cd-runners/v1',
   parent: '/reference',
+  pkg: {
+    name: 'ci-cd-runners',
+    repo: 'https://github.com/vchavkov82/nextjs-ci-cd-runners',
+  },
 }
 
 export const references = [

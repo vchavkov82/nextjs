@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { REFERENCES, clientSdkIds } from '~/content/navigation.references'
+import { REFERENCES, clientSdkIds, selfHostingServices } from '~/content/navigation.references'
 import { IconPanelWithIconPicker } from '~/features/ui/IconPanelWithIconPicker'
 import { LayoutMainContent } from '~/layouts/DefaultLayout'
 import { SidebarSkeleton } from '~/layouts/MainSkeleton'

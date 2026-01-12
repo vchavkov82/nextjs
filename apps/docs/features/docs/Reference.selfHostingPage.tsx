@@ -5,7 +5,6 @@ import {
   reference_self_hosting_functions,
   reference_self_hosting_realtime,
   reference_self_hosting_storage,
-  reference_self_hosting_ci_cd_runners,
 } from '~/components/Navigation/NavigationMenu/NavigationMenu.constants'
 import { REFERENCES } from '~/content/navigation.references'
 import { ClientLibIntroduction } from '~/features/docs/Reference.introduction'
@@ -31,11 +30,9 @@ export async function SelfHostingReferencePage({
           ? MenuId.SelfHostingFunctions
           : service === 'realtime'
             ? MenuId.SelfHostingRealtime
-            : service === 'storage'
-              ? MenuId.SelfHostingStorage
-              : service === 'ci-cd-runners'
-                ? MenuId.SelfHostingCiCdRunners
-                : MenuId.SelfHosting
+          : service === 'storage'
+            ? MenuId.SelfHostingStorage
+            : MenuId.SelfHosting
 
   const menuData =
     service === 'analytics'
@@ -46,9 +43,7 @@ export async function SelfHostingReferencePage({
           ? reference_self_hosting_functions
           : service === 'realtime'
             ? reference_self_hosting_realtime
-            : service === 'storage'
-              ? reference_self_hosting_storage
-              : reference_self_hosting_ci_cd_runners
+            : reference_self_hosting_storage
 
   const name = REFERENCES[servicePath.replaceAll('-', '_')].name
 
