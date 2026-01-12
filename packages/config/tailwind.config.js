@@ -2,14 +2,42 @@ const ui = require('./ui.config.js')
 const deepMerge = require('deepmerge')
 const plugin = require('tailwindcss/plugin')
 
-const color = require('./../ui/build/css/tw-extend/color')
+let color = {}
+try {
+  color = require('./../ui/build/css/tw-extend/color')
+} catch (e) {
+  // Color file not generated yet, use minimal fallback with common classes
+  console.warn('Warning: UI color file not found, using minimal color fallback')
+  // Provide minimal color structure to prevent build failures
+  // Note: Using 'foreground' as base and ensuring nested keys don't conflict
+  color = {
+    'foreground': { cssVariable: 'var(--foreground, 210 40% 98%)', value: 'hsl(210 40% 98%)' },
+    'foreground-muted': { cssVariable: 'var(--foreground-muted, 210 40% 65%)', value: 'hsl(210 40% 65%)' },
+    'foreground-light': { cssVariable: 'var(--foreground-light, 210 40% 85%)', value: 'hsl(210 40% 85%)' },
+    'foreground-lighter': { cssVariable: 'var(--foreground-lighter, 210 40% 75%)', value: 'hsl(210 40% 75%)' },
+    'background-default': { cssVariable: 'var(--background-default, 0 0% 100%)', value: 'hsl(0 0% 100%)' },
+    'background-surface-100': { cssVariable: 'var(--background-surface-100, 210 40% 98%)', value: 'hsl(210 40% 98%)' },
+    'background-surface-200': { cssVariable: 'var(--background-surface-200, 210 40% 96%)', value: 'hsl(210 40% 96%)' },
+    'background-surface-300': { cssVariable: 'var(--background-surface-300, 210 40% 94%)', value: 'hsl(210 40% 94%)' },
+    'background-alternative-default': { cssVariable: 'var(--background-alternative-default, 210 40% 95%)', value: 'hsl(210 40% 95%)' },
+    'background-selection': { cssVariable: 'var(--background-selection, 210 40% 92%)', value: 'hsl(210 40% 92%)' },
+    'border-default': { cssVariable: 'var(--border-default, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
+    'border-strong': { cssVariable: 'var(--border-strong, 210 40% 80%)', value: 'hsl(210 40% 80%)' },
+    'border-muted': { cssVariable: 'var(--border-muted, 210 40% 88%)', value: 'hsl(210 40% 88%)' },
+    'border': { cssVariable: 'var(--border, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
+    'border-border': { cssVariable: 'var(--border-border, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
+    'border-background': { cssVariable: 'var(--border-background, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
+  }
+}
 
 /**
  *
  */
 let colorExtend = {}
-Object.values(color).map((x, i) => {
-  colorExtend[Object.keys(color)[i]] = `hsl(${x.cssVariable} / <alpha-value>)` // x.cssVariable
+// Sort keys by length (longest first) to ensure nested keys are processed before parent keys
+const sortedKeys = Object.keys(color).sort((a, b) => b.length - a.length)
+sortedKeys.forEach((key) => {
+  colorExtend[key] = `hsl(${color[key].cssVariable} / <alpha-value>)`
 })
 
 // console.log('colorExtend', colorExtend)
@@ -28,12 +56,14 @@ function generateTwColorClasses(globalKey, twAttributes) {
 
     if (attrKey.includes(globalKey)) {
       const keySplit = attrKey.split('-').splice(1).join('-')
+      // If keySplit is empty (e.g., 'foreground' -> ''), treat it as DEFAULT
+      const finalKey = keySplit === '' ? 'DEFAULT' : keySplit
 
       let payload = {
-        [keySplit]: `hsl(${attr.cssVariable} / <alpha-value>)`,
+        [finalKey]: `hsl(${attr.cssVariable} / <alpha-value>)`,
       }
 
-      if (keySplit == 'DEFAULT') {
+      if (finalKey == 'DEFAULT') {
         // includes a 'default' duplicate
         // this allows for classes like `border-default` which is the same as `border`
         payload = {
@@ -61,21 +91,35 @@ function generateTwColorClasses(globalKey, twAttributes) {
  */
 function kebabToNested(obj) {
   const result = {}
-  for (const [key, value] of Object.entries(obj)) {
+  // Sort keys by length (longest first) to ensure nested keys are processed before parent keys
+  const sortedEntries = Object.entries(obj).sort((a, b) => b[0].length - a[0].length)
+  for (const [key, value] of sortedEntries) {
     const parts = key.split('-')
     let currentObj = result
     for (let i = 0; i < parts.length; i++) {
       const part = parts[i] === 'DEFAULT' ? parts[i] : parts[i].toLowerCase() // convert key to lowercase
-      if (!currentObj[part]) {
-        currentObj[part] = {}
-      }
       if (i === parts.length - 1) {
-        if (typeof value === 'object') {
+        // Last part - set the value
+        if (typeof value === 'object' && !Array.isArray(value)) {
           currentObj[part] = kebabToNested(value) // recursively convert nested objects
         } else {
-          currentObj[part] = value.toString().toLowerCase() // convert value to lowercase
+          // If it already exists as an object, set DEFAULT value on it
+          if (currentObj[part] && typeof currentObj[part] === 'object') {
+            currentObj[part].DEFAULT = value.toString().toLowerCase()
+          } else {
+            // Otherwise, set it as a string value
+            currentObj[part] = value.toString().toLowerCase() // convert value to lowercase
+          }
         }
       } else {
+        // Not last part - navigate/create nested structure
+        if (!currentObj[part]) {
+          currentObj[part] = {}
+        } else if (typeof currentObj[part] !== 'object') {
+          // If it's already a string value, convert it to an object with DEFAULT
+          const existingValue = currentObj[part]
+          currentObj[part] = { DEFAULT: existingValue }
+        }
         currentObj = currentObj[part]
       }
     }

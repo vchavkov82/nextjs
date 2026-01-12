@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "ai-editor-rules",
-  "type": "registry:file",
   "title": "Prompt rules for AI Editors",
   "description": "Prompts for working with BA using AI-powered IDE tools",
   "dependencies": [],
@@ -43,5 +42,6 @@
       "type": "registry:file",
       "target": "~/.cursor/rules/use-realtime.mdc"
     }
-  ]
+  ],
+  "type": "registry:file"
 }
