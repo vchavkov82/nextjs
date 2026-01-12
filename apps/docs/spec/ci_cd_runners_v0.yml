@@ -4,16 +4,13 @@ info:
   id: reference/ci-cd-runners
   title: CI/CD Runners
   description: |
-
     Self-hosted CI/CD Runners allow you to run your CI/CD workflows on your own infrastructure, providing better performance, cost savings, and control over your build environment.
-
-  definition: spec/enrichments/tsdoc_v2/combined.json
   slugPrefix: '/'
-  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/ci_cd_runners_v1.yml
+  specUrl: https://github.com/vchavkov82/nextjs/edit/master/apps/docs/spec/ci_cd_runners_v0.yml
   libraries:
     - name: 'CI/CD Runners'
       id: 'ci-cd-runners'
-      version: '1.0.0'
+      version: '0.8.0'
 
 functions:
   - id: initializing
@@ -123,7 +120,7 @@ functions:
       - **Confirm email** determines if users need to confirm their email address after signing up.
         - If **Confirm email** is enabled, a `user` is returned but `session` is null.
         - If **Confirm email** is disabled, both a `user` and a `session` are returned.
-      - When the user confirms their email address, they are redirected to the [`SITE_URL`](https://www.assistance.bg/docs/guides/auth/concepts/redirect-urls) by default. You can modify your `SITE_URL` or add additional redirect URLs in [your project](https://www.assistance.bg/dashboard/project/_/auth/url-configuration).
+      - When the user confirms their email address, they are redirected to the [`SITE_URL`](https://www.assistance.bg/docs/guides/auth/redirect-urls) by default. You can modify your `SITE_URL` or add additional redirect URLs in [your project](https://www.assistance.bg/dashboard/project/_/auth/url-configuration).
       - If SignUp() is called for an existing confirmed user:
         - When both **Confirm email** and **Confirm phone** (even when phone provider is disabled) are enabled in [your project](/dashboard/project/_/auth/providers), an obfuscated/fake user object is returned.
         - When either **Confirm email** or **Confirm phone** (even when phone provider is disabled) is disabled, the error message, `User already registered` is returned.
@@ -162,7 +159,7 @@ functions:
       - This method is used for passwordless sign-ins where a OTP is sent to the user's email or phone number.
       - If you're using an email, you can configure whether you want the user to receive a magiclink or a OTP.
       - If you're using phone, you can configure whether you want the user to receive a OTP.
-      - The magic link's destination URL is determined by the [`SITE_URL`](https://www.assistance.bg/docs/guides/auth/concepts/redirect-urls). You can modify the `SITE_URL` or add additional redirect urls in [your project](https://www.assistance.bg/dashboard/project/_/auth/settings).
+      - The magic link's destination URL is determined by the [`SITE_URL`](https://www.assistance.bg/docs/guides/auth/redirect-urls). You can modify the `SITE_URL` or add additional redirect urls in [your project](https://www.assistance.bg/dashboard/project/_/auth/settings).
     examples:
       - id: sign-in-with-email
         name: Send Magic Link.
@@ -385,8 +382,8 @@ functions:
       - **When using string Column Names to select, they must match names in database, not names specified on model properties.**
       - Additional information on modeling + querying Joins and Inner Joins can be found [in the `postgrest-csharp README`](https://github.com/supabase-community/postgrest-csharp/blob/master/README.md#foreign-keys-join-tables-and-relationships)
       - By default, BA projects will return a maximum of 1,000 rows. This setting can be changed in Project API Settings. It's recommended that you keep it low to limit the payload size of accidental or malicious requests. You can use `range()` queries to paginate through your data.
-      - `From()` can be combined with [Modifiers](/docs/reference/ci-cd-runners/using-modifiers)
-      - `From()` can be combined with [Filters](/docs/reference/ci-cd-runners/using-filters)
+      - `From()` can be combined with [Modifiers](/docs/reference/csharp/using-modifiers)
+      - `From()` can be combined with [Filters](/docs/reference/csharp/using-filters)
       - If using the BA hosted platform `apikey` is technically a reserved keyword, since the API gateway will pluck it out for authentication. [It should be avoided as a column name](https://github.com/vchavkov82/nextjs/issues/5465).
     examples:
       - id: getting-your-data
@@ -653,7 +650,7 @@ functions:
       Performs a DELETE on the table.
     title: 'Delete data: Delete()'
     notes: |
-      - `Delete()` should always be combined with [Filters](/docs/reference/ci-cd-runners/using-filters) to target the item(s) you wish to delete.
+      - `Delete()` should always be combined with [Filters](/docs/reference/csharp/using-filters) to target the item(s) you wish to delete.
     examples:
       - id: delete-records
         name: Delete records
@@ -1071,7 +1068,7 @@ functions:
       Retrieve URLs for assets in public buckets
     title: 'from.getPublicUrl()'
     notes: |
-      - The bucket needs to be set to public, either via [UpdateBucket()](/docs/reference/ci-cd-runners/storage-updatebucket) or by going to Storage on [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
+      - The bucket needs to be set to public, either via [UpdateBucket()](/docs/reference/csharp/storage-updatebucket) or by going to Storage on [www.assistance.bg/dashboard](https://www.assistance.bg/dashboard), clicking the overflow menu on a bucket and choosing "Make public"
       - Policy permissions required:
         - `buckets` permissions: none
         - `objects` permissions: none
@@ -1199,15 +1196,6 @@ functions:
             .Select("name, cities(name)")
             .Filter(x => x.Name == "United States")
             .Order("cities", "name", Ordering.Descending)
-            .Get();
-          ```
-      - id: order-parent-table-by-a-referenced-table
-        name: Order parent table by a referenced table
-        code: |
-          ```c#
-          var result = await supabase.From<City>()
-            .Select("name, country:countries(name)")
-            .Order("country(name)", Ordering.Ascending)
             .Get();
           ```
 
@@ -1517,7 +1505,7 @@ functions:
         code: |
           ```c#
           var result = await supabase.From<City>()
-            .Where(x => x.Name == null)
+            .Where(x => x.Name == null
             .Get();
           ```
 

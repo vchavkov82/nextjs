@@ -1940,6 +1940,17 @@ export const reference_self_hosting_functions = {
   parent: '/reference',
 }
 
+export const reference_ci_cd_runners_v0 = {
+  icon: 'github',
+  title: 'CI/CD Runners',
+  url: '/reference/ci-cd-runners/v0',
+  parent: '/reference',
+  pkg: {
+    name: 'ci-cd-runners',
+    repo: 'https://github.com/vchavkov82/nextjs-ci-cd-runners',
+  },
+}
+
 export const reference_ci_cd_runners_v1 = {
   icon: 'github',
   title: 'CI/CD Runners',

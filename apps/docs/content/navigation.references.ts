@@ -14,12 +14,16 @@ export const REFERENCES = {
     name: 'CI/CD Runners',
     library: 'ci-cd-runners',
     libPath: 'ci-cd-runners',
-    versions: ['v1'],
+    versions: ['v1', 'v0'],
     icon: 'github',
     meta: {
       v1: {
         libId: 'reference_ci_cd_runners_v1',
         specFile: 'ci_cd_runners_v1',
+      },
+      v0: {
+        libId: 'reference_ci_cd_runners_v0',
+        specFile: 'ci_cd_runners_v0',
       },
     },
   },
