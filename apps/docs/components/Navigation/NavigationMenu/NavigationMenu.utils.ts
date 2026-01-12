@@ -22,6 +22,8 @@ const commonSectionsImports: Record<string, () => Promise<{ default: ICommonItem
     import('~/spec/common-self-hosting-realtime-sections.json'),
   'common-self-hosting-storage-sections.json': () =>
     import('~/spec/common-self-hosting-storage-sections.json'),
+  'common-self-hosting-ci-cd-runners-sections.json': () =>
+    import('~/spec/common-self-hosting-ci-cd-runners-sections.json'),
 }
 
 const specImports: Record<string, () => Promise<{ default: Json }>> = {

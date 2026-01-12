@@ -1934,6 +1934,13 @@ export const reference_self_hosting_functions = {
   parent: '/reference',
 }
 
+export const reference_self_hosting_ci_cd_runners = {
+  icon: 'github',
+  title: 'Self-Hosted CI/CD Runners',
+  url: '/reference/self-hosting-ci-cd-runners',
+  parent: '/reference',
+}
+
 export const references = [
   {
     label: 'Client libraries',

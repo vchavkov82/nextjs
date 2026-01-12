@@ -153,6 +153,13 @@ export const REFERENCES = {
     versions: [],
     icon: 'self-hosting',
   },
+  self_hosting_ci_cd_runners: {
+    type: 'self-hosting',
+    name: 'Self-Hosted CI/CD Runners',
+    libPath: 'self-hosting-ci-cd-runners',
+    versions: [],
+    icon: 'github',
+  },
 }
 
 // Export plain arrays (not computed, to avoid any module references)

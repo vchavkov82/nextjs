@@ -173,6 +173,10 @@ const levelsData = {
     icon: 'reference-functions',
     name: 'Functions Server Reference',
   },
+  reference_self_hosting_ci_cd_runners: {
+    icon: 'github',
+    name: 'Self-Hosted CI/CD Runners Reference',
+  },
 }
 
 type MobileHeaderProps = { menuId: MenuId } | { menuName: string }

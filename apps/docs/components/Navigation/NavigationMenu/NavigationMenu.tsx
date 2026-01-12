@@ -44,6 +44,7 @@ enum MenuId {
   SelfHostingRealtime = 'reference_self_hosting_realtime',
   SelfHostingAnalytics = 'reference_self_hosting_analytics',
   SelfHostingFunctions = 'reference_self_hosting_functions',
+  SelfHostingCiCdRunners = 'reference_self_hosting_ci_cd_runners',
 }
 
 interface BaseMenu {
@@ -236,6 +237,12 @@ const menus: Menu[] = [
     type: 'reference',
     path: '/reference/self-hosting-functions',
     commonSectionsFile: 'common-self-hosting-functions-sections.json',
+  },
+  {
+    id: MenuId.SelfHostingCiCdRunners,
+    type: 'reference',
+    path: '/reference/self-hosting-ci-cd-runners',
+    commonSectionsFile: 'common-self-hosting-ci-cd-runners-sections.json',
   },
 ]
 
