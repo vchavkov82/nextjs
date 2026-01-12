@@ -1,0 +1,219 @@
+---
+title: 'Architecture'
+---
+
+Understand the technical architecture of Container Builds.
+
+## System Components
+
+Container Builds consists of several key components:
+
+### CLI (Command-Line Interface)
+
+- User-facing tool that initiates builds
+- Sends build context to the control plane
+- Manages build requests and output streaming
+- Supports `depot build` as a drop-in replacement for `docker build`
+
+### Control Plane (API)
+
+- Central management service
+- Authenticates requests and manages projects
+- Coordinates builder allocation
+- Tracks build state and metadata
+- Manages cache metadata and layer references
+
+### Open-Source Cloud Agent
+
+- Monitors infrastructure status
+- Manages resource utilization
+- Coordinates with builder VMs
+- Handles auto-scaling decisions
+
+### Builder VMs
+
+- Run on ephemeral EC2 instances
+- Include machine-agent and BuildKit
+- Execute actual Docker builds
+- Store layer cache on NVMe SSD
+
+### Persistent Layer Cache
+
+- Stores Docker layer cache in NVMe SSD
+- 50GB default (expandable to 500GB)
+- Survives builder VM termination
+- Shared across team members
+
+## Build Flow
+
+```
+┌─────────────────────┐
+│   Developer CLI     │
+│  (depot build)      │
+└──────────┬──────────┘
+           │ Build context + options
+           ▼
+┌──────────────────────────────┐
+│    Control Plane (API)       │
+│  - Authenticate              │
+│  - Validate build context    │
+│  - Allocate builder          │
+│  - Manage cache metadata     │
+└──────────┬───────────────────┘
+           │ Build job
+           ▼
+┌──────────────────────────────┐
+│     Builder VM (BuildKit)    │
+│  - Pull base images          │
+│  - Execute build steps       │
+│  - Access persistent cache   │
+│  - Push to registry (optional)
+└──────────┬───────────────────┘
+           │ Build result
+           ▼
+┌──────────────────────────────┐
+│  Developer Machine / Registry │
+│  - Receive image             │
+│  - Store in registry         │
+└──────────────────────────────┘
+```
+
+## Builder Infrastructure
+
+### Instance Types
+
+**Default Configuration:**
+- **16 CPUs** (2x8 core)
+- **32GB RAM**
+- **50GB NVMe SSD cache**
+
+**Premium Configuration:**
+- Up to **64 CPUs**
+- Up to **128GB RAM**
+- Up to **500GB NVMe SSD cache**
+
+### Ephemeral Instances
+
+- EC2 instances automatically provisioned on demand
+- Terminated after build completion (or after idle timeout)
+- Reduces costs by only running when needed
+- Eliminates manual infrastructure management
+
+### Network
+
+- Private network isolation
+- mTLS certificates securing all connections
+- Fast inter-VM communication
+- Optimized for low-latency build operations
+
+## Caching Architecture
+
+### Layer Cache Storage
+
+Layer cache is stored on NVMe SSD for fast retrieval:
+- **Cache location:** Persistent EBS volumes
+- **Retention:** Configurable per project
+- **Accessibility:** Shared across team members
+- **Performance:** NVMe SSD provides sub-millisecond access
+
+### Cache Distribution
+
+```
+┌─────────────────────┐
+│  Persistent Cache   │
+│  (NVMe SSD)         │
+└─────────────────────┘
+      │
+      ├─► Team Member 1
+      │
+      ├─► Team Member 2
+      │
+      └─► CI/CD Pipeline
+```
+
+### Cache Invalidation
+
+Caches are invalidated based on:
+- Dockerfile content changes
+- Build context changes
+- Base image layer changes
+- Explicit cache busting via CLI flags
+
+## Security Architecture
+
+### Authentication
+
+- **API Tokens:** Project-specific tokens for authentication
+- **OIDC:** Token-less authentication for supported CI platforms
+- **mTLS:** Mutual TLS between all components
+
+### Isolation
+
+- **Fork Isolation:** PR builds from forks run on isolated builders
+- **Cache Isolation:** Fork builds cannot access project cache
+- **Network Isolation:** Builders run in private networks
+- **Encryption:** All data encrypted in transit and at rest
+
+### Access Control
+
+- **Project-level permissions:** Control who can initiate builds
+- **Team management:** Assign users to projects
+- **Audit logging:** Track all build activities
+- **API token rotation:** Regular token refresh support
+
+## Performance Optimizations
+
+### Parallel Processing
+
+- Multiple builds can run concurrently on different builders
+- BuildKit supports parallel layer building
+- Multi-platform builds execute in parallel
+
+### Cache Optimization
+
+- Layer deduplication across builds
+- Efficient cache lookup using content-addressable storage
+- Intelligent cache eviction policies
+
+### Network Optimization
+
+- Optimized build context transfer
+- Compression of build artifacts
+- Efficient registry interaction
+
+## Scalability
+
+### Auto-Scaling
+
+- Automatic builder VM provisioning based on queue depth
+- Configurable scaling policies
+- Warm pools for faster job starts
+
+### Multi-Region Support
+
+- Builders provisioned in multiple regions
+- Reduced latency for distributed teams
+- Regional cache coordination
+
+## Data Flow
+
+### Build Context
+
+1. Developer runs `depot build`
+2. CLI compresses and uploads build context (Dockerfile, files)
+3. Control plane validates and stores context
+4. Builder VM receives context and extracts files
+
+### Image Output
+
+1. BuildKit builds Docker image layers
+2. Layers are stored in persistent cache
+3. Final image pushed to registry (if `--push` flag used)
+4. Or streamed back to developer machine
+5. Cache metadata updated in control plane
+
+### Build Artifacts
+
+- **Logs:** Streamed in real-time to CLI
+- **Image references:** Returned to control plane
+- **Build metadata:** Stored for analytics and auditing

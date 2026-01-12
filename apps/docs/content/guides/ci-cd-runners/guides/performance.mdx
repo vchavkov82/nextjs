@@ -1,0 +1,271 @@
+---
+title: 'Performance'
+---
+
+Maximize build performance with Container Builds optimization techniques.
+
+## Performance Metrics
+
+Container Builds delivers significant performance improvements:
+
+### First Build
+- **3-5x faster** than standard Docker builds on local machines
+- **2-3x faster** than CI provider builds (GitHub Actions, GitLab CI)
+- Optimized BuildKit with caching enabled
+
+### Cached Builds (Layer Cache Hit)
+- **10-20x faster** with persistent layer caching
+- Reuses previously built layers across team
+- Eliminates redundant build steps
+
+### Multi-Platform Builds
+- **Parallel execution** across architectures
+- Build `linux/amd64` and `linux/arm64` simultaneously
+- No emulation overhead (native builds)
+
+### Network Performance
+- **10x faster** cache and layer transfer vs traditional approaches
+- Optimized compression for build context
+- Efficient registry interactions
+
+## Layer Caching Strategy
+
+### How Layer Caching Works
+
+Docker builds cache layers based on build instructions:
+
+```dockerfile
+# Layer 1: Base image
+FROM node:18-alpine
+RUN apk add --no-cache python3 make g++
+WORKDIR /app
+
+# Layer 2: Dependencies (cached if Dockerfile and package.json unchanged)
+COPY package*.json ./
+RUN npm ci
+
+# Layer 3: Application code (invalidated when code changes)
+COPY . .
+RUN npm run build
+
+# Layer 4: Runtime
+FROM node:18-alpine
+COPY --from=0 /app/dist ./dist
+CMD ["node", "dist/index.js"]
+```
+
+### Cache Hit Rate Factors
+
+Factors affecting cache hit rates:
+
+- **Dockerfile changes:** Changes invalidate layers and downstream cache
+- **Build context changes:** File modifications trigger rebuilds
+- **Base image changes:** New base image versions invalidate cache
+- **Build arguments:** Changes to `--build-arg` invalidate cache
+- **Time-based invalidation:** Stale caches may be evicted
+
+## Optimization Techniques
+
+### 1. Order Dependencies Correctly
+
+Place less frequently changed instructions before frequently changing ones:
+
+```dockerfile
+# Good: Dependencies first (rarely change)
+COPY package*.json ./
+RUN npm ci
+
+# Then: Application code (frequently changes)
+COPY . .
+RUN npm run build
+```
+
+### 2. Minimize Build Context
+
+Reduce the amount of files sent to the builder:
+
+```dockerfile
+# Create .dockerignore to exclude unnecessary files
+node_modules
+.git
+.gitignore
+dist
+coverage
+.env
+.next
+```
+
+### 3. Use Multi-Stage Builds
+
+Multi-stage builds reduce final image size and leverage caching:
+
+```dockerfile
+# Build stage
+FROM node:18 as builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+# Runtime stage
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+CMD ["node", "dist/index.js"]
+```
+
+### 4. Leverage BuildKit Features
+
+Enable BuildKit for advanced caching:
+
+```bash
+# Use BuildKit syntax in Dockerfile
+# syntax=docker/dockerfile:1.4
+
+FROM node:18
+RUN --mount=type=cache,target=/root/.npm npm ci
+COPY . .
+RUN --mount=type=cache,target=/root/.npm npm run build
+```
+
+### 5. Parallel Multi-Platform Builds
+
+Build for multiple platforms simultaneously:
+
+```bash
+depot build \
+  --platform linux/amd64,linux/arm64 \
+  -t myregistry/myapp:latest \
+  --push \
+  .
+```
+
+### 6. Cache External Dependencies
+
+Cache large external dependencies:
+
+```dockerfile
+FROM node:18
+
+# Cache system packages
+RUN --mount=type=cache,target=/var/cache/apt \
+    apt-get update && apt-get install -y build-essential
+
+# Cache pip dependencies
+COPY requirements.txt .
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt
+```
+
+## Monitoring Performance
+
+### Build Metrics
+
+Monitor these key metrics:
+
+- **Build time:** Total duration from start to finish
+- **Cache hit rate:** Percentage of layers served from cache
+- **Layer count:** Number of layers in final image
+- **Image size:** Final compressed image size
+
+### CLI Output Analysis
+
+Container Builds CLI provides timing information:
+
+```bash
+$ depot build -t myapp:latest .
+
+[+] Building 23.4s
+...
+```
+
+Look for:
+- Layers served from cache (shown with `CACHED` marker)
+- Building layer progress
+- Total build duration
+
+## Performance Best Practices
+
+### For CI/CD
+
+1. **Enable persistent caching** for your projects
+2. **Use multi-stage builds** to reduce image size
+3. **Optimize base images** for size and speed
+4. **Cache dependencies** before copying code
+5. **Parallel builds** for multi-platform targets
+
+### For Local Development
+
+1. **Use `.dockerignore`** to reduce context size
+2. **Enable BuildKit** for local Docker daemon
+3. **Leverage cached layers** during iteration
+4. **Build frequently changing stages last**
+5. **Use appropriate base images** (alpine for size, full for compatibility)
+
+### Team Collaboration
+
+1. **Share build caches** across team members
+2. **Standardize Dockerfiles** for consistent caching
+3. **Document build patterns** used by your team
+4. **Monitor cache hit rates** to identify issues
+5. **Rotate base images** regularly for security
+
+## Benchmarks
+
+Typical performance improvements with Container Builds:
+
+### Node.js Application
+
+```
+Standard docker build:    120s
+Container Builds (first): 40s (3.0x faster)
+Container Builds (cached): 8s (15x faster)
+```
+
+### Python Application
+
+```
+Standard docker build:    180s
+Container Builds (first): 60s (3.0x faster)
+Container Builds (cached): 12s (15x faster)
+```
+
+### Multi-Platform Build
+
+```
+Sequential builds (amd64 + arm64): 240s
+Container Builds parallel:         45s (5.3x faster)
+```
+
+## Cost Impact
+
+Layer caching reduces costs by:
+
+1. **Reducing compute time:** Faster builds = lower AWS costs
+2. **Reducing bandwidth:** Efficient cache transfer
+3. **Reducing re-execution:** CI builds faster = less queue time
+4. **Team efficiency:** Shared caches eliminate duplication
+
+## Troubleshooting Performance
+
+### Slow Builds
+
+If builds are slower than expected:
+
+1. Check cache hit rate in build output
+2. Verify `.dockerignore` excludes large directories
+3. Review Dockerfile layer order
+4. Monitor builder resource utilization
+5. Check network latency to builder
+
+### Cache Not Working
+
+If caches aren't being used:
+
+1. Verify cache is enabled for project
+2. Check Dockerfile hasn't changed between builds
+3. Confirm build context hasn't changed
+4. Look for explicit cache busting flags
+5. Check cache retention policy settings

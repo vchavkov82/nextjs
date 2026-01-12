@@ -1,0 +1,184 @@
+---
+title: 'CI Integrations'
+---
+
+Container Builds integrates seamlessly with popular CI/CD platforms.
+
+## Supported Platforms
+
+Container Builds provides official integrations with:
+
+- **GitHub Actions**
+- **GitLab CI**
+- **CircleCI**
+- **Buildkite**
+- **AWS CodeBuild**
+- And any CI system that can run container builds via the CLI
+
+## GitHub Actions
+
+GitHub Actions integration using the official action:
+
+```yaml
+name: Build and Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Container Builds
+        uses: depot/setup-action@v1
+
+      - name: Build and push
+        uses: depot/build-push-action@v1
+        with:
+          context: .
+          push: true
+          tags: myregistry.azurecr.io/myapp:${{ github.sha }}
+          platforms: linux/amd64,linux/arm64
+```
+
+### Authentication with OIDC
+
+For enhanced security, use OIDC token authentication:
+
+```yaml
+- name: Authenticate with OIDC
+  uses: depot/setup-action@v1
+  with:
+    oidc: true
+```
+
+## GitLab CI
+
+Use Container Builds in GitLab CI/CD:
+
+```yaml
+build:
+  stage: build
+  image: ubuntu:latest
+  script:
+    - curl https://cli.depot.dev/install.sh | sh
+    - depot build
+      -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+      -t $CI_REGISTRY_IMAGE:latest
+      --push
+      .
+```
+
+## CircleCI
+
+CircleCI integration:
+
+```yaml
+version: 2.1
+
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Install Container Builds CLI
+          command: curl https://cli.depot.dev/install.sh | sh
+      - run:
+          name: Build and push
+          command: |
+            depot build \
+              -t myregistry.azurecr.io/myapp:${CIRCLE_SHA1} \
+              -t myregistry.azurecr.io/myapp:latest \
+              --push \
+              .
+```
+
+## Buildkite
+
+Buildkite integration:
+
+```yaml
+steps:
+  - label: "Build Docker image"
+    command: |
+      curl https://cli.depot.dev/install.sh | sh
+      depot build \
+        -t myregistry.azurecr.io/myapp:${BUILDKITE_COMMIT} \
+        --push \
+        .
+```
+
+## AWS CodeBuild
+
+AWS CodeBuild buildspec:
+
+```yaml
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Installing Container Builds CLI..."
+      - curl https://cli.depot.dev/install.sh | sh
+  build:
+    commands:
+      - echo "Building image..."
+      - depot build
+          -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/myapp:$CODEBUILD_RESOLVED_SOURCE_VERSION
+          --push
+          .
+```
+
+## Generic CI/CD Systems
+
+For any CI/CD system, install the CLI and use it directly:
+
+```bash
+# Install
+curl https://cli.depot.dev/install.sh | sh
+
+# Use depot build command
+depot build -t myimage:latest .
+```
+
+## Authentication Options
+
+### API Token
+
+Use an API token for authentication:
+
+```bash
+export DEPOT_TOKEN=<your-token>
+depot build -t myapp:latest .
+```
+
+### OIDC (Recommended)
+
+For GitHub Actions and supported platforms, use OIDC for token-less authentication:
+
+```yaml
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: depot/setup-action@v1
+        with:
+          oidc: true
+```
+
+## Best Practices
+
+- Use API tokens or OIDC for authentication (never commit credentials)
+- Configure appropriate cache retention policies
+- Monitor build performance metrics
+- Use specific image tags for production builds
+- Set resource limits appropriate for your workloads

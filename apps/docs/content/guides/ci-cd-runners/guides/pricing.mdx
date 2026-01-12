@@ -1,0 +1,249 @@
+---
+title: 'Pricing'
+---
+
+Container Builds pricing is transparent and scalable to your needs.
+
+## Plans
+
+### Developer Plan
+
+**$20/month**
+
+Best for individual developers and small projects.
+
+**Includes:**
+- 500 build minutes per month
+- 25GB cache storage
+- Single user
+- Multi-platform builds
+- Unlimited concurrent builds
+- Community support
+- Depot Registry access
+
+### Startup Plan
+
+**$200/month** + **$0.04/min** overage
+
+Best for growing teams and active projects.
+
+**Includes:**
+- 5,000 build minutes per month
+- 250GB cache storage (+$0.20/GB/month for additional)
+- Unlimited team members
+- Multi-platform builds
+- Unlimited concurrent builds
+- Email support
+- Depot Registry access
+- Usage analytics
+
+### Business Plan
+
+**Custom pricing**
+
+Best for enterprises with specialized requirements.
+
+**Includes:**
+- Custom build minutes
+- Custom cache storage
+- Dedicated infrastructure
+- Single Sign-On (SSO)
+- Advanced security features
+- Unlimited team members
+- Priority support
+- GPU build support
+- Custom SLAs
+
+## What's Included in All Plans
+
+Regardless of plan tier:
+
+- **Multi-platform builds:** Support for x86, ARM, and all platforms
+- **Unlimited concurrency:** Run as many builds as you want simultaneously
+- **Persistent layer caching:** Automatic shared cache across team
+- **BuildKit optimizations:** Latest BuildKit features
+- **mTLS security:** Encrypted builder connections
+- **API tokens & OIDC:** Multiple authentication methods
+- **Depot Registry:** Docker image registry included
+- **Build analytics:** View build history and metrics
+
+## Build Minutes
+
+Build minutes are calculated as:
+
+```
+Build Minutes = Duration (minutes) × Number of Platforms
+```
+
+### Examples
+
+**Single platform build:**
+- 5 minute build × 1 platform = 5 build minutes
+
+**Multi-platform build:**
+- 5 minute build × 2 platforms (amd64 + arm64) = 10 build minutes
+- 5 minute build × 4 platforms = 20 build minutes
+
+**Parallel builds:**
+- Each concurrent build counts separately
+- 2 × 5 minute builds = 10 build minutes total
+
+## Cache Storage
+
+### Included Storage
+
+Each plan includes default cache storage:
+
+- **Developer:** 25GB
+- **Startup:** 250GB
+- **Business:** Custom
+
+### Additional Storage
+
+Additional cache storage available:
+
+- **$0.20/GB/month** for Startup and Business plans
+- Scales automatically with usage
+- No upfront commitment
+
+### Storage Reduction
+
+Reduce storage costs by:
+
+1. **Optimizing images:** Multi-stage builds reduce final size
+2. **Aggressive pruning:** Remove unused layers and bases
+3. **Layer deduplication:** Share common base layers
+4. **Retention policies:** Auto-delete old cached layers
+
+## Estimating Costs
+
+### Small Project (Startup)
+
+- 50 builds/month × 3 minutes = 150 minutes
+- 50 multi-platform (amd64 + arm64) = 150 minutes
+- **Total: 300 build minutes/month** (well under 5,000)
+- **Cost:** $200/month base
+
+### Medium Project (Startup)
+
+- 200 builds/month × 5 minutes = 1,000 minutes
+- 50% single platform, 50% multi-platform average = 750 build minutes
+- **Total: 1,250 build minutes/month**
+- **Cost:** $200/month base
+
+### Large Project (Startup with Overages)
+
+- 500 builds/month × 10 minutes = 5,000 minutes
+- All multi-platform (amd64 + arm64, arm/v7) = 15,000 build minutes
+- **Exceeds 5,000:** 10,000 overage × $0.04 = $400
+- **Cost:** $200 base + $400 overage = $600/month
+
+## FAQ
+
+### Can I exceed my build minutes?
+
+Yes, overage minutes are available at the standard rate for your plan ($0.04/minute for Startup and Business).
+
+### What happens if I exceed my monthly allocation?
+
+Builds will continue to run with overage charges applied automatically. You can set spending limits in your account settings.
+
+### Can I upgrade/downgrade plans?
+
+Yes, you can change plans anytime. Changes take effect at the next billing cycle. Pro-rata adjustments apply.
+
+### Is there a discount for annual billing?
+
+Contact sales for volume discounts and annual payment options.
+
+### Do I pay for cached builds?
+
+Yes, cached builds consume build minutes, but typically complete much faster (reducing overall costs).
+
+### What's included in the Depot Registry?
+
+The Depot Registry provides:
+
+- Unlimited private repositories
+- Registry integration with Container Builds
+- Image pull via standard Docker commands
+- Automatic cleanup policies
+
+### Can I use my own registry?
+
+Yes, Container Builds works with any Docker-compatible registry:
+
+- Docker Hub
+- Amazon ECR
+- Azure Container Registry
+- GitHub Container Registry
+- GitLab Container Registry
+- And others
+
+You can push images anywhere using standard Docker authentication.
+
+### Is there a free trial?
+
+Check the website for current trial offerings. Most plans offer a free trial period for new customers.
+
+### Do you offer educational discounts?
+
+Contact sales for educational and open-source program discounts.
+
+### How is billing calculated for free accounts?
+
+Free Developer accounts (if available) include:
+
+- Limited build minutes per month
+- Limited cache storage
+- Standard features
+- Community support
+
+## Payment & Invoicing
+
+### Accepted Payment Methods
+
+- Credit cards (Visa, Mastercard, American Express)
+- Invoicing (for Business plans)
+
+### Billing Cycle
+
+- Monthly billing (default)
+- Annual billing (available with discount)
+- Invoicing available for Business customers
+
+### Invoices
+
+- Emailed automatically after each billing cycle
+- Available in account settings
+- Detailed breakdown of usage
+
+### Spending Limits
+
+Set spending limits in account settings to control costs:
+
+- Prevent unexpected overages
+- Email alerts when approaching limit
+- Builds queued when limit reached
+
+## Cost Optimization
+
+### Strategies to Reduce Costs
+
+1. **Optimize build times:** Faster builds = fewer minutes
+2. **Multi-stage builds:** Smaller final images
+3. **Cache effectively:** Reduce redundant builds
+4. **Group builds:** Batch smaller builds together
+5. **Use appropriate tier:** Right-size your plan
+6. **Monitor usage:** Track build metrics
+
+### ROI
+
+Container Builds typically pays for itself through:
+
+- **Faster CI/CD:** 5-20x faster builds = faster deployments
+- **Developer productivity:** Less waiting on builds
+- **Infrastructure savings:** Offloaded from local machines
+- **Team efficiency:** Shared caches eliminate duplication
+
+Example: If your team spends 2 hours/day waiting on builds, that's 10 hours/week of lost productivity. At $50/hour average cost, that's $500/week or $2,000/month in lost productivity that Container Builds helps recover.
