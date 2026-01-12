@@ -6,11 +6,11 @@ import './sandpack-styles.css' // Import custom Sandpack styles
 import { SandpackErrorBoundary } from './SandpackErrorBoundary'
 
 type SandpackProps = {
-  files: Record<string, string>
+  files?: Record<string, string>
   dependencies?: Record<string, string>
 }
 
-export default function SandpackWrapper({ files, dependencies = {} }: SandpackProps) {
+export default function SandpackWrapper({ files = {}, dependencies = {} }: SandpackProps) {
   const [isMounted, setIsMounted] = useState(false)
   const [cryptoAvailable, setCryptoAvailable] = useState(false)
 
@@ -35,8 +35,8 @@ export default function SandpackWrapper({ files, dependencies = {} }: SandpackPr
 
   // Ensure we have the required files for React template
   const completeFiles = {
-    '/App.js': files['/App.js'] || files['App.js'] || '',
-    '/styles.css': files['/styles.css'] || files['styles.css'] || '',
+    '/App.js': files?.['/App.js'] || files?.['App.js'] || '',
+    '/styles.css': files?.['/styles.css'] || files?.['styles.css'] || '',
     ...files,
   }
 

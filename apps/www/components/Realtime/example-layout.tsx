@@ -5,8 +5,8 @@ import { useState } from 'react'
 import { ChevronLeft, ChevronRight, Code, Eye } from 'lucide-react'
 
 export type ExampleLayoutProps = {
-  appJsCode: string
-  files: Record<string, string>
+  appJsCode?: string
+  files?: Record<string, string>
   dependencies?: Record<string, string>
   title?: string
   description?: string
@@ -15,8 +15,8 @@ export type ExampleLayoutProps = {
 }
 
 export default function ExampleLayout({
-  appJsCode,
-  files,
+  appJsCode = '',
+  files = {},
   dependencies = {},
   title = 'App.js',
   description = 'This is an example of a realtime app.',

@@ -52,6 +52,10 @@ const nextConfig = {
   assetPrefix: getAssetPrefix(),
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   trailingSlash: false,
+  // Force localhost for WebSocket HMR connections
+  devServer: {
+    host: 'localhost',
+  },
   transpilePackages: [
     'ui',
     'ui-patterns',
