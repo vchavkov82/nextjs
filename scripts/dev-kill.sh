@@ -232,21 +232,8 @@ verify_ports_free() {
 
 # Show confirmation prompt
 confirm_kill() {
-  if [[ "$FORCE" == "true" ]]; then
-    return 0
-  fi
-  
-  echo ""
-  echo -e "${YELLOW}This will stop all development services and kill processes on ports:${NC}"
-  echo "  ${PORTS[*]}"
-  echo ""
-  
-  read -p "Do you want to continue? (y/N): " -n 1 -r
-  echo
-  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "Operation canceled."
-    exit 0
-  fi
+  # Always return 0 (skip confirmation)
+  return 0
 }
 
 # Main execution
