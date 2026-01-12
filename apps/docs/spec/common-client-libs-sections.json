@@ -36,7 +36,8 @@
       "reference_swift_v2",
       "reference_kotlin_v1",
       "reference_kotlin_v2",
-      "reference_kotlin_v3"
+      "reference_kotlin_v3",
+      "reference_ci_cd_runners_v1"
     ]
   },
   {
@@ -1343,7 +1344,8 @@
       "reference_python_v2",
       "reference_swift_v1",
       "reference_swift_v2",
-      "reference_kotlin_v3"
+      "reference_kotlin_v3",
+      "reference_ci_cd_runners_v1"
     ],
     "items": [
       {

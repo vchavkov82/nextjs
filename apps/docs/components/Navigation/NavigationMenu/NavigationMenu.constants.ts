@@ -211,13 +211,13 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
       menuItems: [
         [
           {
+            label: 'Build',
+          },
+          {
             label: 'CI/CD Runners',
             icon: 'github',
             href: '/reference/ci-cd-runners/v1/introduction' as `/${string}`,
             level: 'reference_ci_cd_runners_v1',
-          },
-          {
-            label: 'Client Library Reference',
           },
           {
             label: 'Flutter',

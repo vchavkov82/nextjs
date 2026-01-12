@@ -27,7 +27,10 @@ export interface AbbrevApiReferenceSection {
 }
 
 export function parseReferencePath(slug: Array<string>) {
-  const isClientSdkReference = clientSdkIds.includes(slug[0])
+  // Convert libPath (hyphens) to sdkId (underscores) for lookup
+  const libPathToSdkId = (libPath: string) => libPath.replaceAll('-', '_')
+  const slugSdkId = libPathToSdkId(slug[0])
+  const isClientSdkReference = clientSdkIds.includes(slugSdkId)
   const isCliReference = slug[0] === 'cli'
   const isApiReference = slug[0] === 'api'
   const isSelfHostingReference = slug[0].startsWith('self-hosting-')
@@ -38,6 +41,8 @@ export function parseReferencePath(slug: Array<string>) {
     let maybeCrawlers: string | null
     let path: string[]
       ;[sdkId, maybeVersion, maybeCrawlers, ...path] = slug
+    // Convert libPath to sdkId
+    sdkId = libPathToSdkId(sdkId)
     if (!/v\d+/.test(maybeVersion)) {
       maybeVersion = null
       path = [maybeCrawlers, ...path]
@@ -102,10 +107,11 @@ export async function generateReferenceStaticParams() {
       REFERENCES[sdkId].versions.map((version) => ({
         sdkId,
         version,
+        libPath: REFERENCES[sdkId].libPath,
       }))
     )
-    .map(({ sdkId, version }) => ({
-      slug: [sdkId, version === REFERENCES[sdkId].versions[0] ? null : version].filter(Boolean),
+    .map(({ sdkId, libPath, version }) => ({
+      slug: [libPath, version === REFERENCES[sdkId].versions[0] ? null : version].filter(Boolean),
     }))
 
   const cliPages = [
