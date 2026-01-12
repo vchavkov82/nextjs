@@ -16,6 +16,7 @@ try {
     'foreground-light': { cssVariable: 'var(--foreground-light, 210 40% 85%)', value: 'hsl(210 40% 85%)' },
     'foreground-lighter': { cssVariable: 'var(--foreground-lighter, 210 40% 75%)', value: 'hsl(210 40% 75%)' },
     'background-default': { cssVariable: 'var(--background-default, 0 0% 100%)', value: 'hsl(0 0% 100%)' },
+    'background-muted': { cssVariable: 'var(--background-muted, 210 40% 96%)', value: 'hsl(210 40% 96%)' },
     'background-surface-100': { cssVariable: 'var(--background-surface-100, 210 40% 98%)', value: 'hsl(210 40% 98%)' },
     'background-surface-200': { cssVariable: 'var(--background-surface-200, 210 40% 96%)', value: 'hsl(210 40% 96%)' },
     'background-surface-300': { cssVariable: 'var(--background-surface-300, 210 40% 94%)', value: 'hsl(210 40% 94%)' },
@@ -27,12 +28,15 @@ try {
     'border': { cssVariable: 'var(--border, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
     'border-border': { cssVariable: 'var(--border-border, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
     'border-background': { cssVariable: 'var(--border-background, 210 40% 90%)', value: 'hsl(210 40% 90%)' },
+    'border-stronger': { cssVariable: 'var(--border-stronger, 210 40% 70%)', value: 'hsl(210 40% 70%)' },
+    'brand': { cssVariable: 'var(--brand, 142 76% 36%)', value: 'hsl(142 76% 36%)' },
   }
 }
 
 /**
  *
  */
+// Create colorExtend from color object (which may be fallback)
 let colorExtend = {}
 // Sort keys by length (longest first) to ensure nested keys are processed before parent keys
 const sortedKeys = Object.keys(color).sort((a, b) => b.length - a.length)
@@ -51,6 +55,7 @@ sortedKeys.forEach((key) => {
  */
 function generateTwColorClasses(globalKey, twAttributes) {
   let classes = {}
+  let hasStandaloneKey = false
   Object.values(twAttributes).map((attr, i) => {
     const attrKey = Object.keys(twAttributes)[i]
 
@@ -58,6 +63,10 @@ function generateTwColorClasses(globalKey, twAttributes) {
       const keySplit = attrKey.split('-').splice(1).join('-')
       // If keySplit is empty (e.g., 'foreground' -> ''), treat it as DEFAULT
       const finalKey = keySplit === '' ? 'DEFAULT' : keySplit
+      
+      if (finalKey === 'DEFAULT') {
+        hasStandaloneKey = true
+      }
 
       let payload = {
         [finalKey]: `hsl(${attr.cssVariable} / <alpha-value>)`,
@@ -82,6 +91,16 @@ function generateTwColorClasses(globalKey, twAttributes) {
    * mutate object into nested object for tailwind theme structure
    */
   const nestedClasses = kebabToNested(classes)
+  // Only nest under color name if we have a standalone key (DEFAULT) AND other keys
+  // This allows both text-foreground (from DEFAULT) and text-foreground-muted to work
+  // For colors without standalone keys (like background-surface-200), keep at root level
+  if (hasStandaloneKey && Object.keys(nestedClasses).length > 1) {
+    // We have both DEFAULT and other keys, nest under color name
+    return { [globalKey]: nestedClasses }
+  } else if (hasStandaloneKey && nestedClasses.DEFAULT) {
+    // Only DEFAULT, add at root level with color name
+    return { [globalKey]: nestedClasses.DEFAULT }
+  }
   // return, but nest the keys if they are kebab case named
   return nestedClasses
 }
@@ -151,10 +170,21 @@ const uiConfig = ui({
     borderColor: (theme) => ({
       ...theme('colors'),
       ...generateTwColorClasses('border', color),
+      // Ensure border-background is available directly (used in CSS)
+      // Add as 'background' so it creates the 'border-background' class
+      background: 'hsl(var(--border-background, 210 40% 90%) / <alpha-value>)',
     }),
     extend: {
       colors: {
         ...kebabToNested(colorExtend),
+        // Ensure border-background is available directly (used in CSS)
+        'border-background': 'hsl(var(--border-background, 210 40% 90%) / <alpha-value>)',
+        // Add brand color for gradient classes (from-brand, to-brand)
+        brand: {
+          DEFAULT: 'hsl(var(--brand, 142 76% 36%) / <alpha-value>)',
+        },
+        // Add border-stronger for bg-border-stronger
+        'border-stronger': 'hsl(var(--border-stronger, 210 40% 70%) / <alpha-value>)',
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
           foreground: 'hsl(var(--sidebar-foreground))',

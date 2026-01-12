@@ -64,7 +64,7 @@ StyleDictionary.registerFormat({
   cssVariable: "var(--${token.name})",
   value: "${value}"
 }`
-            .replace('core-', '') // remove core prefix
+            .replace('core-color-', '') // remove core-color prefix
             .replace('default', 'DEFAULT') // replace default with DEFAULT for tailwind config
         })
         .join(',\n')}\n}`
