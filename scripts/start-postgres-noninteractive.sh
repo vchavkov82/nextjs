@@ -17,7 +17,7 @@ if [ ! -f .env ]; then
 fi
 
 # Check if PostgreSQL container is already running
-if podman-compose -f docker-compose.postgres.yml ps 2>&1 | grep -vE '(cannot set uid|effective uid.*Operation not permitted|^--:)' | grep -q "postgres.*Up"; then
+if podman compose -f docker-compose.postgres.yml ps 2>&1 | grep -vE '(cannot set uid|effective uid.*Operation not permitted|^--:)' | grep -q "postgres.*Up"; then
   echo "PostgreSQL container is already running"
   exit 0
 fi
@@ -42,13 +42,13 @@ if [ "$PORT_IN_USE" = true ]; then
 fi
 
 echo "Starting PostgreSQL..."
-podman-compose -f docker-compose.postgres.yml up -d
+podman compose -f docker-compose.postgres.yml up -d
 
 echo "Waiting for PostgreSQL to be ready..."
 sleep 2
 
 # Filter out harmless Podman rootless warnings
-podman-compose -f docker-compose.postgres.yml ps 2>&1 | grep -vE '(cannot set uid|effective uid.*Operation not permitted|^--:)'
+podman compose -f docker-compose.postgres.yml ps 2>&1 | grep -vE '(cannot set uid|effective uid.*Operation not permitted|^--:)'
 
 echo ""
 echo "PostgreSQL is running!"
