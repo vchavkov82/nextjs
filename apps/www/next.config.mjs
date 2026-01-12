@@ -52,10 +52,6 @@ const nextConfig = {
   assetPrefix: getAssetPrefix(),
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   trailingSlash: false,
-  // Force localhost for WebSocket HMR connections
-  devServer: {
-    host: 'localhost',
-  },
   transpilePackages: [
     'ui',
     'ui-patterns',
@@ -223,7 +219,13 @@ const nextConfig = {
     '@octokit/plugin-paginate-graphql',
     '@octokit/rest',
   ],
-  allowedDevOrigins: [],
+  allowedDevOrigins: [
+    'suse-10.lan.assistance.bg',
+    'http://suse-10.lan.assistance.bg',
+    'https://suse-10.lan.assistance.bg',
+    'http://suse-10.lan.assistance.bg:3000',
+    'https://suse-10.lan.assistance.bg:3000',
+  ],
 }
 
 // next.config.js.

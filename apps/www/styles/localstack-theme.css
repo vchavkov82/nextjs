@@ -1,0 +1,374 @@
+/* ─────────────────────────────────────────────────────────────
+   LocalStack Design System - Color Palette & Design Tokens
+   ───────────────────────────────────────────────────────────── */
+
+/* Root theme variables - Light mode defaults */
+:root {
+  /* LocalStack Brand Colors */
+  --ls-purple-primary: #4d0dcf;
+  --ls-purple-accent: #6e3ae8;
+  --ls-purple-accent-low: #241b47;
+  --ls-purple-accent-high: #c6c1fa;
+
+  /* Dark/Neutral Colors */
+  --ls-gray-100: #eceef2;
+  --ls-gray-200: #c0c2c7;
+  --ls-gray-300: #888b96;
+  --ls-gray-400: #545861;
+  --ls-gray-500: #353841;
+  --ls-gray-600: #24272f;
+  --ls-gray-700: #17181c;
+
+  /* Background & Surface */
+  --ls-bg-primary: #ffffff;
+  --ls-bg-secondary: #f5f5f5;
+  --ls-bg-tertiary: #ebebeb;
+
+  /* Border & Divider */
+  --ls-border-primary: #e0e0e0;
+  --ls-border-secondary: #999cad;
+  --ls-border-accent: #6e3ae8;
+
+  /* Text Colors */
+  --ls-text-primary: #0a0a0a;
+  --ls-text-secondary: #404040;
+  --ls-text-tertiary: #808080;
+
+  /* Semantic Colors */
+  --ls-success: #3ecf8e;
+  --ls-warning: #f4af41;
+  --ls-error: #ff6b6b;
+  --ls-info: #00d4ff;
+
+  /* Spacing System (rem-based) */
+  --ls-space-xs: 0.25rem;    /* 4px */
+  --ls-space-sm: 0.5rem;     /* 8px */
+  --ls-space-md: 1rem;       /* 16px */
+  --ls-space-lg: 1.5rem;     /* 24px */
+  --ls-space-xl: 2rem;       /* 32px */
+  --ls-space-2xl: 3rem;      /* 48px */
+  --ls-space-3xl: 4rem;      /* 64px */
+
+  /* Border Radius */
+  --ls-radius-xs: 4px;
+  --ls-radius-sm: 6px;
+  --ls-radius-md: 8px;
+  --ls-radius-lg: 12px;
+  --ls-radius-xl: 16px;
+  --ls-radius-full: 9999px;
+
+  /* Typography Scale */
+  --ls-text-xs: 0.75rem;     /* 12px */
+  --ls-text-sm: 0.875rem;    /* 14px */
+  --ls-text-base: 1rem;      /* 16px */
+  --ls-text-lg: 1.125rem;    /* 18px */
+  --ls-text-xl: 1.25rem;     /* 20px */
+  --ls-text-2xl: 1.5rem;     /* 24px */
+  --ls-text-3xl: 1.875rem;   /* 30px */
+  --ls-text-4xl: 2.25rem;    /* 36px */
+  --ls-text-5xl: 3rem;       /* 48px */
+
+  /* Font Weights */
+  --ls-font-light: 300;
+  --ls-font-normal: 400;
+  --ls-font-medium: 500;
+  --ls-font-semibold: 600;
+  --ls-font-bold: 700;
+
+  /* Line Heights */
+  --ls-leading-tight: 1.2;
+  --ls-leading-normal: 1.5;
+  --ls-leading-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --ls-tracking-tight: -0.025em;
+  --ls-tracking-normal: 0;
+  --ls-tracking-wide: 0.025em;
+
+  /* Shadows */
+  --ls-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ls-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ls-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ls-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ls-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --ls-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ls-transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ls-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --ls-z-hide: -1;
+  --ls-z-base: 0;
+  --ls-z-dropdown: 100;
+  --ls-z-sticky: 200;
+  --ls-z-fixed: 300;
+  --ls-z-modal-backdrop: 400;
+  --ls-z-modal: 500;
+  --ls-z-popover: 600;
+  --ls-z-tooltip: 700;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background & Surface */
+    --ls-bg-primary: #1a1a1a;
+    --ls-bg-secondary: #242424;
+    --ls-bg-tertiary: #333333;
+
+    /* Border & Divider */
+    --ls-border-primary: #404040;
+    --ls-border-secondary: #606060;
+    --ls-border-accent: #9d6fe8;
+
+    /* Text Colors */
+    --ls-text-primary: #ffffff;
+    --ls-text-secondary: #d0d0d0;
+    --ls-text-tertiary: #808080;
+
+    /* Shadows (darker for light text on dark bg) */
+    --ls-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    --ls-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.26);
+    --ls-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.26);
+    --ls-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+    --ls-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.24);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Component Base Styles
+   ───────────────────────────────────────────────────────────── */
+
+/* Card Component */
+.ls-card {
+  background-color: var(--ls-bg-primary);
+  border: 1px solid var(--ls-border-primary);
+  border-radius: var(--ls-radius-lg);
+  padding: var(--ls-space-lg);
+  box-shadow: var(--ls-shadow-sm);
+  transition: all var(--ls-transition-normal);
+}
+
+.ls-card:hover {
+  border-color: var(--ls-border-accent);
+  box-shadow: var(--ls-shadow-md);
+  transform: translateY(-2px);
+}
+
+.ls-card.ls-card--elevated {
+  box-shadow: var(--ls-shadow-lg);
+}
+
+.ls-card.ls-card--interactive {
+  cursor: pointer;
+}
+
+.ls-card.ls-card--interactive:hover {
+  background-color: var(--ls-bg-secondary);
+}
+
+/* Button Component */
+.ls-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ls-space-sm);
+  padding: var(--ls-space-sm) var(--ls-space-md);
+  border-radius: var(--ls-radius-md);
+  border: 1px solid transparent;
+  font-weight: var(--ls-font-medium);
+  font-size: var(--ls-text-sm);
+  cursor: pointer;
+  transition: all var(--ls-transition-fast);
+  font-family: 'Aeonik', var(--font-custom, sans-serif);
+}
+
+/* Button: Primary */
+.ls-button.ls-button--primary {
+  background-color: var(--ls-purple-primary);
+  color: white;
+  border-color: var(--ls-purple-primary);
+}
+
+.ls-button.ls-button--primary:hover {
+  background-color: var(--ls-purple-accent);
+  border-color: var(--ls-purple-accent);
+  box-shadow: 0 0 20px rgba(110, 58, 232, 0.4);
+}
+
+/* Button: Secondary */
+.ls-button.ls-button--secondary {
+  background-color: var(--ls-bg-secondary);
+  color: var(--ls-text-primary);
+  border-color: var(--ls-border-primary);
+}
+
+.ls-button.ls-button--secondary:hover {
+  background-color: var(--ls-bg-tertiary);
+  border-color: var(--ls-border-accent);
+}
+
+/* Button: Ghost */
+.ls-button.ls-button--ghost {
+  background-color: transparent;
+  color: var(--ls-text-primary);
+  border-color: var(--ls-border-primary);
+}
+
+.ls-button.ls-button--ghost:hover {
+  background-color: var(--ls-bg-secondary);
+  border-color: var(--ls-border-accent);
+}
+
+/* Button: Disabled */
+.ls-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input Component */
+.ls-input {
+  width: 100%;
+  padding: var(--ls-space-sm) var(--ls-space-md);
+  border: 1px solid var(--ls-border-primary);
+  border-radius: var(--ls-radius-md);
+  background-color: var(--ls-bg-primary);
+  color: var(--ls-text-primary);
+  font-size: var(--ls-text-base);
+  font-family: 'Aeonik', var(--font-custom, sans-serif);
+  transition: all var(--ls-transition-fast);
+}
+
+.ls-input:focus {
+  outline: none;
+  border-color: var(--ls-purple-accent);
+  box-shadow: 0 0 0 3px rgba(110, 58, 232, 0.1);
+}
+
+.ls-input::placeholder {
+  color: var(--ls-text-tertiary);
+}
+
+/* Badge Component */
+.ls-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ls-space-xs);
+  padding: var(--ls-space-xs) var(--ls-space-sm);
+  border-radius: var(--ls-radius-full);
+  font-size: var(--ls-text-xs);
+  font-weight: var(--ls-font-medium);
+  background-color: var(--ls-purple-accent-low);
+  color: var(--ls-purple-accent-high);
+}
+
+.ls-badge.ls-badge--success {
+  background-color: rgba(62, 207, 142, 0.15);
+  color: var(--ls-success);
+}
+
+.ls-badge.ls-badge--warning {
+  background-color: rgba(244, 175, 65, 0.15);
+  color: var(--ls-warning);
+}
+
+.ls-badge.ls-badge--error {
+  background-color: rgba(255, 107, 107, 0.15);
+  color: var(--ls-error);
+}
+
+/* Divider Component */
+.ls-divider {
+  height: 1px;
+  background-color: var(--ls-border-primary);
+  margin: var(--ls-space-lg) 0;
+}
+
+.ls-divider.ls-divider--horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.ls-divider.ls-divider--vertical {
+  width: 1px;
+  height: 100%;
+  margin: 0 var(--ls-space-lg);
+}
+
+/* Gradient Utilities */
+.ls-gradient-primary {
+  background: linear-gradient(135deg, var(--ls-purple-primary) 0%, var(--ls-purple-accent) 100%);
+}
+
+.ls-gradient-text {
+  background: linear-gradient(135deg, var(--ls-purple-primary) 0%, var(--ls-purple-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Utility Classes */
+.ls-text-primary {
+  color: var(--ls-text-primary);
+}
+
+.ls-text-secondary {
+  color: var(--ls-text-secondary);
+}
+
+.ls-text-tertiary {
+  color: var(--ls-text-tertiary);
+}
+
+.ls-bg-surface {
+  background-color: var(--ls-bg-secondary);
+}
+
+.ls-border-primary {
+  border-color: var(--ls-border-primary);
+}
+
+.ls-border-accent {
+  border-color: var(--ls-border-accent);
+}
+
+.ls-rounded-xs {
+  border-radius: var(--ls-radius-xs);
+}
+
+.ls-rounded-sm {
+  border-radius: var(--ls-radius-sm);
+}
+
+.ls-rounded-md {
+  border-radius: var(--ls-radius-md);
+}
+
+.ls-rounded-lg {
+  border-radius: var(--ls-radius-lg);
+}
+
+.ls-rounded-xl {
+  border-radius: var(--ls-radius-xl);
+}
+
+.ls-rounded-full {
+  border-radius: var(--ls-radius-full);
+}
+
+.ls-shadow-sm {
+  box-shadow: var(--ls-shadow-sm);
+}
+
+.ls-shadow-md {
+  box-shadow: var(--ls-shadow-md);
+}
+
+.ls-shadow-lg {
+  box-shadow: var(--ls-shadow-lg);
+}
+
+.ls-shadow-xl {
+  box-shadow: var(--ls-shadow-xl);
+}

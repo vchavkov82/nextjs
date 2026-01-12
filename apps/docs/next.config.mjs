@@ -318,7 +318,13 @@ const nextConfig = {
     '@supabase/sql-to-rest',
   ],
   // Allow cross-origin requests from development origins
-  allowedDevOrigins: [],
+  allowedDevOrigins: [
+    'suse-10.lan.assistance.bg',
+    'http://suse-10.lan.assistance.bg',
+    'https://suse-10.lan.assistance.bg',
+    'http://suse-10.lan.assistance.bg:3000',
+    'https://suse-10.lan.assistance.bg:3000',
+  ],
   experimental: {
     // Optimize for high-core systems
     optimizePackageImports: [

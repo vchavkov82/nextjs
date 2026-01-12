@@ -37,8 +37,6 @@ enum MenuId {
   RefKotlinV1 = 'reference_kotlin_v1',
   RefKotlinV2 = 'reference_kotlin_v2',
   RefKotlinV3 = 'reference_kotlin_v3',
-  RefCiCdRunnersV0 = 'reference_ci_cd_runners_v0',
-  RefCiCdRunnersV1 = 'reference_ci_cd_runners_v1',
   RefCli = 'reference_cli',
   RefApi = 'reference_api',
   SelfHostingAuth = 'reference_self_hosting_auth',
@@ -196,18 +194,6 @@ const menus: Menu[] = [
     id: MenuId.RefKotlinV3,
     type: 'reference',
     path: '/reference/kotlin',
-  },
-  {
-    id: MenuId.RefCiCdRunnersV0,
-    type: 'reference',
-    path: '/reference/ci-cd-runners/v0',
-    commonSectionsFile: 'common-client-libs-sections.json',
-  },
-  {
-    id: MenuId.RefCiCdRunnersV1,
-    type: 'reference',
-    path: '/reference/ci-cd-runners',
-    commonSectionsFile: 'common-client-libs-sections.json',
   },
   {
     id: MenuId.RefCli,

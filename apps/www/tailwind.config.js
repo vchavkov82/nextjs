@@ -17,6 +17,33 @@ module.exports = config({
   ],
   theme: {
     extend: {
+      fontFamily: {
+        // LocalStack Aeonik font family
+        aeonik: ['Aeonik', 'var(--font-custom, sans-serif)'],
+        'aeonik-mono': ['Aeonik Mono', 'monospace'],
+      },
+      colors: {
+        // LocalStack Brand Colors
+        'ls-purple': {
+          primary: '#4d0dcf',
+          accent: '#6e3ae8',
+          'accent-low': '#241b47',
+          'accent-high': '#c6c1fa',
+        },
+        'ls-gray': {
+          '100': '#eceef2',
+          '200': '#c0c2c7',
+          '300': '#888b96',
+          '400': '#545861',
+          '500': '#353841',
+          '600': '#24272f',
+          '700': '#17181c',
+        },
+        'ls-success': '#3ecf8e',
+        'ls-warning': '#f4af41',
+        'ls-error': '#ff6b6b',
+        'ls-info': '#00d4ff',
+      },
       keyframes: {
         'flash-code': {
           '0%': { backgroundColor: 'rgba(63, 207, 142, 0.1)' },
