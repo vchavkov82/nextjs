@@ -23,7 +23,10 @@ const RevVersionDropdown = ({
 }) => {
   const { push } = useRouter()
 
-  const libraryMeta = REFERENCES?.[library] ?? undefined
+  // Convert libPath format (hyphens) to REFERENCES key format (underscores)
+  // e.g., 'ci-cd-runners' -> 'ci_cd_runners'
+  const sdkId = library.replaceAll('-', '_') as keyof typeof REFERENCES
+  const libraryMeta = REFERENCES?.[sdkId] ?? undefined
   const versions = libraryMeta?.versions ?? []
 
   if (!versions || versions.length <= 1) {
