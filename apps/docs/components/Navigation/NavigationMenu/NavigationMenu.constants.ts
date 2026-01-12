@@ -217,7 +217,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
             label: 'CI/CD Runners',
             icon: 'github',
             href: '/reference/ci-cd-runners' as `/${string}`,
-            level: 'reference_ci_cd_runners_v1',
+            level: 'reference_ci_cd_runners',
           },
           {
             label: 'Flutter',
@@ -2017,6 +2017,13 @@ export const references = [
   {
     label: 'Platform Tools',
     items: [
+      {
+        label: 'CI/CD Runners',
+        versions: ['v1', 'v0'],
+        description: 'something about the reference',
+        icon: '/docs/img/icons/github-icon.svg',
+        url: '/reference/ci-cd-runners/start',
+      },
       {
         label: 'CLI',
         description: 'something about the reference',
