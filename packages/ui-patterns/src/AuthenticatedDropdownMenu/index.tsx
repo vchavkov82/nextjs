@@ -20,9 +20,20 @@ import {
 } from 'ui'
 import { themes } from 'ui/src/components/ThemeProvider/themes'
 
-import type { User } from '@supabase/supabase-js'
 import type { LucideIcon } from 'icons/src/createSupabaseIcon'
 import type { Theme } from 'ui/src/components/ThemeProvider/themes'
+
+/**
+ * Generic user type that works with any authentication provider
+ */
+interface User {
+  email?: string
+  user_metadata?: {
+    avatar_url?: string
+    [key: string]: any
+  }
+  [key: string]: any
+}
 
 interface Props {
   menu: menuItem[][]
