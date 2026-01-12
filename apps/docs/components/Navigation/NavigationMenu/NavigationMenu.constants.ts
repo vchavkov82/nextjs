@@ -1943,7 +1943,7 @@ export const reference_self_hosting_functions = {
 export const reference_ci_cd_runners_v1 = {
   icon: 'github',
   title: 'CI/CD Runners',
-  url: '/reference/ci-cd-runners/v1',
+  url: '/reference/ci-cd-runners',
   parent: '/reference',
   pkg: {
     name: 'ci-cd-runners',

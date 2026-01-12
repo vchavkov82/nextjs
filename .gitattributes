@@ -1,0 +1,100 @@
+# Git Attributes for Content-Preserving Rebases
+# This file defines merge strategies for different file types
+#
+# Use 'merge=ours' for content/design files - preserves feature branch versions
+# during rebase while syncing functional code changes from develop
+#
+# Pattern order: Most specific patterns first, general patterns last
+
+# Content Preservation - use 'ours' strategy during rebase
+# Feature branch versions are preserved automatically
+
+# MDX Documentation (519 files)
+apps/docs/content/**/*.mdx merge=ours
+
+# Navigation & Structure
+apps/docs/components/Navigation/NavigationMenu/NavigationMenu.constants.ts merge=ours
+apps/docs/spec/*-sections.json merge=ours
+apps/docs/spec/**/*.yml merge=ours
+apps/docs/spec/**/*.yaml merge=ours
+apps/docs/spec/common-client-libs-sections.json merge=ours
+apps/docs/spec/common-cli-sections.json merge=ours
+apps/docs/spec/common-api-sections.json merge=ours
+
+# Reference Documentation Structures
+apps/docs/content/reference/**/*.mdx merge=ours
+apps/docs/docs/ref/**/*.mdx merge=ours
+
+# Styles & Theming
+apps/docs/styles/**/*.scss merge=ours
+apps/docs/styles/**/*.css merge=ours
+apps/design-system/styles/**/*.css merge=ours
+tailwind.config.cjs merge=ours
+tailwind.config.js merge=ours
+
+# Assets (images, videos, media) - 1,083 image files
+apps/docs/public/img/**/* merge=ours -diff
+apps/docs/public/videos/**/* merge=ours -diff
+apps/docs/public/**/*.png merge=ours -diff
+apps/docs/public/**/*.jpg merge=ours -diff
+apps/docs/public/**/*.jpeg merge=ours -diff
+apps/docs/public/**/*.gif merge=ours -diff
+apps/docs/public/**/*.svg merge=ours
+apps/docs/public/**/*.webp merge=ours -diff
+apps/docs/public/**/*.mp4 merge=ours -diff
+apps/docs/public/**/*.webm merge=ours -diff
+
+# Design System Content
+apps/design-system/content/**/*.mdx merge=ours
+
+# CMS Content
+apps/cms/src/collections/**/* merge=ours
+apps/cms/content/**/* merge=ours
+
+# Environment files (deployment-specific)
+apps/docs/.env.development merge=ours
+apps/docs/.env.local merge=ours
+apps/docs/.env*.local merge=ours
+apps/cms/.env.local merge=ours
+apps/cms/.env*.local merge=ours
+
+# Custom Content Configuration
+apps/docs/lib/custom-content/*.json merge=ours
+
+# Binary file markers (no diff, no merge)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp4 binary
+*.webm binary
+
+# Text files - normal processing (these sync with develop)
+*.ts -merge=ours
+*.tsx -merge=ours
+*.js -merge=ours
+*.jsx -merge=ours
+*.json -merge=ours
+package.json diff=json
+pnpm-workspace.yaml -merge=ours
+turbo.json -merge=ours
+next.config.mjs -merge=ours
+tsconfig.json -merge=ours
+
+# Functional code always syncs from develop
+apps/docs/components/**/*.tsx -merge=ours
+apps/docs/components/**/*.ts -merge=ours
+apps/docs/features/**/*.ts -merge=ours
+apps/docs/features/**/*.tsx -merge=ours
+apps/docs/app/**/*.tsx -merge=ours
+apps/docs/app/**/*.ts -merge=ours
+apps/docs/lib/**/*.ts -merge=ours
+apps/docs/lib/**/*.tsx -merge=ours
+apps/docs/hooks/**/*.ts -merge=ours
+apps/docs/hooks/**/*.tsx -merge=ours

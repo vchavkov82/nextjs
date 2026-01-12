@@ -199,7 +199,8 @@ const menus: Menu[] = [
   {
     id: MenuId.RefCiCdRunnersV1,
     type: 'reference',
-    path: '/reference/ci-cd-runners/v1',
+    path: '/reference/ci-cd-runners',
+    commonSectionsFile: 'common-client-libs-sections.json',
   },
   {
     id: MenuId.RefCli,
