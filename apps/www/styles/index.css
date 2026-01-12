@@ -20,6 +20,17 @@
   .disable-blur {
     image-rendering: -webkit-optimize-contrast;
   }
+
+  /* Missing utility classes from legacy theme system */
+  .text-foreground-lighter {
+    @apply text-foreground/60;
+  }
+  .text-foreground-light {
+    @apply text-foreground/80;
+  }
+  .text-foreground-muted {
+    @apply text-foreground/60;
+  }
 }
 
 @font-face {
@@ -211,22 +222,22 @@ h6:not(.overwrite) {
 /* Database page */
 
 .dashboard-tabs div[role='separator'] {
-  @apply border border-strong;
+  @apply border border-border;
 }
 
 .sbui-tabs--alt div[role='tablist'] .sbui-btn-primary {
-  @apply bg-border-stronger text-white;
+  @apply bg-border text-white;
   text-shadow: none;
   font-weight: 400;
 }
 .sbui-tabs--alt div[role='tablist'] .sbui-btn-text {
-  @apply text-border-muted;
+  @apply text-border/60;
   font-weight: 400;
   shadow: none;
 }
 
 .sbui-tabs--underline-alt div[role='tablist'] .sbui-tab-button-underline--active {
-  @apply border-foreground-muted;
+  @apply border-foreground/40;
 }
 /* override position of tabs  */
 .dashboard-tabs > div > div {
@@ -253,7 +264,7 @@ table {
 }
 
 .sbui-typography-container thead {
-  @apply text-border;
+  @apply text-foreground/70;
 }
 
 .sbui-typography a {

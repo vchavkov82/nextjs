@@ -20,6 +20,9 @@ const withMDX = nextMdx({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
+      // remarkGfm temporarily disabled due to version incompatibility
+      // Tables have been converted to HTML format
+      // remarkGfm,
       [
         remarkCodeHike,
         {
@@ -30,7 +33,6 @@ const withMDX = nextMdx({
           // by minifying the theme data before passing to code-hike
         },
       ],
-      remarkGfm,
     ],
     rehypePlugins: [rehypeSlug],
     // This is required for `MDXProvider` component
@@ -87,22 +89,13 @@ const nextConfig = {
       debug: [],
     }
 
-    // Mock Supabase imports to avoid dependency issues
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@supabase/supabase-js': pathJoin(__dirname, 'lib', 'supabase-mock.ts'),
-    }
+    // Supabase has been completely removed - using mock client stubs only
     
     // Suppress Edge Runtime warnings for packages that use Node.js APIs
-    // These warnings occur because packages like @supabase/supabase-js and openai
-    // reference Node.js APIs, but they have fallbacks for Edge Runtime
+    // OpenAI references Node.js APIs, but has fallbacks for Edge Runtime
     if (config.ignoreWarnings) {
       config.ignoreWarnings = [
         ...config.ignoreWarnings,
-        {
-          module: /node_modules\/@supabase\/(realtime-js|supabase-js)/,
-          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
-        },
         {
           module: /node_modules\/openai/,
           message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
@@ -110,10 +103,6 @@ const nextConfig = {
       ]
     } else {
       config.ignoreWarnings = [
-        {
-          module: /node_modules\/@supabase\/(realtime-js|supabase-js)/,
-          message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,
-        },
         {
           module: /node_modules\/openai/,
           message: /A Node\.js API is used.*which is not supported in the Edge Runtime/,

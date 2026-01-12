@@ -3,9 +3,8 @@ import dynamic from 'next/dynamic'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
-import { Session } from '@supabase/supabase-js'
 import { LW_URL, SITE_ORIGIN } from '@/lib/constants'
-import supabase from '@/lib/supabaseMisc'
+
 
 import FaviconImports from '@/components/LaunchWeek/X/FaviconImports'
 import DefaultLayout from '@/components/Layouts/Default'
@@ -51,17 +50,13 @@ export default function LaunchWeekIndex({ meetups }: Props) {
   const [ticketState, setTicketState] = useState<TicketState>('loading')
 
   useEffect(() => {
-    if (supabase) {
-      supabase.auth.getSession().then(({ data: { session } }) => setSession(session))
       const {
         data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session)
       })
 
       return () => subscription.unsubscribe()
     }
-  }, [supabase])
 
   useEffect(() => {
     document.body.classList.add('bg-[#060809]')
@@ -102,7 +97,6 @@ export default function LaunchWeekIndex({ meetups }: Props) {
       <FaviconImports />
       <ConfDataContext.Provider
         value={{
-          supabase,
           session,
           userData,
           setUserData,

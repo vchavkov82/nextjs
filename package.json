@@ -111,7 +111,10 @@
     "tmp": "^0.2.4",
     "vinxi>vite": "catalog:",
     "prettier": "3.2.5",
-    "vfile-matter": "^3.0.1"
+    "vfile-matter": "^3.0.1",
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-gfm-table": "^2.0.0",
+    "mdast-util-to-markdown": "^2.0.0"
   },
   "dependencies": {}
 }

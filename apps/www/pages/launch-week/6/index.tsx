@@ -8,7 +8,6 @@ import _days from '@/components/LaunchWeek/6/lw6_days.json'
 import DefaultLayout from '@/components/Layouts/Default'
 import SectionContainer from '@/components/Layouts/SectionContainer'
 
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import classNames from 'classnames'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
@@ -40,7 +39,6 @@ export default function launchweek() {
   const description = 'BA Launch Week 6 | 12-18 Dec 2022'
   const liveDay = null
 
-  const [supabase, setSupabase] = useState<SupabaseClient | null>(null)
 
   const [creators, setCreators] = useState<any>([])
   const [activeCreator, setActiveCreator] = useState<any>(null)
@@ -48,7 +46,6 @@ export default function launchweek() {
   const ticketNumber = query.ticketNumber?.toString()
 
   useEffect(() => {
-    if (!supabase) {
       setSupabase(
         createClient(
           process.env.NEXT_PUBLIC_MISC_USE_URL!,
@@ -59,15 +56,12 @@ export default function launchweek() {
   }, [])
 
   useEffect(() => {
-    if (supabase) {
       getCreators()
     }
-  }, [supabase])
 
   async function getCreators() {
     try {
       // setLoading(true)
-      let supa = await supabase.from('lw6_creators').select()
 
       let { data, error, status } = supa
 
@@ -791,7 +785,6 @@ export default function launchweek() {
                           <span className="text-white text-center">pg_crdt</span>
                         </div>
                         <SectionButtons
-                          docs="https://github.com/supabase/pg_crdt"
                           blog="/blog/postgres-crdt"
                         />
                       </div>
@@ -857,7 +850,6 @@ export default function launchweek() {
                           <span className="text-white text-center">PostgREST 11</span>
                         </div>
                         <SectionButtons
-                          docs="/docs/guides/resources/supabase-cli"
                           blog="/blog/postgrest-11-prerelease"
                         />
                       </div>
@@ -953,7 +945,6 @@ export default function launchweek() {
               )}
             >
               <a
-                href="https://github.com/psteinroe/supabase-cache-helpers"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="self-end mb-4"
@@ -1076,7 +1067,6 @@ export default function launchweek() {
               <a
                 rel="noopener"
                 target="_blank"
-                href="/blog/the-supabase-content-storm"
                 className="text-brand flex items-center mt-2"
               >
                 See all the content

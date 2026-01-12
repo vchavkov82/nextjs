@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
-import { Session } from '@supabase/supabase-js'
 import { SITE_ORIGIN } from '@/lib/constants'
-import supabase from '@/lib/supabaseMisc'
 
 import DefaultLayout from '@/components/Layouts/Default'
 import { TicketState, ConfDataContext, UserData } from '@/components/LaunchWeek/hooks/use-conf-data'
@@ -28,7 +26,7 @@ export default function GAWeekIndex() {
 
   const ticketNumber = query.ticketNumber?.toString()
   const bgImageId = query.bgImageId?.toString()
-  const [session, setSession] = useState<Session | null>(null)
+  const [session, setSession] = useState<any | null>(null)
   const [showCustomizationForm, setShowCustomizationForm] = useState<boolean>(false)
 
   const defaultUserData = {
@@ -44,25 +42,7 @@ export default function GAWeekIndex() {
   const [ticketState, setTicketState] = useState<TicketState>('loading')
 
   useEffect(() => {
-    if (supabase) {
-      supabase.auth.getSession().then(({ data: { session } }) => setSession(session))
-      const {
-        data: { subscription },
-      } = supabase.auth.onAuthStateChange((_event, session) => {
-        setSession(session)
-      })
-
-      return () => subscription.unsubscribe()
-    }
-  }, [supabase])
-
-  useEffect(() => {
-    if (session?.user) {
-      if (userData?.id) {
-        return setTicketState('ticket')
-      }
-      return setTicketState('loading')
-    }
+    // Supabase auth removed
     if (!session) return setTicketState('registration')
   }, [session, userData])
 
@@ -84,7 +64,6 @@ export default function GAWeekIndex() {
       />
       <ConfDataContext.Provider
         value={{
-          supabase,
           session,
           userData,
           setUserData,

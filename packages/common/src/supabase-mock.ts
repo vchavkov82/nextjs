@@ -85,27 +85,25 @@ export class MockSupabaseClient {
 
   // Database methods (non-functional stub for compatibility)
   from(table: string) {
+    const mockQueryBuilder = {
+      eq: (column: string, value: any) => mockQueryBuilder,
+      single: async () => Promise.resolve({ data: null, error: null }),
+      limit: (count: number) => mockQueryBuilder,
+      order: (column: string) => mockQueryBuilder,
+    }
+
     return {
-      select: (columns?: string) => ({
-        eq: (column: string, value: any) => ({
-          single: async () => ({ data: null, error: null }),
-          limit: (count: number) => ({ data: [], error: null }),
-          order: (column: string) => ({ data: [], error: null }),
-        }),
-        limit: (count: number) => ({ data: [], error: null }),
-        order: (column: string) => ({ data: [], error: null }),
-        single: async () => ({ data: null, error: null }),
-      }),
+      select: (columns?: string) => mockQueryBuilder,
       insert: (values: any) => ({
-        select: (columns?: string) => ({ data: null, error: null }),
-        single: async () => ({ data: null, error: null }),
+        select: (columns?: string) => Promise.resolve({ data: null, error: null }),
+        single: async () => Promise.resolve({ data: null, error: null }),
       }),
       update: (values: any) => ({
-        eq: (column: string, value: any) => ({ data: null, error: null }),
-        select: (columns?: string) => ({ data: null, error: null }),
+        eq: (column: string, value: any) => Promise.resolve({ data: null, error: null }),
+        select: (columns?: string) => Promise.resolve({ data: null, error: null }),
       }),
       delete: () => ({
-        eq: (column: string, value: any) => ({ data: null, error: null }),
+        eq: (column: string, value: any) => Promise.resolve({ data: null, error: null }),
       }),
     }
   }

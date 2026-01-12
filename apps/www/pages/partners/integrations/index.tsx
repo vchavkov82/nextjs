@@ -8,7 +8,7 @@ import DefaultLayout from '@/components/Layouts/Default'
 import SectionContainer from '@/components/Layouts/SectionContainer'
 import BecomeAPartner from '@/components/Partners/BecomeAPartner'
 import PartnerLinkBox from '@/components/Partners/PartnerLinkBox'
-import supabase from '@/lib/supabaseMisc'
+
 import type { Partner } from '@/types/partners'
 import TileGrid from '../../../components/Partners/TileGrid'
 
@@ -23,7 +23,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      partners,
+      partners: partners || [],
     },
     // TODO: consider using Next.js' On-demand Revalidation with BA Database Webhooks instead
     revalidate: 1800, // 30 minutes

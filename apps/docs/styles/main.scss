@@ -6,6 +6,15 @@
 @import './../../../packages/ui/build/css/themes/dark-combined.css';
 @import './../../../packages/ui/build/css/themes/light.css';
 
+@layer components {
+  .bg-control {
+    @apply bg-surface-100;
+  }
+  .border-overlay {
+    @apply border-border;
+  }
+}
+
 @font-face {
   font-family: 'custom-font';
   src:

@@ -6,7 +6,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
-import { createClient, Session, SupabaseClient } from '@supabase/supabase-js'
 import { SITE_ORIGIN, LW_URL } from '@/lib/constants'
 
 import DefaultLayout from '@/components/Layouts/Default'
@@ -22,7 +21,6 @@ const LaunchWeekPrizeSection = dynamic(
 )
 const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
-const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_MISC_USE_URL ?? 'http://localhost:54321',
   // ANON KEY
   process.env.NEXT_PUBLIC_MISC_USE_ANON_KEY!
@@ -37,7 +35,6 @@ export default function TicketHome() {
 
   const ticketNumber = query.ticketNumber?.toString()
   const bgImageId = query.bgImageId?.toString()
-  const [supabase, setSupabase] = useState<SupabaseClient | null>(null)
   const [session, setSession] = useState<Session | null>(null)
 
   const [initialDarkMode] = useState('dark')
@@ -55,7 +52,6 @@ export default function TicketHome() {
   const [ticketState, setTicketState] = useState<TicketState>('ticket')
 
   useEffect(() => {
-    if (!supabase) {
       setSupabase(
         createClient(
           process.env.NEXT_PUBLIC_MISC_USE_URL!,
@@ -66,17 +62,13 @@ export default function TicketHome() {
   }, [])
 
   useEffect(() => {
-    if (supabase) {
-      supabase.auth.getSession().then(({ data: { session } }) => setSession(session))
       const {
         data: { subscription },
-      } = supabase.auth.onAuthStateChange((event, session) => {
         setSession(session)
       })
 
       return () => subscription.unsubscribe()
     }
-  }, [supabase])
 
   useEffect(() => {
     document.body.classList.add('bg-[#020405]')
@@ -112,7 +104,6 @@ export default function TicketHome() {
       </Head>
       <ConfDataContext.Provider
         value={{
-          supabase,
           session,
           userData,
           setUserData,
