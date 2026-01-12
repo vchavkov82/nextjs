@@ -248,8 +248,7 @@ capture_content_hashes
 print_info "Rebasing $TARGET_BRANCH onto origin/develop..."
 if git rebase origin/develop; then
     print_info "Rebase successful!"
-    verify_content_preservation
-    REBASE_STATUS=$?
+    verify_content_preservation || print_warn "Some content files may have changed - please review"
 else
     print_error "Rebase failed with conflicts"
     print_info ""

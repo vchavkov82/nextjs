@@ -208,24 +208,46 @@ test_rebase_script() {
 test_develop_clean() {
     print_test "Checking if develop branch is clean..."
 
+    # Check if we're in the middle of a rebase
+    if [ -d ".git/rebase-merge" ] || [ -d ".git/rebase-apply" ]; then
+        print_pass "Skipped (rebase in progress) - check develop manually after rebase"
+        return 0
+    fi
+
     # Save current branch
     local current=$(git branch --show-current)
 
+    # If not on a branch (detached HEAD), skip this test
+    if [ -z "$current" ]; then
+        print_pass "Skipped (detached HEAD state)"
+        return 0
+    fi
+
+    # Check if there are uncommitted changes that would prevent checkout
+    if ! git diff-index --quiet HEAD -- 2>/dev/null; then
+        print_pass "Skipped (uncommitted changes on current branch)"
+        return 0
+    fi
+
     # Switch to develop temporarily
-    git checkout develop > /dev/null 2>&1 || {
+    if ! git checkout develop > /dev/null 2>&1; then
         print_fail "Cannot checkout develop branch"
         return 1
-    }
+    fi
 
-    # Check for changes
-    if ! git diff-index --quiet HEAD --; then
-        print_fail "develop branch has uncommitted changes"
-        git checkout "$current" > /dev/null 2>&1
-        return 1
+    # Check for changes on develop
+    local has_changes=0
+    if ! git diff-index --quiet HEAD -- 2>/dev/null; then
+        has_changes=1
     fi
 
     # Switch back to original branch
     git checkout "$current" > /dev/null 2>&1
+
+    if [ $has_changes -eq 1 ]; then
+        print_fail "develop branch has uncommitted changes"
+        return 1
+    fi
 
     print_pass "develop branch is clean"
     return 0

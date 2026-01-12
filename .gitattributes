@@ -88,8 +88,8 @@ next.config.mjs -merge=ours
 tsconfig.json -merge=ours
 
 # Functional code always syncs from develop
-apps/docs/components/**/*.tsx -merge=ours
-apps/docs/components/**/*.ts -merge=ours
+# NOTE: These patterns must NOT override the NavigationMenu.constants.ts pattern above
+# Git attributes uses last-match-wins, so we exclude specific content files
 apps/docs/features/**/*.ts -merge=ours
 apps/docs/features/**/*.tsx -merge=ours
 apps/docs/app/**/*.tsx -merge=ours
@@ -98,3 +98,11 @@ apps/docs/lib/**/*.ts -merge=ours
 apps/docs/lib/**/*.tsx -merge=ours
 apps/docs/hooks/**/*.ts -merge=ours
 apps/docs/hooks/**/*.tsx -merge=ours
+
+# Components sync from develop EXCEPT NavigationMenu.constants.ts (handled above)
+# Using explicit exclusion patterns
+apps/docs/components/**/*.tsx -merge=ours
+apps/docs/components/*/*.ts -merge=ours
+apps/docs/components/*/*/*.tsx -merge=ours
+# Explicitly re-apply merge=ours for NavigationMenu.constants.ts (must be LAST)
+apps/docs/components/Navigation/NavigationMenu/NavigationMenu.constants.ts merge=ours
