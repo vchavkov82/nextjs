@@ -85,9 +85,9 @@ const navCommands = [
   },
   {
     id: 'nav-ref-ci-cd-runners',
-    name: 'Go to CI/CD Runners reference',
-    value: 'Reference, API, SDK: Go to CI/CD Runners reference (CI/CD Runners)',
-    route: '/reference/ci-cd-runners',
+    name: 'Go to CI/CD Runners guides',
+    value: 'Reference, API, SDK: Go to CI/CD Runners guides (CI/CD Runners)',
+    route: '/guides/ci-cd-runners',
     icon: () => <ArrowRight />,
   },
   {
