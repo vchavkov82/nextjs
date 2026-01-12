@@ -1,0 +1,32 @@
+---
+id: 'ci-cd-runners-introduction'
+title: 'CI/CD Runners'
+---
+
+# CI/CD Runners Reference
+
+Remote Docker image building that's up to 40x faster than local or CI provider builds.
+
+## Overview
+
+CI/CD Runners provides remote Docker image building as a drop-in replacement for `docker build`. The service runs optimized BuildKit on remote builder infrastructure, eliminating the need to manage layer caches manually via tarballs.
+
+## Key Features
+
+- **Up to 40x faster builds** through optimized remote infrastructure
+- **Native multi-platform support** for x86 and ARM architectures without emulation
+- **Persistent layer caching** automatically shared across team members
+- **High-performance builders** with 16 CPUs and 32GB RAM by default
+- **Seamless CI/CD integration** with GitHub Actions, GitLab CI, CircleCI, and more
+
+## Getting Started
+
+For comprehensive guides and detailed documentation, see:
+- **[Container Builds Guide](/docs/guides/ci-cd-runners/guides/container-builds)** - Overview and quick start
+- **[CI Integrations](/docs/guides/ci-cd-runners/guides/ci-integrations)** - Set up with your CI platform
+- **[Full Guides](/docs/guides/ci-cd-runners)** - Complete documentation
+
+## Versions
+
+- **v1** (Current) - Latest version with all features
+- **v0** (Legacy) - Previous version, upgrade recommended

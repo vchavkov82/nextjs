@@ -1,0 +1,50 @@
+---
+id: 'ci-cd-runners-v1-introduction'
+title: 'CI/CD Runners v1'
+---
+
+# CI/CD Runners v1 Reference
+
+Latest version with full feature support and regular updates.
+
+## Overview
+
+CI/CD Runners v1 is the current stable release providing remote Docker image building, persistent caching, and seamless CI/CD integration.
+
+**Key Features:**
+- Up to 40x faster builds with remote infrastructure
+- Persistent layer caching shared across teams
+- Native multi-platform support (x86 and ARM)
+- Integration with GitHub Actions, GitLab CI, CircleCI, and more
+- Security isolation for fork PRs
+
+## Quick Start
+
+Basic usage:
+
+```bash
+# Install CLI
+curl https://cli.depot.dev/install.sh | sh
+
+# Run a build
+depot build -t myapp:latest .
+
+# Multi-platform build
+depot build --platform linux/amd64,linux/arm64 -t myapp:latest .
+
+# Push to registry
+depot build -t myregistry.azurecr.io/myapp:latest --push .
+```
+
+## Full Documentation
+
+For comprehensive guides and detailed documentation:
+- **[Container Builds](/docs/guides/ci-cd-runners/guides/container-builds)** - Core concepts and getting started
+- **[CI Integrations](/docs/guides/ci-cd-runners/guides/ci-integrations)** - GitHub Actions, GitLab CI, CircleCI, etc.
+- **[Architecture](/docs/guides/ci-cd-runners/guides/architecture)** - How it works under the hood
+- **[Performance](/docs/guides/ci-cd-runners/guides/performance)** - Optimization and benchmarks
+- **[All Guides](/docs/guides/ci-cd-runners)** - Complete documentation
+
+## Legacy Version
+
+For the previous version, see **[CI/CD Runners v0](/reference/ci-cd-runners/v0)**.

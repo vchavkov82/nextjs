@@ -1,4 +1,20 @@
 export const REFERENCES = {
+  ci_cd_runners: {
+    type: 'sdk',
+    name: 'CI/CD Runners',
+    library: 'ci-cd-runners',
+    libPath: 'ci-cd-runners',
+    versions: ['v1', 'v0'],
+    icon: 'github',
+    meta: {
+      v1: {
+        libId: 'reference_ci_cd_runners_v1',
+      },
+      v0: {
+        libId: 'reference_ci_cd_runners_v0',
+      },
+    },
+  },
   api: {
     type: 'api',
     name: 'API',

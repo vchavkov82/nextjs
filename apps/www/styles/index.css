@@ -6,6 +6,8 @@
 /* Modern Design System - Primary */
 @import './design-system.css';
 @import './animations-modern.css';
+@import './navigation.css';
+@import './navigation-overrides.css';
 
 @tailwind base;
 @tailwind components;
