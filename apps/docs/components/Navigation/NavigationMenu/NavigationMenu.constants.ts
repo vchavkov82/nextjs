@@ -1732,10 +1732,21 @@ export const reference_api = {
   parent: '/reference',
 }
 
+export const reference_ci_cd_runners_v0 = {
+  icon: 'github',
+  title: 'CI/CD Runners v0',
+  url: '/reference/ci-cd-runners/v0',
+  parent: '/reference',
+  pkg: {
+    name: 'ci-cd-runners',
+    repo: 'https://github.com/vchavkov82/nextjs-ci-cd-runners',
+  },
+}
+
 export const reference_ci_cd_runners_v1 = {
   icon: 'github',
-  title: 'CI/CD Runners',
-  url: '/guides/ci-cd-runners',
+  title: 'CI/CD Runners v1',
+  url: '/reference/ci-cd-runners',
   parent: '/reference',
   pkg: {
     name: 'ci-cd-runners',
@@ -1749,10 +1760,10 @@ export const references = [
     items: [
       {
         label: 'CI/CD Runners',
-        versions: ['v1'],
-        description: 'something about the reference',
+        versions: ['v1', 'v0'],
+        description: 'Remote Docker image building and CI/CD automation',
         icon: '/docs/img/icons/github-icon.svg',
-        url: '/guides/ci-cd-runners',
+        url: '/reference/ci-cd-runners',
       },
     ],
   },
