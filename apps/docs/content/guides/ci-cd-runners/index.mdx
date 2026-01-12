@@ -1,0 +1,144 @@
+---
+id: 'ci-cd-runners'
+title: 'CI/CD Runners'
+description: 'Self-hosted CI/CD runners for high-performance container builds'
+---
+
+Remote Docker image building that's up to 40x faster than local or CI provider builds.
+
+## What is CI/CD Runners?
+
+CI/CD Runners provides remote Docker image building as a drop-in replacement for `docker build`. The service runs optimized BuildKit on remote builder infrastructure, eliminating the need to manage layer caches manually.
+
+### Key Features
+
+- **Up to 40x faster builds** through optimized remote infrastructure
+- **Native multi-platform support** for x86 and ARM architectures without emulation
+- **Persistent layer caching** automatically shared across team members
+- **High-performance builders** with 16 CPUs and 32GB RAM by default
+- **Seamless CI/CD integration** with GitHub Actions, GitLab CI, CircleCI, and more
+- **Security isolation** for fork builds prevents cache poisoning
+
+## Getting Started
+
+### Quick Start
+
+```bash
+# Install the CLI
+curl https://cli.depot.dev/install.sh | sh
+
+# Build a Docker image
+depot build -t myapp:latest .
+
+# Multi-platform build
+depot build --platform linux/amd64,linux/arm64 -t myapp:latest .
+
+# Push to registry
+depot build -t myregistry.azurecr.io/myapp:latest --push .
+```
+
+## Documentation Structure
+
+### Getting Started Guides
+- **[Container Builds](/docs/guides/ci-cd-runners/guides/container-builds)** - Overview of remote Docker builds and core concepts
+- **[CI Integrations](/docs/guides/ci-cd-runners/guides/ci-integrations)** - Set up with GitHub Actions, GitLab CI, CircleCI, Buildkite, AWS CodeBuild
+- **[Best Practices](/docs/guides/ci-cd-runners/guides/best-practices)** - Optimize builds and reduce costs
+
+### Deep Dives
+- **[Architecture](/docs/guides/ci-cd-runners/guides/architecture)** - Understand system components, build flow, and security
+- **[Performance](/docs/guides/ci-cd-runners/guides/performance)** - Optimization techniques and benchmarks
+- **[Pricing](/docs/guides/ci-cd-runners/guides/pricing)** - Transparent pricing plans and cost estimation
+
+### Caching Strategies
+- **[Caching Overview](/docs/guides/ci-cd-runners/caching/overview)** - Available caching strategies
+- **[Remote Cache](/docs/guides/ci-cd-runners/caching/remote-cache)** - Distributed build cache
+- **[Magic Cache](/docs/guides/ci-cd-runners/caching/magic-cache)** - Automatic cache optimization
+- **[Docker S3 Exporter](/docs/guides/ci-cd-runners/caching/docker-s3-exporter)** - Export Docker layers to S3
+- **[Snapshots](/docs/guides/ci-cd-runners/caching/snapshots)** - Block-level snapshots for fast restore
+- **[Ephemeral Registry](/docs/guides/ci-cd-runners/caching/ephemeral-registry)** - Fast ephemeral Docker registry
+- **[EFS](/docs/guides/ci-cd-runners/caching/elastic-file-system)** - Shared filesystem for caching
+- **[YOLO Mode](/docs/guides/ci-cd-runners/caching/yolo-mode)** - In-memory caching
+
+### Configuration
+- **[Overview](/docs/guides/ci-cd-runners/configuration/overview)** - Configuration options
+- **[Custom Images](/docs/guides/ci-cd-runners/configuration/custom-images)** - Use custom runner images
+- **[Environment Variables](/docs/guides/ci-cd-runners/configuration/environments)** - Configure environments
+- **[Job Labels](/docs/guides/ci-cd-runners/configuration/job-labels)** - Route jobs to specific runners
+- **[Spot Instances](/docs/guides/ci-cd-runners/configuration/spot-instances)** - Cost optimization with spot instances
+- **[Stack Configuration](/docs/guides/ci-cd-runners/configuration/stack-configuration)** - Configure runner stacks
+- **[Resource Tags](/docs/guides/ci-cd-runners/configuration/resource-tags)** - Tag resources for management
+
+### Runner Types
+- **[Overview](/docs/guides/ci-cd-runners/runners/overview)** - Available runner types
+- **[Linux](/docs/guides/ci-cd-runners/runners/linux)** - Linux runners (x64 and ARM)
+- **[Windows](/docs/guides/ci-cd-runners/runners/windows)** - Windows Server runners
+- **[macOS](/docs/guides/ci-cd-runners/runners/macos)** - macOS runners for iOS/macOS development
+- **[GPU](/docs/guides/ci-cd-runners/runners/gpu)** - GPU runners for ML/AI workloads
+- **[Pools](/docs/guides/ci-cd-runners/runners/pools)** - Warm pools for faster startup
+
+### Networking
+- **[Overview](/docs/guides/ci-cd-runners/networking/overview)** - Networking configuration
+- **[Static IPs](/docs/guides/ci-cd-runners/networking/static-ips)** - Static IP addresses
+- **[SSH Access](/docs/guides/ci-cd-runners/networking/ssh-ssm-access)** - SSH and Systems Manager access
+- **[VPC Integration](/docs/guides/ci-cd-runners/networking/reuse-existing-vpc)** - Use existing VPCs
+
+### Monitoring & Analytics
+- **[Overview](/docs/guides/ci-cd-runners/monitoring/overview)** - Monitoring setup
+- **[Job Metrics](/docs/guides/ci-cd-runners/monitoring/job-metrics)** - Track job performance
+- **[Stack Metrics](/docs/guides/ci-cd-runners/monitoring/stack-metrics)** - Monitor stack health
+- **[Cost Reports](/docs/guides/ci-cd-runners/monitoring/cost-report)** - Analyze spending
+- **[Alerts](/docs/guides/ci-cd-runners/monitoring/alerts)** - Set up alerts and notifications
+- **[Job Retries](/docs/guides/ci-cd-runners/monitoring/job-retries)** - Handle failed jobs
+
+### Integrations
+- **[StepSecurity](/docs/guides/ci-cd-runners/integrations/stepsecurity)** - Security scanning
+
+### Additional Resources
+- **[Installation](/docs/guides/ci-cd-runners/guides/installation)** - Install and set up runners
+- **[CLI Reference](/docs/guides/ci-cd-runners/guides/cli)** - Command-line interface documentation
+- **[Upgrade Guide](/docs/guides/ci-cd-runners/guides/upgrade)** - Upgrade to newer versions
+- **[Troubleshooting](/docs/guides/ci-cd-runners/guides/troubleshooting)** - Common issues and solutions
+
+## Why CI/CD Runners?
+
+### Performance
+- **3-5x faster** first builds vs standard Docker
+- **10-20x faster** with layer caching
+- **Native multi-platform** builds in parallel
+
+### Developer Experience
+- Drop-in replacement for `docker build`
+- Minimal configuration required
+- Works with all CI/CD platforms
+
+### Team Collaboration
+- Shared persistent caches
+- Team members reuse previously built layers
+- Significant cost savings
+
+### Security
+- Isolated builders for fork PRs
+- mTLS encrypted connections
+- Cache poisoning prevention
+- No compromised cache access
+
+## Infrastructure
+
+**Default Configuration:**
+- 16 CPUs per build
+- 32GB RAM per build
+- 50GB NVMe SSD cache
+- Ephemeral EC2 instances
+
+**Premium Options:**
+- Up to 64 CPUs
+- Up to 128GB RAM
+- Up to 500GB cache storage
+
+## Next Steps
+
+1. **Start with [Container Builds](/docs/guides/ci-cd-runners/guides/container-builds)** to understand the core concepts
+2. **Follow [Installation](/docs/guides/ci-cd-runners/guides/installation)** to set up your environment
+3. **Choose your [CI Integration](/docs/guides/ci-cd-runners/guides/ci-integrations)** (GitHub Actions, GitLab CI, etc.)
+4. **Optimize with [Caching](/docs/guides/ci-cd-runners/caching/overview)** strategies
+5. **Monitor with [Metrics](/docs/guides/ci-cd-runners/monitoring/overview)** and alerts
