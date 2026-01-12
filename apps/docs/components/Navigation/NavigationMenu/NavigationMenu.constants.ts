@@ -221,14 +221,6 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
           },
         ],
         [
-          {
-            label: 'UI Library',
-            icon: 'ui',
-            href: 'https://www.assistance.bg/ui' as `/${string}`,
-            level: 'ui',
-          },
-        ],
-        [
           { label: 'Data API' },
           {
             label: 'REST',
