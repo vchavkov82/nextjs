@@ -27,8 +27,6 @@ enum MenuId {
   Integrations = 'integrations',
   LocalDevelopment = 'local_development',
   Contributing = 'contributing',
-  RefJavaScriptV1 = 'reference_javascript_v1',
-  RefJavaScriptV2 = 'reference_javascript_v2',
   RefDartV1 = 'reference_dart_v1',
   RefDartV2 = 'reference_dart_v2',
   RefCSharpV0 = 'reference_csharp_v0',
@@ -146,16 +144,6 @@ const menus: Menu[] = [
   {
     id: MenuId.CiCdRunners,
     type: 'guide',
-  },
-  {
-    id: MenuId.RefJavaScriptV1,
-    type: 'reference',
-    path: '/reference/javascript/v1',
-  },
-  {
-    id: MenuId.RefJavaScriptV2,
-    type: 'reference',
-    path: '/reference/javascript',
   },
   {
     id: MenuId.RefDartV1,

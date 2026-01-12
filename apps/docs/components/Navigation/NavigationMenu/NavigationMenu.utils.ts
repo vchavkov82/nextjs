@@ -25,8 +25,6 @@ const commonSectionsImports: Record<string, () => Promise<{ default: ICommonItem
 }
 
 const specImports: Record<string, () => Promise<{ default: Json }>> = {
-  supabase_js_v2: () => import('~/spec/supabase_js_v2.yml'),
-  supabase_js_v1: () => import('~/spec/supabase_js_v1.yml'),
   supabase_dart_v2: () => import('~/spec/supabase_dart_v2.yml'),
   supabase_dart_v1: () => import('~/spec/supabase_dart_v1.yml'),
   supabase_csharp_v1: () => import('~/spec/supabase_csharp_v1.yml'),

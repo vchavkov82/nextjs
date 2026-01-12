@@ -230,7 +230,7 @@ const nextConfig = {
     '@octokit/plugin-paginate-graphql',
     '@octokit/rest',
   ],
-  allowedDevOrigins: ['suse-10.lan.assistance.bg'],
+  allowedDevOrigins: [],
 }
 
 // next.config.js.

@@ -11,7 +11,6 @@
     "slug": "installing",
     "type": "markdown",
     "excludes": [
-      "reference_javascript_v1",
       "reference_kotlin_v1",
       "reference_swift_v1"
     ]
@@ -28,7 +27,6 @@
     "slug": "typescript-support",
     "type": "markdown",
     "excludes": [
-      "reference_javascript_v1",
       "reference_dart_v1",
       "reference_dart_v2",
       "reference_python_v2",
@@ -47,7 +45,6 @@
     "slug": "upgrade-guide",
     "type": "markdown",
     "excludes": [
-      "reference_javascript_v2",
       "reference_dart_v1",
       "reference_python_v2",
       "reference_csharp_v0",
@@ -1341,8 +1338,6 @@
     "excludes": [
       "reference_dart_v1",
       "reference_dart_v2",
-      "reference_javascript_v1",
-      "reference_javascript_v2",
       "reference_kotlin_v1",
       "reference_kotlin_v2",
       "reference_python_v2",

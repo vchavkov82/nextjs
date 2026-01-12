@@ -105,14 +105,6 @@ const levelsData = {
     icon: 'integrations',
     name: 'Integrations',
   },
-  reference_javascript_v1: {
-    icon: 'reference-javascript',
-    name: 'Javascript Reference v1.0',
-  },
-  reference_javascript_v2: {
-    icon: 'reference-javascript',
-    name: 'Javascript Reference v2.0',
-  },
   reference_dart_v1: {
     icon: 'reference-dart',
     name: 'Dart Reference v1.0',

@@ -148,7 +148,7 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
             level: 'deployment',
           },
           {
-            label: 'CI/CD Runners',
+            label: 'Self-Hosted CI/CD Runners',
             icon: 'github',
             href: '/guides/ci-cd-runners' as `/${string}`,
             level: 'ci_cd_runners',
@@ -212,12 +212,6 @@ export const GLOBAL_MENU_ITEMS: GlobalMenuItems = [
         [
           {
             label: 'Client Library Reference',
-          },
-          {
-            label: 'JavaScript',
-            icon: 'reference-javascript',
-            href: '/reference/javascript' as `/${string}`,
-            level: 'reference_javascript',
           },
           {
             label: 'Flutter',
@@ -1589,7 +1583,7 @@ export const deployment: NavMenuConstant = {
 }
 
 export const ci_cd_runners: NavMenuConstant = {
-  title: 'CI/CD Runners',
+  title: 'Self-Hosted CI/CD Runners',
   url: '/guides/ci-cd-runners',
   icon: 'github',
   items: [
@@ -1721,12 +1715,6 @@ export const reference = {
       name: 'Client libraries',
       items: [
         {
-          name: 'supabase-js',
-          url: '/reference/javascript/start',
-          level: 'reference_javascript',
-          icon: '/img/icons/menu/reference-javascript' as `/${string}`,
-        },
-        {
           name: 'supabase-dart',
           url: '/reference/dart/start',
           level: 'reference_dart',
@@ -1781,28 +1769,6 @@ export const reference = {
       ],
     },
   ],
-}
-
-export const reference_javascript_v1 = {
-  icon: 'reference-javascript',
-  title: 'JavaScript',
-  url: '/reference/javascript/v1',
-  parent: '/reference',
-  pkg: {
-    name: '@supabase/supabase-js',
-    repo: 'https://github.com/vchavkov82/nextjs-js',
-  },
-}
-
-export const reference_javascript_v2 = {
-  icon: 'reference-javascript',
-  title: 'JavaScript',
-  url: '/reference/javascript',
-  parent: '/reference',
-  pkg: {
-    name: '@supabase/supabase-js',
-    repo: 'https://github.com/vchavkov82/nextjs-js',
-  },
 }
 
 // TODO: How to?

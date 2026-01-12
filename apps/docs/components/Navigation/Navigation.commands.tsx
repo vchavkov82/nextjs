@@ -67,7 +67,7 @@ const navCommands = [
   },
   {
     id: 'nav-ci-cd-runners',
-    name: 'Go to CI/CD Runners',
+    name: 'Go to Self-Hosted CI/CD Runners',
     route: '/guides/ci-cd-runners',
     icon: () => <ArrowRight />,
   },
@@ -81,13 +81,6 @@ const navCommands = [
     id: 'nav-self-hosting',
     name: 'Go to Self-Hosting',
     route: '/guides/self-hosting',
-    icon: () => <ArrowRight />,
-  },
-  {
-    id: 'nav-ref-javascript',
-    name: 'Go to JavaScript reference',
-    value: 'Reference, API, SDK: Go to JavaScript reference (JS)',
-    route: '/reference/javascript/introduction',
     icon: () => <ArrowRight />,
   },
   {

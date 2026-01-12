@@ -24,6 +24,7 @@ const PUBLISHED_SECTIONS = [
   'ai',
   'api',
   'auth',
+  'ci-cd-runners',
   'cron',
   'database',
   'deployment',

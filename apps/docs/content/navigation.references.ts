@@ -9,25 +9,6 @@ const sdkPythonEnabled = !!_features.sdkPython
 const sdkSwiftEnabled = !!_features.sdkSwift
 
 export const REFERENCES = {
-  javascript: {
-    type: 'sdk',
-    name: 'JavaScript',
-    library: 'supabase-js',
-    libPath: 'javascript',
-    versions: ['v2', 'v1'],
-    typeSpec: true,
-    icon: 'reference-javascript',
-    meta: {
-      v2: {
-        libId: 'reference_javascript_v2',
-        specFile: 'supabase_js_v2',
-      },
-      v1: {
-        libId: 'reference_javascript_v1',
-        specFile: 'supabase_js_v1',
-      },
-    },
-  },
   dart: {
     type: 'sdk',
     name: 'Flutter',
