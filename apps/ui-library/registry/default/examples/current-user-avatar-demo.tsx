@@ -5,10 +5,10 @@ import { useUser } from 'common'
 
 const CurrentUserAvatarDemo = () => {
   // this demo only works on www.assistance.bg because all apps are on the same domain and share cookies
-  const user = useUser()
+  const user = useUser() as any
 
-  const profileImage = user?.user_metadata.avatar_url ?? null
-  const name = (user?.user_metadata.full_name as string) ?? '?'
+  const profileImage = (user?.user_metadata as any)?.avatar_url ?? null
+  const name = ((user?.user_metadata as any)?.full_name as string) ?? '?'
   const initials = name
     ?.split(' ')
     ?.map((word) => word[0])

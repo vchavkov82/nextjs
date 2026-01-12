@@ -1,4 +1,3 @@
-import type { SupabaseClient } from '@supabase/supabase-js'
 import { codeBlock, oneLine } from 'common-tags'
 import type OpenAI from 'openai'
 import { ApplicationError, UserError } from './errors'
@@ -15,9 +14,27 @@ interface PageSection {
 
 type MatchPageSectionsFunction = 'match_page_sections_v2' | 'match_page_sections_v2_nimbus'
 
+/**
+ * Database client interface - works with both Supabase and PostgreSQL clients
+ */
+interface DatabaseClient {
+  rpc<T = any>(
+    functionName: string,
+    params: Record<string, any>
+  ): Promise<{ error: any; data: T[] | null }> & {
+    neq(field: string, value: any): DatabaseClient
+    select(fields: string): DatabaseClient
+    limit(count: number): DatabaseClient
+    then<TResult1, TResult2>(
+      onfulfilled?: (value: { error: any; data: T[] | null }) => TResult1 | PromiseLike<TResult1>,
+      onrejected?: (reason: any) => TResult2 | PromiseLike<TResult2>
+    ): Promise<TResult1 | TResult2>
+  }
+}
+
 export async function clippy(
   openai: OpenAI,
-  baClient: SupabaseClient<any, 'public', any>,
+  baClient: DatabaseClient,
   messages: Message[],
   options?: { useAltSearchIndex?: boolean }
 ) {

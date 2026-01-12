@@ -188,7 +188,7 @@ async function debuggableNavigatorLock<R>(
   }, 10000)
 
   try {
-    return await navigatorLock(name, acquireTimeout, async () => {
+    return await debuggableNavigatorLock(name, acquireTimeout, async () => {
       clearTimeout(debugTimeout)
 
       const bc = new BroadcastChannel('who-is-holding-the-lock')
@@ -272,5 +272,3 @@ export const gotrueClient = new MockAuthClient({
     ? { storage: globalThis.localStorage, userStorage: globalThis.localStorage }
     : null),
 })
-
-export type { User }

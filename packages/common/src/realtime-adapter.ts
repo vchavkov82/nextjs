@@ -31,7 +31,7 @@ export class RealtimeChannel {
   private client: LocalWebSocketClient
   private channelName: string
   private config: any
-  private presenceState: RealtimePresenceState = {}
+  private _presenceState: RealtimePresenceState = {}
   private eventCallbacks: Map<string, Set<EventCallback>> = new Map()
   private subscriptionCallbacks: Set<(state: RealtimeSubscribeState) => void> = new Set()
   private subscribed = false
@@ -65,10 +65,10 @@ export class RealtimeChannel {
         const userState = message.payload || {}
 
         // Update presence state
-        if (!this.presenceState[userId]) {
-          this.presenceState[userId] = []
+        if (!this._presenceState[userId]) {
+          this._presenceState[userId] = []
         }
-        this.presenceState[userId].push(userState)
+        this._presenceState[userId].push(userState)
 
         // Emit presence event
         this.emit('presence', {
@@ -85,9 +85,9 @@ export class RealtimeChannel {
         const userId = message.payload?.userId || message.payload?.clientId
 
         // Update presence state
-        if (this.presenceState[userId]) {
-          const leftPresences = this.presenceState[userId]
-          delete this.presenceState[userId]
+        if (this._presenceState[userId]) {
+          const leftPresences = this._presenceState[userId]
+          delete this._presenceState[userId]
 
           // Emit presence event
           this.emit('presence', {
@@ -165,7 +165,7 @@ export class RealtimeChannel {
       this.subscribed = false
       this.eventCallbacks.clear()
       this.subscriptionCallbacks.clear()
-      this.presenceState = {}
+      this._presenceState = {}
     }
   }
 
@@ -225,7 +225,7 @@ export class RealtimeChannel {
    * Update presence state
    * Matches Supabase Realtime API: channel.track(state)
    */
-  async track(presenceState: any): Promise<void> {
+  async track(state: any): Promise<void> {
     if (!this.subscribed) {
       throw new Error('Cannot track presence: not subscribed to channel')
     }
@@ -233,7 +233,7 @@ export class RealtimeChannel {
     // Send presence update as a special broadcast message
     this.client.broadcast(this.channelName, {
       type: 'presence',
-      payload: presenceState,
+      payload: state,
     })
   }
 
@@ -242,7 +242,7 @@ export class RealtimeChannel {
    * Matches Supabase Realtime API: channel.presenceState()
    */
   presenceState(): RealtimePresenceState {
-    return { ...this.presenceState }
+    return { ...this._presenceState }
   }
 
   /**
@@ -295,7 +295,8 @@ export class RealtimeAdapter {
    * Matches Supabase Realtime API: supabase.removeChannel(channel)
    */
   removeChannel(channel: RealtimeChannel): void {
-    for (const [name, ch] of this.channels) {
+    const entries = Array.from(this.channels.entries())
+    for (const [name, ch] of entries) {
       if (ch === channel) {
         ch.unsubscribe()
         this.channels.delete(name)
@@ -309,7 +310,8 @@ export class RealtimeAdapter {
    */
   disconnect(): void {
     // Unsubscribe from all channels
-    for (const channel of this.channels.values()) {
+    const channels = Array.from(this.channels.values())
+    for (const channel of channels) {
       channel.unsubscribe()
     }
     this.channels.clear()

@@ -10,8 +10,6 @@ import {
 } from 'react'
 import { type User, type Session, STORAGE_KEY } from './gotrue'
 
-export type { User }
-
 /* Auth Context */
 
 type AuthState =
@@ -164,7 +162,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     signIn,
     signUp,
     signOut,
-  }
+  } as any
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }

@@ -12,8 +12,9 @@ export * from './MetaFavicons/pages-router'
 export * from './Providers'
 export * from './src/websocket'
 export * from './src/realtime-adapter'
-export * from './src/supabase-mock'
+// export * from './src/supabase-mock' // Conflicts with gotrue exports
 
 // Server-side exports - import directly from their files when needed
+// export * from './src/pg-client' // Node.js only - server-side usage
 // export * from './src/websocket-server'
 // export * from './src/init-websocket-server'

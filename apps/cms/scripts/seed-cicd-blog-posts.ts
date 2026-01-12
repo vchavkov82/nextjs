@@ -36,12 +36,15 @@ for (const envFile of envFiles) {
    * Helper function to create Lexical content structure
    */
   function createLexicalContent(paragraphs: string[], headings?: Array<{ level: 1 | 2 | 3 | 4; text: string }>) {
-    const children: any[] = []
+    const children: Array<{
+      type: string
+      [key: string]: any
+    }> = []
 
     if (headings) {
       headings.forEach((heading) => {
         children.push({
-          type: 'heading',
+          type: 'heading' as const,
           tag: `h${heading.level}`,
           children: [
             {
@@ -49,32 +52,32 @@ for (const envFile of envFiles) {
               type: 'text',
             },
           ],
-        })
+        } as any)
       })
     }
 
     paragraphs.forEach((text) => {
       children.push({
-        type: 'paragraph',
+        type: 'paragraph' as const,
         children: [
           {
             text: text,
             type: 'text',
           },
         ],
-      })
+      } as any)
     })
 
     return {
       root: {
-        type: 'root',
-        children,
-        direction: 'ltr',
-        format: '',
+        type: 'root' as const,
+        children: children as any,
+        direction: 'ltr' as const,
+        format: '' as const,
         indent: 0,
         version: 1,
       },
-    }
+    } as any
   }
 
   /**
@@ -292,7 +295,7 @@ for (const envFile of envFiles) {
           } else {
             await payload.create({
               collection: 'posts',
-              data: post,
+              data: post as any,
             })
             console.log(`✅ Created post: "${post.title}"`)
           }

@@ -195,8 +195,10 @@ export class LocalWebSocketClient {
   private startHeartbeat(): void {
     this.heartbeatInterval = setInterval(() => {
       if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-        // Send ping to keep connection alive
-        this.ws.ping()
+        // Send ping to keep connection alive (ws library only)
+        if (typeof (this.ws as any).ping === 'function') {
+          (this.ws as any).ping()
+        }
       }
     }, 30000) // Ping every 30 seconds
   }
@@ -228,7 +230,8 @@ export class LocalWebSocketClient {
         }
 
         // Re-subscribe to channels
-        for (const channel of this.channels) {
+        const channels = Array.from(this.channels)
+        for (const channel of channels) {
           this.subscribe(channel)
         }
       }).catch((error) => {
@@ -303,9 +306,10 @@ export async function testLocalWebSocketConnection(url: string = 'ws://localhost
         }
       }
     } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error)
       resolve({
         success: false,
-        error: `Failed to create WebSocket: ${error.message}`
+        error: `Failed to create WebSocket: ${errorMessage}`
       })
     }
   })

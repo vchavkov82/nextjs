@@ -25,20 +25,20 @@ const RealtimeAvatarStackDemo = () => {
   const currentUserName = useMemo(() => {
     let name = randomUser.name
     if (dashboardUser) {
-      name = user?.user_metadata.full_name as string
+      name = ((user as any)?.user_metadata?.full_name as string) ?? randomUser.name
     }
     return name ?? '?'
-  }, [dashboardUser, user?.user_metadata.full_name])
+  }, [dashboardUser, (user as any)?.user_metadata?.full_name])
 
   // generate a random image for the current user or use his www.assistance.bg avatar
   const currentUserImage = useMemo(() => {
     let image = randomUser.image
     if (dashboardUser) {
-      image = (user?.user_metadata.avatar_url as string) ?? null
+      image = ((user as any)?.user_metadata?.avatar_url as string) ?? null
     }
 
     return image
-  }, [dashboardUser, user?.user_metadata.avatar_url])
+  }, [dashboardUser, (user as any)?.user_metadata?.avatar_url])
 
   const [usersMap, setUsersMap] = useState<Record<string, RealtimeUser> | null>(null)
 

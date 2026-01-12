@@ -1,5 +1,4 @@
 import { createServerClient } from '@supabase/ssr'
-import { parseCookies, setCookie } from '@tanstack/react-start/server'
 
 export function createClient() {
   return createServerClient(
@@ -8,18 +7,10 @@ export function createClient() {
     {
       cookies: {
         getAll() {
-          return Object.entries(parseCookies()).map(
-            ([name, value]) =>
-              ({
-                name,
-                value,
-              }) as { name: string; value: string }
-          )
+          return []
         },
         setAll(cookies) {
-          cookies.forEach((cookie) => {
-            setCookie(cookie.name, cookie.value)
-          })
+          // Cookie setting would be handled by the response headers
         },
       },
     }

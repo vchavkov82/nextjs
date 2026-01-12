@@ -1,30 +1,18 @@
 import { createClient } from '@/registry/default/clients/tanstack/lib/supabase/server'
 import { createFileRoute, redirect } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { getWebRequest } from '@tanstack/react-start/server'
+import { getRequest } from '@tanstack/react-start/server'
 
-const confirmFn = createServerFn({ method: 'GET' })
-  .validator((searchParams: unknown) => {
-    if (
-      searchParams &&
-      typeof searchParams === 'object' &&
-      'code' in searchParams &&
-      'next' in searchParams
-    ) {
-      return searchParams
-    }
-    throw new Error('Invalid search params')
-  })
-  .handler(async (ctx) => {
-    const request = getWebRequest()
+const confirmFn = createServerFn({ method: 'GET' }).handler(async () => {
+    const request = getRequest()
 
     if (!request) {
       throw redirect({ to: `/auth/error`, search: { error: 'No request' } })
     }
 
-    const searchParams = ctx.data
-    const code = searchParams['code'] as string
-    const _next = (searchParams['next'] ?? '/') as string
+    const url = new URL(request.url)
+    const code = url.searchParams.get('code') as string
+    const _next = (url.searchParams.get('next') ?? '/') as string
     const next = _next?.startsWith('/') ? _next : '/'
 
     if (code) {
@@ -50,7 +38,7 @@ const confirmFn = createServerFn({ method: 'GET' })
     })
   })
 
-export const Route = createFileRoute('/auth/confirm')({
+export const Route = createFileRoute('/auth/oauth' as any)({
   preload: false,
-  loader: (opts) => confirmFn({ data: opts.location.search }),
+  loader: () => confirmFn(),
 })
