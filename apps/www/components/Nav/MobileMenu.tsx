@@ -223,7 +223,6 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   height={24}
                   alt="BA Logo"
                   className="dark:hidden"
-                  priority
                 />
                 <Image
                   src={supabaseLogoWordmarkDark}
@@ -231,7 +230,6 @@ const MobileMenu = ({ open, setOpen, menu }: Props) => {
                   height={24}
                   alt="BA Logo"
                   className="hidden dark:block"
-                  priority
                 />
               </Link>
               <button

@@ -76,7 +76,6 @@ const Footer = (props: Props) => {
                 height={30}
                 alt="BA Logo"
                 className="dark:hidden w-full h-auto"
-                priority
               />
               <Image
                 src={supabaseLogoWordmarkDark}
@@ -84,7 +83,6 @@ const Footer = (props: Props) => {
                 height={30}
                 alt="BA Logo"
                 className="hidden dark:block w-full h-auto"
-                priority
               />
             </Link>
           </div>

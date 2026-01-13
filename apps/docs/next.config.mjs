@@ -70,6 +70,11 @@ const nextConfig = {
     dangerouslyAllowSVG: false,
     // @ts-ignore
     remotePatterns,
+    localPatterns: [
+      {
+        pathname: '/docs/img/**',
+      },
+    ],
   },
   // Webpack config - Required for production builds (webpack is still the default for production)
   // Turbopack config below handles the same file types for development (with --turbopack flag)
