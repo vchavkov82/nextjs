@@ -66,6 +66,12 @@ typings/
 # Next.js declaration files (auto-generated)
 next-env.d.ts
 
+# Next.js build caches and outputs
+apps/**/.next
+apps/**/.contentlayer
+.next
+.contentlayer
+
 # Optional npm cache directory
 .npm
 
@@ -100,6 +106,8 @@ out
 dist
 build
 .contentlayer
+.turbo
+*.tsbuildinfo
 
 # nuxt.js build output
 .nuxt
