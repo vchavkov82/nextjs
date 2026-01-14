@@ -62,10 +62,10 @@ export class MockSupabaseClient {
     onAuthStateChange: (callback: any) => ({
       data: { subscription: { unsubscribe: () => {} } }
     }),
-  }
+  };
 
   // Database methods
-  from: (table: string) => ({
+  from = (table: string) => ({
     select: (columns?: string) => ({
       eq: (column: string, value: any) => ({
         single: async () => ({ data: null, error: null }),
@@ -87,7 +87,7 @@ export class MockSupabaseClient {
     delete: () => ({
       eq: (column: string, value: any) => ({ data: null, error: null }),
     }),
-  })
+  });
 
   // Storage methods
   storage = {
@@ -97,20 +97,20 @@ export class MockSupabaseClient {
       remove: async (paths: string[]) => ({ data: null, error: null }),
       list: async (path?: string) => ({ data: [], error: null }),
     }),
-  }
+  };
 
   // Realtime methods
-  channel: (name: string) => ({
+  channel = (name: string) => ({
     state: REALTIME_CHANNEL_STATES.closed,
     subscribe: (callback?: any) => ({
       unsubscribe: () => {},
     }),
     unsubscribe: () => {},
     send: (payload: any) => {},
-  }),
+  });
 
   // Remove channel subscription
-  removeChannel: (channel: any) => {},
+  removeChannel = (channel: any) => {};
 }
 
 // Factory function
