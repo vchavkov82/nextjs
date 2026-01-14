@@ -107,4 +107,9 @@ function EdgeFunctions() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default EdgeFunctions

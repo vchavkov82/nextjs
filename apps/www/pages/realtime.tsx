@@ -253,4 +253,9 @@ function RealtimePage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default RealtimePage

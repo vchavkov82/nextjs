@@ -23,7 +23,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       username,
       ogImageUrl: '',
       user: null,
-    },
-    revalidate: 3600,
-  }
+    },  }
 }

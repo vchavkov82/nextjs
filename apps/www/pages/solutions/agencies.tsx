@@ -53,4 +53,9 @@ const Agencies: NextPage = () => (
   </>
 )
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default Agencies

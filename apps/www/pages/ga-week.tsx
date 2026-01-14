@@ -17,6 +17,11 @@ const LaunchWeekPrizeSection = dynamic(
   () => import('@/components/LaunchWeek/11/LaunchWeekPrizeSection')
 )
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default function GAWeekIndex() {
   const { query } = useRouter()
 

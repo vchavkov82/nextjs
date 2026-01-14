@@ -776,4 +776,9 @@ function Assistant() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default Assistant

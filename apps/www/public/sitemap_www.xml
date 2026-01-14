@@ -739,6 +739,12 @@
   </url>
 
   <url>
+    <loc>https://www.assistance.bg/dashboard/new</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://www.assistance.bg/database</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -746,6 +752,12 @@
 
   <url>
     <loc>https://www.assistance.bg/edge-functions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.assistance.bg/enterprise</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

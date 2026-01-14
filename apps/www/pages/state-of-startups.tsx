@@ -264,6 +264,11 @@ function StateOfStartupsPage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default StateOfStartupsPage
 
 // Component for the participants list

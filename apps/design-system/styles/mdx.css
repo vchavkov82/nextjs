@@ -43,7 +43,7 @@
 }
 
 [data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply relative bg-surface-200 dark:bg-surface-100;
+  @apply relative bg-slate-100 dark:bg-slate-900;
 }
 
 [data-rehype-pretty-code-fragment] .line--highlighted {

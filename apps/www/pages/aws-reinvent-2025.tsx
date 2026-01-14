@@ -184,4 +184,9 @@ const AWSReInvent2025: NextPage = () => {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default AWSReInvent2025

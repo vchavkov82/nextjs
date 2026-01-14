@@ -54,4 +54,9 @@ const Enterprise: NextPage = () => {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default Enterprise

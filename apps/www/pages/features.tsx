@@ -215,4 +215,9 @@ function FeaturesPage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default FeaturesPage

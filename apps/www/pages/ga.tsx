@@ -16,6 +16,11 @@ import { data as pageData } from '../data/ga'
 const ParagraphSection = dynamic(() => import('@/components/Sections/ParagraphSection'))
 const CTABanner = dynamic(() => import('@/components/CTABanner'))
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default function IndexPage() {
   const router = useRouter()
   const { resolvedTheme } = useTheme()

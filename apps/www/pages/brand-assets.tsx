@@ -125,4 +125,9 @@ const Index = () => {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default Index

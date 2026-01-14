@@ -66,4 +66,9 @@ function VectorPage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default VectorPage

@@ -48,7 +48,7 @@ export default function DashboardNewPage() {
             <p className="p text-lg leading-5 text-muted-foreground">
               {plan
                 ? `Setting up your ${plan} plan project. You'll be redirected shortly.`
-                : 'Setting up your new project. You'll be redirected shortly.'}
+                : `Setting up your new project. You'll be redirected shortly.`}
             </p>
             <div className="flex justify-center gap-4">
               <Button

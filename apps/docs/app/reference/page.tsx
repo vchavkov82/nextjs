@@ -38,7 +38,7 @@ export default function ReferenceIndexPage() {
               )
             })}
           </div>
-          <h2 className="mb-8">Management API and CLI</h2>
+          <h2 className="mb-8">Management API</h2>
           <div className="grid col-span-8 grid-cols-12 gap-6 not-prose">
             <Link
               href={`/reference/api/introduction`}
@@ -46,13 +46,6 @@ export default function ReferenceIndexPage() {
               className="col-span-6 md:col-span-4"
             >
               <IconPanelWithIconPicker title="Management API" icon={REFERENCES['api'].icon} />
-            </Link>
-            <Link
-              href={`/reference/cli/introduction`}
-              passHref
-              className="col-span-6 md:col-span-4"
-            >
-              <IconPanelWithIconPicker title="CLI" icon={REFERENCES['cli'].icon} />
             </Link>
           </div>
         </article>

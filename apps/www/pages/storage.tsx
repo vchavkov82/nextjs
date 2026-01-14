@@ -354,4 +354,9 @@ function StoragePage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default StoragePage

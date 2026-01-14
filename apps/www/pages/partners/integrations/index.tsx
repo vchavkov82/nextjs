@@ -13,19 +13,11 @@ import type { Partner } from '@/types/partners'
 import TileGrid from '../../../components/Partners/TileGrid'
 
 export async function getStaticProps() {
-  const { data: partners } = await supabase
-    .from('partners')
-    .select('slug, title, description, logo, category, featured')
-    .eq('approved', true)
-    .eq('type', 'technology')
-    .order('category')
-    .order('title')
-
+  // Supabase removed - return empty partners
   return {
     props: {
-      partners: partners || [],
+      partners: [],
     },
-    // TODO: consider using Next.js' On-demand Revalidation with BA Database Webhooks instead
     revalidate: 1800, // 30 minutes
   }
 }

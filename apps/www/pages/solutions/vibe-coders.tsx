@@ -57,7 +57,7 @@ const VibeCodersPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const posts = getSortedPosts({ directory: '_blog', limit: 6, tags: ['vibe-coding'] })
   return { props: { posts } }
 }

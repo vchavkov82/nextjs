@@ -37,4 +37,9 @@ function Nextjs() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default Nextjs

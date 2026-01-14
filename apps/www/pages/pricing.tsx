@@ -17,6 +17,11 @@ const PricingFAQs = dynamic(() => import('@/components/Pricing/PricingFAQs'))
 const CTABanner = dynamic(() => import('@/components/CTABanner'))
 const PricingDiskSection = dynamic(() => import('@/components/Pricing/PricingDiskSection'))
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default function IndexPage() {
   const router = useRouter()
   const { asPath } = useRouter()

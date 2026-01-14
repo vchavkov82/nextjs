@@ -86,4 +86,10 @@ const InnovationTeams: NextPage = () => {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},
+  }
+}
+
 export default InnovationTeams

@@ -50,4 +50,9 @@ function CronPage() {
   )
 }
 
+export const getServerSideProps = () => {
+  return {
+    props: {},  }
+}
+
 export default CronPage
