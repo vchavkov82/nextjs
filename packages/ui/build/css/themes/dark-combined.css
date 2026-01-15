@@ -1,0 +1,9 @@
+[data-theme='deep-dark'],
+.deep-dark,
+[data-theme='classic-dark'],
+.classic-dark,
+[data-theme='dark'],
+.dark {
+  --color-background-default: 0deg 0% 5.9%;
+  --color-foreground: 0deg 0% 100%;
+}

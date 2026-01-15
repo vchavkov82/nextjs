@@ -1,0 +1,15 @@
+:root {
+  --color-foreground: 0deg 0% 100%;
+  --color-foreground-muted: 0deg 0% 65.9%;
+  --color-foreground-light: 0deg 0% 83.1%;
+  --color-background-default: 0deg 0% 100%;
+  --color-background-muted: 0deg 0% 97.3%;
+  --color-background-surface-100: 0deg 0% 98%;
+  --color-background-surface-200: 0deg 0% 96.1%;
+  --color-surface-75: 0deg 0% 98.8%;
+  --color-surface-100: 0deg 0% 98%;
+  --color-surface-200: 0deg 0% 96.1%;
+  --color-border-default: 0deg 0% 89.8%;
+  --color-border-strong: 0deg 0% 80%;
+  --color-brand: 153.1deg 60.2% 52.7%;
+}

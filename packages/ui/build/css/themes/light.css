@@ -1,0 +1,5 @@
+[data-theme='light'],
+.light {
+  --color-background-default: 0deg 0% 100%;
+  --color-foreground: 0deg 0% 5.9%;
+}

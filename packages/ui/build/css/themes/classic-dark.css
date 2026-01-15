@@ -1,0 +1,5 @@
+[data-theme='classic-dark'],
+.classic-dark {
+  --color-background-default: 0deg 0% 5.9%;
+  --color-foreground: 0deg 0% 100%;
+}

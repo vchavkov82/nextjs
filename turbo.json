@@ -5,8 +5,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"],
-      "persistent": true,
+      "outputs": ["dist/**", ".next/**", "build/**"],
       "cache": true
     },
     "cms#build": {
