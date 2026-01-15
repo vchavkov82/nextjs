@@ -105,8 +105,6 @@ apps/**/.contentlayer
 out
 dist
 build
-# Exception: UI package build directory contains generated CSS needed for builds
-!packages/ui/build
 .contentlayer
 .turbo
 *.tsbuildinfo

@@ -1,0 +1,86 @@
+'use client'
+
+import { useBreakpoint } from 'common'
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
+import React, { useState, useEffect } from 'react'
+import { cn } from 'ui'
+
+const PricingComputeAnimation = () => {
+  const { resolvedTheme } = useTheme()
+  const [triggerAnimation, setTriggerAnimation] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const isTablet = useBreakpoint(1023)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Avoid hydration mismatch by only rendering theme-dependent content after mount
+  if (!mounted) {
+    return (
+      <figure className="h-full relative lg:absolute lg:-right-24 xl:-right-10 aspect-[541/285]">
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 animate-pulse rounded" />
+      </figure>
+    )
+  }
+
+  return (
+    <figure
+      className="h-full relative lg:absolute lg:-right-24 xl:-right-10 aspect-[541/285]"
+      onMouseEnter={() => setTriggerAnimation(true)}
+    >
+      <Image
+        fill
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
+        alt="Compute addon grid"
+        sizes="100%"
+        className={cn(
+          'absolute inset-0 z-20 transition-opacity opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-300',
+          triggerAnimation && 'opacity-100'
+        )}
+      />
+      <Image
+        fill
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
+        alt="Compute addon grid"
+        sizes="100%"
+        className={cn(
+          'absolute inset-0 z-20 transition-all opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-500 delay-500 -translate-y-[18%] blur-md',
+          triggerAnimation && 'opacity-100 -translate-y-[8%] blur-none'
+        )}
+      />
+      <Image
+        fill
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }-active.svg`}
+        alt="Compute addon grid"
+        sizes="100%"
+        className={cn(
+          'absolute inset-0 z-20 transition-all opacity-0 ![transition-timing-function:cubic-bezier(.76,0,.23,1)] duration-500 delay-1000 -translate-y-[24%] blur-md',
+          triggerAnimation && 'opacity-100 -translate-y-[16%] blur-none'
+        )}
+      />
+      <Image
+        fill
+        src={`/images/pricing/compute/compute-cube-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }.svg`}
+        alt="Compute addon grid"
+        sizes="100%"
+        className="absolute inset-0 z-10"
+      />
+      <Image
+        fill
+        src={`/images/pricing/compute/compute-grid${isTablet ? '-mobile' : ''}-${resolvedTheme?.includes('dark') ? 'dark' : 'light'
+          }.svg`}
+        alt="Compute addon grid"
+        sizes="100%"
+        className="absolute inset-0 z-0 object-contain object-center"
+      />
+    </figure>
+  )
+}
+
+export default PricingComputeAnimation

@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo",
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      // @deprecated: use @/ instead of ~/
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "@ui/*": [
+        "./../../packages/ui/src/*"
+      ],
+      "@code-hike/mdx": [
+        "./../../node_modules/.pnpm/@code-hike+mdx@0.9.0_encoding@0.1.13_react@18.3.1/node_modules/@code-hike/mdx"
+      ],
+      "@code-hike/mdx/*": [
+        "./../../node_modules/.pnpm/@code-hike+mdx@0.9.0_encoding@0.1.13_react@18.3.1/node_modules/@code-hike/mdx/*"
+      ]
+    },
+    "target": "ES2021",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/guides/append-test.js",
+    ".next/types/**/*.ts",
+    "./../../packages/ui/src/**/*.d.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "examples"
+  ]
+}

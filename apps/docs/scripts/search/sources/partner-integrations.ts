@@ -8,9 +8,8 @@ type PartnerData = {
   overview: string // The Markdown content for indexing
 }
 
-// Use MISC service URLs if available, otherwise fall back to main Supabase (local Docker services)
-const supabaseUrl = process.env.NEXT_PUBLIC_MISC_URL || process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_MISC_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+const supabaseUrl = process.env.NEXT_PUBLIC_MISC_URL!
+const supabaseAnonKey = process.env.NEXT_PUBLIC_MISC_ANON_KEY!
 
 let supabaseClient: SupabaseClient
 function getSupabaseClient() {

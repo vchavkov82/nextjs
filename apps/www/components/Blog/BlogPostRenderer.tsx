@@ -32,13 +32,8 @@ const ReactMarkdown = dynamic<{ children: string }>(
     ),
   { ssr: false }
 )
-// Note: next-mdx-remote is ESM only and can't be dynamically imported with require
-// For now, we'll render a fallback since MDX rendering isn't critical
 const MDXRemote = dynamic(
-  () =>
-    Promise.resolve(() => (
-      <div>MDX content rendering requires next-mdx-remote to be properly configured</div>
-    )),
+  () => import('next-mdx-remote').then((mod) => mod.MDXRemote),
   { ssr: false }
 )
 

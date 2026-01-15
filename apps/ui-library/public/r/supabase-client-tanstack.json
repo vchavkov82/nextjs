@@ -1,7 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "supabase-client-tanstack",
-  "type": "registry:lib",
   "title": "BA Client for TanStack Start",
   "description": "",
   "dependencies": [
@@ -17,7 +16,7 @@
     },
     {
       "path": "registry/default/clients/tanstack/lib/supabase/server.ts",
-      "content": "import { createServerClient } from '@supabase/ssr'\nimport { parseCookies, setCookie } from '@tanstack/react-start/server'\n\nexport function createClient() {\n  return createServerClient(\n    process.env.VITE_SUPABASE_URL!,\n    process.env.VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY!,\n    {\n      cookies: {\n        getAll() {\n          return Object.entries(parseCookies()).map(\n            ([name, value]) =>\n              ({\n                name,\n                value,\n              }) as { name: string; value: string }\n          )\n        },\n        setAll(cookies) {\n          cookies.forEach((cookie) => {\n            setCookie(cookie.name, cookie.value)\n          })\n        },\n      },\n    }\n  )\n}\n",
+      "content": "import { createServerClient } from '@supabase/ssr'\n\nexport function createClient() {\n  return createServerClient(\n    process.env.VITE_SUPABASE_URL!,\n    process.env.VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY!,\n    {\n      cookies: {\n        getAll() {\n          return []\n        },\n        setAll(cookies) {\n          // Cookie setting would be handled by the response headers\n        },\n      },\n    }\n  )\n}\n",
       "type": "registry:lib"
     }
   ],
@@ -25,5 +24,6 @@
     "VITE_SUPABASE_URL": "",
     "VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY": ""
   },
-  "docs": "You'll need to set the following environment variables in your project: `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY`."
+  "docs": "You'll need to set the following environment variables in your project: `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_OR_ANON_KEY`.",
+  "type": "registry:lib"
 }

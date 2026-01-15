@@ -1,0 +1,77 @@
+packages:
+  - apps/*
+  - packages/*
+  - blocks/*
+  - e2e/*
+
+catalog:
+  '@sentry/nextjs': ^10.26.0
+  '@types/node': ^22.0.0
+  '@types/react': ^18.3.0
+  '@types/react-dom': ^18.3.0
+  next: ^16.0.10
+  react: ^18.3.0
+  react-dom: ^18.3.0
+  recharts: ^2.15.4
+  tailwindcss: 3.4.1
+  tsx: 4.20.3
+  typescript: ~5.9.0
+  valtio: ^1.12.0
+  vite: ^7.1.11
+  vitest: ^3.2.0
+  zod: ^3.25.76
+
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - '@sentry/cli'
+  - contentlayer2
+  - core-js
+  - es5-ext
+  - esbuild
+  - libpg-query
+  - msw
+  - node-pty
+  - protobufjs
+  - sharp
+  - supabase
+  - unrs-resolver
+
+minimumReleaseAge: 10080
+
+minimumReleaseAgeExclude:
+  - '@ai-sdk/*'
+  - next
+  - '@next/*'
+  - ai
+  - js-yaml
+  - iceberg-js
+  - '@vitejs/plugin-rsc'
+  - stripe-experiment-sync
+  - braintrust
+  - turbo
+  - react-router
+  - '@modelcontextprotocol/sdk'
+
+onlyBuiltDependencies: []
+
+overrides:
+  '@eslint/eslintrc>js-yaml': ^4.1.1
+  '@modelcontextprotocol/sdk@<1.25.2': '>=1.25.2'
+  '@react-router/dev>vite-node': 3.2.4
+  '@redocly/respect-core>form-data': ^4.0.4
+  '@redocly/respect-core>js-yaml': ^4.1.1
+  '@tanstack/directive-functions-plugin>vite': 'catalog:'
+  '@tanstack/react-start-plugin>vite': 'catalog:'
+  esbuild: ^0.25.2
+  nodemailer: ^7.0.11
+  qs@<6.14.1: '>=6.14.1'
+  react: ^18.3.0
+  react-dom: ^18.3.0
+  react-dom@>18.3: ^18.3.0
+  react-router@>=7.0.0 <7.12.0: '>=7.12.0'
+  react-router@>=7.0.0 <=7.11.0: '>=7.12.0'
+  react@>18.3: ^18.3.0
+  refractor>prismjs: ^1.30.0
+  tar: ^7.0.0
+  tmp: ^0.2.4
+  vinxi>vite: 'catalog:'

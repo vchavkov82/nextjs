@@ -1,4 +1,4 @@
-// Clerk as a third-party provider alongside Supabase Auth.
+// Clerk as a third-party provider alongside BA Auth.
 // Use this template to validate tokens issued by Clerk integration
 import * as jose from "jsr:@panva/jose@6";
 
